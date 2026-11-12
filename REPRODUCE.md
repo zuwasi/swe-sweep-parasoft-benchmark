@@ -18,14 +18,16 @@ C++ repos) on the exact pre-fix code of every accepted SWE-sweep bug in the
    (per-bug file paths, pre-fix git blob hashes, and changed-line ranges) is
    included in `manifests/`, so the upstream repositories alone plus this
    repo are sufficient to re-materialize the analyzed code.
-2. **Parasoft C/C++test.** The benchmark used C/C++test Standard 2025.2.0
-   (`cpptestcli`) on Linux x64 with a working license (DTP or standalone).
+2. **Parasoft C/C++test.** The benchmark used C/C++test Standard 2026.1.3
+   (`cpptestcli`) for the six C repositories and C/C++test Standard 2025.2.0
+   for the eight C++ repositories, on Linux x64 with a working license
+   (DTP or standalone).
    Static analysis rules are the merged test configurations in
    `parasoft-configs/`:
    - `SWEEP_C.properties`: Flow Analysis Standard + MISRA C 2025 + CERT C
-     (700 rules) for C repositories.
+     (685 rules) for C repositories.
    - `SWEEP_CPP.properties`: Flow Analysis Standard + MISRA C++ 2023 +
-     CERT C++ (676 rules) for C++ repositories.
+     CERT C++ + CERT C (660 rules) for C++ repositories.
    Copy them into `<cpptest-install>/configs/user/` or reference them with
    `-config "user://SWEEP_C"`.
 3. **Python 3, git, and the build prerequisites of each project**
@@ -119,7 +121,10 @@ The pipeline scripts live in `pipeline/`. Run them from the repository root
 `raw-reports/<repo>/` contains the gzipped Parasoft XML reports (both
 `FlowViol` and `StdViol` entries) from every run chunk of the original
 benchmark execution. Every number in `results/` can be recomputed from
-these files plus `manifests/`.
+these files plus `manifests/`. The six C repositories ship one gzipped
+report per run chunk (`run<i>.xml.gz`) from the MISRA C 2025 execution
+(C/C++test Standard 2026.1.3); C++ repositories keep the merged reports
+from the 2025.2.0 execution.
 
 ## Known limitations (inherited by any reproduction)
 
