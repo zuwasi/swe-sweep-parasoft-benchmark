@@ -1,0 +1,155 @@
+{
+  "benchmark": "Parasoft C/C++test Standard 2025.2.0 vs SWE-sweep (swesweep.com)",
+  "date": "2026-11-12",
+  "configuration": "Flow Analysis Standard + MISRA C 2025 + SEI CERT C (C repos); Flow Analysis Standard + MISRA C++ 2023 + SEI CERT C++ (C++ repos)",
+  "repos": [
+    {
+      "repo": "arrow",
+      "language": "C++",
+      "bugs": 47,
+      "found_region": 10,
+      "found_strict": 4,
+      "pct_region": 21.3,
+      "pct_strict": 8.5,
+      "swe_sweep_best_pct": 2.1
+    },
+    {
+      "repo": "cvc5",
+      "language": "C++",
+      "bugs": 38,
+      "found_region": 17,
+      "found_strict": 10,
+      "pct_region": 44.7,
+      "pct_strict": 26.3,
+      "swe_sweep_best_pct": 2.6
+    },
+    {
+      "repo": "duckdb",
+      "language": "C++",
+      "bugs": 109,
+      "found_region": 56,
+      "found_strict": 28,
+      "pct_region": 51.4,
+      "pct_strict": 25.7,
+      "swe_sweep_best_pct": 2.8
+    },
+    {
+      "repo": "gdal",
+      "language": "C++",
+      "bugs": 72,
+      "found_region": 3,
+      "found_strict": 1,
+      "pct_region": 4.2,
+      "pct_strict": 1.4,
+      "swe_sweep_best_pct": 0.0
+    },
+    {
+      "repo": "godot",
+      "language": "C++",
+      "bugs": 17,
+      "found_region": 7,
+      "found_strict": 6,
+      "pct_region": 41.2,
+      "pct_strict": 35.3,
+      "swe_sweep_best_pct": 0.0
+    },
+    {
+      "repo": "hdf5",
+      "language": "C",
+      "bugs": 14,
+      "found_region": 6,
+      "found_strict": 4,
+      "pct_region": 42.9,
+      "pct_strict": 28.6,
+      "swe_sweep_best_pct": 28.6
+    },
+    {
+      "repo": "jerryscript",
+      "language": "C",
+      "bugs": 15,
+      "found_region": 13,
+      "found_strict": 10,
+      "pct_region": 86.7,
+      "pct_strict": 66.7,
+      "swe_sweep_best_pct": 20.0
+    },
+    {
+      "repo": "libexpat",
+      "language": "C",
+      "bugs": 9,
+      "found_region": 5,
+      "found_strict": 3,
+      "pct_region": 55.6,
+      "pct_strict": 33.3,
+      "swe_sweep_best_pct": 44.4
+    },
+    {
+      "repo": "micropython",
+      "language": "C",
+      "bugs": 22,
+      "found_region": 4,
+      "found_strict": 3,
+      "pct_region": 18.2,
+      "pct_strict": 13.6,
+      "swe_sweep_best_pct": 0.0
+    },
+    {
+      "repo": "opencv",
+      "language": "C++",
+      "bugs": 47,
+      "found_region": 32,
+      "found_strict": 14,
+      "pct_region": 68.1,
+      "pct_strict": 29.8,
+      "swe_sweep_best_pct": 2.1
+    },
+    {
+      "repo": "php-src",
+      "language": "C",
+      "bugs": 26,
+      "found_region": 12,
+      "found_strict": 8,
+      "pct_region": 46.2,
+      "pct_strict": 30.8,
+      "swe_sweep_best_pct": 0.0
+    },
+    {
+      "repo": "proj",
+      "language": "C++",
+      "bugs": 21,
+      "found_region": 10,
+      "found_strict": 6,
+      "pct_region": 47.6,
+      "pct_strict": 28.6,
+      "swe_sweep_best_pct": 9.5
+    },
+    {
+      "repo": "tarantool",
+      "language": "C",
+      "bugs": 40,
+      "found_region": 5,
+      "found_strict": 2,
+      "pct_region": 12.5,
+      "pct_strict": 5.0,
+      "swe_sweep_best_pct": 7.5
+    },
+    {
+      "repo": "z3",
+      "language": "C++",
+      "bugs": 11,
+      "found_region": 3,
+      "found_strict": 1,
+      "pct_region": 27.3,
+      "pct_strict": 9.1,
+      "swe_sweep_best_pct": 0.0
+    }
+  ],
+  "totals": {
+    "bugs": 488,
+    "found_region": 183,
+    "pct_region": 37.5,
+    "found_strict": 100,
+    "pct_strict": 20.5,
+    "swe_sweep_best_overall_pct": 4.5
+  }
+}
