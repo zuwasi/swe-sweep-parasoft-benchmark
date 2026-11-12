@@ -23,7 +23,7 @@
     "03": {"kicker": "The benchmark", "headline": ["488 real bugs,", "14 C and C++ repositories"],
            "bullets": ["SWE-sweep accepted bugs (Meta FAIR, 2026)",
                        "Byte-identical bug-era code, the project's own compile flags",
-                       "Parasoft C/C++test: Flow Analysis Standard + MISRA C++ 2023 + SEI CERT"]},
+                       "Parasoft C/C++test: Flow Analysis + MISRA C 2025 / C++ 2023 + SEI CERT"]},
     "06": {"kicker": "The result", "headline": ["37.5% of the bugs flagged,", "vs 4.5% by the best AI agent"],
            "bullets": ["183 of 488 bugs: a Parasoft finding inside the changed code",
                        "Flow Analysis alone caught 16 bugs outright",

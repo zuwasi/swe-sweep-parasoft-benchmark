@@ -1,6 +1,4 @@
 {
-  "04": {"segments": [[2.5, 8.5], [12, 44]],
-         "notes": [{"text": "Rule findings are capped at 1,000 per rule by the tool", "from": 10, "to": 31}]},
-  "05": {"segments": [[44, 57.5]], "fade_out": true,
-         "notes": [{"text": "BD-PB-INTVC: integer conversion overflow. BD-PB-VOVR: computed value never used", "from": 2, "to": 9}]}
+  "04": {"notes": [{"text": "Rule findings are capped at 1,000 per rule by the tool", "from": 6, "to": 20}]},
+  "05": {"notes": [{"text": "BD-PB-INTVC: integer conversion overflow, a Flow Analysis finding", "from": 5, "to": 12}], "fade_out": true}
 }
