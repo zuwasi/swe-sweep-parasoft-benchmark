@@ -1,0 +1,7 @@
+video/clips/
+video/vo/
+video/scene0*.mp3
+video/scene0*.srt
+video/output/scene0*_final.mp4
+video/output/concat*.txt
+video/output/qc_*.png
