@@ -1,0 +1,249 @@
+{
+ "repo": "proj",
+ "n_bugs": 21,
+ "n_findings_total": 17605,
+ "found_region": 10,
+ "found_strict": 6,
+ "pct_region": 47.6,
+ "pct_strict": 28.6,
+ "swe_pct": 9.5,
+ "bugs": [
+  {
+   "bug_id": "proj-06b0cf9e684f",
+   "files": [
+    "src/iso19111/factory.cpp"
+   ],
+   "found_region": [
+    "CERT_C-EXP39-b",
+    "MISRACPP2023-6_2_3-c",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-7_0_6-b",
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b"
+   ],
+   "found_strict": [
+    "CERT_C-EXP39-b",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b"
+   ]
+  },
+  {
+   "bug_id": "proj-082e3620a0bb",
+   "files": [
+    "src/iso19111/coordinatesystem.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "proj-1ddd02a36695",
+   "files": [
+    "src/iso19111/io.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "proj-210490c1df4f",
+   "files": [
+    "src/iso19111/coordinateoperation.cpp",
+    "src/iso19111/crs.cpp",
+    "src/iso19111/io.cpp"
+   ],
+   "found_region": [
+    "CERT_C-EXP39-b",
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b"
+   ],
+   "found_strict": [
+    "CERT_C-EXP39-b",
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b"
+   ]
+  },
+  {
+   "bug_id": "proj-26c69d9d4768",
+   "files": [
+    "src/iso19111/crs.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "proj-4831a51d8731",
+   "files": [
+    "src/iso19111/io.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "proj-54e0eae5c2da",
+   "files": [
+    "src/iso19111/io.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "proj-5819b33a303f",
+   "files": [
+    "src/iso19111/crs.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-9_3_1-b"
+   ]
+  },
+  {
+   "bug_id": "proj-5ea62cb8daa4",
+   "files": [
+    "src/iso19111/datum.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "proj-6e4ea9d02a9a",
+   "files": [
+    "src/iso19111/factory.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "proj-75bf558d4fa2",
+   "files": [
+    "src/iso19111/common.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "proj-782c2a51cca6",
+   "files": [
+    "src/iso19111/crs.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "proj-97485ea29440",
+   "files": [
+    "src/iso19111/coordinateoperation.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "proj-a289af9c5fe7",
+   "files": [
+    "src/iso19111/coordinateoperation.cpp",
+    "src/iso19111/crs.cpp",
+    "src/iso19111/io.cpp"
+   ],
+   "found_region": [
+    "CERT_C-EXP39-b",
+    "CERT_C-MSC41-a",
+    "CERT_CPP-ERR56-b",
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b"
+   ],
+   "found_strict": [
+    "CERT_C-EXP39-b",
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b"
+   ]
+  },
+  {
+   "bug_id": "proj-a2dc13a77ea7",
+   "files": [
+    "src/projections/stere.cpp",
+    "src/projections/tmerc.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_2-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-0_1_2-a"
+   ]
+  },
+  {
+   "bug_id": "proj-b6a07d893aa2",
+   "files": [
+    "src/iso19111/coordinateoperation.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "proj-bfab0375ca89",
+   "files": [
+    "src/iso19111/io.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "proj-caba6901ef48",
+   "files": [
+    "src/iso19111/factory.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-0_1_2-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "proj-ccce4196bb18",
+   "files": [
+    "src/projections/moll.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "proj-d1e39e45b0a6",
+   "files": [
+    "src/iso19111/coordinateoperation.cpp",
+    "src/iso19111/crs.cpp",
+    "src/iso19111/io.cpp"
+   ],
+   "found_region": [
+    "CERT_C-EXP39-b",
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b"
+   ],
+   "found_strict": [
+    "CERT_C-EXP39-b",
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b"
+   ]
+  },
+  {
+   "bug_id": "proj-ded2371a16af",
+   "files": [
+    "src/iso19111/crs.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  }
+ ]
+}

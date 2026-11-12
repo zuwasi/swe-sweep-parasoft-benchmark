@@ -1,0 +1,1115 @@
+{
+ "repo": "php-src",
+ "clone_url": "https://github.com/php/php-src.git",
+ "upstream_commit": "9f7399e15e6172900e0591deb5a57a45769d8205",
+ "base_ref": "php-8.2.12",
+ "n_subtasks": 26,
+ "bugs": [
+  {
+   "bug_id": "php-src-0119a932f650",
+   "hunks": [
+    {
+     "file": "Zend/zend_gc.c",
+     "blob": "f062747eaeb",
+     "old_start": 1696,
+     "old_count": 7,
+     "removed": [
+      1699
+     ]
+    }
+   ],
+   "files": [
+    "Zend/zend_gc.c"
+   ]
+  },
+  {
+   "bug_id": "php-src-04ebc4662274",
+   "hunks": [
+    {
+     "file": "ext/standard/user_filters.c",
+     "blob": "ae4132733be",
+     "old_start": 337,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "ext/standard/user_filters.c"
+   ]
+  },
+  {
+   "bug_id": "php-src-0d43ce0140da",
+   "hunks": [
+    {
+     "file": "ext/pdo/pdo_dbh.c",
+     "blob": "8e4544f6cf0",
+     "old_start": 73,
+     "old_count": 21,
+     "removed": [
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84
+     ]
+    }
+   ],
+   "files": [
+    "ext/pdo/pdo_dbh.c"
+   ]
+  },
+  {
+   "bug_id": "php-src-1b0195b0b102",
+   "hunks": [
+    {
+     "file": "Zend/zend_inheritance.c",
+     "blob": "cec0ffdb185",
+     "old_start": 1075,
+     "old_count": 26,
+     "removed": [
+      1078,
+      1081,
+      1082,
+      1088,
+      1089,
+      1096,
+      1097
+     ]
+    },
+    {
+     "file": "Zend/zend_inheritance.c",
+     "blob": "cec0ffdb185",
+     "old_start": 1105,
+     "old_count": 8,
+     "removed": [
+      1108,
+      1109
+     ]
+    },
+    {
+     "file": "Zend/zend_inheritance.c",
+     "blob": "cec0ffdb185",
+     "old_start": 1121,
+     "old_count": 8,
+     "removed": [
+      1124,
+      1125
+     ]
+    },
+    {
+     "file": "Zend/zend_inheritance.c",
+     "blob": "cec0ffdb185",
+     "old_start": 1130,
+     "old_count": 7,
+     "removed": [
+      1133
+     ]
+    },
+    {
+     "file": "Zend/zend_inheritance.c",
+     "blob": "cec0ffdb185",
+     "old_start": 1146,
+     "old_count": 27,
+     "removed": [
+      1149,
+      1150,
+      1151,
+      1152,
+      1153,
+      1154,
+      1155,
+      1156,
+      1157,
+      1158,
+      1159,
+      1160,
+      1161,
+      1162,
+      1163,
+      1167,
+      1169
+     ]
+    },
+    {
+     "file": "Zend/zend_inheritance.c",
+     "blob": "cec0ffdb185",
+     "old_start": 1174,
+     "old_count": 25,
+     "removed": [
+      1177,
+      1178,
+      1187,
+      1188,
+      1189,
+      1190,
+      1191,
+      1192,
+      1193,
+      1194,
+      1195
+     ]
+    },
+    {
+     "file": "Zend/zend_inheritance.c",
+     "blob": "cec0ffdb185",
+     "old_start": 1204,
+     "old_count": 15,
+     "removed": [
+      1207,
+      1208,
+      1209,
+      1210,
+      1211,
+      1212,
+      1213,
+      1214,
+      1215
+     ]
+    },
+    {
+     "file": "Zend/zend_inheritance.c",
+     "blob": "cec0ffdb185",
+     "old_start": 1618,
+     "old_count": 16,
+     "removed": [
+      1622,
+      1623,
+      1624,
+      1625,
+      1626,
+      1627,
+      1628,
+      1629
+     ]
+    },
+    {
+     "file": "Zend/zend_inheritance.c",
+     "blob": "cec0ffdb185",
+     "old_start": 1733,
+     "old_count": 13,
+     "removed": [
+      1742
+     ]
+    },
+    {
+     "file": "Zend/zend_inheritance.c",
+     "blob": "cec0ffdb185",
+     "old_start": 1868,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "Zend/zend_inheritance.c",
+     "blob": "cec0ffdb185",
+     "old_start": 1887,
+     "old_count": 7,
+     "removed": [
+      1890
+     ]
+    },
+    {
+     "file": "Zend/zend_inheritance.c",
+     "blob": "cec0ffdb185",
+     "old_start": 1902,
+     "old_count": 11,
+     "removed": [
+      1905,
+      1906,
+      1907,
+      1908,
+      1909
+     ]
+    },
+    {
+     "file": "Zend/zend_inheritance.c",
+     "blob": "cec0ffdb185",
+     "old_start": 1926,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "Zend/zend_inheritance.c",
+     "blob": "cec0ffdb185",
+     "old_start": 3103,
+     "old_count": 10,
+     "removed": [
+      3106,
+      3109
+     ]
+    }
+   ],
+   "files": [
+    "Zend/zend_inheritance.c"
+   ]
+  },
+  {
+   "bug_id": "php-src-20b922f94767",
+   "hunks": [
+    {
+     "file": "ext/standard/versioning.c",
+     "blob": "6995569fbf8",
+     "old_start": 68,
+     "old_count": 7,
+     "removed": [
+      71
+     ]
+    }
+   ],
+   "files": [
+    "ext/standard/versioning.c"
+   ]
+  },
+  {
+   "bug_id": "php-src-21c8f6bd6ded",
+   "hunks": [
+    {
+     "file": "ext/soap/soap.c",
+     "blob": "23e74606e99",
+     "old_start": 2835,
+     "old_count": 12,
+     "removed": [
+      2838,
+      2843
+     ]
+    }
+   ],
+   "files": [
+    "ext/soap/soap.c"
+   ]
+  },
+  {
+   "bug_id": "php-src-3dd6d56bed43",
+   "hunks": [
+    {
+     "file": "ext/soap/php_encoding.c",
+     "blob": "c568339f298",
+     "old_start": 449,
+     "old_count": 11,
+     "removed": [
+      452,
+      453,
+      454,
+      455,
+      456
+     ]
+    },
+    {
+     "file": "ext/soap/php_encoding.c",
+     "blob": "c568339f298",
+     "old_start": 1382,
+     "old_count": 7,
+     "removed": [
+      1385
+     ]
+    },
+    {
+     "file": "ext/soap/php_encoding.c",
+     "blob": "c568339f298",
+     "old_start": 3629,
+     "old_count": 3,
+     "removed": []
+    },
+    {
+     "file": "ext/soap/php_encoding.h",
+     "blob": "a4e16666e68",
+     "old_start": 214,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ext/soap/php_soap.h",
+     "blob": "33a071ed418",
+     "old_start": 98,
+     "old_count": 7,
+     "removed": [
+      101
+     ]
+    },
+    {
+     "file": "ext/soap/soap.c",
+     "blob": "c7abcbbd08e",
+     "old_start": 816,
+     "old_count": 7,
+     "removed": [
+      819
+     ]
+    },
+    {
+     "file": "ext/soap/soap.c",
+     "blob": "c7abcbbd08e",
+     "old_start": 1282,
+     "old_count": 7,
+     "removed": [
+      1285
+     ]
+    },
+    {
+     "file": "ext/soap/soap.c",
+     "blob": "c7abcbbd08e",
+     "old_start": 1982,
+     "old_count": 7,
+     "removed": [
+      1985
+     ]
+    },
+    {
+     "file": "ext/soap/soap.c",
+     "blob": "c7abcbbd08e",
+     "old_start": 4384,
+     "old_count": 10,
+     "removed": [
+      4387,
+      4388,
+      4389,
+      4390
+     ]
+    }
+   ],
+   "files": [
+    "ext/soap/php_encoding.c",
+    "ext/soap/php_encoding.h",
+    "ext/soap/php_soap.h",
+    "ext/soap/soap.c"
+   ]
+  },
+  {
+   "bug_id": "php-src-57b891db5eac",
+   "hunks": [
+    {
+     "file": "ext/spl/php_spl.c",
+     "blob": "78315e9880b",
+     "old_start": 43,
+     "old_count": 16,
+     "removed": [
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55
+     ]
+    }
+   ],
+   "files": [
+    "ext/spl/php_spl.c"
+   ]
+  },
+  {
+   "bug_id": "php-src-644f4c81235d",
+   "hunks": [
+    {
+     "file": "ext/random/engine_xoshiro256starstar.c",
+     "blob": "1a054362f06",
+     "old_start": 151,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "ext/random/engine_xoshiro256starstar.c"
+   ]
+  },
+  {
+   "bug_id": "php-src-67638986e670",
+   "hunks": [
+    {
+     "file": "Zend/zend_hash.c",
+     "blob": "4cdf6817614",
+     "old_start": 514,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "Zend/zend_hash.c",
+     "blob": "4cdf6817614",
+     "old_start": 528,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "Zend/zend_hash.c",
+     "blob": "4cdf6817614",
+     "old_start": 547,
+     "old_count": 16,
+     "removed": [
+      559
+     ]
+    },
+    {
+     "file": "Zend/zend_hash.c",
+     "blob": "4cdf6817614",
+     "old_start": 576,
+     "old_count": 7,
+     "removed": [
+      579
+     ]
+    },
+    {
+     "file": "Zend/zend_hash.c",
+     "blob": "4cdf6817614",
+     "old_start": 605,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "Zend/zend_hash.c",
+     "blob": "4cdf6817614",
+     "old_start": 2291,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "Zend/zend_hash.c",
+     "blob": "4cdf6817614",
+     "old_start": 2305,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "Zend/zend_hash.c",
+     "blob": "4cdf6817614",
+     "old_start": 2314,
+     "old_count": 19,
+     "removed": [
+      2322,
+      2323,
+      2324,
+      2325,
+      2327,
+      2329
+     ]
+    },
+    {
+     "file": "Zend/zend_types.h",
+     "blob": "394cf10aabf",
+     "old_start": 550,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "Zend/zend_hash.c",
+    "Zend/zend_types.h"
+   ]
+  },
+  {
+   "bug_id": "php-src-6d6eeee39f95",
+   "hunks": [
+    {
+     "file": "ext/soap/php_encoding.c",
+     "blob": "e474798df6d",
+     "old_start": 766,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ext/soap/php_encoding.c",
+     "blob": "e474798df6d",
+     "old_start": 778,
+     "old_count": 7,
+     "removed": [
+      781
+     ]
+    }
+   ],
+   "files": [
+    "ext/soap/php_encoding.c"
+   ]
+  },
+  {
+   "bug_id": "php-src-7708c3973f86",
+   "hunks": [
+    {
+     "file": "ext/standard/assert.c",
+     "blob": "f0b6adadbe1",
+     "old_start": 178,
+     "old_count": 7,
+     "removed": [
+      181
+     ]
+    }
+   ],
+   "files": [
+    "ext/standard/assert.c"
+   ]
+  },
+  {
+   "bug_id": "php-src-7fcb8a2206e5",
+   "hunks": [
+    {
+     "file": "ext/zip/php_zip.c",
+     "blob": "16df403dcda",
+     "old_start": 64,
+     "old_count": 17,
+     "removed": [
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77
+     ]
+    },
+    {
+     "file": "ext/zip/php_zip.c",
+     "blob": "16df403dcda",
+     "old_start": 2185,
+     "old_count": 7,
+     "removed": [
+      2188
+     ]
+    },
+    {
+     "file": "ext/zip/php_zip.c",
+     "blob": "16df403dcda",
+     "old_start": 2208,
+     "old_count": 7,
+     "removed": [
+      2211
+     ]
+    },
+    {
+     "file": "ext/zip/php_zip.c",
+     "blob": "16df403dcda",
+     "old_start": 2221,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ext/zip/php_zip.c",
+     "blob": "16df403dcda",
+     "old_start": 2235,
+     "old_count": 7,
+     "removed": [
+      2238
+     ]
+    }
+   ],
+   "files": [
+    "ext/zip/php_zip.c"
+   ]
+  },
+  {
+   "bug_id": "php-src-81a2694ec050",
+   "hunks": [
+    {
+     "file": "Zend/zend_generators.c",
+     "blob": "1d785377e82",
+     "old_start": 19,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "Zend/zend_generators.c",
+     "blob": "1d785377e82",
+     "old_start": 216,
+     "old_count": 19,
+     "removed": [
+      226,
+      227,
+      228,
+      229,
+      230,
+      231
+     ]
+    },
+    {
+     "file": "Zend/zend_generators.c",
+     "blob": "1d785377e82",
+     "old_start": 722,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "Zend/zend_generators.c",
+     "blob": "1d785377e82",
+     "old_start": 752,
+     "old_count": 7,
+     "removed": [
+      755
+     ]
+    },
+    {
+     "file": "Zend/zend_generators.c",
+     "blob": "1d785377e82",
+     "old_start": 765,
+     "old_count": 8,
+     "removed": [
+      768,
+      769
+     ]
+    },
+    {
+     "file": "Zend/zend_generators.c",
+     "blob": "1d785377e82",
+     "old_start": 817,
+     "old_count": 7,
+     "removed": [
+      820
+     ]
+    },
+    {
+     "file": "Zend/zend_generators.h",
+     "blob": "4ccc42b92f6",
+     "old_start": 93,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "Zend/zend_generators.c",
+    "Zend/zend_generators.h"
+   ]
+  },
+  {
+   "bug_id": "php-src-9301c38f27df",
+   "hunks": [
+    {
+     "file": "ext/standard/math.c",
+     "blob": "74ffa565031",
+     "old_start": 93,
+     "old_count": 27,
+     "removed": [
+      96,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      116
+     ]
+    }
+   ],
+   "files": [
+    "ext/standard/math.c"
+   ]
+  },
+  {
+   "bug_id": "php-src-98f103396d0e",
+   "hunks": [
+    {
+     "file": "Zend/zend_opcode.c",
+     "blob": "7a364dfccbc",
+     "old_start": 684,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "Zend/zend_opcode.c"
+   ]
+  },
+  {
+   "bug_id": "php-src-a1232a3e55b9",
+   "hunks": [
+    {
+     "file": "Zend/zend_gc.c",
+     "blob": "766e1ff",
+     "old_start": 432,
+     "old_count": 7,
+     "removed": [
+      435
+     ]
+    },
+    {
+     "file": "Zend/zend_gc.c",
+     "blob": "766e1ff",
+     "old_start": 1670,
+     "old_count": 7,
+     "removed": []
+    }
+   ],
+   "files": [
+    "Zend/zend_gc.c"
+   ]
+  },
+  {
+   "bug_id": "php-src-a4774432f3b4",
+   "hunks": [
+    {
+     "file": "ext/zip/php_zip.c",
+     "blob": "b29ba2c370b",
+     "old_start": 2939,
+     "old_count": 7,
+     "removed": [
+      2942
+     ]
+    }
+   ],
+   "files": [
+    "ext/zip/php_zip.c"
+   ]
+  },
+  {
+   "bug_id": "php-src-b9ca7425664a",
+   "hunks": [
+    {
+     "file": "Zend/zend_hash.h",
+     "blob": "d4385d162a0",
+     "old_start": 851,
+     "old_count": 15,
+     "removed": [
+      854,
+      856,
+      857,
+      858,
+      859,
+      860,
+      862
+     ]
+    }
+   ],
+   "files": [
+    "Zend/zend_hash.h"
+   ]
+  },
+  {
+   "bug_id": "php-src-bba9204567b2",
+   "hunks": [
+    {
+     "file": "ext/curl/interface.c",
+     "blob": "b3139422cff",
+     "old_start": 468,
+     "old_count": 7,
+     "removed": [
+      471
+     ]
+    }
+   ],
+   "files": [
+    "ext/curl/interface.c"
+   ]
+  },
+  {
+   "bug_id": "php-src-c3a5e71d0aa1",
+   "hunks": [
+    {
+     "file": "ext/spl/spl_iterators.c",
+     "blob": "a352ec7df4b",
+     "old_start": 2209,
+     "old_count": 14,
+     "removed": [
+      2215,
+      2217,
+      2218
+     ]
+    },
+    {
+     "file": "ext/spl/spl_iterators.c",
+     "blob": "a352ec7df4b",
+     "old_start": 2228,
+     "old_count": 7,
+     "removed": [
+      2231
+     ]
+    },
+    {
+     "file": "ext/spl/spl_iterators.c",
+     "blob": "a352ec7df4b",
+     "old_start": 2289,
+     "old_count": 7,
+     "removed": [
+      2292
+     ]
+    },
+    {
+     "file": "ext/spl/spl_iterators.c",
+     "blob": "a352ec7df4b",
+     "old_start": 2304,
+     "old_count": 7,
+     "removed": [
+      2307
+     ]
+    }
+   ],
+   "files": [
+    "ext/spl/spl_iterators.c"
+   ]
+  },
+  {
+   "bug_id": "php-src-c94f35c6ad55",
+   "hunks": [
+    {
+     "file": "ext/phar/phar_object.c",
+     "blob": "8cd13e73177",
+     "old_start": 3791,
+     "old_count": 9,
+     "removed": [
+      3794,
+      3795,
+      3796
+     ]
+    }
+   ],
+   "files": [
+    "ext/phar/phar_object.c"
+   ]
+  },
+  {
+   "bug_id": "php-src-db25b1aca2fe",
+   "hunks": [
+    {
+     "file": "ext/standard/url_scanner_ex.re",
+     "blob": "8e5b43467fc",
+     "old_start": 138,
+     "old_count": 9,
+     "removed": [
+      141,
+      143
+     ]
+    }
+   ],
+   "files": [
+    "ext/standard/url_scanner_ex.re"
+   ]
+  },
+  {
+   "bug_id": "php-src-eaf37a8bb3ef",
+   "hunks": [
+    {
+     "file": "ext/curl/multi.c",
+     "blob": "70cc7e03664",
+     "old_start": 97,
+     "old_count": 12,
+     "removed": [
+      100,
+      101,
+      102
+     ]
+    },
+    {
+     "file": "ext/curl/multi.c",
+     "blob": "70cc7e03664",
+     "old_start": 164,
+     "old_count": 9,
+     "removed": [
+      167,
+      168
+     ]
+    }
+   ],
+   "files": [
+    "ext/curl/multi.c"
+   ]
+  },
+  {
+   "bug_id": "php-src-ef72be6a423c",
+   "hunks": [
+    {
+     "file": "Zend/zend_ast.c",
+     "blob": "0fb50e2eae1",
+     "old_start": 1563,
+     "old_count": 7,
+     "removed": [
+      1566
+     ]
+    }
+   ],
+   "files": [
+    "Zend/zend_ast.c"
+   ]
+  },
+  {
+   "bug_id": "php-src-f79aeee502d8",
+   "hunks": [
+    {
+     "file": "Zend/zend_inheritance.c",
+     "blob": "7abc8119d9e",
+     "old_start": 23,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "Zend/zend_inheritance.c",
+     "blob": "7abc8119d9e",
+     "old_start": 490,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "Zend/zend_inheritance.c"
+   ]
+  }
+ ],
+ "n_bugs": 26,
+ "analysis_units": [
+  {
+   "file": "Zend/zend_ast.c",
+   "blob": "0fb50e2eae1"
+  },
+  {
+   "file": "Zend/zend_gc.c",
+   "blob": "766e1ff"
+  },
+  {
+   "file": "Zend/zend_gc.c",
+   "blob": "f062747eaeb"
+  },
+  {
+   "file": "Zend/zend_generators.c",
+   "blob": "1d785377e82"
+  },
+  {
+   "file": "Zend/zend_generators.h",
+   "blob": "4ccc42b92f6"
+  },
+  {
+   "file": "Zend/zend_hash.c",
+   "blob": "4cdf6817614"
+  },
+  {
+   "file": "Zend/zend_hash.h",
+   "blob": "d4385d162a0"
+  },
+  {
+   "file": "Zend/zend_inheritance.c",
+   "blob": "7abc8119d9e"
+  },
+  {
+   "file": "Zend/zend_inheritance.c",
+   "blob": "cec0ffdb185"
+  },
+  {
+   "file": "Zend/zend_opcode.c",
+   "blob": "7a364dfccbc"
+  },
+  {
+   "file": "Zend/zend_types.h",
+   "blob": "394cf10aabf"
+  },
+  {
+   "file": "ext/curl/interface.c",
+   "blob": "b3139422cff"
+  },
+  {
+   "file": "ext/curl/multi.c",
+   "blob": "70cc7e03664"
+  },
+  {
+   "file": "ext/pdo/pdo_dbh.c",
+   "blob": "8e4544f6cf0"
+  },
+  {
+   "file": "ext/phar/phar_object.c",
+   "blob": "8cd13e73177"
+  },
+  {
+   "file": "ext/random/engine_xoshiro256starstar.c",
+   "blob": "1a054362f06"
+  },
+  {
+   "file": "ext/soap/php_encoding.c",
+   "blob": "c568339f298"
+  },
+  {
+   "file": "ext/soap/php_encoding.c",
+   "blob": "e474798df6d"
+  },
+  {
+   "file": "ext/soap/php_encoding.h",
+   "blob": "a4e16666e68"
+  },
+  {
+   "file": "ext/soap/php_soap.h",
+   "blob": "33a071ed418"
+  },
+  {
+   "file": "ext/soap/soap.c",
+   "blob": "23e74606e99"
+  },
+  {
+   "file": "ext/soap/soap.c",
+   "blob": "c7abcbbd08e"
+  },
+  {
+   "file": "ext/spl/php_spl.c",
+   "blob": "78315e9880b"
+  },
+  {
+   "file": "ext/spl/spl_iterators.c",
+   "blob": "a352ec7df4b"
+  },
+  {
+   "file": "ext/standard/assert.c",
+   "blob": "f0b6adadbe1"
+  },
+  {
+   "file": "ext/standard/math.c",
+   "blob": "74ffa565031"
+  },
+  {
+   "file": "ext/standard/url_scanner_ex.re",
+   "blob": "8e5b43467fc"
+  },
+  {
+   "file": "ext/standard/user_filters.c",
+   "blob": "ae4132733be"
+  },
+  {
+   "file": "ext/standard/versioning.c",
+   "blob": "6995569fbf8"
+  },
+  {
+   "file": "ext/zip/php_zip.c",
+   "blob": "16df403dcda"
+  },
+  {
+   "file": "ext/zip/php_zip.c",
+   "blob": "b29ba2c370b"
+  }
+ ],
+ "n_units": 31,
+ "bug_files": [
+  "Zend/zend_ast.c",
+  "Zend/zend_gc.c",
+  "Zend/zend_generators.c",
+  "Zend/zend_generators.h",
+  "Zend/zend_hash.c",
+  "Zend/zend_hash.h",
+  "Zend/zend_inheritance.c",
+  "Zend/zend_opcode.c",
+  "Zend/zend_types.h",
+  "ext/curl/interface.c",
+  "ext/curl/multi.c",
+  "ext/pdo/pdo_dbh.c",
+  "ext/phar/phar_object.c",
+  "ext/random/engine_xoshiro256starstar.c",
+  "ext/soap/php_encoding.c",
+  "ext/soap/php_encoding.h",
+  "ext/soap/php_soap.h",
+  "ext/soap/soap.c",
+  "ext/spl/php_spl.c",
+  "ext/spl/spl_iterators.c",
+  "ext/standard/assert.c",
+  "ext/standard/math.c",
+  "ext/standard/url_scanner_ex.re",
+  "ext/standard/user_filters.c",
+  "ext/standard/versioning.c",
+  "ext/zip/php_zip.c"
+ ]
+}

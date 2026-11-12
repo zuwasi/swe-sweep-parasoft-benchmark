@@ -1,0 +1,5607 @@
+{
+ "repo": "duckdb",
+ "clone_url": "https://github.com/duckdb/duckdb.git",
+ "upstream_commit": "9f7399e15e6172900e0591deb5a57a45769d8205",
+ "base_ref": "v0.10.0",
+ "n_subtasks": 109,
+ "bugs": [
+  {
+   "bug_id": "duckdb-0072efd0dc57",
+   "hunks": [
+    {
+     "file": "src/catalog/catalog_entry/duck_table_entry.cpp",
+     "blob": "7c93ece48f",
+     "old_start": 279,
+     "old_count": 9,
+     "removed": [
+      282,
+      283,
+      284
+     ]
+    },
+    {
+     "file": "src/catalog/catalog_entry/duck_table_entry.cpp",
+     "blob": "7c93ece48f",
+     "old_start": 399,
+     "old_count": 13,
+     "removed": [
+      402,
+      403,
+      408
+     ]
+    },
+    {
+     "file": "src/catalog/catalog_entry/table_catalog_entry.cpp",
+     "blob": "c433249732",
+     "old_start": 85,
+     "old_count": 19,
+     "removed": [
+      88,
+      89,
+      91,
+      92,
+      94,
+      98,
+      100
+     ]
+    },
+    {
+     "file": "src/function/table/system/duckdb_constraints.cpp",
+     "blob": "560c6b3a3d",
+     "old_start": 153,
+     "old_count": 7,
+     "removed": [
+      156
+     ]
+    },
+    {
+     "file": "src/function/table/system/duckdb_tables.cpp",
+     "blob": "256badef56",
+     "old_start": 87,
+     "old_count": 7,
+     "removed": [
+      90
+     ]
+    },
+    {
+     "file": "src/function/table/system/pragma_table_info.cpp",
+     "blob": "64ff4694fd",
+     "old_start": 195,
+     "old_count": 12,
+     "removed": [
+      198,
+      199,
+      200,
+      201,
+      202,
+      203
+     ]
+    },
+    {
+     "file": "src/include/duckdb/parser/constraints/unique_constraint.hpp",
+     "blob": "66073108bc",
+     "old_start": 21,
+     "old_count": 14,
+     "removed": [
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31
+     ]
+    },
+    {
+     "file": "src/include/duckdb/parser/constraints/unique_constraint.hpp",
+     "blob": "66073108bc",
+     "old_start": 37,
+     "old_count": 8,
+     "removed": []
+    },
+    {
+     "file": "src/parser/constraints/unique_constraint.cpp",
+     "blob": "29fd536e8b",
+     "old_start": 28,
+     "old_count": 11,
+     "removed": [
+      31,
+      35
+     ]
+    },
+    {
+     "file": "src/planner/binder/statement/bind_create.cpp",
+     "blob": "7903342bd8",
+     "old_start": 272,
+     "old_count": 16,
+     "removed": [
+      275,
+      281,
+      282,
+      284
+     ]
+    },
+    {
+     "file": "src/planner/binder/statement/bind_create.cpp",
+     "blob": "7903342bd8",
+     "old_start": 414,
+     "old_count": 15,
+     "removed": [
+      417,
+      418,
+      419,
+      425
+     ]
+    },
+    {
+     "file": "src/planner/binder/statement/bind_create_table.cpp",
+     "blob": "683c475ddb",
+     "old_start": 76,
+     "old_count": 17,
+     "removed": [
+      79,
+      80,
+      82,
+      83,
+      84,
+      88,
+      89
+     ]
+    },
+    {
+     "file": "src/planner/binder/statement/bind_create_table.cpp",
+     "blob": "683c475ddb",
+     "old_start": 102,
+     "old_count": 7,
+     "removed": [
+      105
+     ]
+    },
+    {
+     "file": "src/planner/binder/statement/bind_create_table.cpp",
+     "blob": "683c475ddb",
+     "old_start": 111,
+     "old_count": 7,
+     "removed": [
+      114
+     ]
+    }
+   ],
+   "files": [
+    "src/catalog/catalog_entry/duck_table_entry.cpp",
+    "src/catalog/catalog_entry/table_catalog_entry.cpp",
+    "src/function/table/system/duckdb_constraints.cpp",
+    "src/function/table/system/duckdb_tables.cpp",
+    "src/function/table/system/pragma_table_info.cpp",
+    "src/include/duckdb/parser/constraints/unique_constraint.hpp",
+    "src/parser/constraints/unique_constraint.cpp",
+    "src/planner/binder/statement/bind_create.cpp",
+    "src/planner/binder/statement/bind_create_table.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-0134ded867ec",
+   "hunks": [
+    {
+     "file": "src/include/duckdb/execution/operator/helper/physical_reservoir_sample.hpp",
+     "blob": "9ff7bf62a5",
+     "old_start": 41,
+     "old_count": 7,
+     "removed": [
+      44
+     ]
+    },
+    {
+     "file": "src/include/duckdb/parser/parsed_data/sample_options.hpp",
+     "blob": "e6f8b571cd",
+     "old_start": 25,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/parser/parsed_data/sample_options.cpp",
+     "blob": "010ae2e6f9",
+     "old_start": 17,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/parser/transform/helpers/transform_sample.cpp",
+     "blob": "1873a1ce9d",
+     "old_start": 50,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/include/duckdb/execution/operator/helper/physical_reservoir_sample.hpp",
+    "src/include/duckdb/parser/parsed_data/sample_options.hpp",
+    "src/parser/parsed_data/sample_options.cpp",
+    "src/parser/transform/helpers/transform_sample.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-025b1abedd19",
+   "hunks": [
+    {
+     "file": "src/include/duckdb/parser/tableref/joinref.hpp",
+     "blob": "1f53f5c",
+     "old_start": 39,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/parser/tableref/joinref.cpp",
+     "blob": "8ad69fa",
+     "old_start": 22,
+     "old_count": 7,
+     "removed": [
+      25
+     ]
+    },
+    {
+     "file": "src/parser/tableref/joinref.cpp",
+     "blob": "8ad69fa",
+     "old_start": 78,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/parser/transform/tableref/transform_from.cpp",
+     "blob": "84ec8ea",
+     "old_start": 10,
+     "old_count": 8,
+     "removed": [
+      13
+     ]
+    },
+    {
+     "file": "src/parser/transform/tableref/transform_from.cpp",
+     "blob": "84ec8ea",
+     "old_start": 24,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/storage/serialization/serialize_tableref.cpp",
+     "blob": "e97e823",
+     "old_start": 105,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/storage/serialization/serialize_tableref.cpp",
+     "blob": "e97e823",
+     "old_start": 115,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/include/duckdb/parser/tableref/joinref.hpp",
+    "src/parser/tableref/joinref.cpp",
+    "src/parser/transform/tableref/transform_from.cpp",
+    "src/storage/serialization/serialize_tableref.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-064a85ba2b9e",
+   "hunks": [
+    {
+     "file": "src/include/duckdb/planner/query_node/bound_select_node.hpp",
+     "blob": "af16afc501",
+     "old_start": 62,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/planner/binder/query_node/bind_select_node.cpp",
+     "blob": "accd54a276",
+     "old_start": 506,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/planner/expression_binder/base_select_binder.cpp",
+     "blob": "4501a717f1",
+     "old_start": 81,
+     "old_count": 7,
+     "removed": [
+      84
+     ]
+    }
+   ],
+   "files": [
+    "src/include/duckdb/planner/query_node/bound_select_node.hpp",
+    "src/planner/binder/query_node/bind_select_node.cpp",
+    "src/planner/expression_binder/base_select_binder.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-0bcc094e9155",
+   "hunks": [
+    {
+     "file": "src/parser/transform/tableref/transform_join.cpp",
+     "blob": "4213cb5a2f",
+     "old_start": 2,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/parser/transform/tableref/transform_join.cpp",
+     "blob": "4213cb5a2f",
+     "old_start": 70,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/parser/transform/tableref/transform_join.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-0e8e823ac5dd",
+   "hunks": [
+    {
+     "file": "src/planner/binder/expression/bind_collate_expression.cpp",
+     "blob": "1f84cb17d7",
+     "old_start": 1,
+     "old_count": 4,
+     "removed": []
+    },
+    {
+     "file": "src/planner/binder/expression/bind_collate_expression.cpp",
+     "blob": "1f84cb17d7",
+     "old_start": 18,
+     "old_count": 9,
+     "removed": [
+      21,
+      23
+     ]
+    }
+   ],
+   "files": [
+    "src/planner/binder/expression/bind_collate_expression.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-15becaa25700",
+   "hunks": [
+    {
+     "file": "src/planner/subquery/flatten_dependent_join.cpp",
+     "blob": "6720e8a",
+     "old_start": 119,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/planner/subquery/flatten_dependent_join.cpp",
+     "blob": "6720e8a",
+     "old_start": 136,
+     "old_count": 13,
+     "removed": [
+      139,
+      141,
+      142,
+      143,
+      144,
+      145
+     ]
+    },
+    {
+     "file": "src/planner/subquery/flatten_dependent_join.cpp",
+     "blob": "6720e8a",
+     "old_start": 166,
+     "old_count": 8,
+     "removed": [
+      169,
+      170
+     ]
+    },
+    {
+     "file": "src/planner/subquery/flatten_dependent_join.cpp",
+     "blob": "6720e8a",
+     "old_start": 248,
+     "old_count": 7,
+     "removed": [
+      251
+     ]
+    }
+   ],
+   "files": [
+    "src/planner/subquery/flatten_dependent_join.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-165dc49e8f37",
+   "hunks": [
+    {
+     "file": "src/common/types/bit.cpp",
+     "blob": "ebd4ec3ac6",
+     "old_start": 180,
+     "old_count": 7,
+     "removed": [
+      183
+     ]
+    }
+   ],
+   "files": [
+    "src/common/types/bit.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-16912ea8773c",
+   "hunks": [
+    {
+     "file": "src/storage/compression/rle.cpp",
+     "blob": "f845baad32",
+     "old_start": 57,
+     "old_count": 11,
+     "removed": [
+      60,
+      64
+     ]
+    }
+   ],
+   "files": [
+    "src/storage/compression/rle.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-1790251e63cf",
+   "hunks": [
+    {
+     "file": "src/parser/transform/statement/transform_pivot_stmt.cpp",
+     "blob": "8b798a83c9",
+     "old_start": 163,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/parser/transform/statement/transform_pivot_stmt.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-19a0be39629f",
+   "hunks": [
+    {
+     "file": "src/planner/expression.cpp",
+     "blob": "3eb0118c19",
+     "old_start": 68,
+     "old_count": 7,
+     "removed": [
+      71
+     ]
+    }
+   ],
+   "files": [
+    "src/planner/expression.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-19c1b85d79d3",
+   "hunks": [
+    {
+     "file": "src/include/duckdb/optimizer/unnest_rewriter.hpp",
+     "blob": "3798cbd4bf",
+     "old_start": 8,
+     "old_count": 8,
+     "removed": [
+      11
+     ]
+    },
+    {
+     "file": "src/include/duckdb/optimizer/unnest_rewriter.hpp",
+     "blob": "3798cbd4bf",
+     "old_start": 61,
+     "old_count": 14,
+     "removed": [
+      64,
+      66,
+      68,
+      71
+     ]
+    },
+    {
+     "file": "src/optimizer/unnest_rewriter.cpp",
+     "blob": "f5d91061f3",
+     "old_start": 1,
+     "old_count": 13,
+     "removed": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "file": "src/optimizer/unnest_rewriter.cpp",
+     "blob": "f5d91061f3",
+     "old_start": 35,
+     "old_count": 8,
+     "removed": [
+      38,
+      39
+     ]
+    },
+    {
+     "file": "src/optimizer/unnest_rewriter.cpp",
+     "blob": "f5d91061f3",
+     "old_start": 47,
+     "old_count": 7,
+     "removed": [
+      50
+     ]
+    },
+    {
+     "file": "src/optimizer/unnest_rewriter.cpp",
+     "blob": "f5d91061f3",
+     "old_start": 57,
+     "old_count": 12,
+     "removed": [
+      60,
+      61,
+      62,
+      65
+     ]
+    },
+    {
+     "file": "src/optimizer/unnest_rewriter.cpp",
+     "blob": "f5d91061f3",
+     "old_start": 100,
+     "old_count": 14,
+     "removed": [
+      103,
+      104,
+      108,
+      110
+     ]
+    },
+    {
+     "file": "src/optimizer/unnest_rewriter.cpp",
+     "blob": "f5d91061f3",
+     "old_start": 158,
+     "old_count": 10,
+     "removed": [
+      161,
+      164
+     ]
+    },
+    {
+     "file": "src/optimizer/unnest_rewriter.cpp",
+     "blob": "f5d91061f3",
+     "old_start": 189,
+     "old_count": 7,
+     "removed": [
+      192
+     ]
+    },
+    {
+     "file": "src/optimizer/unnest_rewriter.cpp",
+     "blob": "f5d91061f3",
+     "old_start": 212,
+     "old_count": 7,
+     "removed": [
+      215
+     ]
+    },
+    {
+     "file": "src/optimizer/unnest_rewriter.cpp",
+     "blob": "f5d91061f3",
+     "old_start": 253,
+     "old_count": 9,
+     "removed": [
+      256,
+      258
+     ]
+    }
+   ],
+   "files": [
+    "src/include/duckdb/optimizer/unnest_rewriter.hpp",
+    "src/optimizer/unnest_rewriter.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-1b0e6e7cf25b",
+   "hunks": [
+    {
+     "file": "src/core_functions/scalar/list/list_reduce.cpp",
+     "blob": "1e276e7127",
+     "old_start": 11,
+     "old_count": 7,
+     "removed": [
+      14
+     ]
+    },
+    {
+     "file": "src/core_functions/scalar/list/list_reduce.cpp",
+     "blob": "1e276e7127",
+     "old_start": 50,
+     "old_count": 7,
+     "removed": [
+      53
+     ]
+    },
+    {
+     "file": "src/core_functions/scalar/list/list_reduce.cpp",
+     "blob": "1e276e7127",
+     "old_start": 64,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/core_functions/scalar/list/list_reduce.cpp",
+     "blob": "1e276e7127",
+     "old_start": 78,
+     "old_count": 8,
+     "removed": [
+      81,
+      82
+     ]
+    },
+    {
+     "file": "src/core_functions/scalar/list/list_reduce.cpp",
+     "blob": "1e276e7127",
+     "old_start": 102,
+     "old_count": 7,
+     "removed": [
+      105
+     ]
+    }
+   ],
+   "files": [
+    "src/core_functions/scalar/list/list_reduce.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-1b72fe675ead",
+   "hunks": [
+    {
+     "file": "src/core_functions/scalar/enum/enum_functions.cpp",
+     "blob": "b1728d8516",
+     "old_start": 5,
+     "old_count": 8,
+     "removed": [
+      9
+     ]
+    },
+    {
+     "file": "src/core_functions/scalar/enum/enum_functions.cpp",
+     "blob": "b1728d8516",
+     "old_start": 15,
+     "old_count": 7,
+     "removed": [
+      18
+     ]
+    }
+   ],
+   "files": [
+    "src/core_functions/scalar/enum/enum_functions.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-1e65f66ebffc",
+   "hunks": [
+    {
+     "file": "extension/icu/icu-strptime.cpp",
+     "blob": "d54d15a370",
+     "old_start": 158,
+     "old_count": 7,
+     "removed": [
+      161
+     ]
+    },
+    {
+     "file": "extension/icu/icu-strptime.cpp",
+     "blob": "d54d15a370",
+     "old_start": 194,
+     "old_count": 7,
+     "removed": [
+      197
+     ]
+    },
+    {
+     "file": "extension/icu/icu-strptime.cpp",
+     "blob": "d54d15a370",
+     "old_start": 341,
+     "old_count": 7,
+     "removed": [
+      344
+     ]
+    }
+   ],
+   "files": [
+    "extension/icu/icu-strptime.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-1e81c42dd1a4",
+   "hunks": [
+    {
+     "file": "src/core_functions/aggregate/distributive/minmax.cpp",
+     "blob": "287f38dfc6",
+     "old_start": 578,
+     "old_count": 8,
+     "removed": [
+      581,
+      582
+     ]
+    }
+   ],
+   "files": [
+    "src/core_functions/aggregate/distributive/minmax.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-200dcf6a4fde",
+   "hunks": [
+    {
+     "file": "src/optimizer/pushdown/pushdown_mark_join.cpp",
+     "blob": "b336cd3",
+     "old_start": 35,
+     "old_count": 7,
+     "removed": [
+      38
+     ]
+    }
+   ],
+   "files": [
+    "src/optimizer/pushdown/pushdown_mark_join.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-2020c8d7a281",
+   "hunks": [
+    {
+     "file": "src/function/cast/vector_cast_helpers.cpp",
+     "blob": "34b0e34df4",
+     "old_start": 39,
+     "old_count": 25,
+     "removed": [
+      48,
+      49,
+      50,
+      52,
+      53,
+      54,
+      56,
+      57,
+      60
+     ]
+    }
+   ],
+   "files": [
+    "src/function/cast/vector_cast_helpers.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-21cff7c1d5c6",
+   "hunks": [
+    {
+     "file": "src/storage/buffer/block_manager.cpp",
+     "blob": "0000000000",
+     "old_start": 45,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/storage/buffer/block_manager.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-2217f9b6532e",
+   "hunks": [
+    {
+     "file": "src/planner/expression/bound_cast_expression.cpp",
+     "blob": "9699fd7",
+     "old_start": 149,
+     "old_count": 16,
+     "removed": [
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161
+     ]
+    }
+   ],
+   "files": [
+    "src/planner/expression/bound_cast_expression.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-22ad99fe6d43",
+   "hunks": [
+    {
+     "file": "src/parser/transform/expression/transform_subquery.cpp",
+     "blob": "5b63689",
+     "old_start": 8,
+     "old_count": 14,
+     "removed": [
+      11,
+      13,
+      14
+     ]
+    },
+    {
+     "file": "src/parser/transform/expression/transform_subquery.cpp",
+     "blob": "5b63689",
+     "old_start": 40,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/parser/transform/expression/transform_subquery.cpp",
+     "blob": "5b63689",
+     "old_start": 53,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/parser/transform/expression/transform_subquery.cpp",
+     "blob": "5b63689",
+     "old_start": 61,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/parser/transform/expression/transform_subquery.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-2380f9735ed0",
+   "hunks": [
+    {
+     "file": "extension/excel/numformat/nf_calendar.cpp",
+     "blob": "5a22690e83",
+     "old_start": 185,
+     "old_count": 8,
+     "removed": [
+      188,
+      189
+     ]
+    }
+   ],
+   "files": [
+    "extension/excel/numformat/nf_calendar.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-24278e9ffd28",
+   "hunks": [
+    {
+     "file": "src/include/duckdb/storage/data_table.hpp",
+     "blob": "4c2e0d6b58",
+     "old_start": 128,
+     "old_count": 9,
+     "removed": [
+      131
+     ]
+    },
+    {
+     "file": "src/include/duckdb/storage/table/append_state.hpp",
+     "blob": "382f86da5d",
+     "old_start": 67,
+     "old_count": 8,
+     "removed": [
+      70,
+      71
+     ]
+    },
+    {
+     "file": "src/include/duckdb/storage/table/row_group_collection.hpp",
+     "blob": "9401cb9aee",
+     "old_start": 69,
+     "old_count": 8,
+     "removed": [
+      72,
+      73
+     ]
+    },
+    {
+     "file": "src/storage/data_table.cpp",
+     "blob": "0e64ab831f",
+     "old_start": 747,
+     "old_count": 12,
+     "removed": [
+      750,
+      755
+     ]
+    },
+    {
+     "file": "src/storage/data_table.cpp",
+     "blob": "0e64ab831f",
+     "old_start": 760,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/storage/local_storage.cpp",
+     "blob": "2aa7ab7363",
+     "old_start": 151,
+     "old_count": 7,
+     "removed": [
+      154
+     ]
+    },
+    {
+     "file": "src/storage/local_storage.cpp",
+     "blob": "2aa7ab7363",
+     "old_start": 202,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/storage/local_storage.cpp",
+     "blob": "2aa7ab7363",
+     "old_start": 352,
+     "old_count": 7,
+     "removed": [
+      355
+     ]
+    },
+    {
+     "file": "src/storage/table/row_group.cpp",
+     "blob": "f70ebbc8f3",
+     "old_start": 184,
+     "old_count": 12,
+     "removed": [
+      192
+     ]
+    },
+    {
+     "file": "src/storage/table/row_group_collection.cpp",
+     "blob": "91c843ed72",
+     "old_start": 288,
+     "old_count": 11,
+     "removed": [
+      291,
+      295
+     ]
+    },
+    {
+     "file": "src/storage/table/row_group_collection.cpp",
+     "blob": "91c843ed72",
+     "old_start": 304,
+     "old_count": 7,
+     "removed": [
+      307
+     ]
+    },
+    {
+     "file": "src/storage/table/row_group_collection.cpp",
+     "blob": "91c843ed72",
+     "old_start": 318,
+     "old_count": 17,
+     "removed": [
+      321,
+      323,
+      324,
+      325,
+      326,
+      331
+     ]
+    },
+    {
+     "file": "src/storage/table/row_group_collection.cpp",
+     "blob": "91c843ed72",
+     "old_start": 336,
+     "old_count": 9,
+     "removed": [
+      339,
+      341
+     ]
+    },
+    {
+     "file": "src/storage/table/row_group_collection.cpp",
+     "blob": "91c843ed72",
+     "old_start": 355,
+     "old_count": 9,
+     "removed": [
+      358,
+      359,
+      360
+     ]
+    },
+    {
+     "file": "src/storage/table/row_group_collection.cpp",
+     "blob": "91c843ed72",
+     "old_start": 375,
+     "old_count": 15,
+     "removed": [
+      378,
+      379,
+      380,
+      386
+     ]
+    }
+   ],
+   "files": [
+    "src/include/duckdb/storage/data_table.hpp",
+    "src/include/duckdb/storage/table/append_state.hpp",
+    "src/include/duckdb/storage/table/row_group_collection.hpp",
+    "src/storage/data_table.cpp",
+    "src/storage/local_storage.cpp",
+    "src/storage/table/row_group.cpp",
+    "src/storage/table/row_group_collection.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-282d562aa395",
+   "hunks": [
+    {
+     "file": "src/optimizer/rule/move_constants.cpp",
+     "blob": "636265ff91",
+     "old_start": 41,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/optimizer/rule/move_constants.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-2b390ca9f79d",
+   "hunks": [
+    {
+     "file": "src/catalog/catalog_entry/duck_schema_entry.cpp",
+     "blob": "ba54471afe",
+     "old_start": 36,
+     "old_count": 13,
+     "removed": [
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45
+     ]
+    },
+    {
+     "file": "src/catalog/catalog_entry/duck_schema_entry.cpp",
+     "blob": "ba54471afe",
+     "old_start": 50,
+     "old_count": 9,
+     "removed": [
+      53,
+      55
+     ]
+    },
+    {
+     "file": "src/catalog/catalog_entry/duck_schema_entry.cpp",
+     "blob": "ba54471afe",
+     "old_start": 122,
+     "old_count": 14,
+     "removed": [
+      125,
+      126,
+      127,
+      128,
+      129,
+      132
+     ]
+    },
+    {
+     "file": "src/catalog/catalog_entry/duck_schema_entry.cpp",
+     "blob": "ba54471afe",
+     "old_start": 139,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/catalog/catalog_entry/duck_schema_entry.cpp",
+     "blob": "ba54471afe",
+     "old_start": 288,
+     "old_count": 7,
+     "removed": [
+      291
+     ]
+    },
+    {
+     "file": "src/catalog/catalog_set.cpp",
+     "blob": "d167fd90d3",
+     "old_start": 357,
+     "old_count": 7,
+     "removed": [
+      360
+     ]
+    },
+    {
+     "file": "src/catalog/dependency_manager.cpp",
+     "blob": "86b1fb251b",
+     "old_start": 398,
+     "old_count": 7,
+     "removed": [
+      401
+     ]
+    },
+    {
+     "file": "src/catalog/dependency_manager.cpp",
+     "blob": "86b1fb251b",
+     "old_start": 415,
+     "old_count": 9,
+     "removed": [
+      418,
+      419,
+      420
+     ]
+    },
+    {
+     "file": "src/include/duckdb/catalog/dependency_manager.hpp",
+     "blob": "e580bfccba",
+     "old_start": 110,
+     "old_count": 6,
+     "removed": [
+      112
+     ]
+    }
+   ],
+   "files": [
+    "src/catalog/catalog_entry/duck_schema_entry.cpp",
+    "src/catalog/catalog_set.cpp",
+    "src/catalog/dependency_manager.cpp",
+    "src/include/duckdb/catalog/dependency_manager.hpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-350ed10c5eea",
+   "hunks": [
+    {
+     "file": "src/function/scalar/string/like.cpp",
+     "blob": "eb9f2e34e0",
+     "old_start": 8,
+     "old_count": 12,
+     "removed": []
+    },
+    {
+     "file": "src/function/scalar/string/like.cpp",
+     "blob": "eb9f2e34e0",
+     "old_start": 36,
+     "old_count": 7,
+     "removed": [
+      39
+     ]
+    }
+   ],
+   "files": [
+    "src/function/scalar/string/like.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-35212bbdc849",
+   "hunks": [
+    {
+     "file": "src/planner/binder/expression/bind_window_expression.cpp",
+     "blob": "00b7bcded5",
+     "old_start": 44,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/planner/binder/expression/bind_window_expression.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-36c38199ce20",
+   "hunks": [
+    {
+     "file": "src/include/duckdb/optimizer/join_order/relation_manager.hpp",
+     "blob": "adaf487f04",
+     "old_start": 55,
+     "old_count": 7,
+     "removed": [
+      58
+     ]
+    },
+    {
+     "file": "src/optimizer/join_order/relation_manager.cpp",
+     "blob": "2476d2b8e7",
+     "old_start": 29,
+     "old_count": 12,
+     "removed": [
+      32,
+      33,
+      37
+     ]
+    },
+    {
+     "file": "src/optimizer/join_order/relation_manager.cpp",
+     "blob": "2476d2b8e7",
+     "old_start": 184,
+     "old_count": 7,
+     "removed": [
+      187
+     ]
+    },
+    {
+     "file": "src/optimizer/join_order/relation_manager.cpp",
+     "blob": "2476d2b8e7",
+     "old_start": 194,
+     "old_count": 7,
+     "removed": [
+      197
+     ]
+    }
+   ],
+   "files": [
+    "src/include/duckdb/optimizer/join_order/relation_manager.hpp",
+    "src/optimizer/join_order/relation_manager.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-37580a29144b",
+   "hunks": [
+    {
+     "file": "src/common/operator/cast_operators.cpp",
+     "blob": "c59fe5853a",
+     "old_start": 1753,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/common/operator/cast_operators.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-3a50d7579d15",
+   "hunks": [
+    {
+     "file": "src/planner/binder/statement/bind_insert.cpp",
+     "blob": "ac430edee3",
+     "old_start": 295,
+     "old_count": 7,
+     "removed": [
+      298
+     ]
+    },
+    {
+     "file": "src/planner/binder/statement/bind_insert.cpp",
+     "blob": "ac430edee3",
+     "old_start": 353,
+     "old_count": 8,
+     "removed": [
+      356,
+      357
+     ]
+    }
+   ],
+   "files": [
+    "src/planner/binder/statement/bind_insert.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-3f1087fd04f8",
+   "hunks": [
+    {
+     "file": "src/execution/operator/aggregate/physical_hash_aggregate.cpp",
+     "blob": "c4cf4b55d0",
+     "old_start": 319,
+     "old_count": 15,
+     "removed": [
+      322,
+      327,
+      328,
+      330
+     ]
+    }
+   ],
+   "files": [
+    "src/execution/operator/aggregate/physical_hash_aggregate.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-3f3cf4083ba4",
+   "hunks": [
+    {
+     "file": "src/optimizer/deliminator.cpp",
+     "blob": "254a570267",
+     "old_start": 349,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/optimizer/deliminator.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-3f7b28468e2e",
+   "hunks": [
+    {
+     "file": "src/optimizer/filter_combiner.cpp",
+     "blob": "a72354d7df",
+     "old_start": 78,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/optimizer/filter_combiner.cpp",
+     "blob": "a72354d7df",
+     "old_start": 792,
+     "old_count": 11,
+     "removed": [
+      795,
+      796
+     ]
+    },
+    {
+     "file": "src/optimizer/filter_combiner.cpp",
+     "blob": "a72354d7df",
+     "old_start": 1067,
+     "old_count": 10,
+     "removed": [
+      1070
+     ]
+    }
+   ],
+   "files": [
+    "src/optimizer/filter_combiner.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-43b086a35dd5",
+   "hunks": [
+    {
+     "file": "src/common/types/vector.cpp",
+     "blob": "9a48aa7092",
+     "old_start": 204,
+     "old_count": 7,
+     "removed": [
+      207
+     ]
+    }
+   ],
+   "files": [
+    "src/common/types/vector.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-4473cf27097c",
+   "hunks": [
+    {
+     "file": "src/optimizer/join_order/relation_manager.cpp",
+     "blob": "319c88e2e5",
+     "old_start": 79,
+     "old_count": 5,
+     "removed": []
+    },
+    {
+     "file": "src/optimizer/join_order/relation_manager.cpp",
+     "blob": "319c88e2e5",
+     "old_start": 198,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/optimizer/join_order/relation_manager.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-46a43d62ed7c",
+   "hunks": [
+    {
+     "file": "src/core_functions/scalar/string/printf.cpp",
+     "blob": "b71bedef06",
+     "old_start": 27,
+     "old_count": 15,
+     "removed": [
+      37,
+      38
+     ]
+    },
+    {
+     "file": "src/core_functions/scalar/string/printf.cpp",
+     "blob": "b71bedef06",
+     "old_start": 105,
+     "old_count": 28,
+     "removed": [
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120,
+      121,
+      122,
+      128,
+      129
+     ]
+    }
+   ],
+   "files": [
+    "src/core_functions/scalar/string/printf.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-4815019d7a34",
+   "hunks": [
+    {
+     "file": "src/execution/physical_plan/plan_filter.cpp",
+     "blob": "292fe1bc84",
+     "old_start": 14,
+     "old_count": 7,
+     "removed": [
+      16
+     ]
+    },
+    {
+     "file": "src/planner/binder/query_node/plan_select_node.cpp",
+     "blob": "46e5d2e127",
+     "old_start": 30,
+     "old_count": 7,
+     "removed": [
+      33
+     ]
+    }
+   ],
+   "files": [
+    "src/execution/physical_plan/plan_filter.cpp",
+    "src/planner/binder/query_node/plan_select_node.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-4b18f32ec21e",
+   "hunks": [
+    {
+     "file": "src/common/types/timestamp.cpp",
+     "blob": "3ae9e46237",
+     "old_start": 79,
+     "old_count": 7,
+     "removed": [
+      82
+     ]
+    }
+   ],
+   "files": [
+    "src/common/types/timestamp.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-4c125bd36641",
+   "hunks": [
+    {
+     "file": "src/optimizer/join_order/relation_manager.cpp",
+     "blob": "15545c4014",
+     "old_start": 34,
+     "old_count": 10,
+     "removed": [
+      37,
+      38,
+      39,
+      40
+     ]
+    },
+    {
+     "file": "src/optimizer/join_order/relation_manager.cpp",
+     "blob": "15545c4014",
+     "old_start": 276,
+     "old_count": 8,
+     "removed": [
+      279,
+      280
+     ]
+    },
+    {
+     "file": "src/optimizer/join_order/relation_manager.cpp",
+     "blob": "15545c4014",
+     "old_start": 323,
+     "old_count": 17,
+     "removed": [
+      336
+     ]
+    }
+   ],
+   "files": [
+    "src/optimizer/join_order/relation_manager.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-4f2d8e8eaf2f",
+   "hunks": [
+    {
+     "file": "src/common/row_operations/row_radix_scatter.cpp",
+     "blob": "01557ca455",
+     "old_start": 125,
+     "old_count": 7,
+     "removed": [
+      128
+     ]
+    }
+   ],
+   "files": [
+    "src/common/row_operations/row_radix_scatter.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-4fae7f8bb350",
+   "hunks": [
+    {
+     "file": "src/include/duckdb/optimizer/join_order/cost_model.hpp",
+     "blob": "49895406af",
+     "old_start": 26,
+     "old_count": 7,
+     "removed": [
+      29
+     ]
+    },
+    {
+     "file": "src/include/duckdb/optimizer/join_order/join_node.hpp",
+     "blob": "8f973c9548",
+     "old_start": 14,
+     "old_count": 15,
+     "removed": [
+      17,
+      24,
+      25
+     ]
+    },
+    {
+     "file": "src/include/duckdb/optimizer/join_order/join_node.hpp",
+     "blob": "8f973c9548",
+     "old_start": 33,
+     "old_count": 7,
+     "removed": [
+      36
+     ]
+    },
+    {
+     "file": "src/include/duckdb/optimizer/join_order/plan_enumerator.hpp",
+     "blob": "19d6a40fe6",
+     "old_start": 30,
+     "old_count": 8,
+     "removed": [
+      33,
+      34
+     ]
+    },
+    {
+     "file": "src/include/duckdb/optimizer/join_order/plan_enumerator.hpp",
+     "blob": "19d6a40fe6",
+     "old_start": 49,
+     "old_count": 23,
+     "removed": [
+      52,
+      54,
+      55,
+      58,
+      59,
+      60,
+      64
+     ]
+    },
+    {
+     "file": "src/include/duckdb/optimizer/join_order/plan_enumerator.hpp",
+     "blob": "19d6a40fe6",
+     "old_start": 79,
+     "old_count": 11,
+     "removed": [
+      82,
+      83,
+      84,
+      85,
+      86
+     ]
+    },
+    {
+     "file": "src/optimizer/join_order/cardinality_estimator.cpp",
+     "blob": "2d0be531b3",
+     "old_start": 246,
+     "old_count": 7,
+     "removed": [
+      249
+     ]
+    },
+    {
+     "file": "src/optimizer/join_order/cardinality_estimator.cpp",
+     "blob": "2d0be531b3",
+     "old_start": 259,
+     "old_count": 7,
+     "removed": [
+      262
+     ]
+    },
+    {
+     "file": "src/optimizer/join_order/cost_model.cpp",
+     "blob": "a0ceeb72b2",
+     "old_start": 8,
+     "old_count": 7,
+     "removed": [
+      11
+     ]
+    },
+    {
+     "file": "src/optimizer/join_order/join_node.cpp",
+     "blob": "ef8baa084b",
+     "old_start": 9,
+     "old_count": 8,
+     "removed": [
+      12,
+      13
+     ]
+    },
+    {
+     "file": "src/optimizer/join_order/join_node.cpp",
+     "blob": "ef8baa084b",
+     "old_start": 37,
+     "old_count": 4,
+     "removed": []
+    },
+    {
+     "file": "src/optimizer/join_order/join_order_optimizer.cpp",
+     "blob": "1b259a3c5b",
+     "old_start": 49,
+     "old_count": 7,
+     "removed": [
+      52
+     ]
+    },
+    {
+     "file": "src/optimizer/join_order/plan_enumerator.cpp",
+     "blob": "6bbc13c3c5",
+     "old_start": 8,
+     "old_count": 25,
+     "removed": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+     ]
+    },
+    {
+     "file": "src/optimizer/join_order/plan_enumerator.cpp",
+     "blob": "6bbc13c3c5",
+     "old_start": 110,
+     "old_count": 10,
+     "removed": [
+      114,
+      115,
+      116
+     ]
+    },
+    {
+     "file": "src/optimizer/join_order/plan_enumerator.cpp",
+     "blob": "6bbc13c3c5",
+     "old_start": 126,
+     "old_count": 13,
+     "removed": [
+      129,
+      134,
+      135
+     ]
+    },
+    {
+     "file": "src/optimizer/join_order/plan_enumerator.cpp",
+     "blob": "6bbc13c3c5",
+     "old_start": 150,
+     "old_count": 34,
+     "removed": [
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169,
+      170,
+      171,
+      172,
+      173,
+      174,
+      175,
+      176,
+      178,
+      180
+     ]
+    },
+    {
+     "file": "src/optimizer/join_order/plan_enumerator.cpp",
+     "blob": "6bbc13c3c5",
+     "old_start": 186,
+     "old_count": 7,
+     "removed": [
+      189
+     ]
+    },
+    {
+     "file": "src/optimizer/join_order/plan_enumerator.cpp",
+     "blob": "6bbc13c3c5",
+     "old_start": 218,
+     "old_count": 7,
+     "removed": [
+      221
+     ]
+    },
+    {
+     "file": "src/optimizer/join_order/plan_enumerator.cpp",
+     "blob": "6bbc13c3c5",
+     "old_start": 353,
+     "old_count": 46,
+     "removed": [
+      356,
+      357,
+      358,
+      359,
+      360,
+      361,
+      362,
+      363,
+      364,
+      365,
+      366,
+      367,
+      368,
+      369,
+      370,
+      371,
+      372,
+      373,
+      374,
+      375,
+      376,
+      377,
+      378,
+      379,
+      380,
+      381,
+      382,
+      383,
+      384,
+      385,
+      386,
+      387,
+      388,
+      389,
+      390,
+      391,
+      392,
+      393,
+      394,
+      395
+     ]
+    },
+    {
+     "file": "src/optimizer/join_order/plan_enumerator.cpp",
+     "blob": "6bbc13c3c5",
+     "old_start": 406,
+     "old_count": 7,
+     "removed": [
+      409
+     ]
+    },
+    {
+     "file": "src/optimizer/join_order/plan_enumerator.cpp",
+     "blob": "6bbc13c3c5",
+     "old_start": 415,
+     "old_count": 17,
+     "removed": [
+      418,
+      424,
+      426,
+      428
+     ]
+    },
+    {
+     "file": "src/optimizer/join_order/plan_enumerator.cpp",
+     "blob": "6bbc13c3c5",
+     "old_start": 435,
+     "old_count": 15,
+     "removed": [
+      438,
+      445,
+      446
+     ]
+    },
+    {
+     "file": "src/optimizer/join_order/plan_enumerator.cpp",
+     "blob": "6bbc13c3c5",
+     "old_start": 451,
+     "old_count": 11,
+     "removed": [
+      454,
+      458
+     ]
+    },
+    {
+     "file": "src/optimizer/join_order/plan_enumerator.cpp",
+     "blob": "6bbc13c3c5",
+     "old_start": 474,
+     "old_count": 11,
+     "removed": [
+      477,
+      481
+     ]
+    },
+    {
+     "file": "src/optimizer/join_order/plan_enumerator.cpp",
+     "blob": "6bbc13c3c5",
+     "old_start": 510,
+     "old_count": 9,
+     "removed": [
+      513
+     ]
+    },
+    {
+     "file": "src/optimizer/join_order/plan_enumerator.cpp",
+     "blob": "6bbc13c3c5",
+     "old_start": 549,
+     "old_count": 7,
+     "removed": [
+      552
+     ]
+    }
+   ],
+   "files": [
+    "src/include/duckdb/optimizer/join_order/cost_model.hpp",
+    "src/include/duckdb/optimizer/join_order/join_node.hpp",
+    "src/include/duckdb/optimizer/join_order/plan_enumerator.hpp",
+    "src/optimizer/join_order/cardinality_estimator.cpp",
+    "src/optimizer/join_order/cost_model.cpp",
+    "src/optimizer/join_order/join_node.cpp",
+    "src/optimizer/join_order/join_order_optimizer.cpp",
+    "src/optimizer/join_order/plan_enumerator.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-4fc939834090",
+   "hunks": [
+    {
+     "file": "src/function/scalar/list/list_zip.cpp",
+     "blob": "106e72ff2b",
+     "old_start": 132,
+     "old_count": 7,
+     "removed": [
+      135
+     ]
+    }
+   ],
+   "files": [
+    "src/function/scalar/list/list_zip.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-55543d201747",
+   "hunks": [
+    {
+     "file": "src/include/duckdb/optimizer/compressed_materialization.hpp",
+     "blob": "86422c9c60",
+     "old_start": 8,
+     "old_count": 15,
+     "removed": [
+      11,
+      12,
+      19
+     ]
+    },
+    {
+     "file": "src/include/duckdb/optimizer/compressed_materialization.hpp",
+     "blob": "86422c9c60",
+     "old_start": 75,
+     "old_count": 14,
+     "removed": [
+      78,
+      83,
+      84,
+      85
+     ]
+    },
+    {
+     "file": "src/include/duckdb/optimizer/compressed_materialization.hpp",
+     "blob": "86422c9c60",
+     "old_start": 122,
+     "old_count": 12,
+     "removed": [
+      126,
+      127,
+      128,
+      129
+     ]
+    },
+    {
+     "file": "src/include/duckdb/optimizer/optimizer.hpp",
+     "blob": "312fcc4908",
+     "old_start": 26,
+     "old_count": 7,
+     "removed": []
+    },
+    {
+     "file": "src/include/duckdb/optimizer/statistics_propagator.hpp",
+     "blob": "7569909982",
+     "old_start": 27,
+     "old_count": 7,
+     "removed": [
+      30
+     ]
+    },
+    {
+     "file": "src/include/duckdb/optimizer/statistics_propagator.hpp",
+     "blob": "7569909982",
+     "old_start": 37,
+     "old_count": 23,
+     "removed": [
+      40,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      56
+     ]
+    },
+    {
+     "file": "src/include/duckdb/optimizer/statistics_propagator.hpp",
+     "blob": "7569909982",
+     "old_start": 86,
+     "old_count": 18,
+     "removed": [
+      89,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100
+     ]
+    },
+    {
+     "file": "src/include/duckdb/optimizer/statistics_propagator.hpp",
+     "blob": "7569909982",
+     "old_start": 107,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/optimizer/compressed_materialization.cpp",
+     "blob": "c54918a847",
+     "old_start": 1,
+     "old_count": 14,
+     "removed": [
+      11
+     ]
+    },
+    {
+     "file": "src/optimizer/compressed_materialization.cpp",
+     "blob": "c54918a847",
+     "old_start": 41,
+     "old_count": 9,
+     "removed": [
+      44,
+      45,
+      46
+     ]
+    },
+    {
+     "file": "src/optimizer/compressed_materialization.cpp",
+     "blob": "c54918a847",
+     "old_start": 74,
+     "old_count": 22,
+     "removed": [
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      85,
+      89,
+      90
+     ]
+    },
+    {
+     "file": "src/optimizer/compressed_materialization.cpp",
+     "blob": "c54918a847",
+     "old_start": 166,
+     "old_count": 9,
+     "removed": [
+      169,
+      171
+     ]
+    },
+    {
+     "file": "src/optimizer/compressed_materialization.cpp",
+     "blob": "c54918a847",
+     "old_start": 191,
+     "old_count": 7,
+     "removed": [
+      194
+     ]
+    },
+    {
+     "file": "src/optimizer/compressed_materialization.cpp",
+     "blob": "c54918a847",
+     "old_start": 253,
+     "old_count": 16,
+     "removed": [
+      256,
+      258,
+      264,
+      265
+     ]
+    },
+    {
+     "file": "src/optimizer/compressed_materialization/compress_aggregate.cpp",
+     "blob": "a61787e759",
+     "old_start": 7,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/optimizer/optimizer.cpp",
+     "blob": "d314984549",
+     "old_start": 6,
+     "old_count": 7,
+     "removed": [
+      9
+     ]
+    },
+    {
+     "file": "src/optimizer/optimizer.cpp",
+     "blob": "d314984549",
+     "old_start": 57,
+     "old_count": 9,
+     "removed": [
+      60,
+      62
+     ]
+    },
+    {
+     "file": "src/optimizer/optimizer.cpp",
+     "blob": "d314984549",
+     "old_start": 159,
+     "old_count": 7,
+     "removed": [
+      162
+     ]
+    },
+    {
+     "file": "src/optimizer/optimizer.cpp",
+     "blob": "d314984549",
+     "old_start": 176,
+     "old_count": 12,
+     "removed": [
+      179,
+      180,
+      181,
+      182,
+      183,
+      184
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/expression/propagate_aggregate.cpp",
+     "blob": "b3dc53b8b9",
+     "old_start": 4,
+     "old_count": 7,
+     "removed": [
+      7
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/expression/propagate_between.cpp",
+     "blob": "fd4865e768",
+     "old_start": 1,
+     "old_count": 13,
+     "removed": [
+      5,
+      10
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/expression/propagate_between.cpp",
+     "blob": "fd4865e768",
+     "old_start": 29,
+     "old_count": 11,
+     "removed": [
+      32,
+      36
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/expression/propagate_between.cpp",
+     "blob": "fd4865e768",
+     "old_start": 41,
+     "old_count": 7,
+     "removed": [
+      44
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/expression/propagate_between.cpp",
+     "blob": "fd4865e768",
+     "old_start": 49,
+     "old_count": 14,
+     "removed": [
+      52,
+      55,
+      59
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/expression/propagate_case.cpp",
+     "blob": "7586b9a42d",
+     "old_start": 4,
+     "old_count": 7,
+     "removed": [
+      7
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/expression/propagate_cast.cpp",
+     "blob": "94908ea486",
+     "old_start": 122,
+     "old_count": 7,
+     "removed": [
+      125
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/expression/propagate_columnref.cpp",
+     "blob": "8a8d7db1a6",
+     "old_start": 4,
+     "old_count": 7,
+     "removed": [
+      7
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/expression/propagate_comparison.cpp",
+     "blob": "1331d8167d",
+     "old_start": 92,
+     "old_count": 7,
+     "removed": [
+      95
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/expression/propagate_comparison.cpp",
+     "blob": "1331d8167d",
+     "old_start": 102,
+     "old_count": 23,
+     "removed": [
+      105,
+      106,
+      108,
+      109,
+      114,
+      121
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/expression/propagate_conjunction.cpp",
+     "blob": "1fce16c8cf",
+     "old_start": 8,
+     "old_count": 7,
+     "removed": [
+      11
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/expression/propagate_conjunction.cpp",
+     "blob": "1fce16c8cf",
+     "old_start": 50,
+     "old_count": 16,
+     "removed": [
+      53,
+      54,
+      58,
+      59,
+      62
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/expression/propagate_constant.cpp",
+     "blob": "c531311d7d",
+     "old_start": 11,
+     "old_count": 7,
+     "removed": [
+      14
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/expression/propagate_function.cpp",
+     "blob": "3d7a2d7a85",
+     "old_start": 4,
+     "old_count": 7,
+     "removed": [
+      7
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/expression/propagate_function.cpp",
+     "blob": "3d7a2d7a85",
+     "old_start": 18,
+     "old_count": 7,
+     "removed": [
+      21
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/expression/propagate_operator.cpp",
+     "blob": "4bb1f8fd7a",
+     "old_start": 5,
+     "old_count": 7,
+     "removed": [
+      8
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/expression/propagate_operator.cpp",
+     "blob": "4bb1f8fd7a",
+     "old_start": 47,
+     "old_count": 7,
+     "removed": [
+      50
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/expression/propagate_operator.cpp",
+     "blob": "4bb1f8fd7a",
+     "old_start": 59,
+     "old_count": 25,
+     "removed": [
+      62,
+      63,
+      67,
+      68,
+      74,
+      75,
+      79,
+      80
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/operator/propagate_aggregate.cpp",
+     "blob": "1824a4f187",
+     "old_start": 4,
+     "old_count": 7,
+     "removed": [
+      7
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/operator/propagate_cross_product.cpp",
+     "blob": "c69c9b886d",
+     "old_start": 4,
+     "old_count": 7,
+     "removed": [
+      7
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/operator/propagate_filter.cpp",
+     "blob": "97609fa628",
+     "old_start": 222,
+     "old_count": 11,
+     "removed": [
+      225,
+      229
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/operator/propagate_filter.cpp",
+     "blob": "97609fa628",
+     "old_start": 247,
+     "old_count": 7,
+     "removed": [
+      250
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/operator/propagate_get.cpp",
+     "blob": "22979f1945",
+     "old_start": 31,
+     "old_count": 7,
+     "removed": [
+      34
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/operator/propagate_get.cpp",
+     "blob": "22979f1945",
+     "old_start": 85,
+     "old_count": 7,
+     "removed": [
+      88
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/operator/propagate_join.cpp",
+     "blob": "093a379052",
+     "old_start": 14,
+     "old_count": 7,
+     "removed": [
+      17
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/operator/propagate_join.cpp",
+     "blob": "093a379052",
+     "old_start": 40,
+     "old_count": 7,
+     "removed": [
+      43
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/operator/propagate_join.cpp",
+     "blob": "093a379052",
+     "old_start": 48,
+     "old_count": 7,
+     "removed": [
+      51
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/operator/propagate_join.cpp",
+     "blob": "093a379052",
+     "old_start": 106,
+     "old_count": 19,
+     "removed": [
+      109,
+      116,
+      121
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/operator/propagate_join.cpp",
+     "blob": "093a379052",
+     "old_start": 175,
+     "old_count": 7,
+     "removed": [
+      178
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/operator/propagate_join.cpp",
+     "blob": "093a379052",
+     "old_start": 201,
+     "old_count": 7,
+     "removed": [
+      204
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/operator/propagate_join.cpp",
+     "blob": "093a379052",
+     "old_start": 274,
+     "old_count": 7,
+     "removed": [
+      277
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/operator/propagate_limit.cpp",
+     "blob": "390e24aba1",
+     "old_start": 4,
+     "old_count": 7,
+     "removed": [
+      7
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/operator/propagate_order.cpp",
+     "blob": "5770fcc886",
+     "old_start": 5,
+     "old_count": 7,
+     "removed": [
+      8
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/operator/propagate_projection.cpp",
+     "blob": "83c8309554",
+     "old_start": 4,
+     "old_count": 11,
+     "removed": [
+      7,
+      11
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/operator/propagate_set_operation.cpp",
+     "blob": "8b90aeb634",
+     "old_start": 24,
+     "old_count": 7,
+     "removed": [
+      27
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics/operator/propagate_window.cpp",
+     "blob": "9b6dcc493d",
+     "old_start": 5,
+     "old_count": 7,
+     "removed": [
+      8
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics_propagator.cpp",
+     "blob": "701697233d",
+     "old_start": 1,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/optimizer/statistics_propagator.cpp",
+     "blob": "701697233d",
+     "old_start": 19,
+     "old_count": 8,
+     "removed": [
+      22,
+      23
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics_propagator.cpp",
+     "blob": "701697233d",
+     "old_start": 28,
+     "old_count": 7,
+     "removed": [
+      31
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics_propagator.cpp",
+     "blob": "701697233d",
+     "old_start": 36,
+     "old_count": 45,
+     "removed": [
+      39,
+      42,
+      44,
+      46,
+      48,
+      50,
+      56,
+      58,
+      62,
+      64,
+      66,
+      68,
+      73,
+      77
+     ]
+    },
+    {
+     "file": "src/optimizer/statistics_propagator.cpp",
+     "blob": "701697233d",
+     "old_start": 104,
+     "old_count": 7,
+     "removed": [
+      107
+     ]
+    }
+   ],
+   "files": [
+    "src/include/duckdb/optimizer/compressed_materialization.hpp",
+    "src/include/duckdb/optimizer/optimizer.hpp",
+    "src/include/duckdb/optimizer/statistics_propagator.hpp",
+    "src/optimizer/compressed_materialization.cpp",
+    "src/optimizer/compressed_materialization/compress_aggregate.cpp",
+    "src/optimizer/optimizer.cpp",
+    "src/optimizer/statistics/expression/propagate_aggregate.cpp",
+    "src/optimizer/statistics/expression/propagate_between.cpp",
+    "src/optimizer/statistics/expression/propagate_case.cpp",
+    "src/optimizer/statistics/expression/propagate_cast.cpp",
+    "src/optimizer/statistics/expression/propagate_columnref.cpp",
+    "src/optimizer/statistics/expression/propagate_comparison.cpp",
+    "src/optimizer/statistics/expression/propagate_conjunction.cpp",
+    "src/optimizer/statistics/expression/propagate_constant.cpp",
+    "src/optimizer/statistics/expression/propagate_function.cpp",
+    "src/optimizer/statistics/expression/propagate_operator.cpp",
+    "src/optimizer/statistics/operator/propagate_aggregate.cpp",
+    "src/optimizer/statistics/operator/propagate_cross_product.cpp",
+    "src/optimizer/statistics/operator/propagate_filter.cpp",
+    "src/optimizer/statistics/operator/propagate_get.cpp",
+    "src/optimizer/statistics/operator/propagate_join.cpp",
+    "src/optimizer/statistics/operator/propagate_limit.cpp",
+    "src/optimizer/statistics/operator/propagate_order.cpp",
+    "src/optimizer/statistics/operator/propagate_projection.cpp",
+    "src/optimizer/statistics/operator/propagate_set_operation.cpp",
+    "src/optimizer/statistics/operator/propagate_window.cpp",
+    "src/optimizer/statistics_propagator.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-5a33d9a1c013",
+   "hunks": [
+    {
+     "file": "src/common/types.cpp",
+     "blob": "d0d5041f88",
+     "old_start": 543,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/include/duckdb/common/types.hpp",
+     "blob": "ef7db7f749",
+     "old_start": 331,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/planner/expression/bound_cast_expression.cpp",
+     "blob": "4168bf3e59",
+     "old_start": 176,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/common/types.cpp",
+    "src/include/duckdb/common/types.hpp",
+    "src/planner/expression/bound_cast_expression.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-5b031435d1c2",
+   "hunks": [
+    {
+     "file": "src/common/types/bit.cpp",
+     "blob": "97db477451",
+     "old_start": 51,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/common/types/bit.cpp",
+     "blob": "97db477451",
+     "old_start": 145,
+     "old_count": 7,
+     "removed": [
+      148
+     ]
+    },
+    {
+     "file": "src/common/types/bit.cpp",
+     "blob": "97db477451",
+     "old_start": 287,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/common/types/bit.cpp",
+     "blob": "97db477451",
+     "old_start": 332,
+     "old_count": 7,
+     "removed": [
+      335
+     ]
+    },
+    {
+     "file": "src/common/types/bit.cpp",
+     "blob": "97db477451",
+     "old_start": 348,
+     "old_count": 8,
+     "removed": [
+      351,
+      352
+     ]
+    },
+    {
+     "file": "src/common/types/bit.cpp",
+     "blob": "97db477451",
+     "old_start": 365,
+     "old_count": 8,
+     "removed": [
+      368,
+      369
+     ]
+    },
+    {
+     "file": "src/common/types/bit.cpp",
+     "blob": "97db477451",
+     "old_start": 403,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/common/types/bit.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-5b6992a0f3a6",
+   "hunks": [
+    {
+     "file": "src/planner/binder/query_node/plan_subquery.cpp",
+     "blob": "16f0c8fdd8",
+     "old_start": 128,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/planner/binder/query_node/plan_subquery.cpp",
+     "blob": "16f0c8fdd8",
+     "old_start": 320,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/planner/binder/query_node/plan_subquery.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-5e618dfa2d4f",
+   "hunks": [
+    {
+     "file": "extension/fts/fts_indexing.cpp",
+     "blob": "bd985f7a6c",
+     "old_start": 73,
+     "old_count": 7,
+     "removed": [
+      76
+     ]
+    }
+   ],
+   "files": [
+    "extension/fts/fts_indexing.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-61c3cfc37903",
+   "hunks": [
+    {
+     "file": "src/common/vector_operations/vector_hash.cpp",
+     "blob": "46a9bcdaae",
+     "old_start": 3,
+     "old_count": 12,
+     "removed": [
+      6,
+      7,
+      8
+     ]
+    },
+    {
+     "file": "src/common/vector_operations/vector_hash.cpp",
+     "blob": "46a9bcdaae",
+     "old_start": 91,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/execution/join_hashtable.cpp",
+     "blob": "2b74b5bd7e",
+     "old_start": 513,
+     "old_count": 7,
+     "removed": [
+      516
+     ]
+    }
+   ],
+   "files": [
+    "src/common/vector_operations/vector_hash.cpp",
+    "src/execution/join_hashtable.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-62047414f1fa",
+   "hunks": [
+    {
+     "file": "src/function/table/system/duckdb_columns.cpp",
+     "blob": "cee5e1f",
+     "old_start": 7,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/function/table/system/duckdb_columns.cpp",
+     "blob": "cee5e1f",
+     "old_start": 157,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/function/table/system/duckdb_columns.cpp",
+     "blob": "cee5e1f",
+     "old_start": 166,
+     "old_count": 7,
+     "removed": [
+      169
+     ]
+    },
+    {
+     "file": "src/function/table/system/duckdb_columns.cpp",
+     "blob": "cee5e1f",
+     "old_start": 183,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/function/table/system/duckdb_columns.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-62e8b51ffa88",
+   "hunks": [
+    {
+     "file": "src/storage/local_storage.cpp",
+     "blob": "f44527e6cd",
+     "old_start": 317,
+     "old_count": 7,
+     "removed": [
+      320
+     ]
+    }
+   ],
+   "files": [
+    "src/storage/local_storage.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-647f5416bff8",
+   "hunks": [
+    {
+     "file": "src/include/duckdb/optimizer/in_clause_rewriter.hpp",
+     "blob": "91e4e1f86d",
+     "old_start": 9,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/include/duckdb/optimizer/in_clause_rewriter.hpp",
+     "blob": "91e4e1f86d",
+     "old_start": 21,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/optimizer/in_clause_rewriter.cpp",
+     "blob": "c53c8e3f1a",
+     "old_start": 5,
+     "old_count": 15,
+     "removed": [
+      13
+     ]
+    },
+    {
+     "file": "src/optimizer/in_clause_rewriter.cpp",
+     "blob": "c53c8e3f1a",
+     "old_start": 100,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/optimizer/remove_unused_columns.cpp",
+     "blob": "12ea9230df",
+     "old_start": 282,
+     "old_count": 15,
+     "removed": [
+      285,
+      286,
+      287,
+      288,
+      289,
+      290,
+      291,
+      292,
+      293
+     ]
+    }
+   ],
+   "files": [
+    "src/include/duckdb/optimizer/in_clause_rewriter.hpp",
+    "src/optimizer/in_clause_rewriter.cpp",
+    "src/optimizer/remove_unused_columns.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-663c7d842c69",
+   "hunks": [
+    {
+     "file": "src/storage/table/chunk_info.cpp",
+     "blob": "6460f6f992",
+     "old_start": 204,
+     "old_count": 7,
+     "removed": [
+      207
+     ]
+    }
+   ],
+   "files": [
+    "src/storage/table/chunk_info.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-675eb44147c9",
+   "hunks": [
+    {
+     "file": "src/common/operator/cast_operators.cpp",
+     "blob": "69ed385",
+     "old_start": 2385,
+     "old_count": 7,
+     "removed": [
+      2388
+     ]
+    }
+   ],
+   "files": [
+    "src/common/operator/cast_operators.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-685162621323",
+   "hunks": [
+    {
+     "file": "src/function/cast/list_casts.cpp",
+     "blob": "016f7b195f",
+     "old_start": 208,
+     "old_count": 7,
+     "removed": [
+      211
+     ]
+    },
+    {
+     "file": "src/function/cast/list_casts.cpp",
+     "blob": "016f7b195f",
+     "old_start": 228,
+     "old_count": 12,
+     "removed": [
+      231,
+      232,
+      233,
+      234,
+      235,
+      236
+     ]
+    }
+   ],
+   "files": [
+    "src/function/cast/list_casts.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-69a6459a8108",
+   "hunks": [
+    {
+     "file": "src/common/tree_renderer.cpp",
+     "blob": "0000000000",
+     "old_start": 377,
+     "old_count": 29,
+     "removed": [
+      380,
+      381,
+      382,
+      383,
+      384,
+      385,
+      386,
+      387,
+      392,
+      393,
+      394,
+      395,
+      396,
+      397,
+      398,
+      399,
+      400,
+      401,
+      402
+     ]
+    },
+    {
+     "file": "src/execution/operator/scan/physical_positional_scan.cpp",
+     "blob": "e2a67505ae",
+     "old_start": 208,
+     "old_count": 4,
+     "removed": []
+    },
+    {
+     "file": "src/include/duckdb/execution/operator/scan/physical_positional_scan.hpp",
+     "blob": "c142009d22",
+     "old_start": 30,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/common/tree_renderer.cpp",
+    "src/execution/operator/scan/physical_positional_scan.cpp",
+    "src/include/duckdb/execution/operator/scan/physical_positional_scan.hpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-6dcb9e7c2bb4",
+   "hunks": [
+    {
+     "file": "src/function/table/system/test_all_types.cpp",
+     "blob": "53e4167",
+     "old_start": 39,
+     "old_count": 8,
+     "removed": [
+      42,
+      43
+     ]
+    },
+    {
+     "file": "src/include/duckdb/common/limits.hpp",
+     "blob": "21e28f7",
+     "old_start": 24,
+     "old_count": 10,
+     "removed": [
+      27,
+      30
+     ]
+    }
+   ],
+   "files": [
+    "src/function/table/system/test_all_types.cpp",
+    "src/include/duckdb/common/limits.hpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-6f234f9c4978",
+   "hunks": [
+    {
+     "file": "src/function/scalar/nested_functions.cpp",
+     "blob": "59c5f2b235",
+     "old_start": 14,
+     "old_count": 9,
+     "removed": [
+      17,
+      18,
+      19
+     ]
+    },
+    {
+     "file": "src/function/scalar/nested_functions.cpp",
+     "blob": "59c5f2b235",
+     "old_start": 31,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/function/scalar/nested_functions.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-7463773a3cb5",
+   "hunks": [
+    {
+     "file": "src/optimizer/pushdown/pushdown_cross_product.cpp",
+     "blob": "efa3fa4e7a",
+     "old_start": 7,
+     "old_count": 9,
+     "removed": [
+      10
+     ]
+    },
+    {
+     "file": "src/optimizer/pushdown/pushdown_cross_product.cpp",
+     "blob": "efa3fa4e7a",
+     "old_start": 41,
+     "old_count": 16,
+     "removed": [
+      44,
+      49,
+      50,
+      51
+     ]
+    },
+    {
+     "file": "src/optimizer/pushdown/pushdown_inner_join.cpp",
+     "blob": "dd94d3f341",
+     "old_start": 24,
+     "old_count": 12,
+     "removed": [
+      27,
+      28,
+      29,
+      32
+     ]
+    },
+    {
+     "file": "src/optimizer/pushdown/pushdown_inner_join.cpp",
+     "blob": "dd94d3f341",
+     "old_start": 42,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/optimizer/pushdown/pushdown_cross_product.cpp",
+    "src/optimizer/pushdown/pushdown_inner_join.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-75521326481f",
+   "hunks": [
+    {
+     "file": "src/parser/parsed_data/create_index_info.cpp",
+     "blob": "8f74c05c70",
+     "old_start": 4,
+     "old_count": 7,
+     "removed": [
+      7
+     ]
+    }
+   ],
+   "files": [
+    "src/parser/parsed_data/create_index_info.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-7b570403d686",
+   "hunks": [
+    {
+     "file": "src/include/duckdb/storage/table/column_segment.hpp",
+     "blob": "6ae03d4f3a",
+     "old_start": 68,
+     "old_count": 8,
+     "removed": [
+      71,
+      72
+     ]
+    },
+    {
+     "file": "src/storage/table/column_data.cpp",
+     "blob": "550408b8c7",
+     "old_start": 210,
+     "old_count": 8,
+     "removed": [
+      213,
+      214
+     ]
+    },
+    {
+     "file": "src/storage/table/column_segment.cpp",
+     "blob": "c0f67a0ca8",
+     "old_start": 244,
+     "old_count": 12,
+     "removed": [
+      247,
+      248,
+      252
+     ]
+    },
+    {
+     "file": "src/storage/table/column_segment.cpp",
+     "blob": "c0f67a0ca8",
+     "old_start": 257,
+     "old_count": 68,
+     "removed": [
+      260,
+      261,
+      268,
+      271,
+      278,
+      281,
+      288,
+      291,
+      297,
+      298,
+      300,
+      301,
+      307,
+      308,
+      310,
+      311,
+      317,
+      318,
+      320,
+      321
+     ]
+    },
+    {
+     "file": "src/storage/table/column_segment.cpp",
+     "blob": "c0f67a0ca8",
+     "old_start": 329,
+     "old_count": 7,
+     "removed": [
+      332
+     ]
+    },
+    {
+     "file": "src/storage/table/column_segment.cpp",
+     "blob": "c0f67a0ca8",
+     "old_start": 343,
+     "old_count": 7,
+     "removed": [
+      346
+     ]
+    },
+    {
+     "file": "src/storage/table/column_segment.cpp",
+     "blob": "c0f67a0ca8",
+     "old_start": 353,
+     "old_count": 8,
+     "removed": [
+      356,
+      357
+     ]
+    },
+    {
+     "file": "src/storage/table/column_segment.cpp",
+     "blob": "c0f67a0ca8",
+     "old_start": 365,
+     "old_count": 7,
+     "removed": [
+      368
+     ]
+    },
+    {
+     "file": "src/storage/table/column_segment.cpp",
+     "blob": "c0f67a0ca8",
+     "old_start": 388,
+     "old_count": 127,
+     "removed": [
+      391,
+      398,
+      400,
+      402,
+      403,
+      407,
+      409,
+      410,
+      414,
+      416,
+      417,
+      421,
+      423,
+      424,
+      428,
+      430,
+      431,
+      435,
+      437,
+      438,
+      442,
+      444,
+      445,
+      449,
+      451,
+      452,
+      456,
+      458,
+      459,
+      463,
+      465,
+      466,
+      470,
+      472,
+      473,
+      477,
+      479,
+      480,
+      484,
+      486,
+      487,
+      491,
+      493,
+      494,
+      498,
+      503,
+      505,
+      509,
+      510,
+      511
+     ]
+    }
+   ],
+   "files": [
+    "src/include/duckdb/storage/table/column_segment.hpp",
+    "src/storage/table/column_data.cpp",
+    "src/storage/table/column_segment.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-7fa52ed2bd69",
+   "hunks": [
+    {
+     "file": "extension/tpcds/tpcds_extension.cpp",
+     "blob": "c6157b67ae",
+     "old_start": 43,
+     "old_count": 13,
+     "removed": [
+      52
+     ]
+    },
+    {
+     "file": "extension/tpcds/tpcds_extension.cpp",
+     "blob": "c6157b67ae",
+     "old_start": 82,
+     "old_count": 7,
+     "removed": [
+      85
+     ]
+    },
+    {
+     "file": "extension/tpcds/tpcds_extension.cpp",
+     "blob": "c6157b67ae",
+     "old_start": 116,
+     "old_count": 7,
+     "removed": [
+      119
+     ]
+    },
+    {
+     "file": "extension/tpch/tpch_extension.cpp",
+     "blob": "68548438ab",
+     "old_start": 8,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "extension/tpch/tpch_extension.cpp",
+     "blob": "68548438ab",
+     "old_start": 51,
+     "old_count": 14,
+     "removed": [
+      54,
+      61
+     ]
+    },
+    {
+     "file": "extension/tpch/tpch_extension.cpp",
+     "blob": "68548438ab",
+     "old_start": 92,
+     "old_count": 7,
+     "removed": [
+      95
+     ]
+    },
+    {
+     "file": "extension/tpch/tpch_extension.cpp",
+     "blob": "68548438ab",
+     "old_start": 126,
+     "old_count": 7,
+     "removed": [
+      129
+     ]
+    },
+    {
+     "file": "src/include/duckdb/function/table_function.hpp",
+     "blob": "30cc0d9f8d",
+     "old_start": 83,
+     "old_count": 9,
+     "removed": [
+      86,
+      88
+     ]
+    },
+    {
+     "file": "src/include/duckdb/function/table_function.hpp",
+     "blob": "30cc0d9f8d",
+     "old_start": 93,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/planner/binder/tableref/bind_table_function.cpp",
+     "blob": "16a60ce1cd",
+     "old_start": 140,
+     "old_count": 7,
+     "removed": [
+      143
+     ]
+    },
+    {
+     "file": "src/planner/operator/logical_get.cpp",
+     "blob": "1ee9256189",
+     "old_start": 165,
+     "old_count": 7,
+     "removed": [
+      168
+     ]
+    }
+   ],
+   "files": [
+    "extension/tpcds/tpcds_extension.cpp",
+    "extension/tpch/tpch_extension.cpp",
+    "src/include/duckdb/function/table_function.hpp",
+    "src/planner/binder/tableref/bind_table_function.cpp",
+    "src/planner/operator/logical_get.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-824a50418841",
+   "hunks": [
+    {
+     "file": "src/core_functions/scalar/enum/enum_functions.cpp",
+     "blob": "5722cf5878",
+     "old_start": 28,
+     "old_count": 7,
+     "removed": [
+      31
+     ]
+    }
+   ],
+   "files": [
+    "src/core_functions/scalar/enum/enum_functions.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-8450ad72d657",
+   "hunks": [
+    {
+     "file": "src/execution/operator/aggregate/physical_streaming_window.cpp",
+     "blob": "f1310350e6",
+     "old_start": 167,
+     "old_count": 13,
+     "removed": [
+      170,
+      171
+     ]
+    }
+   ],
+   "files": [
+    "src/execution/operator/aggregate/physical_streaming_window.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-85e3b88d8300",
+   "hunks": [],
+   "files": []
+  },
+  {
+   "bug_id": "duckdb-863b896717f1",
+   "hunks": [
+    {
+     "file": "src/storage/table/array_column_data.cpp",
+     "blob": "95ba4df380",
+     "old_start": 114,
+     "old_count": 7,
+     "removed": [
+      117
+     ]
+    },
+    {
+     "file": "src/storage/table/struct_column_data.cpp",
+     "blob": "9ac2b0c0f0",
+     "old_start": 127,
+     "old_count": 7,
+     "removed": [
+      130
+     ]
+    }
+   ],
+   "files": [
+    "src/storage/table/array_column_data.cpp",
+    "src/storage/table/struct_column_data.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-8679358a0503",
+   "hunks": [
+    {
+     "file": "src/planner/expression/bound_cast_expression.cpp",
+     "blob": "af176cb98e",
+     "old_start": 142,
+     "old_count": 7,
+     "removed": [
+      145
+     ]
+    },
+    {
+     "file": "src/planner/expression/bound_cast_expression.cpp",
+     "blob": "af176cb98e",
+     "old_start": 151,
+     "old_count": 8,
+     "removed": [
+      154,
+      155
+     ]
+    },
+    {
+     "file": "src/planner/expression/bound_cast_expression.cpp",
+     "blob": "af176cb98e",
+     "old_start": 163,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/planner/expression/bound_cast_expression.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-86fe04caf9f4",
+   "hunks": [
+    {
+     "file": "src/core_functions/scalar/operators/bitwise.cpp",
+     "blob": "d9bb589502",
+     "old_start": 206,
+     "old_count": 11,
+     "removed": [
+      209,
+      213
+     ]
+    }
+   ],
+   "files": [
+    "src/core_functions/scalar/operators/bitwise.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-8a3e974e8727",
+   "hunks": [
+    {
+     "file": "extension/json/json_functions/json_create.cpp",
+     "blob": "2167ae902e",
+     "old_start": 313,
+     "old_count": 8,
+     "removed": [
+      317
+     ]
+    }
+   ],
+   "files": [
+    "extension/json/json_functions/json_create.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-8dcd0ac1cae0",
+   "hunks": [
+    {
+     "file": "src/parser/transform/expression/transform_subquery.cpp",
+     "blob": "5b63689003",
+     "old_start": 69,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/parser/transform/expression/transform_subquery.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-8ef8ca9824ab",
+   "hunks": [
+    {
+     "file": "src/core_functions/scalar/generic/current_setting.cpp",
+     "blob": "5eb5c91a54",
+     "old_start": 43,
+     "old_count": 12,
+     "removed": [
+      46,
+      47,
+      51
+     ]
+    }
+   ],
+   "files": [
+    "src/core_functions/scalar/generic/current_setting.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-8fee68dc6ef2",
+   "hunks": [
+    {
+     "file": "src/planner/binder/tableref/bind_pivot.cpp",
+     "blob": "6c89b7b2cd",
+     "old_start": 19,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/planner/binder/tableref/bind_pivot.cpp",
+     "blob": "6c89b7b2cd",
+     "old_start": 344,
+     "old_count": 7,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/planner/binder/tableref/bind_pivot.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-9247c5568ef1",
+   "hunks": [
+    {
+     "file": "src/planner/expression/bound_window_expression.cpp",
+     "blob": "7d7ee1833c",
+     "old_start": 98,
+     "old_count": 17,
+     "removed": [
+      101,
+      102,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111
+     ]
+    }
+   ],
+   "files": [
+    "src/planner/expression/bound_window_expression.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-94dd9ceb3b3a",
+   "hunks": [
+    {
+     "file": "src/optimizer/remove_unused_columns.cpp",
+     "blob": "bd71de72ae",
+     "old_start": 108,
+     "old_count": 12,
+     "removed": [
+      111,
+      112,
+      113,
+      114,
+      115,
+      116
+     ]
+    },
+    {
+     "file": "src/optimizer/remove_unused_columns.cpp",
+     "blob": "bd71de72ae",
+     "old_start": 156,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/optimizer/remove_unused_columns.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-95c312388f7b",
+   "hunks": [
+    {
+     "file": "src/planner/binder/query_node/bind_select_node.cpp",
+     "blob": null,
+     "old_start": 414,
+     "old_count": 5,
+     "removed": []
+    },
+    {
+     "file": "src/planner/binder/query_node/bind_select_node.cpp",
+     "blob": null,
+     "old_start": 453,
+     "old_count": 5,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/planner/binder/query_node/bind_select_node.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-96cd6f4c49c4",
+   "hunks": [
+    {
+     "file": "src/catalog/catalog_search_path.cpp",
+     "blob": "6be5f491c0",
+     "old_start": 67,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/parser/transform/statement/transform_use.cpp",
+     "blob": "a4d7684372",
+     "old_start": 11,
+     "old_count": 9,
+     "removed": [
+      14,
+      16
+     ]
+    }
+   ],
+   "files": [
+    "src/catalog/catalog_search_path.cpp",
+    "src/parser/transform/statement/transform_use.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-99482115caaa",
+   "hunks": [],
+   "files": []
+  },
+  {
+   "bug_id": "duckdb-9dda7601a697",
+   "hunks": [
+    {
+     "file": "src/storage/data_table.cpp",
+     "blob": "093ff64349",
+     "old_start": 519,
+     "old_count": 7,
+     "removed": [
+      522
+     ]
+    }
+   ],
+   "files": [
+    "src/storage/data_table.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-a3491d68d372",
+   "hunks": [
+    {
+     "file": "src/parser/parser.cpp",
+     "blob": "7dd7a43d9f",
+     "old_start": 95,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/parser/parser.cpp",
+     "blob": "7dd7a43d9f",
+     "old_start": 113,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/parser/parser.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-a36a17c4de98",
+   "hunks": [
+    {
+     "file": "src/optimizer/rule/in_clause_simplification_rule.cpp",
+     "blob": "07e4337737",
+     "old_start": 23,
+     "old_count": 9,
+     "removed": [
+      26,
+      28
+     ]
+    },
+    {
+     "file": "src/optimizer/rule/in_clause_simplification_rule.cpp",
+     "blob": "07e4337737",
+     "old_start": 36,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/optimizer/rule/in_clause_simplification_rule.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-a5eb42c56587",
+   "hunks": [
+    {
+     "file": "src/include/duckdb/planner/expression_binder/alter_binder.hpp",
+     "blob": "2633a0923f",
+     "old_start": 14,
+     "old_count": 22,
+     "removed": [
+      17,
+      23,
+      24,
+      25,
+      30,
+      31
+     ]
+    },
+    {
+     "file": "src/include/duckdb/planner/table_binding.hpp",
+     "blob": "aa288a12b0",
+     "old_start": 133,
+     "old_count": 12,
+     "removed": [
+      136,
+      138,
+      140,
+      141
+     ]
+    },
+    {
+     "file": "src/planner/expression_binder/alter_binder.cpp",
+     "blob": "597ef0ca6f",
+     "old_start": 1,
+     "old_count": 8,
+     "removed": [
+      5
+     ]
+    },
+    {
+     "file": "src/planner/expression_binder/alter_binder.cpp",
+     "blob": "597ef0ca6f",
+     "old_start": 12,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/planner/expression_binder/alter_binder.cpp",
+     "blob": "597ef0ca6f",
+     "old_start": 20,
+     "old_count": 7,
+     "removed": [
+      23
+     ]
+    },
+    {
+     "file": "src/planner/expression_binder/alter_binder.cpp",
+     "blob": "597ef0ca6f",
+     "old_start": 30,
+     "old_count": 14,
+     "removed": [
+      33,
+      34,
+      35,
+      37,
+      40
+     ]
+    }
+   ],
+   "files": [
+    "src/include/duckdb/planner/expression_binder/alter_binder.hpp",
+    "src/include/duckdb/planner/table_binding.hpp",
+    "src/planner/expression_binder/alter_binder.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-a61365926289",
+   "hunks": [
+    {
+     "file": "extension/parquet/column_writer.cpp",
+     "blob": "8eb0f68877",
+     "old_start": 1750,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "extension/parquet/column_writer.cpp",
+     "blob": "8eb0f68877",
+     "old_start": 1803,
+     "old_count": 7,
+     "removed": [
+      1806
+     ]
+    },
+    {
+     "file": "extension/parquet/column_writer.cpp",
+     "blob": "8eb0f68877",
+     "old_start": 1817,
+     "old_count": 7,
+     "removed": [
+      1820
+     ]
+    }
+   ],
+   "files": [
+    "extension/parquet/column_writer.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-a82cf49f86dd",
+   "hunks": [
+    {
+     "file": "src/planner/binder/expression/bind_window_expression.cpp",
+     "blob": "4dbd8625cf",
+     "old_start": 145,
+     "old_count": 7,
+     "removed": [
+      148
+     ]
+    }
+   ],
+   "files": [
+    "src/planner/binder/expression/bind_window_expression.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-ab8e5666b8b2",
+   "hunks": [
+    {
+     "file": "src/parser/transform/statement/transform_select_node.cpp",
+     "blob": "b5aa73a3c9",
+     "old_start": 91,
+     "old_count": 9,
+     "removed": [
+      94,
+      95,
+      96
+     ]
+    }
+   ],
+   "files": [
+    "src/parser/transform/statement/transform_select_node.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-af0f5334fb87",
+   "hunks": [
+    {
+     "file": "src/planner/subquery/flatten_dependent_join.cpp",
+     "blob": "a297a7855d",
+     "old_start": 401,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/planner/subquery/flatten_dependent_join.cpp",
+     "blob": "a297a7855d",
+     "old_start": 419,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/planner/subquery/flatten_dependent_join.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-b16e2dce4c66",
+   "hunks": [
+    {
+     "file": "src/core_functions/scalar/date/date_diff.cpp",
+     "blob": "6266dda350",
+     "old_start": 28,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/core_functions/scalar/date/date_diff.cpp",
+     "blob": "6266dda350",
+     "old_start": 202,
+     "old_count": 24,
+     "removed": [
+      205,
+      210,
+      215,
+      216,
+      221,
+      222
+     ]
+    }
+   ],
+   "files": [
+    "src/core_functions/scalar/date/date_diff.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-b189dd7ff15f",
+   "hunks": [
+    {
+     "file": "src/optimizer/unnest_rewriter.cpp",
+     "blob": "796a9338b9",
+     "old_start": 122,
+     "old_count": 7,
+     "removed": [
+      125
+     ]
+    },
+    {
+     "file": "src/optimizer/unnest_rewriter.cpp",
+     "blob": "796a9338b9",
+     "old_start": 279,
+     "old_count": 7,
+     "removed": [
+      282
+     ]
+    }
+   ],
+   "files": [
+    "src/optimizer/unnest_rewriter.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-b219521ef1e5",
+   "hunks": [
+    {
+     "file": "src/function/scalar/strftime_format.cpp",
+     "blob": "3525519a9d",
+     "old_start": 1185,
+     "old_count": 8,
+     "removed": [
+      1188,
+      1189
+     ]
+    }
+   ],
+   "files": [
+    "src/function/scalar/strftime_format.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-b59aa14f8b3f",
+   "hunks": [
+    {
+     "file": "src/include/duckdb/common/operator/integer_cast_operator.hpp",
+     "blob": "8bf694c42a",
+     "old_start": 103,
+     "old_count": 9,
+     "removed": [
+      106
+     ]
+    }
+   ],
+   "files": [
+    "src/include/duckdb/common/operator/integer_cast_operator.hpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-b6d9ac9ac4c4",
+   "hunks": [
+    {
+     "file": "src/planner/subquery/flatten_dependent_join.cpp",
+     "blob": "23dd23ec40",
+     "old_start": 618,
+     "old_count": 19,
+     "removed": [
+      622,
+      623,
+      624,
+      631,
+      632
+     ]
+    }
+   ],
+   "files": [
+    "src/planner/subquery/flatten_dependent_join.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-b9b1bb8a239b",
+   "hunks": [
+    {
+     "file": "src/include/duckdb/planner/expression_binder/base_select_binder.hpp",
+     "blob": "c05e1d8d99",
+     "old_start": 56,
+     "old_count": 9,
+     "removed": [
+      61
+     ]
+    },
+    {
+     "file": "src/planner/binder/expression/bind_unnest_expression.cpp",
+     "blob": "92a41d7f6c",
+     "old_start": 47,
+     "old_count": 10,
+     "removed": []
+    },
+    {
+     "file": "src/planner/binder/expression/bind_window_expression.cpp",
+     "blob": "2c64e2e05f",
+     "old_start": 1,
+     "old_count": 6,
+     "removed": [
+      1
+     ]
+    },
+    {
+     "file": "src/planner/binder/expression/bind_window_expression.cpp",
+     "blob": "2c64e2e05f",
+     "old_start": 8,
+     "old_count": 13,
+     "removed": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+     ]
+    },
+    {
+     "file": "src/planner/binder/expression/bind_window_expression.cpp",
+     "blob": "2c64e2e05f",
+     "old_start": 153,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/planner/binder/expression/bind_window_expression.cpp",
+     "blob": "2c64e2e05f",
+     "old_start": 162,
+     "old_count": 7,
+     "removed": [
+      165
+     ]
+    },
+    {
+     "file": "src/planner/binder/expression/bind_window_expression.cpp",
+     "blob": "2c64e2e05f",
+     "old_start": 194,
+     "old_count": 7,
+     "removed": [
+      197
+     ]
+    },
+    {
+     "file": "src/planner/binder/expression/bind_window_expression.cpp",
+     "blob": "2c64e2e05f",
+     "old_start": 249,
+     "old_count": 21,
+     "removed": [
+      252,
+      254,
+      256,
+      257,
+      261,
+      263,
+      264,
+      265,
+      266
+     ]
+    },
+    {
+     "file": "src/planner/binder/expression/bind_window_expression.cpp",
+     "blob": "2c64e2e05f",
+     "old_start": 286,
+     "old_count": 26,
+     "removed": [
+      289,
+      290,
+      294,
+      295,
+      302,
+      303,
+      307,
+      308
+     ]
+    },
+    {
+     "file": "src/planner/binder/expression/bind_window_expression.cpp",
+     "blob": "2c64e2e05f",
+     "old_start": 337,
+     "old_count": 7,
+     "removed": [
+      340
+     ]
+    },
+    {
+     "file": "src/planner/expression_binder/base_select_binder.cpp",
+     "blob": "b4708561e2",
+     "old_start": 4,
+     "old_count": 10,
+     "removed": [
+      7,
+      10
+     ]
+    },
+    {
+     "file": "src/planner/expression_binder/base_select_binder.cpp",
+     "blob": "b4708561e2",
+     "old_start": 26,
+     "old_count": 7,
+     "removed": [
+      29
+     ]
+    },
+    {
+     "file": "src/planner/expression_binder/base_select_binder.cpp",
+     "blob": "b4708561e2",
+     "old_start": 42,
+     "old_count": 7,
+     "removed": [
+      45
+     ]
+    },
+    {
+     "file": "src/planner/expression_binder/base_select_binder.cpp",
+     "blob": "b4708561e2",
+     "old_start": 61,
+     "old_count": 9,
+     "removed": [
+      64,
+      65,
+      66
+     ]
+    },
+    {
+     "file": "src/planner/expression_binder/base_select_binder.cpp",
+     "blob": "b4708561e2",
+     "old_start": 121,
+     "old_count": 7,
+     "removed": [
+      124
+     ]
+    },
+    {
+     "file": "src/planner/expression_binder/having_binder.cpp",
+     "blob": "9cc1e6c26a",
+     "old_start": 57,
+     "old_count": 7,
+     "removed": [
+      60
+     ]
+    },
+    {
+     "file": "src/planner/expression_binder/qualify_binder.cpp",
+     "blob": "7a486cf81f",
+     "old_start": 39,
+     "old_count": 7,
+     "removed": [
+      42
+     ]
+    }
+   ],
+   "files": [
+    "src/include/duckdb/planner/expression_binder/base_select_binder.hpp",
+    "src/planner/binder/expression/bind_unnest_expression.cpp",
+    "src/planner/binder/expression/bind_window_expression.cpp",
+    "src/planner/expression_binder/base_select_binder.cpp",
+    "src/planner/expression_binder/having_binder.cpp",
+    "src/planner/expression_binder/qualify_binder.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-ba44421804d6",
+   "hunks": [
+    {
+     "file": "src/planner/binder/query_node/plan_subquery.cpp",
+     "blob": "b938f1f654",
+     "old_start": 393,
+     "old_count": 17,
+     "removed": [
+      396,
+      397,
+      398,
+      399,
+      400,
+      401,
+      402,
+      403,
+      405,
+      406
+     ]
+    }
+   ],
+   "files": [
+    "src/planner/binder/query_node/plan_subquery.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-c6f9dfd6591b",
+   "hunks": [
+    {
+     "file": "src/common/types.cpp",
+     "blob": "c7c4d5c",
+     "old_start": 544,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/include/duckdb/common/types.hpp",
+     "blob": "04c0e96",
+     "old_start": 310,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/optimizer/remove_unused_columns.cpp",
+     "blob": "bd71de7",
+     "old_start": 83,
+     "old_count": 10,
+     "removed": [
+      89
+     ]
+    }
+   ],
+   "files": [
+    "src/common/types.cpp",
+    "src/include/duckdb/common/types.hpp",
+    "src/optimizer/remove_unused_columns.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-c9112165759d",
+   "hunks": [
+    {
+     "file": "src/include/duckdb/storage/table/segment_tree.hpp",
+     "blob": "e267d2e351",
+     "old_start": 145,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/storage/table/row_group_collection.cpp",
+     "blob": "b0eb5022f7",
+     "old_start": 962,
+     "old_count": 8,
+     "removed": [
+      965
+     ]
+    }
+   ],
+   "files": [
+    "src/include/duckdb/storage/table/segment_tree.hpp",
+    "src/storage/table/row_group_collection.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-cfdd5889da28",
+   "hunks": [
+    {
+     "file": "src/include/duckdb/core_functions/aggregate/algebraic/stddev.hpp",
+     "blob": "88063eea06",
+     "old_start": 61,
+     "old_count": 6,
+     "removed": [
+      63
+     ]
+    }
+   ],
+   "files": [
+    "src/include/duckdb/core_functions/aggregate/algebraic/stddev.hpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-da5c7335ea4b",
+   "hunks": [
+    {
+     "file": "src/planner/subquery/flatten_dependent_join.cpp",
+     "blob": "026da1dad3",
+     "old_start": 575,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/planner/subquery/flatten_dependent_join.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-dbd78f790c07",
+   "hunks": [
+    {
+     "file": "extension/json/include/json_executors.hpp",
+     "blob": "334170ee73",
+     "old_start": 30,
+     "old_count": 7,
+     "removed": [
+      33
+     ]
+    },
+    {
+     "file": "extension/json/include/json_executors.hpp",
+     "blob": "334170ee73",
+     "old_start": 48,
+     "old_count": 7,
+     "removed": [
+      51
+     ]
+    },
+    {
+     "file": "extension/json/include/json_executors.hpp",
+     "blob": "334170ee73",
+     "old_start": 76,
+     "old_count": 7,
+     "removed": [
+      79
+     ]
+    },
+    {
+     "file": "extension/json/include/json_executors.hpp",
+     "blob": "334170ee73",
+     "old_start": 109,
+     "old_count": 7,
+     "removed": [
+      112
+     ]
+    },
+    {
+     "file": "extension/json/include/json_executors.hpp",
+     "blob": "334170ee73",
+     "old_start": 148,
+     "old_count": 7,
+     "removed": [
+      151
+     ]
+    },
+    {
+     "file": "extension/json/json_functions/json_type.cpp",
+     "blob": "b1e9dbcc2d",
+     "old_start": 11,
+     "old_count": 11,
+     "removed": [
+      14,
+      18
+     ]
+    }
+   ],
+   "files": [
+    "extension/json/include/json_executors.hpp",
+    "extension/json/json_functions/json_type.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-dc96153f0266",
+   "hunks": [
+    {
+     "file": "src/include/duckdb/storage/compression/alp/alp_analyze.hpp",
+     "blob": "0288a9bd42",
+     "old_start": 164,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/include/duckdb/storage/compression/alprd/alprd_analyze.hpp",
+     "blob": "6a2522ba63",
+     "old_start": 108,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/storage/table/column_data_checkpointer.cpp",
+     "blob": "8c94383081",
+     "old_start": 147,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/include/duckdb/storage/compression/alp/alp_analyze.hpp",
+    "src/include/duckdb/storage/compression/alprd/alprd_analyze.hpp",
+    "src/storage/table/column_data_checkpointer.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-de68e49f3522",
+   "hunks": [
+    {
+     "file": "src/execution/window_segment_tree.cpp",
+     "blob": "c3c8f6efe5",
+     "old_start": 616,
+     "old_count": 7,
+     "removed": [
+      619
+     ]
+    }
+   ],
+   "files": [
+    "src/execution/window_segment_tree.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-e2c62d0b96d9",
+   "hunks": [
+    {
+     "file": "src/planner/binder/expression/bind_unnest_expression.cpp",
+     "blob": "0883d5f298",
+     "old_start": 71,
+     "old_count": 7,
+     "removed": [
+      74
+     ]
+    }
+   ],
+   "files": [
+    "src/planner/binder/expression/bind_unnest_expression.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-e544467a8f42",
+   "hunks": [
+    {
+     "file": "src/planner/binder/query_node/plan_subquery.cpp",
+     "blob": "a476c93a22",
+     "old_start": 436,
+     "old_count": 7,
+     "removed": [
+      439
+     ]
+    }
+   ],
+   "files": [
+    "src/planner/binder/query_node/plan_subquery.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-e5c74941dc92",
+   "hunks": [
+    {
+     "file": "src/parser/tableref/joinref.cpp",
+     "blob": "a7477a3f5e",
+     "old_start": 43,
+     "old_count": 7,
+     "removed": [
+      46
+     ]
+    }
+   ],
+   "files": [
+    "src/parser/tableref/joinref.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-eca6287b0265",
+   "hunks": [
+    {
+     "file": "src/planner/binder/expression/bind_lambda.cpp",
+     "blob": "2907889a98",
+     "old_start": 65,
+     "old_count": 11,
+     "removed": [
+      68,
+      70,
+      71,
+      72
+     ]
+    },
+    {
+     "file": "src/planner/binder/expression/bind_operator_expression.cpp",
+     "blob": "4aaac887f5",
+     "old_start": 88,
+     "old_count": 7,
+     "removed": [
+      91
+     ]
+    },
+    {
+     "file": "src/planner/binder/expression/bind_operator_expression.cpp",
+     "blob": "4aaac887f5",
+     "old_start": 96,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/planner/binder/expression/bind_lambda.cpp",
+    "src/planner/binder/expression/bind_operator_expression.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-ef0ded97b22b",
+   "hunks": [
+    {
+     "file": "src/include/duckdb/common/types/interval.hpp",
+     "blob": "cdf98fb3cf",
+     "old_start": 162,
+     "old_count": 18,
+     "removed": [
+      165,
+      166,
+      167,
+      168,
+      169,
+      171,
+      172,
+      173,
+      174,
+      175
+     ]
+    }
+   ],
+   "files": [
+    "src/include/duckdb/common/types/interval.hpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-f0ea35020083",
+   "hunks": [
+    {
+     "file": "src/optimizer/rule/distributivity.cpp",
+     "blob": "b1b18617c0",
+     "old_start": 42,
+     "old_count": 9,
+     "removed": [
+      45,
+      46,
+      47
+     ]
+    }
+   ],
+   "files": [
+    "src/optimizer/rule/distributivity.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-f2cf1db95264",
+   "hunks": [
+    {
+     "file": "src/storage/table/list_column_data.cpp",
+     "blob": "b805497a59",
+     "old_start": 303,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/storage/table/list_column_data.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-f42aff9fc29f",
+   "hunks": [
+    {
+     "file": "src/execution/operator/join/physical_iejoin.cpp",
+     "blob": "df7fc232f9",
+     "old_start": 220,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/execution/operator/join/physical_iejoin.cpp",
+     "blob": "df7fc232f9",
+     "old_start": 301,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/execution/operator/join/physical_iejoin.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-fa43a31dc1a0",
+   "hunks": [
+    {
+     "file": "src/planner/binder/statement/bind_create_table.cpp",
+     "blob": "683c475",
+     "old_start": 298,
+     "old_count": 7,
+     "removed": [
+      301
+     ]
+    }
+   ],
+   "files": [
+    "src/planner/binder/statement/bind_create_table.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-fbcfadceb477",
+   "hunks": [
+    {
+     "file": "src/catalog/default/default_functions.cpp",
+     "blob": "503cdbc",
+     "old_start": 12,
+     "old_count": 7,
+     "removed": [
+      15
+     ]
+    },
+    {
+     "file": "src/catalog/default/default_functions.cpp",
+     "blob": "503cdbc",
+     "old_start": 27,
+     "old_count": 10,
+     "removed": [
+      30,
+      31,
+      32,
+      33
+     ]
+    }
+   ],
+   "files": [
+    "src/catalog/default/default_functions.cpp"
+   ]
+  },
+  {
+   "bug_id": "duckdb-ffb453f07fce",
+   "hunks": [
+    {
+     "file": "src/core_functions/aggregate/distributive/arg_min_max.cpp",
+     "blob": "b6d69457a6",
+     "old_start": 324,
+     "old_count": 16,
+     "removed": [
+      336
+     ]
+    }
+   ],
+   "files": [
+    "src/core_functions/aggregate/distributive/arg_min_max.cpp"
+   ]
+  }
+ ],
+ "n_bugs": 109,
+ "analysis_units": [
+  {
+   "file": "extension/excel/numformat/nf_calendar.cpp",
+   "blob": "5a22690e83"
+  },
+  {
+   "file": "extension/fts/fts_indexing.cpp",
+   "blob": "bd985f7a6c"
+  },
+  {
+   "file": "extension/icu/icu-strptime.cpp",
+   "blob": "d54d15a370"
+  },
+  {
+   "file": "extension/json/include/json_executors.hpp",
+   "blob": "334170ee73"
+  },
+  {
+   "file": "extension/json/json_functions/json_create.cpp",
+   "blob": "2167ae902e"
+  },
+  {
+   "file": "extension/json/json_functions/json_type.cpp",
+   "blob": "b1e9dbcc2d"
+  },
+  {
+   "file": "extension/parquet/column_writer.cpp",
+   "blob": "8eb0f68877"
+  },
+  {
+   "file": "extension/tpcds/tpcds_extension.cpp",
+   "blob": "c6157b67ae"
+  },
+  {
+   "file": "extension/tpch/tpch_extension.cpp",
+   "blob": "68548438ab"
+  },
+  {
+   "file": "src/catalog/catalog_entry/duck_schema_entry.cpp",
+   "blob": "ba54471afe"
+  },
+  {
+   "file": "src/catalog/catalog_entry/duck_table_entry.cpp",
+   "blob": "7c93ece48f"
+  },
+  {
+   "file": "src/catalog/catalog_entry/table_catalog_entry.cpp",
+   "blob": "c433249732"
+  },
+  {
+   "file": "src/catalog/catalog_search_path.cpp",
+   "blob": "6be5f491c0"
+  },
+  {
+   "file": "src/catalog/catalog_set.cpp",
+   "blob": "d167fd90d3"
+  },
+  {
+   "file": "src/catalog/default/default_functions.cpp",
+   "blob": "503cdbc"
+  },
+  {
+   "file": "src/catalog/dependency_manager.cpp",
+   "blob": "86b1fb251b"
+  },
+  {
+   "file": "src/common/operator/cast_operators.cpp",
+   "blob": "69ed385"
+  },
+  {
+   "file": "src/common/operator/cast_operators.cpp",
+   "blob": "c59fe5853a"
+  },
+  {
+   "file": "src/common/row_operations/row_radix_scatter.cpp",
+   "blob": "01557ca455"
+  },
+  {
+   "file": "src/common/types.cpp",
+   "blob": "c7c4d5c"
+  },
+  {
+   "file": "src/common/types.cpp",
+   "blob": "d0d5041f88"
+  },
+  {
+   "file": "src/common/types/bit.cpp",
+   "blob": "97db477451"
+  },
+  {
+   "file": "src/common/types/bit.cpp",
+   "blob": "ebd4ec3ac6"
+  },
+  {
+   "file": "src/common/types/timestamp.cpp",
+   "blob": "3ae9e46237"
+  },
+  {
+   "file": "src/common/types/vector.cpp",
+   "blob": "9a48aa7092"
+  },
+  {
+   "file": "src/common/vector_operations/vector_hash.cpp",
+   "blob": "46a9bcdaae"
+  },
+  {
+   "file": "src/core_functions/aggregate/distributive/arg_min_max.cpp",
+   "blob": "b6d69457a6"
+  },
+  {
+   "file": "src/core_functions/aggregate/distributive/minmax.cpp",
+   "blob": "287f38dfc6"
+  },
+  {
+   "file": "src/core_functions/scalar/date/date_diff.cpp",
+   "blob": "6266dda350"
+  },
+  {
+   "file": "src/core_functions/scalar/enum/enum_functions.cpp",
+   "blob": "5722cf5878"
+  },
+  {
+   "file": "src/core_functions/scalar/enum/enum_functions.cpp",
+   "blob": "b1728d8516"
+  },
+  {
+   "file": "src/core_functions/scalar/generic/current_setting.cpp",
+   "blob": "5eb5c91a54"
+  },
+  {
+   "file": "src/core_functions/scalar/list/list_reduce.cpp",
+   "blob": "1e276e7127"
+  },
+  {
+   "file": "src/core_functions/scalar/operators/bitwise.cpp",
+   "blob": "d9bb589502"
+  },
+  {
+   "file": "src/core_functions/scalar/string/printf.cpp",
+   "blob": "b71bedef06"
+  },
+  {
+   "file": "src/execution/join_hashtable.cpp",
+   "blob": "2b74b5bd7e"
+  },
+  {
+   "file": "src/execution/operator/aggregate/physical_hash_aggregate.cpp",
+   "blob": "c4cf4b55d0"
+  },
+  {
+   "file": "src/execution/operator/aggregate/physical_streaming_window.cpp",
+   "blob": "f1310350e6"
+  },
+  {
+   "file": "src/execution/operator/join/physical_iejoin.cpp",
+   "blob": "df7fc232f9"
+  },
+  {
+   "file": "src/execution/operator/scan/physical_positional_scan.cpp",
+   "blob": "e2a67505ae"
+  },
+  {
+   "file": "src/execution/physical_plan/plan_filter.cpp",
+   "blob": "292fe1bc84"
+  },
+  {
+   "file": "src/execution/window_segment_tree.cpp",
+   "blob": "c3c8f6efe5"
+  },
+  {
+   "file": "src/function/cast/list_casts.cpp",
+   "blob": "016f7b195f"
+  },
+  {
+   "file": "src/function/cast/vector_cast_helpers.cpp",
+   "blob": "34b0e34df4"
+  },
+  {
+   "file": "src/function/scalar/list/list_zip.cpp",
+   "blob": "106e72ff2b"
+  },
+  {
+   "file": "src/function/scalar/nested_functions.cpp",
+   "blob": "59c5f2b235"
+  },
+  {
+   "file": "src/function/scalar/strftime_format.cpp",
+   "blob": "3525519a9d"
+  },
+  {
+   "file": "src/function/scalar/string/like.cpp",
+   "blob": "eb9f2e34e0"
+  },
+  {
+   "file": "src/function/table/system/duckdb_columns.cpp",
+   "blob": "cee5e1f"
+  },
+  {
+   "file": "src/function/table/system/duckdb_constraints.cpp",
+   "blob": "560c6b3a3d"
+  },
+  {
+   "file": "src/function/table/system/duckdb_tables.cpp",
+   "blob": "256badef56"
+  },
+  {
+   "file": "src/function/table/system/pragma_table_info.cpp",
+   "blob": "64ff4694fd"
+  },
+  {
+   "file": "src/function/table/system/test_all_types.cpp",
+   "blob": "53e4167"
+  },
+  {
+   "file": "src/include/duckdb/catalog/dependency_manager.hpp",
+   "blob": "e580bfccba"
+  },
+  {
+   "file": "src/include/duckdb/common/limits.hpp",
+   "blob": "21e28f7"
+  },
+  {
+   "file": "src/include/duckdb/common/operator/integer_cast_operator.hpp",
+   "blob": "8bf694c42a"
+  },
+  {
+   "file": "src/include/duckdb/common/types.hpp",
+   "blob": "04c0e96"
+  },
+  {
+   "file": "src/include/duckdb/common/types.hpp",
+   "blob": "ef7db7f749"
+  },
+  {
+   "file": "src/include/duckdb/common/types/interval.hpp",
+   "blob": "cdf98fb3cf"
+  },
+  {
+   "file": "src/include/duckdb/core_functions/aggregate/algebraic/stddev.hpp",
+   "blob": "88063eea06"
+  },
+  {
+   "file": "src/include/duckdb/execution/operator/helper/physical_reservoir_sample.hpp",
+   "blob": "9ff7bf62a5"
+  },
+  {
+   "file": "src/include/duckdb/execution/operator/scan/physical_positional_scan.hpp",
+   "blob": "c142009d22"
+  },
+  {
+   "file": "src/include/duckdb/function/table_function.hpp",
+   "blob": "30cc0d9f8d"
+  },
+  {
+   "file": "src/include/duckdb/optimizer/compressed_materialization.hpp",
+   "blob": "86422c9c60"
+  },
+  {
+   "file": "src/include/duckdb/optimizer/in_clause_rewriter.hpp",
+   "blob": "91e4e1f86d"
+  },
+  {
+   "file": "src/include/duckdb/optimizer/join_order/cost_model.hpp",
+   "blob": "49895406af"
+  },
+  {
+   "file": "src/include/duckdb/optimizer/join_order/join_node.hpp",
+   "blob": "8f973c9548"
+  },
+  {
+   "file": "src/include/duckdb/optimizer/join_order/plan_enumerator.hpp",
+   "blob": "19d6a40fe6"
+  },
+  {
+   "file": "src/include/duckdb/optimizer/join_order/relation_manager.hpp",
+   "blob": "adaf487f04"
+  },
+  {
+   "file": "src/include/duckdb/optimizer/optimizer.hpp",
+   "blob": "312fcc4908"
+  },
+  {
+   "file": "src/include/duckdb/optimizer/statistics_propagator.hpp",
+   "blob": "7569909982"
+  },
+  {
+   "file": "src/include/duckdb/optimizer/unnest_rewriter.hpp",
+   "blob": "3798cbd4bf"
+  },
+  {
+   "file": "src/include/duckdb/parser/constraints/unique_constraint.hpp",
+   "blob": "66073108bc"
+  },
+  {
+   "file": "src/include/duckdb/parser/parsed_data/sample_options.hpp",
+   "blob": "e6f8b571cd"
+  },
+  {
+   "file": "src/include/duckdb/parser/tableref/joinref.hpp",
+   "blob": "1f53f5c"
+  },
+  {
+   "file": "src/include/duckdb/planner/expression_binder/alter_binder.hpp",
+   "blob": "2633a0923f"
+  },
+  {
+   "file": "src/include/duckdb/planner/expression_binder/base_select_binder.hpp",
+   "blob": "c05e1d8d99"
+  },
+  {
+   "file": "src/include/duckdb/planner/query_node/bound_select_node.hpp",
+   "blob": "af16afc501"
+  },
+  {
+   "file": "src/include/duckdb/planner/table_binding.hpp",
+   "blob": "aa288a12b0"
+  },
+  {
+   "file": "src/include/duckdb/storage/compression/alp/alp_analyze.hpp",
+   "blob": "0288a9bd42"
+  },
+  {
+   "file": "src/include/duckdb/storage/compression/alprd/alprd_analyze.hpp",
+   "blob": "6a2522ba63"
+  },
+  {
+   "file": "src/include/duckdb/storage/data_table.hpp",
+   "blob": "4c2e0d6b58"
+  },
+  {
+   "file": "src/include/duckdb/storage/table/append_state.hpp",
+   "blob": "382f86da5d"
+  },
+  {
+   "file": "src/include/duckdb/storage/table/column_segment.hpp",
+   "blob": "6ae03d4f3a"
+  },
+  {
+   "file": "src/include/duckdb/storage/table/row_group_collection.hpp",
+   "blob": "9401cb9aee"
+  },
+  {
+   "file": "src/include/duckdb/storage/table/segment_tree.hpp",
+   "blob": "e267d2e351"
+  },
+  {
+   "file": "src/optimizer/compressed_materialization.cpp",
+   "blob": "c54918a847"
+  },
+  {
+   "file": "src/optimizer/compressed_materialization/compress_aggregate.cpp",
+   "blob": "a61787e759"
+  },
+  {
+   "file": "src/optimizer/deliminator.cpp",
+   "blob": "254a570267"
+  },
+  {
+   "file": "src/optimizer/filter_combiner.cpp",
+   "blob": "a72354d7df"
+  },
+  {
+   "file": "src/optimizer/in_clause_rewriter.cpp",
+   "blob": "c53c8e3f1a"
+  },
+  {
+   "file": "src/optimizer/join_order/cardinality_estimator.cpp",
+   "blob": "2d0be531b3"
+  },
+  {
+   "file": "src/optimizer/join_order/cost_model.cpp",
+   "blob": "a0ceeb72b2"
+  },
+  {
+   "file": "src/optimizer/join_order/join_node.cpp",
+   "blob": "ef8baa084b"
+  },
+  {
+   "file": "src/optimizer/join_order/join_order_optimizer.cpp",
+   "blob": "1b259a3c5b"
+  },
+  {
+   "file": "src/optimizer/join_order/plan_enumerator.cpp",
+   "blob": "6bbc13c3c5"
+  },
+  {
+   "file": "src/optimizer/join_order/relation_manager.cpp",
+   "blob": "15545c4014"
+  },
+  {
+   "file": "src/optimizer/join_order/relation_manager.cpp",
+   "blob": "2476d2b8e7"
+  },
+  {
+   "file": "src/optimizer/join_order/relation_manager.cpp",
+   "blob": "319c88e2e5"
+  },
+  {
+   "file": "src/optimizer/optimizer.cpp",
+   "blob": "d314984549"
+  },
+  {
+   "file": "src/optimizer/pushdown/pushdown_cross_product.cpp",
+   "blob": "efa3fa4e7a"
+  },
+  {
+   "file": "src/optimizer/pushdown/pushdown_inner_join.cpp",
+   "blob": "dd94d3f341"
+  },
+  {
+   "file": "src/optimizer/pushdown/pushdown_mark_join.cpp",
+   "blob": "b336cd3"
+  },
+  {
+   "file": "src/optimizer/remove_unused_columns.cpp",
+   "blob": "12ea9230df"
+  },
+  {
+   "file": "src/optimizer/remove_unused_columns.cpp",
+   "blob": "bd71de7"
+  },
+  {
+   "file": "src/optimizer/remove_unused_columns.cpp",
+   "blob": "bd71de72ae"
+  },
+  {
+   "file": "src/optimizer/rule/distributivity.cpp",
+   "blob": "b1b18617c0"
+  },
+  {
+   "file": "src/optimizer/rule/in_clause_simplification_rule.cpp",
+   "blob": "07e4337737"
+  },
+  {
+   "file": "src/optimizer/rule/move_constants.cpp",
+   "blob": "636265ff91"
+  },
+  {
+   "file": "src/optimizer/statistics/expression/propagate_aggregate.cpp",
+   "blob": "b3dc53b8b9"
+  },
+  {
+   "file": "src/optimizer/statistics/expression/propagate_between.cpp",
+   "blob": "fd4865e768"
+  },
+  {
+   "file": "src/optimizer/statistics/expression/propagate_case.cpp",
+   "blob": "7586b9a42d"
+  },
+  {
+   "file": "src/optimizer/statistics/expression/propagate_cast.cpp",
+   "blob": "94908ea486"
+  },
+  {
+   "file": "src/optimizer/statistics/expression/propagate_columnref.cpp",
+   "blob": "8a8d7db1a6"
+  },
+  {
+   "file": "src/optimizer/statistics/expression/propagate_comparison.cpp",
+   "blob": "1331d8167d"
+  },
+  {
+   "file": "src/optimizer/statistics/expression/propagate_conjunction.cpp",
+   "blob": "1fce16c8cf"
+  },
+  {
+   "file": "src/optimizer/statistics/expression/propagate_constant.cpp",
+   "blob": "c531311d7d"
+  },
+  {
+   "file": "src/optimizer/statistics/expression/propagate_function.cpp",
+   "blob": "3d7a2d7a85"
+  },
+  {
+   "file": "src/optimizer/statistics/expression/propagate_operator.cpp",
+   "blob": "4bb1f8fd7a"
+  },
+  {
+   "file": "src/optimizer/statistics/operator/propagate_aggregate.cpp",
+   "blob": "1824a4f187"
+  },
+  {
+   "file": "src/optimizer/statistics/operator/propagate_cross_product.cpp",
+   "blob": "c69c9b886d"
+  },
+  {
+   "file": "src/optimizer/statistics/operator/propagate_filter.cpp",
+   "blob": "97609fa628"
+  },
+  {
+   "file": "src/optimizer/statistics/operator/propagate_get.cpp",
+   "blob": "22979f1945"
+  },
+  {
+   "file": "src/optimizer/statistics/operator/propagate_join.cpp",
+   "blob": "093a379052"
+  },
+  {
+   "file": "src/optimizer/statistics/operator/propagate_limit.cpp",
+   "blob": "390e24aba1"
+  },
+  {
+   "file": "src/optimizer/statistics/operator/propagate_order.cpp",
+   "blob": "5770fcc886"
+  },
+  {
+   "file": "src/optimizer/statistics/operator/propagate_projection.cpp",
+   "blob": "83c8309554"
+  },
+  {
+   "file": "src/optimizer/statistics/operator/propagate_set_operation.cpp",
+   "blob": "8b90aeb634"
+  },
+  {
+   "file": "src/optimizer/statistics/operator/propagate_window.cpp",
+   "blob": "9b6dcc493d"
+  },
+  {
+   "file": "src/optimizer/statistics_propagator.cpp",
+   "blob": "701697233d"
+  },
+  {
+   "file": "src/optimizer/unnest_rewriter.cpp",
+   "blob": "796a9338b9"
+  },
+  {
+   "file": "src/optimizer/unnest_rewriter.cpp",
+   "blob": "f5d91061f3"
+  },
+  {
+   "file": "src/parser/constraints/unique_constraint.cpp",
+   "blob": "29fd536e8b"
+  },
+  {
+   "file": "src/parser/parsed_data/create_index_info.cpp",
+   "blob": "8f74c05c70"
+  },
+  {
+   "file": "src/parser/parsed_data/sample_options.cpp",
+   "blob": "010ae2e6f9"
+  },
+  {
+   "file": "src/parser/parser.cpp",
+   "blob": "7dd7a43d9f"
+  },
+  {
+   "file": "src/parser/tableref/joinref.cpp",
+   "blob": "8ad69fa"
+  },
+  {
+   "file": "src/parser/tableref/joinref.cpp",
+   "blob": "a7477a3f5e"
+  },
+  {
+   "file": "src/parser/transform/expression/transform_subquery.cpp",
+   "blob": "5b63689"
+  },
+  {
+   "file": "src/parser/transform/expression/transform_subquery.cpp",
+   "blob": "5b63689003"
+  },
+  {
+   "file": "src/parser/transform/helpers/transform_sample.cpp",
+   "blob": "1873a1ce9d"
+  },
+  {
+   "file": "src/parser/transform/statement/transform_pivot_stmt.cpp",
+   "blob": "8b798a83c9"
+  },
+  {
+   "file": "src/parser/transform/statement/transform_select_node.cpp",
+   "blob": "b5aa73a3c9"
+  },
+  {
+   "file": "src/parser/transform/statement/transform_use.cpp",
+   "blob": "a4d7684372"
+  },
+  {
+   "file": "src/parser/transform/tableref/transform_from.cpp",
+   "blob": "84ec8ea"
+  },
+  {
+   "file": "src/parser/transform/tableref/transform_join.cpp",
+   "blob": "4213cb5a2f"
+  },
+  {
+   "file": "src/planner/binder/expression/bind_collate_expression.cpp",
+   "blob": "1f84cb17d7"
+  },
+  {
+   "file": "src/planner/binder/expression/bind_lambda.cpp",
+   "blob": "2907889a98"
+  },
+  {
+   "file": "src/planner/binder/expression/bind_operator_expression.cpp",
+   "blob": "4aaac887f5"
+  },
+  {
+   "file": "src/planner/binder/expression/bind_unnest_expression.cpp",
+   "blob": "0883d5f298"
+  },
+  {
+   "file": "src/planner/binder/expression/bind_unnest_expression.cpp",
+   "blob": "92a41d7f6c"
+  },
+  {
+   "file": "src/planner/binder/expression/bind_window_expression.cpp",
+   "blob": "00b7bcded5"
+  },
+  {
+   "file": "src/planner/binder/expression/bind_window_expression.cpp",
+   "blob": "2c64e2e05f"
+  },
+  {
+   "file": "src/planner/binder/expression/bind_window_expression.cpp",
+   "blob": "4dbd8625cf"
+  },
+  {
+   "file": "src/planner/binder/query_node/bind_select_node.cpp",
+   "blob": "accd54a276"
+  },
+  {
+   "file": "src/planner/binder/query_node/plan_select_node.cpp",
+   "blob": "46e5d2e127"
+  },
+  {
+   "file": "src/planner/binder/query_node/plan_subquery.cpp",
+   "blob": "16f0c8fdd8"
+  },
+  {
+   "file": "src/planner/binder/query_node/plan_subquery.cpp",
+   "blob": "a476c93a22"
+  },
+  {
+   "file": "src/planner/binder/query_node/plan_subquery.cpp",
+   "blob": "b938f1f654"
+  },
+  {
+   "file": "src/planner/binder/statement/bind_create.cpp",
+   "blob": "7903342bd8"
+  },
+  {
+   "file": "src/planner/binder/statement/bind_create_table.cpp",
+   "blob": "683c475"
+  },
+  {
+   "file": "src/planner/binder/statement/bind_create_table.cpp",
+   "blob": "683c475ddb"
+  },
+  {
+   "file": "src/planner/binder/statement/bind_insert.cpp",
+   "blob": "ac430edee3"
+  },
+  {
+   "file": "src/planner/binder/tableref/bind_pivot.cpp",
+   "blob": "6c89b7b2cd"
+  },
+  {
+   "file": "src/planner/binder/tableref/bind_table_function.cpp",
+   "blob": "16a60ce1cd"
+  },
+  {
+   "file": "src/planner/expression.cpp",
+   "blob": "3eb0118c19"
+  },
+  {
+   "file": "src/planner/expression/bound_cast_expression.cpp",
+   "blob": "4168bf3e59"
+  },
+  {
+   "file": "src/planner/expression/bound_cast_expression.cpp",
+   "blob": "9699fd7"
+  },
+  {
+   "file": "src/planner/expression/bound_cast_expression.cpp",
+   "blob": "af176cb98e"
+  },
+  {
+   "file": "src/planner/expression/bound_window_expression.cpp",
+   "blob": "7d7ee1833c"
+  },
+  {
+   "file": "src/planner/expression_binder/alter_binder.cpp",
+   "blob": "597ef0ca6f"
+  },
+  {
+   "file": "src/planner/expression_binder/base_select_binder.cpp",
+   "blob": "4501a717f1"
+  },
+  {
+   "file": "src/planner/expression_binder/base_select_binder.cpp",
+   "blob": "b4708561e2"
+  },
+  {
+   "file": "src/planner/expression_binder/having_binder.cpp",
+   "blob": "9cc1e6c26a"
+  },
+  {
+   "file": "src/planner/expression_binder/qualify_binder.cpp",
+   "blob": "7a486cf81f"
+  },
+  {
+   "file": "src/planner/operator/logical_get.cpp",
+   "blob": "1ee9256189"
+  },
+  {
+   "file": "src/planner/subquery/flatten_dependent_join.cpp",
+   "blob": "026da1dad3"
+  },
+  {
+   "file": "src/planner/subquery/flatten_dependent_join.cpp",
+   "blob": "23dd23ec40"
+  },
+  {
+   "file": "src/planner/subquery/flatten_dependent_join.cpp",
+   "blob": "6720e8a"
+  },
+  {
+   "file": "src/planner/subquery/flatten_dependent_join.cpp",
+   "blob": "a297a7855d"
+  },
+  {
+   "file": "src/storage/compression/rle.cpp",
+   "blob": "f845baad32"
+  },
+  {
+   "file": "src/storage/data_table.cpp",
+   "blob": "093ff64349"
+  },
+  {
+   "file": "src/storage/data_table.cpp",
+   "blob": "0e64ab831f"
+  },
+  {
+   "file": "src/storage/local_storage.cpp",
+   "blob": "2aa7ab7363"
+  },
+  {
+   "file": "src/storage/local_storage.cpp",
+   "blob": "f44527e6cd"
+  },
+  {
+   "file": "src/storage/serialization/serialize_tableref.cpp",
+   "blob": "e97e823"
+  },
+  {
+   "file": "src/storage/table/array_column_data.cpp",
+   "blob": "95ba4df380"
+  },
+  {
+   "file": "src/storage/table/chunk_info.cpp",
+   "blob": "6460f6f992"
+  },
+  {
+   "file": "src/storage/table/column_data.cpp",
+   "blob": "550408b8c7"
+  },
+  {
+   "file": "src/storage/table/column_data_checkpointer.cpp",
+   "blob": "8c94383081"
+  },
+  {
+   "file": "src/storage/table/column_segment.cpp",
+   "blob": "c0f67a0ca8"
+  },
+  {
+   "file": "src/storage/table/list_column_data.cpp",
+   "blob": "b805497a59"
+  },
+  {
+   "file": "src/storage/table/row_group.cpp",
+   "blob": "f70ebbc8f3"
+  },
+  {
+   "file": "src/storage/table/row_group_collection.cpp",
+   "blob": "91c843ed72"
+  },
+  {
+   "file": "src/storage/table/row_group_collection.cpp",
+   "blob": "b0eb5022f7"
+  },
+  {
+   "file": "src/storage/table/struct_column_data.cpp",
+   "blob": "9ac2b0c0f0"
+  }
+ ],
+ "n_units": 196,
+ "bug_files": [
+  "extension/excel/numformat/nf_calendar.cpp",
+  "extension/fts/fts_indexing.cpp",
+  "extension/icu/icu-strptime.cpp",
+  "extension/json/include/json_executors.hpp",
+  "extension/json/json_functions/json_create.cpp",
+  "extension/json/json_functions/json_type.cpp",
+  "extension/parquet/column_writer.cpp",
+  "extension/tpcds/tpcds_extension.cpp",
+  "extension/tpch/tpch_extension.cpp",
+  "src/catalog/catalog_entry/duck_schema_entry.cpp",
+  "src/catalog/catalog_entry/duck_table_entry.cpp",
+  "src/catalog/catalog_entry/table_catalog_entry.cpp",
+  "src/catalog/catalog_search_path.cpp",
+  "src/catalog/catalog_set.cpp",
+  "src/catalog/default/default_functions.cpp",
+  "src/catalog/dependency_manager.cpp",
+  "src/common/operator/cast_operators.cpp",
+  "src/common/row_operations/row_radix_scatter.cpp",
+  "src/common/types.cpp",
+  "src/common/types/bit.cpp",
+  "src/common/types/timestamp.cpp",
+  "src/common/types/vector.cpp",
+  "src/common/vector_operations/vector_hash.cpp",
+  "src/core_functions/aggregate/distributive/arg_min_max.cpp",
+  "src/core_functions/aggregate/distributive/minmax.cpp",
+  "src/core_functions/scalar/date/date_diff.cpp",
+  "src/core_functions/scalar/enum/enum_functions.cpp",
+  "src/core_functions/scalar/generic/current_setting.cpp",
+  "src/core_functions/scalar/list/list_reduce.cpp",
+  "src/core_functions/scalar/operators/bitwise.cpp",
+  "src/core_functions/scalar/string/printf.cpp",
+  "src/execution/join_hashtable.cpp",
+  "src/execution/operator/aggregate/physical_hash_aggregate.cpp",
+  "src/execution/operator/aggregate/physical_streaming_window.cpp",
+  "src/execution/operator/join/physical_iejoin.cpp",
+  "src/execution/operator/scan/physical_positional_scan.cpp",
+  "src/execution/physical_plan/plan_filter.cpp",
+  "src/execution/window_segment_tree.cpp",
+  "src/function/cast/list_casts.cpp",
+  "src/function/cast/vector_cast_helpers.cpp",
+  "src/function/scalar/list/list_zip.cpp",
+  "src/function/scalar/nested_functions.cpp",
+  "src/function/scalar/strftime_format.cpp",
+  "src/function/scalar/string/like.cpp",
+  "src/function/table/system/duckdb_columns.cpp",
+  "src/function/table/system/duckdb_constraints.cpp",
+  "src/function/table/system/duckdb_tables.cpp",
+  "src/function/table/system/pragma_table_info.cpp",
+  "src/function/table/system/test_all_types.cpp",
+  "src/include/duckdb/catalog/dependency_manager.hpp",
+  "src/include/duckdb/common/limits.hpp",
+  "src/include/duckdb/common/operator/integer_cast_operator.hpp",
+  "src/include/duckdb/common/types.hpp",
+  "src/include/duckdb/common/types/interval.hpp",
+  "src/include/duckdb/core_functions/aggregate/algebraic/stddev.hpp",
+  "src/include/duckdb/execution/operator/helper/physical_reservoir_sample.hpp",
+  "src/include/duckdb/execution/operator/scan/physical_positional_scan.hpp",
+  "src/include/duckdb/function/table_function.hpp",
+  "src/include/duckdb/optimizer/compressed_materialization.hpp",
+  "src/include/duckdb/optimizer/in_clause_rewriter.hpp",
+  "src/include/duckdb/optimizer/join_order/cost_model.hpp",
+  "src/include/duckdb/optimizer/join_order/join_node.hpp",
+  "src/include/duckdb/optimizer/join_order/plan_enumerator.hpp",
+  "src/include/duckdb/optimizer/join_order/relation_manager.hpp",
+  "src/include/duckdb/optimizer/optimizer.hpp",
+  "src/include/duckdb/optimizer/statistics_propagator.hpp",
+  "src/include/duckdb/optimizer/unnest_rewriter.hpp",
+  "src/include/duckdb/parser/constraints/unique_constraint.hpp",
+  "src/include/duckdb/parser/parsed_data/sample_options.hpp",
+  "src/include/duckdb/parser/tableref/joinref.hpp",
+  "src/include/duckdb/planner/expression_binder/alter_binder.hpp",
+  "src/include/duckdb/planner/expression_binder/base_select_binder.hpp",
+  "src/include/duckdb/planner/query_node/bound_select_node.hpp",
+  "src/include/duckdb/planner/table_binding.hpp",
+  "src/include/duckdb/storage/compression/alp/alp_analyze.hpp",
+  "src/include/duckdb/storage/compression/alprd/alprd_analyze.hpp",
+  "src/include/duckdb/storage/data_table.hpp",
+  "src/include/duckdb/storage/table/append_state.hpp",
+  "src/include/duckdb/storage/table/column_segment.hpp",
+  "src/include/duckdb/storage/table/row_group_collection.hpp",
+  "src/include/duckdb/storage/table/segment_tree.hpp",
+  "src/optimizer/compressed_materialization.cpp",
+  "src/optimizer/compressed_materialization/compress_aggregate.cpp",
+  "src/optimizer/deliminator.cpp",
+  "src/optimizer/filter_combiner.cpp",
+  "src/optimizer/in_clause_rewriter.cpp",
+  "src/optimizer/join_order/cardinality_estimator.cpp",
+  "src/optimizer/join_order/cost_model.cpp",
+  "src/optimizer/join_order/join_node.cpp",
+  "src/optimizer/join_order/join_order_optimizer.cpp",
+  "src/optimizer/join_order/plan_enumerator.cpp",
+  "src/optimizer/join_order/relation_manager.cpp",
+  "src/optimizer/optimizer.cpp",
+  "src/optimizer/pushdown/pushdown_cross_product.cpp",
+  "src/optimizer/pushdown/pushdown_inner_join.cpp",
+  "src/optimizer/pushdown/pushdown_mark_join.cpp",
+  "src/optimizer/remove_unused_columns.cpp",
+  "src/optimizer/rule/distributivity.cpp",
+  "src/optimizer/rule/in_clause_simplification_rule.cpp",
+  "src/optimizer/rule/move_constants.cpp",
+  "src/optimizer/statistics/expression/propagate_aggregate.cpp",
+  "src/optimizer/statistics/expression/propagate_between.cpp",
+  "src/optimizer/statistics/expression/propagate_case.cpp",
+  "src/optimizer/statistics/expression/propagate_cast.cpp",
+  "src/optimizer/statistics/expression/propagate_columnref.cpp",
+  "src/optimizer/statistics/expression/propagate_comparison.cpp",
+  "src/optimizer/statistics/expression/propagate_conjunction.cpp",
+  "src/optimizer/statistics/expression/propagate_constant.cpp",
+  "src/optimizer/statistics/expression/propagate_function.cpp",
+  "src/optimizer/statistics/expression/propagate_operator.cpp",
+  "src/optimizer/statistics/operator/propagate_aggregate.cpp",
+  "src/optimizer/statistics/operator/propagate_cross_product.cpp",
+  "src/optimizer/statistics/operator/propagate_filter.cpp",
+  "src/optimizer/statistics/operator/propagate_get.cpp",
+  "src/optimizer/statistics/operator/propagate_join.cpp",
+  "src/optimizer/statistics/operator/propagate_limit.cpp",
+  "src/optimizer/statistics/operator/propagate_order.cpp",
+  "src/optimizer/statistics/operator/propagate_projection.cpp",
+  "src/optimizer/statistics/operator/propagate_set_operation.cpp",
+  "src/optimizer/statistics/operator/propagate_window.cpp",
+  "src/optimizer/statistics_propagator.cpp",
+  "src/optimizer/unnest_rewriter.cpp",
+  "src/parser/constraints/unique_constraint.cpp",
+  "src/parser/parsed_data/create_index_info.cpp",
+  "src/parser/parsed_data/sample_options.cpp",
+  "src/parser/parser.cpp",
+  "src/parser/tableref/joinref.cpp",
+  "src/parser/transform/expression/transform_subquery.cpp",
+  "src/parser/transform/helpers/transform_sample.cpp",
+  "src/parser/transform/statement/transform_pivot_stmt.cpp",
+  "src/parser/transform/statement/transform_select_node.cpp",
+  "src/parser/transform/statement/transform_use.cpp",
+  "src/parser/transform/tableref/transform_from.cpp",
+  "src/parser/transform/tableref/transform_join.cpp",
+  "src/planner/binder/expression/bind_collate_expression.cpp",
+  "src/planner/binder/expression/bind_lambda.cpp",
+  "src/planner/binder/expression/bind_operator_expression.cpp",
+  "src/planner/binder/expression/bind_unnest_expression.cpp",
+  "src/planner/binder/expression/bind_window_expression.cpp",
+  "src/planner/binder/query_node/bind_select_node.cpp",
+  "src/planner/binder/query_node/plan_select_node.cpp",
+  "src/planner/binder/query_node/plan_subquery.cpp",
+  "src/planner/binder/statement/bind_create.cpp",
+  "src/planner/binder/statement/bind_create_table.cpp",
+  "src/planner/binder/statement/bind_insert.cpp",
+  "src/planner/binder/tableref/bind_pivot.cpp",
+  "src/planner/binder/tableref/bind_table_function.cpp",
+  "src/planner/expression.cpp",
+  "src/planner/expression/bound_cast_expression.cpp",
+  "src/planner/expression/bound_window_expression.cpp",
+  "src/planner/expression_binder/alter_binder.cpp",
+  "src/planner/expression_binder/base_select_binder.cpp",
+  "src/planner/expression_binder/having_binder.cpp",
+  "src/planner/expression_binder/qualify_binder.cpp",
+  "src/planner/operator/logical_get.cpp",
+  "src/planner/subquery/flatten_dependent_join.cpp",
+  "src/storage/compression/rle.cpp",
+  "src/storage/data_table.cpp",
+  "src/storage/local_storage.cpp",
+  "src/storage/serialization/serialize_tableref.cpp",
+  "src/storage/table/array_column_data.cpp",
+  "src/storage/table/chunk_info.cpp",
+  "src/storage/table/column_data.cpp",
+  "src/storage/table/column_data_checkpointer.cpp",
+  "src/storage/table/column_segment.cpp",
+  "src/storage/table/list_column_data.cpp",
+  "src/storage/table/row_group.cpp",
+  "src/storage/table/row_group_collection.cpp",
+  "src/storage/table/struct_column_data.cpp"
+ ]
+}

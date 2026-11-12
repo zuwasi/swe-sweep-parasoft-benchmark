@@ -1,0 +1,1997 @@
+{
+ "repo": "arrow",
+ "clone_url": "https://github.com/apache/arrow.git",
+ "upstream_commit": "9f7399e15e6172900e0591deb5a57a45769d8205",
+ "base_ref": "apache-arrow-11.0.0",
+ "n_subtasks": 47,
+ "bugs": [
+  {
+   "bug_id": "arrow-0cc9fb2dd29f",
+   "hunks": [
+    {
+     "file": "cpp/src/arrow/dataset/file_parquet.cc",
+     "blob": "9d0e8a6515",
+     "old_start": 88,
+     "old_count": 11,
+     "removed": [
+      91,
+      93,
+      95
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/arrow/dataset/file_parquet.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-121fb8b54251",
+   "hunks": [
+    {
+     "file": "cpp/src/arrow/scalar.cc",
+     "blob": "1f467ad93b",
+     "old_start": 153,
+     "old_count": 9,
+     "removed": [
+      156,
+      158
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/arrow/scalar.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-19465d9c4aac",
+   "hunks": [
+    {
+     "file": "cpp/src/arrow/compute/exec/expression.cc",
+     "blob": "b47e0a3552",
+     "old_start": 593,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "cpp/src/arrow/compute/exec/expression.cc",
+     "blob": "b47e0a3552",
+     "old_start": 604,
+     "old_count": 8,
+     "removed": [
+      607,
+      608
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/arrow/compute/exec/expression.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-1a3fe19e8bf0",
+   "hunks": [
+    {
+     "file": "cpp/src/arrow/compute/exec/task_util.cc",
+     "blob": "85378eaeeb",
+     "old_start": 91,
+     "old_count": 11,
+     "removed": [
+      94,
+      97
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/compute/exec/task_util.cc",
+     "blob": "85378eaeeb",
+     "old_start": 105,
+     "old_count": 10,
+     "removed": [
+      108,
+      109,
+      110,
+      111
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/compute/exec/task_util.cc",
+     "blob": "85378eaeeb",
+     "old_start": 131,
+     "old_count": 13,
+     "removed": [
+      134,
+      139,
+      140
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/compute/exec/task_util.cc",
+     "blob": "85378eaeeb",
+     "old_start": 212,
+     "old_count": 7,
+     "removed": [
+      215
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/compute/exec/task_util.cc",
+     "blob": "85378eaeeb",
+     "old_start": 228,
+     "old_count": 11,
+     "removed": [
+      231,
+      235
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/compute/exec/task_util.cc",
+     "blob": "85378eaeeb",
+     "old_start": 260,
+     "old_count": 7,
+     "removed": [
+      263
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/compute/exec/task_util.cc",
+     "blob": "85378eaeeb",
+     "old_start": 278,
+     "old_count": 8,
+     "removed": [
+      281,
+      282
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/compute/exec/task_util.cc",
+     "blob": "85378eaeeb",
+     "old_start": 328,
+     "old_count": 7,
+     "removed": [
+      331
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/compute/exec/task_util.cc",
+     "blob": "85378eaeeb",
+     "old_start": 369,
+     "old_count": 17,
+     "removed": [
+      372,
+      373,
+      375,
+      379,
+      382
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/compute/exec/task_util.cc",
+     "blob": "85378eaeeb",
+     "old_start": 388,
+     "old_count": 31,
+     "removed": [
+      393,
+      398,
+      399,
+      400,
+      401,
+      402,
+      403,
+      404,
+      405,
+      406,
+      407,
+      408,
+      409,
+      410,
+      412,
+      413,
+      414
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/arrow/compute/exec/task_util.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-264e1ebbe40c",
+   "hunks": [
+    {
+     "file": "cpp/src/arrow/util/bit_stream_utils.h",
+     "blob": "dc9b41793c",
+     "old_start": 19,
+     "old_count": 10,
+     "removed": [
+      22,
+      23
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/util/bit_stream_utils.h",
+     "blob": "dc9b41793c",
+     "old_start": 153,
+     "old_count": 7,
+     "removed": [
+      156
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/util/bit_stream_utils.h",
+     "blob": "dc9b41793c",
+     "old_start": 318,
+     "old_count": 7,
+     "removed": [
+      321
+     ]
+    },
+    {
+     "file": "cpp/src/parquet/encoding.cc",
+     "blob": "b9e6619a17",
+     "old_start": 2377,
+     "old_count": 8,
+     "removed": [
+      2380,
+      2381
+     ]
+    },
+    {
+     "file": "cpp/src/parquet/encoding.cc",
+     "blob": "b9e6619a17",
+     "old_start": 2420,
+     "old_count": 7,
+     "removed": [
+      2423
+     ]
+    },
+    {
+     "file": "cpp/src/parquet/encoding.cc",
+     "blob": "b9e6619a17",
+     "old_start": 2444,
+     "old_count": 42,
+     "removed": [
+      2448,
+      2449,
+      2453,
+      2459,
+      2460,
+      2461,
+      2462,
+      2463,
+      2464,
+      2468,
+      2469,
+      2470,
+      2474,
+      2481,
+      2482
+     ]
+    },
+    {
+     "file": "cpp/src/parquet/encoding.cc",
+     "blob": "b9e6619a17",
+     "old_start": 2499,
+     "old_count": 16,
+     "removed": [
+      2502,
+      2503,
+      2510,
+      2511
+     ]
+    },
+    {
+     "file": "cpp/src/parquet/encoding.cc",
+     "blob": "b9e6619a17",
+     "old_start": 2520,
+     "old_count": 19,
+     "removed": [
+      2523,
+      2526,
+      2529,
+      2530,
+      2535
+     ]
+    },
+    {
+     "file": "cpp/src/parquet/encoding.cc",
+     "blob": "b9e6619a17",
+     "old_start": 2542,
+     "old_count": 10,
+     "removed": [
+      2545,
+      2548
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/arrow/util/bit_stream_utils.h",
+    "cpp/src/parquet/encoding.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-26f5542e1be5",
+   "hunks": [
+    {
+     "file": "cpp/src/parquet/metadata.cc",
+     "blob": "139793219d",
+     "old_start": 97,
+     "old_count": 7,
+     "removed": [
+      100
+     ]
+    },
+    {
+     "file": "cpp/src/parquet/metadata.cc",
+     "blob": "139793219d",
+     "old_start": 106,
+     "old_count": 7,
+     "removed": [
+      109
+     ]
+    },
+    {
+     "file": "cpp/src/parquet/statistics.h",
+     "blob": "0d6ea9898f",
+     "old_start": 246,
+     "old_count": 7,
+     "removed": [
+      249
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/parquet/metadata.cc",
+    "cpp/src/parquet/statistics.h"
+   ]
+  },
+  {
+   "bug_id": "arrow-2cdadc752c2e",
+   "hunks": [
+    {
+     "file": "cpp/src/arrow/compute/exec/expression_internal.h",
+     "blob": "083756dc5f",
+     "old_start": 278,
+     "old_count": 9,
+     "removed": [
+      281,
+      282
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/compute/registry.cc",
+     "blob": "7a54f78a03",
+     "old_start": 122,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "cpp/src/arrow/compute/registry.cc",
+     "blob": "7a54f78a03",
+     "old_start": 167,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "cpp/src/arrow/compute/registry.cc",
+     "blob": "7a54f78a03",
+     "old_start": 203,
+     "old_count": 7,
+     "removed": []
+    },
+    {
+     "file": "cpp/src/arrow/compute/registry.cc",
+     "blob": "7a54f78a03",
+     "old_start": 268,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "cpp/src/arrow/compute/registry.h",
+     "blob": "afd9f2007b",
+     "old_start": 107,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "cpp/src/arrow/compute/exec/expression_internal.h",
+    "cpp/src/arrow/compute/registry.cc",
+    "cpp/src/arrow/compute/registry.h"
+   ]
+  },
+  {
+   "bug_id": "arrow-2fd06f68a200",
+   "hunks": [
+    {
+     "file": "cpp/src/arrow/tensor.cc",
+     "blob": "8cdf7f82d2",
+     "old_start": 216,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "cpp/src/arrow/tensor.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-369f913202de",
+   "hunks": [
+    {
+     "file": "cpp/src/gandiva/llvm_generator.cc",
+     "blob": "0f0918b3a1",
+     "old_start": 1118,
+     "old_count": 9,
+     "removed": [
+      1121,
+      1122,
+      1123
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/gandiva/llvm_generator.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-3d2dc9c86ad0",
+   "hunks": [
+    {
+     "file": "cpp/src/arrow/result.h",
+     "blob": "30e632c700",
+     "old_start": 371,
+     "old_count": 7,
+     "removed": [
+      374
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/arrow/result.h"
+   ]
+  },
+  {
+   "bug_id": "arrow-3e14973c5f12",
+   "hunks": [
+    {
+     "file": "cpp/src/arrow/chunked_array.cc",
+     "blob": "c5e6d7fa4b",
+     "old_start": 30,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "cpp/src/arrow/chunked_array.cc",
+     "blob": "c5e6d7fa4b",
+     "old_start": 111,
+     "old_count": 13,
+     "removed": [
+      114,
+      115,
+      116
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/arrow/chunked_array.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-40583d085a58",
+   "hunks": [
+    {
+     "file": "cpp/src/arrow/ipc/writer.cc",
+     "blob": "1d23060156",
+     "old_start": 1070,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "cpp/src/arrow/ipc/writer.cc",
+     "blob": "1d23060156",
+     "old_start": 1101,
+     "old_count": 7,
+     "removed": [
+      1104
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/ipc/writer.cc",
+     "blob": "1d23060156",
+     "old_start": 1213,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "cpp/src/arrow/ipc/writer.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-479fccb220cc",
+   "hunks": [
+    {
+     "file": "cpp/src/gandiva/precompiled/time.cc",
+     "blob": "9b09228773",
+     "old_start": 442,
+     "old_count": 10,
+     "removed": [
+      445,
+      446,
+      447,
+      448
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/gandiva/precompiled/time.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-48d0b45c48f0",
+   "hunks": [
+    {
+     "file": "cpp/src/arrow/compute/kernels/scalar_temporal_unary.cc",
+     "blob": "3addaf6863",
+     "old_start": 1237,
+     "old_count": 7,
+     "removed": [
+      1240
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/arrow/compute/kernels/scalar_temporal_unary.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-4bbc9f6cd795",
+   "hunks": [
+    {
+     "file": "cpp/src/arrow/scalar.cc",
+     "blob": "4e0a3c13b6",
+     "old_start": 1049,
+     "old_count": 8,
+     "removed": [
+      1052,
+      1053
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/arrow/scalar.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-4c84f1faa214",
+   "hunks": [
+    {
+     "file": "cpp/src/arrow/array/array_nested.cc",
+     "blob": "4016b328a3",
+     "old_start": 330,
+     "old_count": 7,
+     "removed": [
+      333
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/arrow/array/array_nested.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-4e8d0cead54f",
+   "hunks": [
+    {
+     "file": "cpp/src/gandiva/precompiled/decimal_wrapper.cc",
+     "blob": "082d5832d1",
+     "old_start": 406,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "cpp/src/gandiva/precompiled/decimal_wrapper.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-5a279df3fd5a",
+   "hunks": [
+    {
+     "file": "cpp/src/arrow/type.cc",
+     "blob": "2e9d860a8d",
+     "old_start": 2403,
+     "old_count": 7,
+     "removed": [
+      2406
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/type.cc",
+     "blob": "2e9d860a8d",
+     "old_start": 2411,
+     "old_count": 7,
+     "removed": [
+      2414
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/type.cc",
+     "blob": "2e9d860a8d",
+     "old_start": 2439,
+     "old_count": 7,
+     "removed": [
+      2442
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/type.cc",
+     "blob": "2e9d860a8d",
+     "old_start": 2449,
+     "old_count": 7,
+     "removed": [
+      2452
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/util/range.h",
+     "blob": "2055328798",
+     "old_start": 27,
+     "old_count": 15,
+     "removed": [
+      36,
+      37,
+      38
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/arrow/type.cc",
+    "cpp/src/arrow/util/range.h"
+   ]
+  },
+  {
+   "bug_id": "arrow-5abdc0d1a217",
+   "hunks": [
+    {
+     "file": "cpp/src/arrow/array/data.cc",
+     "blob": "dcc659e709",
+     "old_start": 744,
+     "old_count": 7,
+     "removed": [
+      747
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/array/data.cc",
+     "blob": "dcc659e709",
+     "old_start": 916,
+     "old_count": 8,
+     "removed": [
+      920
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/arrow/array/data.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-60dfbaf3519c",
+   "hunks": [
+    {
+     "file": "cpp/src/parquet/column_reader.cc",
+     "blob": "422016e176",
+     "old_start": 1360,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "cpp/src/parquet/column_reader.cc",
+     "blob": "422016e176",
+     "old_start": 1621,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "cpp/src/parquet/column_reader.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-624e0738ed5f",
+   "hunks": [
+    {
+     "file": "cpp/src/arrow/compute/exec/expression.cc",
+     "blob": "3c2ec10040",
+     "old_start": 509,
+     "old_count": 7,
+     "removed": [
+      512
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/arrow/compute/exec/expression.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-67205dcd9782",
+   "hunks": [
+    {
+     "file": "cpp/src/gandiva/to_date_holder.cc",
+     "blob": "0778c39b4c",
+     "old_start": 50,
+     "old_count": 7,
+     "removed": [
+      53
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/gandiva/to_date_holder.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-6cc9de91ea5e",
+   "hunks": [
+    {
+     "file": "cpp/src/parquet/arrow/reader_internal.cc",
+     "blob": "59fe2b4600",
+     "old_start": 256,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "cpp/src/parquet/arrow/reader_internal.cc",
+     "blob": "59fe2b4600",
+     "old_start": 525,
+     "old_count": 14,
+     "removed": [
+      528,
+      535
+     ]
+    },
+    {
+     "file": "cpp/src/parquet/arrow/reader_internal.cc",
+     "blob": "59fe2b4600",
+     "old_start": 547,
+     "old_count": 7,
+     "removed": [
+      550
+     ]
+    },
+    {
+     "file": "cpp/src/parquet/arrow/reader_internal.cc",
+     "blob": "59fe2b4600",
+     "old_start": 823,
+     "old_count": 7,
+     "removed": [
+      826
+     ]
+    },
+    {
+     "file": "cpp/src/parquet/arrow/schema.cc",
+     "blob": "d94c73452c",
+     "old_start": 989,
+     "old_count": 8,
+     "removed": [
+      992,
+      993
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/parquet/arrow/reader_internal.cc",
+    "cpp/src/parquet/arrow/schema.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-836fa5c90cf9",
+   "hunks": [
+    {
+     "file": "cpp/src/gandiva/gdv_string_function_stubs.cc",
+     "blob": "b3159a2d74",
+     "old_start": 697,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "cpp/src/gandiva/gdv_string_function_stubs.cc",
+     "blob": "b3159a2d74",
+     "old_start": 708,
+     "old_count": 10,
+     "removed": [
+      711,
+      712,
+      713,
+      714
+     ]
+    },
+    {
+     "file": "cpp/src/gandiva/gdv_string_function_stubs.cc",
+     "blob": "b3159a2d74",
+     "old_start": 724,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "cpp/src/gandiva/gdv_string_function_stubs.cc",
+     "blob": "b3159a2d74",
+     "old_start": 736,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "cpp/src/gandiva/gdv_string_function_stubs.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-8a41d3fa0ac8",
+   "hunks": [
+    {
+     "file": "cpp/src/arrow/compute/kernels/vector_replace.cc",
+     "blob": "1a3e743784",
+     "old_start": 217,
+     "old_count": 15,
+     "removed": [
+      220,
+      221,
+      227,
+      228
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/arrow/compute/kernels/vector_replace.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-8a6d1850de5a",
+   "hunks": [
+    {
+     "file": "cpp/src/arrow/ipc/metadata_internal.cc",
+     "blob": "a9f90a0724",
+     "old_start": 367,
+     "old_count": 8,
+     "removed": [
+      370,
+      371
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/arrow/ipc/metadata_internal.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-8c472a2596ce",
+   "hunks": [
+    {
+     "file": "cpp/src/parquet/arrow/schema.cc",
+     "blob": "07d481ba8e",
+     "old_start": 81,
+     "old_count": 7,
+     "removed": [
+      84
+     ]
+    },
+    {
+     "file": "cpp/src/parquet/arrow/schema.cc",
+     "blob": "07d481ba8e",
+     "old_start": 92,
+     "old_count": 12,
+     "removed": [
+      95,
+      100
+     ]
+    },
+    {
+     "file": "cpp/src/parquet/arrow/schema.cc",
+     "blob": "07d481ba8e",
+     "old_start": 111,
+     "old_count": 12,
+     "removed": [
+      114,
+      119
+     ]
+    },
+    {
+     "file": "cpp/src/parquet/arrow/schema.cc",
+     "blob": "07d481ba8e",
+     "old_start": 134,
+     "old_count": 7,
+     "removed": [
+      137
+     ]
+    },
+    {
+     "file": "cpp/src/parquet/arrow/schema.cc",
+     "blob": "07d481ba8e",
+     "old_start": 281,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "cpp/src/parquet/arrow/schema.cc",
+     "blob": "07d481ba8e",
+     "old_start": 399,
+     "old_count": 15,
+     "removed": [
+      402,
+      409,
+      410
+     ]
+    },
+    {
+     "file": "cpp/src/parquet/arrow/schema.cc",
+     "blob": "07d481ba8e",
+     "old_start": 426,
+     "old_count": 8,
+     "removed": [
+      429,
+      430
+     ]
+    },
+    {
+     "file": "cpp/src/parquet/arrow/schema.cc",
+     "blob": "07d481ba8e",
+     "old_start": 438,
+     "old_count": 7,
+     "removed": [
+      441
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/parquet/arrow/schema.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-97c0b6198f30",
+   "hunks": [
+    {
+     "file": "cpp/src/arrow/compute/kernels/hash_aggregate.cc",
+     "blob": "c37e45513d",
+     "old_start": 38,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "cpp/src/arrow/compute/kernels/hash_aggregate.cc",
+     "blob": "c37e45513d",
+     "old_start": 441,
+     "old_count": 9,
+     "removed": [
+      444,
+      446
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/compute/kernels/hash_aggregate.cc",
+     "blob": "c37e45513d",
+     "old_start": 483,
+     "old_count": 7,
+     "removed": [
+      486
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/compute/kernels/hash_aggregate.cc",
+     "blob": "c37e45513d",
+     "old_start": 733,
+     "old_count": 9,
+     "removed": [
+      737,
+      738
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/compute/kernels/hash_aggregate.cc",
+     "blob": "c37e45513d",
+     "old_start": 746,
+     "old_count": 7,
+     "removed": [
+      749
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/arrow/compute/kernels/hash_aggregate.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-97ed55fe5885",
+   "hunks": [
+    {
+     "file": "cpp/src/arrow/util/value_parsing.h",
+     "blob": "5193f0af75",
+     "old_start": 801,
+     "old_count": 7,
+     "removed": [
+      804
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/arrow/util/value_parsing.h"
+   ]
+  },
+  {
+   "bug_id": "arrow-98c930cfb2f6",
+   "hunks": [
+    {
+     "file": "cpp/src/parquet/column_reader.cc",
+     "blob": "abcf83a899",
+     "old_start": 587,
+     "old_count": 10,
+     "removed": [
+      590,
+      591,
+      592,
+      593
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/parquet/column_reader.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-9a0cb740d8ac",
+   "hunks": [
+    {
+     "file": "cpp/src/parquet/arrow/writer.cc",
+     "blob": "0c67e8d6bb",
+     "old_start": 306,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "cpp/src/parquet/arrow/writer.cc",
+     "blob": "0c67e8d6bb",
+     "old_start": 325,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "cpp/src/parquet/arrow/writer.cc",
+     "blob": "0c67e8d6bb",
+     "old_start": 334,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "cpp/src/parquet/arrow/writer.cc",
+     "blob": "0c67e8d6bb",
+     "old_start": 356,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "cpp/src/parquet/arrow/writer.cc",
+     "blob": "0c67e8d6bb",
+     "old_start": 392,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "cpp/src/parquet/arrow/writer.cc",
+     "blob": "0c67e8d6bb",
+     "old_start": 400,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "cpp/src/parquet/file_writer.cc",
+     "blob": "9a92d4525d",
+     "old_start": 656,
+     "old_count": 7,
+     "removed": [
+      659
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/parquet/arrow/writer.cc",
+    "cpp/src/parquet/file_writer.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-9f952a8a44b5",
+   "hunks": [
+    {
+     "file": "cpp/src/arrow/compute/kernels/scalar_string_utf8.cc",
+     "blob": "fb197e13a6",
+     "old_start": 1090,
+     "old_count": 7,
+     "removed": [
+      1093
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/compute/kernels/scalar_string_utf8.cc",
+     "blob": "fb197e13a6",
+     "old_start": 1133,
+     "old_count": 7,
+     "removed": [
+      1136
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/compute/kernels/scalar_string_utf8.cc",
+     "blob": "fb197e13a6",
+     "old_start": 1158,
+     "old_count": 7,
+     "removed": [
+      1161
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/compute/kernels/scalar_string_utf8.cc",
+     "blob": "fb197e13a6",
+     "old_start": 1214,
+     "old_count": 11,
+     "removed": [
+      1218,
+      1221
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/compute/kernels/scalar_string_utf8.cc",
+     "blob": "fb197e13a6",
+     "old_start": 1240,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "cpp/src/arrow/compute/kernels/scalar_string_utf8.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-a642ccf7200e",
+   "hunks": [
+    {
+     "file": "cpp/src/arrow/array/data.cc",
+     "blob": "b13022f9c3",
+     "old_start": 157,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "cpp/src/arrow/array/data.cc",
+     "blob": "b13022f9c3",
+     "old_start": 168,
+     "old_count": 7,
+     "removed": [
+      171
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/array/data.cc",
+     "blob": "b13022f9c3",
+     "old_start": 412,
+     "old_count": 16,
+     "removed": [
+      415,
+      422,
+      423,
+      424
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/arrow/array/data.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-a7cd3ba57ac2",
+   "hunks": [
+    {
+     "file": "cpp/src/arrow/compute/kernels/scalar_if_else.cc",
+     "blob": "ed32ec203c",
+     "old_start": 759,
+     "old_count": 11,
+     "removed": [
+      762,
+      766
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/compute/kernels/scalar_if_else.cc",
+     "blob": "ed32ec203c",
+     "old_start": 801,
+     "old_count": 11,
+     "removed": [
+      804,
+      808
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/arrow/compute/kernels/scalar_if_else.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-b4b15ce0d6ab",
+   "hunks": [
+    {
+     "file": "cpp/src/arrow/array/builder_dict.h",
+     "blob": "116c82049e",
+     "old_start": 154,
+     "old_count": 26,
+     "removed": [
+      157,
+      163,
+      170,
+      176
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/array/builder_dict.h",
+     "blob": "116c82049e",
+     "old_start": 181,
+     "old_count": 13,
+     "removed": [
+      184,
+      190
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/array/builder_dict.h",
+     "blob": "116c82049e",
+     "old_start": 196,
+     "old_count": 38,
+     "removed": [
+      199,
+      205,
+      211,
+      217,
+      224,
+      230
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/array/builder_dict.h",
+     "blob": "116c82049e",
+     "old_start": 237,
+     "old_count": 13,
+     "removed": [
+      240,
+      246
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/array/builder_dict.h",
+     "blob": "116c82049e",
+     "old_start": 490,
+     "old_count": 7,
+     "removed": [
+      493
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/array/builder_dict.h",
+     "blob": "116c82049e",
+     "old_start": 561,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "cpp/src/arrow/array/builder_dict.h",
+     "blob": "116c82049e",
+     "old_start": 571,
+     "old_count": 31,
+     "removed": [
+      574,
+      575,
+      578,
+      579,
+      583,
+      584,
+      590,
+      591,
+      593,
+      594,
+      597,
+      598
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/array/builder_dict.h",
+     "blob": "116c82049e",
+     "old_start": 647,
+     "old_count": 7,
+     "removed": [
+      650
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/array/builder_dict.h",
+     "blob": "116c82049e",
+     "old_start": 659,
+     "old_count": 11,
+     "removed": [
+      662
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/builder.cc",
+     "blob": "1a6a718c15",
+     "old_start": 168,
+     "old_count": 17,
+     "removed": [
+      172,
+      177,
+      178,
+      181
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/builder.cc",
+     "blob": "1a6a718c15",
+     "old_start": 188,
+     "old_count": 8,
+     "removed": [
+      191
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/builder.cc",
+     "blob": "1a6a718c15",
+     "old_start": 206,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "cpp/src/arrow/builder.cc",
+     "blob": "1a6a718c15",
+     "old_start": 332,
+     "old_count": 9,
+     "removed": [
+      335,
+      336,
+      337
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/arrow/array/builder_dict.h",
+    "cpp/src/arrow/builder.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-b831ede509b4",
+   "hunks": [
+    {
+     "file": "cpp/src/arrow/dataset/dataset_writer.cc",
+     "blob": "4ae15a7b3b",
+     "old_start": 58,
+     "old_count": 7,
+     "removed": [
+      61
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/dataset/dataset_writer.cc",
+     "blob": "4ae15a7b3b",
+     "old_start": 75,
+     "old_count": 7,
+     "removed": [
+      78
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/arrow/dataset/dataset_writer.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-be576c6bbb37",
+   "hunks": [
+    {
+     "file": "cpp/src/gandiva/precompiled/time.cc",
+     "blob": "e1e9ac4456",
+     "old_start": 923,
+     "old_count": 13,
+     "removed": [
+      926,
+      927,
+      928,
+      929,
+      930,
+      931,
+      932
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/gandiva/precompiled/time.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-c1cc8abccb1b",
+   "hunks": [
+    {
+     "file": "cpp/src/arrow/compute/kernels/scalar_cast_string.cc",
+     "blob": "3a8352a9b8",
+     "old_start": 340,
+     "old_count": 10,
+     "removed": [
+      343,
+      344,
+      345,
+      346
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/arrow/compute/kernels/scalar_cast_string.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-c844b43f97c5",
+   "hunks": [
+    {
+     "file": "cpp/src/arrow/array/data.cc",
+     "blob": "cb0f8dc55f",
+     "old_start": 233,
+     "old_count": 10,
+     "removed": [
+      236,
+      237,
+      238,
+      239
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/arrow/array/data.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-d0cd5512a992",
+   "hunks": [
+    {
+     "file": "cpp/src/gandiva/function_registry_string.cc",
+     "blob": "2bc6936d77",
+     "old_start": 432,
+     "old_count": 7,
+     "removed": [
+      435
+     ]
+    },
+    {
+     "file": "cpp/src/gandiva/precompiled/string_ops.cc",
+     "blob": "0b31c769c9",
+     "old_start": 2252,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "cpp/src/gandiva/precompiled/string_ops.cc",
+     "blob": "0b31c769c9",
+     "old_start": 2261,
+     "old_count": 11,
+     "removed": [
+      2264,
+      2265,
+      2266,
+      2267,
+      2268
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/gandiva/function_registry_string.cc",
+    "cpp/src/gandiva/precompiled/string_ops.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-d4e732abe1d1",
+   "hunks": [
+    {
+     "file": "cpp/src/arrow/compute/light_array.cc",
+     "blob": "37d4421fd7",
+     "old_start": 80,
+     "old_count": 8,
+     "removed": [
+      83,
+      84
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/compute/light_array.cc",
+     "blob": "37d4421fd7",
+     "old_start": 89,
+     "old_count": 18,
+     "removed": [
+      92,
+      99
+     ]
+    },
+    {
+     "file": "cpp/src/arrow/compute/light_array.h",
+     "blob": "3dd328c22e",
+     "old_start": 183,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "cpp/src/arrow/compute/light_array.cc",
+    "cpp/src/arrow/compute/light_array.h"
+   ]
+  },
+  {
+   "bug_id": "arrow-d7a1dcf3bafd",
+   "hunks": [
+    {
+     "file": "cpp/src/arrow/compute/exec/expression.cc",
+     "blob": "b1d914ce87",
+     "old_start": 587,
+     "old_count": 9,
+     "removed": [
+      590,
+      591,
+      592
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/arrow/compute/exec/expression.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-db58ca99eaa0",
+   "hunks": [
+    {
+     "file": "cpp/src/arrow/array/array_primitive.cc",
+     "blob": "7c4a14d934",
+     "old_start": 56,
+     "old_count": 7,
+     "removed": [
+      59
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/arrow/array/array_primitive.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-e4fc3a8e2c13",
+   "hunks": [
+    {
+     "file": "cpp/src/parquet/stream_reader.cc",
+     "blob": "0fecb1bf24",
+     "old_start": 441,
+     "old_count": 7,
+     "removed": [
+      444
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/parquet/stream_reader.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-eb9c7276cf24",
+   "hunks": [
+    {
+     "file": "cpp/src/parquet/column_writer.cc",
+     "blob": "f549331faf",
+     "old_start": 657,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "cpp/src/parquet/column_writer.cc",
+     "blob": "f549331faf",
+     "old_start": 757,
+     "old_count": 10,
+     "removed": [
+      760,
+      761
+     ]
+    },
+    {
+     "file": "cpp/src/parquet/column_writer.cc",
+     "blob": "f549331faf",
+     "old_start": 869,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "cpp/src/parquet/column_writer.cc",
+     "blob": "f549331faf",
+     "old_start": 894,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "cpp/src/parquet/column_writer.cc",
+     "blob": "f549331faf",
+     "old_start": 901,
+     "old_count": 15,
+     "removed": [
+      904,
+      905,
+      910,
+      911,
+      912
+     ]
+    },
+    {
+     "file": "cpp/src/parquet/column_writer.cc",
+     "blob": "f549331faf",
+     "old_start": 943,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "cpp/src/parquet/column_writer.cc",
+     "blob": "f549331faf",
+     "old_start": 952,
+     "old_count": 12,
+     "removed": [
+      955,
+      960
+     ]
+    },
+    {
+     "file": "cpp/src/parquet/column_writer.cc",
+     "blob": "f549331faf",
+     "old_start": 1263,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "cpp/src/parquet/column_writer.cc",
+     "blob": "f549331faf",
+     "old_start": 1270,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "cpp/src/parquet/column_writer.cc",
+     "blob": "f549331faf",
+     "old_start": 1353,
+     "old_count": 12,
+     "removed": []
+    },
+    {
+     "file": "cpp/src/parquet/column_writer.cc",
+     "blob": "f549331faf",
+     "old_start": 1477,
+     "old_count": 9,
+     "removed": [
+      1480,
+      1481,
+      1482
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/parquet/column_writer.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-eef26b83f5e8",
+   "hunks": [
+    {
+     "file": "cpp/src/parquet/column_writer.cc",
+     "blob": "20b8cc98ca",
+     "old_start": 1581,
+     "old_count": 7,
+     "removed": [
+      1584
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/parquet/column_writer.cc"
+   ]
+  },
+  {
+   "bug_id": "arrow-f5b99cc3814b",
+   "hunks": [
+    {
+     "file": "cpp/src/gandiva/precompiled/string_ops.cc",
+     "blob": "70cad7c626",
+     "old_start": 208,
+     "old_count": 7,
+     "removed": [
+      211
+     ]
+    }
+   ],
+   "files": [
+    "cpp/src/gandiva/precompiled/string_ops.cc"
+   ]
+  }
+ ],
+ "n_bugs": 47,
+ "analysis_units": [
+  {
+   "file": "cpp/src/arrow/array/array_nested.cc",
+   "blob": "4016b328a3"
+  },
+  {
+   "file": "cpp/src/arrow/array/array_primitive.cc",
+   "blob": "7c4a14d934"
+  },
+  {
+   "file": "cpp/src/arrow/array/builder_dict.h",
+   "blob": "116c82049e"
+  },
+  {
+   "file": "cpp/src/arrow/array/data.cc",
+   "blob": "b13022f9c3"
+  },
+  {
+   "file": "cpp/src/arrow/array/data.cc",
+   "blob": "cb0f8dc55f"
+  },
+  {
+   "file": "cpp/src/arrow/array/data.cc",
+   "blob": "dcc659e709"
+  },
+  {
+   "file": "cpp/src/arrow/builder.cc",
+   "blob": "1a6a718c15"
+  },
+  {
+   "file": "cpp/src/arrow/chunked_array.cc",
+   "blob": "c5e6d7fa4b"
+  },
+  {
+   "file": "cpp/src/arrow/compute/exec/expression.cc",
+   "blob": "3c2ec10040"
+  },
+  {
+   "file": "cpp/src/arrow/compute/exec/expression.cc",
+   "blob": "b1d914ce87"
+  },
+  {
+   "file": "cpp/src/arrow/compute/exec/expression.cc",
+   "blob": "b47e0a3552"
+  },
+  {
+   "file": "cpp/src/arrow/compute/exec/expression_internal.h",
+   "blob": "083756dc5f"
+  },
+  {
+   "file": "cpp/src/arrow/compute/exec/task_util.cc",
+   "blob": "85378eaeeb"
+  },
+  {
+   "file": "cpp/src/arrow/compute/kernels/hash_aggregate.cc",
+   "blob": "c37e45513d"
+  },
+  {
+   "file": "cpp/src/arrow/compute/kernels/scalar_cast_string.cc",
+   "blob": "3a8352a9b8"
+  },
+  {
+   "file": "cpp/src/arrow/compute/kernels/scalar_if_else.cc",
+   "blob": "ed32ec203c"
+  },
+  {
+   "file": "cpp/src/arrow/compute/kernels/scalar_string_utf8.cc",
+   "blob": "fb197e13a6"
+  },
+  {
+   "file": "cpp/src/arrow/compute/kernels/scalar_temporal_unary.cc",
+   "blob": "3addaf6863"
+  },
+  {
+   "file": "cpp/src/arrow/compute/kernels/vector_replace.cc",
+   "blob": "1a3e743784"
+  },
+  {
+   "file": "cpp/src/arrow/compute/light_array.cc",
+   "blob": "37d4421fd7"
+  },
+  {
+   "file": "cpp/src/arrow/compute/light_array.h",
+   "blob": "3dd328c22e"
+  },
+  {
+   "file": "cpp/src/arrow/compute/registry.cc",
+   "blob": "7a54f78a03"
+  },
+  {
+   "file": "cpp/src/arrow/compute/registry.h",
+   "blob": "afd9f2007b"
+  },
+  {
+   "file": "cpp/src/arrow/dataset/dataset_writer.cc",
+   "blob": "4ae15a7b3b"
+  },
+  {
+   "file": "cpp/src/arrow/dataset/file_parquet.cc",
+   "blob": "9d0e8a6515"
+  },
+  {
+   "file": "cpp/src/arrow/ipc/metadata_internal.cc",
+   "blob": "a9f90a0724"
+  },
+  {
+   "file": "cpp/src/arrow/ipc/writer.cc",
+   "blob": "1d23060156"
+  },
+  {
+   "file": "cpp/src/arrow/result.h",
+   "blob": "30e632c700"
+  },
+  {
+   "file": "cpp/src/arrow/scalar.cc",
+   "blob": "1f467ad93b"
+  },
+  {
+   "file": "cpp/src/arrow/scalar.cc",
+   "blob": "4e0a3c13b6"
+  },
+  {
+   "file": "cpp/src/arrow/tensor.cc",
+   "blob": "8cdf7f82d2"
+  },
+  {
+   "file": "cpp/src/arrow/type.cc",
+   "blob": "2e9d860a8d"
+  },
+  {
+   "file": "cpp/src/arrow/util/bit_stream_utils.h",
+   "blob": "dc9b41793c"
+  },
+  {
+   "file": "cpp/src/arrow/util/range.h",
+   "blob": "2055328798"
+  },
+  {
+   "file": "cpp/src/arrow/util/value_parsing.h",
+   "blob": "5193f0af75"
+  },
+  {
+   "file": "cpp/src/gandiva/function_registry_string.cc",
+   "blob": "2bc6936d77"
+  },
+  {
+   "file": "cpp/src/gandiva/gdv_string_function_stubs.cc",
+   "blob": "b3159a2d74"
+  },
+  {
+   "file": "cpp/src/gandiva/llvm_generator.cc",
+   "blob": "0f0918b3a1"
+  },
+  {
+   "file": "cpp/src/gandiva/precompiled/decimal_wrapper.cc",
+   "blob": "082d5832d1"
+  },
+  {
+   "file": "cpp/src/gandiva/precompiled/string_ops.cc",
+   "blob": "0b31c769c9"
+  },
+  {
+   "file": "cpp/src/gandiva/precompiled/string_ops.cc",
+   "blob": "70cad7c626"
+  },
+  {
+   "file": "cpp/src/gandiva/precompiled/time.cc",
+   "blob": "9b09228773"
+  },
+  {
+   "file": "cpp/src/gandiva/precompiled/time.cc",
+   "blob": "e1e9ac4456"
+  },
+  {
+   "file": "cpp/src/gandiva/to_date_holder.cc",
+   "blob": "0778c39b4c"
+  },
+  {
+   "file": "cpp/src/parquet/arrow/reader_internal.cc",
+   "blob": "59fe2b4600"
+  },
+  {
+   "file": "cpp/src/parquet/arrow/schema.cc",
+   "blob": "07d481ba8e"
+  },
+  {
+   "file": "cpp/src/parquet/arrow/schema.cc",
+   "blob": "d94c73452c"
+  },
+  {
+   "file": "cpp/src/parquet/arrow/writer.cc",
+   "blob": "0c67e8d6bb"
+  },
+  {
+   "file": "cpp/src/parquet/column_reader.cc",
+   "blob": "422016e176"
+  },
+  {
+   "file": "cpp/src/parquet/column_reader.cc",
+   "blob": "abcf83a899"
+  },
+  {
+   "file": "cpp/src/parquet/column_writer.cc",
+   "blob": "20b8cc98ca"
+  },
+  {
+   "file": "cpp/src/parquet/column_writer.cc",
+   "blob": "f549331faf"
+  },
+  {
+   "file": "cpp/src/parquet/encoding.cc",
+   "blob": "b9e6619a17"
+  },
+  {
+   "file": "cpp/src/parquet/file_writer.cc",
+   "blob": "9a92d4525d"
+  },
+  {
+   "file": "cpp/src/parquet/metadata.cc",
+   "blob": "139793219d"
+  },
+  {
+   "file": "cpp/src/parquet/statistics.h",
+   "blob": "0d6ea9898f"
+  },
+  {
+   "file": "cpp/src/parquet/stream_reader.cc",
+   "blob": "0fecb1bf24"
+  }
+ ],
+ "n_units": 57,
+ "bug_files": [
+  "cpp/src/arrow/array/array_nested.cc",
+  "cpp/src/arrow/array/array_primitive.cc",
+  "cpp/src/arrow/array/builder_dict.h",
+  "cpp/src/arrow/array/data.cc",
+  "cpp/src/arrow/builder.cc",
+  "cpp/src/arrow/chunked_array.cc",
+  "cpp/src/arrow/compute/exec/expression.cc",
+  "cpp/src/arrow/compute/exec/expression_internal.h",
+  "cpp/src/arrow/compute/exec/task_util.cc",
+  "cpp/src/arrow/compute/kernels/hash_aggregate.cc",
+  "cpp/src/arrow/compute/kernels/scalar_cast_string.cc",
+  "cpp/src/arrow/compute/kernels/scalar_if_else.cc",
+  "cpp/src/arrow/compute/kernels/scalar_string_utf8.cc",
+  "cpp/src/arrow/compute/kernels/scalar_temporal_unary.cc",
+  "cpp/src/arrow/compute/kernels/vector_replace.cc",
+  "cpp/src/arrow/compute/light_array.cc",
+  "cpp/src/arrow/compute/light_array.h",
+  "cpp/src/arrow/compute/registry.cc",
+  "cpp/src/arrow/compute/registry.h",
+  "cpp/src/arrow/dataset/dataset_writer.cc",
+  "cpp/src/arrow/dataset/file_parquet.cc",
+  "cpp/src/arrow/ipc/metadata_internal.cc",
+  "cpp/src/arrow/ipc/writer.cc",
+  "cpp/src/arrow/result.h",
+  "cpp/src/arrow/scalar.cc",
+  "cpp/src/arrow/tensor.cc",
+  "cpp/src/arrow/type.cc",
+  "cpp/src/arrow/util/bit_stream_utils.h",
+  "cpp/src/arrow/util/range.h",
+  "cpp/src/arrow/util/value_parsing.h",
+  "cpp/src/gandiva/function_registry_string.cc",
+  "cpp/src/gandiva/gdv_string_function_stubs.cc",
+  "cpp/src/gandiva/llvm_generator.cc",
+  "cpp/src/gandiva/precompiled/decimal_wrapper.cc",
+  "cpp/src/gandiva/precompiled/string_ops.cc",
+  "cpp/src/gandiva/precompiled/time.cc",
+  "cpp/src/gandiva/to_date_holder.cc",
+  "cpp/src/parquet/arrow/reader_internal.cc",
+  "cpp/src/parquet/arrow/schema.cc",
+  "cpp/src/parquet/arrow/writer.cc",
+  "cpp/src/parquet/column_reader.cc",
+  "cpp/src/parquet/column_writer.cc",
+  "cpp/src/parquet/encoding.cc",
+  "cpp/src/parquet/file_writer.cc",
+  "cpp/src/parquet/metadata.cc",
+  "cpp/src/parquet/statistics.h",
+  "cpp/src/parquet/stream_reader.cc"
+ ]
+}

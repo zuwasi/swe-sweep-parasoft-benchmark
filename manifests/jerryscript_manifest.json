@@ -1,0 +1,699 @@
+{
+ "repo": "jerryscript",
+ "clone_url": "https://github.com/jerryscript-project/jerryscript.git",
+ "upstream_commit": "9f7399e15e6172900e0591deb5a57a45769d8205",
+ "base_ref": "v2.2.0",
+ "n_subtasks": 15,
+ "bugs": [
+  {
+   "bug_id": "jerryscript-042a8ceedc15",
+   "hunks": [
+    {
+     "file": "jerry-core/ecma/builtin-objects/ecma-builtin-json.c",
+     "blob": "7e403390",
+     "old_start": 891,
+     "old_count": 7,
+     "removed": [
+      894
+     ]
+    },
+    {
+     "file": "jerry-core/ecma/builtin-objects/ecma-builtin-json.c",
+     "blob": "7e403390",
+     "old_start": 982,
+     "old_count": 7,
+     "removed": [
+      985
+     ]
+    },
+    {
+     "file": "jerry-core/ecma/builtin-objects/ecma-builtin-json.c",
+     "blob": "7e403390",
+     "old_start": 1360,
+     "old_count": 7,
+     "removed": [
+      1363
+     ]
+    },
+    {
+     "file": "jerry-core/ecma/builtin-objects/ecma-builtin-json.c",
+     "blob": "7e403390",
+     "old_start": 1368,
+     "old_count": 7,
+     "removed": [
+      1371
+     ]
+    },
+    {
+     "file": "jerry-core/ecma/builtin-objects/ecma-builtin-json.c",
+     "blob": "7e403390",
+     "old_start": 1391,
+     "old_count": 7,
+     "removed": [
+      1394
+     ]
+    },
+    {
+     "file": "jerry-core/ecma/builtin-objects/ecma-builtin-json.c",
+     "blob": "7e403390",
+     "old_start": 1406,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "jerry-core/ecma/builtin-objects/ecma-builtin-json.c",
+     "blob": "7e403390",
+     "old_start": 1496,
+     "old_count": 7,
+     "removed": [
+      1499
+     ]
+    },
+    {
+     "file": "jerry-core/ecma/builtin-objects/ecma-builtin-json.c",
+     "blob": "7e403390",
+     "old_start": 1509,
+     "old_count": 7,
+     "removed": [
+      1512
+     ]
+    },
+    {
+     "file": "jerry-core/ecma/builtin-objects/ecma-builtin-json.c",
+     "blob": "7e403390",
+     "old_start": 1583,
+     "old_count": 7,
+     "removed": [
+      1586
+     ]
+    }
+   ],
+   "files": [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-json.c"
+   ]
+  },
+  {
+   "bug_id": "jerryscript-072dcea299cd",
+   "hunks": [
+    {
+     "file": "jerry-core/parser/js/js-parser.c",
+     "blob": "a0f6a06c",
+     "old_start": 1195,
+     "old_count": 7,
+     "removed": [
+      1198
+     ]
+    }
+   ],
+   "files": [
+    "jerry-core/parser/js/js-parser.c"
+   ]
+  },
+  {
+   "bug_id": "jerryscript-1eb47ad8b475",
+   "hunks": [
+    {
+     "file": "jerry-core/ecma/operations/ecma-array-object.c",
+     "blob": "4ee2a492",
+     "old_start": 942,
+     "old_count": 7,
+     "removed": [
+      945
+     ]
+    },
+    {
+     "file": "jerry-core/ecma/operations/ecma-array-object.c",
+     "blob": "4ee2a492",
+     "old_start": 978,
+     "old_count": 7,
+     "removed": [
+      981
+     ]
+    },
+    {
+     "file": "jerry-core/ecma/operations/ecma-array-object.c",
+     "blob": "4ee2a492",
+     "old_start": 990,
+     "old_count": 10,
+     "removed": [
+      993,
+      995
+     ]
+    },
+    {
+     "file": "jerry-core/ecma/operations/ecma-array-object.c",
+     "blob": "4ee2a492",
+     "old_start": 1023,
+     "old_count": 9,
+     "removed": [
+      1026,
+      1027
+     ]
+    },
+    {
+     "file": "jerry-core/ecma/operations/ecma-array-object.c",
+     "blob": "4ee2a492",
+     "old_start": 1100,
+     "old_count": 41,
+     "removed": [
+      1103,
+      1104,
+      1105,
+      1106,
+      1107,
+      1108,
+      1109,
+      1110,
+      1111,
+      1112,
+      1113,
+      1114,
+      1115,
+      1116,
+      1117,
+      1118,
+      1119,
+      1120,
+      1121,
+      1122,
+      1123,
+      1124,
+      1125,
+      1126,
+      1127,
+      1128,
+      1131,
+      1137
+     ]
+    },
+    {
+     "file": "jerry-core/ecma/operations/ecma-array-object.h",
+     "blob": "ddf905b1",
+     "old_start": 25,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "jerry-core/ecma/operations/ecma-array-object.h",
+     "blob": "ddf905b1",
+     "old_start": 54,
+     "old_count": 20,
+     "removed": [
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70
+     ]
+    }
+   ],
+   "files": [
+    "jerry-core/ecma/operations/ecma-array-object.c",
+    "jerry-core/ecma/operations/ecma-array-object.h"
+   ]
+  },
+  {
+   "bug_id": "jerryscript-25396dc4b88b",
+   "hunks": [
+    {
+     "file": "jerry-core/ecma/builtin-objects/ecma-builtin-helpers-date.c",
+     "blob": "356e49c9",
+     "old_start": 72,
+     "old_count": 7,
+     "removed": [
+      75
+     ]
+    }
+   ],
+   "files": [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-helpers-date.c"
+   ]
+  },
+  {
+   "bug_id": "jerryscript-2b0230207b47",
+   "hunks": [
+    {
+     "file": "jerry-core/parser/js/js-parser-statm.c",
+     "blob": "38182f95",
+     "old_start": 2539,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "jerry-core/parser/js/js-parser-statm.c",
+     "blob": "38182f95",
+     "old_start": 2574,
+     "old_count": 7,
+     "removed": [
+      2577
+     ]
+    },
+    {
+     "file": "jerry-core/parser/js/js-parser-statm.c",
+     "blob": "38182f95",
+     "old_start": 2583,
+     "old_count": 7,
+     "removed": [
+      2586
+     ]
+    },
+    {
+     "file": "jerry-core/parser/js/js-parser-statm.c",
+     "blob": "38182f95",
+     "old_start": 2592,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "jerry-core/parser/js/js-parser-statm.c",
+     "blob": "38182f95",
+     "old_start": 2617,
+     "old_count": 24,
+     "removed": [
+      2620,
+      2621,
+      2623,
+      2624,
+      2625,
+      2626,
+      2627,
+      2628,
+      2629,
+      2630,
+      2631,
+      2632,
+      2633,
+      2634,
+      2635,
+      2636
+     ]
+    },
+    {
+     "file": "jerry-core/parser/js/js-parser-statm.c",
+     "blob": "38182f95",
+     "old_start": 3010,
+     "old_count": 7,
+     "removed": [
+      3013
+     ]
+    },
+    {
+     "file": "jerry-core/parser/js/js-scanner-ops.c",
+     "blob": "0270d012",
+     "old_start": 487,
+     "old_count": 15,
+     "removed": [
+      490
+     ]
+    },
+    {
+     "file": "jerry-core/parser/js/js-scanner-ops.c",
+     "blob": "0270d012",
+     "old_start": 503,
+     "old_count": 7,
+     "removed": [
+      506
+     ]
+    }
+   ],
+   "files": [
+    "jerry-core/parser/js/js-parser-statm.c",
+    "jerry-core/parser/js/js-scanner-ops.c"
+   ]
+  },
+  {
+   "bug_id": "jerryscript-32f5320c7e4d",
+   "hunks": [
+    {
+     "file": "jerry-core/parser/js/js-parser-expr.c",
+     "blob": "fcc9e296",
+     "old_start": 98,
+     "old_count": 9,
+     "removed": [
+      101,
+      102,
+      103
+     ]
+    },
+    {
+     "file": "jerry-core/parser/js/js-parser-expr.c",
+     "blob": "fcc9e296",
+     "old_start": 2198,
+     "old_count": 10,
+     "removed": [
+      2201,
+      2202,
+      2203,
+      2204
+     ]
+    },
+    {
+     "file": "jerry-core/parser/js/js-parser-expr.c",
+     "blob": "fcc9e296",
+     "old_start": 2290,
+     "old_count": 9,
+     "removed": [
+      2293,
+      2294,
+      2295
+     ]
+    }
+   ],
+   "files": [
+    "jerry-core/parser/js/js-parser-expr.c"
+   ]
+  },
+  {
+   "bug_id": "jerryscript-4afcc94994c8",
+   "hunks": [
+    {
+     "file": "jerry-core/parser/js/js-parser-expr.c",
+     "blob": "ee6e6298",
+     "old_start": 2148,
+     "old_count": 7,
+     "removed": [
+      2151
+     ]
+    },
+    {
+     "file": "jerry-core/parser/js/js-parser-expr.c",
+     "blob": "ee6e6298",
+     "old_start": 2157,
+     "old_count": 33,
+     "removed": [
+      2160,
+      2162,
+      2163,
+      2164,
+      2165,
+      2166,
+      2167,
+      2168,
+      2169,
+      2170,
+      2171,
+      2172,
+      2173,
+      2174,
+      2180,
+      2181,
+      2182,
+      2183,
+      2184,
+      2185,
+      2186
+     ]
+    }
+   ],
+   "files": [
+    "jerry-core/parser/js/js-parser-expr.c"
+   ]
+  },
+  {
+   "bug_id": "jerryscript-5144355d084f",
+   "hunks": [
+    {
+     "file": "jerry-core/ecma/builtin-objects/ecma-builtin-json.c",
+     "blob": "ea6c2f61",
+     "old_start": 1186,
+     "old_count": 36,
+     "removed": [
+      1189,
+      1190,
+      1194,
+      1200,
+      1206,
+      1207,
+      1208,
+      1209,
+      1210,
+      1212,
+      1213,
+      1214,
+      1215,
+      1216,
+      1217,
+      1218
+     ]
+    }
+   ],
+   "files": [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-json.c"
+   ]
+  },
+  {
+   "bug_id": "jerryscript-5ca8de954fce",
+   "hunks": [
+    {
+     "file": "jerry-core/parser/js/js-parser-expr.c",
+     "blob": "c54209fc",
+     "old_start": 2934,
+     "old_count": 9,
+     "removed": [
+      2938,
+      2939
+     ]
+    },
+    {
+     "file": "jerry-core/parser/js/js-parser-expr.c",
+     "blob": "c54209fc",
+     "old_start": 2978,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "jerry-core/parser/js/js-parser-expr.c",
+     "blob": "c54209fc",
+     "old_start": 3122,
+     "old_count": 9,
+     "removed": [
+      3125,
+      3127
+     ]
+    }
+   ],
+   "files": [
+    "jerry-core/parser/js/js-parser-expr.c"
+   ]
+  },
+  {
+   "bug_id": "jerryscript-63583f11d059",
+   "hunks": [
+    {
+     "file": "jerry-core/parser/js/js-scanner-util.c",
+     "blob": "73a8ff81",
+     "old_start": 546,
+     "old_count": 17,
+     "removed": [
+      549,
+      550,
+      551,
+      552,
+      553
+     ]
+    }
+   ],
+   "files": [
+    "jerry-core/parser/js/js-scanner-util.c"
+   ]
+  },
+  {
+   "bug_id": "jerryscript-662bbee88446",
+   "hunks": [
+    {
+     "file": "jerry-core/ecma/builtin-objects/ecma-builtin-array-prototype.c",
+     "blob": "52b84f89",
+     "old_start": 852,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-array-prototype.c"
+   ]
+  },
+  {
+   "bug_id": "jerryscript-9bf98944df1f",
+   "hunks": [
+    {
+     "file": "jerry-core/ecma/builtin-objects/ecma-builtin-date-prototype.c",
+     "blob": "a887549f",
+     "old_start": 237,
+     "old_count": 7,
+     "removed": [
+      240
+     ]
+    }
+   ],
+   "files": [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-date-prototype.c"
+   ]
+  },
+  {
+   "bug_id": "jerryscript-bf72a9ea61e4",
+   "hunks": [
+    {
+     "file": "jerry-core/ecma/builtin-objects/ecma-builtin-global.c",
+     "blob": "12587362",
+     "old_start": 338,
+     "old_count": 19,
+     "removed": [
+      341,
+      342,
+      343,
+      344,
+      346,
+      347,
+      349,
+      350,
+      351,
+      352,
+      353
+     ]
+    }
+   ],
+   "files": [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-global.c"
+   ]
+  },
+  {
+   "bug_id": "jerryscript-df8c37f98e76",
+   "hunks": [
+    {
+     "file": "jerry-core/api/jerry.c",
+     "blob": "ba879dcb",
+     "old_start": 2582,
+     "old_count": 8,
+     "removed": [
+      2585,
+      2586
+     ]
+    }
+   ],
+   "files": [
+    "jerry-core/api/jerry.c"
+   ]
+  },
+  {
+   "bug_id": "jerryscript-edaaae2dd276",
+   "hunks": [
+    {
+     "file": "jerry-core/ecma/builtin-objects/ecma-builtin-number-prototype.c",
+     "blob": "e913450b",
+     "old_start": 673,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "jerry-core/ecma/builtin-objects/ecma-builtin-number-prototype.c",
+     "blob": "e913450b",
+     "old_start": 692,
+     "old_count": 7,
+     "removed": [
+      695
+     ]
+    }
+   ],
+   "files": [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-number-prototype.c"
+   ]
+  }
+ ],
+ "n_bugs": 15,
+ "analysis_units": [
+  {
+   "file": "jerry-core/api/jerry.c",
+   "blob": "ba879dcb"
+  },
+  {
+   "file": "jerry-core/ecma/builtin-objects/ecma-builtin-array-prototype.c",
+   "blob": "52b84f89"
+  },
+  {
+   "file": "jerry-core/ecma/builtin-objects/ecma-builtin-date-prototype.c",
+   "blob": "a887549f"
+  },
+  {
+   "file": "jerry-core/ecma/builtin-objects/ecma-builtin-global.c",
+   "blob": "12587362"
+  },
+  {
+   "file": "jerry-core/ecma/builtin-objects/ecma-builtin-helpers-date.c",
+   "blob": "356e49c9"
+  },
+  {
+   "file": "jerry-core/ecma/builtin-objects/ecma-builtin-json.c",
+   "blob": "7e403390"
+  },
+  {
+   "file": "jerry-core/ecma/builtin-objects/ecma-builtin-json.c",
+   "blob": "ea6c2f61"
+  },
+  {
+   "file": "jerry-core/ecma/builtin-objects/ecma-builtin-number-prototype.c",
+   "blob": "e913450b"
+  },
+  {
+   "file": "jerry-core/ecma/operations/ecma-array-object.c",
+   "blob": "4ee2a492"
+  },
+  {
+   "file": "jerry-core/ecma/operations/ecma-array-object.h",
+   "blob": "ddf905b1"
+  },
+  {
+   "file": "jerry-core/parser/js/js-parser-expr.c",
+   "blob": "c54209fc"
+  },
+  {
+   "file": "jerry-core/parser/js/js-parser-expr.c",
+   "blob": "ee6e6298"
+  },
+  {
+   "file": "jerry-core/parser/js/js-parser-expr.c",
+   "blob": "fcc9e296"
+  },
+  {
+   "file": "jerry-core/parser/js/js-parser-statm.c",
+   "blob": "38182f95"
+  },
+  {
+   "file": "jerry-core/parser/js/js-parser.c",
+   "blob": "a0f6a06c"
+  },
+  {
+   "file": "jerry-core/parser/js/js-scanner-ops.c",
+   "blob": "0270d012"
+  },
+  {
+   "file": "jerry-core/parser/js/js-scanner-util.c",
+   "blob": "73a8ff81"
+  }
+ ],
+ "n_units": 17,
+ "bug_files": [
+  "jerry-core/api/jerry.c",
+  "jerry-core/ecma/builtin-objects/ecma-builtin-array-prototype.c",
+  "jerry-core/ecma/builtin-objects/ecma-builtin-date-prototype.c",
+  "jerry-core/ecma/builtin-objects/ecma-builtin-global.c",
+  "jerry-core/ecma/builtin-objects/ecma-builtin-helpers-date.c",
+  "jerry-core/ecma/builtin-objects/ecma-builtin-json.c",
+  "jerry-core/ecma/builtin-objects/ecma-builtin-number-prototype.c",
+  "jerry-core/ecma/operations/ecma-array-object.c",
+  "jerry-core/ecma/operations/ecma-array-object.h",
+  "jerry-core/parser/js/js-parser-expr.c",
+  "jerry-core/parser/js/js-parser-statm.c",
+  "jerry-core/parser/js/js-parser.c",
+  "jerry-core/parser/js/js-scanner-ops.c",
+  "jerry-core/parser/js/js-scanner-util.c"
+ ]
+}

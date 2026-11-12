@@ -1,0 +1,747 @@
+{
+ "repo": "micropython",
+ "clone_url": "https://github.com/micropython/micropython.git",
+ "upstream_commit": "9f7399e15e6172900e0591deb5a57a45769d8205",
+ "base_ref": "v1.19.1",
+ "n_subtasks": 22,
+ "bugs": [
+  {
+   "bug_id": "micropython-1010a6f1bf3f",
+   "hunks": [
+    {
+     "file": "py/mpz.c",
+     "blob": "750664ad9",
+     "old_start": 1717,
+     "old_count": 7,
+     "removed": [
+      1720
+     ]
+    }
+   ],
+   "files": [
+    "py/mpz.c"
+   ]
+  },
+  {
+   "bug_id": "micropython-105ab25a289b",
+   "hunks": [
+    {
+     "file": "py/objint_mpz.c",
+     "blob": "2811bcf2a",
+     "old_start": 296,
+     "old_count": 8,
+     "removed": [
+      299,
+      300
+     ]
+    },
+    {
+     "file": "py/objint_mpz.c",
+     "blob": "2811bcf2a",
+     "old_start": 306,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "py/objint_mpz.c"
+   ]
+  },
+  {
+   "bug_id": "micropython-506e74919e0d",
+   "hunks": [
+    {
+     "file": "py/lexer.c",
+     "blob": "39e9662f6",
+     "old_start": 356,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "py/lexer.c",
+     "blob": "39e9662f6",
+     "old_start": 382,
+     "old_count": 7,
+     "removed": [
+      385
+     ]
+    }
+   ],
+   "files": [
+    "py/lexer.c"
+   ]
+  },
+  {
+   "bug_id": "micropython-56f308119e16",
+   "hunks": [
+    {
+     "file": "py/compile.c",
+     "blob": "4f91ca49b",
+     "old_start": 1650,
+     "old_count": 9,
+     "removed": []
+    },
+    {
+     "file": "py/compile.c",
+     "blob": "4f91ca49b",
+     "old_start": 1682,
+     "old_count": 9,
+     "removed": []
+    }
+   ],
+   "files": [
+    "py/compile.c"
+   ]
+  },
+  {
+   "bug_id": "micropython-5c51fb896d80",
+   "hunks": [
+    {
+     "file": "ports/unix/modusocket.c",
+     "blob": "14f321d34",
+     "old_start": 140,
+     "old_count": 9,
+     "removed": [
+      143,
+      144,
+      145
+     ]
+    }
+   ],
+   "files": [
+    "ports/unix/modusocket.c"
+   ]
+  },
+  {
+   "bug_id": "micropython-639baaf0eaee",
+   "hunks": [
+    {
+     "file": "py/modmath.c",
+     "blob": "72b5dde51",
+     "old_start": 54,
+     "old_count": 7,
+     "removed": [
+      57
+     ]
+    }
+   ],
+   "files": [
+    "py/modmath.c"
+   ]
+  },
+  {
+   "bug_id": "micropython-8074d176612b",
+   "hunks": [
+    {
+     "file": "py/objstr.c",
+     "blob": "b966a7016",
+     "old_start": 1645,
+     "old_count": 7,
+     "removed": [
+      1648
+     ]
+    }
+   ],
+   "files": [
+    "py/objstr.c"
+   ]
+  },
+  {
+   "bug_id": "micropython-80ab54d7145c",
+   "hunks": [
+    {
+     "file": "py/bc.c",
+     "blob": "e002bca26",
+     "old_start": 213,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "py/bc.c",
+     "blob": "e002bca26",
+     "old_start": 229,
+     "old_count": 7,
+     "removed": [
+      232
+     ]
+    }
+   ],
+   "files": [
+    "py/bc.c"
+   ]
+  },
+  {
+   "bug_id": "micropython-830236cc7dce",
+   "hunks": [
+    {
+     "file": "py/objtype.c",
+     "blob": "f7a65a6ca",
+     "old_start": 44,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "py/objtype.c",
+     "blob": "f7a65a6ca",
+     "old_start": 1233,
+     "old_count": 9,
+     "removed": [
+      1236
+     ]
+    }
+   ],
+   "files": [
+    "py/objtype.c"
+   ]
+  },
+  {
+   "bug_id": "micropython-85267a3c1ee8",
+   "hunks": [
+    {
+     "file": "py/misc.h",
+     "blob": "9f8a8c1e1",
+     "old_start": 324,
+     "old_count": 4,
+     "removed": []
+    },
+    {
+     "file": "py/mpz.c",
+     "blob": "502d4e1c1",
+     "old_start": 1589,
+     "old_count": 7,
+     "removed": [
+      1592
+     ]
+    },
+    {
+     "file": "py/mpz.c",
+     "blob": "502d4e1c1",
+     "old_start": 1598,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "py/mpz.c",
+     "blob": "502d4e1c1",
+     "old_start": 1607,
+     "old_count": 28,
+     "removed": [
+      1612,
+      1613,
+      1614,
+      1617,
+      1618,
+      1619,
+      1624,
+      1625,
+      1626,
+      1628,
+      1629,
+      1631
+     ]
+    },
+    {
+     "file": "py/mpz.h",
+     "blob": "d27f57240",
+     "old_start": 93,
+     "old_count": 9,
+     "removed": [
+      96,
+      97,
+      98
+     ]
+    },
+    {
+     "file": "py/mpz.h",
+     "blob": "d27f57240",
+     "old_start": 145,
+     "old_count": 7,
+     "removed": [
+      148
+     ]
+    },
+    {
+     "file": "py/objint.c",
+     "blob": "6caa608f3",
+     "old_start": 421,
+     "old_count": 29,
+     "removed": [
+      424,
+      427,
+      428,
+      434,
+      436,
+      440,
+      445,
+      446
+     ]
+    },
+    {
+     "file": "py/objint.h",
+     "blob": "5eed87705",
+     "old_start": 55,
+     "old_count": 7,
+     "removed": [
+      58
+     ]
+    },
+    {
+     "file": "py/objint_longlong.c",
+     "blob": "ee499e026",
+     "old_start": 57,
+     "old_count": 10,
+     "removed": [
+      60
+     ]
+    },
+    {
+     "file": "py/objint_longlong.c",
+     "blob": "ee499e026",
+     "old_start": 73,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "py/objint_mpz.c",
+     "blob": "600316a42",
+     "old_start": 112,
+     "old_count": 10,
+     "removed": [
+      115,
+      118
+     ]
+    }
+   ],
+   "files": [
+    "py/misc.h",
+    "py/mpz.c",
+    "py/mpz.h",
+    "py/objint.c",
+    "py/objint.h",
+    "py/objint_longlong.c",
+    "py/objint_mpz.c"
+   ]
+  },
+  {
+   "bug_id": "micropython-8625d05e0e82",
+   "hunks": [
+    {
+     "file": "py/objarray.c",
+     "blob": "c66070538",
+     "old_start": 53,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "py/objarray.c",
+     "blob": "c66070538",
+     "old_start": 522,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "py/objarray.h",
+     "blob": "48a26c3fb",
+     "old_start": 32,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "py/objarray.h",
+     "blob": "48a26c3fb",
+     "old_start": 44,
+     "old_count": 7,
+     "removed": [
+      47
+     ]
+    }
+   ],
+   "files": [
+    "py/objarray.c",
+    "py/objarray.h"
+   ]
+  },
+  {
+   "bug_id": "micropython-88f383264f04",
+   "hunks": [
+    {
+     "file": "py/objtype.c",
+     "blob": "847216982",
+     "old_start": 660,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "py/objtype.c"
+   ]
+  },
+  {
+   "bug_id": "micropython-b12fef09f055",
+   "hunks": [
+    {
+     "file": "py/runtime.c",
+     "blob": "1836f5d92",
+     "old_start": 1153,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "py/runtime.c"
+   ]
+  },
+  {
+   "bug_id": "micropython-b3d62f80e40b",
+   "hunks": [
+    {
+     "file": "py/compile.c",
+     "blob": "bb7c1117f",
+     "old_start": 1768,
+     "old_count": 18,
+     "removed": [
+      1771,
+      1772,
+      1773,
+      1782
+     ]
+    },
+    {
+     "file": "py/compile.c",
+     "blob": "bb7c1117f",
+     "old_start": 1787,
+     "old_count": 9,
+     "removed": [
+      1790
+     ]
+    },
+    {
+     "file": "py/compile.c",
+     "blob": "bb7c1117f",
+     "old_start": 1806,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "py/compile.c",
+     "blob": "bb7c1117f",
+     "old_start": 1817,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "py/compile.c"
+   ]
+  },
+  {
+   "bug_id": "micropython-b53492729a4a",
+   "hunks": [
+    {
+     "file": "py/mpz.c",
+     "blob": "d8fca0adf",
+     "old_start": 1356,
+     "old_count": 7,
+     "removed": [
+      1359
+     ]
+    },
+    {
+     "file": "py/mpz.c",
+     "blob": "d8fca0adf",
+     "old_start": 1367,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "py/mpz.c"
+   ]
+  },
+  {
+   "bug_id": "micropython-bc4a5e14e72f",
+   "hunks": [
+    {
+     "file": "extmod/moductypes.c",
+     "blob": "63be621fb",
+     "old_start": 96,
+     "old_count": 7,
+     "removed": [
+      99
+     ]
+    }
+   ],
+   "files": [
+    "extmod/moductypes.c"
+   ]
+  },
+  {
+   "bug_id": "micropython-bdadb90505c7",
+   "hunks": [
+    {
+     "file": "extmod/moductypes.c",
+     "blob": "fa743eb63",
+     "old_start": 143,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "extmod/moductypes.c",
+     "blob": "fa743eb63",
+     "old_start": 150,
+     "old_count": 8,
+     "removed": []
+    },
+    {
+     "file": "extmod/moductypes.c",
+     "blob": "fa743eb63",
+     "old_start": 167,
+     "old_count": 15,
+     "removed": [
+      170,
+      178
+     ]
+    }
+   ],
+   "files": [
+    "extmod/moductypes.c"
+   ]
+  },
+  {
+   "bug_id": "micropython-c14ecec3cf60",
+   "hunks": [
+    {
+     "file": "py/modbuiltins.c",
+     "blob": "6f085f2df",
+     "old_start": 384,
+     "old_count": 18,
+     "removed": [
+      387,
+      388,
+      389,
+      390,
+      391,
+      392,
+      393,
+      394,
+      395,
+      396,
+      397
+     ]
+    }
+   ],
+   "files": [
+    "py/modbuiltins.c"
+   ]
+  },
+  {
+   "bug_id": "micropython-d4d265304c55",
+   "hunks": [
+    {
+     "file": "py/mpz.c",
+     "blob": "b6ec8a85f",
+     "old_start": 1364,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "py/mpz.c"
+   ]
+  },
+  {
+   "bug_id": "micropython-ec6689a8cc86",
+   "hunks": [
+    {
+     "file": "py/runtime.c",
+     "blob": "2c3b3ddde",
+     "old_start": 814,
+     "old_count": 7,
+     "removed": [
+      817
+     ]
+    }
+   ],
+   "files": [
+    "py/runtime.c"
+   ]
+  },
+  {
+   "bug_id": "micropython-ef93b8337084",
+   "hunks": [
+    {
+     "file": "py/objslice.c",
+     "blob": "75fa3bc3f",
+     "old_start": 54,
+     "old_count": 7,
+     "removed": [
+      57
+     ]
+    }
+   ],
+   "files": [
+    "py/objslice.c"
+   ]
+  },
+  {
+   "bug_id": "micropython-f30ec885b80c",
+   "hunks": [
+    {
+     "file": "ports/unix/main.c",
+     "blob": "0acd8c9f2",
+     "old_start": 620,
+     "old_count": 12,
+     "removed": [
+      628
+     ]
+    }
+   ],
+   "files": [
+    "ports/unix/main.c"
+   ]
+  }
+ ],
+ "n_bugs": 22,
+ "analysis_units": [
+  {
+   "file": "extmod/moductypes.c",
+   "blob": "63be621fb"
+  },
+  {
+   "file": "extmod/moductypes.c",
+   "blob": "fa743eb63"
+  },
+  {
+   "file": "ports/unix/main.c",
+   "blob": "0acd8c9f2"
+  },
+  {
+   "file": "ports/unix/modusocket.c",
+   "blob": "14f321d34"
+  },
+  {
+   "file": "py/bc.c",
+   "blob": "e002bca26"
+  },
+  {
+   "file": "py/compile.c",
+   "blob": "4f91ca49b"
+  },
+  {
+   "file": "py/compile.c",
+   "blob": "bb7c1117f"
+  },
+  {
+   "file": "py/lexer.c",
+   "blob": "39e9662f6"
+  },
+  {
+   "file": "py/misc.h",
+   "blob": "9f8a8c1e1"
+  },
+  {
+   "file": "py/modbuiltins.c",
+   "blob": "6f085f2df"
+  },
+  {
+   "file": "py/modmath.c",
+   "blob": "72b5dde51"
+  },
+  {
+   "file": "py/mpz.c",
+   "blob": "502d4e1c1"
+  },
+  {
+   "file": "py/mpz.c",
+   "blob": "750664ad9"
+  },
+  {
+   "file": "py/mpz.c",
+   "blob": "b6ec8a85f"
+  },
+  {
+   "file": "py/mpz.c",
+   "blob": "d8fca0adf"
+  },
+  {
+   "file": "py/mpz.h",
+   "blob": "d27f57240"
+  },
+  {
+   "file": "py/objarray.c",
+   "blob": "c66070538"
+  },
+  {
+   "file": "py/objarray.h",
+   "blob": "48a26c3fb"
+  },
+  {
+   "file": "py/objint.c",
+   "blob": "6caa608f3"
+  },
+  {
+   "file": "py/objint.h",
+   "blob": "5eed87705"
+  },
+  {
+   "file": "py/objint_longlong.c",
+   "blob": "ee499e026"
+  },
+  {
+   "file": "py/objint_mpz.c",
+   "blob": "2811bcf2a"
+  },
+  {
+   "file": "py/objint_mpz.c",
+   "blob": "600316a42"
+  },
+  {
+   "file": "py/objslice.c",
+   "blob": "75fa3bc3f"
+  },
+  {
+   "file": "py/objstr.c",
+   "blob": "b966a7016"
+  },
+  {
+   "file": "py/objtype.c",
+   "blob": "847216982"
+  },
+  {
+   "file": "py/objtype.c",
+   "blob": "f7a65a6ca"
+  },
+  {
+   "file": "py/runtime.c",
+   "blob": "1836f5d92"
+  },
+  {
+   "file": "py/runtime.c",
+   "blob": "2c3b3ddde"
+  }
+ ],
+ "n_units": 29,
+ "bug_files": [
+  "extmod/moductypes.c",
+  "ports/unix/main.c",
+  "ports/unix/modusocket.c",
+  "py/bc.c",
+  "py/compile.c",
+  "py/lexer.c",
+  "py/misc.h",
+  "py/modbuiltins.c",
+  "py/modmath.c",
+  "py/mpz.c",
+  "py/mpz.h",
+  "py/objarray.c",
+  "py/objarray.h",
+  "py/objint.c",
+  "py/objint.h",
+  "py/objint_longlong.c",
+  "py/objint_mpz.c",
+  "py/objslice.c",
+  "py/objstr.c",
+  "py/objtype.c",
+  "py/runtime.c"
+ ]
+}

@@ -1,0 +1,631 @@
+{
+ "repo": "gdal",
+ "n_bugs": 72,
+ "n_findings_total": 1529,
+ "found_region": 3,
+ "found_strict": 1,
+ "pct_region": 4.2,
+ "pct_strict": 1.4,
+ "swe_pct": 0.0,
+ "bugs": [
+  {
+   "bug_id": "gdal-006b8e03a33f",
+   "files": [
+    "frmts/sdts/sdtslinereader.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-9_3_1-b"
+   ]
+  },
+  {
+   "bug_id": "gdal-00cc4be4d0a2",
+   "files": [
+    "apps/gdalwarp_lib.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-014fe459d126",
+   "files": [
+    "apps/gdalinfo_lib.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-046bdf7ea2b1",
+   "files": [
+    "ogr/ogrsf_frmts/geojson/ogrgeojsonreader.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-0f209f8114d9",
+   "files": [
+    "apps/gdal_translate_lib.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-0f92097b1f96",
+   "files": [
+    "frmts/pds/pds4dataset.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-117d4b5060bb",
+   "files": [
+    "ogr/ogrsf_frmts/dxf/ogr_dxf.h",
+    "ogr/ogrsf_frmts/dxf/ogrdxfwriterds.cpp",
+    "ogr/ogrsf_frmts/dxf/ogrdxfwriterlayer.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-142747db21b5",
+   "files": [
+    "frmts/mrf/marfa.h"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-1ed37a29feee",
+   "files": [
+    "alg/gdalwarpkernel.cpp",
+    "apps/gdalwarp_lib.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-1ffea4d064fb",
+   "files": [
+    "alg/gdalwarper.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-21f4a3ec2ba2",
+   "files": [
+    "ogr/ogrsf_frmts/mitab/mitab_feature.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-2200f505acc5",
+   "files": [
+    "ogr/ogrsf_frmts/openfilegdb/filegdbindex.cpp",
+    "ogr/ogrsf_frmts/openfilegdb/filegdbtable.h",
+    "ogr/ogrsf_frmts/openfilegdb/ogropenfilegdblayer.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-22389fee67bc",
+   "files": [
+    "frmts/png/pngdataset.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-231f5e1235cb",
+   "files": [
+    "ogr/ogrsf_frmts/xlsx/ogr_xlsx.h",
+    "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-27110150de2c",
+   "files": [
+    "apps/gdalmdiminfo_lib.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-2ca07c262bf8",
+   "files": [
+    "frmts/gtiff/geotiff.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-2ded60d7a181",
+   "files": [
+    "frmts/vrt/vrtrasterband.cpp",
+    "gcore/gdaldriver.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-306b6a7740f5",
+   "files": [
+    "ogr/ogrsf_frmts/generic/ogr_gensql.cpp",
+    "ogr/swq_select.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-3086778cd72a",
+   "files": [
+    "ogr/ogrsf_frmts/gpkg/ogrgeopackagelayer.cpp",
+    "ogr/ogrsf_frmts/gpkg/ogrgeopackagetablelayer.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-35f0ff7f356c",
+   "files": [
+    "apps/gdal_rasterize_lib.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-3918a30cafcd",
+   "files": [
+    "ogr/ogrsf_frmts/shape/ogrshape.h",
+    "ogr/ogrsf_frmts/shape/ogrshapedatasource.cpp",
+    "ogr/ogrsf_frmts/shape/ogrshapelayer.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-3bd8d57ad655",
+   "files": [
+    "frmts/png/pngdataset.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-424d521138b6",
+   "files": [
+    "frmts/bmp/bmpdataset.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-44e37a15a6cf",
+   "files": [
+    "ogr/ogrsf_frmts/mitab/mitab_feature.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-45f004851fda",
+   "files": [
+    "ogr/ogrsf_frmts/gpkg/ogrgeopackagetablelayer.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-4682a0e8a013",
+   "files": [
+    "ogr/ogrsf_frmts/gml/gmlutils.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-4c8aab140a64",
+   "files": [
+    "alg/gdaltransformer.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-4d9083882a78",
+   "files": [
+    "ogr/ogrsf_frmts/geojson/ogrgeojsonwritelayer.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-504022e1901c",
+   "files": [
+    "alg/gdalwarpkernel.cpp",
+    "apps/gdalwarp_lib.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-539e9769dc6c",
+   "files": [
+    "apps/gdalinfo_lib.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-57efa1e4b4ab",
+   "files": [
+    "alg/gdalwarper.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-5ce400c64f69",
+   "files": [
+    "ogr/ogr2gmlgeometry.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-5f6e44b21f5f",
+   "files": [
+    "ogr/ogrsf_frmts/gml/gmlutils.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-6717ca55be0c",
+   "files": [
+    "alg/gdalwarpkernel.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-6b4837eba1e5",
+   "files": [
+    "ogr/ogrsf_frmts/generic/ogr_gensql.cpp",
+    "ogr/ogrsf_frmts/generic/ogr_gensql.h"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-7105d81a6103",
+   "files": [
+    "frmts/netcdf/netcdfsgwriterutil.cpp",
+    "frmts/netcdf/netcdfsgwriterutil.h",
+    "ogr/ogrsf_frmts/geojson/ogrgeojsonreader.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-71288fa5574e",
+   "files": [
+    "alg/gdaltransformer.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-7421035a3c5d",
+   "files": [
+    "ogr/ogrct.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-75db3ff298af",
+   "files": [
+    "ogr/ogrsf_frmts/csv/ogrcsvlayer.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-773b9bc02944",
+   "files": [
+    "gcore/gdalmultidim.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-789c1b646394",
+   "files": [
+    "ogr/ogrsf_frmts/geojson/ogrgeojsonseqdriver.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-7bb604ce2c54",
+   "files": [
+    "ogr/ogrsf_frmts/sqlite/ogrsqliteexecutesql.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-7c8b34554508",
+   "files": [
+    "ogr/ogrsf_frmts/mitab/mitab_spatialref.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-7ccad1918967",
+   "files": [
+    "ogr/ogrsf_frmts/xlsx/ogr_xlsx.h",
+    "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-829fbcf7cf22",
+   "files": [
+    "ogr/ogrsf_frmts/gpkg/ogrgeopackagetablelayer.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-83c5ce57a20c",
+   "files": [
+    "alg/gdalwarpkernel.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-8726ac905a3f",
+   "files": [
+    "frmts/mrf/marfa.h"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-8a4bee4f8d2a",
+   "files": [
+    "frmts/gtiff/geotiff.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-8deb4e1a2bc1",
+   "files": [
+    "ogr/ogrsf_frmts/shape/ogrshape.h",
+    "ogr/ogrsf_frmts/shape/ogrshapedatasource.cpp",
+    "ogr/ogrsf_frmts/shape/ogrshapelayer.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-958621826b96",
+   "files": [
+    "ogr/ogrsf_frmts/sqlite/ogrsqlitevirtualogr.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-98e23cb90122",
+   "files": [
+    "frmts/bmp/bmpdataset.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-a4fe26122837",
+   "files": [
+    "apps/gdal_translate_lib.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-a7cb51debb42",
+   "files": [
+    "ogr/ogrsf_frmts/openfilegdb/filegdbtable_write.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-a859743432e2",
+   "files": [
+    "port/cpl_vsil.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "CERT_CPP-MEM52-a",
+    "MISRACPP2023-21_6_1-a",
+    "MISRACPP2023-21_6_2-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-af647aafa367",
+   "files": [
+    "alg/gdalchecksum.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-b04821ff327c",
+   "files": [
+    "frmts/aaigrid/aaigriddataset.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-b3b735d2a02d",
+   "files": [
+    "alg/gdal_alg_priv.h",
+    "alg/gdalrasterize.cpp",
+    "alg/llrasterize.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-b8a53b432511",
+   "files": [
+    "frmts/vrt/vrtrasterband.cpp",
+    "frmts/vrt/vrtsources.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-bde706831cd5",
+   "files": [
+    "frmts/zmap/zmapdataset.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-c38033143519",
+   "files": [
+    "apps/gdal_translate_lib.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-cd56e6d8ae7a",
+   "files": [
+    "ogr/ogrgeometryfactory.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-cefd3547d91a",
+   "files": [
+    "ogr/ogrsf_frmts/openfilegdb/filegdbindex.cpp",
+    "ogr/ogrsf_frmts/openfilegdb/filegdbtable.h",
+    "ogr/ogrsf_frmts/openfilegdb/ogropenfilegdblayer.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-cf0c25eb9ec4",
+   "files": [
+    "frmts/vrt/vrtdataset.cpp",
+    "frmts/vrt/vrtdataset.h",
+    "frmts/vrt/vrtsourcedrasterband.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-d1937d5d1ad1",
+   "files": [
+    "gcore/rasterio.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-d424863f5f51",
+   "files": [
+    "ogr/ogrsf_frmts/openfilegdb/filegdbtable_write.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-d49547f1a1be",
+   "files": [
+    "frmts/wmts/wmtsdataset.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-d8a8cd51d51b",
+   "files": [
+    "frmts/gtiff/geotiff.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-df22e12654b3",
+   "files": [
+    "alg/gdalwarpkernel.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-e6d023672560",
+   "files": [
+    "gcore/gdalpamdataset.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-eff6ab423ab1",
+   "files": [
+    "ogr/ogrsf_frmts/sqlite/ogrsqliteutility.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-f079f407aa45",
+   "files": [
+    "ogr/ogrsf_frmts/gpkg/ogrgeopackagelayer.cpp",
+    "ogr/ogrsf_frmts/gpkg/ogrgeopackagetablelayer.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "gdal-f72f1eda99e3",
+   "files": [
+    "port/cpl_vsil.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "CERT_CPP-MEM52-a",
+    "MISRACPP2023-21_6_1-a",
+    "MISRACPP2023-21_6_2-a"
+   ],
+   "found_strict": []
+  }
+ ]
+}

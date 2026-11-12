@@ -1,0 +1,387 @@
+{
+ "repo": "tarantool",
+ "n_bugs": 40,
+ "n_findings_total": 1553,
+ "found_region": 5,
+ "found_strict": 2,
+ "pct_region": 12.5,
+ "pct_strict": 5.0,
+ "swe_pct": 7.5,
+ "bugs": [
+  {
+   "bug_id": "tarantool-02d1749c6bfb",
+   "files": [
+    "src/lib/core/prbuf.c"
+   ],
+   "found_region": [
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-067eeb123c0e",
+   "files": [
+    "src/box/memtx_hash.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-0b1d99f9080c",
+   "files": [
+    "src/box/lua/schema.lua"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-0e02e4373959",
+   "files": [
+    "src/box/sql/expr.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-0e3671b1b049",
+   "files": [
+    "src/box/lua/load_cfg.lua"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-217abe7a70be",
+   "files": [
+    "src/box/sql/where.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-3203ce795485",
+   "files": [
+    "src/lib/tzcode/strftime.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-35044a57ea04",
+   "files": [
+    "src/lua/fiber.c"
+   ],
+   "found_region": [
+    "CERT_C-INT31-i",
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-6_5_1-a",
+    "MISRACPP2023-8_2_6-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-6_5_1-a"
+   ]
+  },
+  {
+   "bug_id": "tarantool-354f1a67549b",
+   "files": [
+    "src/box/tuple_constraint_def.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-39735317fbaf",
+   "files": [
+    "src/box/sql/util.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-40d35b1255f4",
+   "files": [
+    "src/box/sql/util.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-452a757c1c97",
+   "files": [
+    "src/box/lua/stat.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-46aa6eb83fb9",
+   "files": [
+    "src/box/sql/alter.c",
+    "src/box/sql/build.c",
+    "src/box/sql/delete.c",
+    "src/box/sql/insert.c",
+    "src/box/sql/sqlInt.h",
+    "src/box/sql/trigger.c",
+    "src/box/sql/update.c",
+    "src/box/sql/vdbe.c",
+    "src/box/sql/vdbe.h",
+    "src/box/sql/vdbeaux.c",
+    "src/box/sql/where.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-46b0022d552a",
+   "files": [
+    "src/box/tuple_compare.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-4753065c09ed",
+   "files": [
+    "src/box/lua/merger.c"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-8_2_6-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-8_2_6-a"
+   ]
+  },
+  {
+   "bug_id": "tarantool-4e1bd4f2ca09",
+   "files": [
+    "src/box/lua/net_box.lua"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-4f3f87493c3a",
+   "files": [
+    "src/box/applier.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-67319bd2abd7",
+   "files": [
+    "src/box/sql/select.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-7516474ad8c9",
+   "files": [
+    "src/box/xrow_update_route.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-7530007077a3",
+   "files": [
+    "src/box/index_def.c",
+    "src/box/memtx_tree.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-77c69aba7b2a",
+   "files": [
+    "src/box/memtx_tree.cc",
+    "src/box/memtx_tx.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-78ccf4ee3c7f",
+   "files": [
+    "src/box/memtx_hash.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-8c4fecf8c4f6",
+   "files": [
+    "src/box/tuple.c",
+    "src/box/tuple.h",
+    "src/box/xrow_update_bar.c",
+    "src/box/xrow_update_route.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-8cfc91109fe1",
+   "files": [
+    "src/box/lua/schema.lua"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-95c521353f4e",
+   "files": [
+    "src/box/journal.h",
+    "src/box/wal.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-9eaa7be00afa",
+   "files": [
+    "src/lua/datetime.lua"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-a0264983c4a6",
+   "files": [
+    "src/box/alter.cc",
+    "src/box/index_def.c",
+    "src/box/index_def.h",
+    "src/box/sql/build.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-b01da1bbf9f4",
+   "files": [
+    "src/box/relay.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-c2e562efa2e4",
+   "files": [
+    "src/lib/core/fiber.c"
+   ],
+   "found_region": [
+    "CERT_C-INT31-e",
+    "CERT_C-INT31-j",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_4-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-c8612c63469d",
+   "files": [
+    "src/lua/utils.c"
+   ],
+   "found_region": [
+    "CERT_C-ERR33-a",
+    "CERT_C-ERR33-d",
+    "CERT_C-FIO47-d",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-19_3_3-a",
+    "MISRACPP2023-30_0_1-b",
+    "MISRACPP2023-7_11_2-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-d32112b21656",
+   "files": [
+    "src/box/wal.c",
+    "src/lib/vclock/vclock.h"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-d527e3e234ed",
+   "files": [
+    "src/box/memtx_tx.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-dad93ce21d26",
+   "files": [
+    "src/box/sql/select.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-dbfb0940d12f",
+   "files": [
+    "src/box/memtx_tx.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-e409eec61dc6",
+   "files": [
+    "src/box/sql/mem.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-f3e2922c14ee",
+   "files": [
+    "src/box/execute.c",
+    "src/box/sql/sqlInt.h",
+    "src/box/sql/vdbeapi.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-f4801b8daa83",
+   "files": [
+    "src/box/sql/func.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-f7aac1b241c3",
+   "files": [
+    "src/box/sql.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-f90cfe93f0ad",
+   "files": [
+    "src/lua/init.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "tarantool-fc35d5a6cfe7",
+   "files": [
+    "src/box/memtx_tree.cc",
+    "src/box/memtx_tx.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  }
+ ]
+}

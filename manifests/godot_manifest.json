@@ -1,0 +1,873 @@
+{
+ "repo": "godot",
+ "clone_url": "https://github.com/godotengine/godot.git",
+ "upstream_commit": "9f7399e15e6172900e0591deb5a57a45769d8205",
+ "base_ref": "4.3-stable",
+ "n_subtasks": 17,
+ "bugs": [
+  {
+   "bug_id": "godot-141d838cb0a9",
+   "hunks": [
+    {
+     "file": "scene/gui/code_edit.cpp",
+     "blob": "9784a90b86",
+     "old_start": 1039,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "scene/gui/code_edit.cpp"
+   ]
+  },
+  {
+   "bug_id": "godot-1487db8f8067",
+   "hunks": [
+    {
+     "file": "modules/gdscript/gdscript_byte_codegen.cpp",
+     "blob": "2fde0b636c",
+     "old_start": 109,
+     "old_count": 7,
+     "removed": [
+      112
+     ]
+    },
+    {
+     "file": "modules/gdscript/gdscript_byte_codegen.cpp",
+     "blob": "2fde0b636c",
+     "old_start": 121,
+     "old_count": 7,
+     "removed": [
+      124
+     ]
+    }
+   ],
+   "files": [
+    "modules/gdscript/gdscript_byte_codegen.cpp"
+   ]
+  },
+  {
+   "bug_id": "godot-16e44a6ee5fd",
+   "hunks": [
+    {
+     "file": "servers/text_server.cpp",
+     "blob": "8e4f3fd21f",
+     "old_start": 827,
+     "old_count": 7,
+     "removed": [
+      830
+     ]
+    },
+    {
+     "file": "servers/text_server.cpp",
+     "blob": "8e4f3fd21f",
+     "old_start": 840,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "servers/text_server.cpp",
+     "blob": "8e4f3fd21f",
+     "old_start": 850,
+     "old_count": 9,
+     "removed": [
+      853,
+      854,
+      855
+     ]
+    },
+    {
+     "file": "servers/text_server.cpp",
+     "blob": "8e4f3fd21f",
+     "old_start": 867,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "servers/text_server.cpp",
+     "blob": "8e4f3fd21f",
+     "old_start": 880,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "servers/text_server.cpp",
+     "blob": "8e4f3fd21f",
+     "old_start": 889,
+     "old_count": 8,
+     "removed": [
+      892,
+      893
+     ]
+    },
+    {
+     "file": "servers/text_server.cpp",
+     "blob": "8e4f3fd21f",
+     "old_start": 905,
+     "old_count": 7,
+     "removed": [
+      908
+     ]
+    },
+    {
+     "file": "servers/text_server.cpp",
+     "blob": "8e4f3fd21f",
+     "old_start": 919,
+     "old_count": 20,
+     "removed": [
+      922,
+      929,
+      930,
+      931,
+      933,
+      935
+     ]
+    },
+    {
+     "file": "servers/text_server.cpp",
+     "blob": "8e4f3fd21f",
+     "old_start": 980,
+     "old_count": 7,
+     "removed": [
+      983
+     ]
+    },
+    {
+     "file": "servers/text_server.cpp",
+     "blob": "8e4f3fd21f",
+     "old_start": 996,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "servers/text_server.cpp",
+     "blob": "8e4f3fd21f",
+     "old_start": 1009,
+     "old_count": 9,
+     "removed": [
+      1012,
+      1013,
+      1014
+     ]
+    },
+    {
+     "file": "servers/text_server.cpp",
+     "blob": "8e4f3fd21f",
+     "old_start": 1019,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "servers/text_server.cpp",
+     "blob": "8e4f3fd21f",
+     "old_start": 1036,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "servers/text_server.cpp",
+     "blob": "8e4f3fd21f",
+     "old_start": 1047,
+     "old_count": 8,
+     "removed": [
+      1050,
+      1051
+     ]
+    },
+    {
+     "file": "servers/text_server.cpp",
+     "blob": "8e4f3fd21f",
+     "old_start": 1059,
+     "old_count": 7,
+     "removed": [
+      1062
+     ]
+    },
+    {
+     "file": "servers/text_server.cpp",
+     "blob": "8e4f3fd21f",
+     "old_start": 1083,
+     "old_count": 13,
+     "removed": [
+      1086,
+      1087,
+      1088,
+      1090,
+      1092
+     ]
+    },
+    {
+     "file": "servers/text_server.cpp",
+     "blob": "8e4f3fd21f",
+     "old_start": 1808,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "servers/text_server.h",
+     "blob": "46b263c54e",
+     "old_start": 538,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "servers/text_server.cpp",
+    "servers/text_server.h"
+   ]
+  },
+  {
+   "bug_id": "godot-1ae6171b9aa5",
+   "hunks": [
+    {
+     "file": "scene/gui/control.cpp",
+     "blob": "68a2cd3f47",
+     "old_start": 883,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "scene/gui/control.cpp",
+     "blob": "68a2cd3f47",
+     "old_start": 1405,
+     "old_count": 10,
+     "removed": [
+      1409,
+      1411
+     ]
+    },
+    {
+     "file": "scene/gui/control.cpp",
+     "blob": "68a2cd3f47",
+     "old_start": 1696,
+     "old_count": 14,
+     "removed": [
+      1699,
+      1701,
+      1702,
+      1703,
+      1704,
+      1705,
+      1706
+     ]
+    },
+    {
+     "file": "scene/gui/control.h",
+     "blob": "4e21c986c0",
+     "old_start": 287,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "scene/gui/control.cpp",
+    "scene/gui/control.h"
+   ]
+  },
+  {
+   "bug_id": "godot-1c09cb9eb560",
+   "hunks": [
+    {
+     "file": "core/object/object.h",
+     "blob": "11b94a7fbf",
+     "old_start": 572,
+     "old_count": 7,
+     "removed": [
+      575
+     ]
+    },
+    {
+     "file": "scene/resources/packed_scene.cpp",
+     "blob": "d7036fd6d5",
+     "old_start": 1034,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "scene/resources/packed_scene.cpp",
+     "blob": "d7036fd6d5",
+     "old_start": 1054,
+     "old_count": 7,
+     "removed": [
+      1057
+     ]
+    },
+    {
+     "file": "scene/resources/packed_scene.cpp",
+     "blob": "d7036fd6d5",
+     "old_start": 1220,
+     "old_count": 9,
+     "removed": [
+      1224,
+      1225
+     ]
+    }
+   ],
+   "files": [
+    "core/object/object.h",
+    "scene/resources/packed_scene.cpp"
+   ]
+  },
+  {
+   "bug_id": "godot-2a35121cb587",
+   "hunks": [
+    {
+     "file": "modules/gdscript/language_server/gdscript_extend_parser.cpp",
+     "blob": "4bffec872b",
+     "old_start": 253,
+     "old_count": 7,
+     "removed": [
+      256
+     ]
+    }
+   ],
+   "files": [
+    "modules/gdscript/language_server/gdscript_extend_parser.cpp"
+   ]
+  },
+  {
+   "bug_id": "godot-3cec1823b69a",
+   "hunks": [
+    {
+     "file": "scene/gui/text_edit.cpp",
+     "blob": "abb4a2f215",
+     "old_start": 783,
+     "old_count": 7,
+     "removed": [
+      786
+     ]
+    },
+    {
+     "file": "scene/gui/text_edit.cpp",
+     "blob": "abb4a2f215",
+     "old_start": 4421,
+     "old_count": 7,
+     "removed": [
+      4424
+     ]
+    },
+    {
+     "file": "scene/gui/text_edit.cpp",
+     "blob": "abb4a2f215",
+     "old_start": 7848,
+     "old_count": 7,
+     "removed": [
+      7851
+     ]
+    },
+    {
+     "file": "scene/gui/text_edit.cpp",
+     "blob": "abb4a2f215",
+     "old_start": 7871,
+     "old_count": 7,
+     "removed": [
+      7874
+     ]
+    }
+   ],
+   "files": [
+    "scene/gui/text_edit.cpp"
+   ]
+  },
+  {
+   "bug_id": "godot-4a105bb044ef",
+   "hunks": [
+    {
+     "file": "core/object/object.cpp",
+     "blob": "000d5328b4",
+     "old_start": 44,
+     "old_count": 14,
+     "removed": [
+      47,
+      50,
+      51,
+      54
+     ]
+    }
+   ],
+   "files": [
+    "core/object/object.cpp"
+   ]
+  },
+  {
+   "bug_id": "godot-5a307011ac8b",
+   "hunks": [
+    {
+     "file": "core/math/projection.cpp",
+     "blob": "d0ca7c5684",
+     "old_start": 596,
+     "old_count": 101,
+     "removed": [
+      599,
+      600,
+      601,
+      602,
+      603,
+      604,
+      605,
+      606,
+      607,
+      608,
+      609,
+      610,
+      611,
+      612,
+      613,
+      614,
+      615,
+      616,
+      617,
+      619,
+      620,
+      621,
+      622,
+      623,
+      625,
+      626,
+      627,
+      628,
+      629,
+      630,
+      631,
+      632,
+      633,
+      635,
+      636,
+      637,
+      638,
+      639,
+      640,
+      641,
+      642,
+      643,
+      645,
+      646,
+      647,
+      648,
+      649,
+      650,
+      652,
+      653,
+      654,
+      655,
+      656,
+      657,
+      658,
+      659,
+      660,
+      662,
+      663,
+      664,
+      665,
+      666,
+      667,
+      669,
+      670,
+      673,
+      674,
+      675,
+      676,
+      677,
+      678,
+      679,
+      680,
+      681,
+      682,
+      683,
+      684,
+      685,
+      686,
+      687,
+      688,
+      689,
+      690,
+      691,
+      692
+     ]
+    }
+   ],
+   "files": [
+    "core/math/projection.cpp"
+   ]
+  },
+  {
+   "bug_id": "godot-6191f779e20c",
+   "hunks": [
+    {
+     "file": "modules/gdscript/gdscript_utility_functions.cpp",
+     "blob": "3e1de62",
+     "old_start": 125,
+     "old_count": 12,
+     "removed": [
+      128
+     ]
+    },
+    {
+     "file": "modules/gdscript/gdscript_utility_functions.cpp",
+     "blob": "3e1de62",
+     "old_start": 138,
+     "old_count": 7,
+     "removed": [
+      141
+     ]
+    },
+    {
+     "file": "modules/gdscript/gdscript_utility_functions.cpp",
+     "blob": "3e1de62",
+     "old_start": 148,
+     "old_count": 21,
+     "removed": [
+      151,
+      152,
+      165
+     ]
+    },
+    {
+     "file": "modules/gdscript/gdscript_utility_functions.cpp",
+     "blob": "3e1de62",
+     "old_start": 172,
+     "old_count": 9,
+     "removed": [
+      175,
+      176,
+      177
+     ]
+    },
+    {
+     "file": "modules/gdscript/gdscript_utility_functions.cpp",
+     "blob": "3e1de62",
+     "old_start": 192,
+     "old_count": 13,
+     "removed": [
+      195
+     ]
+    },
+    {
+     "file": "modules/gdscript/gdscript_utility_functions.cpp",
+     "blob": "3e1de62",
+     "old_start": 208,
+     "old_count": 13,
+     "removed": [
+      211,
+      212,
+      216,
+      217
+     ]
+    }
+   ],
+   "files": [
+    "modules/gdscript/gdscript_utility_functions.cpp"
+   ]
+  },
+  {
+   "bug_id": "godot-663987b95b26",
+   "hunks": [
+    {
+     "file": "core/string/ustring.cpp",
+     "blob": "d5543aa05b",
+     "old_start": 1536,
+     "old_count": 13,
+     "removed": [
+      1545
+     ]
+    },
+    {
+     "file": "core/string/ustring.cpp",
+     "blob": "d5543aa05b",
+     "old_start": 1560,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "core/string/ustring.cpp",
+     "blob": "d5543aa05b",
+     "old_start": 1571,
+     "old_count": 7,
+     "removed": [
+      1574
+     ]
+    }
+   ],
+   "files": [
+    "core/string/ustring.cpp"
+   ]
+  },
+  {
+   "bug_id": "godot-6ca6a961c8e1",
+   "hunks": [
+    {
+     "file": "core/string/ustring.cpp",
+     "blob": null,
+     "old_start": 5381,
+     "old_count": 3,
+     "removed": [
+      5382
+     ]
+    }
+   ],
+   "files": [
+    "core/string/ustring.cpp"
+   ]
+  },
+  {
+   "bug_id": "godot-979d80320b3c",
+   "hunks": [
+    {
+     "file": "modules/gdscript/gdscript_parser.cpp",
+     "blob": "337150a226",
+     "old_start": 672,
+     "old_count": 14,
+     "removed": [
+      680,
+      681,
+      682
+     ]
+    },
+    {
+     "file": "modules/gdscript/gdscript_parser.cpp",
+     "blob": "337150a226",
+     "old_start": 689,
+     "old_count": 9,
+     "removed": [
+      692,
+      693,
+      694
+     ]
+    }
+   ],
+   "files": [
+    "modules/gdscript/gdscript_parser.cpp"
+   ]
+  },
+  {
+   "bug_id": "godot-ad060d7c9da5",
+   "hunks": [
+    {
+     "file": "core/math/geometry_3d.h",
+     "blob": "bd8dbe439e",
+     "old_start": 292,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "core/math/geometry_3d.h"
+   ]
+  },
+  {
+   "bug_id": "godot-bddc285d34b7",
+   "hunks": [
+    {
+     "file": "core/math/color.h",
+     "blob": "850252d138",
+     "old_start": 187,
+     "old_count": 16,
+     "removed": [
+      190,
+      191,
+      192,
+      197,
+      198,
+      199
+     ]
+    }
+   ],
+   "files": [
+    "core/math/color.h"
+   ]
+  },
+  {
+   "bug_id": "godot-c985347ac8f8",
+   "hunks": [
+    {
+     "file": "core/math/basis.cpp",
+     "blob": "e5f3431eef",
+     "old_start": 455,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "core/math/basis.cpp",
+     "blob": "e5f3431eef",
+     "old_start": 466,
+     "old_count": 8,
+     "removed": [
+      469,
+      470
+     ]
+    },
+    {
+     "file": "core/math/basis.cpp",
+     "blob": "e5f3431eef",
+     "old_start": 501,
+     "old_count": 8,
+     "removed": [
+      504,
+      505
+     ]
+    },
+    {
+     "file": "core/math/basis.cpp",
+     "blob": "e5f3431eef",
+     "old_start": 532,
+     "old_count": 8,
+     "removed": [
+      535,
+      536
+     ]
+    },
+    {
+     "file": "core/math/basis.cpp",
+     "blob": "e5f3431eef",
+     "old_start": 568,
+     "old_count": 8,
+     "removed": [
+      571,
+      572
+     ]
+    },
+    {
+     "file": "core/math/basis.cpp",
+     "blob": "e5f3431eef",
+     "old_start": 596,
+     "old_count": 8,
+     "removed": [
+      599,
+      600
+     ]
+    },
+    {
+     "file": "core/math/basis.cpp",
+     "blob": "e5f3431eef",
+     "old_start": 624,
+     "old_count": 8,
+     "removed": [
+      627,
+      628
+     ]
+    }
+   ],
+   "files": [
+    "core/math/basis.cpp"
+   ]
+  },
+  {
+   "bug_id": "godot-dc71181af3af",
+   "hunks": [
+    {
+     "file": "modules/gdscript/gdscript_analyzer.cpp",
+     "blob": "60109efc4d",
+     "old_start": 1093,
+     "old_count": 7,
+     "removed": [
+      1096
+     ]
+    }
+   ],
+   "files": [
+    "modules/gdscript/gdscript_analyzer.cpp"
+   ]
+  }
+ ],
+ "n_bugs": 17,
+ "analysis_units": [
+  {
+   "file": "core/math/basis.cpp",
+   "blob": "e5f3431eef"
+  },
+  {
+   "file": "core/math/color.h",
+   "blob": "850252d138"
+  },
+  {
+   "file": "core/math/geometry_3d.h",
+   "blob": "bd8dbe439e"
+  },
+  {
+   "file": "core/math/projection.cpp",
+   "blob": "d0ca7c5684"
+  },
+  {
+   "file": "core/object/object.cpp",
+   "blob": "000d5328b4"
+  },
+  {
+   "file": "core/object/object.h",
+   "blob": "11b94a7fbf"
+  },
+  {
+   "file": "core/string/ustring.cpp",
+   "blob": "d5543aa05b"
+  },
+  {
+   "file": "modules/gdscript/gdscript_analyzer.cpp",
+   "blob": "60109efc4d"
+  },
+  {
+   "file": "modules/gdscript/gdscript_byte_codegen.cpp",
+   "blob": "2fde0b636c"
+  },
+  {
+   "file": "modules/gdscript/gdscript_parser.cpp",
+   "blob": "337150a226"
+  },
+  {
+   "file": "modules/gdscript/gdscript_utility_functions.cpp",
+   "blob": "3e1de62"
+  },
+  {
+   "file": "modules/gdscript/language_server/gdscript_extend_parser.cpp",
+   "blob": "4bffec872b"
+  },
+  {
+   "file": "scene/gui/code_edit.cpp",
+   "blob": "9784a90b86"
+  },
+  {
+   "file": "scene/gui/control.cpp",
+   "blob": "68a2cd3f47"
+  },
+  {
+   "file": "scene/gui/control.h",
+   "blob": "4e21c986c0"
+  },
+  {
+   "file": "scene/gui/text_edit.cpp",
+   "blob": "abb4a2f215"
+  },
+  {
+   "file": "scene/resources/packed_scene.cpp",
+   "blob": "d7036fd6d5"
+  },
+  {
+   "file": "servers/text_server.cpp",
+   "blob": "8e4f3fd21f"
+  },
+  {
+   "file": "servers/text_server.h",
+   "blob": "46b263c54e"
+  }
+ ],
+ "n_units": 19,
+ "bug_files": [
+  "core/math/basis.cpp",
+  "core/math/color.h",
+  "core/math/geometry_3d.h",
+  "core/math/projection.cpp",
+  "core/object/object.cpp",
+  "core/object/object.h",
+  "core/string/ustring.cpp",
+  "modules/gdscript/gdscript_analyzer.cpp",
+  "modules/gdscript/gdscript_byte_codegen.cpp",
+  "modules/gdscript/gdscript_parser.cpp",
+  "modules/gdscript/gdscript_utility_functions.cpp",
+  "modules/gdscript/language_server/gdscript_extend_parser.cpp",
+  "scene/gui/code_edit.cpp",
+  "scene/gui/control.cpp",
+  "scene/gui/control.h",
+  "scene/gui/text_edit.cpp",
+  "scene/resources/packed_scene.cpp",
+  "servers/text_server.cpp",
+  "servers/text_server.h"
+ ]
+}

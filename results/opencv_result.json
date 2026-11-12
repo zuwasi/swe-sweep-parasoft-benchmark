@@ -1,0 +1,689 @@
+{
+ "repo": "opencv",
+ "n_bugs": 47,
+ "n_findings_total": 36161,
+ "found_region": 32,
+ "found_strict": 14,
+ "pct_region": 68.1,
+ "pct_strict": 29.8,
+ "swe_pct": 2.1,
+ "bugs": [
+  {
+   "bug_id": "opencv-03814c751e45",
+   "files": [
+    "modules/calib3d/src/calibration.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-19_3_3-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_4-a",
+    "MISRACPP2023-9_4_1-a",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-9_5_1-a"
+   ]
+  },
+  {
+   "bug_id": "opencv-065ab5cc0087",
+   "files": [
+    "modules/core/src/matrix_wrap.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-08979782855f",
+   "files": [
+    "modules/imgproc/include/opencv2/imgproc.hpp",
+    "modules/imgproc/src/hough.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-0d05063bd5c0",
+   "files": [
+    "modules/core/src/kmeans.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-0d3161877178",
+   "files": [
+    "modules/imgproc/src/approx.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-10_0_1-a",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-10_0_1-a",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-8_0_1-b"
+   ]
+  },
+  {
+   "bug_id": "opencv-140d51577a07",
+   "files": [
+    "modules/imgproc/src/resize.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-174d41f7934b",
+   "files": [
+    "modules/imgproc/src/subdivision2d.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-8_2_2-b"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-1974f51bd214",
+   "files": [
+    "modules/core/src/matrix_expressions.cpp"
+   ],
+   "found_region": [
+    "CERT_C-EXP39-a",
+    "CERT_CPP-ERR50-f",
+    "CERT_CPP-ERR58-a",
+    "MISRACPP2023-0_3_1-b",
+    "MISRACPP2023-6_5_2-a",
+    "MISRACPP2023-6_7_2-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-6_5_2-a",
+    "MISRACPP2023-9_3_1-b"
+   ]
+  },
+  {
+   "bug_id": "opencv-1d1387aa8e47",
+   "files": [
+    "modules/imgproc/src/imgwarp.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-212cd1521af9",
+   "files": [
+    "modules/calib3d/src/undistort.avx2.cpp"
+   ],
+   "found_region": [
+    "CERT_CPP-DCL51-d",
+    "MISRACPP2023-5_10_1-b",
+    "MISRACPP2023-5_10_1-c"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-35e95d5fef31",
+   "files": [
+    "modules/core/src/persistence.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-6_2_3-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-3ddefc7290c5",
+   "files": [
+    "modules/ml/src/tree.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-10_0_1-a",
+    "MISRACPP2023-10_2_3-a",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_4-a",
+    "MISRACPP2023-7_0_4-b",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-8_19_1-a",
+    "MISRACPP2023-8_2_2-b",
+    "MISRACPP2023-9_3_1-a",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-6_9_2-a"
+   ]
+  },
+  {
+   "bug_id": "opencv-41e8688ee2f5",
+   "files": [
+    "modules/imgproc/src/shapedescr.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-9_3_1-a",
+    "MISRACPP2023-9_3_1-b",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-9_3_1-b"
+   ]
+  },
+  {
+   "bug_id": "opencv-4320d091f246",
+   "files": [
+    "modules/core/src/persistence.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-6_2_3-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-9_3_1-b"
+   ]
+  },
+  {
+   "bug_id": "opencv-4344998a81e0",
+   "files": [
+    "modules/imgproc/src/hough.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-5cb9cd581ef5",
+   "files": [
+    "modules/dnn/src/dnn.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-6_4_1-g",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-6_4_1-g",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-9_5_1-a"
+   ]
+  },
+  {
+   "bug_id": "opencv-5ff1b89640bd",
+   "files": [
+    "modules/imgproc/src/resize.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-6a1bdf8d7893",
+   "files": [
+    "modules/calib3d/src/ptsetreg.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-7_0_4-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-6c432b0cd808",
+   "files": [
+    "modules/imgproc/src/lsd.cpp"
+   ],
+   "found_region": [
+    "CERT_CPP-DCL51-d",
+    "MISRACPP2023-19_3_3-a",
+    "MISRACPP2023-5_10_1-b",
+    "MISRACPP2023-6_9_2-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-72b6a063e735",
+   "files": [
+    "modules/imgproc/src/intersection.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-10_0_1-a",
+    "MISRACPP2023-11_3_1-a",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-8_2_2-b"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-77dbf1631b69",
+   "files": [
+    "modules/imgproc/src/drawing.cpp"
+   ],
+   "found_region": [
+    "CERT_C-ARR39-b",
+    "CERT_C-EXP46-b",
+    "MISRACPP2023-10_0_1-a",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-19_0_2-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_1-a",
+    "MISRACPP2023-7_0_4-a",
+    "MISRACPP2023-7_0_4-b",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_2-b",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "CERT_C-ARR39-b",
+    "MISRACPP2023-19_0_2-a",
+    "MISRACPP2023-7_0_4-b",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_2-b"
+   ]
+  },
+  {
+   "bug_id": "opencv-78a11e75834c",
+   "files": [
+    "modules/features2d/src/matchers.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-836aa6f1bcdb",
+   "files": [
+    "modules/core/src/matrix_expressions.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-83d848ddf557",
+   "files": [
+    "modules/core/include/opencv2/core/persistence.hpp",
+    "modules/core/src/persistence.cpp"
+   ],
+   "found_region": [
+    "CERT_C-ARR39-b",
+    "CERT_C-INT31-l",
+    "CERT_CPP-DCL51-d",
+    "CERT_CPP-DCL60-a",
+    "CERT_CPP-EXP55-a",
+    "MISRACPP2023-10_0_1-a",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-5_10_1-b",
+    "MISRACPP2023-6_2_1-a",
+    "MISRACPP2023-6_2_3-a",
+    "MISRACPP2023-6_2_3-c",
+    "MISRACPP2023-6_8_4-a",
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-7_0_4-b",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-7_11_1-a",
+    "MISRACPP2023-8_18_2-a",
+    "MISRACPP2023-8_2_3-a",
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "CERT_CPP-DCL51-d",
+    "CERT_CPP-DCL60-a",
+    "CERT_CPP-EXP55-a",
+    "MISRACPP2023-5_10_1-b",
+    "MISRACPP2023-6_2_1-a",
+    "MISRACPP2023-6_2_3-a",
+    "MISRACPP2023-6_2_3-c",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-7_11_1-a",
+    "MISRACPP2023-8_2_3-a",
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b"
+   ]
+  },
+  {
+   "bug_id": "opencv-849409d58b10",
+   "files": [
+    "modules/core/src/persistence_json.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-898ee6013960",
+   "files": [
+    "modules/imgproc/src/phasecorr.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_2-b",
+    "MISRACPP2023-9_3_1-b",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_2-b"
+   ]
+  },
+  {
+   "bug_id": "opencv-8c7ec21f40f2",
+   "files": [
+    "modules/core/src/lda.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-6_9_2-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-9147e633a50f",
+   "files": [
+    "modules/photo/src/seamless_cloning.cpp"
+   ],
+   "found_region": [
+    "CERT_C-EXP39-a",
+    "MISRACPP2023-10_2_3-a",
+    "MISRACPP2023-7_0_4-a",
+    "MISRACPP2023-7_0_6-b",
+    "MISRACPP2023-8_0_1-b"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-9a698f046e06",
+   "files": [
+    "modules/core/src/persistence_types.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-7_11_2-a",
+    "MISRACPP2023-8_2_2-b"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-a3f10a0641a3",
+   "files": [
+    "modules/ml/src/boost.cpp",
+    "modules/ml/src/rtrees.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-6_9_2-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-a841d77e12fa",
+   "files": [
+    "modules/calib3d/src/homography_decomp.cpp"
+   ],
+   "found_region": [
+    "CERT_C-EXP39-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-a868f91ec13f",
+   "files": [
+    "modules/imgproc/src/pyramids.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-b27a0cb90aed",
+   "files": [
+    "modules/core/src/persistence_xml.cpp"
+   ],
+   "found_region": [
+    "BD-PB-CHECKRET",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-b7c9f43a731b",
+   "files": [
+    "modules/core/src/array.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-0_1_2-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-b95e3c7e7f80",
+   "files": [
+    "modules/calib3d/src/ptsetreg.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-9_3_1-b",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-8_0_1-b"
+   ]
+  },
+  {
+   "bug_id": "opencv-c4f59cf36a65",
+   "files": [
+    "modules/features2d/src/orb.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-c4fd47005bde",
+   "files": [
+    "modules/imgproc/src/drawing.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-10_0_1-a",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-8_2_2-b",
+    "MISRACPP2023-9_3_1-b",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-cb9f44f5771a",
+   "files": [
+    "modules/features2d/src/orb.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-cef786b62d8e",
+   "files": [
+    "modules/imgcodecs/src/grfmt_tiff.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-cfc1dfc23f11",
+   "files": [
+    "modules/imgproc/src/contours.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-10_1_1-a",
+    "MISRACPP2023-6_0_3-a",
+    "MISRACPP2023-6_5_2-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_1-a",
+    "MISRACPP2023-7_0_4-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-7_0_1-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-9_3_1-b"
+   ]
+  },
+  {
+   "bug_id": "opencv-d97911c694c2",
+   "files": [
+    "modules/imgproc/src/color_yuv.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-da1a55ec7dbb",
+   "files": [
+    "modules/imgproc/src/color_lab.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-dcdb346f556f",
+   "files": [
+    "modules/calib3d/src/calibration.cpp"
+   ],
+   "found_region": [
+    "BD-PB-ERRNO",
+    "CERT_C-ERR30-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_2-b"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-eb23b61a6803",
+   "files": [
+    "modules/imgproc/src/distransform.cpp"
+   ],
+   "found_region": [
+    "CERT_C-ARR39-b",
+    "CERT_C-EXP39-a",
+    "CERT_C-EXP39-b",
+    "CERT_C-FLP36-a",
+    "CERT_CPP-DCL51-d",
+    "CERT_CPP-EXP60-a",
+    "MISRACPP2023-10_0_1-a",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-15_1_4-a",
+    "MISRACPP2023-19_3_3-a",
+    "MISRACPP2023-5_10_1-b",
+    "MISRACPP2023-6_5_2-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-7_0_6-b",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_18_2-a",
+    "MISRACPP2023-8_2_2-b",
+    "MISRACPP2023-9_3_1-a",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": [
+    "CERT_C-ARR39-b",
+    "CERT_C-EXP39-b",
+    "CERT_CPP-DCL51-d",
+    "MISRACPP2023-15_1_4-a",
+    "MISRACPP2023-5_10_1-b",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_18_2-a",
+    "MISRACPP2023-8_2_2-b"
+   ]
+  },
+  {
+   "bug_id": "opencv-f418aa091479",
+   "files": [
+    "modules/imgproc/src/drawing.cpp"
+   ],
+   "found_region": [
+    "CERT_C-ARR39-b",
+    "CERT_C-EXP42-a",
+    "CERT_CPP-DCL51-d",
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-10_0_1-a",
+    "MISRACPP2023-10_2_2-a",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-24_5_2-a",
+    "MISRACPP2023-28_3_1-a",
+    "MISRACPP2023-5_10_1-b",
+    "MISRACPP2023-5_13_4-a",
+    "MISRACPP2023-6_2_3-b",
+    "MISRACPP2023-6_2_3-c",
+    "MISRACPP2023-6_5_2-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-7_0_4-b",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-7_11_1-a",
+    "MISRACPP2023-7_11_2-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_2-b",
+    "MISRACPP2023-9_3_1-b",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": [
+    "CERT_C-ARR39-b",
+    "MISRACPP2023-10_0_1-a",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-6_5_2-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-7_0_4-b",
+    "MISRACPP2023-7_11_1-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_2-b",
+    "MISRACPP2023-9_3_1-b"
+   ]
+  },
+  {
+   "bug_id": "opencv-f624dc51adf5",
+   "files": [
+    "modules/core/src/arithm.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "opencv-ff66d0af4e7e",
+   "files": [
+    "modules/core/src/persistence.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  }
+ ]
+}

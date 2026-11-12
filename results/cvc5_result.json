@@ -1,0 +1,422 @@
+{
+ "repo": "cvc5",
+ "n_bugs": 38,
+ "n_findings_total": 2821,
+ "found_region": 17,
+ "found_strict": 10,
+ "pct_region": 44.7,
+ "pct_strict": 26.3,
+ "swe_pct": 2.6,
+ "bugs": [
+  {
+   "bug_id": "cvc5-0190fa8ae7ec",
+   "files": [
+    "src/theory/strings/term_registry.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "cvc5-024cc837ea11",
+   "files": [
+    "src/theory/arith/arith_rewriter.cpp",
+    "src/theory/arith/rewriter/addition.cpp",
+    "src/theory/arith/rewriter/addition.h"
+   ],
+   "found_region": [
+    "MISRACPP2023-8_2_10-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "cvc5-11eabe28d431",
+   "files": [
+    "src/preprocessing/passes/learned_rewrite.cpp",
+    "src/preprocessing/passes/non_clausal_simp.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "cvc5-1337df3bc465",
+   "files": [
+    "src/theory/datatypes/infer_proof_cons.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-0_1_2-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-0_1_2-a"
+   ]
+  },
+  {
+   "bug_id": "cvc5-15ce999a65bb",
+   "files": [
+    "src/theory/strings/base_solver.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-0_1_2-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-0_1_2-a"
+   ]
+  },
+  {
+   "bug_id": "cvc5-169d417c6b41",
+   "files": [
+    "src/theory/sets/solver_state.cpp",
+    "src/theory/sets/theory_sets_private.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "cvc5-18943577ecec",
+   "files": [
+    "src/theory/arrays/theory_arrays_rewriter.cpp",
+    "src/theory/arrays/theory_arrays_type_rules.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "cvc5-308a909279a9",
+   "files": [
+    "src/theory/strings/array_core_solver.cpp",
+    "src/theory/strings/array_core_solver.h"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "cvc5-3489f19d0af7",
+   "files": [
+    "src/theory/arith/nl/nl_model.cpp",
+    "src/theory/arith/nl/nl_model.h",
+    "src/theory/arith/nl/nonlinear_extension.cpp",
+    "src/theory/arith/theory_arith.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "cvc5-39fc8377f26f",
+   "files": [
+    "src/theory/theory_model.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "cvc5-3d08a22f361b",
+   "files": [
+    "src/theory/strings/sequences_rewriter.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "cvc5-50f4bf9c8c66",
+   "files": [
+    "src/theory/sets/theory_sets_rewriter.cpp",
+    "src/theory/sets/theory_sets_rewriter.h"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "cvc5-647ecea6ab0d",
+   "files": [
+    "src/expr/dtype.cpp",
+    "src/theory/theory_model_builder.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-9_5_1-a"
+   ]
+  },
+  {
+   "bug_id": "cvc5-6f19e69efd06",
+   "files": [
+    "src/theory/quantifiers/sygus/ce_guided_single_inv.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "cvc5-6f88c8072d5a",
+   "files": [
+    "src/theory/arith/arith_rewriter.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-6_9_2-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "cvc5-726a3ded06b0",
+   "files": [
+    "src/theory/arith/nl/transcendental/proof_checker.cpp",
+    "src/theory/arith/nl/transcendental/sine_solver.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "cvc5-8c19798c9c2d",
+   "files": [
+    "src/theory/quantifiers/fmf/model_engine.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-8_0_1-b"
+   ]
+  },
+  {
+   "bug_id": "cvc5-8d2b297c1bbc",
+   "files": [
+    "src/theory/datatypes/theory_datatypes.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "cvc5-8fd2c025e245",
+   "files": [
+    "src/theory/quantifiers/equality_query.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "cvc5-92a35b3a1356",
+   "files": [
+    "src/theory/arith/nl/ext_theory_callback.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "cvc5-9abdf24fe930",
+   "files": [
+    "src/theory/quantifiers/quantifiers_rewriter.cpp",
+    "src/theory/substitutions.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-9_5_1-a"
+   ]
+  },
+  {
+   "bug_id": "cvc5-9c7602939dee",
+   "files": [
+    "src/theory/strings/theory_strings_type_rules.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "CERT_CPP-EXP60-a"
+   ],
+   "found_strict": [
+    "CERT_C-MSC41-a",
+    "CERT_CPP-EXP60-a"
+   ]
+  },
+  {
+   "bug_id": "cvc5-a6fa2c8060f2",
+   "files": [
+    "src/theory/arith/linear/theory_arith_private.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "cvc5-a874c6f84e37",
+   "files": [
+    "src/theory/quantifiers/ematching/inst_match_generator_simple.cpp",
+    "src/theory/quantifiers/instantiate.cpp",
+    "src/theory/quantifiers/quant_conflict_find.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-8_14_1-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-8_14_1-a"
+   ]
+  },
+  {
+   "bug_id": "cvc5-a92827dd3f89",
+   "files": [
+    "src/theory/arrays/theory_arrays_rewriter.cpp",
+    "src/theory/uf/function_const.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-7_0_6-a"
+   ],
+   "found_strict": [
+    "CERT_C-MSC41-a"
+   ]
+  },
+  {
+   "bug_id": "cvc5-aa2797db1fd7",
+   "files": [
+    "src/theory/quantifiers/inst_strategy_mbqi.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-6_0_3-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "cvc5-c443eedc46d1",
+   "files": [
+    "src/theory/arith/arith_rewriter.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "cvc5-c6c6ba5bd904",
+   "files": [
+    "src/preprocessing/passes/learned_rewrite.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "cvc5-cb7581ed4265",
+   "files": [
+    "src/api/cpp/cvc5.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "cvc5-d440f0779a99",
+   "files": [
+    "src/theory/arith/arith_rewriter.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "cvc5-d73f0189501b",
+   "files": [
+    "src/theory/strings/base_solver.cpp",
+    "src/theory/strings/theory_strings.cpp"
+   ],
+   "found_region": [
+    "CERT_C-EXP39-a",
+    "CERT_C-FLP36-a",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "cvc5-d9746c57e9f2",
+   "files": [
+    "src/smt/proof_manager.cpp",
+    "src/smt/solver_engine.cpp",
+    "src/theory/difficulty_manager.cpp",
+    "src/theory/difficulty_manager.h",
+    "src/theory/relevance_manager.cpp",
+    "src/theory/relevance_manager.h",
+    "src/theory/theory_engine.cpp",
+    "src/theory/theory_engine.h"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "cvc5-e1ed9a524e71",
+   "files": [
+    "src/preprocessing/passes/int_to_bv.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_6-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_6-a"
+   ]
+  },
+  {
+   "bug_id": "cvc5-ee122a56fa79",
+   "files": [
+    "src/prop/prop_engine.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "cvc5-f0994ce1b268",
+   "files": [
+    "src/theory/ff/theory_ff_rewriter.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-0_2_2-a",
+    "MISRACPP2023-13_3_3-b",
+    "MISRACPP2023-7_0_6-b"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "cvc5-f218e48e2ada",
+   "files": [
+    "src/theory/strings/sequences_rewriter.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "cvc5-f313728ce254",
+   "files": [
+    "src/preprocessing/passes/int_to_bv.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "CERT_CPP-EXP60-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_14_1-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_14_1-a"
+   ]
+  },
+  {
+   "bug_id": "cvc5-ffc998069294",
+   "files": [
+    "src/prop/sat_proof_manager.cpp",
+    "src/prop/sat_proof_manager.h"
+   ],
+   "found_region": [],
+   "found_strict": []
+  }
+ ]
+}

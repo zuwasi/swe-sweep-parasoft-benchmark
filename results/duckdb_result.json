@@ -1,0 +1,1271 @@
+{
+ "repo": "duckdb",
+ "n_bugs": 109,
+ "n_findings_total": 10175,
+ "found_region": 56,
+ "found_strict": 28,
+ "pct_region": 51.4,
+ "pct_strict": 25.7,
+ "swe_pct": 2.8,
+ "bugs": [
+  {
+   "bug_id": "duckdb-0072efd0dc57",
+   "files": [
+    "src/catalog/catalog_entry/duck_table_entry.cpp",
+    "src/catalog/catalog_entry/table_catalog_entry.cpp",
+    "src/function/table/system/duckdb_constraints.cpp",
+    "src/function/table/system/duckdb_tables.cpp",
+    "src/function/table/system/pragma_table_info.cpp",
+    "src/include/duckdb/parser/constraints/unique_constraint.hpp",
+    "src/parser/constraints/unique_constraint.cpp",
+    "src/planner/binder/statement/bind_create.cpp",
+    "src/planner/binder/statement/bind_create_table.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-7_0_2-a"
+   ],
+   "found_strict": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-0_1_2-a"
+   ]
+  },
+  {
+   "bug_id": "duckdb-0134ded867ec",
+   "files": [
+    "src/include/duckdb/execution/operator/helper/physical_reservoir_sample.hpp",
+    "src/include/duckdb/parser/parsed_data/sample_options.hpp",
+    "src/parser/parsed_data/sample_options.cpp",
+    "src/parser/transform/helpers/transform_sample.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-025b1abedd19",
+   "files": [
+    "src/include/duckdb/parser/tableref/joinref.hpp",
+    "src/parser/tableref/joinref.cpp",
+    "src/parser/transform/tableref/transform_from.cpp",
+    "src/storage/serialization/serialize_tableref.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-6_4_2-a",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": [
+    "CERT_C-MSC41-a"
+   ]
+  },
+  {
+   "bug_id": "duckdb-064a85ba2b9e",
+   "files": [
+    "src/include/duckdb/planner/query_node/bound_select_node.hpp",
+    "src/planner/binder/query_node/bind_select_node.cpp",
+    "src/planner/expression_binder/base_select_binder.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-8_0_1-b"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-0bcc094e9155",
+   "files": [
+    "src/parser/transform/tableref/transform_join.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-0e8e823ac5dd",
+   "files": [
+    "src/planner/binder/expression/bind_collate_expression.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-0_1_2-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-0_1_2-a"
+   ]
+  },
+  {
+   "bug_id": "duckdb-15becaa25700",
+   "files": [
+    "src/planner/subquery/flatten_dependent_join.cpp"
+   ],
+   "found_region": [
+    "CERT_C-EXP46-b",
+    "MISRACPP2023-7_0_1-a",
+    "MISRACPP2023-7_0_4-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-165dc49e8f37",
+   "files": [
+    "src/common/types/bit.cpp"
+   ],
+   "found_region": [
+    "CERT_C-ARR39-b"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-16912ea8773c",
+   "files": [
+    "src/storage/compression/rle.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-1790251e63cf",
+   "files": [
+    "src/parser/transform/statement/transform_pivot_stmt.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-19a0be39629f",
+   "files": [
+    "src/planner/expression.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-8_0_1-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-8_0_1-b"
+   ]
+  },
+  {
+   "bug_id": "duckdb-19c1b85d79d3",
+   "files": [
+    "src/include/duckdb/optimizer/unnest_rewriter.hpp",
+    "src/optimizer/unnest_rewriter.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-10_1_1-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_10-a",
+    "MISRACPP2023-8_2_2-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-10_1_1-a",
+    "MISRACPP2023-8_2_10-a",
+    "MISRACPP2023-8_2_2-b"
+   ]
+  },
+  {
+   "bug_id": "duckdb-1b0e6e7cf25b",
+   "files": [
+    "src/core_functions/scalar/list/list_reduce.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-1b72fe675ead",
+   "files": [
+    "src/core_functions/scalar/enum/enum_functions.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-1e65f66ebffc",
+   "files": [
+    "extension/icu/icu-strptime.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-1e81c42dd1a4",
+   "files": [
+    "src/core_functions/aggregate/distributive/minmax.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-200dcf6a4fde",
+   "files": [
+    "src/optimizer/pushdown/pushdown_mark_join.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-2020c8d7a281",
+   "files": [
+    "src/function/cast/vector_cast_helpers.cpp"
+   ],
+   "found_region": [
+    "BD-PB-INTWRAP",
+    "CERT_C-INT30-a",
+    "MISRACPP2023-6_5_2-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_10-a",
+    "MISRACPP2023-9_4_1-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-9_4_1-a"
+   ]
+  },
+  {
+   "bug_id": "duckdb-21cff7c1d5c6",
+   "files": [
+    "src/storage/buffer/block_manager.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-2217f9b6532e",
+   "files": [
+    "src/planner/expression/bound_cast_expression.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-22ad99fe6d43",
+   "files": [
+    "src/parser/transform/expression/transform_subquery.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-6_2_3-a",
+    "MISRACPP2023-8_0_1-b"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-2380f9735ed0",
+   "files": [
+    "extension/excel/numformat/nf_calendar.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-24278e9ffd28",
+   "files": [
+    "src/include/duckdb/storage/data_table.hpp",
+    "src/include/duckdb/storage/table/append_state.hpp",
+    "src/include/duckdb/storage/table/row_group_collection.hpp",
+    "src/storage/data_table.cpp",
+    "src/storage/local_storage.cpp",
+    "src/storage/table/row_group.cpp",
+    "src/storage/table/row_group_collection.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-0_2_1-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-8_0_1-b"
+   ]
+  },
+  {
+   "bug_id": "duckdb-282d562aa395",
+   "files": [
+    "src/optimizer/rule/move_constants.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-2b390ca9f79d",
+   "files": [
+    "src/catalog/catalog_entry/duck_schema_entry.cpp",
+    "src/catalog/catalog_set.cpp",
+    "src/catalog/dependency_manager.cpp",
+    "src/include/duckdb/catalog/dependency_manager.hpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-350ed10c5eea",
+   "files": [
+    "src/function/scalar/string/like.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-7_0_3-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_2-b"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-35212bbdc849",
+   "files": [
+    "src/planner/binder/expression/bind_window_expression.cpp"
+   ],
+   "found_region": [
+    "BD-PB-SWITCH",
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-8_0_1-b"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-36c38199ce20",
+   "files": [
+    "src/include/duckdb/optimizer/join_order/relation_manager.hpp",
+    "src/optimizer/join_order/relation_manager.cpp"
+   ],
+   "found_region": [
+    "CERT_C-EXP39-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-37580a29144b",
+   "files": [
+    "src/common/operator/cast_operators.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-3a50d7579d15",
+   "files": [
+    "src/planner/binder/statement/bind_insert.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-0_1_2-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-0_1_2-a"
+   ]
+  },
+  {
+   "bug_id": "duckdb-3f1087fd04f8",
+   "files": [
+    "src/execution/operator/aggregate/physical_hash_aggregate.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-3f3cf4083ba4",
+   "files": [
+    "src/optimizer/deliminator.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-3f7b28468e2e",
+   "files": [
+    "src/optimizer/filter_combiner.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-43b086a35dd5",
+   "files": [
+    "src/common/types/vector.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-4473cf27097c",
+   "files": [
+    "src/optimizer/join_order/relation_manager.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-46a43d62ed7c",
+   "files": [
+    "src/core_functions/scalar/string/printf.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-4815019d7a34",
+   "files": [
+    "src/execution/physical_plan/plan_filter.cpp",
+    "src/planner/binder/query_node/plan_select_node.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-4b18f32ec21e",
+   "files": [
+    "src/common/types/timestamp.cpp"
+   ],
+   "found_region": [
+    "CERT_C-ARR39-b"
+   ],
+   "found_strict": [
+    "CERT_C-ARR39-b"
+   ]
+  },
+  {
+   "bug_id": "duckdb-4c125bd36641",
+   "files": [
+    "src/optimizer/join_order/relation_manager.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-8_0_1-b"
+   ],
+   "found_strict": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-0_1_2-a"
+   ]
+  },
+  {
+   "bug_id": "duckdb-4f2d8e8eaf2f",
+   "files": [
+    "src/common/row_operations/row_radix_scatter.cpp"
+   ],
+   "found_region": [
+    "CERT_C-ARR39-b"
+   ],
+   "found_strict": [
+    "CERT_C-ARR39-b"
+   ]
+  },
+  {
+   "bug_id": "duckdb-4fae7f8bb350",
+   "files": [
+    "src/include/duckdb/optimizer/join_order/cost_model.hpp",
+    "src/include/duckdb/optimizer/join_order/join_node.hpp",
+    "src/include/duckdb/optimizer/join_order/plan_enumerator.hpp",
+    "src/optimizer/join_order/cardinality_estimator.cpp",
+    "src/optimizer/join_order/cost_model.cpp",
+    "src/optimizer/join_order/join_node.cpp",
+    "src/optimizer/join_order/join_order_optimizer.cpp",
+    "src/optimizer/join_order/plan_enumerator.cpp"
+   ],
+   "found_region": [
+    "CERT_C-EXP39-a",
+    "CERT_C-FLP36-a",
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-0_3_1-b",
+    "MISRACPP2023-10_0_1-a",
+    "MISRACPP2023-10_1_1-c",
+    "MISRACPP2023-11_3_1-a",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-17_8_1-a",
+    "MISRACPP2023-5_7_2-a",
+    "MISRACPP2023-6_2_3-d",
+    "MISRACPP2023-6_4_1-g",
+    "MISRACPP2023-6_5_2-a",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_10-a",
+    "MISRACPP2023-8_2_2-b",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": [
+    "CERT_C-EXP39-a",
+    "CERT_C-FLP36-a",
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-0_3_1-b",
+    "MISRACPP2023-10_1_1-c",
+    "MISRACPP2023-11_3_1-a",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-5_7_2-a",
+    "MISRACPP2023-6_4_1-g",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_10-a"
+   ]
+  },
+  {
+   "bug_id": "duckdb-4fc939834090",
+   "files": [
+    "src/function/scalar/list/list_zip.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-55543d201747",
+   "files": [
+    "src/include/duckdb/optimizer/compressed_materialization.hpp",
+    "src/include/duckdb/optimizer/optimizer.hpp",
+    "src/include/duckdb/optimizer/statistics_propagator.hpp",
+    "src/optimizer/compressed_materialization.cpp",
+    "src/optimizer/compressed_materialization/compress_aggregate.cpp",
+    "src/optimizer/optimizer.cpp",
+    "src/optimizer/statistics/expression/propagate_aggregate.cpp",
+    "src/optimizer/statistics/expression/propagate_between.cpp",
+    "src/optimizer/statistics/expression/propagate_case.cpp",
+    "src/optimizer/statistics/expression/propagate_cast.cpp",
+    "src/optimizer/statistics/expression/propagate_columnref.cpp",
+    "src/optimizer/statistics/expression/propagate_comparison.cpp",
+    "src/optimizer/statistics/expression/propagate_conjunction.cpp",
+    "src/optimizer/statistics/expression/propagate_constant.cpp",
+    "src/optimizer/statistics/expression/propagate_function.cpp",
+    "src/optimizer/statistics/expression/propagate_operator.cpp",
+    "src/optimizer/statistics/operator/propagate_aggregate.cpp",
+    "src/optimizer/statistics/operator/propagate_cross_product.cpp",
+    "src/optimizer/statistics/operator/propagate_filter.cpp",
+    "src/optimizer/statistics/operator/propagate_get.cpp",
+    "src/optimizer/statistics/operator/propagate_join.cpp",
+    "src/optimizer/statistics/operator/propagate_limit.cpp",
+    "src/optimizer/statistics/operator/propagate_order.cpp",
+    "src/optimizer/statistics/operator/propagate_projection.cpp",
+    "src/optimizer/statistics/operator/propagate_set_operation.cpp",
+    "src/optimizer/statistics/operator/propagate_window.cpp",
+    "src/optimizer/statistics_propagator.cpp"
+   ],
+   "found_region": [
+    "BD-PB-INTWRAP",
+    "CERT_C-INT30-a",
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-0_2_2-a",
+    "MISRACPP2023-10_1_1-a",
+    "MISRACPP2023-10_1_1-c",
+    "MISRACPP2023-7_0_1-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_14_1-a",
+    "MISRACPP2023-8_2_10-a",
+    "MISRACPP2023-9_4_1-a",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-0_2_2-a",
+    "MISRACPP2023-10_1_1-a",
+    "MISRACPP2023-7_0_1-a"
+   ]
+  },
+  {
+   "bug_id": "duckdb-5a33d9a1c013",
+   "files": [
+    "src/common/types.cpp",
+    "src/include/duckdb/common/types.hpp",
+    "src/planner/expression/bound_cast_expression.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-5b031435d1c2",
+   "files": [
+    "src/common/types/bit.cpp"
+   ],
+   "found_region": [
+    "CERT_C-ARR39-b",
+    "MISRACPP2023-10_1_1-c",
+    "MISRACPP2023-7_0_3-a",
+    "MISRACPP2023-7_0_4-a",
+    "MISRACPP2023-8_2_2-b",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-5b6992a0f3a6",
+   "files": [
+    "src/planner/binder/query_node/plan_subquery.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-5e618dfa2d4f",
+   "files": [
+    "extension/fts/fts_indexing.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-61c3cfc37903",
+   "files": [
+    "src/common/vector_operations/vector_hash.cpp",
+    "src/execution/join_hashtable.cpp"
+   ],
+   "found_region": [
+    "CERT_C-ARR39-b",
+    "MISRACPP2023-15_1_4-b",
+    "MISRACPP2023-6_5_2-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_10-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-62047414f1fa",
+   "files": [
+    "src/function/table/system/duckdb_columns.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-8_0_1-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-8_0_1-b"
+   ]
+  },
+  {
+   "bug_id": "duckdb-62e8b51ffa88",
+   "files": [
+    "src/storage/local_storage.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-647f5416bff8",
+   "files": [
+    "src/include/duckdb/optimizer/in_clause_rewriter.hpp",
+    "src/optimizer/in_clause_rewriter.cpp",
+    "src/optimizer/remove_unused_columns.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-8_2_10-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-663c7d842c69",
+   "files": [
+    "src/storage/table/chunk_info.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-675eb44147c9",
+   "files": [
+    "src/common/operator/cast_operators.cpp"
+   ],
+   "found_region": [
+    "CERT_C-EXP46-b",
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-7_0_1-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_2-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-8_0_1-b"
+   ]
+  },
+  {
+   "bug_id": "duckdb-685162621323",
+   "files": [
+    "src/function/cast/list_casts.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-8_0_1-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-8_0_1-b"
+   ]
+  },
+  {
+   "bug_id": "duckdb-69a6459a8108",
+   "files": [
+    "src/common/tree_renderer.cpp",
+    "src/execution/operator/scan/physical_positional_scan.cpp",
+    "src/include/duckdb/execution/operator/scan/physical_positional_scan.hpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-6dcb9e7c2bb4",
+   "files": [
+    "src/function/table/system/test_all_types.cpp",
+    "src/include/duckdb/common/limits.hpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a"
+   ],
+   "found_strict": [
+    "CERT_C-MSC41-a"
+   ]
+  },
+  {
+   "bug_id": "duckdb-6f234f9c4978",
+   "files": [
+    "src/function/scalar/nested_functions.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-0_2_4-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-7463773a3cb5",
+   "files": [
+    "src/optimizer/pushdown/pushdown_cross_product.cpp",
+    "src/optimizer/pushdown/pushdown_inner_join.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-10_0_1-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-75521326481f",
+   "files": [
+    "src/parser/parsed_data/create_index_info.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-7b570403d686",
+   "files": [
+    "src/include/duckdb/storage/table/column_segment.hpp",
+    "src/storage/table/column_data.cpp",
+    "src/storage/table/column_segment.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-10_1_1-c",
+    "MISRACPP2023-6_4_1-g",
+    "MISRACPP2023-6_5_2-a",
+    "MISRACPP2023-8_2_10-a"
+   ],
+   "found_strict": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-10_1_1-c",
+    "MISRACPP2023-6_5_2-a",
+    "MISRACPP2023-8_2_10-a"
+   ]
+  },
+  {
+   "bug_id": "duckdb-7fa52ed2bd69",
+   "files": [
+    "extension/tpcds/tpcds_extension.cpp",
+    "extension/tpch/tpch_extension.cpp",
+    "src/include/duckdb/function/table_function.hpp",
+    "src/planner/binder/tableref/bind_table_function.cpp",
+    "src/planner/operator/logical_get.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-824a50418841",
+   "files": [
+    "src/core_functions/scalar/enum/enum_functions.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-8450ad72d657",
+   "files": [
+    "src/execution/operator/aggregate/physical_streaming_window.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-6_4_1-g",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-6_4_1-g",
+    "MISRACPP2023-9_5_1-a"
+   ]
+  },
+  {
+   "bug_id": "duckdb-85e3b88d8300",
+   "files": [],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-863b896717f1",
+   "files": [
+    "src/storage/table/array_column_data.cpp",
+    "src/storage/table/struct_column_data.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-8679358a0503",
+   "files": [
+    "src/planner/expression/bound_cast_expression.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-8_0_1-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-8_0_1-b"
+   ]
+  },
+  {
+   "bug_id": "duckdb-86fe04caf9f4",
+   "files": [
+    "src/core_functions/scalar/operators/bitwise.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-8_2_2-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-8_2_2-b"
+   ]
+  },
+  {
+   "bug_id": "duckdb-8a3e974e8727",
+   "files": [
+    "extension/json/json_functions/json_create.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-8dcd0ac1cae0",
+   "files": [
+    "src/parser/transform/expression/transform_subquery.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-8ef8ca9824ab",
+   "files": [
+    "src/core_functions/scalar/generic/current_setting.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-8fee68dc6ef2",
+   "files": [
+    "src/planner/binder/tableref/bind_pivot.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-9247c5568ef1",
+   "files": [
+    "src/planner/expression/bound_window_expression.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-94dd9ceb3b3a",
+   "files": [
+    "src/optimizer/remove_unused_columns.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-95c312388f7b",
+   "files": [
+    "src/planner/binder/query_node/bind_select_node.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-96cd6f4c49c4",
+   "files": [
+    "src/catalog/catalog_search_path.cpp",
+    "src/parser/transform/statement/transform_use.cpp"
+   ],
+   "found_region": [
+    "BD-PB-VALRANGE",
+    "CERT_C-MSC41-a",
+    "CERT_CPP-CTR50-a",
+    "CERT_CPP-STR53-a",
+    "MISRACPP2023-9_6_1-a",
+    "MISRACPP2023-9_6_3-a"
+   ],
+   "found_strict": [
+    "CERT_C-MSC41-a"
+   ]
+  },
+  {
+   "bug_id": "duckdb-99482115caaa",
+   "files": [],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-9dda7601a697",
+   "files": [
+    "src/storage/data_table.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-a3491d68d372",
+   "files": [
+    "src/parser/parser.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-7_0_3-a",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-9_4_1-a",
+    "MISRACPP2023-9_5_1-a",
+    "MISRACPP2023-9_6_1-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-a36a17c4de98",
+   "files": [
+    "src/optimizer/rule/in_clause_simplification_rule.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-a5eb42c56587",
+   "files": [
+    "src/include/duckdb/planner/expression_binder/alter_binder.hpp",
+    "src/include/duckdb/planner/table_binding.hpp",
+    "src/planner/expression_binder/alter_binder.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-0_2_2-b"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-a61365926289",
+   "files": [
+    "extension/parquet/column_writer.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-13_3_3-a",
+    "MISRACPP2023-13_3_3-b",
+    "MISRACPP2023-8_2_10-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-a82cf49f86dd",
+   "files": [
+    "src/planner/binder/expression/bind_window_expression.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-ab8e5666b8b2",
+   "files": [
+    "src/parser/transform/statement/transform_select_node.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-af0f5334fb87",
+   "files": [
+    "src/planner/subquery/flatten_dependent_join.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-b16e2dce4c66",
+   "files": [
+    "src/core_functions/scalar/date/date_diff.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-0_2_2-a",
+    "MISRACPP2023-17_8_1-a",
+    "MISRACPP2023-8_0_1-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-8_0_1-b"
+   ]
+  },
+  {
+   "bug_id": "duckdb-b189dd7ff15f",
+   "files": [
+    "src/optimizer/unnest_rewriter.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-b219521ef1e5",
+   "files": [
+    "src/function/scalar/strftime_format.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-b59aa14f8b3f",
+   "files": [
+    "src/include/duckdb/common/operator/integer_cast_operator.hpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-b6d9ac9ac4c4",
+   "files": [
+    "src/planner/subquery/flatten_dependent_join.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-b9b1bb8a239b",
+   "files": [
+    "src/include/duckdb/planner/expression_binder/base_select_binder.hpp",
+    "src/planner/binder/expression/bind_unnest_expression.cpp",
+    "src/planner/binder/expression/bind_window_expression.cpp",
+    "src/planner/expression_binder/base_select_binder.cpp",
+    "src/planner/expression_binder/having_binder.cpp",
+    "src/planner/expression_binder/qualify_binder.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-0_2_2-a",
+    "MISRACPP2023-6_4_1-g",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_10-a",
+    "MISRACPP2023-9_4_1-a"
+   ],
+   "found_strict": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-0_2_2-a",
+    "MISRACPP2023-6_4_1-g"
+   ]
+  },
+  {
+   "bug_id": "duckdb-ba44421804d6",
+   "files": [
+    "src/planner/binder/query_node/plan_subquery.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-c6f9dfd6591b",
+   "files": [
+    "src/common/types.cpp",
+    "src/include/duckdb/common/types.hpp",
+    "src/optimizer/remove_unused_columns.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-8_0_1-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-8_0_1-b"
+   ]
+  },
+  {
+   "bug_id": "duckdb-c9112165759d",
+   "files": [
+    "src/include/duckdb/storage/table/segment_tree.hpp",
+    "src/storage/table/row_group_collection.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-cfdd5889da28",
+   "files": [
+    "src/include/duckdb/core_functions/aggregate/algebraic/stddev.hpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-da5c7335ea4b",
+   "files": [
+    "src/planner/subquery/flatten_dependent_join.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-dbd78f790c07",
+   "files": [
+    "extension/json/include/json_executors.hpp",
+    "extension/json/json_functions/json_type.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-dc96153f0266",
+   "files": [
+    "src/include/duckdb/storage/compression/alp/alp_analyze.hpp",
+    "src/include/duckdb/storage/compression/alprd/alprd_analyze.hpp",
+    "src/storage/table/column_data_checkpointer.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-de68e49f3522",
+   "files": [
+    "src/execution/window_segment_tree.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-8_2_7-c"
+   ],
+   "found_strict": [
+    "MISRACPP2023-8_2_7-c"
+   ]
+  },
+  {
+   "bug_id": "duckdb-e2c62d0b96d9",
+   "files": [
+    "src/planner/binder/expression/bind_unnest_expression.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-e544467a8f42",
+   "files": [
+    "src/planner/binder/query_node/plan_subquery.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-e5c74941dc92",
+   "files": [
+    "src/parser/tableref/joinref.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-eca6287b0265",
+   "files": [
+    "src/planner/binder/expression/bind_lambda.cpp",
+    "src/planner/binder/expression/bind_operator_expression.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-ef0ded97b22b",
+   "files": [
+    "src/include/duckdb/common/types/interval.hpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-f0ea35020083",
+   "files": [
+    "src/optimizer/rule/distributivity.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-f2cf1db95264",
+   "files": [
+    "src/storage/table/list_column_data.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-8_2_10-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-f42aff9fc29f",
+   "files": [
+    "src/execution/operator/join/physical_iejoin.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-fa43a31dc1a0",
+   "files": [
+    "src/planner/binder/statement/bind_create_table.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "duckdb-fbcfadceb477",
+   "files": [
+    "src/catalog/default/default_functions.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-11_3_1-a",
+    "MISRACPP2023-6_5_2-a",
+    "MISRACPP2023-6_7_2-a"
+   ],
+   "found_strict": [
+    "CERT_C-MSC41-a"
+   ]
+  },
+  {
+   "bug_id": "duckdb-ffb453f07fce",
+   "files": [
+    "src/core_functions/aggregate/distributive/arg_min_max.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-6_5_1-a"
+   ],
+   "found_strict": [
+    "CERT_C-MSC41-a"
+   ]
+  }
+ ]
+}

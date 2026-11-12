@@ -1,0 +1,1729 @@
+{
+ "repo": "cvc5",
+ "clone_url": "https://github.com/cvc5/cvc5.git",
+ "upstream_commit": "9f7399e15e6172900e0591deb5a57a45769d8205",
+ "base_ref": "cvc5-1.0.5",
+ "n_subtasks": 38,
+ "bugs": [
+  {
+   "bug_id": "cvc5-0190fa8ae7ec",
+   "hunks": [
+    {
+     "file": "src/theory/strings/term_registry.cpp",
+     "blob": "cda50cce87",
+     "old_start": 249,
+     "old_count": 7,
+     "removed": [
+      252
+     ]
+    }
+   ],
+   "files": [
+    "src/theory/strings/term_registry.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-024cc837ea11",
+   "hunks": [
+    {
+     "file": "src/theory/arith/arith_rewriter.cpp",
+     "blob": "cbc8260",
+     "old_start": 45,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/theory/arith/arith_rewriter.cpp",
+     "blob": "cbc8260",
+     "old_start": 431,
+     "old_count": 7,
+     "removed": [
+      434
+     ]
+    },
+    {
+     "file": "src/theory/arith/arith_rewriter.cpp",
+     "blob": "cbc8260",
+     "old_start": 439,
+     "old_count": 13,
+     "removed": [
+      442,
+      443,
+      444,
+      446,
+      448
+     ]
+    },
+    {
+     "file": "src/theory/arith/rewriter/addition.cpp",
+     "blob": "334caba",
+     "old_start": 168,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/theory/arith/rewriter/addition.h",
+     "blob": "5e9fc03",
+     "old_start": 70,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/theory/arith/arith_rewriter.cpp",
+    "src/theory/arith/rewriter/addition.cpp",
+    "src/theory/arith/rewriter/addition.h"
+   ]
+  },
+  {
+   "bug_id": "cvc5-11eabe28d431",
+   "hunks": [
+    {
+     "file": "src/preprocessing/passes/learned_rewrite.cpp",
+     "blob": "674ea79c3e",
+     "old_start": 150,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/preprocessing/passes/learned_rewrite.cpp",
+     "blob": "674ea79c3e",
+     "old_start": 164,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/preprocessing/passes/non_clausal_simp.cpp",
+     "blob": "cf02c1df2b",
+     "old_start": 85,
+     "old_count": 7,
+     "removed": [
+      88
+     ]
+    }
+   ],
+   "files": [
+    "src/preprocessing/passes/learned_rewrite.cpp",
+    "src/preprocessing/passes/non_clausal_simp.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-1337df3bc465",
+   "hunks": [
+    {
+     "file": "src/theory/datatypes/infer_proof_cons.cpp",
+     "blob": "ab12ba6d7e",
+     "old_start": 219,
+     "old_count": 18,
+     "removed": [
+      222,
+      223,
+      224,
+      225,
+      227,
+      229,
+      230,
+      231,
+      232,
+      233
+     ]
+    }
+   ],
+   "files": [
+    "src/theory/datatypes/infer_proof_cons.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-15ce999a65bb",
+   "hunks": [
+    {
+     "file": "src/theory/strings/base_solver.cpp",
+     "blob": "b1f19d467e",
+     "old_start": 392,
+     "old_count": 7,
+     "removed": [
+      395
+     ]
+    }
+   ],
+   "files": [
+    "src/theory/strings/base_solver.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-169d417c6b41",
+   "hunks": [
+    {
+     "file": "src/theory/sets/solver_state.cpp",
+     "blob": "11b16a0bb0",
+     "old_start": 137,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/theory/sets/theory_sets_private.cpp",
+     "blob": "0362969797",
+     "old_start": 215,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/theory/sets/theory_sets_private.cpp",
+     "blob": "0362969797",
+     "old_start": 239,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/theory/sets/theory_sets_private.cpp",
+     "blob": "0362969797",
+     "old_start": 285,
+     "old_count": 7,
+     "removed": [
+      288
+     ]
+    },
+    {
+     "file": "src/theory/sets/theory_sets_private.cpp",
+     "blob": "0362969797",
+     "old_start": 439,
+     "old_count": 55,
+     "removed": [
+      442,
+      444,
+      446,
+      447,
+      448,
+      449,
+      451,
+      452,
+      453,
+      455,
+      456,
+      457,
+      458,
+      459,
+      460,
+      461,
+      462,
+      463,
+      464,
+      465,
+      469,
+      470,
+      471,
+      472,
+      473,
+      474,
+      475,
+      476,
+      477,
+      478,
+      479,
+      480,
+      481,
+      482,
+      483,
+      484,
+      485,
+      486
+     ]
+    },
+    {
+     "file": "src/theory/sets/theory_sets_private.cpp",
+     "blob": "0362969797",
+     "old_start": 507,
+     "old_count": 14,
+     "removed": [
+      510,
+      517
+     ]
+    }
+   ],
+   "files": [
+    "src/theory/sets/solver_state.cpp",
+    "src/theory/sets/theory_sets_private.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-18943577ecec",
+   "hunks": [
+    {
+     "file": "src/theory/arrays/theory_arrays_rewriter.cpp",
+     "blob": "7af0af6",
+     "old_start": 72,
+     "old_count": 7,
+     "removed": [
+      75
+     ]
+    },
+    {
+     "file": "src/theory/arrays/theory_arrays_type_rules.cpp",
+     "blob": "d65ef49197",
+     "old_start": 133,
+     "old_count": 8,
+     "removed": [
+      137
+     ]
+    }
+   ],
+   "files": [
+    "src/theory/arrays/theory_arrays_rewriter.cpp",
+    "src/theory/arrays/theory_arrays_type_rules.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-308a909279a9",
+   "hunks": [
+    {
+     "file": "src/theory/strings/array_core_solver.cpp",
+     "blob": "8d24a76e18",
+     "old_start": 50,
+     "old_count": 13,
+     "removed": [
+      53,
+      59
+     ]
+    },
+    {
+     "file": "src/theory/strings/array_core_solver.cpp",
+     "blob": "8d24a76e18",
+     "old_start": 147,
+     "old_count": 11,
+     "removed": [
+      150,
+      151,
+      152,
+      153,
+      154
+     ]
+    },
+    {
+     "file": "src/theory/strings/array_core_solver.cpp",
+     "blob": "8d24a76e18",
+     "old_start": 164,
+     "old_count": 8,
+     "removed": [
+      167,
+      168
+     ]
+    },
+    {
+     "file": "src/theory/strings/array_core_solver.cpp",
+     "blob": "8d24a76e18",
+     "old_start": 211,
+     "old_count": 7,
+     "removed": [
+      214
+     ]
+    },
+    {
+     "file": "src/theory/strings/array_core_solver.h",
+     "blob": "cc737a4fbf",
+     "old_start": 71,
+     "old_count": 7,
+     "removed": [
+      74
+     ]
+    }
+   ],
+   "files": [
+    "src/theory/strings/array_core_solver.cpp",
+    "src/theory/strings/array_core_solver.h"
+   ]
+  },
+  {
+   "bug_id": "cvc5-3489f19d0af7",
+   "hunks": [
+    {
+     "file": "src/theory/arith/nl/nl_model.cpp",
+     "blob": "8e176bcbcc",
+     "old_start": 43,
+     "old_count": 9,
+     "removed": [
+      46,
+      48
+     ]
+    },
+    {
+     "file": "src/theory/arith/nl/nl_model.h",
+     "blob": "e616f1ab03",
+     "old_start": 61,
+     "old_count": 7,
+     "removed": [
+      64
+     ]
+    },
+    {
+     "file": "src/theory/arith/nl/nl_model.h",
+     "blob": "e616f1ab03",
+     "old_start": 185,
+     "old_count": 9,
+     "removed": [
+      188,
+      189,
+      190
+     ]
+    },
+    {
+     "file": "src/theory/arith/nl/nonlinear_extension.cpp",
+     "blob": "8be0e145b1",
+     "old_start": 268,
+     "old_count": 7,
+     "removed": [
+      271
+     ]
+    },
+    {
+     "file": "src/theory/arith/theory_arith.cpp",
+     "blob": "e62f03610c",
+     "old_start": 344,
+     "old_count": 20,
+     "removed": [
+      347,
+      348,
+      349,
+      350,
+      354,
+      355,
+      356,
+      357,
+      358,
+      359,
+      360
+     ]
+    }
+   ],
+   "files": [
+    "src/theory/arith/nl/nl_model.cpp",
+    "src/theory/arith/nl/nl_model.h",
+    "src/theory/arith/nl/nonlinear_extension.cpp",
+    "src/theory/arith/theory_arith.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-39fc8377f26f",
+   "hunks": [
+    {
+     "file": "src/theory/theory_model.cpp",
+     "blob": null,
+     "old_start": 716,
+     "old_count": 6,
+     "removed": [
+      719,
+      720
+     ]
+    }
+   ],
+   "files": [
+    "src/theory/theory_model.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-3d08a22f361b",
+   "hunks": [
+    {
+     "file": "src/theory/strings/sequences_rewriter.cpp",
+     "blob": "cc849bad33",
+     "old_start": 1199,
+     "old_count": 9,
+     "removed": [
+      1202,
+      1204
+     ]
+    }
+   ],
+   "files": [
+    "src/theory/strings/sequences_rewriter.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-50f4bf9c8c66",
+   "hunks": [
+    {
+     "file": "src/theory/sets/theory_sets_rewriter.cpp",
+     "blob": "5522fc6",
+     "old_start": 739,
+     "old_count": 11,
+     "removed": [
+      742,
+      746
+     ]
+    },
+    {
+     "file": "src/theory/sets/theory_sets_rewriter.h",
+     "blob": "a6bbeb3",
+     "old_start": 103,
+     "old_count": 7,
+     "removed": [
+      106
+     ]
+    }
+   ],
+   "files": [
+    "src/theory/sets/theory_sets_rewriter.cpp",
+    "src/theory/sets/theory_sets_rewriter.h"
+   ]
+  },
+  {
+   "bug_id": "cvc5-647ecea6ab0d",
+   "hunks": [
+    {
+     "file": "src/expr/dtype.cpp",
+     "blob": "2c6ca5292d",
+     "old_start": 565,
+     "old_count": 11,
+     "removed": []
+    },
+    {
+     "file": "src/theory/theory_model_builder.cpp",
+     "blob": "b6be496bce",
+     "old_start": 372,
+     "old_count": 10,
+     "removed": [
+      375,
+      377,
+      378
+     ]
+    }
+   ],
+   "files": [
+    "src/expr/dtype.cpp",
+    "src/theory/theory_model_builder.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-6f19e69efd06",
+   "hunks": [
+    {
+     "file": "src/theory/quantifiers/sygus/ce_guided_single_inv.cpp",
+     "blob": "8083ee374d",
+     "old_start": 248,
+     "old_count": 7,
+     "removed": [
+      251
+     ]
+    }
+   ],
+   "files": [
+    "src/theory/quantifiers/sygus/ce_guided_single_inv.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-6f88c8072d5a",
+   "hunks": [
+    {
+     "file": "src/theory/arith/arith_rewriter.cpp",
+     "blob": "0273b9a77d",
+     "old_start": 313,
+     "old_count": 17,
+     "removed": [
+      317,
+      324,
+      325
+     ]
+    },
+    {
+     "file": "src/theory/arith/arith_rewriter.cpp",
+     "blob": "0273b9a77d",
+     "old_start": 332,
+     "old_count": 8,
+     "removed": [
+      335,
+      336
+     ]
+    }
+   ],
+   "files": [
+    "src/theory/arith/arith_rewriter.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-726a3ded06b0",
+   "hunks": [
+    {
+     "file": "src/theory/arith/nl/transcendental/proof_checker.cpp",
+     "blob": "a9c0807960",
+     "old_start": 145,
+     "old_count": 7,
+     "removed": [
+      148
+     ]
+    },
+    {
+     "file": "src/theory/arith/nl/transcendental/proof_checker.cpp",
+     "blob": "a9c0807960",
+     "old_start": 171,
+     "old_count": 7,
+     "removed": [
+      174
+     ]
+    },
+    {
+     "file": "src/theory/arith/nl/transcendental/proof_checker.cpp",
+     "blob": "a9c0807960",
+     "old_start": 198,
+     "old_count": 7,
+     "removed": [
+      201
+     ]
+    },
+    {
+     "file": "src/theory/arith/nl/transcendental/proof_checker.cpp",
+     "blob": "a9c0807960",
+     "old_start": 218,
+     "old_count": 7,
+     "removed": [
+      221
+     ]
+    },
+    {
+     "file": "src/theory/arith/nl/transcendental/proof_checker.cpp",
+     "blob": "a9c0807960",
+     "old_start": 235,
+     "old_count": 7,
+     "removed": [
+      238
+     ]
+    },
+    {
+     "file": "src/theory/arith/nl/transcendental/proof_checker.cpp",
+     "blob": "a9c0807960",
+     "old_start": 244,
+     "old_count": 7,
+     "removed": [
+      247
+     ]
+    },
+    {
+     "file": "src/theory/arith/nl/transcendental/proof_checker.cpp",
+     "blob": "a9c0807960",
+     "old_start": 258,
+     "old_count": 7,
+     "removed": [
+      261
+     ]
+    },
+    {
+     "file": "src/theory/arith/nl/transcendental/proof_checker.cpp",
+     "blob": "a9c0807960",
+     "old_start": 274,
+     "old_count": 9,
+     "removed": [
+      277,
+      278,
+      279
+     ]
+    },
+    {
+     "file": "src/theory/arith/nl/transcendental/proof_checker.cpp",
+     "blob": "a9c0807960",
+     "old_start": 304,
+     "old_count": 9,
+     "removed": [
+      307,
+      308,
+      309
+     ]
+    },
+    {
+     "file": "src/theory/arith/nl/transcendental/proof_checker.cpp",
+     "blob": "a9c0807960",
+     "old_start": 327,
+     "old_count": 9,
+     "removed": [
+      330,
+      331,
+      332
+     ]
+    },
+    {
+     "file": "src/theory/arith/nl/transcendental/proof_checker.cpp",
+     "blob": "a9c0807960",
+     "old_start": 357,
+     "old_count": 9,
+     "removed": [
+      360,
+      361,
+      362
+     ]
+    },
+    {
+     "file": "src/theory/arith/nl/transcendental/sine_solver.cpp",
+     "blob": "fe7b673a66",
+     "old_start": 225,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/theory/arith/nl/transcendental/proof_checker.cpp",
+    "src/theory/arith/nl/transcendental/sine_solver.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-8c19798c9c2d",
+   "hunks": [
+    {
+     "file": "src/theory/quantifiers/fmf/model_engine.cpp",
+     "blob": "cd88d2780d",
+     "old_start": 212,
+     "old_count": 11,
+     "removed": [
+      215,
+      219
+     ]
+    },
+    {
+     "file": "src/theory/quantifiers/fmf/model_engine.cpp",
+     "blob": "cd88d2780d",
+     "old_start": 234,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/theory/quantifiers/fmf/model_engine.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-8d2b297c1bbc",
+   "hunks": [
+    {
+     "file": "src/theory/datatypes/theory_datatypes.cpp",
+     "blob": "c0ce917aa3",
+     "old_start": 202,
+     "old_count": 20,
+     "removed": [
+      205,
+      207,
+      213,
+      214,
+      215,
+      216,
+      217
+     ]
+    },
+    {
+     "file": "src/theory/datatypes/theory_datatypes.cpp",
+     "blob": "c0ce917aa3",
+     "old_start": 231,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/theory/datatypes/theory_datatypes.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-8fd2c025e245",
+   "hunks": [
+    {
+     "file": "src/theory/quantifiers/equality_query.cpp",
+     "blob": "475f1e6190",
+     "old_start": 189,
+     "old_count": 8,
+     "removed": [
+      192,
+      193
+     ]
+    }
+   ],
+   "files": [
+    "src/theory/quantifiers/equality_query.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-92a35b3a1356",
+   "hunks": [
+    {
+     "file": "src/theory/arith/nl/ext_theory_callback.cpp",
+     "blob": "bc21c6b4bb",
+     "old_start": 103,
+     "old_count": 7,
+     "removed": [
+      106
+     ]
+    },
+    {
+     "file": "src/theory/arith/nl/ext_theory_callback.cpp",
+     "blob": "bc21c6b4bb",
+     "old_start": 111,
+     "old_count": 7,
+     "removed": [
+      114
+     ]
+    }
+   ],
+   "files": [
+    "src/theory/arith/nl/ext_theory_callback.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-9abdf24fe930",
+   "hunks": [
+    {
+     "file": "src/theory/quantifiers/quantifiers_rewriter.cpp",
+     "blob": "77731d19a9",
+     "old_start": 196,
+     "old_count": 60,
+     "removed": [
+      199,
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      233,
+      238,
+      239,
+      240,
+      241,
+      242,
+      243,
+      244,
+      246,
+      249,
+      250,
+      252
+     ]
+    },
+    {
+     "file": "src/theory/substitutions.cpp",
+     "blob": "d29c7542e9",
+     "old_start": 237,
+     "old_count": 9,
+     "removed": [
+      241,
+      242
+     ]
+    }
+   ],
+   "files": [
+    "src/theory/quantifiers/quantifiers_rewriter.cpp",
+    "src/theory/substitutions.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-9c7602939dee",
+   "hunks": [
+    {
+     "file": "src/theory/strings/theory_strings_type_rules.cpp",
+     "blob": "d6ea754a6a",
+     "old_start": 239,
+     "old_count": 12,
+     "removed": [
+      242,
+      243,
+      245,
+      246,
+      247
+     ]
+    }
+   ],
+   "files": [
+    "src/theory/strings/theory_strings_type_rules.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-a6fa2c8060f2",
+   "hunks": [
+    {
+     "file": "src/theory/arith/linear/theory_arith_private.cpp",
+     "blob": "0ac21586f3",
+     "old_start": 4890,
+     "old_count": 7,
+     "removed": [
+      4893
+     ]
+    }
+   ],
+   "files": [
+    "src/theory/arith/linear/theory_arith_private.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-a874c6f84e37",
+   "hunks": [
+    {
+     "file": "src/theory/quantifiers/ematching/inst_match_generator_simple.cpp",
+     "blob": "4125079160",
+     "old_start": 55,
+     "old_count": 8,
+     "removed": [
+      58,
+      59
+     ]
+    },
+    {
+     "file": "src/theory/quantifiers/instantiate.cpp",
+     "blob": "334729f71d",
+     "old_start": 169,
+     "old_count": 8,
+     "removed": [
+      172
+     ]
+    },
+    {
+     "file": "src/theory/quantifiers/quant_conflict_find.cpp",
+     "blob": "ad08b3c284",
+     "old_start": 2241,
+     "old_count": 7,
+     "removed": [
+      2244
+     ]
+    }
+   ],
+   "files": [
+    "src/theory/quantifiers/ematching/inst_match_generator_simple.cpp",
+    "src/theory/quantifiers/instantiate.cpp",
+    "src/theory/quantifiers/quant_conflict_find.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-a92827dd3f89",
+   "hunks": [
+    {
+     "file": "src/theory/arrays/theory_arrays_rewriter.cpp",
+     "blob": "7af0af62d1",
+     "old_start": 73,
+     "old_count": 7,
+     "removed": [
+      76
+     ]
+    },
+    {
+     "file": "src/theory/uf/function_const.cpp",
+     "blob": "b2bde1306a",
+     "old_start": 339,
+     "old_count": 20,
+     "removed": [
+      342,
+      343,
+      344,
+      345,
+      346,
+      347,
+      348,
+      349,
+      350,
+      351,
+      352,
+      353,
+      354,
+      355
+     ]
+    },
+    {
+     "file": "src/theory/uf/function_const.cpp",
+     "blob": "b2bde1306a",
+     "old_start": 388,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/theory/uf/function_const.cpp",
+     "blob": "b2bde1306a",
+     "old_start": 417,
+     "old_count": 7,
+     "removed": [
+      420
+     ]
+    }
+   ],
+   "files": [
+    "src/theory/arrays/theory_arrays_rewriter.cpp",
+    "src/theory/uf/function_const.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-aa2797db1fd7",
+   "hunks": [
+    {
+     "file": "src/theory/quantifiers/inst_strategy_mbqi.cpp",
+     "blob": "dd846c511b",
+     "old_start": 22,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/theory/quantifiers/inst_strategy_mbqi.cpp",
+     "blob": "dd846c511b",
+     "old_start": 229,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/theory/quantifiers/inst_strategy_mbqi.cpp",
+     "blob": "dd846c511b",
+     "old_start": 272,
+     "old_count": 7,
+     "removed": [
+      275
+     ]
+    }
+   ],
+   "files": [
+    "src/theory/quantifiers/inst_strategy_mbqi.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-c443eedc46d1",
+   "hunks": [
+    {
+     "file": "src/theory/arith/arith_rewriter.cpp",
+     "blob": "266c432646",
+     "old_start": 552,
+     "old_count": 9,
+     "removed": [
+      555,
+      556,
+      557
+     ]
+    }
+   ],
+   "files": [
+    "src/theory/arith/arith_rewriter.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-c6c6ba5bd904",
+   "hunks": [
+    {
+     "file": "src/preprocessing/passes/learned_rewrite.cpp",
+     "blob": "38abc38bfe",
+     "old_start": 295,
+     "old_count": 7,
+     "removed": [
+      298
+     ]
+    }
+   ],
+   "files": [
+    "src/preprocessing/passes/learned_rewrite.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-cb7581ed4265",
+   "hunks": [
+    {
+     "file": "src/api/cpp/cvc5.cpp",
+     "blob": "2202a4a0c5",
+     "old_start": 7544,
+     "old_count": 9,
+     "removed": [
+      7547,
+      7548,
+      7549
+     ]
+    }
+   ],
+   "files": [
+    "src/api/cpp/cvc5.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-d440f0779a99",
+   "hunks": [
+    {
+     "file": "src/theory/arith/arith_rewriter.cpp",
+     "blob": "15c20def06",
+     "old_start": 594,
+     "old_count": 8,
+     "removed": [
+      597,
+      598
+     ]
+    },
+    {
+     "file": "src/theory/arith/arith_rewriter.cpp",
+     "blob": "15c20def06",
+     "old_start": 613,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/theory/arith/arith_rewriter.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-d73f0189501b",
+   "hunks": [
+    {
+     "file": "src/theory/strings/base_solver.cpp",
+     "blob": "92bac311ad",
+     "old_start": 680,
+     "old_count": 10,
+     "removed": []
+    },
+    {
+     "file": "src/theory/strings/theory_strings.cpp",
+     "blob": "5fed10bc78",
+     "old_start": 320,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/theory/strings/theory_strings.cpp",
+     "blob": "5fed10bc78",
+     "old_start": 327,
+     "old_count": 8,
+     "removed": [
+      330,
+      331
+     ]
+    },
+    {
+     "file": "src/theory/strings/theory_strings.cpp",
+     "blob": "5fed10bc78",
+     "old_start": 356,
+     "old_count": 11,
+     "removed": [
+      359,
+      363
+     ]
+    },
+    {
+     "file": "src/theory/strings/theory_strings.cpp",
+     "blob": "5fed10bc78",
+     "old_start": 462,
+     "old_count": 7,
+     "removed": [
+      465
+     ]
+    },
+    {
+     "file": "src/theory/strings/theory_strings.cpp",
+     "blob": "5fed10bc78",
+     "old_start": 674,
+     "old_count": 9,
+     "removed": [
+      677,
+      679
+     ]
+    }
+   ],
+   "files": [
+    "src/theory/strings/base_solver.cpp",
+    "src/theory/strings/theory_strings.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-d9746c57e9f2",
+   "hunks": [
+    {
+     "file": "src/smt/proof_manager.cpp",
+     "blob": "53fd9f49c3",
+     "old_start": 305,
+     "old_count": 7,
+     "removed": [
+      308
+     ]
+    },
+    {
+     "file": "src/smt/solver_engine.cpp",
+     "blob": "bb199fa9b6",
+     "old_start": 1786,
+     "old_count": 7,
+     "removed": [
+      1789
+     ]
+    },
+    {
+     "file": "src/theory/difficulty_manager.cpp",
+     "blob": "36a6b2c5f0",
+     "old_start": 33,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/theory/difficulty_manager.cpp",
+     "blob": "36a6b2c5f0",
+     "old_start": 47,
+     "old_count": 11,
+     "removed": [
+      50
+     ]
+    },
+    {
+     "file": "src/theory/difficulty_manager.cpp",
+     "blob": "36a6b2c5f0",
+     "old_start": 68,
+     "old_count": 7,
+     "removed": [
+      71
+     ]
+    },
+    {
+     "file": "src/theory/difficulty_manager.cpp",
+     "blob": "36a6b2c5f0",
+     "old_start": 132,
+     "old_count": 20,
+     "removed": [
+      135,
+      136,
+      138,
+      139,
+      140,
+      141,
+      142,
+      144,
+      146,
+      147,
+      148
+     ]
+    },
+    {
+     "file": "src/theory/difficulty_manager.h",
+     "blob": "d946f9403c",
+     "old_start": 46,
+     "old_count": 8,
+     "removed": [
+      50
+     ]
+    },
+    {
+     "file": "src/theory/difficulty_manager.h",
+     "blob": "d946f9403c",
+     "old_start": 79,
+     "old_count": 11,
+     "removed": [
+      82,
+      83,
+      84,
+      85
+     ]
+    },
+    {
+     "file": "src/theory/relevance_manager.cpp",
+     "blob": "0e58d8d315",
+     "old_start": 566,
+     "old_count": 11,
+     "removed": [
+      569,
+      573
+     ]
+    },
+    {
+     "file": "src/theory/relevance_manager.h",
+     "blob": "45bda54303",
+     "old_start": 149,
+     "old_count": 8,
+     "removed": [
+      153
+     ]
+    },
+    {
+     "file": "src/theory/theory_engine.cpp",
+     "blob": "1c082e356c",
+     "old_start": 1146,
+     "old_count": 10,
+     "removed": [
+      1149,
+      1152
+     ]
+    },
+    {
+     "file": "src/theory/theory_engine.h",
+     "blob": "e17e2fb168",
+     "old_start": 391,
+     "old_count": 7,
+     "removed": [
+      394
+     ]
+    }
+   ],
+   "files": [
+    "src/smt/proof_manager.cpp",
+    "src/smt/solver_engine.cpp",
+    "src/theory/difficulty_manager.cpp",
+    "src/theory/difficulty_manager.h",
+    "src/theory/relevance_manager.cpp",
+    "src/theory/relevance_manager.h",
+    "src/theory/theory_engine.cpp",
+    "src/theory/theory_engine.h"
+   ]
+  },
+  {
+   "bug_id": "cvc5-e1ed9a524e71",
+   "hunks": [
+    {
+     "file": "src/preprocessing/passes/int_to_bv.cpp",
+     "blob": "f3b6ab4f76",
+     "old_start": 107,
+     "old_count": 7,
+     "removed": [
+      110
+     ]
+    }
+   ],
+   "files": [
+    "src/preprocessing/passes/int_to_bv.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-ee122a56fa79",
+   "hunks": [
+    {
+     "file": "src/prop/prop_engine.cpp",
+     "blob": "9b6488e441",
+     "old_start": 184,
+     "old_count": 7,
+     "removed": [
+      187
+     ]
+    }
+   ],
+   "files": [
+    "src/prop/prop_engine.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-f0994ce1b268",
+   "hunks": [
+    {
+     "file": "src/theory/ff/theory_ff_rewriter.cpp",
+     "blob": "4eb3be82e7",
+     "old_start": 63,
+     "old_count": 7,
+     "removed": [
+      66
+     ]
+    },
+    {
+     "file": "src/theory/ff/theory_ff_rewriter.cpp",
+     "blob": "4eb3be82e7",
+     "old_start": 220,
+     "old_count": 7,
+     "removed": [
+      223
+     ]
+    }
+   ],
+   "files": [
+    "src/theory/ff/theory_ff_rewriter.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-f218e48e2ada",
+   "hunks": [
+    {
+     "file": "src/theory/strings/sequences_rewriter.cpp",
+     "blob": "b30ffbfe02",
+     "old_start": 2512,
+     "old_count": 7,
+     "removed": [
+      2515
+     ]
+    },
+    {
+     "file": "src/theory/strings/sequences_rewriter.cpp",
+     "blob": "b30ffbfe02",
+     "old_start": 2528,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/theory/strings/sequences_rewriter.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-f313728ce254",
+   "hunks": [
+    {
+     "file": "src/preprocessing/passes/int_to_bv.cpp",
+     "blob": "aa02b45fc8",
+     "old_start": 207,
+     "old_count": 7,
+     "removed": [
+      210
+     ]
+    }
+   ],
+   "files": [
+    "src/preprocessing/passes/int_to_bv.cpp"
+   ]
+  },
+  {
+   "bug_id": "cvc5-ffc998069294",
+   "hunks": [
+    {
+     "file": "src/prop/sat_proof_manager.cpp",
+     "blob": "334afc97d2",
+     "old_start": 154,
+     "old_count": 21,
+     "removed": [
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      171
+     ]
+    },
+    {
+     "file": "src/prop/sat_proof_manager.cpp",
+     "blob": "334afc97d2",
+     "old_start": 259,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/prop/sat_proof_manager.h",
+     "blob": "fa23e47401",
+     "old_start": 414,
+     "old_count": 8,
+     "removed": [
+      418
+     ]
+    }
+   ],
+   "files": [
+    "src/prop/sat_proof_manager.cpp",
+    "src/prop/sat_proof_manager.h"
+   ]
+  }
+ ],
+ "n_bugs": 38,
+ "analysis_units": [
+  {
+   "file": "src/api/cpp/cvc5.cpp",
+   "blob": "2202a4a0c5"
+  },
+  {
+   "file": "src/expr/dtype.cpp",
+   "blob": "2c6ca5292d"
+  },
+  {
+   "file": "src/preprocessing/passes/int_to_bv.cpp",
+   "blob": "aa02b45fc8"
+  },
+  {
+   "file": "src/preprocessing/passes/int_to_bv.cpp",
+   "blob": "f3b6ab4f76"
+  },
+  {
+   "file": "src/preprocessing/passes/learned_rewrite.cpp",
+   "blob": "38abc38bfe"
+  },
+  {
+   "file": "src/preprocessing/passes/learned_rewrite.cpp",
+   "blob": "674ea79c3e"
+  },
+  {
+   "file": "src/preprocessing/passes/non_clausal_simp.cpp",
+   "blob": "cf02c1df2b"
+  },
+  {
+   "file": "src/prop/prop_engine.cpp",
+   "blob": "9b6488e441"
+  },
+  {
+   "file": "src/prop/sat_proof_manager.cpp",
+   "blob": "334afc97d2"
+  },
+  {
+   "file": "src/prop/sat_proof_manager.h",
+   "blob": "fa23e47401"
+  },
+  {
+   "file": "src/smt/proof_manager.cpp",
+   "blob": "53fd9f49c3"
+  },
+  {
+   "file": "src/smt/solver_engine.cpp",
+   "blob": "bb199fa9b6"
+  },
+  {
+   "file": "src/theory/arith/arith_rewriter.cpp",
+   "blob": "0273b9a77d"
+  },
+  {
+   "file": "src/theory/arith/arith_rewriter.cpp",
+   "blob": "15c20def06"
+  },
+  {
+   "file": "src/theory/arith/arith_rewriter.cpp",
+   "blob": "266c432646"
+  },
+  {
+   "file": "src/theory/arith/arith_rewriter.cpp",
+   "blob": "cbc8260"
+  },
+  {
+   "file": "src/theory/arith/linear/theory_arith_private.cpp",
+   "blob": "0ac21586f3"
+  },
+  {
+   "file": "src/theory/arith/nl/ext_theory_callback.cpp",
+   "blob": "bc21c6b4bb"
+  },
+  {
+   "file": "src/theory/arith/nl/nl_model.cpp",
+   "blob": "8e176bcbcc"
+  },
+  {
+   "file": "src/theory/arith/nl/nl_model.h",
+   "blob": "e616f1ab03"
+  },
+  {
+   "file": "src/theory/arith/nl/nonlinear_extension.cpp",
+   "blob": "8be0e145b1"
+  },
+  {
+   "file": "src/theory/arith/nl/transcendental/proof_checker.cpp",
+   "blob": "a9c0807960"
+  },
+  {
+   "file": "src/theory/arith/nl/transcendental/sine_solver.cpp",
+   "blob": "fe7b673a66"
+  },
+  {
+   "file": "src/theory/arith/rewriter/addition.cpp",
+   "blob": "334caba"
+  },
+  {
+   "file": "src/theory/arith/rewriter/addition.h",
+   "blob": "5e9fc03"
+  },
+  {
+   "file": "src/theory/arith/theory_arith.cpp",
+   "blob": "e62f03610c"
+  },
+  {
+   "file": "src/theory/arrays/theory_arrays_rewriter.cpp",
+   "blob": "7af0af6"
+  },
+  {
+   "file": "src/theory/arrays/theory_arrays_rewriter.cpp",
+   "blob": "7af0af62d1"
+  },
+  {
+   "file": "src/theory/arrays/theory_arrays_type_rules.cpp",
+   "blob": "d65ef49197"
+  },
+  {
+   "file": "src/theory/datatypes/infer_proof_cons.cpp",
+   "blob": "ab12ba6d7e"
+  },
+  {
+   "file": "src/theory/datatypes/theory_datatypes.cpp",
+   "blob": "c0ce917aa3"
+  },
+  {
+   "file": "src/theory/difficulty_manager.cpp",
+   "blob": "36a6b2c5f0"
+  },
+  {
+   "file": "src/theory/difficulty_manager.h",
+   "blob": "d946f9403c"
+  },
+  {
+   "file": "src/theory/ff/theory_ff_rewriter.cpp",
+   "blob": "4eb3be82e7"
+  },
+  {
+   "file": "src/theory/quantifiers/ematching/inst_match_generator_simple.cpp",
+   "blob": "4125079160"
+  },
+  {
+   "file": "src/theory/quantifiers/equality_query.cpp",
+   "blob": "475f1e6190"
+  },
+  {
+   "file": "src/theory/quantifiers/fmf/model_engine.cpp",
+   "blob": "cd88d2780d"
+  },
+  {
+   "file": "src/theory/quantifiers/inst_strategy_mbqi.cpp",
+   "blob": "dd846c511b"
+  },
+  {
+   "file": "src/theory/quantifiers/instantiate.cpp",
+   "blob": "334729f71d"
+  },
+  {
+   "file": "src/theory/quantifiers/quant_conflict_find.cpp",
+   "blob": "ad08b3c284"
+  },
+  {
+   "file": "src/theory/quantifiers/quantifiers_rewriter.cpp",
+   "blob": "77731d19a9"
+  },
+  {
+   "file": "src/theory/quantifiers/sygus/ce_guided_single_inv.cpp",
+   "blob": "8083ee374d"
+  },
+  {
+   "file": "src/theory/relevance_manager.cpp",
+   "blob": "0e58d8d315"
+  },
+  {
+   "file": "src/theory/relevance_manager.h",
+   "blob": "45bda54303"
+  },
+  {
+   "file": "src/theory/sets/solver_state.cpp",
+   "blob": "11b16a0bb0"
+  },
+  {
+   "file": "src/theory/sets/theory_sets_private.cpp",
+   "blob": "0362969797"
+  },
+  {
+   "file": "src/theory/sets/theory_sets_rewriter.cpp",
+   "blob": "5522fc6"
+  },
+  {
+   "file": "src/theory/sets/theory_sets_rewriter.h",
+   "blob": "a6bbeb3"
+  },
+  {
+   "file": "src/theory/strings/array_core_solver.cpp",
+   "blob": "8d24a76e18"
+  },
+  {
+   "file": "src/theory/strings/array_core_solver.h",
+   "blob": "cc737a4fbf"
+  },
+  {
+   "file": "src/theory/strings/base_solver.cpp",
+   "blob": "92bac311ad"
+  },
+  {
+   "file": "src/theory/strings/base_solver.cpp",
+   "blob": "b1f19d467e"
+  },
+  {
+   "file": "src/theory/strings/sequences_rewriter.cpp",
+   "blob": "b30ffbfe02"
+  },
+  {
+   "file": "src/theory/strings/sequences_rewriter.cpp",
+   "blob": "cc849bad33"
+  },
+  {
+   "file": "src/theory/strings/term_registry.cpp",
+   "blob": "cda50cce87"
+  },
+  {
+   "file": "src/theory/strings/theory_strings.cpp",
+   "blob": "5fed10bc78"
+  },
+  {
+   "file": "src/theory/strings/theory_strings_type_rules.cpp",
+   "blob": "d6ea754a6a"
+  },
+  {
+   "file": "src/theory/substitutions.cpp",
+   "blob": "d29c7542e9"
+  },
+  {
+   "file": "src/theory/theory_engine.cpp",
+   "blob": "1c082e356c"
+  },
+  {
+   "file": "src/theory/theory_engine.h",
+   "blob": "e17e2fb168"
+  },
+  {
+   "file": "src/theory/theory_model_builder.cpp",
+   "blob": "b6be496bce"
+  },
+  {
+   "file": "src/theory/uf/function_const.cpp",
+   "blob": "b2bde1306a"
+  }
+ ],
+ "n_units": 62,
+ "bug_files": [
+  "src/api/cpp/cvc5.cpp",
+  "src/expr/dtype.cpp",
+  "src/preprocessing/passes/int_to_bv.cpp",
+  "src/preprocessing/passes/learned_rewrite.cpp",
+  "src/preprocessing/passes/non_clausal_simp.cpp",
+  "src/prop/prop_engine.cpp",
+  "src/prop/sat_proof_manager.cpp",
+  "src/prop/sat_proof_manager.h",
+  "src/smt/proof_manager.cpp",
+  "src/smt/solver_engine.cpp",
+  "src/theory/arith/arith_rewriter.cpp",
+  "src/theory/arith/linear/theory_arith_private.cpp",
+  "src/theory/arith/nl/ext_theory_callback.cpp",
+  "src/theory/arith/nl/nl_model.cpp",
+  "src/theory/arith/nl/nl_model.h",
+  "src/theory/arith/nl/nonlinear_extension.cpp",
+  "src/theory/arith/nl/transcendental/proof_checker.cpp",
+  "src/theory/arith/nl/transcendental/sine_solver.cpp",
+  "src/theory/arith/rewriter/addition.cpp",
+  "src/theory/arith/rewriter/addition.h",
+  "src/theory/arith/theory_arith.cpp",
+  "src/theory/arrays/theory_arrays_rewriter.cpp",
+  "src/theory/arrays/theory_arrays_type_rules.cpp",
+  "src/theory/datatypes/infer_proof_cons.cpp",
+  "src/theory/datatypes/theory_datatypes.cpp",
+  "src/theory/difficulty_manager.cpp",
+  "src/theory/difficulty_manager.h",
+  "src/theory/ff/theory_ff_rewriter.cpp",
+  "src/theory/quantifiers/ematching/inst_match_generator_simple.cpp",
+  "src/theory/quantifiers/equality_query.cpp",
+  "src/theory/quantifiers/fmf/model_engine.cpp",
+  "src/theory/quantifiers/inst_strategy_mbqi.cpp",
+  "src/theory/quantifiers/instantiate.cpp",
+  "src/theory/quantifiers/quant_conflict_find.cpp",
+  "src/theory/quantifiers/quantifiers_rewriter.cpp",
+  "src/theory/quantifiers/sygus/ce_guided_single_inv.cpp",
+  "src/theory/relevance_manager.cpp",
+  "src/theory/relevance_manager.h",
+  "src/theory/sets/solver_state.cpp",
+  "src/theory/sets/theory_sets_private.cpp",
+  "src/theory/sets/theory_sets_rewriter.cpp",
+  "src/theory/sets/theory_sets_rewriter.h",
+  "src/theory/strings/array_core_solver.cpp",
+  "src/theory/strings/array_core_solver.h",
+  "src/theory/strings/base_solver.cpp",
+  "src/theory/strings/sequences_rewriter.cpp",
+  "src/theory/strings/term_registry.cpp",
+  "src/theory/strings/theory_strings.cpp",
+  "src/theory/strings/theory_strings_type_rules.cpp",
+  "src/theory/substitutions.cpp",
+  "src/theory/theory_engine.cpp",
+  "src/theory/theory_engine.h",
+  "src/theory/theory_model_builder.cpp",
+  "src/theory/uf/function_const.cpp"
+ ]
+}

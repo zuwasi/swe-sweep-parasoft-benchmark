@@ -1,0 +1,749 @@
+{
+ "repo": "hdf5",
+ "clone_url": "https://github.com/HDFGroup/hdf5.git",
+ "upstream_commit": "9f7399e15e6172900e0591deb5a57a45769d8205",
+ "base_ref": "hdf5-1_10_8",
+ "n_subtasks": 14,
+ "bugs": [
+  {
+   "bug_id": "hdf5-336148f0f3e2",
+   "hunks": [
+    {
+     "file": "src/H5A.c",
+     "blob": "9402432",
+     "old_start": 790,
+     "old_count": 7,
+     "removed": [
+      793
+     ]
+    },
+    {
+     "file": "src/H5A.c",
+     "blob": "9402432",
+     "old_start": 801,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/H5A.c",
+     "blob": "9402432",
+     "old_start": 843,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/H5F.c",
+     "blob": "28fa8af",
+     "old_start": 989,
+     "old_count": 19,
+     "removed": [
+      992,
+      993,
+      994,
+      995,
+      996,
+      997,
+      998,
+      1002,
+      1003,
+      1004
+     ]
+    },
+    {
+     "file": "src/H5F.c",
+     "blob": "28fa8af",
+     "old_start": 1014,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/H5Gdeprec.c",
+     "blob": "75e47d4",
+     "old_start": 996,
+     "old_count": 19,
+     "removed": [
+      999,
+      1000,
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1008,
+      1010,
+      1011
+     ]
+    },
+    {
+     "file": "src/H5Gdeprec.c",
+     "blob": "75e47d4",
+     "old_start": 1025,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/H5I.c",
+     "blob": "75678c7",
+     "old_start": 772,
+     "old_count": 19,
+     "removed": [
+      775,
+      777,
+      780,
+      781,
+      782,
+      783,
+      784,
+      785,
+      786,
+      787
+     ]
+    },
+    {
+     "file": "src/H5I.c",
+     "blob": "75678c7",
+     "old_start": 797,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/H5L.c",
+     "blob": "36ac3f4",
+     "old_start": 1054,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/H5R.c",
+     "blob": "c1a4128",
+     "old_start": 302,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/H5R.c",
+     "blob": "c1a4128",
+     "old_start": 332,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/H5A.c",
+    "src/H5F.c",
+    "src/H5Gdeprec.c",
+    "src/H5I.c",
+    "src/H5L.c",
+    "src/H5R.c"
+   ]
+  },
+  {
+   "bug_id": "hdf5-3d50b7243378",
+   "hunks": [
+    {
+     "file": "src/H5Aint.c",
+     "blob": "49d1bc410bf",
+     "old_start": 626,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/H5Aint.c",
+     "blob": "49d1bc410bf",
+     "old_start": 635,
+     "old_count": 12,
+     "removed": [
+      638,
+      639
+     ]
+    },
+    {
+     "file": "src/H5Aint.c",
+     "blob": "49d1bc410bf",
+     "old_start": 699,
+     "old_count": 9,
+     "removed": [
+      702,
+      703,
+      704
+     ]
+    },
+    {
+     "file": "src/H5Aint.c",
+     "blob": "49d1bc410bf",
+     "old_start": 727,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/H5Aint.c",
+     "blob": "49d1bc410bf",
+     "old_start": 735,
+     "old_count": 12,
+     "removed": [
+      738,
+      739
+     ]
+    },
+    {
+     "file": "src/H5Aint.c",
+     "blob": "49d1bc410bf",
+     "old_start": 751,
+     "old_count": 7,
+     "removed": [
+      754
+     ]
+    },
+    {
+     "file": "src/H5Aint.c",
+     "blob": "49d1bc410bf",
+     "old_start": 777,
+     "old_count": 7,
+     "removed": [
+      780
+     ]
+    }
+   ],
+   "files": [
+    "src/H5Aint.c"
+   ]
+  },
+  {
+   "bug_id": "hdf5-410d9d0e6a1f",
+   "hunks": [
+    {
+     "file": "src/H5Tconv.c",
+     "blob": "0c2ae4d",
+     "old_start": 3065,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/H5Tconv.c",
+     "blob": "0c2ae4d",
+     "old_start": 3101,
+     "old_count": 7,
+     "removed": [
+      3104
+     ]
+    },
+    {
+     "file": "src/H5Tconv.c",
+     "blob": "0c2ae4d",
+     "old_start": 3375,
+     "old_count": 24,
+     "removed": [
+      3378,
+      3379,
+      3380,
+      3382,
+      3384,
+      3385,
+      3386,
+      3387,
+      3388,
+      3389,
+      3390,
+      3391,
+      3392,
+      3393,
+      3394,
+      3395
+     ]
+    }
+   ],
+   "files": [
+    "src/H5Tconv.c"
+   ]
+  },
+  {
+   "bug_id": "hdf5-46ec0c6c502b",
+   "hunks": [
+    {
+     "file": "src/H5Aint.c",
+     "blob": "2a731f41c84",
+     "old_start": 624,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/H5Aint.c",
+     "blob": "2a731f41c84",
+     "old_start": 633,
+     "old_count": 12,
+     "removed": [
+      636,
+      637
+     ]
+    },
+    {
+     "file": "src/H5Aint.c",
+     "blob": "2a731f41c84",
+     "old_start": 689,
+     "old_count": 9,
+     "removed": [
+      692,
+      693,
+      694
+     ]
+    },
+    {
+     "file": "src/H5Aint.c",
+     "blob": "2a731f41c84",
+     "old_start": 725,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/H5Aint.c",
+     "blob": "2a731f41c84",
+     "old_start": 733,
+     "old_count": 12,
+     "removed": [
+      736,
+      737
+     ]
+    },
+    {
+     "file": "src/H5Aint.c",
+     "blob": "2a731f41c84",
+     "old_start": 749,
+     "old_count": 7,
+     "removed": [
+      752
+     ]
+    },
+    {
+     "file": "src/H5Aint.c",
+     "blob": "2a731f41c84",
+     "old_start": 775,
+     "old_count": 7,
+     "removed": [
+      778
+     ]
+    }
+   ],
+   "files": [
+    "src/H5Aint.c"
+   ]
+  },
+  {
+   "bug_id": "hdf5-50b75316c1c9",
+   "hunks": [
+    {
+     "file": "src/H5Shyper.c",
+     "blob": "5b9027a96cd",
+     "old_start": 8571,
+     "old_count": 14,
+     "removed": [
+      8574,
+      8581
+     ]
+    }
+   ],
+   "files": [
+    "src/H5Shyper.c"
+   ]
+  },
+  {
+   "bug_id": "hdf5-553ad641d344",
+   "hunks": [
+    {
+     "file": "src/H5Fint.c",
+     "blob": "c8e2cad",
+     "old_start": 1467,
+     "old_count": 7,
+     "removed": [
+      1470
+     ]
+    },
+    {
+     "file": "src/H5Fint.c",
+     "blob": "c8e2cad",
+     "old_start": 2166,
+     "old_count": 35,
+     "removed": [
+      2169,
+      2170,
+      2172,
+      2173,
+      2174,
+      2175,
+      2176,
+      2177,
+      2178,
+      2179,
+      2180,
+      2181,
+      2182,
+      2183,
+      2184,
+      2185,
+      2186,
+      2188,
+      2189,
+      2190,
+      2192,
+      2193,
+      2195,
+      2196,
+      2197
+     ]
+    },
+    {
+     "file": "tools/src/misc/h5debug.c",
+     "blob": "95c81b7",
+     "old_start": 809,
+     "old_count": 8,
+     "removed": [
+      812,
+      813
+     ]
+    }
+   ],
+   "files": [
+    "src/H5Fint.c",
+    "tools/src/misc/h5debug.c"
+   ]
+  },
+  {
+   "bug_id": "hdf5-699a00aef417",
+   "hunks": [
+    {
+     "file": "src/H5Aint.c",
+     "blob": "74c48d6f35d",
+     "old_start": 496,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/H5Aint.c"
+   ]
+  },
+  {
+   "bug_id": "hdf5-88382b2cfcd4",
+   "hunks": [
+    {
+     "file": "src/H5T.c",
+     "blob": "a02abfc18d0",
+     "old_start": 5149,
+     "old_count": 10,
+     "removed": [
+      5152,
+      5153,
+      5154,
+      5155
+     ]
+    },
+    {
+     "file": "src/H5T.c",
+     "blob": "a02abfc18d0",
+     "old_start": 5161,
+     "old_count": 8,
+     "removed": [
+      5164,
+      5165
+     ]
+    },
+    {
+     "file": "src/H5T.c",
+     "blob": "a02abfc18d0",
+     "old_start": 5178,
+     "old_count": 7,
+     "removed": [
+      5181
+     ]
+    }
+   ],
+   "files": [
+    "src/H5T.c"
+   ]
+  },
+  {
+   "bug_id": "hdf5-8b449df9cbdd",
+   "hunks": [
+    {
+     "file": "src/H5Tfloat.c",
+     "blob": null,
+     "old_start": 113,
+     "old_count": 11,
+     "removed": [
+      116,
+      118,
+      120
+     ]
+    }
+   ],
+   "files": [
+    "src/H5Tfloat.c"
+   ]
+  },
+  {
+   "bug_id": "hdf5-aa1b6edb1d73",
+   "hunks": [
+    {
+     "file": "src/H5T.c",
+     "blob": "3185774",
+     "old_start": 1845,
+     "old_count": 7,
+     "removed": [
+      1848
+     ]
+    },
+    {
+     "file": "src/H5T.c",
+     "blob": "3185774",
+     "old_start": 2678,
+     "old_count": 8,
+     "removed": [
+      2681,
+      2682
+     ]
+    },
+    {
+     "file": "src/H5T.c",
+     "blob": "3185774",
+     "old_start": 2704,
+     "old_count": 8,
+     "removed": [
+      2707,
+      2708
+     ]
+    },
+    {
+     "file": "src/H5T.c",
+     "blob": "3185774",
+     "old_start": 3063,
+     "old_count": 7,
+     "removed": [
+      3066
+     ]
+    },
+    {
+     "file": "src/H5T.c",
+     "blob": "3185774",
+     "old_start": 3114,
+     "old_count": 7,
+     "removed": [
+      3117
+     ]
+    },
+    {
+     "file": "src/H5T.c",
+     "blob": "3185774",
+     "old_start": 3462,
+     "old_count": 21,
+     "removed": [
+      3465,
+      3466,
+      3467,
+      3468,
+      3469,
+      3470,
+      3471,
+      3472,
+      3473,
+      3474,
+      3475,
+      3476,
+      3477,
+      3478,
+      3479
+     ]
+    },
+    {
+     "file": "src/H5T.c",
+     "blob": "3185774",
+     "old_start": 5089,
+     "old_count": 7,
+     "removed": [
+      5092
+     ]
+    },
+    {
+     "file": "src/H5Tcompound.c",
+     "blob": "e6a0e4e",
+     "old_start": 470,
+     "old_count": 10,
+     "removed": [
+      473,
+      476
+     ]
+    }
+   ],
+   "files": [
+    "src/H5T.c",
+    "src/H5Tcompound.c"
+   ]
+  },
+  {
+   "bug_id": "hdf5-aefd1d02488b",
+   "hunks": [
+    {
+     "file": "src/H5Shyper.c",
+     "blob": "cf22f2503db",
+     "old_start": 8791,
+     "old_count": 14,
+     "removed": [
+      8794,
+      8801
+     ]
+    }
+   ],
+   "files": [
+    "src/H5Shyper.c"
+   ]
+  },
+  {
+   "bug_id": "hdf5-bcc7226672c8",
+   "hunks": [
+    {
+     "file": "src/H5Shyper.c",
+     "blob": "0e668901f5d",
+     "old_start": 8796,
+     "old_count": 14,
+     "removed": [
+      8799,
+      8806
+     ]
+    }
+   ],
+   "files": [
+    "src/H5Shyper.c"
+   ]
+  },
+  {
+   "bug_id": "hdf5-cd22c0502f29",
+   "hunks": [
+    {
+     "file": "src/H5Shyper.c",
+     "blob": "11202da8a68",
+     "old_start": 10699,
+     "old_count": 7,
+     "removed": [
+      10702
+     ]
+    }
+   ],
+   "files": [
+    "src/H5Shyper.c"
+   ]
+  },
+  {
+   "bug_id": "hdf5-fe3e4ec13a61",
+   "hunks": [
+    {
+     "file": "src/H5Aint.c",
+     "blob": "b3770227e92",
+     "old_start": 721,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/H5Aint.c"
+   ]
+  }
+ ],
+ "n_bugs": 14,
+ "analysis_units": [
+  {
+   "file": "src/H5A.c",
+   "blob": "9402432"
+  },
+  {
+   "file": "src/H5Aint.c",
+   "blob": "2a731f41c84"
+  },
+  {
+   "file": "src/H5Aint.c",
+   "blob": "49d1bc410bf"
+  },
+  {
+   "file": "src/H5Aint.c",
+   "blob": "74c48d6f35d"
+  },
+  {
+   "file": "src/H5Aint.c",
+   "blob": "b3770227e92"
+  },
+  {
+   "file": "src/H5F.c",
+   "blob": "28fa8af"
+  },
+  {
+   "file": "src/H5Fint.c",
+   "blob": "c8e2cad"
+  },
+  {
+   "file": "src/H5Gdeprec.c",
+   "blob": "75e47d4"
+  },
+  {
+   "file": "src/H5I.c",
+   "blob": "75678c7"
+  },
+  {
+   "file": "src/H5L.c",
+   "blob": "36ac3f4"
+  },
+  {
+   "file": "src/H5R.c",
+   "blob": "c1a4128"
+  },
+  {
+   "file": "src/H5Shyper.c",
+   "blob": "0e668901f5d"
+  },
+  {
+   "file": "src/H5Shyper.c",
+   "blob": "11202da8a68"
+  },
+  {
+   "file": "src/H5Shyper.c",
+   "blob": "5b9027a96cd"
+  },
+  {
+   "file": "src/H5Shyper.c",
+   "blob": "cf22f2503db"
+  },
+  {
+   "file": "src/H5T.c",
+   "blob": "3185774"
+  },
+  {
+   "file": "src/H5T.c",
+   "blob": "a02abfc18d0"
+  },
+  {
+   "file": "src/H5Tcompound.c",
+   "blob": "e6a0e4e"
+  },
+  {
+   "file": "src/H5Tconv.c",
+   "blob": "0c2ae4d"
+  },
+  {
+   "file": "tools/src/misc/h5debug.c",
+   "blob": "95c81b7"
+  }
+ ],
+ "n_units": 20,
+ "bug_files": [
+  "src/H5A.c",
+  "src/H5Aint.c",
+  "src/H5F.c",
+  "src/H5Fint.c",
+  "src/H5Gdeprec.c",
+  "src/H5I.c",
+  "src/H5L.c",
+  "src/H5R.c",
+  "src/H5Shyper.c",
+  "src/H5T.c",
+  "src/H5Tcompound.c",
+  "src/H5Tconv.c",
+  "tools/src/misc/h5debug.c"
+ ]
+}

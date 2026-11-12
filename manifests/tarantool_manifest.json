@@ -1,0 +1,2046 @@
+{
+ "repo": "tarantool",
+ "clone_url": "https://github.com/tarantool/tarantool.git",
+ "upstream_commit": "9f7399e15e6172900e0591deb5a57a45769d8205",
+ "base_ref": "2.10.0",
+ "n_subtasks": 40,
+ "bugs": [
+  {
+   "bug_id": "tarantool-02d1749c6bfb",
+   "hunks": [
+    {
+     "file": "src/lib/core/prbuf.c",
+     "blob": "0f6f8c0942",
+     "old_start": 206,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/lib/core/prbuf.c"
+   ]
+  },
+  {
+   "bug_id": "tarantool-067eeb123c0e",
+   "hunks": [
+    {
+     "file": "src/box/memtx_hash.cc",
+     "blob": "3b64207faa",
+     "old_start": 516,
+     "old_count": 7,
+     "removed": [
+      519
+     ]
+    },
+    {
+     "file": "src/box/memtx_hash.cc",
+     "blob": "3b64207faa",
+     "old_start": 542,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/box/memtx_hash.cc"
+   ]
+  },
+  {
+   "bug_id": "tarantool-0b1d99f9080c",
+   "hunks": [
+    {
+     "file": "src/box/lua/schema.lua",
+     "blob": "afcdf69c5a",
+     "old_start": 3323,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/box/lua/schema.lua"
+   ]
+  },
+  {
+   "bug_id": "tarantool-0e02e4373959",
+   "hunks": [
+    {
+     "file": "src/box/sql/expr.c",
+     "blob": "e7518c57b6",
+     "old_start": 413,
+     "old_count": 11,
+     "removed": [
+      416,
+      417,
+      419,
+      420
+     ]
+    }
+   ],
+   "files": [
+    "src/box/sql/expr.c"
+   ]
+  },
+  {
+   "bug_id": "tarantool-0e3671b1b049",
+   "hunks": [
+    {
+     "file": "src/box/lua/load_cfg.lua",
+     "blob": "cb4974d9f0",
+     "old_start": 6,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/box/lua/load_cfg.lua",
+     "blob": "cb4974d9f0",
+     "old_start": 806,
+     "old_count": 7,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/box/lua/load_cfg.lua"
+   ]
+  },
+  {
+   "bug_id": "tarantool-217abe7a70be",
+   "hunks": [
+    {
+     "file": "src/box/sql/where.c",
+     "blob": "3ff12ccc4b",
+     "old_start": 4606,
+     "old_count": 10,
+     "removed": [
+      4609
+     ]
+    }
+   ],
+   "files": [
+    "src/box/sql/where.c"
+   ]
+  },
+  {
+   "bug_id": "tarantool-3203ce795485",
+   "hunks": [
+    {
+     "file": "src/lib/tzcode/strftime.c",
+     "blob": "9bb437e240",
+     "old_start": 41,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/lib/tzcode/strftime.c",
+     "blob": "9bb437e240",
+     "old_start": 277,
+     "old_count": 8,
+     "removed": [
+      280,
+      281
+     ]
+    },
+    {
+     "file": "src/lib/tzcode/strftime.c",
+     "blob": "9bb437e240",
+     "old_start": 300,
+     "old_count": 7,
+     "removed": [
+      303
+     ]
+    }
+   ],
+   "files": [
+    "src/lib/tzcode/strftime.c"
+   ]
+  },
+  {
+   "bug_id": "tarantool-35044a57ea04",
+   "hunks": [
+    {
+     "file": "src/lua/fiber.c",
+     "blob": "1fd74a6844",
+     "old_start": 317,
+     "old_count": 15,
+     "removed": [
+      320,
+      322,
+      324,
+      325,
+      328
+     ]
+    },
+    {
+     "file": "src/lua/fiber.c",
+     "blob": "1fd74a6844",
+     "old_start": 358,
+     "old_count": 7,
+     "removed": [
+      361
+     ]
+    },
+    {
+     "file": "src/lua/fiber.c",
+     "blob": "1fd74a6844",
+     "old_start": 519,
+     "old_count": 7,
+     "removed": [
+      522
+     ]
+    }
+   ],
+   "files": [
+    "src/lua/fiber.c"
+   ]
+  },
+  {
+   "bug_id": "tarantool-354f1a67549b",
+   "hunks": [
+    {
+     "file": "src/box/tuple_constraint_def.c",
+     "blob": "586d396031",
+     "old_start": 103,
+     "old_count": 7,
+     "removed": [
+      106
+     ]
+    },
+    {
+     "file": "src/box/tuple_constraint_def.c",
+     "blob": "586d396031",
+     "old_start": 117,
+     "old_count": 7,
+     "removed": [
+      120
+     ]
+    },
+    {
+     "file": "src/box/tuple_constraint_def.c",
+     "blob": "586d396031",
+     "old_start": 268,
+     "old_count": 7,
+     "removed": [
+      271
+     ]
+    },
+    {
+     "file": "src/box/tuple_constraint_def.c",
+     "blob": "586d396031",
+     "old_start": 279,
+     "old_count": 7,
+     "removed": [
+      282
+     ]
+    }
+   ],
+   "files": [
+    "src/box/tuple_constraint_def.c"
+   ]
+  },
+  {
+   "bug_id": "tarantool-39735317fbaf",
+   "hunks": [
+    {
+     "file": "src/box/sql/util.c",
+     "blob": "c556b9815e",
+     "old_start": 80,
+     "old_count": 8,
+     "removed": [
+      83,
+      84
+     ]
+    },
+    {
+     "file": "src/box/sql/util.c",
+     "blob": "c556b9815e",
+     "old_start": 102,
+     "old_count": 19,
+     "removed": [
+      105,
+      110,
+      111,
+      117
+     ]
+    }
+   ],
+   "files": [
+    "src/box/sql/util.c"
+   ]
+  },
+  {
+   "bug_id": "tarantool-40d35b1255f4",
+   "hunks": [
+    {
+     "file": "src/box/sql/util.c",
+     "blob": "7f81821cc2",
+     "old_start": 1093,
+     "old_count": 7,
+     "removed": [
+      1096
+     ]
+    }
+   ],
+   "files": [
+    "src/box/sql/util.c"
+   ]
+  },
+  {
+   "bug_id": "tarantool-452a757c1c97",
+   "hunks": [
+    {
+     "file": "src/box/lua/stat.c",
+     "blob": "60a3d26fb0",
+     "old_start": 242,
+     "old_count": 7,
+     "removed": [
+      245
+     ]
+    }
+   ],
+   "files": [
+    "src/box/lua/stat.c"
+   ]
+  },
+  {
+   "bug_id": "tarantool-46aa6eb83fb9",
+   "hunks": [
+    {
+     "file": "src/box/sql/alter.c",
+     "blob": "54a8d5b80f",
+     "old_start": 129,
+     "old_count": 8,
+     "removed": [
+      132,
+      133
+     ]
+    },
+    {
+     "file": "src/box/sql/build.c",
+     "blob": "4b0f9b15c6",
+     "old_start": 461,
+     "old_count": 8,
+     "removed": [
+      464,
+      465
+     ]
+    },
+    {
+     "file": "src/box/sql/build.c",
+     "blob": "4b0f9b15c6",
+     "old_start": 879,
+     "old_count": 8,
+     "removed": [
+      882,
+      883
+     ]
+    },
+    {
+     "file": "src/box/sql/build.c",
+     "blob": "4b0f9b15c6",
+     "old_start": 2934,
+     "old_count": 9,
+     "removed": [
+      2937,
+      2938,
+      2939
+     ]
+    },
+    {
+     "file": "src/box/sql/delete.c",
+     "blob": "6c190c161b",
+     "old_start": 358,
+     "old_count": 8,
+     "removed": [
+      361,
+      362
+     ]
+    },
+    {
+     "file": "src/box/sql/insert.c",
+     "blob": "2bbe7b5df0",
+     "old_start": 102,
+     "old_count": 14,
+     "removed": [
+      105,
+      112
+     ]
+    },
+    {
+     "file": "src/box/sql/insert.c",
+     "blob": "2bbe7b5df0",
+     "old_start": 120,
+     "old_count": 13,
+     "removed": [
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129
+     ]
+    },
+    {
+     "file": "src/box/sql/insert.c",
+     "blob": "2bbe7b5df0",
+     "old_start": 400,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/box/sql/insert.c",
+     "blob": "2bbe7b5df0",
+     "old_start": 477,
+     "old_count": 7,
+     "removed": [
+      480
+     ]
+    },
+    {
+     "file": "src/box/sql/insert.c",
+     "blob": "2bbe7b5df0",
+     "old_start": 760,
+     "old_count": 7,
+     "removed": [
+      763
+     ]
+    },
+    {
+     "file": "src/box/sql/insert.c",
+     "blob": "2bbe7b5df0",
+     "old_start": 971,
+     "old_count": 7,
+     "removed": [
+      974
+     ]
+    },
+    {
+     "file": "src/box/sql/insert.c",
+     "blob": "2bbe7b5df0",
+     "old_start": 981,
+     "old_count": 9,
+     "removed": [
+      984,
+      986
+     ]
+    },
+    {
+     "file": "src/box/sql/insert.c",
+     "blob": "2bbe7b5df0",
+     "old_start": 1217,
+     "old_count": 16,
+     "removed": [
+      1220,
+      1222,
+      1228,
+      1229
+     ]
+    },
+    {
+     "file": "src/box/sql/insert.c",
+     "blob": "2bbe7b5df0",
+     "old_start": 1238,
+     "old_count": 8,
+     "removed": [
+      1241,
+      1243
+     ]
+    },
+    {
+     "file": "src/box/sql/sqlInt.h",
+     "blob": "2aec7abf3d",
+     "old_start": 3197,
+     "old_count": 16,
+     "removed": [
+      3201,
+      3202,
+      3203,
+      3204,
+      3205,
+      3206,
+      3209
+     ]
+    },
+    {
+     "file": "src/box/sql/sqlInt.h",
+     "blob": "2aec7abf3d",
+     "old_start": 3215,
+     "old_count": 7,
+     "removed": [
+      3218
+     ]
+    },
+    {
+     "file": "src/box/sql/trigger.c",
+     "blob": "8af71b3a5d",
+     "old_start": 193,
+     "old_count": 9,
+     "removed": [
+      196,
+      197,
+      198
+     ]
+    },
+    {
+     "file": "src/box/sql/trigger.c",
+     "blob": "8af71b3a5d",
+     "old_start": 227,
+     "old_count": 9,
+     "removed": [
+      230,
+      231,
+      232
+     ]
+    },
+    {
+     "file": "src/box/sql/update.c",
+     "blob": "581457f02f",
+     "old_start": 274,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/box/sql/update.c",
+     "blob": "581457f02f",
+     "old_start": 419,
+     "old_count": 9,
+     "removed": [
+      422,
+      423,
+      424
+     ]
+    },
+    {
+     "file": "src/box/sql/update.c",
+     "blob": "581457f02f",
+     "old_start": 451,
+     "old_count": 8,
+     "removed": [
+      454,
+      455
+     ]
+    },
+    {
+     "file": "src/box/sql/vdbe.c",
+     "blob": "fe8ad12ebd",
+     "old_start": 2270,
+     "old_count": 37,
+     "removed": [
+      2273,
+      2274,
+      2276,
+      2277,
+      2278,
+      2279,
+      2280,
+      2281,
+      2282,
+      2284,
+      2285,
+      2286,
+      2287,
+      2288,
+      2289,
+      2290,
+      2291,
+      2292,
+      2293,
+      2294,
+      2295,
+      2297,
+      2298,
+      2299,
+      2300,
+      2301,
+      2302,
+      2303
+     ]
+    },
+    {
+     "file": "src/box/sql/vdbe.c",
+     "blob": "fe8ad12ebd",
+     "old_start": 2308,
+     "old_count": 11,
+     "removed": [
+      2311,
+      2312,
+      2313,
+      2314,
+      2315
+     ]
+    },
+    {
+     "file": "src/box/sql/vdbe.c",
+     "blob": "fe8ad12ebd",
+     "old_start": 2336,
+     "old_count": 11,
+     "removed": [
+      2339
+     ]
+    },
+    {
+     "file": "src/box/sql/vdbe.c",
+     "blob": "fe8ad12ebd",
+     "old_start": 3369,
+     "old_count": 25,
+     "removed": [
+      3372,
+      3376,
+      3377,
+      3383,
+      3390
+     ]
+    },
+    {
+     "file": "src/box/sql/vdbe.c",
+     "blob": "fe8ad12ebd",
+     "old_start": 3397,
+     "old_count": 11,
+     "removed": [
+      3400,
+      3401,
+      3402,
+      3403,
+      3404
+     ]
+    },
+    {
+     "file": "src/box/sql/vdbe.c",
+     "blob": "fe8ad12ebd",
+     "old_start": 3468,
+     "old_count": 7,
+     "removed": [
+      3471
+     ]
+    },
+    {
+     "file": "src/box/sql/vdbe.c",
+     "blob": "fe8ad12ebd",
+     "old_start": 3481,
+     "old_count": 8,
+     "removed": [
+      3484,
+      3485
+     ]
+    },
+    {
+     "file": "src/box/sql/vdbe.h",
+     "blob": "7a574f7eda",
+     "old_start": 86,
+     "old_count": 8,
+     "removed": [
+      89,
+      90
+     ]
+    },
+    {
+     "file": "src/box/sql/vdbe.h",
+     "blob": "7a574f7eda",
+     "old_start": 142,
+     "old_count": 7,
+     "removed": [
+      145
+     ]
+    },
+    {
+     "file": "src/box/sql/vdbeaux.c",
+     "blob": "b613c0b3f7",
+     "old_start": 1093,
+     "old_count": 10,
+     "removed": [
+      1096,
+      1097,
+      1098,
+      1099
+     ]
+    },
+    {
+     "file": "src/box/sql/where.c",
+     "blob": "6d8d2660f3",
+     "old_start": 4625,
+     "old_count": 7,
+     "removed": [
+      4628
+     ]
+    }
+   ],
+   "files": [
+    "src/box/sql/alter.c",
+    "src/box/sql/build.c",
+    "src/box/sql/delete.c",
+    "src/box/sql/insert.c",
+    "src/box/sql/sqlInt.h",
+    "src/box/sql/trigger.c",
+    "src/box/sql/update.c",
+    "src/box/sql/vdbe.c",
+    "src/box/sql/vdbe.h",
+    "src/box/sql/vdbeaux.c",
+    "src/box/sql/where.c"
+   ]
+  },
+  {
+   "bug_id": "tarantool-46b0022d552a",
+   "hunks": [
+    {
+     "file": "src/box/tuple_compare.cc",
+     "blob": "11d9919df8",
+     "old_start": 235,
+     "old_count": 34,
+     "removed": [
+      247,
+      253,
+      259,
+      265
+     ]
+    },
+    {
+     "file": "src/box/tuple_compare.cc",
+     "blob": "11d9919df8",
+     "old_start": 271,
+     "old_count": 7,
+     "removed": [
+      274
+     ]
+    },
+    {
+     "file": "src/box/tuple_compare.cc",
+     "blob": "11d9919df8",
+     "old_start": 281,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/box/tuple_compare.cc"
+   ]
+  },
+  {
+   "bug_id": "tarantool-4753065c09ed",
+   "hunks": [
+    {
+     "file": "src/box/lua/merger.c",
+     "blob": "91a77b2ae3",
+     "old_start": 1025,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/box/lua/merger.c",
+     "blob": "91a77b2ae3",
+     "old_start": 1034,
+     "old_count": 17,
+     "removed": [
+      1037,
+      1038,
+      1039,
+      1040
+     ]
+    }
+   ],
+   "files": [
+    "src/box/lua/merger.c"
+   ]
+  },
+  {
+   "bug_id": "tarantool-4e1bd4f2ca09",
+   "hunks": [
+    {
+     "file": "src/box/lua/net_box.lua",
+     "blob": "c08fb02ac5",
+     "old_start": 389,
+     "old_count": 12,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/box/lua/net_box.lua"
+   ]
+  },
+  {
+   "bug_id": "tarantool-4f3f87493c3a",
+   "hunks": [
+    {
+     "file": "src/box/applier.cc",
+     "blob": "f30d9f2f77",
+     "old_start": 357,
+     "old_count": 7,
+     "removed": [
+      360
+     ]
+    }
+   ],
+   "files": [
+    "src/box/applier.cc"
+   ]
+  },
+  {
+   "bug_id": "tarantool-67319bd2abd7",
+   "hunks": [
+    {
+     "file": "src/box/sql/select.c",
+     "blob": "1a33008879",
+     "old_start": 270,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/box/sql/select.c",
+     "blob": "1a33008879",
+     "old_start": 1262,
+     "old_count": 18,
+     "removed": [
+      1265,
+      1266,
+      1267,
+      1268,
+      1269,
+      1270,
+      1271
+     ]
+    }
+   ],
+   "files": [
+    "src/box/sql/select.c"
+   ]
+  },
+  {
+   "bug_id": "tarantool-7516474ad8c9",
+   "hunks": [
+    {
+     "file": "src/box/xrow_update_route.c",
+     "blob": "0352aec635",
+     "old_start": 209,
+     "old_count": 12,
+     "removed": [
+      214,
+      217
+     ]
+    },
+    {
+     "file": "src/box/xrow_update_route.c",
+     "blob": "0352aec635",
+     "old_start": 229,
+     "old_count": 11,
+     "removed": [
+      232,
+      233,
+      234,
+      235,
+      236
+     ]
+    }
+   ],
+   "files": [
+    "src/box/xrow_update_route.c"
+   ]
+  },
+  {
+   "bug_id": "tarantool-7530007077a3",
+   "hunks": [
+    {
+     "file": "src/box/index_def.c",
+     "blob": "79394b8e54",
+     "old_start": 97,
+     "old_count": 13,
+     "removed": [
+      100,
+      101,
+      102,
+      103,
+      106
+     ]
+    },
+    {
+     "file": "src/box/memtx_tree.cc",
+     "blob": "fed8c98f57",
+     "old_start": 905,
+     "old_count": 8,
+     "removed": [
+      908,
+      909
+     ]
+    }
+   ],
+   "files": [
+    "src/box/index_def.c",
+    "src/box/memtx_tree.cc"
+   ]
+  },
+  {
+   "bug_id": "tarantool-77c69aba7b2a",
+   "hunks": [
+    {
+     "file": "src/box/memtx_tree.cc",
+     "blob": "5152ecaeb1",
+     "old_start": 634,
+     "old_count": 9,
+     "removed": [
+      637,
+      638,
+      639
+     ]
+    },
+    {
+     "file": "src/box/memtx_tree.cc",
+     "blob": "5152ecaeb1",
+     "old_start": 693,
+     "old_count": 8,
+     "removed": [
+      696,
+      697
+     ]
+    },
+    {
+     "file": "src/box/memtx_tree.cc",
+     "blob": "5152ecaeb1",
+     "old_start": 747,
+     "old_count": 8,
+     "removed": [
+      750,
+      751
+     ]
+    },
+    {
+     "file": "src/box/memtx_tree.cc",
+     "blob": "5152ecaeb1",
+     "old_start": 1443,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/box/memtx_tx.c",
+     "blob": "0564dda960",
+     "old_start": 1748,
+     "old_count": 47,
+     "removed": [
+      1751,
+      1752,
+      1753,
+      1754,
+      1755,
+      1756,
+      1757,
+      1759,
+      1761,
+      1762,
+      1763,
+      1764,
+      1765,
+      1766,
+      1767,
+      1768,
+      1769,
+      1770,
+      1771,
+      1772,
+      1773,
+      1774,
+      1775,
+      1776,
+      1777,
+      1778,
+      1779,
+      1780,
+      1781,
+      1782,
+      1783,
+      1784,
+      1785,
+      1786,
+      1787,
+      1788,
+      1790,
+      1791
+     ]
+    },
+    {
+     "file": "src/box/memtx_tx.c",
+     "blob": "0564dda960",
+     "old_start": 1803,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/box/memtx_tree.cc",
+    "src/box/memtx_tx.c"
+   ]
+  },
+  {
+   "bug_id": "tarantool-78ccf4ee3c7f",
+   "hunks": [
+    {
+     "file": "src/box/memtx_hash.cc",
+     "blob": "b1908b6e37",
+     "old_start": 119,
+     "old_count": 7,
+     "removed": [
+      122
+     ]
+    },
+    {
+     "file": "src/box/memtx_hash.cc",
+     "blob": "b1908b6e37",
+     "old_start": 140,
+     "old_count": 9,
+     "removed": [
+      143,
+      144,
+      145
+     ]
+    }
+   ],
+   "files": [
+    "src/box/memtx_hash.cc"
+   ]
+  },
+  {
+   "bug_id": "tarantool-8c4fecf8c4f6",
+   "hunks": [
+    {
+     "file": "src/box/tuple.c",
+     "blob": "2d32ed980b",
+     "old_start": 509,
+     "old_count": 7,
+     "removed": [
+      512
+     ]
+    },
+    {
+     "file": "src/box/tuple.c",
+     "blob": "2d32ed980b",
+     "old_start": 519,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/box/tuple.c",
+     "blob": "2d32ed980b",
+     "old_start": 552,
+     "old_count": 7,
+     "removed": [
+      555
+     ]
+    },
+    {
+     "file": "src/box/tuple.h",
+     "blob": "1dff426625",
+     "old_start": 926,
+     "old_count": 12,
+     "removed": [
+      934
+     ]
+    },
+    {
+     "file": "src/box/xrow_update_bar.c",
+     "blob": "f21d5e6051",
+     "old_start": 53,
+     "old_count": 21,
+     "removed": [
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      69,
+      70
+     ]
+    },
+    {
+     "file": "src/box/xrow_update_bar.c",
+     "blob": "f21d5e6051",
+     "old_start": 88,
+     "old_count": 17,
+     "removed": [
+      91,
+      95,
+      100,
+      101
+     ]
+    },
+    {
+     "file": "src/box/xrow_update_bar.c",
+     "blob": "f21d5e6051",
+     "old_start": 164,
+     "old_count": 7,
+     "removed": [
+      167
+     ]
+    },
+    {
+     "file": "src/box/xrow_update_bar.c",
+     "blob": "f21d5e6051",
+     "old_start": 266,
+     "old_count": 14,
+     "removed": [
+      269,
+      270,
+      275,
+      276
+     ]
+    },
+    {
+     "file": "src/box/xrow_update_bar.c",
+     "blob": "f21d5e6051",
+     "old_start": 281,
+     "old_count": 10,
+     "removed": [
+      284,
+      285,
+      286,
+      287
+     ]
+    },
+    {
+     "file": "src/box/xrow_update_bar.c",
+     "blob": "f21d5e6051",
+     "old_start": 313,
+     "old_count": 8,
+     "removed": [
+      316,
+      317
+     ]
+    },
+    {
+     "file": "src/box/xrow_update_route.c",
+     "blob": "0a3654745b",
+     "old_start": 213,
+     "old_count": 7,
+     "removed": [
+      216
+     ]
+    }
+   ],
+   "files": [
+    "src/box/tuple.c",
+    "src/box/tuple.h",
+    "src/box/xrow_update_bar.c",
+    "src/box/xrow_update_route.c"
+   ]
+  },
+  {
+   "bug_id": "tarantool-8cfc91109fe1",
+   "hunks": [
+    {
+     "file": "src/box/lua/schema.lua",
+     "blob": "a0af897a67",
+     "old_start": 1033,
+     "old_count": 7,
+     "removed": [
+      1036
+     ]
+    },
+    {
+     "file": "src/box/lua/schema.lua",
+     "blob": "a0af897a67",
+     "old_start": 1124,
+     "old_count": 11,
+     "removed": [
+      1127,
+      1131
+     ]
+    },
+    {
+     "file": "src/box/lua/schema.lua",
+     "blob": "a0af897a67",
+     "old_start": 1158,
+     "old_count": 10,
+     "removed": [
+      1161,
+      1164
+     ]
+    },
+    {
+     "file": "src/box/lua/schema.lua",
+     "blob": "a0af897a67",
+     "old_start": 1169,
+     "old_count": 10,
+     "removed": [
+      1172,
+      1175
+     ]
+    },
+    {
+     "file": "src/box/lua/schema.lua",
+     "blob": "a0af897a67",
+     "old_start": 1181,
+     "old_count": 7,
+     "removed": [
+      1184
+     ]
+    },
+    {
+     "file": "src/box/lua/schema.lua",
+     "blob": "a0af897a67",
+     "old_start": 1200,
+     "old_count": 7,
+     "removed": [
+      1203
+     ]
+    },
+    {
+     "file": "src/box/lua/schema.lua",
+     "blob": "a0af897a67",
+     "old_start": 1217,
+     "old_count": 7,
+     "removed": [
+      1220
+     ]
+    },
+    {
+     "file": "src/box/lua/schema.lua",
+     "blob": "a0af897a67",
+     "old_start": 1235,
+     "old_count": 19,
+     "removed": [
+      1238,
+      1243,
+      1245,
+      1248,
+      1249,
+      1250
+     ]
+    },
+    {
+     "file": "src/box/lua/schema.lua",
+     "blob": "a0af897a67",
+     "old_start": 1591,
+     "old_count": 8,
+     "removed": [
+      1594,
+      1595
+     ]
+    },
+    {
+     "file": "src/box/lua/schema.lua",
+     "blob": "a0af897a67",
+     "old_start": 1623,
+     "old_count": 9,
+     "removed": [
+      1626,
+      1627,
+      1628
+     ]
+    },
+    {
+     "file": "src/box/lua/schema.lua",
+     "blob": "a0af897a67",
+     "old_start": 1764,
+     "old_count": 13,
+     "removed": [
+      1767,
+      1768,
+      1769,
+      1771,
+      1772,
+      1773
+     ]
+    }
+   ],
+   "files": [
+    "src/box/lua/schema.lua"
+   ]
+  },
+  {
+   "bug_id": "tarantool-95c521353f4e",
+   "hunks": [
+    {
+     "file": "src/box/journal.h",
+     "blob": "8572457791",
+     "old_start": 101,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/box/journal.h",
+     "blob": "8572457791",
+     "old_start": 128,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/box/journal.h",
+     "blob": "8572457791",
+     "old_start": 244,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/box/wal.c",
+     "blob": "57742632e7",
+     "old_start": 1309,
+     "old_count": 9,
+     "removed": [
+      1312,
+      1313,
+      1314
+     ]
+    }
+   ],
+   "files": [
+    "src/box/journal.h",
+    "src/box/wal.c"
+   ]
+  },
+  {
+   "bug_id": "tarantool-9eaa7be00afa",
+   "hunks": [
+    {
+     "file": "src/lua/datetime.lua",
+     "blob": "a5ccba2fbd",
+     "old_start": 1090,
+     "old_count": 11,
+     "removed": [
+      1093
+     ]
+    }
+   ],
+   "files": [
+    "src/lua/datetime.lua"
+   ]
+  },
+  {
+   "bug_id": "tarantool-a0264983c4a6",
+   "hunks": [
+    {
+     "file": "src/box/alter.cc",
+     "blob": "febedb9c3e",
+     "old_start": 343,
+     "old_count": 7,
+     "removed": [
+      346
+     ]
+    },
+    {
+     "file": "src/box/index_def.c",
+     "blob": "60882dfcd5",
+     "old_start": 268,
+     "old_count": 46,
+     "removed": [
+      271,
+      272,
+      273,
+      278,
+      283,
+      288,
+      293,
+      298,
+      303,
+      310
+     ]
+    },
+    {
+     "file": "src/box/index_def.c",
+     "blob": "60882dfcd5",
+     "old_start": 323,
+     "old_count": 9,
+     "removed": [
+      326,
+      330
+     ]
+    },
+    {
+     "file": "src/box/index_def.h",
+     "blob": "2180a69cf3",
+     "old_start": 400,
+     "old_count": 11,
+     "removed": [
+      403,
+      404,
+      406,
+      407
+     ]
+    },
+    {
+     "file": "src/box/index_def.h",
+     "blob": "2180a69cf3",
+     "old_start": 421,
+     "old_count": 7,
+     "removed": [
+      424
+     ]
+    },
+    {
+     "file": "src/box/sql/build.c",
+     "blob": "06fd1b7afe",
+     "old_start": 2848,
+     "old_count": 8,
+     "removed": [
+      2851
+     ]
+    }
+   ],
+   "files": [
+    "src/box/alter.cc",
+    "src/box/index_def.c",
+    "src/box/index_def.h",
+    "src/box/sql/build.c"
+   ]
+  },
+  {
+   "bug_id": "tarantool-b01da1bbf9f4",
+   "hunks": [
+    {
+     "file": "src/box/relay.cc",
+     "blob": "b2dc47907d",
+     "old_start": 717,
+     "old_count": 9,
+     "removed": [
+      720,
+      722
+     ]
+    }
+   ],
+   "files": [
+    "src/box/relay.cc"
+   ]
+  },
+  {
+   "bug_id": "tarantool-c2e562efa2e4",
+   "hunks": [
+    {
+     "file": "src/lib/core/fiber.c",
+     "blob": "87a18a6a50",
+     "old_start": 502,
+     "old_count": 14,
+     "removed": [
+      505,
+      506,
+      507,
+      508,
+      509,
+      510,
+      512
+     ]
+    }
+   ],
+   "files": [
+    "src/lib/core/fiber.c"
+   ]
+  },
+  {
+   "bug_id": "tarantool-c8612c63469d",
+   "hunks": [
+    {
+     "file": "src/lua/utils.c",
+     "blob": "2f579b6b64",
+     "old_start": 882,
+     "old_count": 7,
+     "removed": [
+      885
+     ]
+    },
+    {
+     "file": "src/lua/utils.c",
+     "blob": "2f579b6b64",
+     "old_start": 915,
+     "old_count": 7,
+     "removed": [
+      918
+     ]
+    }
+   ],
+   "files": [
+    "src/lua/utils.c"
+   ]
+  },
+  {
+   "bug_id": "tarantool-d32112b21656",
+   "hunks": [
+    {
+     "file": "src/box/wal.c",
+     "blob": "1fe290c921",
+     "old_start": 794,
+     "old_count": 7,
+     "removed": [
+      797
+     ]
+    },
+    {
+     "file": "src/lib/vclock/vclock.h",
+     "blob": "26ebe495af",
+     "old_start": 432,
+     "old_count": 7,
+     "removed": [
+      435
+     ]
+    }
+   ],
+   "files": [
+    "src/box/wal.c",
+    "src/lib/vclock/vclock.h"
+   ]
+  },
+  {
+   "bug_id": "tarantool-d527e3e234ed",
+   "hunks": [
+    {
+     "file": "src/box/memtx_tx.c",
+     "blob": "74814cf",
+     "old_start": 1311,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/box/memtx_tx.c"
+   ]
+  },
+  {
+   "bug_id": "tarantool-dad93ce21d26",
+   "hunks": [
+    {
+     "file": "src/box/sql/select.c",
+     "blob": "e002e749cb",
+     "old_start": 229,
+     "old_count": 8,
+     "removed": [
+      232,
+      233
+     ]
+    }
+   ],
+   "files": [
+    "src/box/sql/select.c"
+   ]
+  },
+  {
+   "bug_id": "tarantool-dbfb0940d12f",
+   "hunks": [
+    {
+     "file": "src/box/memtx_tx.c",
+     "blob": "db828e32ff",
+     "old_start": 2490,
+     "old_count": 11,
+     "removed": [
+      2493,
+      2494,
+      2495,
+      2496,
+      2497
+     ]
+    }
+   ],
+   "files": [
+    "src/box/memtx_tx.c"
+   ]
+  },
+  {
+   "bug_id": "tarantool-e409eec61dc6",
+   "hunks": [
+    {
+     "file": "src/box/sql/mem.c",
+     "blob": "246018710b",
+     "old_start": 3545,
+     "old_count": 13,
+     "removed": [
+      3548,
+      3553
+     ]
+    },
+    {
+     "file": "src/box/sql/mem.c",
+     "blob": "246018710b",
+     "old_start": 3667,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/box/sql/mem.c",
+     "blob": "246018710b",
+     "old_start": 3674,
+     "old_count": 14,
+     "removed": [
+      3677,
+      3679,
+      3682,
+      3684
+     ]
+    }
+   ],
+   "files": [
+    "src/box/sql/mem.c"
+   ]
+  },
+  {
+   "bug_id": "tarantool-f3e2922c14ee",
+   "hunks": [
+    {
+     "file": "src/box/execute.c",
+     "blob": "8d906945ab",
+     "old_start": 219,
+     "old_count": 12,
+     "removed": [
+      222,
+      223
+     ]
+    },
+    {
+     "file": "src/box/sql/sqlInt.h",
+     "blob": "93fb1ceb67",
+     "old_start": 506,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/box/sql/vdbeapi.c",
+     "blob": "48ea3a54cf",
+     "old_start": 445,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/box/execute.c",
+    "src/box/sql/sqlInt.h",
+    "src/box/sql/vdbeapi.c"
+   ]
+  },
+  {
+   "bug_id": "tarantool-f4801b8daa83",
+   "hunks": [
+    {
+     "file": "src/box/sql/func.c",
+     "blob": "d9a3b073e6",
+     "old_start": 989,
+     "old_count": 13,
+     "removed": [
+      996,
+      997,
+      998
+     ]
+    }
+   ],
+   "files": [
+    "src/box/sql/func.c"
+   ]
+  },
+  {
+   "bug_id": "tarantool-f7aac1b241c3",
+   "hunks": [
+    {
+     "file": "src/box/sql.c",
+     "blob": "7202c25875",
+     "old_start": 750,
+     "old_count": 7,
+     "removed": [
+      753
+     ]
+    },
+    {
+     "file": "src/box/sql.c",
+     "blob": "7202c25875",
+     "old_start": 763,
+     "old_count": 8,
+     "removed": []
+    },
+    {
+     "file": "src/box/sql.c",
+     "blob": "7202c25875",
+     "old_start": 786,
+     "old_count": 8,
+     "removed": [
+      789,
+      790
+     ]
+    }
+   ],
+   "files": [
+    "src/box/sql.c"
+   ]
+  },
+  {
+   "bug_id": "tarantool-f90cfe93f0ad",
+   "hunks": [
+    {
+     "file": "src/lua/init.c",
+     "blob": "d3a265eb8c",
+     "old_start": 936,
+     "old_count": 7,
+     "removed": [
+      939
+     ]
+    }
+   ],
+   "files": [
+    "src/lua/init.c"
+   ]
+  },
+  {
+   "bug_id": "tarantool-fc35d5a6cfe7",
+   "hunks": [
+    {
+     "file": "src/box/memtx_tree.cc",
+     "blob": "c636724498",
+     "old_start": 351,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/box/memtx_tree.cc",
+     "blob": "c636724498",
+     "old_start": 397,
+     "old_count": 10,
+     "removed": [
+      400,
+      401,
+      402,
+      403
+     ]
+    },
+    {
+     "file": "src/box/memtx_tree.cc",
+     "blob": "c636724498",
+     "old_start": 491,
+     "old_count": 10,
+     "removed": [
+      494,
+      495,
+      496,
+      497
+     ]
+    },
+    {
+     "file": "src/box/memtx_tree.cc",
+     "blob": "c636724498",
+     "old_start": 565,
+     "old_count": 7,
+     "removed": [
+      568
+     ]
+    },
+    {
+     "file": "src/box/memtx_tree.cc",
+     "blob": "c636724498",
+     "old_start": 708,
+     "old_count": 12,
+     "removed": [
+      711,
+      712,
+      713,
+      714,
+      715,
+      716
+     ]
+    },
+    {
+     "file": "src/box/memtx_tx.c",
+     "blob": "2b858944bb",
+     "old_start": 2847,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/box/memtx_tree.cc",
+    "src/box/memtx_tx.c"
+   ]
+  }
+ ],
+ "n_bugs": 40,
+ "analysis_units": [
+  {
+   "file": "src/box/alter.cc",
+   "blob": "febedb9c3e"
+  },
+  {
+   "file": "src/box/applier.cc",
+   "blob": "f30d9f2f77"
+  },
+  {
+   "file": "src/box/execute.c",
+   "blob": "8d906945ab"
+  },
+  {
+   "file": "src/box/index_def.c",
+   "blob": "60882dfcd5"
+  },
+  {
+   "file": "src/box/index_def.c",
+   "blob": "79394b8e54"
+  },
+  {
+   "file": "src/box/index_def.h",
+   "blob": "2180a69cf3"
+  },
+  {
+   "file": "src/box/journal.h",
+   "blob": "8572457791"
+  },
+  {
+   "file": "src/box/lua/load_cfg.lua",
+   "blob": "cb4974d9f0"
+  },
+  {
+   "file": "src/box/lua/merger.c",
+   "blob": "91a77b2ae3"
+  },
+  {
+   "file": "src/box/lua/net_box.lua",
+   "blob": "c08fb02ac5"
+  },
+  {
+   "file": "src/box/lua/schema.lua",
+   "blob": "a0af897a67"
+  },
+  {
+   "file": "src/box/lua/schema.lua",
+   "blob": "afcdf69c5a"
+  },
+  {
+   "file": "src/box/lua/stat.c",
+   "blob": "60a3d26fb0"
+  },
+  {
+   "file": "src/box/memtx_hash.cc",
+   "blob": "3b64207faa"
+  },
+  {
+   "file": "src/box/memtx_hash.cc",
+   "blob": "b1908b6e37"
+  },
+  {
+   "file": "src/box/memtx_tree.cc",
+   "blob": "5152ecaeb1"
+  },
+  {
+   "file": "src/box/memtx_tree.cc",
+   "blob": "c636724498"
+  },
+  {
+   "file": "src/box/memtx_tree.cc",
+   "blob": "fed8c98f57"
+  },
+  {
+   "file": "src/box/memtx_tx.c",
+   "blob": "0564dda960"
+  },
+  {
+   "file": "src/box/memtx_tx.c",
+   "blob": "2b858944bb"
+  },
+  {
+   "file": "src/box/memtx_tx.c",
+   "blob": "74814cf"
+  },
+  {
+   "file": "src/box/memtx_tx.c",
+   "blob": "db828e32ff"
+  },
+  {
+   "file": "src/box/relay.cc",
+   "blob": "b2dc47907d"
+  },
+  {
+   "file": "src/box/sql.c",
+   "blob": "7202c25875"
+  },
+  {
+   "file": "src/box/sql/alter.c",
+   "blob": "54a8d5b80f"
+  },
+  {
+   "file": "src/box/sql/build.c",
+   "blob": "06fd1b7afe"
+  },
+  {
+   "file": "src/box/sql/build.c",
+   "blob": "4b0f9b15c6"
+  },
+  {
+   "file": "src/box/sql/delete.c",
+   "blob": "6c190c161b"
+  },
+  {
+   "file": "src/box/sql/expr.c",
+   "blob": "e7518c57b6"
+  },
+  {
+   "file": "src/box/sql/func.c",
+   "blob": "d9a3b073e6"
+  },
+  {
+   "file": "src/box/sql/insert.c",
+   "blob": "2bbe7b5df0"
+  },
+  {
+   "file": "src/box/sql/mem.c",
+   "blob": "246018710b"
+  },
+  {
+   "file": "src/box/sql/select.c",
+   "blob": "1a33008879"
+  },
+  {
+   "file": "src/box/sql/select.c",
+   "blob": "e002e749cb"
+  },
+  {
+   "file": "src/box/sql/sqlInt.h",
+   "blob": "2aec7abf3d"
+  },
+  {
+   "file": "src/box/sql/sqlInt.h",
+   "blob": "93fb1ceb67"
+  },
+  {
+   "file": "src/box/sql/trigger.c",
+   "blob": "8af71b3a5d"
+  },
+  {
+   "file": "src/box/sql/update.c",
+   "blob": "581457f02f"
+  },
+  {
+   "file": "src/box/sql/util.c",
+   "blob": "7f81821cc2"
+  },
+  {
+   "file": "src/box/sql/util.c",
+   "blob": "c556b9815e"
+  },
+  {
+   "file": "src/box/sql/vdbe.c",
+   "blob": "fe8ad12ebd"
+  },
+  {
+   "file": "src/box/sql/vdbe.h",
+   "blob": "7a574f7eda"
+  },
+  {
+   "file": "src/box/sql/vdbeapi.c",
+   "blob": "48ea3a54cf"
+  },
+  {
+   "file": "src/box/sql/vdbeaux.c",
+   "blob": "b613c0b3f7"
+  },
+  {
+   "file": "src/box/sql/where.c",
+   "blob": "3ff12ccc4b"
+  },
+  {
+   "file": "src/box/sql/where.c",
+   "blob": "6d8d2660f3"
+  },
+  {
+   "file": "src/box/tuple.c",
+   "blob": "2d32ed980b"
+  },
+  {
+   "file": "src/box/tuple.h",
+   "blob": "1dff426625"
+  },
+  {
+   "file": "src/box/tuple_compare.cc",
+   "blob": "11d9919df8"
+  },
+  {
+   "file": "src/box/tuple_constraint_def.c",
+   "blob": "586d396031"
+  },
+  {
+   "file": "src/box/wal.c",
+   "blob": "1fe290c921"
+  },
+  {
+   "file": "src/box/wal.c",
+   "blob": "57742632e7"
+  },
+  {
+   "file": "src/box/xrow_update_bar.c",
+   "blob": "f21d5e6051"
+  },
+  {
+   "file": "src/box/xrow_update_route.c",
+   "blob": "0352aec635"
+  },
+  {
+   "file": "src/box/xrow_update_route.c",
+   "blob": "0a3654745b"
+  },
+  {
+   "file": "src/lib/core/fiber.c",
+   "blob": "87a18a6a50"
+  },
+  {
+   "file": "src/lib/core/prbuf.c",
+   "blob": "0f6f8c0942"
+  },
+  {
+   "file": "src/lib/tzcode/strftime.c",
+   "blob": "9bb437e240"
+  },
+  {
+   "file": "src/lib/vclock/vclock.h",
+   "blob": "26ebe495af"
+  },
+  {
+   "file": "src/lua/datetime.lua",
+   "blob": "a5ccba2fbd"
+  },
+  {
+   "file": "src/lua/fiber.c",
+   "blob": "1fd74a6844"
+  },
+  {
+   "file": "src/lua/init.c",
+   "blob": "d3a265eb8c"
+  },
+  {
+   "file": "src/lua/utils.c",
+   "blob": "2f579b6b64"
+  }
+ ],
+ "n_units": 63,
+ "bug_files": [
+  "src/box/alter.cc",
+  "src/box/applier.cc",
+  "src/box/execute.c",
+  "src/box/index_def.c",
+  "src/box/index_def.h",
+  "src/box/journal.h",
+  "src/box/lua/load_cfg.lua",
+  "src/box/lua/merger.c",
+  "src/box/lua/net_box.lua",
+  "src/box/lua/schema.lua",
+  "src/box/lua/stat.c",
+  "src/box/memtx_hash.cc",
+  "src/box/memtx_tree.cc",
+  "src/box/memtx_tx.c",
+  "src/box/relay.cc",
+  "src/box/sql.c",
+  "src/box/sql/alter.c",
+  "src/box/sql/build.c",
+  "src/box/sql/delete.c",
+  "src/box/sql/expr.c",
+  "src/box/sql/func.c",
+  "src/box/sql/insert.c",
+  "src/box/sql/mem.c",
+  "src/box/sql/select.c",
+  "src/box/sql/sqlInt.h",
+  "src/box/sql/trigger.c",
+  "src/box/sql/update.c",
+  "src/box/sql/util.c",
+  "src/box/sql/vdbe.c",
+  "src/box/sql/vdbe.h",
+  "src/box/sql/vdbeapi.c",
+  "src/box/sql/vdbeaux.c",
+  "src/box/sql/where.c",
+  "src/box/tuple.c",
+  "src/box/tuple.h",
+  "src/box/tuple_compare.cc",
+  "src/box/tuple_constraint_def.c",
+  "src/box/wal.c",
+  "src/box/xrow_update_bar.c",
+  "src/box/xrow_update_route.c",
+  "src/lib/core/fiber.c",
+  "src/lib/core/prbuf.c",
+  "src/lib/tzcode/strftime.c",
+  "src/lib/vclock/vclock.h",
+  "src/lua/datetime.lua",
+  "src/lua/fiber.c",
+  "src/lua/init.c",
+  "src/lua/utils.c"
+ ]
+}

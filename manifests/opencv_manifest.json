@@ -1,0 +1,1824 @@
+{
+ "repo": "opencv",
+ "clone_url": "https://github.com/opencv/opencv.git",
+ "upstream_commit": "9f7399e15e6172900e0591deb5a57a45769d8205",
+ "base_ref": "4.0.1",
+ "n_subtasks": 47,
+ "bugs": [
+  {
+   "bug_id": "opencv-03814c751e45",
+   "hunks": [
+    {
+     "file": "modules/calib3d/src/calibration.cpp",
+     "blob": "24d2875fdd",
+     "old_start": 3140,
+     "old_count": 7,
+     "removed": [
+      3143
+     ]
+    },
+    {
+     "file": "modules/calib3d/src/calibration.cpp",
+     "blob": "24d2875fdd",
+     "old_start": 3159,
+     "old_count": 7,
+     "removed": [
+      3162
+     ]
+    },
+    {
+     "file": "modules/calib3d/src/calibration.cpp",
+     "blob": "24d2875fdd",
+     "old_start": 3179,
+     "old_count": 7,
+     "removed": [
+      3182
+     ]
+    }
+   ],
+   "files": [
+    "modules/calib3d/src/calibration.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-065ab5cc0087",
+   "hunks": [
+    {
+     "file": "modules/core/src/matrix_wrap.cpp",
+     "blob": "e64d097aad",
+     "old_start": 1287,
+     "old_count": 17,
+     "removed": [
+      1290,
+      1292,
+      1293,
+      1294,
+      1295,
+      1296,
+      1297,
+      1298,
+      1299,
+      1300
+     ]
+    },
+    {
+     "file": "modules/core/src/matrix_wrap.cpp",
+     "blob": "e64d097aad",
+     "old_start": 1305,
+     "old_count": 13,
+     "removed": [
+      1308,
+      1312,
+      1314
+     ]
+    },
+    {
+     "file": "modules/core/src/matrix_wrap.cpp",
+     "blob": "e64d097aad",
+     "old_start": 1321,
+     "old_count": 17,
+     "removed": [
+      1324,
+      1326,
+      1327,
+      1328,
+      1329,
+      1330,
+      1331,
+      1332,
+      1333,
+      1334
+     ]
+    },
+    {
+     "file": "modules/core/src/matrix_wrap.cpp",
+     "blob": "e64d097aad",
+     "old_start": 1339,
+     "old_count": 13,
+     "removed": [
+      1342,
+      1346,
+      1348
+     ]
+    }
+   ],
+   "files": [
+    "modules/core/src/matrix_wrap.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-08979782855f",
+   "hunks": [
+    {
+     "file": "modules/imgproc/include/opencv2/imgproc.hpp",
+     "blob": "2ea2ec969e",
+     "old_start": 2004,
+     "old_count": 23,
+     "removed": [
+      2007,
+      2008,
+      2009,
+      2013,
+      2015,
+      2017,
+      2022,
+      2023
+     ]
+    },
+    {
+     "file": "modules/imgproc/include/opencv2/imgproc.hpp",
+     "blob": "2ea2ec969e",
+     "old_start": 2048,
+     "old_count": 7,
+     "removed": [
+      2051
+     ]
+    },
+    {
+     "file": "modules/imgproc/include/opencv2/imgproc.hpp",
+     "blob": "2ea2ec969e",
+     "old_start": 2067,
+     "old_count": 11,
+     "removed": [
+      2070,
+      2076
+     ]
+    },
+    {
+     "file": "modules/imgproc/src/hough.cpp",
+     "blob": "5fa24f4789",
+     "old_start": 68,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "modules/imgproc/src/hough.cpp",
+     "blob": "5fa24f4789",
+     "old_start": 130,
+     "old_count": 7,
+     "removed": [
+      133
+     ]
+    },
+    {
+     "file": "modules/imgproc/src/hough.cpp",
+     "blob": "5fa24f4789",
+     "old_start": 475,
+     "old_count": 7,
+     "removed": [
+      478
+     ]
+    },
+    {
+     "file": "modules/imgproc/src/hough.cpp",
+     "blob": "5fa24f4789",
+     "old_start": 792,
+     "old_count": 7,
+     "removed": [
+      795
+     ]
+    },
+    {
+     "file": "modules/imgproc/src/hough.cpp",
+     "blob": "5fa24f4789",
+     "old_start": 846,
+     "old_count": 7,
+     "removed": [
+      849
+     ]
+    },
+    {
+     "file": "modules/imgproc/src/hough.cpp",
+     "blob": "5fa24f4789",
+     "old_start": 956,
+     "old_count": 7,
+     "removed": [
+      959
+     ]
+    }
+   ],
+   "files": [
+    "modules/imgproc/include/opencv2/imgproc.hpp",
+    "modules/imgproc/src/hough.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-0d05063bd5c0",
+   "hunks": [
+    {
+     "file": "modules/core/src/kmeans.cpp",
+     "blob": "bca8b9bd79",
+     "old_start": 143,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "modules/core/src/kmeans.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-0d3161877178",
+   "hunks": [
+    {
+     "file": "modules/imgproc/src/approx.cpp",
+     "blob": "6c89f1d879",
+     "old_start": 586,
+     "old_count": 26,
+     "removed": [
+      589,
+      599,
+      601,
+      603,
+      608
+     ]
+    }
+   ],
+   "files": [
+    "modules/imgproc/src/approx.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-140d51577a07",
+   "hunks": [
+    {
+     "file": "modules/imgproc/src/resize.cpp",
+     "blob": "ab0d3fe89f",
+     "old_start": 3738,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "modules/imgproc/src/resize.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-174d41f7934b",
+   "hunks": [
+    {
+     "file": "modules/imgproc/src/subdivision2d.cpp",
+     "blob": "2a2ab1dfeb",
+     "old_start": 493,
+     "old_count": 7,
+     "removed": [
+      496
+     ]
+    }
+   ],
+   "files": [
+    "modules/imgproc/src/subdivision2d.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-1974f51bd214",
+   "hunks": [
+    {
+     "file": "modules/core/src/matrix_expressions.cpp",
+     "blob": "5ac1fafbd6",
+     "old_start": 117,
+     "old_count": 8,
+     "removed": []
+    },
+    {
+     "file": "modules/core/src/matrix_expressions.cpp",
+     "blob": "5ac1fafbd6",
+     "old_start": 199,
+     "old_count": 7,
+     "removed": [
+      202
+     ]
+    },
+    {
+     "file": "modules/core/src/matrix_expressions.cpp",
+     "blob": "5ac1fafbd6",
+     "old_start": 1240,
+     "old_count": 8,
+     "removed": [
+      1243,
+      1244
+     ]
+    }
+   ],
+   "files": [
+    "modules/core/src/matrix_expressions.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-1d1387aa8e47",
+   "hunks": [
+    {
+     "file": "modules/imgproc/src/imgwarp.cpp",
+     "blob": "be39419ed1",
+     "old_start": 757,
+     "old_count": 13,
+     "removed": [
+      760,
+      761,
+      762,
+      763,
+      764,
+      765,
+      766
+     ]
+    },
+    {
+     "file": "modules/imgproc/src/imgwarp.cpp",
+     "blob": "be39419ed1",
+     "old_start": 774,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "modules/imgproc/src/imgwarp.cpp",
+     "blob": "be39419ed1",
+     "old_start": 815,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "modules/imgproc/src/imgwarp.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-212cd1521af9",
+   "hunks": [
+    {
+     "file": "modules/calib3d/src/undistort.avx2.cpp",
+     "blob": "69998be39b",
+     "old_start": 124,
+     "old_count": 7,
+     "removed": [
+      127
+     ]
+    }
+   ],
+   "files": [
+    "modules/calib3d/src/undistort.avx2.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-35e95d5fef31",
+   "hunks": [
+    {
+     "file": "modules/core/src/persistence.cpp",
+     "blob": "c81edf674b",
+     "old_start": 1819,
+     "old_count": 7,
+     "removed": [
+      1822
+     ]
+    }
+   ],
+   "files": [
+    "modules/core/src/persistence.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-3ddefc7290c5",
+   "hunks": [
+    {
+     "file": "modules/ml/src/tree.cpp",
+     "blob": "3d8941344d",
+     "old_start": 1839,
+     "old_count": 12,
+     "removed": [
+      1842
+     ]
+    },
+    {
+     "file": "modules/ml/src/tree.cpp",
+     "blob": "3d8941344d",
+     "old_start": 1860,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "modules/ml/src/tree.cpp",
+     "blob": "3d8941344d",
+     "old_start": 1869,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "modules/ml/src/tree.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-41e8688ee2f5",
+   "hunks": [
+    {
+     "file": "modules/imgproc/src/shapedescr.cpp",
+     "blob": "fe5664abf2",
+     "old_start": 1056,
+     "old_count": 16,
+     "removed": [
+      1060,
+      1062,
+      1063,
+      1064,
+      1065,
+      1066,
+      1067,
+      1068
+     ]
+    }
+   ],
+   "files": [
+    "modules/imgproc/src/shapedescr.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-4320d091f246",
+   "hunks": [
+    {
+     "file": "modules/core/src/persistence.cpp",
+     "blob": "1a0da06f65",
+     "old_start": 1900,
+     "old_count": 18,
+     "removed": [
+      1903,
+      1904,
+      1905,
+      1906,
+      1911,
+      1912,
+      1913,
+      1914
+     ]
+    }
+   ],
+   "files": [
+    "modules/core/src/persistence.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-4344998a81e0",
+   "hunks": [
+    {
+     "file": "modules/imgproc/src/hough.cpp",
+     "blob": "39bdecf2ea",
+     "old_start": 228,
+     "old_count": 7,
+     "removed": [
+      231
+     ]
+    }
+   ],
+   "files": [
+    "modules/imgproc/src/hough.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-5cb9cd581ef5",
+   "hunks": [
+    {
+     "file": "modules/dnn/src/dnn.cpp",
+     "blob": "92975a7560",
+     "old_start": 2795,
+     "old_count": 8,
+     "removed": [
+      2798,
+      2799
+     ]
+    },
+    {
+     "file": "modules/dnn/src/dnn.cpp",
+     "blob": "92975a7560",
+     "old_start": 2809,
+     "old_count": 9,
+     "removed": [
+      2812,
+      2814
+     ]
+    }
+   ],
+   "files": [
+    "modules/dnn/src/dnn.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-5ff1b89640bd",
+   "hunks": [
+    {
+     "file": "modules/imgproc/src/resize.cpp",
+     "blob": "43458cc153",
+     "old_start": 1045,
+     "old_count": 7,
+     "removed": [
+      1048
+     ]
+    }
+   ],
+   "files": [
+    "modules/imgproc/src/resize.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-6a1bdf8d7893",
+   "hunks": [
+    {
+     "file": "modules/calib3d/src/ptsetreg.cpp",
+     "blob": "4d2e9135d2",
+     "old_start": 833,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "modules/calib3d/src/ptsetreg.cpp",
+     "blob": "4d2e9135d2",
+     "old_start": 900,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "modules/calib3d/src/ptsetreg.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-6c432b0cd808",
+   "hunks": [
+    {
+     "file": "modules/imgproc/src/lsd.cpp",
+     "blob": "3b5b412e25",
+     "old_start": 1076,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "modules/imgproc/src/lsd.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-72b6a063e735",
+   "hunks": [
+    {
+     "file": "modules/imgproc/src/intersection.cpp",
+     "blob": "84dbc8b8f1",
+     "old_start": 54,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "modules/imgproc/src/intersection.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-77dbf1631b69",
+   "hunks": [
+    {
+     "file": "modules/imgproc/src/drawing.cpp",
+     "blob": "eb06a98c11",
+     "old_start": 308,
+     "old_count": 7,
+     "removed": [
+      311
+     ]
+    },
+    {
+     "file": "modules/imgproc/src/drawing.cpp",
+     "blob": "eb06a98c11",
+     "old_start": 316,
+     "old_count": 15,
+     "removed": [
+      319,
+      320,
+      321,
+      322,
+      323,
+      324,
+      325,
+      326,
+      327
+     ]
+    },
+    {
+     "file": "modules/imgproc/src/drawing.cpp",
+     "blob": "eb06a98c11",
+     "old_start": 403,
+     "old_count": 171,
+     "removed": [
+      406,
+      420,
+      422,
+      424,
+      431,
+      432,
+      434,
+      436,
+      437,
+      439,
+      441,
+      442,
+      443,
+      444,
+      445,
+      446,
+      447,
+      452,
+      454,
+      456,
+      457,
+      463,
+      464,
+      466,
+      468,
+      469,
+      471,
+      473,
+      474,
+      475,
+      476,
+      477,
+      478,
+      479,
+      486,
+      495,
+      497,
+      499,
+      506,
+      507,
+      509,
+      511,
+      512,
+      514,
+      516,
+      517,
+      518,
+      519,
+      520,
+      521,
+      522,
+      527,
+      529,
+      531,
+      532,
+      538,
+      539,
+      541,
+      543,
+      544,
+      546,
+      548,
+      549,
+      550,
+      551,
+      552,
+      553,
+      554,
+      561
+     ]
+    },
+    {
+     "file": "modules/imgproc/src/drawing.cpp",
+     "blob": "eb06a98c11",
+     "old_start": 575,
+     "old_count": 66,
+     "removed": [
+      578,
+      580,
+      582,
+      589,
+      590,
+      592,
+      594,
+      595,
+      597,
+      599,
+      600,
+      601,
+      602,
+      603,
+      604,
+      605,
+      610,
+      612,
+      614,
+      615,
+      621,
+      622,
+      624,
+      626,
+      627,
+      629,
+      631,
+      632,
+      633,
+      634,
+      635,
+      636,
+      637
+     ]
+    }
+   ],
+   "files": [
+    "modules/imgproc/src/drawing.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-78a11e75834c",
+   "hunks": [
+    {
+     "file": "modules/features2d/src/matchers.cpp",
+     "blob": "d39afe1ade",
+     "old_start": 622,
+     "old_count": 15,
+     "removed": [
+      625,
+      629,
+      631,
+      632,
+      633
+     ]
+    }
+   ],
+   "files": [
+    "modules/features2d/src/matchers.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-836aa6f1bcdb",
+   "hunks": [
+    {
+     "file": "modules/core/src/matrix_expressions.cpp",
+     "blob": "ea431336f0",
+     "old_start": 1257,
+     "old_count": 7,
+     "removed": [
+      1260
+     ]
+    }
+   ],
+   "files": [
+    "modules/core/src/matrix_expressions.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-83d848ddf557",
+   "hunks": [
+    {
+     "file": "modules/core/include/opencv2/core/persistence.hpp",
+     "blob": "152fd560d8",
+     "old_start": 510,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "modules/core/include/opencv2/core/persistence.hpp",
+     "blob": "152fd560d8",
+     "old_start": 614,
+     "old_count": 7,
+     "removed": [
+      617
+     ]
+    },
+    {
+     "file": "modules/core/include/opencv2/core/persistence.hpp",
+     "blob": "152fd560d8",
+     "old_start": 679,
+     "old_count": 7,
+     "removed": [
+      682
+     ]
+    },
+    {
+     "file": "modules/core/src/persistence.cpp",
+     "blob": "1e07119f4e",
+     "old_start": 1376,
+     "old_count": 9,
+     "removed": [
+      1379,
+      1381
+     ]
+    },
+    {
+     "file": "modules/core/src/persistence.cpp",
+     "blob": "1e07119f4e",
+     "old_start": 1468,
+     "old_count": 7,
+     "removed": [
+      1471
+     ]
+    },
+    {
+     "file": "modules/core/src/persistence.cpp",
+     "blob": "1e07119f4e",
+     "old_start": 2048,
+     "old_count": 18,
+     "removed": [
+      2052,
+      2056,
+      2058
+     ]
+    },
+    {
+     "file": "modules/core/src/persistence.cpp",
+     "blob": "1e07119f4e",
+     "old_start": 2082,
+     "old_count": 7,
+     "removed": [
+      2085
+     ]
+    },
+    {
+     "file": "modules/core/src/persistence.cpp",
+     "blob": "1e07119f4e",
+     "old_start": 2091,
+     "old_count": 7,
+     "removed": [
+      2094
+     ]
+    },
+    {
+     "file": "modules/core/src/persistence.cpp",
+     "blob": "1e07119f4e",
+     "old_start": 2167,
+     "old_count": 7,
+     "removed": [
+      2170
+     ]
+    },
+    {
+     "file": "modules/core/src/persistence.cpp",
+     "blob": "1e07119f4e",
+     "old_start": 2292,
+     "old_count": 12,
+     "removed": [
+      2295,
+      2300
+     ]
+    },
+    {
+     "file": "modules/core/src/persistence.cpp",
+     "blob": "1e07119f4e",
+     "old_start": 2328,
+     "old_count": 7,
+     "removed": [
+      2331
+     ]
+    },
+    {
+     "file": "modules/core/src/persistence.cpp",
+     "blob": "1e07119f4e",
+     "old_start": 2402,
+     "old_count": 8,
+     "removed": [
+      2405,
+      2406
+     ]
+    },
+    {
+     "file": "modules/core/src/persistence.cpp",
+     "blob": "1e07119f4e",
+     "old_start": 2430,
+     "old_count": 7,
+     "removed": [
+      2433
+     ]
+    },
+    {
+     "file": "modules/core/src/persistence.cpp",
+     "blob": "1e07119f4e",
+     "old_start": 2442,
+     "old_count": 8,
+     "removed": [
+      2445,
+      2446
+     ]
+    }
+   ],
+   "files": [
+    "modules/core/include/opencv2/core/persistence.hpp",
+    "modules/core/src/persistence.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-849409d58b10",
+   "hunks": [
+    {
+     "file": "modules/core/src/persistence_json.cpp",
+     "blob": "9d05650814",
+     "old_start": 395,
+     "old_count": 10,
+     "removed": [
+      398,
+      400,
+      401
+     ]
+    },
+    {
+     "file": "modules/core/src/persistence_json.cpp",
+     "blob": "9d05650814",
+     "old_start": 414,
+     "old_count": 7,
+     "removed": [
+      417
+     ]
+    }
+   ],
+   "files": [
+    "modules/core/src/persistence_json.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-898ee6013960",
+   "hunks": [
+    {
+     "file": "modules/imgproc/src/phasecorr.cpp",
+     "blob": "dadc3a3da7",
+     "old_start": 252,
+     "old_count": 18,
+     "removed": [
+      255,
+      256,
+      257,
+      264,
+      265,
+      266
+     ]
+    }
+   ],
+   "files": [
+    "modules/imgproc/src/phasecorr.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-8c7ec21f40f2",
+   "hunks": [
+    {
+     "file": "modules/core/src/lda.cpp",
+     "blob": "abbb43ecd3",
+     "old_start": 322,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "modules/core/src/lda.cpp",
+     "blob": "abbb43ecd3",
+     "old_start": 487,
+     "old_count": 7,
+     "removed": [
+      490
+     ]
+    }
+   ],
+   "files": [
+    "modules/core/src/lda.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-9147e633a50f",
+   "hunks": [
+    {
+     "file": "modules/photo/src/seamless_cloning.cpp",
+     "blob": "2c05d9abfb",
+     "old_start": 78,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "modules/photo/src/seamless_cloning.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-9a698f046e06",
+   "hunks": [
+    {
+     "file": "modules/core/src/persistence_types.cpp",
+     "blob": "8aa929cc1d",
+     "old_start": 142,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "modules/core/src/persistence_types.cpp",
+     "blob": "8aa929cc1d",
+     "old_start": 180,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "modules/core/src/persistence_types.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-a3f10a0641a3",
+   "hunks": [
+    {
+     "file": "modules/ml/src/boost.cpp",
+     "blob": "4b94410eeb",
+     "old_start": 490,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "modules/ml/src/rtrees.cpp",
+     "blob": "1deee6f6c8",
+     "old_start": 479,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "modules/ml/src/boost.cpp",
+    "modules/ml/src/rtrees.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-a841d77e12fa",
+   "hunks": [
+    {
+     "file": "modules/calib3d/src/homography_decomp.cpp",
+     "blob": "fea8882c5a",
+     "old_start": 185,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "modules/calib3d/src/homography_decomp.cpp",
+     "blob": "fea8882c5a",
+     "old_start": 312,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "modules/calib3d/src/homography_decomp.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-a868f91ec13f",
+   "hunks": [
+    {
+     "file": "modules/imgproc/src/pyramids.cpp",
+     "blob": "4f7732925c",
+     "old_start": 963,
+     "old_count": 7,
+     "removed": [
+      966
+     ]
+    }
+   ],
+   "files": [
+    "modules/imgproc/src/pyramids.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-b27a0cb90aed",
+   "hunks": [
+    {
+     "file": "modules/core/src/persistence_xml.cpp",
+     "blob": "6141fade2d",
+     "old_start": 737,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "modules/core/src/persistence_xml.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-b7c9f43a731b",
+   "hunks": [
+    {
+     "file": "modules/core/src/array.cpp",
+     "blob": "252ac13ca0",
+     "old_start": 2658,
+     "old_count": 7,
+     "removed": [
+      2661
+     ]
+    }
+   ],
+   "files": [
+    "modules/core/src/array.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-b95e3c7e7f80",
+   "hunks": [
+    {
+     "file": "modules/calib3d/src/ptsetreg.cpp",
+     "blob": "88e1815c35",
+     "old_start": 488,
+     "old_count": 13,
+     "removed": [
+      491,
+      496,
+      497
+     ]
+    }
+   ],
+   "files": [
+    "modules/calib3d/src/ptsetreg.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-c4f59cf36a65",
+   "hunks": [
+    {
+     "file": "modules/features2d/src/orb.cpp",
+     "blob": "ee4e55c181",
+     "old_start": 1025,
+     "old_count": 15,
+     "removed": [
+      1028,
+      1029,
+      1030,
+      1036
+     ]
+    }
+   ],
+   "files": [
+    "modules/features2d/src/orb.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-c4fd47005bde",
+   "hunks": [
+    {
+     "file": "modules/imgproc/src/drawing.cpp",
+     "blob": "e9b212d388",
+     "old_start": 958,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "modules/imgproc/src/drawing.cpp",
+     "blob": "e9b212d388",
+     "old_start": 2387,
+     "old_count": 7,
+     "removed": [
+      2390
+     ]
+    },
+    {
+     "file": "modules/imgproc/src/drawing.cpp",
+     "blob": "e9b212d388",
+     "old_start": 2397,
+     "old_count": 7,
+     "removed": [
+      2400
+     ]
+    }
+   ],
+   "files": [
+    "modules/imgproc/src/drawing.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-cb9f44f5771a",
+   "hunks": [
+    {
+     "file": "modules/features2d/src/orb.cpp",
+     "blob": "b0d32002a1",
+     "old_start": 985,
+     "old_count": 7,
+     "removed": [
+      988
+     ]
+    },
+    {
+     "file": "modules/features2d/src/orb.cpp",
+     "blob": "b0d32002a1",
+     "old_start": 1080,
+     "old_count": 7,
+     "removed": [
+      1083
+     ]
+    }
+   ],
+   "files": [
+    "modules/features2d/src/orb.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-cef786b62d8e",
+   "hunks": [
+    {
+     "file": "modules/imgcodecs/src/grfmt_tiff.cpp",
+     "blob": "d6f05f7a65",
+     "old_start": 820,
+     "old_count": 7,
+     "removed": [
+      823
+     ]
+    }
+   ],
+   "files": [
+    "modules/imgcodecs/src/grfmt_tiff.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-cfc1dfc23f11",
+   "hunks": [
+    {
+     "file": "modules/imgproc/src/contours.cpp",
+     "blob": "e433cdb514",
+     "old_start": 625,
+     "old_count": 7,
+     "removed": [
+      628
+     ]
+    },
+    {
+     "file": "modules/imgproc/src/contours.cpp",
+     "blob": "e433cdb514",
+     "old_start": 668,
+     "old_count": 14,
+     "removed": [
+      671,
+      678
+     ]
+    }
+   ],
+   "files": [
+    "modules/imgproc/src/contours.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-d97911c694c2",
+   "hunks": [
+    {
+     "file": "modules/imgproc/src/color_yuv.cpp",
+     "blob": "6cb508f980",
+     "old_start": 2696,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "modules/imgproc/src/color_yuv.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-da1a55ec7dbb",
+   "hunks": [
+    {
+     "file": "modules/imgproc/src/color_lab.cpp",
+     "blob": "6b03be6195",
+     "old_start": 978,
+     "old_count": 8,
+     "removed": [
+      982
+     ]
+    },
+    {
+     "file": "modules/imgproc/src/color_lab.cpp",
+     "blob": "6b03be6195",
+     "old_start": 1330,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "modules/imgproc/src/color_lab.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-dcdb346f556f",
+   "hunks": [
+    {
+     "file": "modules/calib3d/src/calibration.cpp",
+     "blob": "c03e3a1c34",
+     "old_start": 3188,
+     "old_count": 8,
+     "removed": [
+      3191,
+      3192
+     ]
+    },
+    {
+     "file": "modules/calib3d/src/calibration.cpp",
+     "blob": "c03e3a1c34",
+     "old_start": 3207,
+     "old_count": 8,
+     "removed": [
+      3210,
+      3211
+     ]
+    },
+    {
+     "file": "modules/calib3d/src/calibration.cpp",
+     "blob": "c03e3a1c34",
+     "old_start": 3227,
+     "old_count": 8,
+     "removed": [
+      3230,
+      3231
+     ]
+    }
+   ],
+   "files": [
+    "modules/calib3d/src/calibration.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-eb23b61a6803",
+   "hunks": [
+    {
+     "file": "modules/imgproc/src/distransform.cpp",
+     "blob": "a2c5a0d5fd",
+     "old_start": 448,
+     "old_count": 7,
+     "removed": [
+      451
+     ]
+    },
+    {
+     "file": "modules/imgproc/src/distransform.cpp",
+     "blob": "a2c5a0d5fd",
+     "old_start": 481,
+     "old_count": 7,
+     "removed": [
+      484
+     ]
+    },
+    {
+     "file": "modules/imgproc/src/distransform.cpp",
+     "blob": "a2c5a0d5fd",
+     "old_start": 489,
+     "old_count": 12,
+     "removed": [
+      492,
+      497
+     ]
+    },
+    {
+     "file": "modules/imgproc/src/distransform.cpp",
+     "blob": "a2c5a0d5fd",
+     "old_start": 529,
+     "old_count": 7,
+     "removed": [
+      532
+     ]
+    },
+    {
+     "file": "modules/imgproc/src/distransform.cpp",
+     "blob": "a2c5a0d5fd",
+     "old_start": 552,
+     "old_count": 28,
+     "removed": [
+      555,
+      562,
+      569,
+      571,
+      576
+     ]
+    },
+    {
+     "file": "modules/imgproc/src/distransform.cpp",
+     "blob": "a2c5a0d5fd",
+     "old_start": 584,
+     "old_count": 13,
+     "removed": [
+      587,
+      589,
+      593
+     ]
+    },
+    {
+     "file": "modules/imgproc/src/distransform.cpp",
+     "blob": "a2c5a0d5fd",
+     "old_start": 752,
+     "old_count": 7,
+     "removed": [
+      755
+     ]
+    }
+   ],
+   "files": [
+    "modules/imgproc/src/distransform.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-f418aa091479",
+   "hunks": [
+    {
+     "file": "modules/imgproc/src/drawing.cpp",
+     "blob": "0e938a644d",
+     "old_start": 63,
+     "old_count": 7,
+     "removed": [
+      66
+     ]
+    },
+    {
+     "file": "modules/imgproc/src/drawing.cpp",
+     "blob": "0e938a644d",
+     "old_start": 1059,
+     "old_count": 7,
+     "removed": [
+      1062
+     ]
+    },
+    {
+     "file": "modules/imgproc/src/drawing.cpp",
+     "blob": "0e938a644d",
+     "old_start": 1287,
+     "old_count": 37,
+     "removed": [
+      1290,
+      1295,
+      1302,
+      1305,
+      1308,
+      1312,
+      1318,
+      1320
+     ]
+    },
+    {
+     "file": "modules/imgproc/src/drawing.cpp",
+     "blob": "0e938a644d",
+     "old_start": 1334,
+     "old_count": 7,
+     "removed": [
+      1337
+     ]
+    },
+    {
+     "file": "modules/imgproc/src/drawing.cpp",
+     "blob": "0e938a644d",
+     "old_start": 1343,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "modules/imgproc/src/drawing.cpp",
+     "blob": "0e938a644d",
+     "old_start": 1422,
+     "old_count": 12,
+     "removed": [
+      1425,
+      1430
+     ]
+    },
+    {
+     "file": "modules/imgproc/src/drawing.cpp",
+     "blob": "0e938a644d",
+     "old_start": 2020,
+     "old_count": 6,
+     "removed": [
+      2023
+     ]
+    },
+    {
+     "file": "modules/imgproc/src/drawing.cpp",
+     "blob": "0e938a644d",
+     "old_start": 2673,
+     "old_count": 7,
+     "removed": [
+      2676
+     ]
+    }
+   ],
+   "files": [
+    "modules/imgproc/src/drawing.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-f624dc51adf5",
+   "hunks": [
+    {
+     "file": "modules/core/src/arithm.cpp",
+     "blob": "167af8fa29",
+     "old_start": 61,
+     "old_count": 7,
+     "removed": [
+      64
+     ]
+    },
+    {
+     "file": "modules/core/src/arithm.cpp",
+     "blob": "167af8fa29",
+     "old_start": 196,
+     "old_count": 7,
+     "removed": []
+    },
+    {
+     "file": "modules/core/src/arithm.cpp",
+     "blob": "167af8fa29",
+     "old_start": 270,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "modules/core/src/arithm.cpp",
+     "blob": "167af8fa29",
+     "old_start": 745,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "modules/core/src/arithm.cpp",
+     "blob": "167af8fa29",
+     "old_start": 1228,
+     "old_count": 17,
+     "removed": [
+      1237,
+      1241
+     ]
+    },
+    {
+     "file": "modules/core/src/arithm.cpp",
+     "blob": "167af8fa29",
+     "old_start": 1247,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "modules/core/src/arithm.cpp",
+     "blob": "167af8fa29",
+     "old_start": 1275,
+     "old_count": 7,
+     "removed": [
+      1278
+     ]
+    }
+   ],
+   "files": [
+    "modules/core/src/arithm.cpp"
+   ]
+  },
+  {
+   "bug_id": "opencv-ff66d0af4e7e",
+   "hunks": [
+    {
+     "file": "modules/core/src/persistence.cpp",
+     "blob": "b10980c07e",
+     "old_start": 266,
+     "old_count": 7,
+     "removed": [
+      269
+     ]
+    },
+    {
+     "file": "modules/core/src/persistence.cpp",
+     "blob": "b10980c07e",
+     "old_start": 316,
+     "old_count": 7,
+     "removed": [
+      319
+     ]
+    }
+   ],
+   "files": [
+    "modules/core/src/persistence.cpp"
+   ]
+  }
+ ],
+ "n_bugs": 47,
+ "analysis_units": [
+  {
+   "file": "modules/calib3d/src/calibration.cpp",
+   "blob": "24d2875fdd"
+  },
+  {
+   "file": "modules/calib3d/src/calibration.cpp",
+   "blob": "c03e3a1c34"
+  },
+  {
+   "file": "modules/calib3d/src/homography_decomp.cpp",
+   "blob": "fea8882c5a"
+  },
+  {
+   "file": "modules/calib3d/src/ptsetreg.cpp",
+   "blob": "4d2e9135d2"
+  },
+  {
+   "file": "modules/calib3d/src/ptsetreg.cpp",
+   "blob": "88e1815c35"
+  },
+  {
+   "file": "modules/calib3d/src/undistort.avx2.cpp",
+   "blob": "69998be39b"
+  },
+  {
+   "file": "modules/core/include/opencv2/core/persistence.hpp",
+   "blob": "152fd560d8"
+  },
+  {
+   "file": "modules/core/src/arithm.cpp",
+   "blob": "167af8fa29"
+  },
+  {
+   "file": "modules/core/src/array.cpp",
+   "blob": "252ac13ca0"
+  },
+  {
+   "file": "modules/core/src/kmeans.cpp",
+   "blob": "bca8b9bd79"
+  },
+  {
+   "file": "modules/core/src/lda.cpp",
+   "blob": "abbb43ecd3"
+  },
+  {
+   "file": "modules/core/src/matrix_expressions.cpp",
+   "blob": "5ac1fafbd6"
+  },
+  {
+   "file": "modules/core/src/matrix_expressions.cpp",
+   "blob": "ea431336f0"
+  },
+  {
+   "file": "modules/core/src/matrix_wrap.cpp",
+   "blob": "e64d097aad"
+  },
+  {
+   "file": "modules/core/src/persistence.cpp",
+   "blob": "1a0da06f65"
+  },
+  {
+   "file": "modules/core/src/persistence.cpp",
+   "blob": "1e07119f4e"
+  },
+  {
+   "file": "modules/core/src/persistence.cpp",
+   "blob": "b10980c07e"
+  },
+  {
+   "file": "modules/core/src/persistence.cpp",
+   "blob": "c81edf674b"
+  },
+  {
+   "file": "modules/core/src/persistence_json.cpp",
+   "blob": "9d05650814"
+  },
+  {
+   "file": "modules/core/src/persistence_types.cpp",
+   "blob": "8aa929cc1d"
+  },
+  {
+   "file": "modules/core/src/persistence_xml.cpp",
+   "blob": "6141fade2d"
+  },
+  {
+   "file": "modules/dnn/src/dnn.cpp",
+   "blob": "92975a7560"
+  },
+  {
+   "file": "modules/features2d/src/matchers.cpp",
+   "blob": "d39afe1ade"
+  },
+  {
+   "file": "modules/features2d/src/orb.cpp",
+   "blob": "b0d32002a1"
+  },
+  {
+   "file": "modules/features2d/src/orb.cpp",
+   "blob": "ee4e55c181"
+  },
+  {
+   "file": "modules/imgcodecs/src/grfmt_tiff.cpp",
+   "blob": "d6f05f7a65"
+  },
+  {
+   "file": "modules/imgproc/include/opencv2/imgproc.hpp",
+   "blob": "2ea2ec969e"
+  },
+  {
+   "file": "modules/imgproc/src/approx.cpp",
+   "blob": "6c89f1d879"
+  },
+  {
+   "file": "modules/imgproc/src/color_lab.cpp",
+   "blob": "6b03be6195"
+  },
+  {
+   "file": "modules/imgproc/src/color_yuv.cpp",
+   "blob": "6cb508f980"
+  },
+  {
+   "file": "modules/imgproc/src/contours.cpp",
+   "blob": "e433cdb514"
+  },
+  {
+   "file": "modules/imgproc/src/distransform.cpp",
+   "blob": "a2c5a0d5fd"
+  },
+  {
+   "file": "modules/imgproc/src/drawing.cpp",
+   "blob": "0e938a644d"
+  },
+  {
+   "file": "modules/imgproc/src/drawing.cpp",
+   "blob": "e9b212d388"
+  },
+  {
+   "file": "modules/imgproc/src/drawing.cpp",
+   "blob": "eb06a98c11"
+  },
+  {
+   "file": "modules/imgproc/src/hough.cpp",
+   "blob": "39bdecf2ea"
+  },
+  {
+   "file": "modules/imgproc/src/hough.cpp",
+   "blob": "5fa24f4789"
+  },
+  {
+   "file": "modules/imgproc/src/imgwarp.cpp",
+   "blob": "be39419ed1"
+  },
+  {
+   "file": "modules/imgproc/src/intersection.cpp",
+   "blob": "84dbc8b8f1"
+  },
+  {
+   "file": "modules/imgproc/src/lsd.cpp",
+   "blob": "3b5b412e25"
+  },
+  {
+   "file": "modules/imgproc/src/phasecorr.cpp",
+   "blob": "dadc3a3da7"
+  },
+  {
+   "file": "modules/imgproc/src/pyramids.cpp",
+   "blob": "4f7732925c"
+  },
+  {
+   "file": "modules/imgproc/src/resize.cpp",
+   "blob": "43458cc153"
+  },
+  {
+   "file": "modules/imgproc/src/resize.cpp",
+   "blob": "ab0d3fe89f"
+  },
+  {
+   "file": "modules/imgproc/src/shapedescr.cpp",
+   "blob": "fe5664abf2"
+  },
+  {
+   "file": "modules/imgproc/src/subdivision2d.cpp",
+   "blob": "2a2ab1dfeb"
+  },
+  {
+   "file": "modules/ml/src/boost.cpp",
+   "blob": "4b94410eeb"
+  },
+  {
+   "file": "modules/ml/src/rtrees.cpp",
+   "blob": "1deee6f6c8"
+  },
+  {
+   "file": "modules/ml/src/tree.cpp",
+   "blob": "3d8941344d"
+  },
+  {
+   "file": "modules/photo/src/seamless_cloning.cpp",
+   "blob": "2c05d9abfb"
+  }
+ ],
+ "n_units": 50,
+ "bug_files": [
+  "modules/calib3d/src/calibration.cpp",
+  "modules/calib3d/src/homography_decomp.cpp",
+  "modules/calib3d/src/ptsetreg.cpp",
+  "modules/calib3d/src/undistort.avx2.cpp",
+  "modules/core/include/opencv2/core/persistence.hpp",
+  "modules/core/src/arithm.cpp",
+  "modules/core/src/array.cpp",
+  "modules/core/src/kmeans.cpp",
+  "modules/core/src/lda.cpp",
+  "modules/core/src/matrix_expressions.cpp",
+  "modules/core/src/matrix_wrap.cpp",
+  "modules/core/src/persistence.cpp",
+  "modules/core/src/persistence_json.cpp",
+  "modules/core/src/persistence_types.cpp",
+  "modules/core/src/persistence_xml.cpp",
+  "modules/dnn/src/dnn.cpp",
+  "modules/features2d/src/matchers.cpp",
+  "modules/features2d/src/orb.cpp",
+  "modules/imgcodecs/src/grfmt_tiff.cpp",
+  "modules/imgproc/include/opencv2/imgproc.hpp",
+  "modules/imgproc/src/approx.cpp",
+  "modules/imgproc/src/color_lab.cpp",
+  "modules/imgproc/src/color_yuv.cpp",
+  "modules/imgproc/src/contours.cpp",
+  "modules/imgproc/src/distransform.cpp",
+  "modules/imgproc/src/drawing.cpp",
+  "modules/imgproc/src/hough.cpp",
+  "modules/imgproc/src/imgwarp.cpp",
+  "modules/imgproc/src/intersection.cpp",
+  "modules/imgproc/src/lsd.cpp",
+  "modules/imgproc/src/phasecorr.cpp",
+  "modules/imgproc/src/pyramids.cpp",
+  "modules/imgproc/src/resize.cpp",
+  "modules/imgproc/src/shapedescr.cpp",
+  "modules/imgproc/src/subdivision2d.cpp",
+  "modules/ml/src/boost.cpp",
+  "modules/ml/src/rtrees.cpp",
+  "modules/ml/src/tree.cpp",
+  "modules/photo/src/seamless_cloning.cpp"
+ ]
+}

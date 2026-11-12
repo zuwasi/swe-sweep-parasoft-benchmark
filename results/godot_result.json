@@ -1,0 +1,228 @@
+{
+ "repo": "godot",
+ "n_bugs": 17,
+ "n_findings_total": 7143,
+ "found_region": 7,
+ "found_strict": 6,
+ "pct_region": 41.2,
+ "pct_strict": 35.3,
+ "swe_pct": 0.0,
+ "bugs": [
+  {
+   "bug_id": "godot-141d838cb0a9",
+   "files": [
+    "scene/gui/code_edit.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-6_9_2-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "godot-1487db8f8067",
+   "files": [
+    "modules/gdscript/gdscript_byte_codegen.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "godot-16e44a6ee5fd",
+   "files": [
+    "servers/text_server.cpp",
+    "servers/text_server.h"
+   ],
+   "found_region": [
+    "CERT_C-EXP39-a",
+    "CERT_C-INT31-m",
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-10_2_3-a",
+    "MISRACPP2023-5_10_1-b",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_4-a",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": [
+    "CERT_C-EXP39-a",
+    "CERT_C-INT31-m",
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-10_2_3-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_4-a",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-8_0_1-b"
+   ]
+  },
+  {
+   "bug_id": "godot-1ae6171b9aa5",
+   "files": [
+    "scene/gui/control.cpp",
+    "scene/gui/control.h"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "godot-1c09cb9eb560",
+   "files": [
+    "core/object/object.h",
+    "scene/resources/packed_scene.cpp"
+   ],
+   "found_region": [
+    "CERT_C-INT36-b",
+    "MISRACPP2023-10_2_3-a",
+    "MISRACPP2023-5_10_1-b",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-7_0_4-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_10-a",
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-10_2_3-a",
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-7_0_4-a"
+   ]
+  },
+  {
+   "bug_id": "godot-2a35121cb587",
+   "files": [
+    "modules/gdscript/language_server/gdscript_extend_parser.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "godot-3cec1823b69a",
+   "files": [
+    "scene/gui/text_edit.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "godot-4a105bb044ef",
+   "files": [
+    "core/object/object.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "godot-5a307011ac8b",
+   "files": [
+    "core/math/projection.cpp"
+   ],
+   "found_region": [
+    "CERT_C-FLP34-a",
+    "MISRACPP2023-10_0_1-a",
+    "MISRACPP2023-11_3_1-a",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": [
+    "CERT_C-FLP34-a",
+    "MISRACPP2023-10_0_1-a",
+    "MISRACPP2023-11_3_1-a",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-9_5_1-a"
+   ]
+  },
+  {
+   "bug_id": "godot-6191f779e20c",
+   "files": [
+    "modules/gdscript/gdscript_utility_functions.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-0_1_1-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_6-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-0_1_1-a",
+    "MISRACPP2023-6_9_2-a"
+   ]
+  },
+  {
+   "bug_id": "godot-663987b95b26",
+   "files": [
+    "core/string/ustring.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "godot-6ca6a961c8e1",
+   "files": [
+    "core/string/ustring.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "godot-979d80320b3c",
+   "files": [
+    "modules/gdscript/gdscript_parser.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "godot-ad060d7c9da5",
+   "files": [
+    "core/math/geometry_3d.h"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "godot-bddc285d34b7",
+   "files": [
+    "core/math/color.h"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "godot-c985347ac8f8",
+   "files": [
+    "core/math/basis.cpp"
+   ],
+   "found_region": [
+    "CERT_C-EXP39-a",
+    "MISRACPP2023-0_3_1-b",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_2-b"
+   ],
+   "found_strict": [
+    "CERT_C-EXP39-a",
+    "MISRACPP2023-8_2_2-b"
+   ]
+  },
+  {
+   "bug_id": "godot-dc71181af3af",
+   "files": [
+    "modules/gdscript/gdscript_analyzer.cpp"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a"
+   ],
+   "found_strict": [
+    "CERT_C-MSC41-a"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,885 @@
+{
+ "repo": "proj",
+ "clone_url": "https://github.com/OSGeo/PROJ.git",
+ "upstream_commit": "9f7399e15e6172900e0591deb5a57a45769d8205",
+ "base_ref": "6.3.0",
+ "n_subtasks": 21,
+ "bugs": [
+  {
+   "bug_id": "proj-06b0cf9e684f",
+   "hunks": [
+    {
+     "file": "src/iso19111/factory.cpp",
+     "blob": "2fe12fb3b",
+     "old_start": 50,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/iso19111/factory.cpp",
+     "blob": "2fe12fb3b",
+     "old_start": 136,
+     "old_count": 7,
+     "removed": [
+      139
+     ]
+    },
+    {
+     "file": "src/iso19111/factory.cpp",
+     "blob": "2fe12fb3b",
+     "old_start": 827,
+     "old_count": 7,
+     "removed": [
+      830
+     ]
+    },
+    {
+     "file": "src/iso19111/factory.cpp",
+     "blob": "2fe12fb3b",
+     "old_start": 885,
+     "old_count": 10,
+     "removed": [
+      888,
+      889,
+      890,
+      891
+     ]
+    },
+    {
+     "file": "src/iso19111/factory.cpp",
+     "blob": "2fe12fb3b",
+     "old_start": 1705,
+     "old_count": 10,
+     "removed": [
+      1708,
+      1711
+     ]
+    }
+   ],
+   "files": [
+    "src/iso19111/factory.cpp"
+   ]
+  },
+  {
+   "bug_id": "proj-082e3620a0bb",
+   "hunks": [
+    {
+     "file": "src/iso19111/coordinatesystem.cpp",
+     "blob": "163f0f43c",
+     "old_start": 581,
+     "old_count": 11,
+     "removed": [
+      584,
+      585,
+      586,
+      587,
+      588
+     ]
+    }
+   ],
+   "files": [
+    "src/iso19111/coordinatesystem.cpp"
+   ]
+  },
+  {
+   "bug_id": "proj-1ddd02a36695",
+   "hunks": [
+    {
+     "file": "src/iso19111/io.cpp",
+     "blob": "d5d0d1c00",
+     "old_start": 3773,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/iso19111/io.cpp"
+   ]
+  },
+  {
+   "bug_id": "proj-210490c1df4f",
+   "hunks": [
+    {
+     "file": "src/iso19111/coordinateoperation.cpp",
+     "blob": "c97763e44",
+     "old_start": 13848,
+     "old_count": 12,
+     "removed": [
+      13855,
+      13856
+     ]
+    },
+    {
+     "file": "src/iso19111/coordinateoperation.cpp",
+     "blob": "c97763e44",
+     "old_start": 13871,
+     "old_count": 13,
+     "removed": [
+      13879,
+      13880
+     ]
+    },
+    {
+     "file": "src/iso19111/crs.cpp",
+     "blob": "dbb68f0ba",
+     "old_start": 4525,
+     "old_count": 9,
+     "removed": [
+      4528,
+      4530
+     ]
+    },
+    {
+     "file": "src/iso19111/crs.cpp",
+     "blob": "dbb68f0ba",
+     "old_start": 4536,
+     "old_count": 8,
+     "removed": [
+      4539,
+      4540
+     ]
+    },
+    {
+     "file": "src/iso19111/io.cpp",
+     "blob": "8a8ad5266",
+     "old_start": 4060,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/iso19111/io.cpp",
+     "blob": "8a8ad5266",
+     "old_start": 4103,
+     "old_count": 23,
+     "removed": [
+      4106,
+      4107,
+      4108,
+      4109,
+      4110,
+      4111,
+      4112,
+      4113,
+      4114,
+      4115,
+      4116,
+      4117,
+      4118,
+      4119,
+      4120,
+      4122
+     ]
+    },
+    {
+     "file": "src/iso19111/io.cpp",
+     "blob": "8a8ad5266",
+     "old_start": 5265,
+     "old_count": 24,
+     "removed": [
+      5268,
+      5269,
+      5270,
+      5271,
+      5272,
+      5273,
+      5274,
+      5275,
+      5276,
+      5277,
+      5278,
+      5279,
+      5280,
+      5281,
+      5282,
+      5284,
+      5285
+     ]
+    }
+   ],
+   "files": [
+    "src/iso19111/coordinateoperation.cpp",
+    "src/iso19111/crs.cpp",
+    "src/iso19111/io.cpp"
+   ]
+  },
+  {
+   "bug_id": "proj-26c69d9d4768",
+   "hunks": [
+    {
+     "file": "src/iso19111/crs.cpp",
+     "blob": "b0ec35b9d",
+     "old_start": 662,
+     "old_count": 18,
+     "removed": [
+      665,
+      671,
+      672,
+      673,
+      674,
+      675,
+      676
+     ]
+    }
+   ],
+   "files": [
+    "src/iso19111/crs.cpp"
+   ]
+  },
+  {
+   "bug_id": "proj-4831a51d8731",
+   "hunks": [
+    {
+     "file": "src/iso19111/io.cpp",
+     "blob": "b6aadb8ba",
+     "old_start": 3797,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/iso19111/io.cpp"
+   ]
+  },
+  {
+   "bug_id": "proj-54e0eae5c2da",
+   "hunks": [
+    {
+     "file": "src/iso19111/io.cpp",
+     "blob": null,
+     "old_start": 2466,
+     "old_count": 7,
+     "removed": [
+      2469
+     ]
+    }
+   ],
+   "files": [
+    "src/iso19111/io.cpp"
+   ]
+  },
+  {
+   "bug_id": "proj-5819b33a303f",
+   "hunks": [
+    {
+     "file": "src/iso19111/crs.cpp",
+     "blob": "a24508d47",
+     "old_start": 3456,
+     "old_count": 23,
+     "removed": [
+      3460,
+      3466,
+      3470,
+      3471,
+      3474,
+      3475
+     ]
+    }
+   ],
+   "files": [
+    "src/iso19111/crs.cpp"
+   ]
+  },
+  {
+   "bug_id": "proj-5ea62cb8daa4",
+   "hunks": [
+    {
+     "file": "src/iso19111/datum.cpp",
+     "blob": "777addd22",
+     "old_start": 1156,
+     "old_count": 7,
+     "removed": [
+      1159
+     ]
+    }
+   ],
+   "files": [
+    "src/iso19111/datum.cpp"
+   ]
+  },
+  {
+   "bug_id": "proj-6e4ea9d02a9a",
+   "hunks": [
+    {
+     "file": "src/iso19111/factory.cpp",
+     "blob": "e7017ca35",
+     "old_start": 52,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/iso19111/factory.cpp",
+     "blob": "e7017ca35",
+     "old_start": 138,
+     "old_count": 7,
+     "removed": [
+      141
+     ]
+    },
+    {
+     "file": "src/iso19111/factory.cpp",
+     "blob": "e7017ca35",
+     "old_start": 733,
+     "old_count": 7,
+     "removed": [
+      736
+     ]
+    },
+    {
+     "file": "src/iso19111/factory.cpp",
+     "blob": "e7017ca35",
+     "old_start": 791,
+     "old_count": 10,
+     "removed": [
+      794,
+      795,
+      796,
+      797
+     ]
+    },
+    {
+     "file": "src/iso19111/factory.cpp",
+     "blob": "e7017ca35",
+     "old_start": 1646,
+     "old_count": 10,
+     "removed": [
+      1649,
+      1652
+     ]
+    }
+   ],
+   "files": [
+    "src/iso19111/factory.cpp"
+   ]
+  },
+  {
+   "bug_id": "proj-75bf558d4fa2",
+   "hunks": [
+    {
+     "file": "src/iso19111/common.cpp",
+     "blob": "917249861",
+     "old_start": 761,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/iso19111/common.cpp"
+   ]
+  },
+  {
+   "bug_id": "proj-782c2a51cca6",
+   "hunks": [
+    {
+     "file": "src/iso19111/crs.cpp",
+     "blob": "40c8eccab",
+     "old_start": 6277,
+     "old_count": 13,
+     "removed": [
+      6280,
+      6281,
+      6282,
+      6283,
+      6284,
+      6285,
+      6286
+     ]
+    }
+   ],
+   "files": [
+    "src/iso19111/crs.cpp"
+   ]
+  },
+  {
+   "bug_id": "proj-97485ea29440",
+   "hunks": [
+    {
+     "file": "src/iso19111/coordinateoperation.cpp",
+     "blob": "33210d243",
+     "old_start": 8930,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/iso19111/coordinateoperation.cpp",
+     "blob": "33210d243",
+     "old_start": 8958,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/iso19111/coordinateoperation.cpp"
+   ]
+  },
+  {
+   "bug_id": "proj-a289af9c5fe7",
+   "hunks": [
+    {
+     "file": "src/iso19111/coordinateoperation.cpp",
+     "blob": "ea938e10c",
+     "old_start": 13607,
+     "old_count": 12,
+     "removed": [
+      13614,
+      13615
+     ]
+    },
+    {
+     "file": "src/iso19111/coordinateoperation.cpp",
+     "blob": "ea938e10c",
+     "old_start": 13630,
+     "old_count": 13,
+     "removed": [
+      13638,
+      13639
+     ]
+    },
+    {
+     "file": "src/iso19111/crs.cpp",
+     "blob": "30ba3b9e2",
+     "old_start": 4425,
+     "old_count": 9,
+     "removed": [
+      4428,
+      4430
+     ]
+    },
+    {
+     "file": "src/iso19111/crs.cpp",
+     "blob": "30ba3b9e2",
+     "old_start": 4436,
+     "old_count": 8,
+     "removed": [
+      4439,
+      4440
+     ]
+    },
+    {
+     "file": "src/iso19111/io.cpp",
+     "blob": "9d463091e",
+     "old_start": 4057,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/iso19111/io.cpp",
+     "blob": "9d463091e",
+     "old_start": 4100,
+     "old_count": 23,
+     "removed": [
+      4103,
+      4104,
+      4105,
+      4106,
+      4107,
+      4108,
+      4109,
+      4110,
+      4111,
+      4112,
+      4113,
+      4114,
+      4115,
+      4116,
+      4117,
+      4119
+     ]
+    },
+    {
+     "file": "src/iso19111/io.cpp",
+     "blob": "9d463091e",
+     "old_start": 5262,
+     "old_count": 24,
+     "removed": [
+      5265,
+      5266,
+      5267,
+      5268,
+      5269,
+      5270,
+      5271,
+      5272,
+      5273,
+      5274,
+      5275,
+      5276,
+      5277,
+      5278,
+      5279,
+      5281,
+      5282
+     ]
+    }
+   ],
+   "files": [
+    "src/iso19111/coordinateoperation.cpp",
+    "src/iso19111/crs.cpp",
+    "src/iso19111/io.cpp"
+   ]
+  },
+  {
+   "bug_id": "proj-a2dc13a77ea7",
+   "hunks": [
+    {
+     "file": "src/projections/stere.cpp",
+     "blob": "d95bb7fa1",
+     "old_start": 5,
+     "old_count": 7,
+     "removed": [
+      8
+     ]
+    },
+    {
+     "file": "src/projections/stere.cpp",
+     "blob": "d95bb7fa1",
+     "old_start": 320,
+     "old_count": 8,
+     "removed": [
+      323,
+      324
+     ]
+    },
+    {
+     "file": "src/projections/tmerc.cpp",
+     "blob": "4b2a96f07",
+     "old_start": 22,
+     "old_count": 7,
+     "removed": [
+      25
+     ]
+    },
+    {
+     "file": "src/projections/tmerc.cpp",
+     "blob": "4b2a96f07",
+     "old_start": 541,
+     "old_count": 8,
+     "removed": [
+      544,
+      545
+     ]
+    }
+   ],
+   "files": [
+    "src/projections/stere.cpp",
+    "src/projections/tmerc.cpp"
+   ]
+  },
+  {
+   "bug_id": "proj-b6a07d893aa2",
+   "hunks": [
+    {
+     "file": "src/iso19111/coordinateoperation.cpp",
+     "blob": "83c0516ec",
+     "old_start": 8929,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/iso19111/coordinateoperation.cpp",
+     "blob": "83c0516ec",
+     "old_start": 8957,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/iso19111/coordinateoperation.cpp"
+   ]
+  },
+  {
+   "bug_id": "proj-bfab0375ca89",
+   "hunks": [
+    {
+     "file": "src/iso19111/io.cpp",
+     "blob": "6a1d7e324",
+     "old_start": 3839,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/iso19111/io.cpp"
+   ]
+  },
+  {
+   "bug_id": "proj-caba6901ef48",
+   "hunks": [
+    {
+     "file": "src/iso19111/factory.cpp",
+     "blob": "33fce5934",
+     "old_start": 5803,
+     "old_count": 7,
+     "removed": [
+      5806
+     ]
+    },
+    {
+     "file": "src/iso19111/factory.cpp",
+     "blob": "33fce5934",
+     "old_start": 5822,
+     "old_count": 7,
+     "removed": [
+      5825
+     ]
+    }
+   ],
+   "files": [
+    "src/iso19111/factory.cpp"
+   ]
+  },
+  {
+   "bug_id": "proj-ccce4196bb18",
+   "hunks": [
+    {
+     "file": "src/projections/moll.cpp",
+     "blob": "87b383368",
+     "old_start": 10,
+     "old_count": 7,
+     "removed": [
+      13
+     ]
+    }
+   ],
+   "files": [
+    "src/projections/moll.cpp"
+   ]
+  },
+  {
+   "bug_id": "proj-d1e39e45b0a6",
+   "hunks": [
+    {
+     "file": "src/iso19111/coordinateoperation.cpp",
+     "blob": "16325423b",
+     "old_start": 13850,
+     "old_count": 12,
+     "removed": [
+      13857,
+      13858
+     ]
+    },
+    {
+     "file": "src/iso19111/coordinateoperation.cpp",
+     "blob": "16325423b",
+     "old_start": 13873,
+     "old_count": 13,
+     "removed": [
+      13881,
+      13882
+     ]
+    },
+    {
+     "file": "src/iso19111/crs.cpp",
+     "blob": "dbb68f0ba",
+     "old_start": 4525,
+     "old_count": 9,
+     "removed": [
+      4528,
+      4530
+     ]
+    },
+    {
+     "file": "src/iso19111/crs.cpp",
+     "blob": "dbb68f0ba",
+     "old_start": 4536,
+     "old_count": 8,
+     "removed": [
+      4539,
+      4540
+     ]
+    },
+    {
+     "file": "src/iso19111/io.cpp",
+     "blob": "8a8ad5266",
+     "old_start": 4060,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/iso19111/io.cpp",
+     "blob": "8a8ad5266",
+     "old_start": 4103,
+     "old_count": 23,
+     "removed": [
+      4106,
+      4107,
+      4108,
+      4109,
+      4110,
+      4111,
+      4112,
+      4113,
+      4114,
+      4115,
+      4116,
+      4117,
+      4118,
+      4119,
+      4120,
+      4122
+     ]
+    },
+    {
+     "file": "src/iso19111/io.cpp",
+     "blob": "8a8ad5266",
+     "old_start": 5265,
+     "old_count": 24,
+     "removed": [
+      5268,
+      5269,
+      5270,
+      5271,
+      5272,
+      5273,
+      5274,
+      5275,
+      5276,
+      5277,
+      5278,
+      5279,
+      5280,
+      5281,
+      5282,
+      5284,
+      5285
+     ]
+    }
+   ],
+   "files": [
+    "src/iso19111/coordinateoperation.cpp",
+    "src/iso19111/crs.cpp",
+    "src/iso19111/io.cpp"
+   ]
+  },
+  {
+   "bug_id": "proj-ded2371a16af",
+   "hunks": [
+    {
+     "file": "src/iso19111/crs.cpp",
+     "blob": "d71d527ef",
+     "old_start": 3728,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/iso19111/crs.cpp"
+   ]
+  }
+ ],
+ "n_bugs": 21,
+ "analysis_units": [
+  {
+   "file": "src/iso19111/common.cpp",
+   "blob": "917249861"
+  },
+  {
+   "file": "src/iso19111/coordinateoperation.cpp",
+   "blob": "16325423b"
+  },
+  {
+   "file": "src/iso19111/coordinateoperation.cpp",
+   "blob": "33210d243"
+  },
+  {
+   "file": "src/iso19111/coordinateoperation.cpp",
+   "blob": "83c0516ec"
+  },
+  {
+   "file": "src/iso19111/coordinateoperation.cpp",
+   "blob": "c97763e44"
+  },
+  {
+   "file": "src/iso19111/coordinateoperation.cpp",
+   "blob": "ea938e10c"
+  },
+  {
+   "file": "src/iso19111/coordinatesystem.cpp",
+   "blob": "163f0f43c"
+  },
+  {
+   "file": "src/iso19111/crs.cpp",
+   "blob": "30ba3b9e2"
+  },
+  {
+   "file": "src/iso19111/crs.cpp",
+   "blob": "40c8eccab"
+  },
+  {
+   "file": "src/iso19111/crs.cpp",
+   "blob": "a24508d47"
+  },
+  {
+   "file": "src/iso19111/crs.cpp",
+   "blob": "b0ec35b9d"
+  },
+  {
+   "file": "src/iso19111/crs.cpp",
+   "blob": "d71d527ef"
+  },
+  {
+   "file": "src/iso19111/crs.cpp",
+   "blob": "dbb68f0ba"
+  },
+  {
+   "file": "src/iso19111/datum.cpp",
+   "blob": "777addd22"
+  },
+  {
+   "file": "src/iso19111/factory.cpp",
+   "blob": "2fe12fb3b"
+  },
+  {
+   "file": "src/iso19111/factory.cpp",
+   "blob": "33fce5934"
+  },
+  {
+   "file": "src/iso19111/factory.cpp",
+   "blob": "e7017ca35"
+  },
+  {
+   "file": "src/iso19111/io.cpp",
+   "blob": "6a1d7e324"
+  },
+  {
+   "file": "src/iso19111/io.cpp",
+   "blob": "8a8ad5266"
+  },
+  {
+   "file": "src/iso19111/io.cpp",
+   "blob": "9d463091e"
+  },
+  {
+   "file": "src/iso19111/io.cpp",
+   "blob": "b6aadb8ba"
+  },
+  {
+   "file": "src/iso19111/io.cpp",
+   "blob": "d5d0d1c00"
+  },
+  {
+   "file": "src/projections/moll.cpp",
+   "blob": "87b383368"
+  },
+  {
+   "file": "src/projections/stere.cpp",
+   "blob": "d95bb7fa1"
+  },
+  {
+   "file": "src/projections/tmerc.cpp",
+   "blob": "4b2a96f07"
+  }
+ ],
+ "n_units": 25,
+ "bug_files": [
+  "src/iso19111/common.cpp",
+  "src/iso19111/coordinateoperation.cpp",
+  "src/iso19111/coordinatesystem.cpp",
+  "src/iso19111/crs.cpp",
+  "src/iso19111/datum.cpp",
+  "src/iso19111/factory.cpp",
+  "src/iso19111/io.cpp",
+  "src/projections/moll.cpp",
+  "src/projections/stere.cpp",
+  "src/projections/tmerc.cpp"
+ ]
+}

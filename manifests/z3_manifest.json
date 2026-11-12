@@ -1,0 +1,456 @@
+{
+ "repo": "z3",
+ "clone_url": "https://github.com/Z3Prover/z3.git",
+ "upstream_commit": "9f7399e15e6172900e0591deb5a57a45769d8205",
+ "base_ref": "z3-4.16.0",
+ "n_subtasks": 11,
+ "bugs": [
+  {
+   "bug_id": "z3-21693e1cea96",
+   "hunks": [
+    {
+     "file": "src/cmd_context/cmd_context.cpp",
+     "blob": "90b9f0038",
+     "old_start": 1352,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "src/cmd_context/cmd_context.cpp",
+     "blob": "90b9f0038",
+     "old_start": 1398,
+     "old_count": 9,
+     "removed": [
+      1403
+     ]
+    },
+    {
+     "file": "src/parsers/smt2/smt2parser.cpp",
+     "blob": "c11085bb5",
+     "old_start": 1621,
+     "old_count": 7,
+     "removed": [
+      1624
+     ]
+    }
+   ],
+   "files": [
+    "src/cmd_context/cmd_context.cpp",
+    "src/parsers/smt2/smt2parser.cpp"
+   ]
+  },
+  {
+   "bug_id": "z3-6aeffc53878d",
+   "hunks": [
+    {
+     "file": "src/sat/smt/pb_internalize.cpp",
+     "blob": "b7873f7ba",
+     "old_start": 202,
+     "old_count": 7,
+     "removed": [
+      205
+     ]
+    },
+    {
+     "file": "src/sat/smt/pb_internalize.cpp",
+     "blob": "b7873f7ba",
+     "old_start": 214,
+     "old_count": 7,
+     "removed": [
+      217
+     ]
+    },
+    {
+     "file": "src/sat/smt/pb_internalize.cpp",
+     "blob": "b7873f7ba",
+     "old_start": 229,
+     "old_count": 7,
+     "removed": [
+      232
+     ]
+    },
+    {
+     "file": "src/sat/smt/pb_internalize.cpp",
+     "blob": "b7873f7ba",
+     "old_start": 254,
+     "old_count": 11,
+     "removed": [
+      257,
+      261
+     ]
+    }
+   ],
+   "files": [
+    "src/sat/smt/pb_internalize.cpp"
+   ]
+  },
+  {
+   "bug_id": "z3-7c5e71fa9a15",
+   "hunks": [
+    {
+     "file": "src/math/lp/dioph_eq.cpp",
+     "blob": "714eabc3a",
+     "old_start": 238,
+     "old_count": 18,
+     "removed": [
+      241,
+      242,
+      248,
+      249,
+      250,
+      251,
+      252
+     ]
+    },
+    {
+     "file": "src/math/lp/dioph_eq.cpp",
+     "blob": "714eabc3a",
+     "old_start": 1541,
+     "old_count": 7,
+     "removed": [
+      1544
+     ]
+    },
+    {
+     "file": "src/math/lp/dioph_eq.cpp",
+     "blob": "714eabc3a",
+     "old_start": 2351,
+     "old_count": 7,
+     "removed": [
+      2354
+     ]
+    },
+    {
+     "file": "src/math/lp/lar_solver.cpp",
+     "blob": "6e689c004",
+     "old_start": 36,
+     "old_count": 7,
+     "removed": [
+      39
+     ]
+    },
+    {
+     "file": "src/math/lp/lar_term.h",
+     "blob": "cca541801",
+     "old_start": 129,
+     "old_count": 8,
+     "removed": [
+      132,
+      133
+     ]
+    },
+    {
+     "file": "src/math/lp/nla_types.h",
+     "blob": "401e4eb62",
+     "old_start": 41,
+     "old_count": 9,
+     "removed": [
+      44,
+      45,
+      46
+     ]
+    }
+   ],
+   "files": [
+    "src/math/lp/dioph_eq.cpp",
+    "src/math/lp/lar_solver.cpp",
+    "src/math/lp/lar_term.h",
+    "src/math/lp/nla_types.h"
+   ]
+  },
+  {
+   "bug_id": "z3-845ca575f448",
+   "hunks": [
+    {
+     "file": "src/ast/euf/euf_arith_plugin.cpp",
+     "blob": "82ce7f2a9",
+     "old_start": 78,
+     "old_count": 7,
+     "removed": [
+      81
+     ]
+    }
+   ],
+   "files": [
+    "src/ast/euf/euf_arith_plugin.cpp"
+   ]
+  },
+  {
+   "bug_id": "z3-9b51ad4d5969",
+   "hunks": [
+    {
+     "file": "src/api/api_algebraic.cpp",
+     "blob": "34a16789c",
+     "old_start": 421,
+     "old_count": 7,
+     "removed": [
+      424
+     ]
+    },
+    {
+     "file": "src/api/api_algebraic.cpp",
+     "blob": "34a16789c",
+     "old_start": 441,
+     "old_count": 7,
+     "removed": [
+      444
+     ]
+    },
+    {
+     "file": "src/api/z3_algebraic.h",
+     "blob": "ee8ee21b8",
+     "old_start": 225,
+     "old_count": 7,
+     "removed": [
+      228
+     ]
+    },
+    {
+     "file": "src/api/z3_algebraic.h",
+     "blob": "ee8ee21b8",
+     "old_start": 234,
+     "old_count": 7,
+     "removed": [
+      237
+     ]
+    }
+   ],
+   "files": [
+    "src/api/api_algebraic.cpp",
+    "src/api/z3_algebraic.h"
+   ]
+  },
+  {
+   "bug_id": "z3-b29e3fbe839f",
+   "hunks": [
+    {
+     "file": "src/ast/fpa/fpa2bv_converter.cpp",
+     "blob": "4237e494f",
+     "old_start": 1769,
+     "old_count": 7,
+     "removed": [
+      1772
+     ]
+    }
+   ],
+   "files": [
+    "src/ast/fpa/fpa2bv_converter.cpp"
+   ]
+  },
+  {
+   "bug_id": "z3-ce2e010dd3c0",
+   "hunks": [
+    {
+     "file": "src/ast/datatype_decl_plugin.cpp",
+     "blob": "d875262b3",
+     "old_start": 1373,
+     "old_count": 24,
+     "removed": [
+      1381,
+      1382,
+      1383,
+      1384,
+      1385,
+      1386,
+      1387,
+      1388,
+      1389,
+      1390,
+      1391,
+      1392,
+      1393
+     ]
+    },
+    {
+     "file": "src/ast/datatype_decl_plugin.cpp",
+     "blob": "d875262b3",
+     "old_start": 1415,
+     "old_count": 7,
+     "removed": [
+      1418
+     ]
+    }
+   ],
+   "files": [
+    "src/ast/datatype_decl_plugin.cpp"
+   ]
+  },
+  {
+   "bug_id": "z3-e0dd0ca5d4f1",
+   "hunks": [
+    {
+     "file": "src/qe/mbp/mbp_dt_tg.cpp",
+     "blob": "aee54c459",
+     "old_start": 163,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/qe/mbp/mbp_dt_tg.cpp"
+   ]
+  },
+  {
+   "bug_id": "z3-e530990a778e",
+   "hunks": [
+    {
+     "file": "src/qe/qe_arith_plugin.cpp",
+     "blob": "05b611644",
+     "old_start": 2212,
+     "old_count": 21,
+     "removed": [
+      2215,
+      2216,
+      2221,
+      2222,
+      2228,
+      2229
+     ]
+    },
+    {
+     "file": "src/qe/qe_arith_plugin.cpp",
+     "blob": "05b611644",
+     "old_start": 2325,
+     "old_count": 16,
+     "removed": [
+      2328,
+      2329,
+      2333,
+      2334,
+      2335,
+      2336,
+      2337
+     ]
+    }
+   ],
+   "files": [
+    "src/qe/qe_arith_plugin.cpp"
+   ]
+  },
+  {
+   "bug_id": "z3-f2490da70ca4",
+   "hunks": [
+    {
+     "file": "src/math/polynomial/algebraic_numbers.cpp",
+     "blob": "e741c7d8e",
+     "old_start": 1924,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "src/math/polynomial/algebraic_numbers.cpp"
+   ]
+  },
+  {
+   "bug_id": "z3-f3cd4349f4cb",
+   "hunks": [
+    {
+     "file": "src/api/api_ast.cpp",
+     "blob": "f33f93e29",
+     "old_start": 190,
+     "old_count": 16,
+     "removed": [
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      202
+     ]
+    }
+   ],
+   "files": [
+    "src/api/api_ast.cpp"
+   ]
+  }
+ ],
+ "n_bugs": 11,
+ "analysis_units": [
+  {
+   "file": "src/api/api_algebraic.cpp",
+   "blob": "34a16789c"
+  },
+  {
+   "file": "src/api/api_ast.cpp",
+   "blob": "f33f93e29"
+  },
+  {
+   "file": "src/api/z3_algebraic.h",
+   "blob": "ee8ee21b8"
+  },
+  {
+   "file": "src/ast/datatype_decl_plugin.cpp",
+   "blob": "d875262b3"
+  },
+  {
+   "file": "src/ast/euf/euf_arith_plugin.cpp",
+   "blob": "82ce7f2a9"
+  },
+  {
+   "file": "src/ast/fpa/fpa2bv_converter.cpp",
+   "blob": "4237e494f"
+  },
+  {
+   "file": "src/cmd_context/cmd_context.cpp",
+   "blob": "90b9f0038"
+  },
+  {
+   "file": "src/math/lp/dioph_eq.cpp",
+   "blob": "714eabc3a"
+  },
+  {
+   "file": "src/math/lp/lar_solver.cpp",
+   "blob": "6e689c004"
+  },
+  {
+   "file": "src/math/lp/lar_term.h",
+   "blob": "cca541801"
+  },
+  {
+   "file": "src/math/lp/nla_types.h",
+   "blob": "401e4eb62"
+  },
+  {
+   "file": "src/math/polynomial/algebraic_numbers.cpp",
+   "blob": "e741c7d8e"
+  },
+  {
+   "file": "src/parsers/smt2/smt2parser.cpp",
+   "blob": "c11085bb5"
+  },
+  {
+   "file": "src/qe/mbp/mbp_dt_tg.cpp",
+   "blob": "aee54c459"
+  },
+  {
+   "file": "src/qe/qe_arith_plugin.cpp",
+   "blob": "05b611644"
+  },
+  {
+   "file": "src/sat/smt/pb_internalize.cpp",
+   "blob": "b7873f7ba"
+  }
+ ],
+ "n_units": 16,
+ "bug_files": [
+  "src/api/api_algebraic.cpp",
+  "src/api/api_ast.cpp",
+  "src/api/z3_algebraic.h",
+  "src/ast/datatype_decl_plugin.cpp",
+  "src/ast/euf/euf_arith_plugin.cpp",
+  "src/ast/fpa/fpa2bv_converter.cpp",
+  "src/cmd_context/cmd_context.cpp",
+  "src/math/lp/dioph_eq.cpp",
+  "src/math/lp/lar_solver.cpp",
+  "src/math/lp/lar_term.h",
+  "src/math/lp/nla_types.h",
+  "src/math/polynomial/algebraic_numbers.cpp",
+  "src/parsers/smt2/smt2parser.cpp",
+  "src/qe/mbp/mbp_dt_tg.cpp",
+  "src/qe/qe_arith_plugin.cpp",
+  "src/sat/smt/pb_internalize.cpp"
+ ]
+}

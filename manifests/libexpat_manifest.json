@@ -1,0 +1,319 @@
+{
+ "repo": "libexpat",
+ "clone_url": "https://github.com/libexpat/libexpat.git",
+ "upstream_commit": "9f7399e15e6172900e0591deb5a57a45769d8205",
+ "base_ref": "R_2_4_3",
+ "n_subtasks": 9,
+ "bugs": [
+  {
+   "bug_id": "libexpat-0c5dbd0bb0a5",
+   "hunks": [
+    {
+     "file": "expat/lib/xmlparse.c",
+     "blob": "8e667fcb",
+     "old_start": 7787,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "expat/lib/xmlparse.c",
+     "blob": "8e667fcb",
+     "old_start": 7794,
+     "old_count": 7,
+     "removed": [
+      7797
+     ]
+    }
+   ],
+   "files": [
+    "expat/lib/xmlparse.c"
+   ]
+  },
+  {
+   "bug_id": "libexpat-30d93b149d3d",
+   "hunks": [
+    {
+     "file": "expat/lib/xmlparse.c",
+     "blob": "e415068b",
+     "old_start": 5798,
+     "old_count": 19,
+     "removed": [
+      5801,
+      5802,
+      5805,
+      5807,
+      5809,
+      5810,
+      5811,
+      5812,
+      5813
+     ]
+    }
+   ],
+   "files": [
+    "expat/lib/xmlparse.c"
+   ]
+  },
+  {
+   "bug_id": "libexpat-44558a21f1b7",
+   "hunks": [
+    {
+     "file": "expat/lib/xmltok.c",
+     "blob": "a72200e8",
+     "old_start": 98,
+     "old_count": 11,
+     "removed": [
+      101,
+      102,
+      103,
+      104,
+      105
+     ]
+    },
+    {
+     "file": "expat/lib/xmltok_impl.c",
+     "blob": "0430591b",
+     "old_start": 69,
+     "old_count": 7,
+     "removed": [
+      72
+     ]
+    },
+    {
+     "file": "expat/lib/xmltok_impl.c",
+     "blob": "0430591b",
+     "old_start": 98,
+     "old_count": 7,
+     "removed": [
+      101
+     ]
+    },
+    {
+     "file": "expat/lib/xmltok_impl.c",
+     "blob": "0430591b",
+     "old_start": 1142,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "expat/lib/xmltok_impl.c",
+     "blob": "0430591b",
+     "old_start": 1270,
+     "old_count": 7,
+     "removed": [
+      1273
+     ]
+    },
+    {
+     "file": "expat/lib/xmltok_impl.c",
+     "blob": "0430591b",
+     "old_start": 1339,
+     "old_count": 7,
+     "removed": [
+      1342
+     ]
+    },
+    {
+     "file": "expat/lib/xmltok_impl.c",
+     "blob": "0430591b",
+     "old_start": 1518,
+     "old_count": 7,
+     "removed": [
+      1521
+     ]
+    },
+    {
+     "file": "expat/lib/xmltok_impl.c",
+     "blob": "0430591b",
+     "old_start": 1730,
+     "old_count": 7,
+     "removed": [
+      1733
+     ]
+    },
+    {
+     "file": "expat/lib/xmltok_impl.c",
+     "blob": "0430591b",
+     "old_start": 1775,
+     "old_count": 7,
+     "removed": [
+      1778
+     ]
+    }
+   ],
+   "files": [
+    "expat/lib/xmltok.c",
+    "expat/lib/xmltok_impl.c"
+   ]
+  },
+  {
+   "bug_id": "libexpat-4e25524fb119",
+   "hunks": [
+    {
+     "file": "expat/lib/xmlparse.c",
+     "blob": "d3c12129",
+     "old_start": 4975,
+     "old_count": 10,
+     "removed": [
+      4978
+     ]
+    }
+   ],
+   "files": [
+    "expat/lib/xmlparse.c"
+   ]
+  },
+  {
+   "bug_id": "libexpat-69f40cffb664",
+   "hunks": [
+    {
+     "file": "expat/lib/xmlparse.c",
+     "blob": "aacd6e7f",
+     "old_start": 1068,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "expat/lib/xmlparse.c"
+   ]
+  },
+  {
+   "bug_id": "libexpat-8e5c789e8d3b",
+   "hunks": [
+    {
+     "file": "expat/lib/xmlparse.c",
+     "blob": "d54af683",
+     "old_start": 2067,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "expat/lib/xmlparse.c"
+   ]
+  },
+  {
+   "bug_id": "libexpat-cf1142438f11",
+   "hunks": [
+    {
+     "file": "expat/lib/xmlparse.c",
+     "blob": "086fca59",
+     "old_start": 5924,
+     "old_count": 9,
+     "removed": [
+      5928,
+      5929
+     ]
+    }
+   ],
+   "files": [
+    "expat/lib/xmlparse.c"
+   ]
+  },
+  {
+   "bug_id": "libexpat-e567e550f1be",
+   "hunks": [
+    {
+     "file": "expat/lib/xmltok.c",
+     "blob": "387c6e44",
+     "old_start": 1177,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "expat/lib/xmltok.c"
+   ]
+  },
+  {
+   "bug_id": "libexpat-f67d952cb3de",
+   "hunks": [
+    {
+     "file": "expat/lib/xmlparse.c",
+     "blob": "a18aa2e3",
+     "old_start": 33,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "expat/lib/xmlparse.c",
+     "blob": "a18aa2e3",
+     "old_start": 4329,
+     "old_count": 15,
+     "removed": [
+      4332,
+      4333,
+      4334,
+      4335,
+      4336,
+      4337,
+      4339,
+      4340
+     ]
+    },
+    {
+     "file": "expat/lib/xmlparse.c",
+     "blob": "a18aa2e3",
+     "old_start": 4347,
+     "old_count": 7,
+     "removed": [
+      4350
+     ]
+    }
+   ],
+   "files": [
+    "expat/lib/xmlparse.c"
+   ]
+  }
+ ],
+ "n_bugs": 9,
+ "analysis_units": [
+  {
+   "file": "expat/lib/xmlparse.c",
+   "blob": "086fca59"
+  },
+  {
+   "file": "expat/lib/xmlparse.c",
+   "blob": "8e667fcb"
+  },
+  {
+   "file": "expat/lib/xmlparse.c",
+   "blob": "a18aa2e3"
+  },
+  {
+   "file": "expat/lib/xmlparse.c",
+   "blob": "aacd6e7f"
+  },
+  {
+   "file": "expat/lib/xmlparse.c",
+   "blob": "d3c12129"
+  },
+  {
+   "file": "expat/lib/xmlparse.c",
+   "blob": "d54af683"
+  },
+  {
+   "file": "expat/lib/xmlparse.c",
+   "blob": "e415068b"
+  },
+  {
+   "file": "expat/lib/xmltok.c",
+   "blob": "387c6e44"
+  },
+  {
+   "file": "expat/lib/xmltok.c",
+   "blob": "a72200e8"
+  },
+  {
+   "file": "expat/lib/xmltok_impl.c",
+   "blob": "0430591b"
+  }
+ ],
+ "n_units": 10,
+ "bug_files": [
+  "expat/lib/xmlparse.c",
+  "expat/lib/xmltok.c",
+  "expat/lib/xmltok_impl.c"
+ ]
+}

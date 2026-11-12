@@ -1,0 +1,239 @@
+{
+ "repo": "micropython",
+ "n_bugs": 22,
+ "n_findings_total": 3508,
+ "found_region": 4,
+ "found_strict": 3,
+ "pct_region": 18.2,
+ "pct_strict": 13.6,
+ "swe_pct": 0.0,
+ "bugs": [
+  {
+   "bug_id": "micropython-1010a6f1bf3f",
+   "files": [
+    "py/mpz.c"
+   ],
+   "found_region": [
+    "CERT_C-ARR39-b",
+    "CERT_C-INT31-a",
+    "MISRACPP2023-8_0_1-b"
+   ],
+   "found_strict": [
+    "CERT_C-ARR39-b",
+    "CERT_C-INT31-a",
+    "MISRACPP2023-8_0_1-b"
+   ]
+  },
+  {
+   "bug_id": "micropython-105ab25a289b",
+   "files": [
+    "py/objint_mpz.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "micropython-506e74919e0d",
+   "files": [
+    "py/lexer.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "micropython-56f308119e16",
+   "files": [
+    "py/compile.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "micropython-5c51fb896d80",
+   "files": [
+    "ports/unix/modusocket.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "micropython-639baaf0eaee",
+   "files": [
+    "py/modmath.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "micropython-8074d176612b",
+   "files": [
+    "py/objstr.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "micropython-80ab54d7145c",
+   "files": [
+    "py/bc.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "micropython-830236cc7dce",
+   "files": [
+    "py/objtype.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "micropython-85267a3c1ee8",
+   "files": [
+    "py/misc.h",
+    "py/mpz.c",
+    "py/mpz.h",
+    "py/objint.c",
+    "py/objint.h",
+    "py/objint_longlong.c",
+    "py/objint_mpz.c"
+   ],
+   "found_region": [
+    "CERT_C-ARR39-b",
+    "CERT_C-DCL40-a",
+    "CERT_C-INT31-a",
+    "CERT_C-INT31-e",
+    "CERT_C-INT31-h",
+    "CERT_C-INT31-i",
+    "CERT_C-INT31-j",
+    "CERT_C-INT31-l",
+    "CERT_C-INT31-m",
+    "MISRACPP2023-6_2_2-a",
+    "MISRACPP2023-6_2_3-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_4-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-8_0_1-b"
+   ],
+   "found_strict": [
+    "CERT_C-ARR39-b",
+    "CERT_C-DCL40-a",
+    "CERT_C-INT31-a",
+    "CERT_C-INT31-i",
+    "MISRACPP2023-6_2_2-a",
+    "MISRACPP2023-6_2_3-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-8_0_1-b"
+   ]
+  },
+  {
+   "bug_id": "micropython-8625d05e0e82",
+   "files": [
+    "py/objarray.c",
+    "py/objarray.h"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "micropython-88f383264f04",
+   "files": [
+    "py/objtype.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "micropython-b12fef09f055",
+   "files": [
+    "py/runtime.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "micropython-b3d62f80e40b",
+   "files": [
+    "py/compile.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "micropython-b53492729a4a",
+   "files": [
+    "py/mpz.c"
+   ],
+   "found_region": [
+    "CERT_C-INT31-j",
+    "MISRACPP2023-6_2_3-a",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-8_0_1-b"
+   ],
+   "found_strict": [
+    "CERT_C-INT31-j",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-8_0_1-b"
+   ]
+  },
+  {
+   "bug_id": "micropython-bc4a5e14e72f",
+   "files": [
+    "extmod/moductypes.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "micropython-bdadb90505c7",
+   "files": [
+    "extmod/moductypes.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "micropython-c14ecec3cf60",
+   "files": [
+    "py/modbuiltins.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "micropython-d4d265304c55",
+   "files": [
+    "py/mpz.c"
+   ],
+   "found_region": [
+    "CERT_C-INT31-j"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "micropython-ec6689a8cc86",
+   "files": [
+    "py/runtime.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "micropython-ef93b8337084",
+   "files": [
+    "py/objslice.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "micropython-f30ec885b80c",
+   "files": [
+    "ports/unix/main.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  }
+ ]
+}

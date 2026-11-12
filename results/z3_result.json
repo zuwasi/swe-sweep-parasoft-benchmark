@@ -1,0 +1,120 @@
+{
+ "repo": "z3",
+ "n_bugs": 11,
+ "n_findings_total": 3210,
+ "found_region": 3,
+ "found_strict": 1,
+ "pct_region": 27.3,
+ "pct_strict": 9.1,
+ "swe_pct": 0.0,
+ "bugs": [
+  {
+   "bug_id": "z3-21693e1cea96",
+   "files": [
+    "src/cmd_context/cmd_context.cpp",
+    "src/parsers/smt2/smt2parser.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "z3-6aeffc53878d",
+   "files": [
+    "src/sat/smt/pb_internalize.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "z3-7c5e71fa9a15",
+   "files": [
+    "src/math/lp/dioph_eq.cpp",
+    "src/math/lp/lar_solver.cpp",
+    "src/math/lp/lar_term.h",
+    "src/math/lp/nla_types.h"
+   ],
+   "found_region": [
+    "MISRACPP2023-6_8_4-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "z3-845ca575f448",
+   "files": [
+    "src/ast/euf/euf_arith_plugin.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "z3-9b51ad4d5969",
+   "files": [
+    "src/api/api_algebraic.cpp",
+    "src/api/z3_algebraic.h"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "z3-b29e3fbe839f",
+   "files": [
+    "src/ast/fpa/fpa2bv_converter.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-10_0_1-a",
+    "MISRACPP2023-8_0_1-b"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "z3-ce2e010dd3c0",
+   "files": [
+    "src/ast/datatype_decl_plugin.cpp"
+   ],
+   "found_region": [
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-6_4_1-g",
+    "MISRACPP2023-8_14_1-a",
+    "MISRACPP2023-8_1_2-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-6_4_1-g",
+    "MISRACPP2023-8_1_2-a",
+    "MISRACPP2023-9_3_1-b"
+   ]
+  },
+  {
+   "bug_id": "z3-e0dd0ca5d4f1",
+   "files": [
+    "src/qe/mbp/mbp_dt_tg.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "z3-e530990a778e",
+   "files": [
+    "src/qe/qe_arith_plugin.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "z3-f2490da70ca4",
+   "files": [
+    "src/math/polynomial/algebraic_numbers.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "z3-f3cd4349f4cb",
+   "files": [
+    "src/api/api_ast.cpp"
+   ],
+   "found_region": [],
+   "found_strict": []
+  }
+ ]
+}

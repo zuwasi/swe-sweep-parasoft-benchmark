@@ -1,0 +1,327 @@
+{
+ "repo": "php-src",
+ "n_bugs": 26,
+ "n_findings_total": 7685,
+ "found_region": 12,
+ "found_strict": 8,
+ "pct_region": 46.2,
+ "pct_strict": 30.8,
+ "swe_pct": 0.0,
+ "bugs": [
+  {
+   "bug_id": "php-src-0119a932f650",
+   "files": [
+    "Zend/zend_gc.c"
+   ],
+   "found_region": [
+    "CERT_C-INT31-e",
+    "CERT_C-INT31-j",
+    "MISRACPP2023-7_0_4-a",
+    "MISRACPP2023-7_0_5-a"
+   ],
+   "found_strict": [
+    "CERT_C-INT31-j"
+   ]
+  },
+  {
+   "bug_id": "php-src-04ebc4662274",
+   "files": [
+    "ext/standard/user_filters.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "php-src-0d43ce0140da",
+   "files": [
+    "ext/pdo/pdo_dbh.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "php-src-1b0195b0b102",
+   "files": [
+    "Zend/zend_inheritance.c"
+   ],
+   "found_region": [
+    "CERT_C-EXP42-a",
+    "CERT_C-EXP45-d",
+    "CERT_C-INT31-a",
+    "CERT_C-INT31-e",
+    "CERT_C-INT31-j",
+    "CERT_C-INT36-b",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-24_5_2-a",
+    "MISRACPP2023-6_4_1-g",
+    "MISRACPP2023-7_0_4-a",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_18_2-a",
+    "MISRACPP2023-8_2_6-a",
+    "MISRACPP2023-8_7_1-b"
+   ],
+   "found_strict": [
+    "CERT_C-EXP42-a",
+    "CERT_C-INT31-a",
+    "CERT_C-INT31-e",
+    "CERT_C-INT31-j",
+    "CERT_C-INT36-b",
+    "MISRACPP2023-24_5_2-a",
+    "MISRACPP2023-6_4_1-g",
+    "MISRACPP2023-7_0_4-a",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_6-a"
+   ]
+  },
+  {
+   "bug_id": "php-src-20b922f94767",
+   "files": [
+    "ext/standard/versioning.c"
+   ],
+   "found_region": [
+    "BD-PB-VOVR",
+    "CERT_C-ARR39-b",
+    "MISRACPP2023-0_1_1-a"
+   ],
+   "found_strict": [
+    "BD-PB-VOVR",
+    "CERT_C-ARR39-b",
+    "MISRACPP2023-0_1_1-a"
+   ]
+  },
+  {
+   "bug_id": "php-src-21c8f6bd6ded",
+   "files": [
+    "ext/soap/soap.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "php-src-3dd6d56bed43",
+   "files": [
+    "ext/soap/php_encoding.c",
+    "ext/soap/php_encoding.h",
+    "ext/soap/php_soap.h",
+    "ext/soap/soap.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "php-src-57b891db5eac",
+   "files": [
+    "ext/spl/php_spl.c"
+   ],
+   "found_region": [
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-8_2_6-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-11_6_1-a"
+   ]
+  },
+  {
+   "bug_id": "php-src-644f4c81235d",
+   "files": [
+    "ext/random/engine_xoshiro256starstar.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "php-src-67638986e670",
+   "files": [
+    "Zend/zend_hash.c",
+    "Zend/zend_types.h"
+   ],
+   "found_region": [
+    "CERT_C-ARR39-b",
+    "CERT_C-INT31-j",
+    "MISRACPP2023-8_2_6-a",
+    "MISRACPP2023-8_7_1-b"
+   ],
+   "found_strict": [
+    "CERT_C-ARR39-b",
+    "MISRACPP2023-8_7_1-b"
+   ]
+  },
+  {
+   "bug_id": "php-src-6d6eeee39f95",
+   "files": [
+    "ext/soap/php_encoding.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "php-src-7708c3973f86",
+   "files": [
+    "ext/standard/assert.c"
+   ],
+   "found_region": [
+    "MISRACPP2023-8_2_6-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "php-src-7fcb8a2206e5",
+   "files": [
+    "ext/zip/php_zip.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "php-src-81a2694ec050",
+   "files": [
+    "Zend/zend_generators.c",
+    "Zend/zend_generators.h"
+   ],
+   "found_region": [
+    "CERT_C-EXP36-a",
+    "CERT_C-EXP39-b",
+    "CERT_C-INT31-e",
+    "CERT_C-INT31-j",
+    "MISRACPP2023-10_0_1-a",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_4-a",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-9_6_1-a",
+    "MISRACPP2023-9_6_3-a"
+   ],
+   "found_strict": [
+    "CERT_C-INT31-e",
+    "CERT_C-INT31-j",
+    "MISRACPP2023-7_0_4-a",
+    "MISRACPP2023-7_0_5-a"
+   ]
+  },
+  {
+   "bug_id": "php-src-9301c38f27df",
+   "files": [
+    "ext/standard/math.c"
+   ],
+   "found_region": [
+    "CERT_C-EXP39-a",
+    "CERT_C-INT31-j",
+    "MISRACPP2023-0_3_1-b",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-8_0_1-b"
+   ],
+   "found_strict": [
+    "CERT_C-EXP39-a",
+    "CERT_C-INT31-j",
+    "MISRACPP2023-0_3_1-b",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-8_0_1-b"
+   ]
+  },
+  {
+   "bug_id": "php-src-98f103396d0e",
+   "files": [
+    "Zend/zend_opcode.c"
+   ],
+   "found_region": [
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "php-src-a1232a3e55b9",
+   "files": [
+    "Zend/zend_gc.c"
+   ],
+   "found_region": [
+    "MISRACPP2023-6_2_3-a",
+    "MISRACPP2023-8_2_6-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "php-src-a4774432f3b4",
+   "files": [
+    "ext/zip/php_zip.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "php-src-b9ca7425664a",
+   "files": [
+    "Zend/zend_hash.h"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "php-src-bba9204567b2",
+   "files": [
+    "ext/curl/interface.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "php-src-c3a5e71d0aa1",
+   "files": [
+    "ext/spl/spl_iterators.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "php-src-c94f35c6ad55",
+   "files": [
+    "ext/phar/phar_object.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "php-src-db25b1aca2fe",
+   "files": [
+    "ext/standard/url_scanner_ex.re"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "php-src-eaf37a8bb3ef",
+   "files": [
+    "ext/curl/multi.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "php-src-ef72be6a423c",
+   "files": [
+    "Zend/zend_ast.c"
+   ],
+   "found_region": [
+    "MISRACPP2023-6_9_2-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-6_9_2-a"
+   ]
+  },
+  {
+   "bug_id": "php-src-f79aeee502d8",
+   "files": [
+    "Zend/zend_inheritance.c"
+   ],
+   "found_region": [
+    "MISRACPP2023-11_6_1-a"
+   ],
+   "found_strict": []
+  }
+ ]
+}

@@ -1,0 +1,4118 @@
+{
+ "repo": "gdal",
+ "clone_url": "https://github.com/OSGeo/gdal.git",
+ "upstream_commit": "9f7399e15e6172900e0591deb5a57a45769d8205",
+ "base_ref": "v3.6.2",
+ "n_subtasks": 72,
+ "bugs": [
+  {
+   "bug_id": "gdal-006b8e03a33f",
+   "hunks": [
+    {
+     "file": "frmts/sdts/sdtslinereader.cpp",
+     "blob": "244a6dfae2",
+     "old_start": 269,
+     "old_count": 9,
+     "removed": [
+      272,
+      273,
+      274
+     ]
+    }
+   ],
+   "files": [
+    "frmts/sdts/sdtslinereader.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-00cc4be4d0a2",
+   "hunks": [
+    {
+     "file": "apps/gdalwarp_lib.cpp",
+     "blob": "a7656724f5",
+     "old_start": 1497,
+     "old_count": 12,
+     "removed": [
+      1500,
+      1502,
+      1503,
+      1505
+     ]
+    },
+    {
+     "file": "apps/gdalwarp_lib.cpp",
+     "blob": "a7656724f5",
+     "old_start": 1531,
+     "old_count": 23,
+     "removed": [
+      1534,
+      1536,
+      1537,
+      1538,
+      1539,
+      1540,
+      1541,
+      1543,
+      1544,
+      1550
+     ]
+    }
+   ],
+   "files": [
+    "apps/gdalwarp_lib.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-014fe459d126",
+   "hunks": [
+    {
+     "file": "apps/gdalinfo_lib.cpp",
+     "blob": "ae67000fcb",
+     "old_start": 1263,
+     "old_count": 9,
+     "removed": [
+      1266,
+      1267,
+      1268
+     ]
+    }
+   ],
+   "files": [
+    "apps/gdalinfo_lib.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-046bdf7ea2b1",
+   "hunks": [
+    {
+     "file": "ogr/ogrsf_frmts/geojson/ogrgeojsonreader.cpp",
+     "blob": "d26dd88b36",
+     "old_start": 1934,
+     "old_count": 7,
+     "removed": []
+    }
+   ],
+   "files": [
+    "ogr/ogrsf_frmts/geojson/ogrgeojsonreader.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-0f209f8114d9",
+   "hunks": [
+    {
+     "file": "apps/gdal_translate_lib.cpp",
+     "blob": "1bd54d9851",
+     "old_start": 1457,
+     "old_count": 16,
+     "removed": [
+      1460,
+      1461,
+      1462,
+      1469
+     ]
+    }
+   ],
+   "files": [
+    "apps/gdal_translate_lib.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-0f92097b1f96",
+   "hunks": [
+    {
+     "file": "frmts/pds/pds4dataset.cpp",
+     "blob": "559868b779",
+     "old_start": 1601,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "frmts/pds/pds4dataset.cpp",
+     "blob": "559868b779",
+     "old_start": 2022,
+     "old_count": 14,
+     "removed": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030,
+      2031,
+      2032
+     ]
+    }
+   ],
+   "files": [
+    "frmts/pds/pds4dataset.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-117d4b5060bb",
+   "hunks": [
+    {
+     "file": "ogr/ogrsf_frmts/dxf/ogr_dxf.h",
+     "blob": "ba06616f07",
+     "old_start": 939,
+     "old_count": 7,
+     "removed": [
+      942
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/dxf/ogrdxfwriterds.cpp",
+     "blob": "27d2ac5d8e",
+     "old_start": 30,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/dxf/ogrdxfwriterds.cpp",
+     "blob": "27d2ac5d8e",
+     "old_start": 1028,
+     "old_count": 20,
+     "removed": [
+      1031,
+      1036,
+      1039,
+      1044
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/dxf/ogrdxfwriterlayer.cpp",
+     "blob": "499da0bbe6",
+     "old_start": 184,
+     "old_count": 7,
+     "removed": [
+      187
+     ]
+    }
+   ],
+   "files": [
+    "ogr/ogrsf_frmts/dxf/ogr_dxf.h",
+    "ogr/ogrsf_frmts/dxf/ogrdxfwriterds.cpp",
+    "ogr/ogrsf_frmts/dxf/ogrdxfwriterlayer.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-142747db21b5",
+   "hunks": [
+    {
+     "file": "frmts/mrf/marfa.h",
+     "blob": "356e71e5a1",
+     "old_start": 387,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "frmts/mrf/marfa.h"
+   ]
+  },
+  {
+   "bug_id": "gdal-1ed37a29feee",
+   "hunks": [
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "b0fc389aca",
+     "old_start": 4984,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "b0fc389aca",
+     "old_start": 5153,
+     "old_count": 7,
+     "removed": [
+      5156
+     ]
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "b0fc389aca",
+     "old_start": 5227,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "b0fc389aca",
+     "old_start": 5426,
+     "old_count": 7,
+     "removed": [
+      5429
+     ]
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "b0fc389aca",
+     "old_start": 5495,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "b0fc389aca",
+     "old_start": 5612,
+     "old_count": 7,
+     "removed": [
+      5615
+     ]
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "b0fc389aca",
+     "old_start": 5727,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "b0fc389aca",
+     "old_start": 5855,
+     "old_count": 7,
+     "removed": [
+      5858
+     ]
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "b0fc389aca",
+     "old_start": 6021,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "b0fc389aca",
+     "old_start": 6401,
+     "old_count": 7,
+     "removed": [
+      6404
+     ]
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "b0fc389aca",
+     "old_start": 6469,
+     "old_count": 7,
+     "removed": [
+      6472
+     ]
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "b0fc389aca",
+     "old_start": 6536,
+     "old_count": 7,
+     "removed": [
+      6539
+     ]
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "b0fc389aca",
+     "old_start": 6628,
+     "old_count": 7,
+     "removed": [
+      6631
+     ]
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "b0fc389aca",
+     "old_start": 6692,
+     "old_count": 7,
+     "removed": [
+      6695
+     ]
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "b0fc389aca",
+     "old_start": 6752,
+     "old_count": 7,
+     "removed": [
+      6755
+     ]
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "b0fc389aca",
+     "old_start": 6811,
+     "old_count": 7,
+     "removed": [
+      6814
+     ]
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "b0fc389aca",
+     "old_start": 6872,
+     "old_count": 7,
+     "removed": [
+      6875
+     ]
+    },
+    {
+     "file": "apps/gdalwarp_lib.cpp",
+     "blob": "34183dcf73",
+     "old_start": 693,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "apps/gdalwarp_lib.cpp",
+     "blob": "34183dcf73",
+     "old_start": 710,
+     "old_count": 10,
+     "removed": [
+      713,
+      714,
+      715,
+      716
+     ]
+    },
+    {
+     "file": "apps/gdalwarp_lib.cpp",
+     "blob": "34183dcf73",
+     "old_start": 740,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "alg/gdalwarpkernel.cpp",
+    "apps/gdalwarp_lib.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-1ffea4d064fb",
+   "hunks": [
+    {
+     "file": "alg/gdalwarper.cpp",
+     "blob": "8869f1c998",
+     "old_start": 1520,
+     "old_count": 7,
+     "removed": [
+      1523
+     ]
+    }
+   ],
+   "files": [
+    "alg/gdalwarper.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-21f4a3ec2ba2",
+   "hunks": [
+    {
+     "file": "ogr/ogrsf_frmts/mitab/mitab_feature.cpp",
+     "blob": "b5a5f272fd",
+     "old_start": 5713,
+     "old_count": 7,
+     "removed": [
+      5716
+     ]
+    }
+   ],
+   "files": [
+    "ogr/ogrsf_frmts/mitab/mitab_feature.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-2200f505acc5",
+   "hunks": [
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/filegdbindex.cpp",
+     "blob": "57ed2d7d09",
+     "old_start": 916,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/filegdbindex.cpp",
+     "blob": "57ed2d7d09",
+     "old_start": 974,
+     "old_count": 10,
+     "removed": [
+      977,
+      978,
+      979,
+      980
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/filegdbindex.cpp",
+     "blob": "57ed2d7d09",
+     "old_start": 1186,
+     "old_count": 13,
+     "removed": [
+      1189,
+      1193,
+      1195
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/filegdbindex.cpp",
+     "blob": "57ed2d7d09",
+     "old_start": 1245,
+     "old_count": 15,
+     "removed": [
+      1252,
+      1253,
+      1256
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/filegdbindex.cpp",
+     "blob": "57ed2d7d09",
+     "old_start": 1392,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/filegdbindex.cpp",
+     "blob": "57ed2d7d09",
+     "old_start": 1431,
+     "old_count": 7,
+     "removed": [
+      1434
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/filegdbindex.cpp",
+     "blob": "57ed2d7d09",
+     "old_start": 1597,
+     "old_count": 13,
+     "removed": [
+      1599,
+      1605
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/filegdbindex.cpp",
+     "blob": "57ed2d7d09",
+     "old_start": 1743,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/filegdbindex.cpp",
+     "blob": "57ed2d7d09",
+     "old_start": 1759,
+     "old_count": 7,
+     "removed": [
+      1762
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/filegdbtable.h",
+     "blob": "11a27363b6",
+     "old_start": 774,
+     "old_count": 7,
+     "removed": [
+      777
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/ogropenfilegdblayer.cpp",
+     "blob": "c98a978a49",
+     "old_start": 1329,
+     "old_count": 7,
+     "removed": [
+      1332
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/ogropenfilegdblayer.cpp",
+     "blob": "c98a978a49",
+     "old_start": 1373,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/ogropenfilegdblayer.cpp",
+     "blob": "c98a978a49",
+     "old_start": 1402,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/ogropenfilegdblayer.cpp",
+     "blob": "c98a978a49",
+     "old_start": 1414,
+     "old_count": 10,
+     "removed": [
+      1419,
+      1420
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/ogropenfilegdblayer.cpp",
+     "blob": "c98a978a49",
+     "old_start": 1450,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "ogr/ogrsf_frmts/openfilegdb/filegdbindex.cpp",
+    "ogr/ogrsf_frmts/openfilegdb/filegdbtable.h",
+    "ogr/ogrsf_frmts/openfilegdb/ogropenfilegdblayer.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-22389fee67bc",
+   "hunks": [
+    {
+     "file": "frmts/png/pngdataset.cpp",
+     "blob": "5d49a90263",
+     "old_start": 1405,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "frmts/png/pngdataset.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-231f5e1235cb",
+   "hunks": [
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogr_xlsx.h",
+     "blob": "68fbe8c603",
+     "old_start": 59,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogr_xlsx.h",
+     "blob": "68fbe8c603",
+     "old_start": 161,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogr_xlsx.h",
+     "blob": "68fbe8c603",
+     "old_start": 178,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogr_xlsx.h",
+     "blob": "68fbe8c603",
+     "old_start": 213,
+     "old_count": 7,
+     "removed": [
+      216
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogr_xlsx.h",
+     "blob": "68fbe8c603",
+     "old_start": 236,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogr_xlsx.h",
+     "blob": "68fbe8c603",
+     "old_start": 257,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+     "blob": "e41131d972",
+     "old_start": 308,
+     "old_count": 7,
+     "removed": [
+      311
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+     "blob": "e41131d972",
+     "old_start": 357,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+     "blob": "e41131d972",
+     "old_start": 398,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+     "blob": "e41131d972",
+     "old_start": 663,
+     "old_count": 7,
+     "removed": [
+      666
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+     "blob": "e41131d972",
+     "old_start": 672,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+     "blob": "e41131d972",
+     "old_start": 734,
+     "old_count": 7,
+     "removed": [
+      737
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+     "blob": "e41131d972",
+     "old_start": 1147,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+     "blob": "e41131d972",
+     "old_start": 1195,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+     "blob": "e41131d972",
+     "old_start": 1517,
+     "old_count": 8,
+     "removed": [
+      1520,
+      1521
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+     "blob": "e41131d972",
+     "old_start": 1789,
+     "old_count": 14,
+     "removed": [
+      1792,
+      1798,
+      1799
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+     "blob": "e41131d972",
+     "old_start": 2069,
+     "old_count": 7,
+     "removed": [
+      2072
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+     "blob": "e41131d972",
+     "old_start": 2100,
+     "old_count": 27,
+     "removed": [
+      2103,
+      2104,
+      2106,
+      2107,
+      2108,
+      2109,
+      2110,
+      2112,
+      2113,
+      2114,
+      2116,
+      2123
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+     "blob": "e41131d972",
+     "old_start": 2149,
+     "old_count": 7,
+     "removed": [
+      2152
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+     "blob": "e41131d972",
+     "old_start": 2475,
+     "old_count": 7,
+     "removed": [
+      2478
+     ]
+    }
+   ],
+   "files": [
+    "ogr/ogrsf_frmts/xlsx/ogr_xlsx.h",
+    "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-27110150de2c",
+   "hunks": [
+    {
+     "file": "apps/gdalmdiminfo_lib.cpp",
+     "blob": "e029bcbdcb",
+     "old_start": 395,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "apps/gdalmdiminfo_lib.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-2ca07c262bf8",
+   "hunks": [
+    {
+     "file": "frmts/gtiff/geotiff.cpp",
+     "blob": "c71c12c90d",
+     "old_start": 13341,
+     "old_count": 9,
+     "removed": [
+      13344
+     ]
+    },
+    {
+     "file": "frmts/gtiff/geotiff.cpp",
+     "blob": "c71c12c90d",
+     "old_start": 13361,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "frmts/gtiff/geotiff.cpp",
+     "blob": "c71c12c90d",
+     "old_start": 13545,
+     "old_count": 7,
+     "removed": [
+      13548
+     ]
+    },
+    {
+     "file": "frmts/gtiff/geotiff.cpp",
+     "blob": "c71c12c90d",
+     "old_start": 20485,
+     "old_count": 14,
+     "removed": [
+      20488,
+      20494,
+      20495
+     ]
+    }
+   ],
+   "files": [
+    "frmts/gtiff/geotiff.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-2ded60d7a181",
+   "hunks": [
+    {
+     "file": "frmts/vrt/vrtrasterband.cpp",
+     "blob": "9b2a8df17f",
+     "old_start": 1314,
+     "old_count": 7,
+     "removed": [
+      1317
+     ]
+    },
+    {
+     "file": "gcore/gdaldriver.cpp",
+     "blob": "f857bad7bc",
+     "old_start": 1028,
+     "old_count": 7,
+     "removed": [
+      1031
+     ]
+    }
+   ],
+   "files": [
+    "frmts/vrt/vrtrasterband.cpp",
+    "gcore/gdaldriver.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-306b6a7740f5",
+   "hunks": [
+    {
+     "file": "ogr/ogrsf_frmts/generic/ogr_gensql.cpp",
+     "blob": "cb0ed0aa2d",
+     "old_start": 877,
+     "old_count": 7,
+     "removed": [
+      880
+     ]
+    },
+    {
+     "file": "ogr/swq_select.cpp",
+     "blob": "9d63d199b0",
+     "old_start": 1059,
+     "old_count": 7,
+     "removed": [
+      1062
+     ]
+    }
+   ],
+   "files": [
+    "ogr/ogrsf_frmts/generic/ogr_gensql.cpp",
+    "ogr/swq_select.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-3086778cd72a",
+   "hunks": [
+    {
+     "file": "ogr/ogrsf_frmts/gpkg/ogrgeopackagelayer.cpp",
+     "blob": "2828c5e879",
+     "old_start": 600,
+     "old_count": 7,
+     "removed": [
+      603
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/gpkg/ogrgeopackagetablelayer.cpp",
+     "blob": "b688ac5d22",
+     "old_start": 6787,
+     "old_count": 7,
+     "removed": [
+      6790
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/gpkg/ogrgeopackagetablelayer.cpp",
+     "blob": "b688ac5d22",
+     "old_start": 7127,
+     "old_count": 7,
+     "removed": [
+      7130
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/gpkg/ogrgeopackagetablelayer.cpp",
+     "blob": "b688ac5d22",
+     "old_start": 7510,
+     "old_count": 7,
+     "removed": [
+      7513
+     ]
+    }
+   ],
+   "files": [
+    "ogr/ogrsf_frmts/gpkg/ogrgeopackagelayer.cpp",
+    "ogr/ogrsf_frmts/gpkg/ogrgeopackagetablelayer.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-35f0ff7f356c",
+   "hunks": [
+    {
+     "file": "apps/gdal_rasterize_lib.cpp",
+     "blob": "5d40d9c193",
+     "old_start": 71,
+     "old_count": 7,
+     "removed": [
+      74
+     ]
+    },
+    {
+     "file": "apps/gdal_rasterize_lib.cpp",
+     "blob": "5d40d9c193",
+     "old_start": 82,
+     "old_count": 46,
+     "removed": [
+      85,
+      87,
+      88,
+      92,
+      93,
+      94,
+      95,
+      96,
+      98,
+      99,
+      100,
+      101,
+      102,
+      104,
+      105,
+      106,
+      107,
+      108,
+      110,
+      111,
+      115,
+      116,
+      118,
+      119,
+      120,
+      121,
+      122,
+      123
+     ]
+    },
+    {
+     "file": "apps/gdal_rasterize_lib.cpp",
+     "blob": "5d40d9c193",
+     "old_start": 139,
+     "old_count": 19,
+     "removed": [
+      142,
+      148,
+      149,
+      150,
+      152,
+      153,
+      154
+     ]
+    },
+    {
+     "file": "apps/gdal_rasterize_lib.cpp",
+     "blob": "5d40d9c193",
+     "old_start": 165,
+     "old_count": 16,
+     "removed": [
+      168,
+      170,
+      177
+     ]
+    }
+   ],
+   "files": [
+    "apps/gdal_rasterize_lib.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-3918a30cafcd",
+   "hunks": [
+    {
+     "file": "ogr/ogrsf_frmts/shape/ogrshape.h",
+     "blob": "80bde7839c",
+     "old_start": 227,
+     "old_count": 7,
+     "removed": [
+      230
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/shape/ogrshapedatasource.cpp",
+     "blob": "af53f53663",
+     "old_start": 509,
+     "old_count": 7,
+     "removed": [
+      512
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/shape/ogrshapedatasource.cpp",
+     "blob": "af53f53663",
+     "old_start": 884,
+     "old_count": 26,
+     "removed": [
+      889,
+      890,
+      891,
+      893,
+      897,
+      898,
+      905,
+      906
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/shape/ogrshapedatasource.cpp",
+     "blob": "af53f53663",
+     "old_start": 915,
+     "old_count": 8,
+     "removed": [
+      918,
+      919
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/shape/ogrshapelayer.cpp",
+     "blob": "0ee01c21ab",
+     "old_start": 65,
+     "old_count": 7,
+     "removed": [
+      68
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/shape/ogrshapelayer.cpp",
+     "blob": "0ee01c21ab",
+     "old_start": 218,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "ogr/ogrsf_frmts/shape/ogrshape.h",
+    "ogr/ogrsf_frmts/shape/ogrshapedatasource.cpp",
+    "ogr/ogrsf_frmts/shape/ogrshapelayer.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-3bd8d57ad655",
+   "hunks": [
+    {
+     "file": "frmts/png/pngdataset.cpp",
+     "blob": "1f1fe17473",
+     "old_start": 1405,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "frmts/png/pngdataset.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-424d521138b6",
+   "hunks": [
+    {
+     "file": "frmts/bmp/bmpdataset.cpp",
+     "blob": "892b16e56f",
+     "old_start": 236,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "frmts/bmp/bmpdataset.cpp",
+     "blob": "892b16e56f",
+     "old_start": 966,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "frmts/bmp/bmpdataset.cpp",
+     "blob": "892b16e56f",
+     "old_start": 1436,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "frmts/bmp/bmpdataset.cpp",
+     "blob": "892b16e56f",
+     "old_start": 1482,
+     "old_count": 7,
+     "removed": [
+      1485
+     ]
+    },
+    {
+     "file": "frmts/bmp/bmpdataset.cpp",
+     "blob": "892b16e56f",
+     "old_start": 1513,
+     "old_count": 16,
+     "removed": [
+      1516,
+      1517,
+      1518,
+      1519,
+      1520,
+      1521,
+      1522
+     ]
+    }
+   ],
+   "files": [
+    "frmts/bmp/bmpdataset.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-44e37a15a6cf",
+   "hunks": [
+    {
+     "file": "ogr/ogrsf_frmts/mitab/mitab_feature.cpp",
+     "blob": "f6dff65cf0",
+     "old_start": 5725,
+     "old_count": 7,
+     "removed": [
+      5728
+     ]
+    }
+   ],
+   "files": [
+    "ogr/ogrsf_frmts/mitab/mitab_feature.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-45f004851fda",
+   "hunks": [
+    {
+     "file": "ogr/ogrsf_frmts/gpkg/ogrgeopackagetablelayer.cpp",
+     "blob": "58c82fc66b",
+     "old_start": 1878,
+     "old_count": 7,
+     "removed": [
+      1881
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/gpkg/ogrgeopackagetablelayer.cpp",
+     "blob": "58c82fc66b",
+     "old_start": 1892,
+     "old_count": 21,
+     "removed": [
+      1895,
+      1897,
+      1901,
+      1904,
+      1905,
+      1906,
+      1907,
+      1909
+     ]
+    }
+   ],
+   "files": [
+    "ogr/ogrsf_frmts/gpkg/ogrgeopackagetablelayer.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-4682a0e8a013",
+   "hunks": [
+    {
+     "file": "ogr/ogrsf_frmts/gml/gmlutils.cpp",
+     "blob": "609104534c",
+     "old_start": 304,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "ogr/ogrsf_frmts/gml/gmlutils.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-4c8aab140a64",
+   "hunks": [
+    {
+     "file": "alg/gdaltransformer.cpp",
+     "blob": "1b024ad116",
+     "old_start": 933,
+     "old_count": 23,
+     "removed": [
+      936,
+      937,
+      938,
+      939,
+      940,
+      941,
+      942,
+      952
+     ]
+    },
+    {
+     "file": "alg/gdaltransformer.cpp",
+     "blob": "1b024ad116",
+     "old_start": 1001,
+     "old_count": 12,
+     "removed": [
+      1009
+     ]
+    }
+   ],
+   "files": [
+    "alg/gdaltransformer.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-4d9083882a78",
+   "hunks": [
+    {
+     "file": "ogr/ogrsf_frmts/geojson/ogrgeojsonwritelayer.cpp",
+     "blob": "c50f9f355b",
+     "old_start": 86,
+     "old_count": 38,
+     "removed": [
+      89,
+      90,
+      91,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      113,
+      114,
+      115,
+      116,
+      117,
+      118,
+      119,
+      120
+     ]
+    }
+   ],
+   "files": [
+    "ogr/ogrsf_frmts/geojson/ogrgeojsonwritelayer.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-504022e1901c",
+   "hunks": [
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "5dc66db0db",
+     "old_start": 5049,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "5dc66db0db",
+     "old_start": 5218,
+     "old_count": 7,
+     "removed": [
+      5221
+     ]
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "5dc66db0db",
+     "old_start": 5292,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "5dc66db0db",
+     "old_start": 5491,
+     "old_count": 7,
+     "removed": [
+      5494
+     ]
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "5dc66db0db",
+     "old_start": 5560,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "5dc66db0db",
+     "old_start": 5677,
+     "old_count": 7,
+     "removed": [
+      5680
+     ]
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "5dc66db0db",
+     "old_start": 5792,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "5dc66db0db",
+     "old_start": 5920,
+     "old_count": 7,
+     "removed": [
+      5923
+     ]
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "5dc66db0db",
+     "old_start": 6086,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "5dc66db0db",
+     "old_start": 6472,
+     "old_count": 7,
+     "removed": [
+      6475
+     ]
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "5dc66db0db",
+     "old_start": 6540,
+     "old_count": 7,
+     "removed": [
+      6543
+     ]
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "5dc66db0db",
+     "old_start": 6607,
+     "old_count": 7,
+     "removed": [
+      6610
+     ]
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "5dc66db0db",
+     "old_start": 6699,
+     "old_count": 7,
+     "removed": [
+      6702
+     ]
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "5dc66db0db",
+     "old_start": 6763,
+     "old_count": 7,
+     "removed": [
+      6766
+     ]
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "5dc66db0db",
+     "old_start": 6823,
+     "old_count": 7,
+     "removed": [
+      6826
+     ]
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "5dc66db0db",
+     "old_start": 6882,
+     "old_count": 7,
+     "removed": [
+      6885
+     ]
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "5dc66db0db",
+     "old_start": 6943,
+     "old_count": 7,
+     "removed": [
+      6946
+     ]
+    },
+    {
+     "file": "apps/gdalwarp_lib.cpp",
+     "blob": "61299f0ce0",
+     "old_start": 667,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "apps/gdalwarp_lib.cpp",
+     "blob": "61299f0ce0",
+     "old_start": 684,
+     "old_count": 10,
+     "removed": [
+      687,
+      688,
+      689,
+      690
+     ]
+    },
+    {
+     "file": "apps/gdalwarp_lib.cpp",
+     "blob": "61299f0ce0",
+     "old_start": 714,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "alg/gdalwarpkernel.cpp",
+    "apps/gdalwarp_lib.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-539e9769dc6c",
+   "hunks": [
+    {
+     "file": "apps/gdalinfo_lib.cpp",
+     "blob": "577fc617b9",
+     "old_start": 342,
+     "old_count": 19,
+     "removed": [
+      345,
+      346,
+      347,
+      348,
+      349,
+      351,
+      352,
+      354,
+      355,
+      356,
+      357
+     ]
+    }
+   ],
+   "files": [
+    "apps/gdalinfo_lib.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-57efa1e4b4ab",
+   "hunks": [
+    {
+     "file": "alg/gdalwarper.cpp",
+     "blob": "64c393c3c8",
+     "old_start": 1518,
+     "old_count": 7,
+     "removed": [
+      1521
+     ]
+    }
+   ],
+   "files": [
+    "alg/gdalwarper.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-5ce400c64f69",
+   "hunks": [
+    {
+     "file": "ogr/ogr2gmlgeometry.cpp",
+     "blob": "7850438",
+     "old_start": 549,
+     "old_count": 50,
+     "removed": [
+      552,
+      553,
+      557,
+      558,
+      559,
+      560,
+      561,
+      564,
+      566,
+      567,
+      568,
+      569,
+      570,
+      572,
+      574,
+      575,
+      576,
+      577,
+      578,
+      579,
+      580,
+      581,
+      582,
+      583,
+      584,
+      585,
+      586,
+      587,
+      588,
+      589,
+      590,
+      591,
+      592,
+      593,
+      594,
+      595
+     ]
+    },
+    {
+     "file": "ogr/ogr2gmlgeometry.cpp",
+     "blob": "7850438",
+     "old_start": 600,
+     "old_count": 20,
+     "removed": [
+      603,
+      604,
+      605,
+      610,
+      611,
+      613,
+      614,
+      615,
+      616
+     ]
+    },
+    {
+     "file": "ogr/ogr2gmlgeometry.cpp",
+     "blob": "7850438",
+     "old_start": 634,
+     "old_count": 11,
+     "removed": [
+      637,
+      641
+     ]
+    },
+    {
+     "file": "ogr/ogr2gmlgeometry.cpp",
+     "blob": "7850438",
+     "old_start": 658,
+     "old_count": 11,
+     "removed": [
+      661,
+      665
+     ]
+    },
+    {
+     "file": "ogr/ogr2gmlgeometry.cpp",
+     "blob": "7850438",
+     "old_start": 678,
+     "old_count": 7,
+     "removed": [
+      681
+     ]
+    },
+    {
+     "file": "ogr/ogr2gmlgeometry.cpp",
+     "blob": "7850438",
+     "old_start": 692,
+     "old_count": 7,
+     "removed": [
+      695
+     ]
+    },
+    {
+     "file": "ogr/ogr2gmlgeometry.cpp",
+     "blob": "7850438",
+     "old_start": 706,
+     "old_count": 7,
+     "removed": [
+      709
+     ]
+    },
+    {
+     "file": "ogr/ogr2gmlgeometry.cpp",
+     "blob": "7850438",
+     "old_start": 735,
+     "old_count": 7,
+     "removed": [
+      738
+     ]
+    },
+    {
+     "file": "ogr/ogr2gmlgeometry.cpp",
+     "blob": "7850438",
+     "old_start": 785,
+     "old_count": 7,
+     "removed": [
+      788
+     ]
+    },
+    {
+     "file": "ogr/ogr2gmlgeometry.cpp",
+     "blob": "7850438",
+     "old_start": 813,
+     "old_count": 13,
+     "removed": [
+      816,
+      822
+     ]
+    },
+    {
+     "file": "ogr/ogr2gmlgeometry.cpp",
+     "blob": "7850438",
+     "old_start": 901,
+     "old_count": 36,
+     "removed": [
+      904,
+      906,
+      913,
+      915,
+      922,
+      924,
+      931,
+      933
+     ]
+    },
+    {
+     "file": "ogr/ogr2gmlgeometry.cpp",
+     "blob": "7850438",
+     "old_start": 983,
+     "old_count": 7,
+     "removed": [
+      986
+     ]
+    },
+    {
+     "file": "ogr/ogr2gmlgeometry.cpp",
+     "blob": "7850438",
+     "old_start": 1035,
+     "old_count": 7,
+     "removed": [
+      1038
+     ]
+    }
+   ],
+   "files": [
+    "ogr/ogr2gmlgeometry.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-5f6e44b21f5f",
+   "hunks": [
+    {
+     "file": "ogr/ogrsf_frmts/gml/gmlutils.cpp",
+     "blob": "e1129a143d",
+     "old_start": 306,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "ogr/ogrsf_frmts/gml/gmlutils.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-6717ca55be0c",
+   "hunks": [
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "c4b6873902",
+     "old_start": 6427,
+     "old_count": 12,
+     "removed": [
+      6430,
+      6431,
+      6432,
+      6435
+     ]
+    },
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "c4b6873902",
+     "old_start": 6441,
+     "old_count": 12,
+     "removed": [
+      6444,
+      6445,
+      6446,
+      6448,
+      6449
+     ]
+    }
+   ],
+   "files": [
+    "alg/gdalwarpkernel.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-6b4837eba1e5",
+   "hunks": [
+    {
+     "file": "ogr/ogrsf_frmts/generic/ogr_gensql.cpp",
+     "blob": "01cee5abeb",
+     "old_start": 56,
+     "old_count": 8,
+     "removed": [
+      59,
+      60
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/generic/ogr_gensql.cpp",
+     "blob": "01cee5abeb",
+     "old_start": 74,
+     "old_count": 10,
+     "removed": [
+      77,
+      80
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/generic/ogr_gensql.cpp",
+     "blob": "01cee5abeb",
+     "old_start": 90,
+     "old_count": 7,
+     "removed": [
+      93
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/generic/ogr_gensql.cpp",
+     "blob": "01cee5abeb",
+     "old_start": 146,
+     "old_count": 24,
+     "removed": [
+      149,
+      155,
+      157,
+      158,
+      160,
+      161,
+      162,
+      163,
+      165,
+      166
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/generic/ogr_gensql.cpp",
+     "blob": "01cee5abeb",
+     "old_start": 485,
+     "old_count": 8,
+     "removed": [
+      488,
+      489
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/generic/ogr_gensql.cpp",
+     "blob": "01cee5abeb",
+     "old_start": 528,
+     "old_count": 7,
+     "removed": [
+      531
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/generic/ogr_gensql.cpp",
+     "blob": "01cee5abeb",
+     "old_start": 605,
+     "old_count": 7,
+     "removed": [
+      608
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/generic/ogr_gensql.cpp",
+     "blob": "01cee5abeb",
+     "old_start": 2436,
+     "old_count": 8,
+     "removed": [
+      2440
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/generic/ogr_gensql.h",
+     "blob": "8497dbdbdd",
+     "old_start": 62,
+     "old_count": 7,
+     "removed": [
+      65
+     ]
+    }
+   ],
+   "files": [
+    "ogr/ogrsf_frmts/generic/ogr_gensql.cpp",
+    "ogr/ogrsf_frmts/generic/ogr_gensql.h"
+   ]
+  },
+  {
+   "bug_id": "gdal-7105d81a6103",
+   "hunks": [
+    {
+     "file": "frmts/netcdf/netcdfsgwriterutil.cpp",
+     "blob": "390608f0c6",
+     "old_start": 37,
+     "old_count": 7,
+     "removed": [
+      40
+     ]
+    },
+    {
+     "file": "frmts/netcdf/netcdfsgwriterutil.cpp",
+     "blob": "390608f0c6",
+     "old_start": 114,
+     "old_count": 12,
+     "removed": [
+      117,
+      118,
+      119,
+      120,
+      121,
+      122
+     ]
+    },
+    {
+     "file": "frmts/netcdf/netcdfsgwriterutil.cpp",
+     "blob": "390608f0c6",
+     "old_start": 134,
+     "old_count": 14,
+     "removed": [
+      137,
+      139,
+      141,
+      142,
+      143,
+      144
+     ]
+    },
+    {
+     "file": "frmts/netcdf/netcdfsgwriterutil.cpp",
+     "blob": "390608f0c6",
+     "old_start": 155,
+     "old_count": 12,
+     "removed": [
+      158,
+      159,
+      160,
+      161,
+      162,
+      163
+     ]
+    },
+    {
+     "file": "frmts/netcdf/netcdfsgwriterutil.cpp",
+     "blob": "390608f0c6",
+     "old_start": 176,
+     "old_count": 16,
+     "removed": [
+      179,
+      181,
+      183,
+      184,
+      185,
+      186,
+      187,
+      188
+     ]
+    },
+    {
+     "file": "frmts/netcdf/netcdfsgwriterutil.h",
+     "blob": "1f3bac76c4",
+     "old_start": 639,
+     "old_count": 7,
+     "removed": [
+      642
+     ]
+    },
+    {
+     "file": "frmts/netcdf/netcdfsgwriterutil.h",
+     "blob": "1f3bac76c4",
+     "old_start": 648,
+     "old_count": 28,
+     "removed": [
+      651,
+      652,
+      658,
+      659,
+      660,
+      661,
+      662,
+      663,
+      664,
+      665,
+      666,
+      667,
+      668,
+      669,
+      670,
+      671,
+      672
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/geojson/ogrgeojsonreader.cpp",
+     "blob": "c9fb2e221b",
+     "old_start": 3003,
+     "old_count": 7,
+     "removed": [
+      3006
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/geojson/ogrgeojsonreader.cpp",
+     "blob": "c9fb2e221b",
+     "old_start": 3019,
+     "old_count": 11,
+     "removed": [
+      3022,
+      3023,
+      3024,
+      3025,
+      3026
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/geojson/ogrgeojsonreader.cpp",
+     "blob": "c9fb2e221b",
+     "old_start": 3034,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "frmts/netcdf/netcdfsgwriterutil.cpp",
+    "frmts/netcdf/netcdfsgwriterutil.h",
+    "ogr/ogrsf_frmts/geojson/ogrgeojsonreader.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-71288fa5574e",
+   "hunks": [
+    {
+     "file": "alg/gdaltransformer.cpp",
+     "blob": "aab298404f",
+     "old_start": 1096,
+     "old_count": 14,
+     "removed": [
+      1099,
+      1103,
+      1104
+     ]
+    }
+   ],
+   "files": [
+    "alg/gdaltransformer.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-7421035a3c5d",
+   "hunks": [
+    {
+     "file": "ogr/ogrct.cpp",
+     "blob": "a6d1f12398",
+     "old_start": 3182,
+     "old_count": 62,
+     "removed": [
+      3185,
+      3186,
+      3187,
+      3188,
+      3191,
+      3192,
+      3193,
+      3195,
+      3196,
+      3198,
+      3199,
+      3200,
+      3201,
+      3202,
+      3203,
+      3204,
+      3206,
+      3207,
+      3208,
+      3209,
+      3210,
+      3211,
+      3212,
+      3213,
+      3214,
+      3215,
+      3216,
+      3217,
+      3218,
+      3219,
+      3220,
+      3221,
+      3222,
+      3223,
+      3224,
+      3225,
+      3226,
+      3227,
+      3228,
+      3233,
+      3235,
+      3236,
+      3237,
+      3238,
+      3239
+     ]
+    },
+    {
+     "file": "ogr/ogrct.cpp",
+     "blob": "a6d1f12398",
+     "old_start": 3254,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "ogr/ogrct.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-75db3ff298af",
+   "hunks": [
+    {
+     "file": "ogr/ogrsf_frmts/csv/ogrcsvlayer.cpp",
+     "blob": "d83f2219f3",
+     "old_start": 248,
+     "old_count": 11,
+     "removed": [
+      252,
+      253,
+      254,
+      255
+     ]
+    }
+   ],
+   "files": [
+    "ogr/ogrsf_frmts/csv/ogrcsvlayer.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-773b9bc02944",
+   "hunks": [
+    {
+     "file": "gcore/gdalmultidim.cpp",
+     "blob": "b227a8eebc",
+     "old_start": 9276,
+     "old_count": 8,
+     "removed": [
+      9279,
+      9280
+     ]
+    }
+   ],
+   "files": [
+    "gcore/gdalmultidim.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-789c1b646394",
+   "hunks": [
+    {
+     "file": "ogr/ogrsf_frmts/geojson/ogrgeojsonseqdriver.cpp",
+     "blob": "690232d95a",
+     "old_start": 826,
+     "old_count": 7,
+     "removed": [
+      829
+     ]
+    }
+   ],
+   "files": [
+    "ogr/ogrsf_frmts/geojson/ogrgeojsonseqdriver.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-7bb604ce2c54",
+   "hunks": [
+    {
+     "file": "ogr/ogrsf_frmts/sqlite/ogrsqliteexecutesql.cpp",
+     "blob": "77ba394cdf",
+     "old_start": 104,
+     "old_count": 34,
+     "removed": [
+      107,
+      108,
+      111,
+      114,
+      115,
+      117,
+      119,
+      120,
+      121,
+      122,
+      123,
+      124,
+      125,
+      126,
+      127,
+      128,
+      129,
+      130,
+      131,
+      132,
+      134
+     ]
+    }
+   ],
+   "files": [
+    "ogr/ogrsf_frmts/sqlite/ogrsqliteexecutesql.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-7c8b34554508",
+   "hunks": [
+    {
+     "file": "ogr/ogrsf_frmts/mitab/mitab_spatialref.cpp",
+     "blob": "babf56c4a8",
+     "old_start": 1149,
+     "old_count": 16,
+     "removed": [
+      1152,
+      1153,
+      1154,
+      1155,
+      1156,
+      1157,
+      1158,
+      1159,
+      1160,
+      1161
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/mitab/mitab_spatialref.cpp",
+     "blob": "babf56c4a8",
+     "old_start": 1404,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "ogr/ogrsf_frmts/mitab/mitab_spatialref.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-7ccad1918967",
+   "hunks": [
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogr_xlsx.h",
+     "blob": "c487fc30f3",
+     "old_start": 59,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogr_xlsx.h",
+     "blob": "c487fc30f3",
+     "old_start": 161,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogr_xlsx.h",
+     "blob": "c487fc30f3",
+     "old_start": 178,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogr_xlsx.h",
+     "blob": "c487fc30f3",
+     "old_start": 213,
+     "old_count": 7,
+     "removed": [
+      216
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogr_xlsx.h",
+     "blob": "c487fc30f3",
+     "old_start": 236,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogr_xlsx.h",
+     "blob": "c487fc30f3",
+     "old_start": 257,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+     "blob": "b6084c4b84",
+     "old_start": 310,
+     "old_count": 7,
+     "removed": [
+      313
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+     "blob": "b6084c4b84",
+     "old_start": 359,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+     "blob": "b6084c4b84",
+     "old_start": 400,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+     "blob": "b6084c4b84",
+     "old_start": 667,
+     "old_count": 7,
+     "removed": [
+      670
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+     "blob": "b6084c4b84",
+     "old_start": 676,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+     "blob": "b6084c4b84",
+     "old_start": 738,
+     "old_count": 7,
+     "removed": [
+      741
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+     "blob": "b6084c4b84",
+     "old_start": 1151,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+     "blob": "b6084c4b84",
+     "old_start": 1199,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+     "blob": "b6084c4b84",
+     "old_start": 1521,
+     "old_count": 8,
+     "removed": [
+      1524,
+      1525
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+     "blob": "b6084c4b84",
+     "old_start": 1793,
+     "old_count": 14,
+     "removed": [
+      1796,
+      1802,
+      1803
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+     "blob": "b6084c4b84",
+     "old_start": 2073,
+     "old_count": 7,
+     "removed": [
+      2076
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+     "blob": "b6084c4b84",
+     "old_start": 2104,
+     "old_count": 27,
+     "removed": [
+      2107,
+      2108,
+      2110,
+      2111,
+      2112,
+      2113,
+      2114,
+      2116,
+      2117,
+      2118,
+      2120,
+      2127
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+     "blob": "b6084c4b84",
+     "old_start": 2153,
+     "old_count": 7,
+     "removed": [
+      2156
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+     "blob": "b6084c4b84",
+     "old_start": 2479,
+     "old_count": 7,
+     "removed": [
+      2482
+     ]
+    }
+   ],
+   "files": [
+    "ogr/ogrsf_frmts/xlsx/ogr_xlsx.h",
+    "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-829fbcf7cf22",
+   "hunks": [
+    {
+     "file": "ogr/ogrsf_frmts/gpkg/ogrgeopackagetablelayer.cpp",
+     "blob": "d7a8e4b18e",
+     "old_start": 1878,
+     "old_count": 7,
+     "removed": [
+      1881
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/gpkg/ogrgeopackagetablelayer.cpp",
+     "blob": "d7a8e4b18e",
+     "old_start": 1892,
+     "old_count": 21,
+     "removed": [
+      1896,
+      1898,
+      1902,
+      1905,
+      1906,
+      1907,
+      1908,
+      1910
+     ]
+    }
+   ],
+   "files": [
+    "ogr/ogrsf_frmts/gpkg/ogrgeopackagetablelayer.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-83c5ce57a20c",
+   "hunks": [
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "2c046b67f0",
+     "old_start": 6685,
+     "old_count": 9,
+     "removed": [
+      6688,
+      6689,
+      6690
+     ]
+    }
+   ],
+   "files": [
+    "alg/gdalwarpkernel.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-8726ac905a3f",
+   "hunks": [
+    {
+     "file": "frmts/mrf/marfa.h",
+     "blob": "91feea5b9a",
+     "old_start": 387,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "frmts/mrf/marfa.h"
+   ]
+  },
+  {
+   "bug_id": "gdal-8a4bee4f8d2a",
+   "hunks": [
+    {
+     "file": "frmts/gtiff/geotiff.cpp",
+     "blob": "1f0a1184d3",
+     "old_start": 13348,
+     "old_count": 8,
+     "removed": [
+      13351
+     ]
+    }
+   ],
+   "files": [
+    "frmts/gtiff/geotiff.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-8deb4e1a2bc1",
+   "hunks": [
+    {
+     "file": "ogr/ogrsf_frmts/shape/ogrshape.h",
+     "blob": "80bde7839c",
+     "old_start": 227,
+     "old_count": 7,
+     "removed": [
+      230
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/shape/ogrshapedatasource.cpp",
+     "blob": "af53f53663",
+     "old_start": 509,
+     "old_count": 7,
+     "removed": [
+      512
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/shape/ogrshapedatasource.cpp",
+     "blob": "af53f53663",
+     "old_start": 884,
+     "old_count": 26,
+     "removed": [
+      889,
+      890,
+      891,
+      893,
+      897,
+      898,
+      905,
+      906
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/shape/ogrshapedatasource.cpp",
+     "blob": "af53f53663",
+     "old_start": 915,
+     "old_count": 8,
+     "removed": [
+      918,
+      919
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/shape/ogrshapelayer.cpp",
+     "blob": "db3be5d1e7",
+     "old_start": 65,
+     "old_count": 7,
+     "removed": [
+      68
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/shape/ogrshapelayer.cpp",
+     "blob": "db3be5d1e7",
+     "old_start": 218,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "ogr/ogrsf_frmts/shape/ogrshape.h",
+    "ogr/ogrsf_frmts/shape/ogrshapedatasource.cpp",
+    "ogr/ogrsf_frmts/shape/ogrshapelayer.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-958621826b96",
+   "hunks": [
+    {
+     "file": "ogr/ogrsf_frmts/sqlite/ogrsqlitevirtualogr.cpp",
+     "blob": "2ff8da5f50",
+     "old_start": 677,
+     "old_count": 22,
+     "removed": [
+      680,
+      681,
+      687,
+      691,
+      693
+     ]
+    }
+   ],
+   "files": [
+    "ogr/ogrsf_frmts/sqlite/ogrsqlitevirtualogr.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-98e23cb90122",
+   "hunks": [
+    {
+     "file": "frmts/bmp/bmpdataset.cpp",
+     "blob": "e2dd0c8719",
+     "old_start": 158,
+     "old_count": 12,
+     "removed": [
+      161,
+      162,
+      163,
+      165,
+      166
+     ]
+    },
+    {
+     "file": "frmts/bmp/bmpdataset.cpp",
+     "blob": "e2dd0c8719",
+     "old_start": 1073,
+     "old_count": 7,
+     "removed": [
+      1076
+     ]
+    }
+   ],
+   "files": [
+    "frmts/bmp/bmpdataset.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-a4fe26122837",
+   "hunks": [
+    {
+     "file": "apps/gdal_translate_lib.cpp",
+     "blob": "e3fd64e608",
+     "old_start": 1867,
+     "old_count": 11,
+     "removed": [
+      1870,
+      1874
+     ]
+    }
+   ],
+   "files": [
+    "apps/gdal_translate_lib.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-a7cb51debb42",
+   "hunks": [
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/filegdbtable_write.cpp",
+     "blob": "c412402b33",
+     "old_start": 1875,
+     "old_count": 9,
+     "removed": [
+      1878,
+      1880
+     ]
+    }
+   ],
+   "files": [
+    "ogr/ogrsf_frmts/openfilegdb/filegdbtable_write.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-a859743432e2",
+   "hunks": [
+    {
+     "file": "port/cpl_vsil.cpp",
+     "blob": "bc8cdcf288",
+     "old_start": 1591,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "port/cpl_vsil.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-af647aafa367",
+   "hunks": [
+    {
+     "file": "alg/gdalchecksum.cpp",
+     "blob": "cc631881bf",
+     "old_start": 100,
+     "old_count": 9,
+     "removed": [
+      103,
+      105
+     ]
+    },
+    {
+     "file": "alg/gdalchecksum.cpp",
+     "blob": "cc631881bf",
+     "old_start": 206,
+     "old_count": 15,
+     "removed": [
+      209,
+      214,
+      215,
+      216,
+      217
+     ]
+    },
+    {
+     "file": "alg/gdalchecksum.cpp",
+     "blob": "cc631881bf",
+     "old_start": 251,
+     "old_count": 9,
+     "removed": [
+      254,
+      256
+     ]
+    }
+   ],
+   "files": [
+    "alg/gdalchecksum.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-b04821ff327c",
+   "hunks": [
+    {
+     "file": "frmts/aaigrid/aaigriddataset.cpp",
+     "blob": "1194162df4",
+     "old_start": 1139,
+     "old_count": 7,
+     "removed": [
+      1142
+     ]
+    }
+   ],
+   "files": [
+    "frmts/aaigrid/aaigriddataset.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-b3b735d2a02d",
+   "hunks": [
+    {
+     "file": "alg/gdal_alg_priv.h",
+     "blob": "406d003658",
+     "old_start": 36,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "alg/gdal_alg_priv.h",
+     "blob": "406d003658",
+     "old_start": 73,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "alg/gdal_alg_priv.h",
+     "blob": "406d003658",
+     "old_start": 104,
+     "old_count": 14,
+     "removed": [
+      107,
+      114
+     ]
+    },
+    {
+     "file": "alg/gdalrasterize.cpp",
+     "blob": "7060a5b06d",
+     "old_start": 73,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "alg/gdalrasterize.cpp",
+     "blob": "7060a5b06d",
+     "old_start": 90,
+     "old_count": 23,
+     "removed": [
+      93,
+      96,
+      98,
+      99,
+      100,
+      101,
+      102,
+      109
+     ]
+    },
+    {
+     "file": "alg/gdalrasterize.cpp",
+     "blob": "7060a5b06d",
+     "old_start": 127,
+     "old_count": 21,
+     "removed": [
+      130,
+      133,
+      135,
+      136,
+      137,
+      138,
+      139,
+      144
+     ]
+    },
+    {
+     "file": "alg/gdalrasterize.cpp",
+     "blob": "7060a5b06d",
+     "old_start": 285,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "alg/gdalrasterize.cpp",
+     "blob": "7060a5b06d",
+     "old_start": 552,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "alg/gdalrasterize.cpp",
+     "blob": "7060a5b06d",
+     "old_start": 607,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "alg/gdalrasterize.cpp",
+     "blob": "7060a5b06d",
+     "old_start": 626,
+     "old_count": 12,
+     "removed": [
+      629,
+      630,
+      631,
+      632,
+      633,
+      634
+     ]
+    },
+    {
+     "file": "alg/gdalrasterize.cpp",
+     "blob": "7060a5b06d",
+     "old_start": 662,
+     "old_count": 9,
+     "removed": []
+    },
+    {
+     "file": "alg/llrasterize.cpp",
+     "blob": "ebf2642d5a",
+     "old_start": 77,
+     "old_count": 7,
+     "removed": [
+      80
+     ]
+    },
+    {
+     "file": "alg/llrasterize.cpp",
+     "blob": "ebf2642d5a",
+     "old_start": 89,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "alg/llrasterize.cpp",
+     "blob": "ebf2642d5a",
+     "old_start": 123,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "alg/llrasterize.cpp",
+     "blob": "ebf2642d5a",
+     "old_start": 169,
+     "old_count": 7,
+     "removed": [
+      172
+     ]
+    },
+    {
+     "file": "alg/llrasterize.cpp",
+     "blob": "ebf2642d5a",
+     "old_start": 181,
+     "old_count": 9,
+     "removed": [
+      184,
+      185,
+      186
+     ]
+    },
+    {
+     "file": "alg/llrasterize.cpp",
+     "blob": "ebf2642d5a",
+     "old_start": 200,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "alg/llrasterize.cpp",
+     "blob": "ebf2642d5a",
+     "old_start": 209,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "alg/llrasterize.cpp",
+     "blob": "ebf2642d5a",
+     "old_start": 372,
+     "old_count": 7,
+     "removed": [
+      375
+     ]
+    }
+   ],
+   "files": [
+    "alg/gdal_alg_priv.h",
+    "alg/gdalrasterize.cpp",
+    "alg/llrasterize.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-b8a53b432511",
+   "hunks": [
+    {
+     "file": "frmts/vrt/vrtrasterband.cpp",
+     "blob": "6531e7bc86",
+     "old_start": 671,
+     "old_count": 7,
+     "removed": [
+      674
+     ]
+    },
+    {
+     "file": "frmts/vrt/vrtsources.cpp",
+     "blob": "9a79cac3e5",
+     "old_start": 2083,
+     "old_count": 7,
+     "removed": [
+      2086
+     ]
+    }
+   ],
+   "files": [
+    "frmts/vrt/vrtrasterband.cpp",
+    "frmts/vrt/vrtsources.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-bde706831cd5",
+   "hunks": [
+    {
+     "file": "frmts/zmap/zmapdataset.cpp",
+     "blob": "352fc02ffb",
+     "old_start": 504,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "frmts/zmap/zmapdataset.cpp",
+     "blob": "352fc02ffb",
+     "old_start": 597,
+     "old_count": 7,
+     "removed": [
+      600
+     ]
+    }
+   ],
+   "files": [
+    "frmts/zmap/zmapdataset.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-c38033143519",
+   "hunks": [
+    {
+     "file": "apps/gdal_translate_lib.cpp",
+     "blob": "53bd7af1f4",
+     "old_start": 1483,
+     "old_count": 16,
+     "removed": [
+      1486,
+      1487,
+      1488,
+      1495
+     ]
+    }
+   ],
+   "files": [
+    "apps/gdal_translate_lib.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-cd56e6d8ae7a",
+   "hunks": [
+    {
+     "file": "ogr/ogrgeometryfactory.cpp",
+     "blob": "ef5dbcb039",
+     "old_start": 2922,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrgeometryfactory.cpp",
+     "blob": "ef5dbcb039",
+     "old_start": 2933,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrgeometryfactory.cpp",
+     "blob": "ef5dbcb039",
+     "old_start": 3919,
+     "old_count": 19,
+     "removed": [
+      3922,
+      3928,
+      3930,
+      3931,
+      3932,
+      3933,
+      3934
+     ]
+    }
+   ],
+   "files": [
+    "ogr/ogrgeometryfactory.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-cefd3547d91a",
+   "hunks": [
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/filegdbindex.cpp",
+     "blob": null,
+     "old_start": 874,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/filegdbindex.cpp",
+     "blob": null,
+     "old_start": 971,
+     "old_count": 10,
+     "removed": [
+      974,
+      975,
+      976,
+      977
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/filegdbindex.cpp",
+     "blob": null,
+     "old_start": 1106,
+     "old_count": 13,
+     "removed": [
+      1109,
+      1113,
+      1115
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/filegdbindex.cpp",
+     "blob": null,
+     "old_start": 1248,
+     "old_count": 12,
+     "removed": [
+      1252,
+      1253,
+      1256
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/filegdbindex.cpp",
+     "blob": null,
+     "old_start": 1301,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/filegdbindex.cpp",
+     "blob": null,
+     "old_start": 1340,
+     "old_count": 7,
+     "removed": [
+      1343
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/filegdbindex.cpp",
+     "blob": null,
+     "old_start": 1596,
+     "old_count": 13,
+     "removed": [
+      1599,
+      1601,
+      1602,
+      1603,
+      1604,
+      1605
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/filegdbindex.cpp",
+     "blob": null,
+     "old_start": 1646,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/filegdbindex.cpp",
+     "blob": null,
+     "old_start": 1662,
+     "old_count": 7,
+     "removed": [
+      1665
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/filegdbtable.h",
+     "blob": null,
+     "old_start": 668,
+     "old_count": 7,
+     "removed": [
+      671
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/ogropenfilegdblayer.cpp",
+     "blob": null,
+     "old_start": 1290,
+     "old_count": 6,
+     "removed": [
+      1292
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/ogropenfilegdblayer.cpp",
+     "blob": null,
+     "old_start": 1333,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/ogropenfilegdblayer.cpp",
+     "blob": null,
+     "old_start": 1362,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/ogropenfilegdblayer.cpp",
+     "blob": null,
+     "old_start": 1374,
+     "old_count": 10,
+     "removed": [
+      1379,
+      1380
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/ogropenfilegdblayer.cpp",
+     "blob": null,
+     "old_start": 1410,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "ogr/ogrsf_frmts/openfilegdb/filegdbindex.cpp",
+    "ogr/ogrsf_frmts/openfilegdb/filegdbtable.h",
+    "ogr/ogrsf_frmts/openfilegdb/ogropenfilegdblayer.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-cf0c25eb9ec4",
+   "hunks": [
+    {
+     "file": "frmts/vrt/vrtdataset.cpp",
+     "blob": "15fa837840",
+     "old_start": 2138,
+     "old_count": 7,
+     "removed": [
+      2141
+     ]
+    },
+    {
+     "file": "frmts/vrt/vrtdataset.cpp",
+     "blob": "15fa837840",
+     "old_start": 2147,
+     "old_count": 31,
+     "removed": [
+      2150,
+      2151,
+      2152,
+      2154,
+      2155,
+      2156,
+      2157,
+      2158,
+      2159,
+      2160,
+      2161,
+      2162,
+      2163,
+      2164,
+      2165,
+      2166,
+      2167,
+      2168,
+      2169,
+      2170,
+      2171,
+      2172,
+      2173,
+      2174
+     ]
+    },
+    {
+     "file": "frmts/vrt/vrtdataset.h",
+     "blob": "76636de072",
+     "old_start": 744,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "frmts/vrt/vrtsourcedrasterband.cpp",
+     "blob": "c8fd791610",
+     "old_start": 132,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "frmts/vrt/vrtsourcedrasterband.cpp",
+     "blob": "c8fd791610",
+     "old_start": 181,
+     "old_count": 93,
+     "removed": [
+      184,
+      185,
+      186,
+      187,
+      189,
+      191,
+      192,
+      193,
+      194,
+      195,
+      196,
+      197,
+      198,
+      199,
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211,
+      212,
+      213,
+      214,
+      215,
+      216,
+      217,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      224,
+      225,
+      226,
+      227,
+      228,
+      229,
+      230,
+      231,
+      232,
+      233,
+      234,
+      235,
+      236,
+      237,
+      238,
+      239,
+      240,
+      241,
+      242,
+      243,
+      244,
+      245,
+      246,
+      247,
+      248,
+      249,
+      250,
+      251,
+      252,
+      253,
+      254,
+      255,
+      256,
+      257,
+      258,
+      259,
+      260,
+      261,
+      262,
+      263,
+      264,
+      265,
+      266,
+      267,
+      268,
+      269
+     ]
+    }
+   ],
+   "files": [
+    "frmts/vrt/vrtdataset.cpp",
+    "frmts/vrt/vrtdataset.h",
+    "frmts/vrt/vrtsourcedrasterband.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-d1937d5d1ad1",
+   "hunks": [
+    {
+     "file": "gcore/rasterio.cpp",
+     "blob": "7c2b7c49b7",
+     "old_start": 3667,
+     "old_count": 19,
+     "removed": [
+      3675,
+      3676,
+      3677,
+      3678,
+      3679,
+      3680,
+      3681,
+      3682
+     ]
+    }
+   ],
+   "files": [
+    "gcore/rasterio.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-d424863f5f51",
+   "hunks": [
+    {
+     "file": "ogr/ogrsf_frmts/openfilegdb/filegdbtable_write.cpp",
+     "blob": "470fa9590b",
+     "old_start": 1914,
+     "old_count": 9,
+     "removed": [
+      1917,
+      1919
+     ]
+    }
+   ],
+   "files": [
+    "ogr/ogrsf_frmts/openfilegdb/filegdbtable_write.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-d49547f1a1be",
+   "hunks": [
+    {
+     "file": "frmts/wmts/wmtsdataset.cpp",
+     "blob": "01f8aad9cc",
+     "old_start": 78,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "frmts/wmts/wmtsdataset.cpp",
+     "blob": "01f8aad9cc",
+     "old_start": 94,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "frmts/wmts/wmtsdataset.cpp",
+     "blob": "01f8aad9cc",
+     "old_start": 1763,
+     "old_count": 15,
+     "removed": [
+      1766,
+      1767,
+      1768,
+      1769,
+      1770,
+      1771,
+      1772,
+      1773,
+      1774
+     ]
+    },
+    {
+     "file": "frmts/wmts/wmtsdataset.cpp",
+     "blob": "01f8aad9cc",
+     "old_start": 1910,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "frmts/wmts/wmtsdataset.cpp",
+     "blob": "01f8aad9cc",
+     "old_start": 1927,
+     "old_count": 12,
+     "removed": [
+      1930,
+      1931,
+      1932,
+      1933,
+      1934,
+      1935
+     ]
+    },
+    {
+     "file": "frmts/wmts/wmtsdataset.cpp",
+     "blob": "01f8aad9cc",
+     "old_start": 1953,
+     "old_count": 6,
+     "removed": []
+    },
+    {
+     "file": "frmts/wmts/wmtsdataset.cpp",
+     "blob": "01f8aad9cc",
+     "old_start": 1962,
+     "old_count": 15,
+     "removed": [
+      1965,
+      1966,
+      1967,
+      1968,
+      1970,
+      1971,
+      1972,
+      1973
+     ]
+    },
+    {
+     "file": "frmts/wmts/wmtsdataset.cpp",
+     "blob": "01f8aad9cc",
+     "old_start": 2001,
+     "old_count": 20,
+     "removed": [
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017
+     ]
+    },
+    {
+     "file": "frmts/wmts/wmtsdataset.cpp",
+     "blob": "01f8aad9cc",
+     "old_start": 2195,
+     "old_count": 10,
+     "removed": [
+      2198,
+      2199,
+      2200,
+      2201
+     ]
+    },
+    {
+     "file": "frmts/wmts/wmtsdataset.cpp",
+     "blob": "01f8aad9cc",
+     "old_start": 2207,
+     "old_count": 14,
+     "removed": [
+      2210,
+      2211,
+      2214,
+      2215,
+      2216,
+      2217
+     ]
+    },
+    {
+     "file": "frmts/wmts/wmtsdataset.cpp",
+     "blob": "01f8aad9cc",
+     "old_start": 2227,
+     "old_count": 8,
+     "removed": [
+      2230,
+      2231
+     ]
+    },
+    {
+     "file": "frmts/wmts/wmtsdataset.cpp",
+     "blob": "01f8aad9cc",
+     "old_start": 2241,
+     "old_count": 13,
+     "removed": [
+      2244,
+      2245,
+      2247,
+      2249,
+      2250
+     ]
+    }
+   ],
+   "files": [
+    "frmts/wmts/wmtsdataset.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-d8a8cd51d51b",
+   "hunks": [
+    {
+     "file": "frmts/gtiff/geotiff.cpp",
+     "blob": "d695ae69ec",
+     "old_start": 2983,
+     "old_count": 7,
+     "removed": [
+      2986
+     ]
+    },
+    {
+     "file": "frmts/gtiff/geotiff.cpp",
+     "blob": "d695ae69ec",
+     "old_start": 3089,
+     "old_count": 8,
+     "removed": [
+      3092,
+      3093
+     ]
+    },
+    {
+     "file": "frmts/gtiff/geotiff.cpp",
+     "blob": "d695ae69ec",
+     "old_start": 3136,
+     "old_count": 7,
+     "removed": [
+      3139
+     ]
+    },
+    {
+     "file": "frmts/gtiff/geotiff.cpp",
+     "blob": "d695ae69ec",
+     "old_start": 3487,
+     "old_count": 7,
+     "removed": [
+      3490
+     ]
+    },
+    {
+     "file": "frmts/gtiff/geotiff.cpp",
+     "blob": "d695ae69ec",
+     "old_start": 3510,
+     "old_count": 8,
+     "removed": [
+      3513,
+      3514
+     ]
+    },
+    {
+     "file": "frmts/gtiff/geotiff.cpp",
+     "blob": "d695ae69ec",
+     "old_start": 3603,
+     "old_count": 7,
+     "removed": [
+      3606
+     ]
+    },
+    {
+     "file": "frmts/gtiff/geotiff.cpp",
+     "blob": "d695ae69ec",
+     "old_start": 3819,
+     "old_count": 16,
+     "removed": [
+      3822,
+      3823,
+      3824,
+      3831
+     ]
+    }
+   ],
+   "files": [
+    "frmts/gtiff/geotiff.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-df22e12654b3",
+   "hunks": [
+    {
+     "file": "alg/gdalwarpkernel.cpp",
+     "blob": "f4b5a77a31",
+     "old_start": 6697,
+     "old_count": 9,
+     "removed": [
+      6700,
+      6701,
+      6702
+     ]
+    }
+   ],
+   "files": [
+    "alg/gdalwarpkernel.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-e6d023672560",
+   "hunks": [
+    {
+     "file": "gcore/gdalpamdataset.cpp",
+     "blob": "f9bf92ff23",
+     "old_start": 488,
+     "old_count": 8,
+     "removed": [
+      491
+     ]
+    },
+    {
+     "file": "gcore/gdalpamdataset.cpp",
+     "blob": "f9bf92ff23",
+     "old_start": 520,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "gcore/gdalpamdataset.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-eff6ab423ab1",
+   "hunks": [
+    {
+     "file": "ogr/ogrsf_frmts/sqlite/ogrsqliteutility.cpp",
+     "blob": "43301e1406",
+     "old_start": 424,
+     "old_count": 14,
+     "removed": [
+      427,
+      429,
+      434
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/sqlite/ogrsqliteutility.cpp",
+     "blob": "43301e1406",
+     "old_start": 453,
+     "old_count": 8,
+     "removed": []
+    },
+    {
+     "file": "ogr/ogrsf_frmts/sqlite/ogrsqliteutility.cpp",
+     "blob": "43301e1406",
+     "old_start": 473,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "ogr/ogrsf_frmts/sqlite/ogrsqliteutility.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-f079f407aa45",
+   "hunks": [
+    {
+     "file": "ogr/ogrsf_frmts/gpkg/ogrgeopackagelayer.cpp",
+     "blob": "2828c5e879",
+     "old_start": 600,
+     "old_count": 7,
+     "removed": [
+      603
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/gpkg/ogrgeopackagetablelayer.cpp",
+     "blob": "9b5ff9a502",
+     "old_start": 6750,
+     "old_count": 7,
+     "removed": [
+      6753
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/gpkg/ogrgeopackagetablelayer.cpp",
+     "blob": "9b5ff9a502",
+     "old_start": 7090,
+     "old_count": 7,
+     "removed": [
+      7093
+     ]
+    },
+    {
+     "file": "ogr/ogrsf_frmts/gpkg/ogrgeopackagetablelayer.cpp",
+     "blob": "9b5ff9a502",
+     "old_start": 7465,
+     "old_count": 7,
+     "removed": [
+      7468
+     ]
+    }
+   ],
+   "files": [
+    "ogr/ogrsf_frmts/gpkg/ogrgeopackagelayer.cpp",
+    "ogr/ogrsf_frmts/gpkg/ogrgeopackagetablelayer.cpp"
+   ]
+  },
+  {
+   "bug_id": "gdal-f72f1eda99e3",
+   "hunks": [
+    {
+     "file": "port/cpl_vsil.cpp",
+     "blob": "29ba8caa76",
+     "old_start": 1636,
+     "old_count": 6,
+     "removed": []
+    }
+   ],
+   "files": [
+    "port/cpl_vsil.cpp"
+   ]
+  }
+ ],
+ "n_bugs": 72,
+ "analysis_units": [
+  {
+   "file": "alg/gdal_alg_priv.h",
+   "blob": "406d003658"
+  },
+  {
+   "file": "alg/gdalchecksum.cpp",
+   "blob": "cc631881bf"
+  },
+  {
+   "file": "alg/gdalrasterize.cpp",
+   "blob": "7060a5b06d"
+  },
+  {
+   "file": "alg/gdaltransformer.cpp",
+   "blob": "1b024ad116"
+  },
+  {
+   "file": "alg/gdaltransformer.cpp",
+   "blob": "aab298404f"
+  },
+  {
+   "file": "alg/gdalwarper.cpp",
+   "blob": "64c393c3c8"
+  },
+  {
+   "file": "alg/gdalwarper.cpp",
+   "blob": "8869f1c998"
+  },
+  {
+   "file": "alg/gdalwarpkernel.cpp",
+   "blob": "2c046b67f0"
+  },
+  {
+   "file": "alg/gdalwarpkernel.cpp",
+   "blob": "5dc66db0db"
+  },
+  {
+   "file": "alg/gdalwarpkernel.cpp",
+   "blob": "b0fc389aca"
+  },
+  {
+   "file": "alg/gdalwarpkernel.cpp",
+   "blob": "c4b6873902"
+  },
+  {
+   "file": "alg/gdalwarpkernel.cpp",
+   "blob": "f4b5a77a31"
+  },
+  {
+   "file": "alg/llrasterize.cpp",
+   "blob": "ebf2642d5a"
+  },
+  {
+   "file": "apps/gdal_rasterize_lib.cpp",
+   "blob": "5d40d9c193"
+  },
+  {
+   "file": "apps/gdal_translate_lib.cpp",
+   "blob": "1bd54d9851"
+  },
+  {
+   "file": "apps/gdal_translate_lib.cpp",
+   "blob": "53bd7af1f4"
+  },
+  {
+   "file": "apps/gdal_translate_lib.cpp",
+   "blob": "e3fd64e608"
+  },
+  {
+   "file": "apps/gdalinfo_lib.cpp",
+   "blob": "577fc617b9"
+  },
+  {
+   "file": "apps/gdalinfo_lib.cpp",
+   "blob": "ae67000fcb"
+  },
+  {
+   "file": "apps/gdalmdiminfo_lib.cpp",
+   "blob": "e029bcbdcb"
+  },
+  {
+   "file": "apps/gdalwarp_lib.cpp",
+   "blob": "34183dcf73"
+  },
+  {
+   "file": "apps/gdalwarp_lib.cpp",
+   "blob": "61299f0ce0"
+  },
+  {
+   "file": "apps/gdalwarp_lib.cpp",
+   "blob": "a7656724f5"
+  },
+  {
+   "file": "frmts/aaigrid/aaigriddataset.cpp",
+   "blob": "1194162df4"
+  },
+  {
+   "file": "frmts/bmp/bmpdataset.cpp",
+   "blob": "892b16e56f"
+  },
+  {
+   "file": "frmts/bmp/bmpdataset.cpp",
+   "blob": "e2dd0c8719"
+  },
+  {
+   "file": "frmts/gtiff/geotiff.cpp",
+   "blob": "1f0a1184d3"
+  },
+  {
+   "file": "frmts/gtiff/geotiff.cpp",
+   "blob": "c71c12c90d"
+  },
+  {
+   "file": "frmts/gtiff/geotiff.cpp",
+   "blob": "d695ae69ec"
+  },
+  {
+   "file": "frmts/mrf/marfa.h",
+   "blob": "356e71e5a1"
+  },
+  {
+   "file": "frmts/mrf/marfa.h",
+   "blob": "91feea5b9a"
+  },
+  {
+   "file": "frmts/netcdf/netcdfsgwriterutil.cpp",
+   "blob": "390608f0c6"
+  },
+  {
+   "file": "frmts/netcdf/netcdfsgwriterutil.h",
+   "blob": "1f3bac76c4"
+  },
+  {
+   "file": "frmts/pds/pds4dataset.cpp",
+   "blob": "559868b779"
+  },
+  {
+   "file": "frmts/png/pngdataset.cpp",
+   "blob": "1f1fe17473"
+  },
+  {
+   "file": "frmts/png/pngdataset.cpp",
+   "blob": "5d49a90263"
+  },
+  {
+   "file": "frmts/sdts/sdtslinereader.cpp",
+   "blob": "244a6dfae2"
+  },
+  {
+   "file": "frmts/vrt/vrtdataset.cpp",
+   "blob": "15fa837840"
+  },
+  {
+   "file": "frmts/vrt/vrtdataset.h",
+   "blob": "76636de072"
+  },
+  {
+   "file": "frmts/vrt/vrtrasterband.cpp",
+   "blob": "6531e7bc86"
+  },
+  {
+   "file": "frmts/vrt/vrtrasterband.cpp",
+   "blob": "9b2a8df17f"
+  },
+  {
+   "file": "frmts/vrt/vrtsourcedrasterband.cpp",
+   "blob": "c8fd791610"
+  },
+  {
+   "file": "frmts/vrt/vrtsources.cpp",
+   "blob": "9a79cac3e5"
+  },
+  {
+   "file": "frmts/wmts/wmtsdataset.cpp",
+   "blob": "01f8aad9cc"
+  },
+  {
+   "file": "frmts/zmap/zmapdataset.cpp",
+   "blob": "352fc02ffb"
+  },
+  {
+   "file": "gcore/gdaldriver.cpp",
+   "blob": "f857bad7bc"
+  },
+  {
+   "file": "gcore/gdalmultidim.cpp",
+   "blob": "b227a8eebc"
+  },
+  {
+   "file": "gcore/gdalpamdataset.cpp",
+   "blob": "f9bf92ff23"
+  },
+  {
+   "file": "gcore/rasterio.cpp",
+   "blob": "7c2b7c49b7"
+  },
+  {
+   "file": "ogr/ogr2gmlgeometry.cpp",
+   "blob": "7850438"
+  },
+  {
+   "file": "ogr/ogrct.cpp",
+   "blob": "a6d1f12398"
+  },
+  {
+   "file": "ogr/ogrgeometryfactory.cpp",
+   "blob": "ef5dbcb039"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/csv/ogrcsvlayer.cpp",
+   "blob": "d83f2219f3"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/dxf/ogr_dxf.h",
+   "blob": "ba06616f07"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/dxf/ogrdxfwriterds.cpp",
+   "blob": "27d2ac5d8e"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/dxf/ogrdxfwriterlayer.cpp",
+   "blob": "499da0bbe6"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/generic/ogr_gensql.cpp",
+   "blob": "01cee5abeb"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/generic/ogr_gensql.cpp",
+   "blob": "cb0ed0aa2d"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/generic/ogr_gensql.h",
+   "blob": "8497dbdbdd"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/geojson/ogrgeojsonreader.cpp",
+   "blob": "c9fb2e221b"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/geojson/ogrgeojsonreader.cpp",
+   "blob": "d26dd88b36"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/geojson/ogrgeojsonseqdriver.cpp",
+   "blob": "690232d95a"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/geojson/ogrgeojsonwritelayer.cpp",
+   "blob": "c50f9f355b"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/gml/gmlutils.cpp",
+   "blob": "609104534c"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/gml/gmlutils.cpp",
+   "blob": "e1129a143d"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/gpkg/ogrgeopackagelayer.cpp",
+   "blob": "2828c5e879"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/gpkg/ogrgeopackagetablelayer.cpp",
+   "blob": "58c82fc66b"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/gpkg/ogrgeopackagetablelayer.cpp",
+   "blob": "9b5ff9a502"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/gpkg/ogrgeopackagetablelayer.cpp",
+   "blob": "b688ac5d22"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/gpkg/ogrgeopackagetablelayer.cpp",
+   "blob": "d7a8e4b18e"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/mitab/mitab_feature.cpp",
+   "blob": "b5a5f272fd"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/mitab/mitab_feature.cpp",
+   "blob": "f6dff65cf0"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/mitab/mitab_spatialref.cpp",
+   "blob": "babf56c4a8"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/openfilegdb/filegdbindex.cpp",
+   "blob": "57ed2d7d09"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/openfilegdb/filegdbtable.h",
+   "blob": "11a27363b6"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/openfilegdb/filegdbtable_write.cpp",
+   "blob": "470fa9590b"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/openfilegdb/filegdbtable_write.cpp",
+   "blob": "c412402b33"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/openfilegdb/ogropenfilegdblayer.cpp",
+   "blob": "c98a978a49"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/shape/ogrshape.h",
+   "blob": "80bde7839c"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/shape/ogrshapedatasource.cpp",
+   "blob": "af53f53663"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/shape/ogrshapelayer.cpp",
+   "blob": "0ee01c21ab"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/shape/ogrshapelayer.cpp",
+   "blob": "db3be5d1e7"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/sqlite/ogrsqliteexecutesql.cpp",
+   "blob": "77ba394cdf"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/sqlite/ogrsqliteutility.cpp",
+   "blob": "43301e1406"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/sqlite/ogrsqlitevirtualogr.cpp",
+   "blob": "2ff8da5f50"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/xlsx/ogr_xlsx.h",
+   "blob": "68fbe8c603"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/xlsx/ogr_xlsx.h",
+   "blob": "c487fc30f3"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+   "blob": "b6084c4b84"
+  },
+  {
+   "file": "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+   "blob": "e41131d972"
+  },
+  {
+   "file": "ogr/swq_select.cpp",
+   "blob": "9d63d199b0"
+  },
+  {
+   "file": "port/cpl_vsil.cpp",
+   "blob": "29ba8caa76"
+  },
+  {
+   "file": "port/cpl_vsil.cpp",
+   "blob": "bc8cdcf288"
+  }
+ ],
+ "n_units": 92,
+ "bug_files": [
+  "alg/gdal_alg_priv.h",
+  "alg/gdalchecksum.cpp",
+  "alg/gdalrasterize.cpp",
+  "alg/gdaltransformer.cpp",
+  "alg/gdalwarper.cpp",
+  "alg/gdalwarpkernel.cpp",
+  "alg/llrasterize.cpp",
+  "apps/gdal_rasterize_lib.cpp",
+  "apps/gdal_translate_lib.cpp",
+  "apps/gdalinfo_lib.cpp",
+  "apps/gdalmdiminfo_lib.cpp",
+  "apps/gdalwarp_lib.cpp",
+  "frmts/aaigrid/aaigriddataset.cpp",
+  "frmts/bmp/bmpdataset.cpp",
+  "frmts/gtiff/geotiff.cpp",
+  "frmts/mrf/marfa.h",
+  "frmts/netcdf/netcdfsgwriterutil.cpp",
+  "frmts/netcdf/netcdfsgwriterutil.h",
+  "frmts/pds/pds4dataset.cpp",
+  "frmts/png/pngdataset.cpp",
+  "frmts/sdts/sdtslinereader.cpp",
+  "frmts/vrt/vrtdataset.cpp",
+  "frmts/vrt/vrtdataset.h",
+  "frmts/vrt/vrtrasterband.cpp",
+  "frmts/vrt/vrtsourcedrasterband.cpp",
+  "frmts/vrt/vrtsources.cpp",
+  "frmts/wmts/wmtsdataset.cpp",
+  "frmts/zmap/zmapdataset.cpp",
+  "gcore/gdaldriver.cpp",
+  "gcore/gdalmultidim.cpp",
+  "gcore/gdalpamdataset.cpp",
+  "gcore/rasterio.cpp",
+  "ogr/ogr2gmlgeometry.cpp",
+  "ogr/ogrct.cpp",
+  "ogr/ogrgeometryfactory.cpp",
+  "ogr/ogrsf_frmts/csv/ogrcsvlayer.cpp",
+  "ogr/ogrsf_frmts/dxf/ogr_dxf.h",
+  "ogr/ogrsf_frmts/dxf/ogrdxfwriterds.cpp",
+  "ogr/ogrsf_frmts/dxf/ogrdxfwriterlayer.cpp",
+  "ogr/ogrsf_frmts/generic/ogr_gensql.cpp",
+  "ogr/ogrsf_frmts/generic/ogr_gensql.h",
+  "ogr/ogrsf_frmts/geojson/ogrgeojsonreader.cpp",
+  "ogr/ogrsf_frmts/geojson/ogrgeojsonseqdriver.cpp",
+  "ogr/ogrsf_frmts/geojson/ogrgeojsonwritelayer.cpp",
+  "ogr/ogrsf_frmts/gml/gmlutils.cpp",
+  "ogr/ogrsf_frmts/gpkg/ogrgeopackagelayer.cpp",
+  "ogr/ogrsf_frmts/gpkg/ogrgeopackagetablelayer.cpp",
+  "ogr/ogrsf_frmts/mitab/mitab_feature.cpp",
+  "ogr/ogrsf_frmts/mitab/mitab_spatialref.cpp",
+  "ogr/ogrsf_frmts/openfilegdb/filegdbindex.cpp",
+  "ogr/ogrsf_frmts/openfilegdb/filegdbtable.h",
+  "ogr/ogrsf_frmts/openfilegdb/filegdbtable_write.cpp",
+  "ogr/ogrsf_frmts/openfilegdb/ogropenfilegdblayer.cpp",
+  "ogr/ogrsf_frmts/shape/ogrshape.h",
+  "ogr/ogrsf_frmts/shape/ogrshapedatasource.cpp",
+  "ogr/ogrsf_frmts/shape/ogrshapelayer.cpp",
+  "ogr/ogrsf_frmts/sqlite/ogrsqliteexecutesql.cpp",
+  "ogr/ogrsf_frmts/sqlite/ogrsqliteutility.cpp",
+  "ogr/ogrsf_frmts/sqlite/ogrsqlitevirtualogr.cpp",
+  "ogr/ogrsf_frmts/xlsx/ogr_xlsx.h",
+  "ogr/ogrsf_frmts/xlsx/ogrxlsxdatasource.cpp",
+  "ogr/swq_select.cpp",
+  "port/cpl_vsil.cpp"
+ ]
+}

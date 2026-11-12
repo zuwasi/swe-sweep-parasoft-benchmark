@@ -1,0 +1,457 @@
+{
+ "repo": "arrow",
+ "n_bugs": 47,
+ "n_findings_total": 4479,
+ "found_region": 10,
+ "found_strict": 4,
+ "pct_region": 21.3,
+ "pct_strict": 8.5,
+ "swe_pct": 2.1,
+ "bugs": [
+  {
+   "bug_id": "arrow-0cc9fb2dd29f",
+   "files": [
+    "cpp/src/arrow/dataset/file_parquet.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-121fb8b54251",
+   "files": [
+    "cpp/src/arrow/scalar.cc"
+   ],
+   "found_region": [
+    "MISRACPP2023-8_2_10-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-19465d9c4aac",
+   "files": [
+    "cpp/src/arrow/compute/exec/expression.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-1a3fe19e8bf0",
+   "files": [
+    "cpp/src/arrow/compute/exec/task_util.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-264e1ebbe40c",
+   "files": [
+    "cpp/src/arrow/util/bit_stream_utils.h",
+    "cpp/src/parquet/encoding.cc"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "CERT_CPP-EXP60-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-7_0_6-b",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-7_0_6-b",
+    "MISRACPP2023-9_3_1-b"
+   ]
+  },
+  {
+   "bug_id": "arrow-26f5542e1be5",
+   "files": [
+    "cpp/src/parquet/metadata.cc",
+    "cpp/src/parquet/statistics.h"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-2cdadc752c2e",
+   "files": [
+    "cpp/src/arrow/compute/exec/expression_internal.h",
+    "cpp/src/arrow/compute/registry.cc",
+    "cpp/src/arrow/compute/registry.h"
+   ],
+   "found_region": [
+    "MISRACPP2023-6_5_2-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_10-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-2fd06f68a200",
+   "files": [
+    "cpp/src/arrow/tensor.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-369f913202de",
+   "files": [
+    "cpp/src/gandiva/llvm_generator.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-3d2dc9c86ad0",
+   "files": [
+    "cpp/src/arrow/result.h"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-3e14973c5f12",
+   "files": [
+    "cpp/src/arrow/chunked_array.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-40583d085a58",
+   "files": [
+    "cpp/src/arrow/ipc/writer.cc"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-479fccb220cc",
+   "files": [
+    "cpp/src/gandiva/precompiled/time.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-48d0b45c48f0",
+   "files": [
+    "cpp/src/arrow/compute/kernels/scalar_temporal_unary.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-4bbc9f6cd795",
+   "files": [
+    "cpp/src/arrow/scalar.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-4c84f1faa214",
+   "files": [
+    "cpp/src/arrow/array/array_nested.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-4e8d0cead54f",
+   "files": [
+    "cpp/src/gandiva/precompiled/decimal_wrapper.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-5a279df3fd5a",
+   "files": [
+    "cpp/src/arrow/type.cc",
+    "cpp/src/arrow/util/range.h"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-5abdc0d1a217",
+   "files": [
+    "cpp/src/arrow/array/data.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-60dfbaf3519c",
+   "files": [
+    "cpp/src/parquet/column_reader.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-624e0738ed5f",
+   "files": [
+    "cpp/src/arrow/compute/exec/expression.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-67205dcd9782",
+   "files": [
+    "cpp/src/gandiva/to_date_holder.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-6cc9de91ea5e",
+   "files": [
+    "cpp/src/parquet/arrow/reader_internal.cc",
+    "cpp/src/parquet/arrow/schema.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-836fa5c90cf9",
+   "files": [
+    "cpp/src/gandiva/gdv_string_function_stubs.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-8a41d3fa0ac8",
+   "files": [
+    "cpp/src/arrow/compute/kernels/vector_replace.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-8a6d1850de5a",
+   "files": [
+    "cpp/src/arrow/ipc/metadata_internal.cc"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-8_2_6-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-8c472a2596ce",
+   "files": [
+    "cpp/src/parquet/arrow/schema.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-97c0b6198f30",
+   "files": [
+    "cpp/src/arrow/compute/kernels/hash_aggregate.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-97ed55fe5885",
+   "files": [
+    "cpp/src/arrow/util/value_parsing.h"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-98c930cfb2f6",
+   "files": [
+    "cpp/src/parquet/column_reader.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-9a0cb740d8ac",
+   "files": [
+    "cpp/src/parquet/arrow/writer.cc",
+    "cpp/src/parquet/file_writer.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-9f952a8a44b5",
+   "files": [
+    "cpp/src/arrow/compute/kernels/scalar_string_utf8.cc"
+   ],
+   "found_region": [
+    "CERT_C-ARR39-b",
+    "MISRACPP2023-7_0_1-a",
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-7_0_6-b"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-a642ccf7200e",
+   "files": [
+    "cpp/src/arrow/array/data.cc"
+   ],
+   "found_region": [
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-9_4_1-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-a7cd3ba57ac2",
+   "files": [
+    "cpp/src/arrow/compute/kernels/scalar_if_else.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-b4b15ce0d6ab",
+   "files": [
+    "cpp/src/arrow/array/builder_dict.h",
+    "cpp/src/arrow/builder.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-b831ede509b4",
+   "files": [
+    "cpp/src/arrow/dataset/dataset_writer.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-be576c6bbb37",
+   "files": [
+    "cpp/src/gandiva/precompiled/time.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-c1cc8abccb1b",
+   "files": [
+    "cpp/src/arrow/compute/kernels/scalar_cast_string.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-c844b43f97c5",
+   "files": [
+    "cpp/src/arrow/array/data.cc"
+   ],
+   "found_region": [
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-9_5_1-a"
+   ]
+  },
+  {
+   "bug_id": "arrow-d0cd5512a992",
+   "files": [
+    "cpp/src/gandiva/function_registry_string.cc",
+    "cpp/src/gandiva/precompiled/string_ops.cc"
+   ],
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-7_0_4-a"
+   ],
+   "found_strict": [
+    "CERT_C-MSC41-a"
+   ]
+  },
+  {
+   "bug_id": "arrow-d4e732abe1d1",
+   "files": [
+    "cpp/src/arrow/compute/light_array.cc",
+    "cpp/src/arrow/compute/light_array.h"
+   ],
+   "found_region": [
+    "CERT_C-ARR39-b",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-8_0_1-b"
+   ]
+  },
+  {
+   "bug_id": "arrow-d7a1dcf3bafd",
+   "files": [
+    "cpp/src/arrow/compute/exec/expression.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-db58ca99eaa0",
+   "files": [
+    "cpp/src/arrow/array/array_primitive.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-e4fc3a8e2c13",
+   "files": [
+    "cpp/src/parquet/stream_reader.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-eb9c7276cf24",
+   "files": [
+    "cpp/src/parquet/column_writer.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-eef26b83f5e8",
+   "files": [
+    "cpp/src/parquet/column_writer.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "arrow-f5b99cc3814b",
+   "files": [
+    "cpp/src/gandiva/precompiled/string_ops.cc"
+   ],
+   "found_region": [],
+   "found_strict": []
+  }
+ ]
+}

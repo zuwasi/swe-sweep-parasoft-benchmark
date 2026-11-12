@@ -1,0 +1,242 @@
+{
+ "repo": "jerryscript",
+ "n_bugs": 15,
+ "n_findings_total": 7100,
+ "found_region": 13,
+ "found_strict": 10,
+ "pct_region": 86.7,
+ "pct_strict": 66.7,
+ "swe_pct": 20.0,
+ "bugs": [
+  {
+   "bug_id": "jerryscript-042a8ceedc15",
+   "files": [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-json.c"
+   ],
+   "found_region": [
+    "CERT_C-EXP39-b",
+    "CERT_C-INT31-j",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-8_2_6-a",
+    "MISRACPP2023-9_4_1-a"
+   ],
+   "found_strict": [
+    "CERT_C-INT31-j"
+   ]
+  },
+  {
+   "bug_id": "jerryscript-072dcea299cd",
+   "files": [
+    "jerry-core/parser/js/js-parser.c"
+   ],
+   "found_region": [
+    "CERT_C-ARR39-b",
+    "MISRACPP2023-7_0_4-a",
+    "MISRACPP2023-7_0_5-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "jerryscript-1eb47ad8b475",
+   "files": [
+    "jerry-core/ecma/operations/ecma-array-object.c",
+    "jerry-core/ecma/operations/ecma-array-object.h"
+   ],
+   "found_region": [
+    "BD-PB-NOTINIT",
+    "CERT_C-EXP39-b",
+    "CERT_C-INT31-d",
+    "CERT_C-INT31-e",
+    "CERT_C-INT31-j",
+    "CERT_CPP-EXP53-a",
+    "MISRACPP2023-0_3_1-b",
+    "MISRACPP2023-10_2_3-a",
+    "MISRACPP2023-11_6_2-a",
+    "MISRACPP2023-19_3_3-a",
+    "MISRACPP2023-7_0_4-a",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-9_4_1-a"
+   ],
+   "found_strict": [
+    "CERT_C-EXP39-b",
+    "CERT_C-INT31-d",
+    "CERT_C-INT31-e",
+    "CERT_C-INT31-j",
+    "MISRACPP2023-10_2_3-a",
+    "MISRACPP2023-7_0_4-a",
+    "MISRACPP2023-7_0_5-a"
+   ]
+  },
+  {
+   "bug_id": "jerryscript-25396dc4b88b",
+   "files": [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-helpers-date.c"
+   ],
+   "found_region": [
+    "BD-PB-ERRNO",
+    "CERT_C-ERR30-a"
+   ],
+   "found_strict": [
+    "BD-PB-ERRNO",
+    "CERT_C-ERR30-a"
+   ]
+  },
+  {
+   "bug_id": "jerryscript-2b0230207b47",
+   "files": [
+    "jerry-core/parser/js/js-parser-statm.c",
+    "jerry-core/parser/js/js-scanner-ops.c"
+   ],
+   "found_region": [
+    "CERT_C-INT31-i",
+    "CERT_C-INT31-j",
+    "MISRACPP2023-10_2_3-a",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_6-a"
+   ],
+   "found_strict": [
+    "CERT_C-INT31-j",
+    "MISRACPP2023-10_2_3-a",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-8_0_1-b"
+   ]
+  },
+  {
+   "bug_id": "jerryscript-32f5320c7e4d",
+   "files": [
+    "jerry-core/parser/js/js-parser-expr.c"
+   ],
+   "found_region": [
+    "CERT_C-INT31-i",
+    "CERT_C-INT31-j",
+    "MISRACPP2023-10_2_3-a",
+    "MISRACPP2023-7_0_5-a"
+   ],
+   "found_strict": [
+    "CERT_C-INT31-i"
+   ]
+  },
+  {
+   "bug_id": "jerryscript-4afcc94994c8",
+   "files": [
+    "jerry-core/parser/js/js-parser-expr.c"
+   ],
+   "found_region": [
+    "CERT_C-INT31-i",
+    "CERT_C-INT31-j",
+    "MISRACPP2023-10_2_3-a",
+    "MISRACPP2023-19_3_3-a",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-8_0_1-b"
+   ],
+   "found_strict": [
+    "CERT_C-INT31-j",
+    "MISRACPP2023-10_2_3-a",
+    "MISRACPP2023-19_3_3-a",
+    "MISRACPP2023-7_0_5-a"
+   ]
+  },
+  {
+   "bug_id": "jerryscript-5144355d084f",
+   "files": [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-json.c"
+   ],
+   "found_region": [
+    "CERT_C-EXP39-b",
+    "MISRACPP2023-9_4_1-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "jerryscript-5ca8de954fce",
+   "files": [
+    "jerry-core/parser/js/js-parser-expr.c"
+   ],
+   "found_region": [
+    "CERT_C-INT31-j",
+    "MISRACPP2023-10_2_3-a"
+   ],
+   "found_strict": [
+    "CERT_C-INT31-j",
+    "MISRACPP2023-10_2_3-a"
+   ]
+  },
+  {
+   "bug_id": "jerryscript-63583f11d059",
+   "files": [
+    "jerry-core/parser/js/js-scanner-util.c"
+   ],
+   "found_region": [
+    "CERT_C-INT31-a",
+    "CERT_C-INT31-d",
+    "CERT_C-INT31-e",
+    "CERT_C-INT31-j",
+    "MISRACPP2023-10_2_3-a",
+    "MISRACPP2023-7_0_4-a",
+    "MISRACPP2023-7_0_5-a"
+   ],
+   "found_strict": [
+    "CERT_C-INT31-j"
+   ]
+  },
+  {
+   "bug_id": "jerryscript-662bbee88446",
+   "files": [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-array-prototype.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "jerryscript-9bf98944df1f",
+   "files": [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-date-prototype.c"
+   ],
+   "found_region": [
+    "BD-PB-CC",
+    "MISRACPP2023-0_0_2-a"
+   ],
+   "found_strict": []
+  },
+  {
+   "bug_id": "jerryscript-bf72a9ea61e4",
+   "files": [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-global.c"
+   ],
+   "found_region": [
+    "CERT_C-INT31-i"
+   ],
+   "found_strict": [
+    "CERT_C-INT31-i"
+   ]
+  },
+  {
+   "bug_id": "jerryscript-df8c37f98e76",
+   "files": [
+    "jerry-core/api/jerry.c"
+   ],
+   "found_region": [],
+   "found_strict": []
+  },
+  {
+   "bug_id": "jerryscript-edaaae2dd276",
+   "files": [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-number-prototype.c"
+   ],
+   "found_region": [
+    "BD-PB-CHECKRET",
+    "BD-PB-NOTINIT",
+    "BD-PB-VOVR",
+    "CERT_C-INT31-j",
+    "CERT_CPP-EXP53-a",
+    "MISRACPP2023-0_1_1-a",
+    "MISRACPP2023-11_6_2-a",
+    "MISRACPP2023-7_11_2-a"
+   ],
+   "found_strict": [
+    "CERT_C-INT31-j"
+   ]
+  }
+ ]
+}
