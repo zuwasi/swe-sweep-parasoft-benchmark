@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flow Analysis catches per repo (Parasoft vs SWE-sweep benchmark)</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Inter, -apple-system, "Segoe UI", system-ui, sans-serif;
+    background: #f7f8fa; color: #1a1f2e; padding: 32px 24px 48px;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; }
+  h1 { font-size: clamp(20px, 3vw, 26px); margin-bottom: 6px; }
+  p.sub { color: #5a6272; font-size: 14px; margin-bottom: 24px; }
+  .legend { display: flex; gap: 20px; font-size: 13px; margin-bottom: 18px; }
+  .legend span { display: inline-flex; align-items: center; gap: 7px; }
+  .swatch { width: 14px; height: 14px; border-radius: 3px; display: inline-block; }
+  .fa { background: #c7391b; }
+  .total { background: #274b8f; }
+  .chart { background: #fff; border: 1px solid #e3e6ec; border-radius: 10px; padding: 20px 22px; }
+  .row { display: grid; grid-template-columns: 92px 1fr 96px; gap: 10px; align-items: center; padding: 5px 0; }
+  .row .name { font-size: 13px; font-weight: 600; text-align: right; color: #2a3040; }
+  .bars { display: flex; flex-direction: column; gap: 3px; }
+  .bar { height: 13px; border-radius: 3px; position: relative; min-width: 2px; }
+  .bar.fa-bar { background: #c7391b; }
+  .bar.total-bar { background: #274b8f; opacity: 0.82; }
+  .val { font-size: 12px; color: #5a6272; font-variant-numeric: tabular-nums; }
+  .val b { color: #c7391b; font-weight: 700; }
+  .note { margin-top: 18px; font-size: 13px; color: #5a6272; line-height: 1.55; }
+  .note b { color: #1a1f2e; }
+  .axis { border-top: 1px solid #d9dde5; margin: 4px 0 10px 102px; position: relative; height: 0; }
+  .axis span { position: absolute; top: 5px; font-size: 11px; color: #9aa1af; transform: translateX(-50%); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Flow Analysis (deep-check) catches per repository</h1>
+  <p class="sub">Bugs caught by Parasoft Flow Analysis (BD-* rules) vs total bugs found by any rule, out of 488 SWE-sweep bugs.</p>
+  <div class="legend">
+    <span><i class="swatch fa"></i>Flow Analysis catches (BD-*)</span>
+    <span><i class="swatch total"></i>Total found by any rule (region match)</span>
+  </div>
+  <div class="chart" id="chart"></div>
+  <p class="note">
+    <b>16 of 488 bugs (3.3%)</b> were caught by deep Flow Analysis: hdf5 5 (BD-PB-VOVR), duckdb 4 (INTWRAP, VALRANGE, SWITCH), jerryscript 4 (NOTINIT, ERRNO, CC, VOVR, CHECKRET), opencv 2 (CHECKRET, ERRNO), php-src 1 (VOVR). The other 167 found-bug matches came from CERT/MISRA coding-standard rules landing on buggy lines.
+  </p>
+</div>
+<script>
+  // [repo, totalFoundRegion, faCatches]
+  const data = [
+    ["duckdb", 56, 4], ["opencv", 32, 2], ["jerryscript", 13, 4], ["php-src", 12, 1],
+    ["hdf5", 6, 5], ["arrow", 10, 0], ["cvc5", 17, 0], ["proj", 10, 0],
+    ["godot", 7, 0], ["libexpat", 5, 0], ["tarantool", 5, 0], ["micropython", 4, 0],
+    ["z3", 3, 0], ["gdal", 3, 0],
+  ];
+  const PX = 7.2; // pixels per bug
+  const chart = document.getElementById("chart");
+  for (const [name, total, fa] of data) {
+    const row = document.createElement("div"); row.className = "row";
+    row.innerHTML =
+      '<div class="name">' + name + '</div>' +
+      '<div class="bars">' +
+        '<div class="bar total-bar" style="width:' + (total * PX) + 'px" title="total found: ' + total + '"></div>' +
+        '<div class="bar fa-bar" style="width:' + Math.max(fa * PX, fa ? 3 : 0) + 'px" title="Flow Analysis: ' + fa + '"></div>' +
+      '</div>' +
+      '<div class="val"><b>' + fa + '</b> FA / ' + total + ' found</div>';
+    chart.appendChild(row);
+  }
+  const axis = document.createElement("div"); axis.className = "axis";
+  [0, 10, 20, 30, 40, 50].forEach(v => {
+    const s = document.createElement("span"); s.style.left = (v * PX) + "px"; s.textContent = v; axis.appendChild(s);
+  });
+  chart.appendChild(axis);
+</script>
+</body>
+</html>
