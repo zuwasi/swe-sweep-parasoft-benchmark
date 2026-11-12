@@ -25,7 +25,7 @@ For every bug, we reconstructed the exact moment the bug existed:
 1. Each SWE-sweep oracle patch tells us which file, at which exact git blob hash, the fix changed, and which lines.
 2. We materialized 679 bug-era file versions byte-identically from git.
 3. We captured the real compiler flags for each file from each project's own build system (CMake `compile_commands.json` for most, `make` and `scons` databases for the rest), because static analysis without real flags produces garbage.
-4. We ran **Parasoft C/C++test Standard 2025.2.0** with the rule sets a safety-critical team would actually deploy: **Flow Analysis Standard + MISRA C 2025 + SEI CERT C** for the C repositories, **Flow Analysis Standard + MISRA C++ 2023 + SEI CERT C++** for the C++ repositories.
+4. We ran **Parasoft C/C++test Standard** with the rule sets a safety-critical team would actually deploy: **Flow Analysis Standard + MISRA C 2025 + SEI CERT C** for the C repositories (C/C++test 2026.1.3), **Flow Analysis Standard + MISRA C++ 2023 + SEI CERT C++** for the C++ repositories (C/C++test 2025.2.0).
 5. We counted a bug as **found** when any violation landed on any line of the bug's changed region, and as **strictly found** when it landed on the exact line the eventual fix removed or rewrote.
 
 ## The results
@@ -35,9 +35,9 @@ For every bug, we reconstructed the exact moment the bug existed:
 | jerryscript | C | 15 | 13 | **86.7%** | 20.0% |
 | opencv | C++ | 47 | 32 | **68.1%** | 2.1% |
 | duckdb | C++ | 109 | 56 | **51.4%** | 2.8% |
-| libexpat | C | 9 | 5 | 55.6% | 44.4% |
+| libexpat | C | 9 | 6 | **66.7%** | 44.4% |
 | proj | C++ | 21 | 10 | 47.6% | 9.5% |
-| php-src | C | 26 | 12 | 46.2% | 0.0% |
+| php-src | C | 26 | 11 | 42.3% | 0.0% |
 | cvc5 | C++ | 38 | 17 | 44.7%* | 2.6% |
 | hdf5 | C | 14 | 6 | 42.9% | 28.6% |
 | godot | C++ | 17 | 7 | 41.2% | 0.0% |
@@ -50,7 +50,7 @@ For every bug, we reconstructed the exact moment the bug existed:
 
 \* cvc5's figure is a lower bound: only 2 of 54 files preprocessed cleanly against its bug-era headers.
 
-Counting only findings on the exact line the maintainer's fix changed, Parasoft still found **20.5%** of all bugs, four to five times the agents' end-to-end resolution rate.
+Counting only findings on the exact line the maintainer's fix changed, Parasoft still found **21.1%** of all bugs, roughly five times the agents' end-to-end resolution rate.
 
 ### Where the deep engine shines
 

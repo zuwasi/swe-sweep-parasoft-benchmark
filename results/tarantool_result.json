@@ -1,11 +1,11 @@
 {
  "repo": "tarantool",
  "n_bugs": 40,
- "n_findings_total": 1553,
+ "n_findings_total": 2021,
  "found_region": 5,
- "found_strict": 2,
+ "found_strict": 3,
  "pct_region": 12.5,
- "pct_strict": 5.0,
+ "pct_strict": 7.5,
  "swe_pct": 7.5,
  "bugs": [
   {
@@ -14,8 +14,8 @@
     "src/lib/core/prbuf.c"
    ],
    "found_region": [
-    "MISRACPP2023-11_6_1-a",
-    "MISRACPP2023-9_3_1-b"
+    "MISRAC2025-RULE_15_5-a",
+    "MISRAC2025-RULE_15_6-b"
    ],
    "found_strict": []
   },
@@ -75,12 +75,17 @@
    "found_region": [
     "CERT_C-INT31-i",
     "CERT_C-MSC41-a",
-    "MISRACPP2023-6_5_1-a",
-    "MISRACPP2023-8_2_6-a",
-    "MISRACPP2023-9_3_1-b"
+    "MISRAC2025-RULE_10_3-b",
+    "MISRAC2025-RULE_15_5-a",
+    "MISRAC2025-RULE_15_6-b",
+    "MISRAC2025-RULE_17_12-a",
+    "MISRAC2025-RULE_17_7-a",
+    "MISRAC2025-RULE_8_4-a",
+    "MISRAC2025-RULE_8_7-a"
    ],
    "found_strict": [
-    "MISRACPP2023-6_5_1-a"
+    "MISRAC2025-RULE_8_4-a",
+    "MISRAC2025-RULE_8_7-a"
    ]
   },
   {
@@ -148,12 +153,12 @@
    ],
    "found_region": [
     "CERT_C-MSC41-a",
-    "MISRACPP2023-11_6_1-a",
-    "MISRACPP2023-8_2_6-a",
-    "MISRACPP2023-9_3_1-b"
+    "MISRAC2025-RULE_11_5-b",
+    "MISRAC2025-RULE_15_5-a",
+    "MISRAC2025-RULE_15_6-b"
    ],
    "found_strict": [
-    "MISRACPP2023-8_2_6-a"
+    "MISRAC2025-RULE_11_5-b"
    ]
   },
   {
@@ -277,11 +282,16 @@
    "found_region": [
     "CERT_C-INT31-e",
     "CERT_C-INT31-j",
-    "MISRACPP2023-6_9_2-a",
-    "MISRACPP2023-7_0_4-a",
-    "MISRACPP2023-9_3_1-b"
+    "MISRAC2025-DIR_4_6-b",
+    "MISRAC2025-RULE_10_1-e",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_15_6-b",
+    "MISRAC2025-RULE_21_8-d",
+    "MISRAC2025-RULE_8_7-a"
    ],
-   "found_strict": []
+   "found_strict": [
+    "MISRAC2025-RULE_21_8-d"
+   ]
   },
   {
    "bug_id": "tarantool-c8612c63469d",
@@ -292,10 +302,11 @@
     "CERT_C-ERR33-a",
     "CERT_C-ERR33-d",
     "CERT_C-FIO47-d",
-    "MISRACPP2023-11_6_1-a",
-    "MISRACPP2023-19_3_3-a",
-    "MISRACPP2023-30_0_1-b",
-    "MISRACPP2023-7_11_2-a"
+    "CERT_C-POS54-a",
+    "MISRAC2025-RULE_17_7-a",
+    "MISRAC2025-RULE_20_12-a",
+    "MISRAC2025-RULE_21_6-a",
+    "MISRAC2025-RULE_21_8-d"
    ],
    "found_strict": []
   },

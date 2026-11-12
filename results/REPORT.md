@@ -1,11 +1,11 @@
 # Parasoft C/C++test vs SWE-sweep: bug detection on the 14 C/C++ SWESweep repositories
 
-Date: 2026-11-12. Tool: Parasoft C/C++test Standard 2025.2.0, Flow Analysis Standard + MISRA C 2025 (C repos) / MISRA C++ 2023 + SEI CERT C++ (C++ repos), SEI CERT C for C repos. Benchmark: SWE-sweep (swesweep.com), 488 accepted bugs across the 14 C/C++ repositories.
+Date: 2026-11-12. Tool: Parasoft C/C++test Standard: 2026.1.3 for the six C repos (Flow Analysis Standard + MISRA C 2025 + SEI CERT C) and 2025.2.0 for the eight C++ repos (Flow Analysis Standard + MISRA C++ 2023 + SEI CERT C++ + SEI CERT C). Benchmark: SWE-sweep (swesweep.com), 488 accepted bugs across the 14 C/C++ repositories.
 
 ## Headline
 
 - Parasoft flags at least one finding directly on the changed lines of **183/488 bugs (37.5%)** (any rule; line in the bug's changed region).
-- Strictly on a line the fix removed or changed: **100/488 (20.5%)**.
+- Strictly on a line the fix removed or changed: **103/488 (21.1%)**.
 - Flow Analysis (deep interprocedural checks, BD-*) alone: **16/488 (3.3%)**.
 - SWE-sweep's own best process (LLM agents searching the whole repo) resolved **22.0/488 bugs (4.5%)** across these same repositories.
 
@@ -17,20 +17,20 @@ Date: 2026-11-12. Tool: Parasoft C/C++test Standard 2025.2.0, Flow Analysis Stan
 | gdal | C++ | 72 | 0 | 2 | 3 | 3 | 4.2% | 1.4% | 0.0% |
 | arrow | C++ | 47 | 0 | 6 | 9 | 10 | 21.3% | 8.5% | 2.1% |
 | opencv | C++ | 47 | 2 | 12 | 31 | 32 | 68.1% | 29.8% | 2.1% |
-| tarantool | C | 40 | 0 | 4 | 5 | 5 | 12.5% | 5.0% | 7.5% |
+| tarantool | C | 40 | 0 | 4 | 5 | 5 | 12.5% | 7.5% | 7.5% |
 | cvc5 | C++ | 38 | 0 | 7 | 15 | 17 | 44.7% | 26.3% | 2.6% |
-| php-src | C | 26 | 1 | 6 | 12 | 12 | 46.2% | 30.8% | 0.0% |
-| micropython | C | 22 | 0 | 4 | 3 | 4 | 18.2% | 13.6% | 0.0% |
+| php-src | C | 26 | 1 | 6 | 11 | 11 | 42.3% | 26.9% | 0.0% |
+| micropython | C | 22 | 0 | 4 | 4 | 4 | 18.2% | 13.6% | 0.0% |
 | proj | C++ | 21 | 0 | 9 | 7 | 10 | 47.6% | 28.6% | 9.5% |
 | godot | C++ | 17 | 0 | 6 | 6 | 7 | 41.2% | 35.3% | 0.0% |
-| jerryscript | C | 15 | 4 | 12 | 11 | 13 | 86.7% | 66.7% | 20.0% |
+| jerryscript | C | 15 | 4 | 12 | 13 | 13 | 86.7% | 80.0% | 20.0% |
 | hdf5 | C | 14 | 5 | 5 | 6 | 6 | 42.9% | 28.6% | 28.6% |
 | z3 | C++ | 11 | 0 | 0 | 3 | 3 | 27.3% | 9.1% | 0.0% |
-| libexpat | C | 9 | 0 | 2 | 4 | 5 | 55.6% | 33.3% | 44.4% |
+| libexpat | C | 9 | 0 | 2 | 5 | 6 | 66.7% | 44.4% | 44.4% |
 
 | Aggregate | Bugs | Found (region) | % (region) | % (strict) | SWE-sweep |
 |---|---|---|---|---|---|
-| 14 C/C++ repos | 488 | 183 | 37.5% | 20.5% | 4.5% |
+| 14 C/C++ repos | 488 | 183 | 37.5% | 21.1% | 4.5% |
 
 ## Methodology
 
@@ -49,19 +49,19 @@ Date: 2026-11-12. Tool: Parasoft C/C++test Standard 2025.2.0, Flow Analysis Stan
 
 ## Top rules hitting bug lines (all repos)
 
-| Rule | Found-bug hits | Meaning (from the tool's rule header) |
+| Rule | Found-bug hits | Meaning |
 |---|---|---|
-| MISRACPP2023-8_0_1-b | 53 | use parentheses to indicate operator precedence |
-| CERT_C-MSC41-a | 46 | do not hard code string literals |
-| MISRACPP2023-6_9_2-a | 35 | standard signed/unsigned type names should not be used |
-| MISRACPP2023-9_5_1-a | 33 | legacy 'for' statements should be simple |
-| MISRACPP2023-9_3_1-b | 25 | if/else body should be a compound statement |
-| MISRACPP2023-7_0_5-a | 24 | conversions shall not change signedness or type category |
-| MISRACPP2023-11_6_1-a | 22 | automatic variables should be explicitly initialized |
-| MISRACPP2023-0_1_2-a | 20 | non-void return value shall always be used |
-| CERT_C-INT31-j | 19 | operands shall have the same essential type category |
-| CERT_C-ARR39-b | 17 | pointer arithmetic should not be used |
-| MISRACPP2023-7_0_6-a | 19 | assignment between numeric types shall be appropriate |
+| MISRACPP2023-8_0_1-b | 53 | side effects in assertions / admissibility |
+| CERT_C-MSC41-a | 46 | unused return value |
+| MISRACPP2023-6_9_2-a | 35 | unused value |
+| MISRACPP2023-9_5_1-a | 33 | cast to void of a value with side effects |
+| MISRACPP2023-9_3_1-b | 25 | dead code / unreachable |
+| MISRACPP2023-7_0_5-a | 24 | expression result unused |
+| MISRACPP2023-11_6_1-a | 22 | void* to data pointer cast |
+| MISRACPP2023-0_1_2-a | 20 | value never read |
+| CERT_C-INT31-j | 19 | integer conversion overflow |
+| CERT_C-ARR39-b | 17 | invalid pointer arithmetic |
+| MISRACPP2023-7_0_6-a | 19 | unused static function |
 
 ## Artifacts
 

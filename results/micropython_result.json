@@ -1,7 +1,7 @@
 {
  "repo": "micropython",
  "n_bugs": 22,
- "n_findings_total": 3508,
+ "n_findings_total": 5396,
  "found_region": 4,
  "found_strict": 3,
  "pct_region": 18.2,
@@ -16,12 +16,15 @@
    "found_region": [
     "CERT_C-ARR39-b",
     "CERT_C-INT31-a",
-    "MISRACPP2023-8_0_1-b"
+    "MISRAC2025-RULE_10_1-a",
+    "MISRAC2025-RULE_12_1-a",
+    "MISRAC2025-RULE_13_3-a"
    ],
    "found_strict": [
     "CERT_C-ARR39-b",
     "CERT_C-INT31-a",
-    "MISRACPP2023-8_0_1-b"
+    "MISRAC2025-RULE_10_1-a",
+    "MISRAC2025-RULE_12_1-a"
    ]
   },
   {
@@ -109,22 +112,43 @@
     "CERT_C-INT31-j",
     "CERT_C-INT31-l",
     "CERT_C-INT31-m",
-    "MISRACPP2023-6_2_2-a",
-    "MISRACPP2023-6_2_3-a",
-    "MISRACPP2023-6_9_2-a",
-    "MISRACPP2023-7_0_4-a",
-    "MISRACPP2023-7_0_6-a",
-    "MISRACPP2023-8_0_1-b"
+    "CERT_C-POS54-a",
+    "MISRAC2025-DIR_4_6-b",
+    "MISRAC2025-RULE_10_1-a",
+    "MISRAC2025-RULE_10_1-e",
+    "MISRAC2025-RULE_10_3-a",
+    "MISRAC2025-RULE_10_3-b",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_10_6-a",
+    "MISRAC2025-RULE_10_7-a",
+    "MISRAC2025-RULE_12_1-a",
+    "MISRAC2025-RULE_13_3-a",
+    "MISRAC2025-RULE_14_4-a",
+    "MISRAC2025-RULE_15_5-a",
+    "MISRAC2025-RULE_17_7-a",
+    "MISRAC2025-RULE_17_8-a",
+    "MISRAC2025-RULE_18_4-a",
+    "MISRAC2025-RULE_5_8-b",
+    "MISRAC2025-RULE_8_3-c",
+    "MISRAC2025-RULE_8_6-a"
    ],
    "found_strict": [
     "CERT_C-ARR39-b",
     "CERT_C-DCL40-a",
     "CERT_C-INT31-a",
     "CERT_C-INT31-i",
-    "MISRACPP2023-6_2_2-a",
-    "MISRACPP2023-6_2_3-a",
-    "MISRACPP2023-7_0_6-a",
-    "MISRACPP2023-8_0_1-b"
+    "CERT_C-POS54-a",
+    "MISRAC2025-RULE_10_1-a",
+    "MISRAC2025-RULE_10_3-b",
+    "MISRAC2025-RULE_12_1-a",
+    "MISRAC2025-RULE_14_4-a",
+    "MISRAC2025-RULE_15_5-a",
+    "MISRAC2025-RULE_17_7-a",
+    "MISRAC2025-RULE_17_8-a",
+    "MISRAC2025-RULE_18_4-a",
+    "MISRAC2025-RULE_5_8-b",
+    "MISRAC2025-RULE_8_3-c",
+    "MISRAC2025-RULE_8_6-a"
    ]
   },
   {
@@ -167,14 +191,16 @@
    ],
    "found_region": [
     "CERT_C-INT31-j",
-    "MISRACPP2023-6_2_3-a",
-    "MISRACPP2023-7_0_5-a",
-    "MISRACPP2023-8_0_1-b"
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_12_1-a",
+    "MISRAC2025-RULE_15_5-a",
+    "MISRAC2025-RULE_5_8-b",
+    "MISRAC2025-RULE_8_6-a"
    ],
    "found_strict": [
     "CERT_C-INT31-j",
-    "MISRACPP2023-7_0_5-a",
-    "MISRACPP2023-8_0_1-b"
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_12_1-a"
    ]
   },
   {
@@ -207,7 +233,9 @@
     "py/mpz.c"
    ],
    "found_region": [
-    "CERT_C-INT31-j"
+    "CERT_C-INT31-j",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_15_5-a"
    ],
    "found_strict": []
   },

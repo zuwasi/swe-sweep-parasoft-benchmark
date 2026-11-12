@@ -1,7 +1,7 @@
 {
-  "benchmark": "Parasoft C/C++test Standard 2025.2.0 vs SWE-sweep (swesweep.com)",
+  "benchmark": "Parasoft C/C++test Standard vs SWE-sweep (swesweep.com)",
   "date": "2026-11-12",
-  "configuration": "Flow Analysis Standard + MISRA C 2025 + SEI CERT C (C repos); Flow Analysis Standard + MISRA C++ 2023 + SEI CERT C++ (C++ repos)",
+  "configuration": "C repos (2026.1.3): Flow Analysis Standard + MISRA C 2025 + SEI CERT C. C++ repos (2025.2.0): Flow Analysis Standard + MISRA C++ 2023 + SEI CERT C++ + SEI CERT C.",
   "repos": [
     {
       "repo": "arrow",
@@ -68,19 +68,19 @@
       "language": "C",
       "bugs": 15,
       "found_region": 13,
-      "found_strict": 10,
+      "found_strict": 12,
       "pct_region": 86.7,
-      "pct_strict": 66.7,
+      "pct_strict": 80.0,
       "swe_sweep_best_pct": 20.0
     },
     {
       "repo": "libexpat",
       "language": "C",
       "bugs": 9,
-      "found_region": 5,
-      "found_strict": 3,
-      "pct_region": 55.6,
-      "pct_strict": 33.3,
+      "found_region": 6,
+      "found_strict": 4,
+      "pct_region": 66.7,
+      "pct_strict": 44.4,
       "swe_sweep_best_pct": 44.4
     },
     {
@@ -107,10 +107,10 @@
       "repo": "php-src",
       "language": "C",
       "bugs": 26,
-      "found_region": 12,
-      "found_strict": 8,
-      "pct_region": 46.2,
-      "pct_strict": 30.8,
+      "found_region": 11,
+      "found_strict": 7,
+      "pct_region": 42.3,
+      "pct_strict": 26.9,
       "swe_sweep_best_pct": 0.0
     },
     {
@@ -128,9 +128,9 @@
       "language": "C",
       "bugs": 40,
       "found_region": 5,
-      "found_strict": 2,
+      "found_strict": 3,
       "pct_region": 12.5,
-      "pct_strict": 5.0,
+      "pct_strict": 7.5,
       "swe_sweep_best_pct": 7.5
     },
     {
@@ -148,8 +148,8 @@
     "bugs": 488,
     "found_region": 183,
     "pct_region": 37.5,
-    "found_strict": 100,
-    "pct_strict": 20.5,
+    "found_strict": 103,
+    "pct_strict": 21.1,
     "swe_sweep_best_overall_pct": 4.5
   }
 }

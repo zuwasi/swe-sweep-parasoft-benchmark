@@ -1,11 +1,11 @@
 {
  "repo": "libexpat",
  "n_bugs": 9,
- "n_findings_total": 26024,
- "found_region": 5,
- "found_strict": 3,
- "pct_region": 55.6,
- "pct_strict": 33.3,
+ "n_findings_total": 26766,
+ "found_region": 6,
+ "found_strict": 4,
+ "pct_region": 66.7,
+ "pct_strict": 44.4,
  "swe_pct": 44.4,
  "bugs": [
   {
@@ -32,8 +32,12 @@
    "files": [
     "expat/lib/xmlparse.c"
    ],
-   "found_region": [],
-   "found_strict": []
+   "found_region": [
+    "MISRAC2025-RULE_12_1-a"
+   ],
+   "found_strict": [
+    "MISRAC2025-RULE_12_1-a"
+   ]
   },
   {
    "bug_id": "libexpat-44558a21f1b7",
@@ -42,10 +46,12 @@
     "expat/lib/xmltok_impl.c"
    ],
    "found_region": [
+    "MISRAC2025-DIR_4_6-b",
     "MISRAC2025-DIR_4_9-a",
     "MISRAC2025-RULE_20_10-a"
    ],
    "found_strict": [
+    "MISRAC2025-DIR_4_6-b",
     "MISRAC2025-DIR_4_9-a",
     "MISRAC2025-RULE_20_10-a"
    ]

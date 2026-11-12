@@ -2,7 +2,7 @@
 
 **ESL (Engineering Software Lab) | eswlab.com** — benchmark, reconstruction pipeline, and raw evidence.
 
-We took the 14 C/C++ repositories from [SWE-sweep](https://swesweep.com) ("SWE-sweep: Can Agents Autonomously Find and Fix Bugs?", Lieret et al., 2026), materialized the exact pre-fix code of all **488 accepted bugs**, and ran **Parasoft C/C++test** (Flow Analysis Standard + MISRA C 2025 + SEI CERT C for C repos, Flow Analysis Standard + MISRA C++ 2023 + SEI CERT C++ for C++ repos) on that code. We then measured how many bugs the tool flags on the exact lines SWE-sweep's maintainers-confirmed fixes changed, and compared that with the best autonomous agent result SWE-sweep itself published.
+We took the 14 C/C++ repositories from [SWE-sweep](https://swesweep.com) ("SWE-sweep: Can Agents Autonomously Find and Fix Bugs?", Lieret et al., 2026), materialized the exact pre-fix code of all **488 accepted bugs**, and ran **Parasoft C/C++test** (Flow Analysis Standard + MISRA C 2025 + SEI CERT C for C repos on C/C++test Standard 2026.1.3; Flow Analysis Standard + MISRA C++ 2023 + SEI CERT C++ + SEI CERT C for C++ repos on 2025.2.0) on that code. We then measured how many bugs the tool flags on the exact lines SWE-sweep's maintainers-confirmed fixes changed, and compared that with the best autonomous agent result SWE-sweep itself published.
 
 ## Results
 
@@ -12,17 +12,17 @@ We took the 14 C/C++ repositories from [SWE-sweep](https://swesweep.com) ("SWE-s
 | gdal | C++ | 72 | 3 | 4.2% | 1.4% | 0.0% |
 | arrow | C++ | 47 | 10 | 21.3% | 8.5% | 2.1% |
 | opencv | C++ | 47 | 32 | 68.1% | 29.8% | 2.1% |
-| tarantool | C | 40 | 5 | 12.5% | 5.0% | 7.5% |
+| tarantool | C | 40 | 5 | 12.5% | 7.5% | 7.5% |
 | cvc5 | C++ | 38 | 17 | 44.7% (lower bound) | 26.3% | 2.6% |
-| php-src | C | 26 | 12 | 46.2% | 30.8% | 0.0% |
+| php-src | C | 26 | 11 | 42.3% | 26.9% | 0.0% |
 | micropython | C | 22 | 4 | 18.2% | 13.6% | 0.0% |
 | proj | C++ | 21 | 10 | 47.6% | 28.6% | 9.5% |
 | godot | C++ | 17 | 7 | 41.2% | 35.3% | 0.0% |
-| jerryscript | C | 15 | 13 | 86.7% | 66.7% | 20.0% |
+| jerryscript | C | 15 | 13 | 86.7% | 80.0% | 20.0% |
 | hdf5 | C | 14 | 6 | 42.9% | 28.6% | 28.6% |
 | z3 | C++ | 11 | 3 | 27.3% | 9.1% | 0.0% |
-| libexpat | C | 9 | 5 | 55.6% | 33.3% | 44.4% |
-| **Total** | | **488** | **183** | **37.5%** | **20.5%** | **~4.5%** |
+| libexpat | C | 9 | 6 | 66.7% | 44.4% | 44.4% |
+| **Total** | | **488** | **183** | **37.5%** | **21.1%** | **~4.5%** |
 
 - Flow Analysis (deep interprocedural defect checks, BD-*) alone caught **16/488 (3.3%)**: integer wraparound, use-before-initialization, index out of range, unreachable switch branches, unused values, errno misuse. See the per-repo rule breakdowns in `results/REPORT.md`.
 - The rest of the matches come from MISRA/CERT coding-standard rules landing on the buggy lines.

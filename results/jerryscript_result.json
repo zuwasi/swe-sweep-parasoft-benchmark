@@ -1,11 +1,11 @@
 {
  "repo": "jerryscript",
  "n_bugs": 15,
- "n_findings_total": 7100,
+ "n_findings_total": 8756,
  "found_region": 13,
- "found_strict": 10,
+ "found_strict": 12,
  "pct_region": 86.7,
- "pct_strict": 66.7,
+ "pct_strict": 80.0,
  "swe_pct": 20.0,
  "bugs": [
   {
@@ -16,12 +16,13 @@
    "found_region": [
     "CERT_C-EXP39-b",
     "CERT_C-INT31-j",
-    "MISRACPP2023-11_6_1-a",
-    "MISRACPP2023-8_2_6-a",
-    "MISRACPP2023-9_4_1-a"
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_15_5-a",
+    "MISRAC2025-RULE_15_7-a"
    ],
    "found_strict": [
-    "CERT_C-INT31-j"
+    "CERT_C-INT31-j",
+    "MISRAC2025-RULE_10_4-a"
    ]
   },
   {
@@ -31,8 +32,7 @@
    ],
    "found_region": [
     "CERT_C-ARR39-b",
-    "MISRACPP2023-7_0_4-a",
-    "MISRACPP2023-7_0_5-a"
+    "MISRAC2025-RULE_13_3-a"
    ],
    "found_strict": []
   },
@@ -44,27 +44,32 @@
    ],
    "found_region": [
     "BD-PB-NOTINIT",
+    "CERT_C-EXP33-a",
     "CERT_C-EXP39-b",
     "CERT_C-INT31-d",
     "CERT_C-INT31-e",
     "CERT_C-INT31-j",
-    "CERT_CPP-EXP53-a",
-    "MISRACPP2023-0_3_1-b",
-    "MISRACPP2023-10_2_3-a",
-    "MISRACPP2023-11_6_2-a",
-    "MISRACPP2023-19_3_3-a",
-    "MISRACPP2023-7_0_4-a",
-    "MISRACPP2023-7_0_5-a",
-    "MISRACPP2023-9_4_1-a"
+    "MISRAC2025-RULE_10_1-d",
+    "MISRAC2025-RULE_10_1-e",
+    "MISRAC2025-RULE_10_1-h",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_14_4-a",
+    "MISRAC2025-RULE_15_5-a",
+    "MISRAC2025-RULE_15_7-a",
+    "MISRAC2025-RULE_1_3-b",
+    "MISRAC2025-RULE_20_12-a",
+    "MISRAC2025-RULE_9_1-a"
    ],
    "found_strict": [
     "CERT_C-EXP39-b",
     "CERT_C-INT31-d",
     "CERT_C-INT31-e",
     "CERT_C-INT31-j",
-    "MISRACPP2023-10_2_3-a",
-    "MISRACPP2023-7_0_4-a",
-    "MISRACPP2023-7_0_5-a"
+    "MISRAC2025-RULE_10_1-d",
+    "MISRAC2025-RULE_10_1-e",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_14_4-a",
+    "MISRAC2025-RULE_15_5-a"
    ]
   },
   {
@@ -74,11 +79,15 @@
    ],
    "found_region": [
     "BD-PB-ERRNO",
-    "CERT_C-ERR30-a"
+    "CERT_C-ERR30-a",
+    "MISRAC2025-RULE_22_8-a",
+    "MISRAC2025-RULE_22_9-a"
    ],
    "found_strict": [
     "BD-PB-ERRNO",
-    "CERT_C-ERR30-a"
+    "CERT_C-ERR30-a",
+    "MISRAC2025-RULE_22_8-a",
+    "MISRAC2025-RULE_22_9-a"
    ]
   },
   {
@@ -90,16 +99,16 @@
    "found_region": [
     "CERT_C-INT31-i",
     "CERT_C-INT31-j",
-    "MISRACPP2023-10_2_3-a",
-    "MISRACPP2023-7_0_5-a",
-    "MISRACPP2023-8_0_1-b",
-    "MISRACPP2023-8_2_6-a"
+    "MISRAC2025-RULE_10_3-b",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_12_1-a",
+    "MISRAC2025-RULE_15_4-a"
    ],
    "found_strict": [
     "CERT_C-INT31-j",
-    "MISRACPP2023-10_2_3-a",
-    "MISRACPP2023-7_0_5-a",
-    "MISRACPP2023-8_0_1-b"
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_12_1-a",
+    "MISRAC2025-RULE_15_4-a"
    ]
   },
   {
@@ -110,11 +119,13 @@
    "found_region": [
     "CERT_C-INT31-i",
     "CERT_C-INT31-j",
-    "MISRACPP2023-10_2_3-a",
-    "MISRACPP2023-7_0_5-a"
+    "MISRAC2025-RULE_10_3-b",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_5_9-b"
    ],
    "found_strict": [
-    "CERT_C-INT31-i"
+    "CERT_C-INT31-i",
+    "MISRAC2025-RULE_10_3-b"
    ]
   },
   {
@@ -125,16 +136,18 @@
    "found_region": [
     "CERT_C-INT31-i",
     "CERT_C-INT31-j",
-    "MISRACPP2023-10_2_3-a",
-    "MISRACPP2023-19_3_3-a",
-    "MISRACPP2023-7_0_5-a",
-    "MISRACPP2023-8_0_1-b"
+    "MISRAC2025-RULE_10_3-b",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_10_5-a",
+    "MISRAC2025-RULE_10_8-a",
+    "MISRAC2025-RULE_12_1-a",
+    "MISRAC2025-RULE_20_12-a"
    ],
    "found_strict": [
     "CERT_C-INT31-j",
-    "MISRACPP2023-10_2_3-a",
-    "MISRACPP2023-19_3_3-a",
-    "MISRACPP2023-7_0_5-a"
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_10_8-a",
+    "MISRAC2025-RULE_20_12-a"
    ]
   },
   {
@@ -144,9 +157,12 @@
    ],
    "found_region": [
     "CERT_C-EXP39-b",
-    "MISRACPP2023-9_4_1-a"
+    "MISRAC2025-RULE_15_5-a",
+    "MISRAC2025-RULE_15_7-a"
    ],
-   "found_strict": []
+   "found_strict": [
+    "MISRAC2025-RULE_15_5-a"
+   ]
   },
   {
    "bug_id": "jerryscript-5ca8de954fce",
@@ -155,11 +171,15 @@
    ],
    "found_region": [
     "CERT_C-INT31-j",
-    "MISRACPP2023-10_2_3-a"
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_1_1-a",
+    "MISRAC2025-RULE_5_9-b"
    ],
    "found_strict": [
     "CERT_C-INT31-j",
-    "MISRACPP2023-10_2_3-a"
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_1_1-a",
+    "MISRAC2025-RULE_5_9-b"
    ]
   },
   {
@@ -172,12 +192,15 @@
     "CERT_C-INT31-d",
     "CERT_C-INT31-e",
     "CERT_C-INT31-j",
-    "MISRACPP2023-10_2_3-a",
-    "MISRACPP2023-7_0_4-a",
-    "MISRACPP2023-7_0_5-a"
+    "MISRAC2025-RULE_10_1-a",
+    "MISRAC2025-RULE_10_1-d",
+    "MISRAC2025-RULE_10_1-e",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_14_4-a"
    ],
    "found_strict": [
-    "CERT_C-INT31-j"
+    "CERT_C-INT31-j",
+    "MISRAC2025-RULE_10_4-a"
    ]
   },
   {
@@ -195,9 +218,12 @@
    ],
    "found_region": [
     "BD-PB-CC",
-    "MISRACPP2023-0_0_2-a"
+    "MISRAC2025-RULE_14_3-ac",
+    "MISRAC2025-RULE_15_5-a"
    ],
-   "found_strict": []
+   "found_strict": [
+    "MISRAC2025-RULE_15_5-a"
+   ]
   },
   {
    "bug_id": "jerryscript-bf72a9ea61e4",
@@ -205,10 +231,14 @@
     "jerry-core/ecma/builtin-objects/ecma-builtin-global.c"
    ],
    "found_region": [
-    "CERT_C-INT31-i"
+    "CERT_C-INT31-i",
+    "MISRAC2025-RULE_10_3-b",
+    "MISRAC2025-RULE_8_10-a"
    ],
    "found_strict": [
-    "CERT_C-INT31-i"
+    "CERT_C-INT31-i",
+    "MISRAC2025-RULE_10_3-b",
+    "MISRAC2025-RULE_8_10-a"
    ]
   },
   {
@@ -228,14 +258,17 @@
     "BD-PB-CHECKRET",
     "BD-PB-NOTINIT",
     "BD-PB-VOVR",
+    "CERT_C-EXP33-a",
     "CERT_C-INT31-j",
-    "CERT_CPP-EXP53-a",
-    "MISRACPP2023-0_1_1-a",
-    "MISRACPP2023-11_6_2-a",
-    "MISRACPP2023-7_11_2-a"
+    "MISRAC2025-DIR_4_7-a",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_1_3-b",
+    "MISRAC2025-RULE_2_2-b",
+    "MISRAC2025-RULE_9_1-a"
    ],
    "found_strict": [
-    "CERT_C-INT31-j"
+    "CERT_C-INT31-j",
+    "MISRAC2025-RULE_10_4-a"
    ]
   }
  ]
