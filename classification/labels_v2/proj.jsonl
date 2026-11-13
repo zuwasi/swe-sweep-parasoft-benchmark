@@ -1,0 +1,21 @@
+{"bug_id": "proj-06b0cf9e684f", "sa_class": "LOGIC", "confidence": "low", "reason": "sqlite row column reading and statement caching rewritten"}
+{"bug_id": "proj-082e3620a0bb", "sa_class": "LOGIC", "confidence": "low", "reason": "coordinate system JSON axes exported wrongly"}
+{"bug_id": "proj-1ddd02a36695", "sa_class": "MEMORY", "confidence": "low", "reason": "null Cartesian CS unchecked before create dereference"}
+{"bug_id": "proj-210490c1df4f", "sa_class": "LOGIC", "confidence": "low", "reason": "bound CRS operations concatenated incorrectly"}
+{"bug_id": "proj-26c69d9d4768", "sa_class": "LOGIC", "confidence": "high", "reason": "UPS South axis-switch special case tests wrong condition"}
+{"bug_id": "proj-4831a51d8731", "sa_class": "MEMORY", "confidence": "low", "reason": "null Cartesian CS unchecked before create dereference"}
+{"bug_id": "proj-54e0eae5c2da", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet lines extracted"}
+{"bug_id": "proj-5819b33a303f", "sa_class": "LOGIC", "confidence": "low", "reason": "unit conversion z parameters exported wrongly"}
+{"bug_id": "proj-5ea62cb8daa4", "sa_class": "LOGIC", "confidence": "high", "reason": "ellipsoid semi-minor axis compared with itself"}
+{"bug_id": "proj-6e4ea9d02a9a", "sa_class": "LOGIC", "confidence": "low", "reason": "sqlite row column reading and statement caching rewritten"}
+{"bug_id": "proj-75bf558d4fa2", "sa_class": "LOGIC", "confidence": "low", "reason": "identifiers not built from CODE_KEY properties"}
+{"bug_id": "proj-782c2a51cca6", "sa_class": "LOGIC", "confidence": "low", "reason": "matching transformation to WGS84 handled wrongly"}
+{"bug_id": "proj-97485ea29440", "sa_class": "LOGIC", "confidence": "low", "reason": "geodetic CRS PROJ export missing inversion steps"}
+{"bug_id": "proj-a289af9c5fe7", "sa_class": "LOGIC", "confidence": "low", "reason": "bound CRS operations concatenated incorrectly"}
+{"bug_id": "proj-a2dc13a77ea7", "sa_class": "ERROR", "confidence": "high", "reason": "errno set to one code, destructor returns another"}
+{"bug_id": "proj-b6a07d893aa2", "sa_class": "LOGIC", "confidence": "low", "reason": "geodetic CRS PROJ export missing inversion steps"}
+{"bug_id": "proj-bfab0375ca89", "sa_class": "MEMORY", "confidence": "low", "reason": "null Cartesian CS unchecked before create dereference"}
+{"bug_id": "proj-caba6901ef48", "sa_class": "LOGIC", "confidence": "low", "reason": "SQL authority query built from wrong identifiers"}
+{"bug_id": "proj-ccce4196bb18", "sa_class": "LOGIC", "confidence": "low", "reason": "Mollweide inverse iteration limit too small"}
+{"bug_id": "proj-d1e39e45b0a6", "sa_class": "LOGIC", "confidence": "low", "reason": "bound CRS operations concatenated incorrectly"}
+{"bug_id": "proj-ded2371a16af", "sa_class": "LOGIC", "confidence": "low", "reason": "CRS name-match scoring ignores base CRS equivalence"}

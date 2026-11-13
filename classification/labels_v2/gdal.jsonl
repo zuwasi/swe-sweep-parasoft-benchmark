@@ -1,0 +1,72 @@
+{"bug_id": "gdal-006b8e03a33f", "sa_class": "LOGIC", "confidence": "low", "reason": "guard removal changes when lines attach to polygons"}
+{"bug_id": "gdal-00cc4be4d0a2", "sa_class": "LOGIC", "confidence": "low", "reason": "option validation conditions reworked, wrong decision logic"}
+{"bug_id": "gdal-014fe459d126", "sa_class": "LOGIC", "confidence": "low", "reason": "stac min/max json duplication reworked, intent unclear"}
+{"bug_id": "gdal-046bdf7ea2b1", "sa_class": "LOGIC", "confidence": "low", "reason": "missing subtype handling gives wrong field type"}
+{"bug_id": "gdal-0f209f8114d9", "sa_class": "LOGIC", "confidence": "low", "reason": "overview fallback and res condition reworked"}
+{"bug_id": "gdal-0f92097b1f96", "sa_class": "LOGIC", "confidence": "low", "reason": "statistics metadata written via wrong qualified call path"}
+{"bug_id": "gdal-117d4b5060bb", "sa_class": "MEMORY", "confidence": "low", "reason": "constructor inserted, uninitialized pointer members suspected"}
+{"bug_id": "gdal-142747db21b5", "sa_class": "MEMORY", "confidence": "low", "reason": "inserted empty-SRS null return, missing validity check"}
+{"bug_id": "gdal-1ed37a29feee", "sa_class": "MEMORY", "confidence": "high", "reason": "computed padfZ value dropped, needed for buffer access"}
+{"bug_id": "gdal-1ffea4d064fb", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong else-if condition skips unioning src band types"}
+{"bug_id": "gdal-21f4a3ec2ba2", "sa_class": "MEMORY", "confidence": "high", "reason": "CPLString built from possibly null m_pszString"}
+{"bug_id": "gdal-2200f505acc5", "sa_class": "MEMORY", "confidence": "high", "reason": "seek to nFileSize-22 underflows, unchecked trailer read"}
+{"bug_id": "gdal-22389fee67bc", "sa_class": "ERROR", "confidence": "low", "reason": "libpng errors not funneled through setjmp error path"}
+{"bug_id": "gdal-231f5e1235cb", "sa_class": "RESOURCE", "confidence": "low", "reason": "raw papoLayers array replaced, layer cleanup suspected"}
+{"bug_id": "gdal-27110150de2c", "sa_class": "LOGIC", "confidence": "low", "reason": "inserted string attribute output branch, missing output"}
+{"bug_id": "gdal-2ca07c262bf8", "sa_class": "UNKNOWN", "confidence": "high", "reason": "no snippet could be extracted"}
+{"bug_id": "gdal-2ded60d7a181", "sa_class": "MEMORY", "confidence": "low", "reason": "null terminator written past list allocation slot"}
+{"bug_id": "gdal-306b6a7740f5", "sa_class": "LOGIC", "confidence": "low", "reason": "geometry expression detection and distinct mode logic reworked"}
+{"bug_id": "gdal-3086778cd72a", "sa_class": "MEMORY", "confidence": "high", "reason": "indexing mapOGRGeomFieldToArrowField without empty check"}
+{"bug_id": "gdal-35f0ff7f356c", "sa_class": "LOGIC", "confidence": "low", "reason": "universe polygon inversion approach removed, wrong decision"}
+{"bug_id": "gdal-3918a30cafcd", "sa_class": "LOGIC", "confidence": "low", "reason": "prj creation and SRS morph handling restructured"}
+{"bug_id": "gdal-3bd8d57ad655", "sa_class": "ERROR", "confidence": "low", "reason": "libpng errors not funneled through setjmp error path"}
+{"bug_id": "gdal-424d521138b6", "sa_class": "MEMORY", "confidence": "low", "reason": "iSizeImage int multiplication can overflow"}
+{"bug_id": "gdal-44e37a15a6cf", "sa_class": "MEMORY", "confidence": "high", "reason": "CPLString built from possibly null m_pszString"}
+{"bug_id": "gdal-45f004851fda", "sa_class": "LOGIC", "confidence": "low", "reason": "empty-field SQL value branching restructured"}
+{"bug_id": "gdal-4682a0e8a013", "sa_class": "MEMORY", "confidence": "low", "reason": "inserted null fallback for SRS name lookup"}
+{"bug_id": "gdal-4c8aab140a64", "sa_class": "LOGIC", "confidence": "low", "reason": "geographic pole special-case condition reworked"}
+{"bug_id": "gdal-4d9083882a78", "sa_class": "LOGIC", "confidence": "low", "reason": "bbox number formatting branches reworked"}
+{"bug_id": "gdal-504022e1901c", "sa_class": "MEMORY", "confidence": "high", "reason": "computed padfZ value dropped, needed for buffer access"}
+{"bug_id": "gdal-539e9769dc6c", "sa_class": "LOGIC", "confidence": "low", "reason": "proj:shape copies raster size in wrong order"}
+{"bug_id": "gdal-57efa1e4b4ab", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong else-if condition skips unioning src band types"}
+{"bug_id": "gdal-5ce400c64f69", "sa_class": "LOGIC", "confidence": "low", "reason": "GML attribute buffer length handling reworked"}
+{"bug_id": "gdal-5f6e44b21f5f", "sa_class": "MEMORY", "confidence": "low", "reason": "inserted null handling around SRS name lookup"}
+{"bug_id": "gdal-6717ca55be0c", "sa_class": "MEMORY", "confidence": "high", "reason": "iSrcXMax unclamped to source width, OOB sampling"}
+{"bug_id": "gdal-6b4837eba1e5", "sa_class": "LOGIC", "confidence": "low", "reason": "special-field WHERE forwarding detection rewritten"}
+{"bug_id": "gdal-7105d81a6103", "sa_class": "LOGIC", "confidence": "low", "reason": "ring counting and null-ring handling restructured"}
+{"bug_id": "gdal-71288fa5574e", "sa_class": "LOGIC", "confidence": "low", "reason": "pixel size division unguarded, degenerate transform"}
+{"bug_id": "gdal-7421035a3c5d", "sa_class": "MEMORY", "confidence": "low", "reason": "densify_pts validation insufficient, boundary_len can overflow"}
+{"bug_id": "gdal-75db3ff298af", "sa_class": "LOGIC", "confidence": "low", "reason": "tokenizer flags chosen wrongly for header parsing"}
+{"bug_id": "gdal-773b9bc02944", "sa_class": "MEMORY", "confidence": "high", "reason": "dimension index validation removed, OOB array access"}
+{"bug_id": "gdal-789c1b646394", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong VSI handler queried for stdout path"}
+{"bug_id": "gdal-7bb604ce2c54", "sa_class": "LOGIC", "confidence": "low", "reason": "quoted SQL identifier tokenizer state handling wrong"}
+{"bug_id": "gdal-7c8b34554508", "sa_class": "LOGIC", "confidence": "low", "reason": "linear units conversion condition and value wrong"}
+{"bug_id": "gdal-7ccad1918967", "sa_class": "RESOURCE", "confidence": "low", "reason": "raw papoLayers array replaced, layer cleanup suspected"}
+{"bug_id": "gdal-829fbcf7cf22", "sa_class": "LOGIC", "confidence": "low", "reason": "empty-field SQL value branching restructured"}
+{"bug_id": "gdal-83c5ce57a20c", "sa_class": "LOGIC", "confidence": "high", "reason": "wrap-over-x swap applied under wrong condition"}
+{"bug_id": "gdal-8726ac905a3f", "sa_class": "MEMORY", "confidence": "low", "reason": "inserted empty-SRS null return, missing validity check"}
+{"bug_id": "gdal-8a4bee4f8d2a", "sa_class": "UNKNOWN", "confidence": "high", "reason": "no snippet could be extracted"}
+{"bug_id": "gdal-8deb4e1a2bc1", "sa_class": "LOGIC", "confidence": "low", "reason": "prj creation and SRS morph handling restructured"}
+{"bug_id": "gdal-958621826b96", "sa_class": "LOGIC", "confidence": "low", "reason": "field SQL type and domain encoding computed wrongly"}
+{"bug_id": "gdal-98e23cb90122", "sa_class": "LOGIC", "confidence": "low", "reason": "BMP header size identification constants reworked"}
+{"bug_id": "gdal-a4fe26122837", "sa_class": "LOGIC", "confidence": "low", "reason": "RPC/GEOLOCATION metadata taken from wrong dataset"}
+{"bug_id": "gdal-a7cb51debb42", "sa_class": "MEMORY", "confidence": "high", "reason": "size_t narrowed to uint32_t feeding free-list lookup"}
+{"bug_id": "gdal-a859743432e2", "sa_class": "ERROR", "confidence": "low", "reason": "missing existence validation before directory iterator"}
+{"bug_id": "gdal-af647aafa367", "sa_class": "MEMORY", "confidence": "high", "reason": "int overflow in checksum index arithmetic, OOB reads"}
+{"bug_id": "gdal-b04821ff327c", "sa_class": "LOGIC", "confidence": "low", "reason": "null token header comparison conditions reworked"}
+{"bug_id": "gdal-b3b735d2a02d", "sa_class": "MEMORY", "confidence": "high", "reason": "nPixels subtraction overflows, OOB scanline writes"}
+{"bug_id": "gdal-b8a53b432511", "sa_class": "LOGIC", "confidence": "low", "reason": "nodata serialization formatting reworked"}
+{"bug_id": "gdal-bde706831cd5", "sa_class": "LOGIC", "confidence": "low", "reason": "nodata value written exceeding field width"}
+{"bug_id": "gdal-c38033143519", "sa_class": "LOGIC", "confidence": "low", "reason": "overview fallback and res condition reworked"}
+{"bug_id": "gdal-cd56e6d8ae7a", "sa_class": "LOGIC", "confidence": "high", "reason": "antimeridian point wrap formula and conditions wrong"}
+{"bug_id": "gdal-cefd3547d91a", "sa_class": "UNKNOWN", "confidence": "high", "reason": "no snippet could be extracted"}
+{"bug_id": "gdal-cf0c25eb9ec4", "sa_class": "RESOURCE", "confidence": "low", "reason": "source list string leak, cleanup added in destructor"}
+{"bug_id": "gdal-d1937d5d1ad1", "sa_class": "LOGIC", "confidence": "low", "reason": "floating window extra-arg mutated in place wrongly"}
+{"bug_id": "gdal-d424863f5f51", "sa_class": "MEMORY", "confidence": "high", "reason": "size_t narrowed to uint32_t feeding free-list lookup"}
+{"bug_id": "gdal-d49547f1a1be", "sa_class": "MEMORY", "confidence": "low", "reason": "tile matrix extent int multiplication can overflow"}
+{"bug_id": "gdal-d8a8cd51d51b", "sa_class": "UNKNOWN", "confidence": "high", "reason": "no snippet could be extracted"}
+{"bug_id": "gdal-df22e12654b3", "sa_class": "LOGIC", "confidence": "high", "reason": "wrap-over-x swap applied under wrong condition"}
+{"bug_id": "gdal-e6d023672560", "sa_class": "LOGIC", "confidence": "high", "reason": "wrong poSRS null guard skips ESRI WKT import"}
+{"bug_id": "gdal-eff6ab423ab1", "sa_class": "LOGIC", "confidence": "high", "reason": "tokenizer mishandles comma tokens in UNIQUE parsing"}
+{"bug_id": "gdal-f079f407aa45", "sa_class": "MEMORY", "confidence": "high", "reason": "indexing mapOGRGeomFieldToArrowField without empty check"}
+{"bug_id": "gdal-f72f1eda99e3", "sa_class": "ERROR", "confidence": "low", "reason": "missing existence validation before directory iterator"}

@@ -1,0 +1,72 @@
+{"bug_id": "gdal-006b8e03a33f", "sa_class": "LOGIC", "confidence": "low", "reason": "early return skips attaching lines", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "gdal-00cc4be4d0a2", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong warning and option reset", "pass1": "ERROR", "pass2": "LOGIC"}
+{"bug_id": "gdal-014fe459d126", "sa_class": "RESOURCE", "confidence": "low", "reason": "duplicate json objects leak", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "gdal-046bdf7ea2b1", "sa_class": "LOGIC", "confidence": "low", "reason": "field type widening logic wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-0f209f8114d9", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong overview selection condition", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-0f92097b1f96", "sa_class": "LOGIC", "confidence": "low", "reason": "element filter and counter logic", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "gdal-117d4b5060bb", "sa_class": "MEMORY", "confidence": "low", "reason": "uninitialized member vectors", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "gdal-142747db21b5", "sa_class": "MEMORY", "confidence": "low", "reason": "empty SRS returned as live reference", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "gdal-1ed37a29feee", "sa_class": "MEMORY", "confidence": "high", "reason": "warp thread fields uninitialized", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "gdal-1ffea4d064fb", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong branch picking working data type", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-21f4a3ec2ba2", "sa_class": "MEMORY", "confidence": "low", "reason": "string recode corrupts, mechanism unclear", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "gdal-2200f505acc5", "sa_class": "MEMORY", "confidence": "high", "reason": "string compare/read past buffer end", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "gdal-22389fee67bc", "sa_class": "MEMORY", "confidence": "low", "reason": "same-side tie-break (MEMORY)", "pass1": "MEMORY", "pass2": "ERROR"}
+{"bug_id": "gdal-231f5e1235cb", "sa_class": "MEMORY", "confidence": "low", "reason": "same-side tie-break (MEMORY)", "pass1": "MEMORY", "pass2": "RESOURCE"}
+{"bug_id": "gdal-27110150de2c", "sa_class": "LOGIC", "confidence": "low", "reason": "attribute serialization values wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-2ca07c262bf8", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "LOGIC", "pass2": "UNKNOWN"}
+{"bug_id": "gdal-2ded60d7a181", "sa_class": "MEMORY", "confidence": "low", "reason": "file list array terminator overflow", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "gdal-306b6a7740f5", "sa_class": "LOGIC", "confidence": "low", "reason": "geometry special field/distinct mishandled", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-3086778cd72a", "sa_class": "MEMORY", "confidence": "high", "reason": "unchecked index into empty geom map", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "gdal-35f0ff7f356c", "sa_class": "LOGIC", "confidence": "low", "reason": "universe ring construction wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-3918a30cafcd", "sa_class": "LOGIC", "confidence": "low", "reason": "SRS mutated/not passed on create", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-3bd8d57ad655", "sa_class": "MEMORY", "confidence": "low", "reason": "same-side tie-break (MEMORY)", "pass1": "MEMORY", "pass2": "ERROR"}
+{"bug_id": "gdal-424d521138b6", "sa_class": "MEMORY", "confidence": "low", "reason": "missing members, uninitialized use", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "gdal-44e37a15a6cf", "sa_class": "MEMORY", "confidence": "low", "reason": "string recode corrupts, mechanism unclear", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "gdal-45f004851fda", "sa_class": "LOGIC", "confidence": "low", "reason": "mimetype missing from empty check", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-4682a0e8a013", "sa_class": "MEMORY", "confidence": "low", "reason": "null SRS name passed to cache lookup", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "gdal-4c8aab140a64", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong angular units comparison", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-4d9083882a78", "sa_class": "LOGIC", "confidence": "low", "reason": "BBOX formatting/precision wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-504022e1901c", "sa_class": "MEMORY", "confidence": "high", "reason": "warp thread fields uninitialized", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "gdal-539e9769dc6c", "sa_class": "LOGIC", "confidence": "low", "reason": "json size output wrong", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "gdal-57efa1e4b4ab", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong branch picking working data type", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-5ce400c64f69", "sa_class": "MEMORY", "confidence": "high", "reason": "fixed 256-byte attribute buffer overflow", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "gdal-5f6e44b21f5f", "sa_class": "LOGIC", "confidence": "low", "reason": "axis swap missing", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "gdal-6717ca55be0c", "sa_class": "MEMORY", "confidence": "low", "reason": "src min/max clamp off, OOB read", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "gdal-6b4837eba1e5", "sa_class": "LOGIC", "confidence": "low", "reason": "special field recursion result ignored", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-7105d81a6103", "sa_class": "LOGIC", "confidence": "low", "reason": "throw on empty geometry removed", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "gdal-71288fa5574e", "sa_class": "LOGIC", "confidence": "low", "reason": "pixel size formula wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-7421035a3c5d", "sa_class": "MEMORY", "confidence": "low", "reason": "antimeridian boundary array overrun", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "gdal-75db3ff298af", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong tokenization flags for CSV", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-773b9bc02944", "sa_class": "MEMORY", "confidence": "low", "reason": "same-side tie-break (MEMORY)", "pass1": "ERROR", "pass2": "MEMORY"}
+{"bug_id": "gdal-789c1b646394", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong read support probe for handler", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-7bb604ce2c54", "sa_class": "LOGIC", "confidence": "low", "reason": "unquoted string parser loop wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-7c8b34554508", "sa_class": "LOGIC", "confidence": "low", "reason": "units applied under wrong conditions", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-7ccad1918967", "sa_class": "MEMORY", "confidence": "low", "reason": "same-side tie-break (MEMORY)", "pass1": "MEMORY", "pass2": "RESOURCE"}
+{"bug_id": "gdal-829fbcf7cf22", "sa_class": "LOGIC", "confidence": "low", "reason": "mimetype missing from empty check", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-83c5ce57a20c", "sa_class": "LOGIC", "confidence": "high", "reason": "wrap-over-X coordinate handling wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-8726ac905a3f", "sa_class": "MEMORY", "confidence": "low", "reason": "empty SRS returned as live reference", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "gdal-8a4bee4f8d2a", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "LOGIC", "pass2": "UNKNOWN"}
+{"bug_id": "gdal-8deb4e1a2bc1", "sa_class": "LOGIC", "confidence": "low", "reason": "SRS mutated/not passed on create", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-958621826b96", "sa_class": "LOGIC", "confidence": "low", "reason": "field type/domain SQL emitted wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-98e23cb90122", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong BMP header size bound check", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-a4fe26122837", "sa_class": "LOGIC", "confidence": "low", "reason": "RPC metadata taken from wrong dataset", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-a7cb51debb42", "sa_class": "MEMORY", "confidence": "high", "reason": "uint64 size truncated to uint32", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "gdal-a859743432e2", "sa_class": "RESOURCE", "confidence": "low", "reason": "same-side tie-break (RESOURCE)", "pass1": "RESOURCE", "pass2": "ERROR"}
+{"bug_id": "gdal-af647aafa367", "sa_class": "MEMORY", "confidence": "high", "reason": "nXSize*2 int overflow", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "gdal-b04821ff327c", "sa_class": "LOGIC", "confidence": "low", "reason": "header scan condition wrong", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "gdal-b3b735d2a02d", "sa_class": "OTHER", "confidence": "low", "reason": "missing include, build defect", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "gdal-b8a53b432511", "sa_class": "LOGIC", "confidence": "low", "reason": "nodata serialized without type awareness", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-bde706831cd5", "sa_class": "LOGIC", "confidence": "low", "reason": "nodata written with wrong format", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-c38033143519", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong overview selection condition", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-cd56e6d8ae7a", "sa_class": "LOGIC", "confidence": "high", "reason": "dateline wrap formula wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-cefd3547d91a", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "LOGIC", "pass2": "UNKNOWN"}
+{"bug_id": "gdal-cf0c25eb9ec4", "sa_class": "LOGIC", "confidence": "low", "reason": "defect not visible in snippet", "pass1": "LOGIC", "pass2": "RESOURCE"}
+{"bug_id": "gdal-d1937d5d1ad1", "sa_class": "LOGIC", "confidence": "low", "reason": "floating point window not scaled", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-d424863f5f51", "sa_class": "MEMORY", "confidence": "high", "reason": "uint64 size truncated to uint32", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "gdal-d49547f1a1be", "sa_class": "LOGIC", "confidence": "high", "reason": "missing tile matrix fields", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "gdal-d8a8cd51d51b", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "LOGIC", "pass2": "UNKNOWN"}
+{"bug_id": "gdal-df22e12654b3", "sa_class": "LOGIC", "confidence": "high", "reason": "wrap-over-X coordinate handling wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-e6d023672560", "sa_class": "LOGIC", "confidence": "high", "reason": "GeodataXform SRS overrode existing", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-eff6ab423ab1", "sa_class": "LOGIC", "confidence": "high", "reason": "index tokens not split on comma", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-f079f407aa45", "sa_class": "MEMORY", "confidence": "high", "reason": "unchecked index into empty geom map", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "gdal-f72f1eda99e3", "sa_class": "RESOURCE", "confidence": "low", "reason": "same-side tie-break (RESOURCE)", "pass1": "RESOURCE", "pass2": "ERROR"}

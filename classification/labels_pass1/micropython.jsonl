@@ -1,0 +1,22 @@
+{"bug_id": "micropython-1010a6f1bf3f", "sa_class": "LOGIC", "confidence": "high", "reason": "comma grouping spacing condition wrong"}
+{"bug_id": "micropython-105ab25a289b", "sa_class": "LOGIC", "confidence": "high", "reason": "default case assumed only divmod"}
+{"bug_id": "micropython-506e74919e0d", "sa_class": "LOGIC", "confidence": "high", "reason": "fstring args separated wrongly"}
+{"bug_id": "micropython-56f308119e16", "sa_class": "LOGIC", "confidence": "low", "reason": "try/finally codegen labels, no removed lines"}
+{"bug_id": "micropython-5c51fb896d80", "sa_class": "RESOURCE", "confidence": "high", "reason": "close with GIL released, fd race"}
+{"bug_id": "micropython-639baaf0eaee", "sa_class": "LOGIC", "confidence": "high", "reason": "math error detection condition wrong"}
+{"bug_id": "micropython-8074d176612b", "sa_class": "LOGIC", "confidence": "low", "reason": "format arg count check misplaced"}
+{"bug_id": "micropython-80ab54d7145c", "sa_class": "ERROR", "confidence": "low", "reason": "duplicate keyword not detected before store"}
+{"bug_id": "micropython-830236cc7dce", "sa_class": "LOGIC", "confidence": "low", "reason": "type make_new flow rewritten"}
+{"bug_id": "micropython-85267a3c1ee8", "sa_class": "MEMORY", "confidence": "high", "reason": "buffer not sign extended, uninitialized bytes"}
+{"bug_id": "micropython-8625d05e0e82", "sa_class": "MEMORY", "confidence": "high", "reason": "memoryview offset bitfield truncation"}
+{"bug_id": "micropython-88f383264f04", "sa_class": "LOGIC", "confidence": "low", "reason": "attr lookup delegation rules, no removed lines"}
+{"bug_id": "micropython-b12fef09f055", "sa_class": "LOGIC", "confidence": "low", "reason": "classmethod bound type chosen wrong"}
+{"bug_id": "micropython-b3d62f80e40b", "sa_class": "LOGIC", "confidence": "high", "reason": "aiter stored in user-named local"}
+{"bug_id": "micropython-b53492729a4a", "sa_class": "LOGIC", "confidence": "high", "reason": "pow mod early-exit condition wrong"}
+{"bug_id": "micropython-bc4a5e14e72f", "sa_class": "ERROR", "confidence": "high", "reason": "address arg not validated as integer"}
+{"bug_id": "micropython-bdadb90505c7", "sa_class": "LOGIC", "confidence": "low", "reason": "array aggregate size branch wrong"}
+{"bug_id": "micropython-c14ecec3cf60", "sa_class": "LOGIC", "confidence": "low", "reason": "print file kwarg config gating wrong"}
+{"bug_id": "micropython-d4d265304c55", "sa_class": "LOGIC", "confidence": "high", "reason": "zero base pow mod result wrong"}
+{"bug_id": "micropython-ec6689a8cc86", "sa_class": "LOGIC", "confidence": "low", "reason": "star-arg buffer growth rewritten"}
+{"bug_id": "micropython-ef93b8337084", "sa_class": "LOGIC", "confidence": "low", "reason": "slice indices length conversion changed"}
+{"bug_id": "micropython-f30ec885b80c", "sa_class": "LOGIC", "confidence": "low", "reason": "sys.executable guard condition wrong"}

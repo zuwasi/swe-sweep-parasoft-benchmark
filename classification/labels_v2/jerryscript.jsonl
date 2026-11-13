@@ -1,0 +1,15 @@
+{"bug_id": "jerryscript-042a8ceedc15", "sa_class": "LOGIC", "confidence": "low", "reason": "replacer list applied to nested objects, wrong keys"}
+{"bug_id": "jerryscript-072dcea299cd", "sa_class": "LOGIC", "confidence": "low", "reason": "literal encoding limit check drops two-byte decoding"}
+{"bug_id": "jerryscript-1eb47ad8b475", "sa_class": "LOGIC", "confidence": "high", "reason": "array length property spec flags handled wrongly"}
+{"bug_id": "jerryscript-25396dc4b88b", "sa_class": "LOGIC", "confidence": "high", "reason": "fmod gives negative time within day for pre-epoch dates"}
+{"bug_id": "jerryscript-2b0230207b47", "sa_class": "LOGIC", "confidence": "low", "reason": "directive and label statement parsing state wrong"}
+{"bug_id": "jerryscript-32f5320c7e4d", "sa_class": "LOGIC", "confidence": "low", "reason": "assignment bytecode sequence for this built wrongly"}
+{"bug_id": "jerryscript-4afcc94994c8", "sa_class": "LOGIC", "confidence": "low", "reason": "unary opcode combining rewrites wrong opcode"}
+{"bug_id": "jerryscript-5144355d084f", "sa_class": "MEMORY", "confidence": "high", "reason": "wrapper object derefed while its value still referenced"}
+{"bug_id": "jerryscript-5ca8de954fce", "sa_class": "LOGIC", "confidence": "low", "reason": "ternary opcode rewrite invalid when result from branch"}
+{"bug_id": "jerryscript-63583f11d059", "sa_class": "MEMORY", "confidence": "low", "reason": "empty literal size accounting wrong, buffer overrun"}
+{"bug_id": "jerryscript-662bbee88446", "sa_class": "MEMORY", "confidence": "high", "reason": "fast path used on non-fast species array, OOB writes"}
+{"bug_id": "jerryscript-9bf98944df1f", "sa_class": "LOGIC", "confidence": "high", "reason": "invalid date returns NaN string instead of NaN number"}
+{"bug_id": "jerryscript-bf72a9ea61e4", "sa_class": "LOGIC", "confidence": "high", "reason": "isfinite builtin miscompiled, wrong finiteness result"}
+{"bug_id": "jerryscript-df8c37f98e76", "sa_class": "LOGIC", "confidence": "high", "reason": "configurable flag reads is_enumerable field"}
+{"bug_id": "jerryscript-edaaae2dd276", "sa_class": "LOGIC", "confidence": "low", "reason": "zero handling off-by-one digits count in rounding"}

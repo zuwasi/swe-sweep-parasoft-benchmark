@@ -1,0 +1,11 @@
+{"bug_id": "z3-21693e1cea96", "sa_class": "LOGIC", "confidence": "low", "reason": "parser app handling wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "z3-6aeffc53878d", "sa_class": "MEMORY", "confidence": "low", "reason": "unsigned k2 computation can wrap", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "z3-7c5e71fa9a15", "sa_class": "LOGIC", "confidence": "low", "reason": "term equality debug-only wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "z3-845ca575f448", "sa_class": "LOGIC", "confidence": "low", "reason": "uminus case unimplemented", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "z3-9b51ad4d5969", "sa_class": "ERROR", "confidence": "low", "reason": "API check contradicts documented precondition", "pass1": "ERROR", "pass2": "ERROR"}
+{"bug_id": "z3-b29e3fbe839f", "sa_class": "LOGIC", "confidence": "low", "reason": "bit vector zero extend width wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "z3-ce2e010dd3c0", "sa_class": "LOGIC", "confidence": "low", "reason": "sibling detection ignores nested sorts", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "z3-e0dd0ca5d4f1", "sa_class": "LOGIC", "confidence": "low", "reason": "term graph apply loop wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "z3-e530990a778e", "sa_class": "LOGIC", "confidence": "high", "reason": "strictness boolean formula wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "z3-f2490da70ca4", "sa_class": "LOGIC", "confidence": "low", "reason": "negation interval update wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "z3-f3cd4349f4cb", "sa_class": "ERROR", "confidence": "low", "reason": "polymorphic match failure not returned", "pass1": "ERROR", "pass2": "ERROR"}

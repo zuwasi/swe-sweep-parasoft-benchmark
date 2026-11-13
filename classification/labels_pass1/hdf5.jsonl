@@ -1,0 +1,14 @@
+{"bug_id": "hdf5-336148f0f3e2", "sa_class": "OTHER", "confidence": "high", "reason": "documentation-only corrections across APIs"}
+{"bug_id": "hdf5-3d50b7243378", "sa_class": "RESOURCE", "confidence": "low", "reason": "unneeded bkg buffer removed, leak risk"}
+{"bug_id": "hdf5-410d9d0e6a1f", "sa_class": "MEMORY", "confidence": "high", "reason": "stale buffer decoded as VL headers, OOB"}
+{"bug_id": "hdf5-46ec0c6c502b", "sa_class": "RESOURCE", "confidence": "low", "reason": "unneeded bkg buffer removed, leak risk"}
+{"bug_id": "hdf5-50b75316c1c9", "sa_class": "LOGIC", "confidence": "high", "reason": "diminfo validity checks used wrong stride"}
+{"bug_id": "hdf5-553ad641d344", "sa_class": "LOGIC", "confidence": "low", "reason": "file close degree checks relocated"}
+{"bug_id": "hdf5-699a00aef417", "sa_class": "MEMORY", "confidence": "low", "reason": "added check around attribute buffer sizing"}
+{"bug_id": "hdf5-88382b2cfcd4", "sa_class": "LOGIC", "confidence": "low", "reason": "noop path detection condition wrong"}
+{"bug_id": "hdf5-8b449df9cbdd", "sa_class": "LOGIC", "confidence": "low", "reason": "float field validation ignored offset"}
+{"bug_id": "hdf5-aa1b6edb1d73", "sa_class": "LOGIC", "confidence": "low", "reason": "soft path removal and error macros reworked"}
+{"bug_id": "hdf5-aefd1d02488b", "sa_class": "LOGIC", "confidence": "high", "reason": "diminfo validity checks used wrong stride"}
+{"bug_id": "hdf5-bcc7226672c8", "sa_class": "LOGIC", "confidence": "high", "reason": "diminfo validity checks used wrong stride"}
+{"bug_id": "hdf5-cd22c0502f29", "sa_class": "LOGIC", "confidence": "high", "reason": "unlim dim reset wrongly on clipped space"}
+{"bug_id": "hdf5-fe3e4ec13a61", "sa_class": "MEMORY", "confidence": "low", "reason": "added check around attribute buffer sizing"}

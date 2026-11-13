@@ -32,6 +32,64 @@ Date: 2026-11-12. Tool: Parasoft C/C++test Standard: 2026.1.3 for the six C repo
 |---|---|---|---|---|---|
 | 14 C/C++ repos | 488 | 183 | 37.5% | 21.1% | 4.5% |
 
+## What static analysis could even see: bug classification
+
+Not all 488 bugs are the kind of defect a static analyzer targets. The SWE-sweep
+paper notes that most of its bugs can only be recognized by inferring the
+intended behavior from the repository, which is why the agents' success rate is
+low, and it is also why a raw comparison against all 488 bugs understates what
+static analysis can and cannot do. So we classified every bug by the MECHANISM
+of its defect, judged from the code the maintainers' fix removed or rewrote:
+
+- **MEMORY** (memory safety / undefined behavior): buffer overflows,
+  out-of-bounds access, use-after-free, null dereference, uninitialized use,
+  integer overflow or truncation feeding memory access.
+- **RESOURCE** (leaks and concurrency): missing free/close/unlock, use after
+  close, data races, deadlocks.
+- **ERROR** (error handling and API contract): unchecked or wrongly checked
+  return values, ignored error codes, missing argument validation.
+- **LOGIC** (wrong decision, formula, protocol, or spec): wrong operator,
+  constant, comparison, or branch; wrong data or order; misunderstanding of the
+  specification.
+- **OTHER** (build, tests, docs) and **UNKNOWN** (19 bugs where no code snippet
+  could be extracted; excluded from the denominator below).
+
+Method: two independent blind classification passes over the same snippets with
+the published rubric (`classification/RUBRIC.md`), then adjudication of all 132
+disagreements by reading the snippets, with the 16 bugs caught by Parasoft Flow
+Analysis treated as ground truth for mechanism. Per-bug labels and reasons are
+published in `classification/final/` for audit.
+
+| Class | Bugs | Share |
+|---|---|---|
+| MEMORY | 119 | 24.4% |
+| RESOURCE | 16 | 3.3% |
+| ERROR | 27 | 5.5% |
+| **Static-analysis-addressable** | **162** | **33.2%** |
+| LOGIC | 300 | 61.5% |
+| OTHER | 7 | 1.4% |
+| UNKNOWN (excluded) | 19 | 3.9% |
+
+Conditional detection rates: on the 162 bugs whose mechanism is in a static
+analyzer's wheelhouse, Parasoft flagged **63 (38.9%)** at the changed region and
+**38 (23.5%)** strictly on a removed line. Those are close to the all-bugs rates
+(37.5% / 21.1%), so the tool's hit rate on its home ground is about the same as
+its overall rate. The classification does not change the headline; it changes
+the division of labor:
+
+- About one third of real-world bugs are mechanism defects a deterministic tool
+  can flag, and Parasoft flags a meaningful share of them with auditable
+  findings on the defective lines.
+- The remaining two thirds are logic and requirements defects. Neither static
+  analysis (by design) nor the SWE-sweep agents (4.5% overall) reliably finds
+  those. They are exactly what design review, requirements traceability,
+  requirements-based testing, and structural coverage are for in regulated
+  development.
+- Caveats: labels are per-bug single-mechanism judgments from fix snippets;
+  ~400 of 488 carry low confidence; 19 bugs could not be classified. The
+  conditional rate is robust across the two blind passes independently (32.8%
+  and 34.6% before adjudication) and does not hinge on any single judgment.
+
 ## Methodology
 
 1. For every C/C++ repo in SWE-sweep's publication split, the oracle patches (one per accepted bug) were parsed: each patch names the pre-fix file blob hash and the exact changed lines in the pre-fix file.

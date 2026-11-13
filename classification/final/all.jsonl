@@ -1,0 +1,488 @@
+{"bug_id": "arrow-0cc9fb2dd29f", "sa_class": "LOGIC", "confidence": "low", "reason": "reader properties ignored scan batch size options", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "arrow-121fb8b54251", "sa_class": "LOGIC", "confidence": "low", "reason": "hash omits array data contents", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "arrow-19465d9c4aac", "sa_class": "LOGIC", "confidence": "low", "reason": "field path binding used wrong lookup", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "arrow-1a3fe19e8bf0", "sa_class": "RESOURCE", "confidence": "high", "reason": "aborted_ flag read without synchronization data race", "pass1": "RESOURCE", "pass2": "RESOURCE"}
+{"bug_id": "arrow-264e1ebbe40c", "sa_class": "LOGIC", "confidence": "low", "reason": "same-side tie-break (LOGIC)", "pass1": "LOGIC", "pass2": "OTHER"}
+{"bug_id": "arrow-26f5542e1be5", "sa_class": "LOGIC", "confidence": "high", "reason": "checked wrong isset min/max field", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "arrow-2cdadc752c2e", "sa_class": "LOGIC", "confidence": "low", "reason": "cast lookup special case mishandled", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "arrow-2fd06f68a200", "sa_class": "MEMORY", "confidence": "low", "reason": "same-side tie-break (MEMORY)", "pass1": "ERROR", "pass2": "MEMORY"}
+{"bug_id": "arrow-369f913202de", "sa_class": "LOGIC", "confidence": "low", "reason": "pointer cast to int64 constant in codegen", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "arrow-3d2dc9c86ad0", "sa_class": "LOGIC", "confidence": "low", "reason": "same-side tie-break (LOGIC)", "pass1": "LOGIC", "pass2": "OTHER"}
+{"bug_id": "arrow-3e14973c5f12", "sa_class": "LOGIC", "confidence": "low", "reason": "Equals rework of self comparison", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "arrow-40583d085a58", "sa_class": "ERROR", "confidence": "low", "reason": "missing schema validation at insertion point", "pass1": "LOGIC", "pass2": "ERROR"}
+{"bug_id": "arrow-479fccb220cc", "sa_class": "LOGIC", "confidence": "high", "reason": "date truncation rounds toward zero not floor", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "arrow-48d0b45c48f0", "sa_class": "LOGIC", "confidence": "high", "reason": "missing increment causes wrong loop scan", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "arrow-4bbc9f6cd795", "sa_class": "ERROR", "confidence": "low", "reason": "binary to string cast lacks validation", "pass1": "ERROR", "pass2": "ERROR"}
+{"bug_id": "arrow-4c84f1faa214", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "LOGIC", "pass2": "UNKNOWN"}
+{"bug_id": "arrow-4e8d0cead54f", "sa_class": "ERROR", "confidence": "low", "reason": "same-side tie-break (ERROR)", "pass1": "MEMORY", "pass2": "ERROR"}
+{"bug_id": "arrow-5a279df3fd5a", "sa_class": "MEMORY", "confidence": "low", "reason": "stale map index indexes fields_ unchecked", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "arrow-5abdc0d1a217", "sa_class": "LOGIC", "confidence": "low", "reason": "nested child layouts not accumulated", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "arrow-60dfbaf3519c", "sa_class": "LOGIC", "confidence": "low", "reason": "record reader accounting wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "arrow-624e0738ed5f", "sa_class": "LOGIC", "confidence": "low", "reason": "timestamp unit chosen wrong branch", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "arrow-67205dcd9782", "sa_class": "MEMORY", "confidence": "high", "reason": "null check tests wrong variable causes deref", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "arrow-6cc9de91ea5e", "sa_class": "LOGIC", "confidence": "low", "reason": "dictionary view type mismatch mishandled", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "arrow-836fa5c90cf9", "sa_class": "LOGIC", "confidence": "low", "reason": "empty replacement value not handled", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "arrow-8a41d3fa0ac8", "sa_class": "LOGIC", "confidence": "low", "reason": "null type replace mask ignores mask", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "arrow-8a6d1850de5a", "sa_class": "LOGIC", "confidence": "low", "reason": "map type built from wrong child fields", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "arrow-8c472a2596ce", "sa_class": "LOGIC", "confidence": "low", "reason": "missing logical type annotations in written schema", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "arrow-97c0b6198f30", "sa_class": "OTHER", "confidence": "low", "reason": "missing include, build defect", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "arrow-97ed55fe5885", "sa_class": "LOGIC", "confidence": "low", "reason": "date parse month day handling wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "arrow-98c930cfb2f6", "sa_class": "MEMORY", "confidence": "low", "reason": "int truncation undersizes decompression buffer", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "arrow-9a0cb740d8ac", "sa_class": "RESOURCE", "confidence": "low", "reason": "row group writer not closed before new one", "pass1": "LOGIC", "pass2": "RESOURCE"}
+{"bug_id": "arrow-9f952a8a44b5", "sa_class": "MEMORY", "confidence": "high", "reason": "slice arithmetic can overflow, caught ARR39", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "arrow-a642ccf7200e", "sa_class": "LOGIC", "confidence": "low", "reason": "dictionary child data copy mishandled", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "arrow-a7cd3ba57ac2", "sa_class": "MEMORY", "confidence": "low", "reason": "memcpy length from wrong array offsets", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "arrow-b4b15ce0d6ab", "sa_class": "MEMORY", "confidence": "low", "reason": "constructors dropped memory alignment parameter", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "arrow-b831ede509b4", "sa_class": "MEMORY", "confidence": "low", "reason": "unsigned add in throttle check can wrap", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "arrow-be576c6bbb37", "sa_class": "LOGIC", "confidence": "low", "reason": "timestamp varchar formatting wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "arrow-c1cc8abccb1b", "sa_class": "MEMORY", "confidence": "low", "reason": "bitmap copy without null buffer check", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "arrow-c844b43f97c5", "sa_class": "MEMORY", "confidence": "low", "reason": "child data filled before span fully initialized", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "arrow-d0cd5512a992", "sa_class": "ERROR", "confidence": "low", "reason": "missing kCanReturnErrors contract flag", "pass1": "ERROR", "pass2": "LOGIC"}
+{"bug_id": "arrow-d4e732abe1d1", "sa_class": "MEMORY", "confidence": "high", "reason": "inverted fixed-size ternary feeds buffer slicing", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "arrow-d7a1dcf3bafd", "sa_class": "LOGIC", "confidence": "low", "reason": "implicit cast options wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "arrow-db58ca99eaa0", "sa_class": "MEMORY", "confidence": "low", "reason": "wrong null_count condition skips buffer check", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "arrow-e4fc3a8e2c13", "sa_class": "LOGIC", "confidence": "low", "reason": "remaining rows formula double counts offset", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "arrow-eb9c7276cf24", "sa_class": "LOGIC", "confidence": "low", "reason": "writer page counters reset wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "arrow-eef26b83f5e8", "sa_class": "MEMORY", "confidence": "low", "reason": "statistics null check wrong pointer", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "arrow-f5b99cc3814b", "sa_class": "LOGIC", "confidence": "low", "reason": "utf8 continuation length counting wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "cvc5-0190fa8ae7ec", "sa_class": "LOGIC", "confidence": "low", "reason": "term traversal insertion order wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "cvc5-024cc837ea11", "sa_class": "LOGIC", "confidence": "high", "reason": "plus flattening mishandles mixed arithmetic", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "cvc5-11eabe28d431", "sa_class": "LOGIC", "confidence": "low", "reason": "missing rewrite step, wrong preprocessing", "pass1": "ERROR", "pass2": "LOGIC"}
+{"bug_id": "cvc5-1337df3bc465", "sa_class": "LOGIC", "confidence": "low", "reason": "proof step built with wrong arguments", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "cvc5-15ce999a65bb", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong inference id sent", "pass1": "ERROR", "pass2": "LOGIC"}
+{"bug_id": "cvc5-169d417c6b41", "sa_class": "LOGIC", "confidence": "low", "reason": "equivalence class iteration missing increment", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "cvc5-18943577ecec", "sa_class": "LOGIC", "confidence": "low", "reason": "normalizeConstant uses wrong cardinality", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "cvc5-308a909279a9", "sa_class": "ERROR", "confidence": "low", "reason": "inferences sent with wrong arguments", "pass1": "ERROR", "pass2": "ERROR"}
+{"bug_id": "cvc5-3489f19d0af7", "sa_class": "MEMORY", "confidence": "low", "reason": "stored dangling model pointer", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "cvc5-39fc8377f26f", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "LOGIC", "pass2": "UNKNOWN"}
+{"bug_id": "cvc5-3d08a22f361b", "sa_class": "LOGIC", "confidence": "low", "reason": "loop rewrite min max condition wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "cvc5-50f4bf9c8c66", "sa_class": "LOGIC", "confidence": "low", "reason": "fold over union order wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "cvc5-647ecea6ab0d", "sa_class": "LOGIC", "confidence": "low", "reason": "datatype cardinality arg types wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "cvc5-6f19e69efd06", "sa_class": "LOGIC", "confidence": "low", "reason": "early return skips solution construction", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "cvc5-6f88c8072d5a", "sa_class": "LOGIC", "confidence": "low", "reason": "power rewrite exponent handling wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "cvc5-726a3ded06b0", "sa_class": "ERROR", "confidence": "low", "reason": "proof rule argument type asserts wrong", "pass1": "ERROR", "pass2": "ERROR"}
+{"bug_id": "cvc5-8c19798c9c2d", "sa_class": "LOGIC", "confidence": "low", "reason": "effort loop bounds wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "cvc5-8d2b297c1bbc", "sa_class": "LOGIC", "confidence": "low", "reason": "solver loop restructure wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "cvc5-8fd2c025e245", "sa_class": "LOGIC", "confidence": "low", "reason": "representative depth mode missing case", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "cvc5-92a35b3a1356", "sa_class": "LOGIC", "confidence": "low", "reason": "equalities extracted from explanation wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "cvc5-9abdf24fe930", "sa_class": "LOGIC", "confidence": "low", "reason": "quantifier pre rewrite merges wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "cvc5-9c7602939dee", "sa_class": "ERROR", "confidence": "low", "reason": "type-check error reporting rewritten", "pass1": "LOGIC", "pass2": "ERROR"}
+{"bug_id": "cvc5-a6fa2c8060f2", "sa_class": "ERROR", "confidence": "low", "reason": "decompose success unchecked assertion", "pass1": "ERROR", "pass2": "ERROR"}
+{"bug_id": "cvc5-a874c6f84e37", "sa_class": "LOGIC", "confidence": "low", "reason": "inst constant condition wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "cvc5-a92827dd3f89", "sa_class": "ERROR", "confidence": "low", "reason": "assert used where release handling needed", "pass1": "ERROR", "pass2": "LOGIC"}
+{"bug_id": "cvc5-aa2797db1fd7", "sa_class": "LOGIC", "confidence": "low", "reason": "null representative fallback unsound", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "cvc5-c443eedc46d1", "sa_class": "LOGIC", "confidence": "low", "reason": "RAN division rewrite wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "cvc5-c6c6ba5bd904", "sa_class": "LOGIC", "confidence": "low", "reason": "division children insertion wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "cvc5-cb7581ed4265", "sa_class": "ERROR", "confidence": "low", "reason": "API precondition checks wrong", "pass1": "ERROR", "pass2": "ERROR"}
+{"bug_id": "cvc5-d440f0779a99", "sa_class": "LOGIC", "confidence": "low", "reason": "generic multiply rewrite wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "cvc5-d73f0189501b", "sa_class": "LOGIC", "confidence": "low", "reason": "string model length splits wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "cvc5-d9746c57e9f2", "sa_class": "LOGIC", "confidence": "low", "reason": "difficulty proof asserts wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "cvc5-e1ed9a524e71", "sa_class": "LOGIC", "confidence": "low", "reason": "int to bv size handling wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "cvc5-ee122a56fa79", "sa_class": "LOGIC", "confidence": "low", "reason": "proof check condition wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "cvc5-f0994ce1b268", "sa_class": "LOGIC", "confidence": "low", "reason": "finite field negation rewrite wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "cvc5-f218e48e2ada", "sa_class": "LOGIC", "confidence": "low", "reason": "substr length bound comparison wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "cvc5-f313728ce254", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong exception guard condition", "pass1": "LOGIC", "pass2": "ERROR"}
+{"bug_id": "cvc5-ffc998069294", "sa_class": "LOGIC", "confidence": "low", "reason": "clause level optimization wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-0072efd0dc57", "sa_class": "LOGIC", "confidence": "low", "reason": "unique constraint name/index handling wrong branch", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-0134ded867ec", "sa_class": "RESOURCE", "confidence": "low", "reason": "sample sink wrongly marked parallel, race risk", "pass1": "RESOURCE", "pass2": "RESOURCE"}
+{"bug_id": "duckdb-025b1abedd19", "sa_class": "LOGIC", "confidence": "low", "reason": "cross product transform tree built wrongly", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-064a85ba2b9e", "sa_class": "LOGIC", "confidence": "low", "reason": "alias visibility check rejects valid references", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-0bcc094e9155", "sa_class": "LOGIC", "confidence": "low", "reason": "join transform region, defect only in additions", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-0e8e823ac5dd", "sa_class": "LOGIC", "confidence": "low", "reason": "collation applied to discarded copy, ignored", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-15becaa25700", "sa_class": "LOGIC", "confidence": "low", "reason": "dependent join binding offsets wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-165dc49e8f37", "sa_class": "MEMORY", "confidence": "high", "reason": "bit copy guard off-by-one, caught ARR39", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "duckdb-16912ea8773c", "sa_class": "LOGIC", "confidence": "low", "reason": "RLE run counter incremented wrongly on change", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-1790251e63cf", "sa_class": "LOGIC", "confidence": "low", "reason": "pivot aggregate transform region, defect in additions", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-19a0be39629f", "sa_class": "LOGIC", "confidence": "low", "reason": "coalesce wrongly listed as null propagating", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-19c1b85d79d3", "sa_class": "OTHER", "confidence": "low", "reason": "include removal, build defect", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "duckdb-1b0e6e7cf25b", "sa_class": "LOGIC", "confidence": "low", "reason": "list reduce selection index computed wrongly", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-1b72fe675ead", "sa_class": "LOGIC", "confidence": "low", "reason": "enum function returns single wrong value", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "duckdb-1e65f66ebffc", "sa_class": "LOGIC", "confidence": "low", "reason": "has_tz wrongly initialized to true", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-1e81c42dd1a4", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "OTHER", "pass2": "UNKNOWN"}
+{"bug_id": "duckdb-200dcf6a4fde", "sa_class": "LOGIC", "confidence": "low", "reason": "mark join simplification wrong condition", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-2020c8d7a281", "sa_class": "MEMORY", "confidence": "high", "reason": "integer wrap feeding recursion, caught BD-PB-INTWRAP", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-21cff7c1d5c6", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "OTHER", "pass2": "UNKNOWN"}
+{"bug_id": "duckdb-2217f9b6532e", "sa_class": "LOGIC", "confidence": "low", "reason": "varchar to timestamp cast claimed invertible", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-22ad99fe6d43", "sa_class": "LOGIC", "confidence": "low", "reason": "subquery transformed before type selection", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-2380f9735ed0", "sa_class": "LOGIC", "confidence": "low", "reason": "ICU weekday bounds checked against wrong size", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-24278e9ffd28", "sa_class": "LOGIC", "confidence": "low", "reason": "append initialization count bookkeeping wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-282d562aa395", "sa_class": "LOGIC", "confidence": "low", "reason": "constant comparison child side picked wrongly", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-2b390ca9f79d", "sa_class": "LOGIC", "confidence": "low", "reason": "foreign key info collected on wrong events", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-350ed10c5eea", "sa_class": "LOGIC", "confidence": "low", "reason": "LIKE underscore matching edge case wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-35212bbdc849", "sa_class": "ERROR", "confidence": "low", "reason": "missing switch case validation, caught BD-PB-SWITCH", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "duckdb-36c38199ce20", "sa_class": "LOGIC", "confidence": "low", "reason": "window operator added as aggregate relation", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-37580a29144b", "sa_class": "LOGIC", "confidence": "low", "reason": "negative exponent unhandled", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "duckdb-3a50d7579d15", "sa_class": "LOGIC", "confidence": "low", "reason": "on-conflict filter uses wrong column ids", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-3f1087fd04f8", "sa_class": "MEMORY", "confidence": "low", "reason": "Reference into empty-initialized chunk", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "duckdb-3f3cf4083ba4", "sa_class": "LOGIC", "confidence": "low", "reason": "delim join condition flip loop wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-3f7b28468e2e", "sa_class": "LOGIC", "confidence": "low", "reason": "missing filter result handling", "pass1": "LOGIC", "pass2": "ERROR"}
+{"bug_id": "duckdb-43b086a35dd5", "sa_class": "MEMORY", "confidence": "low", "reason": "array child sliced with unscaled bounds", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "duckdb-4473cf27097c", "sa_class": "LOGIC", "confidence": "low", "reason": "join relation extraction traversal wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-46a43d62ed7c", "sa_class": "MEMORY", "confidence": "low", "reason": "printf small-int format arg type confusion", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "duckdb-4815019d7a34", "sa_class": "LOGIC", "confidence": "low", "reason": "filter planning conditions incomplete", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-4b18f32ec21e", "sa_class": "MEMORY", "confidence": "low", "reason": "time parse args can read past end, caught ARR39", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "duckdb-4c125bd36641", "sa_class": "LOGIC", "confidence": "low", "reason": "aggregate relation child descent loop wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-4f2d8e8eaf2f", "sa_class": "MEMORY", "confidence": "low", "reason": "radix scatter args corrupt key locations", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "duckdb-4fae7f8bb350", "sa_class": "MEMORY", "confidence": "low", "reason": "cost computed on uninitialized estimator", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "duckdb-4fc939834090", "sa_class": "LOGIC", "confidence": "low", "reason": "trailing boolean struct flag handling wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-55543d201747", "sa_class": "MEMORY", "confidence": "high", "reason": "integer wrap, caught BD-PB-INTWRAP", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-5a33d9a1c013", "sa_class": "ERROR", "confidence": "low", "reason": "parser exception not caught", "pass1": "LOGIC", "pass2": "ERROR"}
+{"bug_id": "duckdb-5b031435d1c2", "sa_class": "LOGIC", "confidence": "low", "reason": "padding bits not set", "pass1": "ERROR", "pass2": "LOGIC"}
+{"bug_id": "duckdb-5b6992a0f3a6", "sa_class": "LOGIC", "confidence": "low", "reason": "first/arg_min tie-break error expression region", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-5e618dfa2d4f", "sa_class": "LOGIC", "confidence": "low", "reason": "FTS ignore string unescaped in macro SQL", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-61c3cfc37903", "sa_class": "LOGIC", "confidence": "low", "reason": "right semi/anti join match propagation region", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-62047414f1fa", "sa_class": "LOGIC", "confidence": "low", "reason": "view column name fallback mixes names/aliases", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-62e8b51ffa88", "sa_class": "MEMORY", "confidence": "low", "reason": "early return skips scan state initialization", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "duckdb-647f5416bff8", "sa_class": "LOGIC", "confidence": "low", "reason": "IN clause rewriter additions region", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-663c7d842c69", "sa_class": "LOGIC", "confidence": "low", "reason": "delete conflict detection too strict", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-675eb44147c9", "sa_class": "LOGIC", "confidence": "low", "reason": "double to decimal boundary check wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-685162621323", "sa_class": "LOGIC", "confidence": "low", "reason": "list cast null child handling wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-69a6459a8108", "sa_class": "LOGIC", "confidence": "low", "reason": "same-side tie-break (LOGIC)", "pass1": "OTHER", "pass2": "LOGIC"}
+{"bug_id": "duckdb-6dcb9e7c2bb4", "sa_class": "LOGIC", "confidence": "low", "reason": "numeric_limits unsupported types return wrong values", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-6f234f9c4978", "sa_class": "LOGIC", "confidence": "low", "reason": "result vector type copied from input wrongly", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-7463773a3cb5", "sa_class": "LOGIC", "confidence": "low", "reason": "ASOF join filter pushdown conditions", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-75521326481f", "sa_class": "MEMORY", "confidence": "low", "reason": "CreateIndexInfo fields left uninitialized", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "duckdb-7b570403d686", "sa_class": "LOGIC", "confidence": "low", "reason": "filter selection on non-flat vector wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-7fa52ed2bd69", "sa_class": "MEMORY", "confidence": "low", "reason": "unchecked C-style bind_data casts, type confusion", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "duckdb-824a50418841", "sa_class": "LOGIC", "confidence": "low", "reason": "enum_range returns VARCHAR list not ENUM", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-8450ad72d657", "sa_class": "MEMORY", "confidence": "low", "reason": "dictionary child references payload wrongly", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "duckdb-85e3b88d8300", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "OTHER", "pass2": "UNKNOWN"}
+{"bug_id": "duckdb-863b896717f1", "sa_class": "MEMORY", "confidence": "low", "reason": "append without Flatten invalidates vector", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "duckdb-8679358a0503", "sa_class": "LOGIC", "confidence": "low", "reason": "timestamp cast invertibility block wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-86fe04caf9f4", "sa_class": "LOGIC", "confidence": "low", "reason": "shift bound computed with wrong type", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-8a3e974e8727", "sa_class": "LOGIC", "confidence": "low", "reason": "nested map keys serialized wrongly", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-8dcd0ac1cae0", "sa_class": "LOGIC", "confidence": "low", "reason": "ARRAY sublink transform region", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-8ef8ca9824ab", "sa_class": "MEMORY", "confidence": "high", "reason": "StringValue::Get before null check", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "duckdb-8fee68dc6ef2", "sa_class": "LOGIC", "confidence": "low", "reason": "pivot construction and binding region", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-9247c5568ef1", "sa_class": "LOGIC", "confidence": "low", "reason": "window partitions compared as unordered set", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-94dd9ceb3b3a", "sa_class": "LOGIC", "confidence": "low", "reason": "UNION wrongly allows removing dedup columns", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-95c312388f7b", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "OTHER", "pass2": "UNKNOWN"}
+{"bug_id": "duckdb-96cd6f4c49c4", "sa_class": "ERROR", "confidence": "low", "reason": "unvalidated value range, caught BD-PB-VALRANGE", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-99482115caaa", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "OTHER", "pass2": "UNKNOWN"}
+{"bug_id": "duckdb-9dda7601a697", "sa_class": "LOGIC", "confidence": "low", "reason": "foreign key lookup uses INVALID_CATALOG", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-a3491d68d372", "sa_class": "MEMORY", "confidence": "high", "reason": "BOM probe reads past buffer end", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "duckdb-a36a17c4de98", "sa_class": "LOGIC", "confidence": "low", "reason": "cast invertibility check uses wrong type", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-a5eb42c56587", "sa_class": "LOGIC", "confidence": "low", "reason": "alter binder rewritten, binding behavior wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-a61365926289", "sa_class": "LOGIC", "confidence": "low", "reason": "parquet list child length computed wrongly", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-a82cf49f86dd", "sa_class": "LOGIC", "confidence": "low", "reason": "RANGE frame TIME conversion skipped wrongly", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-ab8e5666b8b2", "sa_class": "LOGIC", "confidence": "low", "reason": "select list transformed before FROM clause", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-af0f5334fb87", "sa_class": "LOGIC", "confidence": "low", "reason": "dependent join pushdown side handling wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-b16e2dce4c66", "sa_class": "LOGIC", "confidence": "low", "reason": "datediff epoch division truncates toward zero", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-b189dd7ff15f", "sa_class": "LOGIC", "confidence": "low", "reason": "unnest column index incremented off by one", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-b219521ef1e5", "sa_class": "LOGIC", "confidence": "low", "reason": "year specifiers wrongly skip offset handling", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-b59aa14f8b3f", "sa_class": "LOGIC", "confidence": "low", "reason": "exponent loop stops when result reaches zero", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-b6d9ac9ac4c4", "sa_class": "LOGIC", "confidence": "low", "reason": "base_binding captured after being overwritten", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-b9b1bb8a239b", "sa_class": "LOGIC", "confidence": "low", "reason": "binding rewritten, mechanism not visible", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "duckdb-ba44421804d6", "sa_class": "LOGIC", "confidence": "low", "reason": "recursive CTE dependent join flatten order", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-c6f9dfd6591b", "sa_class": "LOGIC", "confidence": "low", "reason": "RHS column replacement condition too narrow", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-c9112165759d", "sa_class": "RESOURCE", "confidence": "low", "reason": "segments moved before lock taken, data race", "pass1": "RESOURCE", "pass2": "RESOURCE"}
+{"bug_id": "duckdb-cfdd5889da28", "sa_class": "LOGIC", "confidence": "low", "reason": "stddev combine formula handling", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-da5c7335ea4b", "sa_class": "LOGIC", "confidence": "low", "reason": "window partition pushdown additions region", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-dbd78f790c07", "sa_class": "LOGIC", "confidence": "low", "reason": "JSON read null handling restructured", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-dc96153f0266", "sa_class": "LOGIC", "confidence": "low", "reason": "missing final flush skews size estimate", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "duckdb-de68e49f3522", "sa_class": "RESOURCE", "confidence": "low", "reason": "aggregate intermediate states not destroyed", "pass1": "LOGIC", "pass2": "RESOURCE"}
+{"bug_id": "duckdb-e2c62d0b96d9", "sa_class": "LOGIC", "confidence": "low", "reason": "unnest alias read before binding", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-e544467a8f42", "sa_class": "LOGIC", "confidence": "low", "reason": "nested correlated subquery planning condition", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-e5c74941dc92", "sa_class": "LOGIC", "confidence": "low", "reason": "USING columns unquoted in SQL output", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-eca6287b0265", "sa_class": "LOGIC", "confidence": "low", "reason": "JSON lambda binding fallback wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-ef0ded97b22b", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "OTHER", "pass2": "UNKNOWN"}
+{"bug_id": "duckdb-f0ea35020083", "sa_class": "LOGIC", "confidence": "low", "reason": "conjunction dedup removes wrong conjunct", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-f2cf1db95264", "sa_class": "RESOURCE", "confidence": "low", "reason": "dropped child column not committed", "pass1": "LOGIC", "pass2": "RESOURCE"}
+{"bug_id": "duckdb-f42aff9fc29f", "sa_class": "LOGIC", "confidence": "low", "reason": "payload scan missing", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "duckdb-fa43a31dc1a0", "sa_class": "LOGIC", "confidence": "low", "reason": "create table wrongly disables stream result", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-fbcfadceb477", "sa_class": "LOGIC", "confidence": "high", "reason": "macros recursively defined in terms of themselves", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-ffb453f07fce", "sa_class": "LOGIC", "confidence": "low", "reason": "arg_min/max by-type dispatch incomplete", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-006b8e03a33f", "sa_class": "LOGIC", "confidence": "low", "reason": "early return skips attaching lines", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "gdal-00cc4be4d0a2", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong warning and option reset", "pass1": "ERROR", "pass2": "LOGIC"}
+{"bug_id": "gdal-014fe459d126", "sa_class": "RESOURCE", "confidence": "low", "reason": "duplicate json objects leak", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "gdal-046bdf7ea2b1", "sa_class": "LOGIC", "confidence": "low", "reason": "field type widening logic wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-0f209f8114d9", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong overview selection condition", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-0f92097b1f96", "sa_class": "LOGIC", "confidence": "low", "reason": "element filter and counter logic", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "gdal-117d4b5060bb", "sa_class": "MEMORY", "confidence": "low", "reason": "uninitialized member vectors", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "gdal-142747db21b5", "sa_class": "MEMORY", "confidence": "low", "reason": "empty SRS returned as live reference", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "gdal-1ed37a29feee", "sa_class": "MEMORY", "confidence": "high", "reason": "warp thread fields uninitialized", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "gdal-1ffea4d064fb", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong branch picking working data type", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-21f4a3ec2ba2", "sa_class": "MEMORY", "confidence": "low", "reason": "string recode corrupts, mechanism unclear", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "gdal-2200f505acc5", "sa_class": "MEMORY", "confidence": "high", "reason": "string compare/read past buffer end", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "gdal-22389fee67bc", "sa_class": "MEMORY", "confidence": "low", "reason": "same-side tie-break (MEMORY)", "pass1": "MEMORY", "pass2": "ERROR"}
+{"bug_id": "gdal-231f5e1235cb", "sa_class": "MEMORY", "confidence": "low", "reason": "same-side tie-break (MEMORY)", "pass1": "MEMORY", "pass2": "RESOURCE"}
+{"bug_id": "gdal-27110150de2c", "sa_class": "LOGIC", "confidence": "low", "reason": "attribute serialization values wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-2ca07c262bf8", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "LOGIC", "pass2": "UNKNOWN"}
+{"bug_id": "gdal-2ded60d7a181", "sa_class": "MEMORY", "confidence": "low", "reason": "file list array terminator overflow", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "gdal-306b6a7740f5", "sa_class": "LOGIC", "confidence": "low", "reason": "geometry special field/distinct mishandled", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-3086778cd72a", "sa_class": "MEMORY", "confidence": "high", "reason": "unchecked index into empty geom map", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "gdal-35f0ff7f356c", "sa_class": "LOGIC", "confidence": "low", "reason": "universe ring construction wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-3918a30cafcd", "sa_class": "LOGIC", "confidence": "low", "reason": "SRS mutated/not passed on create", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-3bd8d57ad655", "sa_class": "MEMORY", "confidence": "low", "reason": "same-side tie-break (MEMORY)", "pass1": "MEMORY", "pass2": "ERROR"}
+{"bug_id": "gdal-424d521138b6", "sa_class": "MEMORY", "confidence": "low", "reason": "missing members, uninitialized use", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "gdal-44e37a15a6cf", "sa_class": "MEMORY", "confidence": "low", "reason": "string recode corrupts, mechanism unclear", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "gdal-45f004851fda", "sa_class": "LOGIC", "confidence": "low", "reason": "mimetype missing from empty check", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-4682a0e8a013", "sa_class": "MEMORY", "confidence": "low", "reason": "null SRS name passed to cache lookup", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "gdal-4c8aab140a64", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong angular units comparison", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-4d9083882a78", "sa_class": "LOGIC", "confidence": "low", "reason": "BBOX formatting/precision wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-504022e1901c", "sa_class": "MEMORY", "confidence": "high", "reason": "warp thread fields uninitialized", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "gdal-539e9769dc6c", "sa_class": "LOGIC", "confidence": "low", "reason": "json size output wrong", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "gdal-57efa1e4b4ab", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong branch picking working data type", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-5ce400c64f69", "sa_class": "MEMORY", "confidence": "high", "reason": "fixed 256-byte attribute buffer overflow", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "gdal-5f6e44b21f5f", "sa_class": "LOGIC", "confidence": "low", "reason": "axis swap missing", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "gdal-6717ca55be0c", "sa_class": "MEMORY", "confidence": "low", "reason": "src min/max clamp off, OOB read", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "gdal-6b4837eba1e5", "sa_class": "LOGIC", "confidence": "low", "reason": "special field recursion result ignored", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-7105d81a6103", "sa_class": "LOGIC", "confidence": "low", "reason": "throw on empty geometry removed", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "gdal-71288fa5574e", "sa_class": "LOGIC", "confidence": "low", "reason": "pixel size formula wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-7421035a3c5d", "sa_class": "MEMORY", "confidence": "low", "reason": "antimeridian boundary array overrun", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "gdal-75db3ff298af", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong tokenization flags for CSV", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-773b9bc02944", "sa_class": "MEMORY", "confidence": "low", "reason": "same-side tie-break (MEMORY)", "pass1": "ERROR", "pass2": "MEMORY"}
+{"bug_id": "gdal-789c1b646394", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong read support probe for handler", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-7bb604ce2c54", "sa_class": "LOGIC", "confidence": "low", "reason": "unquoted string parser loop wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-7c8b34554508", "sa_class": "LOGIC", "confidence": "low", "reason": "units applied under wrong conditions", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-7ccad1918967", "sa_class": "MEMORY", "confidence": "low", "reason": "same-side tie-break (MEMORY)", "pass1": "MEMORY", "pass2": "RESOURCE"}
+{"bug_id": "gdal-829fbcf7cf22", "sa_class": "LOGIC", "confidence": "low", "reason": "mimetype missing from empty check", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-83c5ce57a20c", "sa_class": "LOGIC", "confidence": "high", "reason": "wrap-over-X coordinate handling wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-8726ac905a3f", "sa_class": "MEMORY", "confidence": "low", "reason": "empty SRS returned as live reference", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "gdal-8a4bee4f8d2a", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "LOGIC", "pass2": "UNKNOWN"}
+{"bug_id": "gdal-8deb4e1a2bc1", "sa_class": "LOGIC", "confidence": "low", "reason": "SRS mutated/not passed on create", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-958621826b96", "sa_class": "LOGIC", "confidence": "low", "reason": "field type/domain SQL emitted wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-98e23cb90122", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong BMP header size bound check", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-a4fe26122837", "sa_class": "LOGIC", "confidence": "low", "reason": "RPC metadata taken from wrong dataset", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-a7cb51debb42", "sa_class": "MEMORY", "confidence": "high", "reason": "uint64 size truncated to uint32", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "gdal-a859743432e2", "sa_class": "RESOURCE", "confidence": "low", "reason": "same-side tie-break (RESOURCE)", "pass1": "RESOURCE", "pass2": "ERROR"}
+{"bug_id": "gdal-af647aafa367", "sa_class": "MEMORY", "confidence": "high", "reason": "nXSize*2 int overflow", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "gdal-b04821ff327c", "sa_class": "LOGIC", "confidence": "low", "reason": "header scan condition wrong", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "gdal-b3b735d2a02d", "sa_class": "OTHER", "confidence": "low", "reason": "missing include, build defect", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "gdal-b8a53b432511", "sa_class": "LOGIC", "confidence": "low", "reason": "nodata serialized without type awareness", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-bde706831cd5", "sa_class": "LOGIC", "confidence": "low", "reason": "nodata written with wrong format", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-c38033143519", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong overview selection condition", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-cd56e6d8ae7a", "sa_class": "LOGIC", "confidence": "high", "reason": "dateline wrap formula wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-cefd3547d91a", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "LOGIC", "pass2": "UNKNOWN"}
+{"bug_id": "gdal-cf0c25eb9ec4", "sa_class": "LOGIC", "confidence": "low", "reason": "defect not visible in snippet", "pass1": "LOGIC", "pass2": "RESOURCE"}
+{"bug_id": "gdal-d1937d5d1ad1", "sa_class": "LOGIC", "confidence": "low", "reason": "floating point window not scaled", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-d424863f5f51", "sa_class": "MEMORY", "confidence": "high", "reason": "uint64 size truncated to uint32", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "gdal-d49547f1a1be", "sa_class": "LOGIC", "confidence": "high", "reason": "missing tile matrix fields", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "gdal-d8a8cd51d51b", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "LOGIC", "pass2": "UNKNOWN"}
+{"bug_id": "gdal-df22e12654b3", "sa_class": "LOGIC", "confidence": "high", "reason": "wrap-over-X coordinate handling wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-e6d023672560", "sa_class": "LOGIC", "confidence": "high", "reason": "GeodataXform SRS overrode existing", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-eff6ab423ab1", "sa_class": "LOGIC", "confidence": "high", "reason": "index tokens not split on comma", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "gdal-f079f407aa45", "sa_class": "MEMORY", "confidence": "high", "reason": "unchecked index into empty geom map", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "gdal-f72f1eda99e3", "sa_class": "RESOURCE", "confidence": "low", "reason": "same-side tie-break (RESOURCE)", "pass1": "RESOURCE", "pass2": "ERROR"}
+{"bug_id": "godot-141d838cb0a9", "sa_class": "LOGIC", "confidence": "low", "reason": "line parsing behavior, no removed lines", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "godot-1487db8f8067", "sa_class": "MEMORY", "confidence": "low", "reason": "same-side tie-break (MEMORY)", "pass1": "MEMORY", "pass2": "RESOURCE"}
+{"bug_id": "godot-16e44a6ee5fd", "sa_class": "LOGIC", "confidence": "high", "reason": "line-break algorithm picks wrong breaks", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "godot-1ae6171b9aa5", "sa_class": "LOGIC", "confidence": "low", "reason": "anchor/min-size cache invalidation wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "godot-1c09cb9eb560", "sa_class": "LOGIC", "confidence": "low", "reason": "connection flags save/parse behavior wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "godot-2a35121cb587", "sa_class": "LOGIC", "confidence": "high", "reason": "class doc description handling wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "godot-3cec1823b69a", "sa_class": "LOGIC", "confidence": "low", "reason": "bracket/string and caret logic wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "godot-4a105bb044ef", "sa_class": "MEMORY", "confidence": "low", "reason": "lock index ref/unref imbalance, lifetime", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "godot-5a307011ac8b", "sa_class": "LOGIC", "confidence": "high", "reason": "matrix inversion algorithm wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "godot-6191f779e20c", "sa_class": "MEMORY", "confidence": "low", "reason": "same-side tie-break (MEMORY)", "pass1": "ERROR", "pass2": "MEMORY"}
+{"bug_id": "godot-663987b95b26", "sa_class": "LOGIC", "confidence": "high", "reason": "UTF-8 sequence decoding wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "godot-6ca6a961c8e1", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "LOGIC", "pass2": "UNKNOWN"}
+{"bug_id": "godot-979d80320b3c", "sa_class": "LOGIC", "confidence": "high", "reason": "text extents reset condition wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "godot-ad060d7c9da5", "sa_class": "LOGIC", "confidence": "low", "reason": "geometry plane math, no removed lines", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "godot-bddc285d34b7", "sa_class": "LOGIC", "confidence": "high", "reason": "sRGB conversion formula wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "godot-c985347ac8f8", "sa_class": "LOGIC", "confidence": "high", "reason": "epsilon comparison logic wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "godot-dc71181af3af", "sa_class": "LOGIC", "confidence": "low", "reason": "compiler warning emission behavior wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "hdf5-336148f0f3e2", "sa_class": "MEMORY", "confidence": "low", "reason": "attribute name termination, caught EXP45", "pass1": "OTHER", "pass2": "MEMORY"}
+{"bug_id": "hdf5-3d50b7243378", "sa_class": "MEMORY", "confidence": "low", "reason": "same-side tie-break (MEMORY)", "pass1": "RESOURCE", "pass2": "MEMORY"}
+{"bug_id": "hdf5-410d9d0e6a1f", "sa_class": "MEMORY", "confidence": "low", "reason": "conversion buffer handling, caught VOVR", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "hdf5-46ec0c6c502b", "sa_class": "MEMORY", "confidence": "high", "reason": "conversion buffer sizing, caught VOVR", "pass1": "RESOURCE", "pass2": "MEMORY"}
+{"bug_id": "hdf5-50b75316c1c9", "sa_class": "LOGIC", "confidence": "high", "reason": "diminfo validity checks used wrong stride", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "hdf5-553ad641d344", "sa_class": "MEMORY", "confidence": "high", "reason": "struct freed before return, caught VOVR", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "hdf5-699a00aef417", "sa_class": "MEMORY", "confidence": "low", "reason": "added check around attribute buffer sizing", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "hdf5-88382b2cfcd4", "sa_class": "LOGIC", "confidence": "low", "reason": "noop path detection condition wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "hdf5-8b449df9cbdd", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "LOGIC", "pass2": "UNKNOWN"}
+{"bug_id": "hdf5-aa1b6edb1d73", "sa_class": "RESOURCE", "confidence": "high", "reason": "datatype not closed on error path", "pass1": "LOGIC", "pass2": "RESOURCE"}
+{"bug_id": "hdf5-aefd1d02488b", "sa_class": "LOGIC", "confidence": "high", "reason": "diminfo validity checks used wrong stride", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "hdf5-bcc7226672c8", "sa_class": "LOGIC", "confidence": "high", "reason": "diminfo validity checks used wrong stride", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "hdf5-cd22c0502f29", "sa_class": "MEMORY", "confidence": "high", "reason": "hslab pointer may be null", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "hdf5-fe3e4ec13a61", "sa_class": "MEMORY", "confidence": "low", "reason": "conversion buffer handling, caught VOVR", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "jerryscript-042a8ceedc15", "sa_class": "LOGIC", "confidence": "low", "reason": "property key selection, mechanism unclear", "pass1": "RESOURCE", "pass2": "LOGIC"}
+{"bug_id": "jerryscript-072dcea299cd", "sa_class": "LOGIC", "confidence": "low", "reason": "literal decode order and delta wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "jerryscript-1eb47ad8b475", "sa_class": "MEMORY", "confidence": "high", "reason": "property pointer not initialized, caught BD-PB-NOTINIT", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "jerryscript-25396dc4b88b", "sa_class": "ERROR", "confidence": "high", "reason": "fmod result unchecked, caught BD-PB-ERRNO", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "jerryscript-2b0230207b47", "sa_class": "LOGIC", "confidence": "low", "reason": "duplicated label check restructure wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "jerryscript-32f5320c7e4d", "sa_class": "LOGIC", "confidence": "low", "reason": "this.x assignment opcode sequence wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "jerryscript-4afcc94994c8", "sa_class": "LOGIC", "confidence": "low", "reason": "unary opcode handling rewritten wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "jerryscript-5144355d084f", "sa_class": "MEMORY", "confidence": "high", "reason": "result value mishandled, caught EXP39", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "jerryscript-5ca8de954fce", "sa_class": "LOGIC", "confidence": "low", "reason": "ternary allowed as assignment target", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "jerryscript-63583f11d059", "sa_class": "MEMORY", "confidence": "low", "reason": "zero-length literal skews compression size", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "jerryscript-662bbee88446", "sa_class": "MEMORY", "confidence": "high", "reason": "missing null check after species create", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "jerryscript-9bf98944df1f", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong return value type, caught BD-PB-CC", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "jerryscript-bf72a9ea61e4", "sa_class": "LOGIC", "confidence": "low", "reason": "isfinite implementation rewritten", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "jerryscript-df8c37f98e76", "sa_class": "LOGIC", "confidence": "high", "reason": "used is_enumerable for configurable flag", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "jerryscript-edaaae2dd276", "sa_class": "MEMORY", "confidence": "high", "reason": "digits buffer overflow for zero, caught multi BD", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "libexpat-0c5dbd0bb0a5", "sa_class": "RESOURCE", "confidence": "low", "reason": "amplification accounting missing, exhaustion guard", "pass1": "LOGIC", "pass2": "RESOURCE"}
+{"bug_id": "libexpat-30d93b149d3d", "sa_class": "LOGIC", "confidence": "low", "reason": "suspend condition precedence", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "libexpat-44558a21f1b7", "sa_class": "MEMORY", "confidence": "high", "reason": "naming macros read past buffer, OOB", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "libexpat-4e25524fb119", "sa_class": "MEMORY", "confidence": "low", "reason": "tempPool cleared while strings still referenced", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "libexpat-69f40cffb664", "sa_class": "RESOURCE", "confidence": "low", "reason": "same-side tie-break (RESOURCE)", "pass1": "MEMORY", "pass2": "RESOURCE"}
+{"bug_id": "libexpat-8e5c789e8d3b", "sa_class": "MEMORY", "confidence": "low", "reason": "added buffer growth guard in XML_Parse", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "libexpat-cf1142438f11", "sa_class": "MEMORY", "confidence": "low", "reason": "overflow guard compiled out, realloc overflow", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "libexpat-e567e550f1be", "sa_class": "MEMORY", "confidence": "low", "reason": "same-side tie-break (MEMORY)", "pass1": "ERROR", "pass2": "MEMORY"}
+{"bug_id": "libexpat-f67d952cb3de", "sa_class": "LOGIC", "confidence": "low", "reason": "defect not visible in snippet", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "micropython-1010a6f1bf3f", "sa_class": "LOGIC", "confidence": "high", "reason": "comma grouping spacing condition wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "micropython-105ab25a289b", "sa_class": "LOGIC", "confidence": "low", "reason": "default case assumed only divmod", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "micropython-506e74919e0d", "sa_class": "LOGIC", "confidence": "high", "reason": "fstring args separated wrongly", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "micropython-56f308119e16", "sa_class": "LOGIC", "confidence": "low", "reason": "try/finally codegen labels, no removed lines", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "micropython-5c51fb896d80", "sa_class": "RESOURCE", "confidence": "high", "reason": "close with GIL released, fd race", "pass1": "RESOURCE", "pass2": "RESOURCE"}
+{"bug_id": "micropython-639baaf0eaee", "sa_class": "LOGIC", "confidence": "high", "reason": "math error detection condition wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "micropython-8074d176612b", "sa_class": "LOGIC", "confidence": "low", "reason": "format arg count check misplaced", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "micropython-80ab54d7145c", "sa_class": "LOGIC", "confidence": "high", "reason": "duplicate keyword argument not rejected", "pass1": "ERROR", "pass2": "LOGIC"}
+{"bug_id": "micropython-830236cc7dce", "sa_class": "LOGIC", "confidence": "low", "reason": "type make_new flow rewritten", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "micropython-85267a3c1ee8", "sa_class": "MEMORY", "confidence": "high", "reason": "buffer not sign extended, uninitialized bytes", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "micropython-8625d05e0e82", "sa_class": "MEMORY", "confidence": "low", "reason": "memoryview offset bitfield truncation", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "micropython-88f383264f04", "sa_class": "LOGIC", "confidence": "low", "reason": "attr lookup delegation rules, no removed lines", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "micropython-b12fef09f055", "sa_class": "LOGIC", "confidence": "low", "reason": "classmethod bound type chosen wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "micropython-b3d62f80e40b", "sa_class": "LOGIC", "confidence": "low", "reason": "aiter stored in user-named local", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "micropython-b53492729a4a", "sa_class": "LOGIC", "confidence": "low", "reason": "pow mod early-exit condition wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "micropython-bc4a5e14e72f", "sa_class": "ERROR", "confidence": "low", "reason": "same-side tie-break (ERROR)", "pass1": "ERROR", "pass2": "MEMORY"}
+{"bug_id": "micropython-bdadb90505c7", "sa_class": "MEMORY", "confidence": "low", "reason": "aggregate size computation missing", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "micropython-c14ecec3cf60", "sa_class": "LOGIC", "confidence": "low", "reason": "print file kwarg config gating wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "micropython-d4d265304c55", "sa_class": "MEMORY", "confidence": "high", "reason": "dest used uninitialized when rhs empty", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "micropython-ec6689a8cc86", "sa_class": "MEMORY", "confidence": "high", "reason": "args2 realloc growth bug", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "micropython-ef93b8337084", "sa_class": "ERROR", "confidence": "low", "reason": "unchecked int conversion in slice_indices", "pass1": "LOGIC", "pass2": "ERROR"}
+{"bug_id": "micropython-f30ec885b80c", "sa_class": "OTHER", "confidence": "low", "reason": "same-side tie-break (OTHER)", "pass1": "LOGIC", "pass2": "OTHER"}
+{"bug_id": "opencv-03814c751e45", "sa_class": "LOGIC", "confidence": "low", "reason": "reprojectImageTo3D 32SC3 handling wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-065ab5cc0087", "sa_class": "LOGIC", "confidence": "low", "reason": "allowTransposed matrix reuse check wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-08979782855f", "sa_class": "LOGIC", "confidence": "low", "reason": "API signature change", "pass1": "ERROR", "pass2": "LOGIC"}
+{"bug_id": "opencv-0d05063bd5c0", "sa_class": "LOGIC", "confidence": "low", "reason": "kmeans center/dist bookkeeping wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-0d3161877178", "sa_class": "LOGIC", "confidence": "low", "reason": "approxPolyDP distance formula wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-140d51577a07", "sa_class": "LOGIC", "confidence": "low", "reason": "resize fallback condition wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-174d41f7934b", "sa_class": "LOGIC", "confidence": "low", "reason": "Subdiv2D big coordinate computation wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-1974f51bd214", "sa_class": "LOGIC", "confidence": "low", "reason": "MatExpr size missing GEMM case", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-1d1387aa8e47", "sa_class": "LOGIC", "confidence": "low", "reason": "remap BORDER_TRANSPARENT not skipped", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-212cd1521af9", "sa_class": "LOGIC", "confidence": "low", "reason": "AVX blendv operands swapped, div by zero", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-35e95d5fef31", "sa_class": "RESOURCE", "confidence": "low", "reason": "FileStorage destructor cleanup wrong", "pass1": "RESOURCE", "pass2": "RESOURCE"}
+{"bug_id": "opencv-3ddefc7290c5", "sa_class": "MEMORY", "confidence": "high", "reason": "unchecked var index, OOB read", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "opencv-41e8688ee2f5", "sa_class": "LOGIC", "confidence": "low", "reason": "nonzero scan bounds update wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-4320d091f246", "sa_class": "LOGIC", "confidence": "low", "reason": "roots guard rewritten, mechanism unclear", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "opencv-4344998a81e0", "sa_class": "LOGIC", "confidence": "high", "reason": "Hough rho offset formula wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-5cb9cd581ef5", "sa_class": "LOGIC", "confidence": "low", "reason": "outputs gathered with wrong indexing", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-5ff1b89640bd", "sa_class": "MEMORY", "confidence": "low", "reason": "copy loop reads past pixel width", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "opencv-6a1bdf8d7893", "sa_class": "LOGIC", "confidence": "low", "reason": "input reshape/conversion wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-6c432b0cd808", "sa_class": "LOGIC", "confidence": "low", "reason": "Hough lines drawing checks wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-72b6a063e735", "sa_class": "LOGIC", "confidence": "low", "reason": "rotated rect intersection logic wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-77dbf1631b69", "sa_class": "MEMORY", "confidence": "high", "reason": "thick line pointer offset overflow", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "opencv-78a11e75834c", "sa_class": "MEMORY", "confidence": "low", "reason": "same-side tie-break (MEMORY)", "pass1": "ERROR", "pass2": "MEMORY"}
+{"bug_id": "opencv-836aa6f1bcdb", "sa_class": "LOGIC", "confidence": "low", "reason": "MatExpr comparison type wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-83d848ddf557", "sa_class": "MEMORY", "confidence": "low", "reason": "missing FileNode constructor, uninitialized use", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "opencv-849409d58b10", "sa_class": "LOGIC", "confidence": "low", "reason": "parser EOF block control flow wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-898ee6013960", "sa_class": "LOGIC", "confidence": "high", "reason": "float overflow in spectrum division", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-8c7ec21f40f2", "sa_class": "LOGIC", "confidence": "low", "reason": "eigen iteration counter not incremented", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-9147e633a50f", "sa_class": "LOGIC", "confidence": "low", "reason": "seamless clone ROI logic wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-9a698f046e06", "sa_class": "MEMORY", "confidence": "low", "reason": "dims unchecked, sizes stack overflow", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "opencv-a3f10a0641a3", "sa_class": "LOGIC", "confidence": "low", "reason": "same-side tie-break (LOGIC)", "pass1": "OTHER", "pass2": "LOGIC"}
+{"bug_id": "opencv-a841d77e12fa", "sa_class": "LOGIC", "confidence": "low", "reason": "normal vector constructed wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-a868f91ec13f", "sa_class": "MEMORY", "confidence": "high", "reason": "row index can exceed buffer", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "opencv-b27a0cb90aed", "sa_class": "ERROR", "confidence": "high", "reason": "unchecked quote parse, caught BD-PB-CHECKRET", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-b7c9f43a731b", "sa_class": "LOGIC", "confidence": "low", "reason": "nD array argument handling wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-b95e3c7e7f80", "sa_class": "LOGIC", "confidence": "low", "reason": "collinearity test formula wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-c4f59cf36a65", "sa_class": "MEMORY", "confidence": "low", "reason": "pyramid buffer sizing wrong", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "opencv-c4fd47005bde", "sa_class": "LOGIC", "confidence": "low", "reason": "STD_VECTOR_MAT kind not handled", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-cb9f44f5771a", "sa_class": "LOGIC", "confidence": "low", "reason": "OCL branch flow wrong", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "opencv-cef786b62d8e", "sa_class": "LOGIC", "confidence": "low", "reason": "TIFF pages loop wrote wrong pages", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-cfc1dfc23f11", "sa_class": "LOGIC", "confidence": "low", "reason": "contour trace stop condition wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-d97911c694c2", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "LOGIC", "pass2": "UNKNOWN"}
+{"bug_id": "opencv-da1a55ec7dbb", "sa_class": "LOGIC", "confidence": "high", "reason": "clip macro precedence bug", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-dcdb346f556f", "sa_class": "ERROR", "confidence": "low", "reason": "math error handling, caught BD-PB-ERRNO", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-eb23b61a6803", "sa_class": "MEMORY", "confidence": "low", "reason": "sat_tab base offset off, OOB read", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "opencv-f418aa091479", "sa_class": "MEMORY", "confidence": "low", "reason": "hline memcpy overflows line buffer", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "opencv-f624dc51adf5", "sa_class": "MEMORY", "confidence": "low", "reason": "convert func called with wrong size", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "opencv-ff66d0af4e7e", "sa_class": "MEMORY", "confidence": "low", "reason": "decodeFormat fmt_pairs overflow unchecked", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "php-src-0119a932f650", "sa_class": "MEMORY", "confidence": "low", "reason": "GC missed live tmpvar kinds, UAF", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "php-src-04ebc4662274", "sa_class": "MEMORY", "confidence": "low", "reason": "asserted filter found, NULL deref", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "php-src-0d43ce0140da", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "LOGIC", "pass2": "UNKNOWN"}
+{"bug_id": "php-src-1b0195b0b102", "sa_class": "LOGIC", "confidence": "low", "reason": "pre-checked inheritance skipped final/static checks", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "php-src-20b922f94767", "sa_class": "MEMORY", "confidence": "high", "reason": "terminator written without bounds check, caught VOVR", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "php-src-21c8f6bd6ded", "sa_class": "MEMORY", "confidence": "high", "reason": "hash update refcount mishandled", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "php-src-3dd6d56bed43", "sa_class": "MEMORY", "confidence": "low", "reason": "wrong strncasecmp length, OOB read", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "php-src-57b891db5eac", "sa_class": "LOGIC", "confidence": "low", "reason": "class lookup path rewritten, contract unclear", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "php-src-644f4c81235d", "sa_class": "ERROR", "confidence": "low", "reason": "missing return true in state deserializer", "pass1": "ERROR", "pass2": "LOGIC"}
+{"bug_id": "php-src-67638986e670", "sa_class": "MEMORY", "confidence": "low", "reason": "iterator compare on poisoned stale table", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "php-src-6d6eeee39f95", "sa_class": "MEMORY", "confidence": "low", "reason": "same-side tie-break (MEMORY)", "pass1": "ERROR", "pass2": "MEMORY"}
+{"bug_id": "php-src-7708c3973f86", "sa_class": "LOGIC", "confidence": "low", "reason": "inactive assert skipped argument parsing", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "php-src-7fcb8a2206e5", "sa_class": "MEMORY", "confidence": "low", "reason": "same-side tie-break (MEMORY)", "pass1": "ERROR", "pass2": "MEMORY"}
+{"bug_id": "php-src-81a2694ec050", "sa_class": "MEMORY", "confidence": "low", "reason": "same-side tie-break (MEMORY)", "pass1": "RESOURCE", "pass2": "MEMORY"}
+{"bug_id": "php-src-9301c38f27df", "sa_class": "LOGIC", "confidence": "high", "reason": "rounding algorithm wrong for tie modes", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "php-src-98f103396d0e", "sa_class": "LOGIC", "confidence": "low", "reason": "finally breakout range check off", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "php-src-a1232a3e55b9", "sa_class": "OTHER", "confidence": "low", "reason": "gc_full field removed, structural change", "pass1": "OTHER", "pass2": "MEMORY"}
+{"bug_id": "php-src-a4774432f3b4", "sa_class": "LOGIC", "confidence": "low", "reason": "user flags ignored in zip stat call", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "php-src-b9ca7425664a", "sa_class": "LOGIC", "confidence": "low", "reason": "insert-mem helper rewritten", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "php-src-bba9204567b2", "sa_class": "LOGIC", "confidence": "high", "reason": "postfields read before copy complete", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "php-src-c3a5e71d0aa1", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "MEMORY", "pass2": "UNKNOWN"}
+{"bug_id": "php-src-c94f35c6ad55", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "LOGIC", "pass2": "UNKNOWN"}
+{"bug_id": "php-src-db25b1aca2fe", "sa_class": "MEMORY", "confidence": "low", "reason": "key handling rewritten, mechanism unclear", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "php-src-eaf37a8bb3ef", "sa_class": "MEMORY", "confidence": "low", "reason": "multi handle list refcount lifetime wrong", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "php-src-ef72be6a423c", "sa_class": "LOGIC", "confidence": "high", "reason": "export used limited precision for doubles", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "php-src-f79aeee502d8", "sa_class": "LOGIC", "confidence": "low", "reason": "inheritance type checks, no removed lines", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "proj-06b0cf9e684f", "sa_class": "OTHER", "confidence": "low", "reason": "missing include, build defect", "pass1": "ERROR", "pass2": "LOGIC"}
+{"bug_id": "proj-082e3620a0bb", "sa_class": "LOGIC", "confidence": "low", "reason": "axis json export context wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "proj-1ddd02a36695", "sa_class": "MEMORY", "confidence": "low", "reason": "null cartesianCS deref unchecked", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "proj-210490c1df4f", "sa_class": "LOGIC", "confidence": "low", "reason": "nadgrids transformation source CRS wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "proj-26c69d9d4768", "sa_class": "LOGIC", "confidence": "high", "reason": "UPS south axis condition wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "proj-4831a51d8731", "sa_class": "MEMORY", "confidence": "low", "reason": "null cartesianCS deref unchecked", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "proj-54e0eae5c2da", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "LOGIC", "pass2": "UNKNOWN"}
+{"bug_id": "proj-5819b33a303f", "sa_class": "LOGIC", "confidence": "low", "reason": "unit conversion z params wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "proj-5ea62cb8daa4", "sa_class": "LOGIC", "confidence": "high", "reason": "compares ellipsoid with itself", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "proj-6e4ea9d02a9a", "sa_class": "OTHER", "confidence": "low", "reason": "missing include, build defect", "pass1": "ERROR", "pass2": "LOGIC"}
+{"bug_id": "proj-75bf558d4fa2", "sa_class": "LOGIC", "confidence": "low", "reason": "identifier creation from code key wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "proj-782c2a51cca6", "sa_class": "LOGIC", "confidence": "low", "reason": "transformation match confidence wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "proj-97485ea29440", "sa_class": "LOGIC", "confidence": "low", "reason": "geodetic CRS PROJ export wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "proj-a289af9c5fe7", "sa_class": "LOGIC", "confidence": "low", "reason": "nadgrids transformation source CRS wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "proj-a2dc13a77ea7", "sa_class": "ERROR", "confidence": "high", "reason": "wrong error code ENOMEM returned", "pass1": "ERROR", "pass2": "ERROR"}
+{"bug_id": "proj-b6a07d893aa2", "sa_class": "LOGIC", "confidence": "low", "reason": "geodetic CRS PROJ export wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "proj-bfab0375ca89", "sa_class": "MEMORY", "confidence": "low", "reason": "null cartesianCS deref unchecked", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "proj-caba6901ef48", "sa_class": "LOGIC", "confidence": "low", "reason": "identifiers reference wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "proj-ccce4196bb18", "sa_class": "LOGIC", "confidence": "low", "reason": "MAX_ITER macro handling wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "proj-d1e39e45b0a6", "sa_class": "LOGIC", "confidence": "low", "reason": "nadgrids transformation source CRS wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "proj-ded2371a16af", "sa_class": "LOGIC", "confidence": "low", "reason": "CRS matching conditions wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-02d1749c6bfb", "sa_class": "MEMORY", "confidence": "low", "reason": "record size sum can overflow validation, no removed lines", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "tarantool-067eeb123c0e", "sa_class": "MEMORY", "confidence": "low", "reason": "wrong decompress end pointer, out-of-bounds", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "tarantool-0b1d99f9080c", "sa_class": "LOGIC", "confidence": "low", "reason": "privilege replace condition ignores grantor change", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-0e02e4373959", "sa_class": "LOGIC", "confidence": "high", "reason": "wrong result type for integer operands", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-0e3671b1b049", "sa_class": "LOGIC", "confidence": "low", "reason": "cfg locking and snapshot version handling, unclear", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-217abe7a70be", "sa_class": "MEMORY", "confidence": "high", "reason": "index loop can run off array end", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "tarantool-3203ce795485", "sa_class": "MEMORY", "confidence": "high", "reason": "negative width indexes pow10 out of bounds", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "tarantool-35044a57ea04", "sa_class": "LOGIC", "confidence": "low", "reason": "backtrace option key handling rewritten", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-354f1a67549b", "sa_class": "MEMORY", "confidence": "high", "reason": "loop iterates total count, overreads msgpack", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "tarantool-39735317fbaf", "sa_class": "MEMORY", "confidence": "low", "reason": "dequote assumed zero-terminated, overreads", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "tarantool-40d35b1255f4", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong sign flag for negative modulo", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-452a757c1c97", "sa_class": "MEMORY", "confidence": "high", "reason": "off-by-one bound allows OOB thread stats", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "tarantool-46aa6eb83fb9", "sa_class": "LOGIC", "confidence": "low", "reason": "VDBE op arguments wrong", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "tarantool-46b0022d552a", "sa_class": "ERROR", "confidence": "low", "reason": "decode result only asserted", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "tarantool-4753065c09ed", "sa_class": "MEMORY", "confidence": "low", "reason": "source pointer uninitialized on bad params", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "tarantool-4e1bd4f2ca09", "sa_class": "RESOURCE", "confidence": "low", "reason": "callback GC-ed prematurely, lifetime issue", "pass1": "RESOURCE", "pass2": "RESOURCE"}
+{"bug_id": "tarantool-4f3f87493c3a", "sa_class": "ERROR", "confidence": "low", "reason": "same-side tie-break (ERROR)", "pass1": "ERROR", "pass2": "RESOURCE"}
+{"bug_id": "tarantool-67319bd2abd7", "sa_class": "MEMORY", "confidence": "low", "reason": "missing return yields garbage pointer", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "tarantool-7516474ad8c9", "sa_class": "ERROR", "confidence": "high", "reason": "asserted lookup success instead of handling", "pass1": "ERROR", "pass2": "ERROR"}
+{"bug_id": "tarantool-7530007077a3", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong unique_part_count for non-unique index", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-77c69aba7b2a", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong iterator start and gap-track conditions", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-78ccf4ee3c7f", "sa_class": "LOGIC", "confidence": "high", "reason": "GT iterator reused GE continuation function", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-8c4fecf8c4f6", "sa_class": "LOGIC", "confidence": "high", "reason": "field walk function flawed", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "tarantool-8cfc91109fe1", "sa_class": "LOGIC", "confidence": "high", "reason": "index parts parsing and simplify flag wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-95c521353f4e", "sa_class": "RESOURCE", "confidence": "low", "reason": "cancellation during yield corrupts journal entry", "pass1": "RESOURCE", "pass2": "RESOURCE"}
+{"bug_id": "tarantool-9eaa7be00afa", "sa_class": "LOGIC", "confidence": "low", "reason": "timestamp usec/msec cases mishandled", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-a0264983c4a6", "sa_class": "ERROR", "confidence": "low", "reason": "index def validation added as API check", "pass1": "ERROR", "pass2": "ERROR"}
+{"bug_id": "tarantool-b01da1bbf9f4", "sa_class": "LOGIC", "confidence": "high", "reason": "zero timestamp yields bogus relay lag", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-c2e562efa2e4", "sa_class": "ERROR", "confidence": "low", "reason": "dead fiber wakeup, not visible in snippet", "pass1": "ERROR", "pass2": "LOGIC"}
+{"bug_id": "tarantool-c8612c63469d", "sa_class": "MEMORY", "confidence": "high", "reason": "null Lua state dereferenced in error path", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "tarantool-d32112b21656", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong vclock search deletes needed WALs", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-d527e3e234ed", "sa_class": "MEMORY", "confidence": "low", "reason": "story deleted while still referenced", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "tarantool-dad93ce21d26", "sa_class": "LOGIC", "confidence": "high", "reason": "ANY type mapped to wrong field type", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-dbfb0940d12f", "sa_class": "LOGIC", "confidence": "low", "reason": "MVCC conflict skip condition wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-e409eec61dc6", "sa_class": "LOGIC", "confidence": "low", "reason": "float stored as double type", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "tarantool-f3e2922c14ee", "sa_class": "LOGIC", "confidence": "high", "reason": "unbind handling wrong", "pass1": "LOGIC", "pass2": "RESOURCE"}
+{"bug_id": "tarantool-f4801b8daa83", "sa_class": "LOGIC", "confidence": "low", "reason": "round via sprintf wrong for big precision", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-f7aac1b241c3", "sa_class": "MEMORY", "confidence": "low", "reason": "array header decoded unchecked", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "tarantool-f90cfe93f0ad", "sa_class": "LOGIC", "confidence": "high", "reason": "wrong stdin/tty branch condition", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-fc35d5a6cfe7", "sa_class": "LOGIC", "confidence": "low", "reason": "iterator reposition after delete wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "z3-21693e1cea96", "sa_class": "LOGIC", "confidence": "low", "reason": "parser app handling wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "z3-6aeffc53878d", "sa_class": "MEMORY", "confidence": "low", "reason": "unsigned k2 computation can wrap", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "z3-7c5e71fa9a15", "sa_class": "LOGIC", "confidence": "low", "reason": "term equality debug-only wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "z3-845ca575f448", "sa_class": "LOGIC", "confidence": "low", "reason": "uminus case unimplemented", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "z3-9b51ad4d5969", "sa_class": "ERROR", "confidence": "low", "reason": "API check contradicts documented precondition", "pass1": "ERROR", "pass2": "ERROR"}
+{"bug_id": "z3-b29e3fbe839f", "sa_class": "LOGIC", "confidence": "low", "reason": "bit vector zero extend width wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "z3-ce2e010dd3c0", "sa_class": "LOGIC", "confidence": "low", "reason": "sibling detection ignores nested sorts", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "z3-e0dd0ca5d4f1", "sa_class": "LOGIC", "confidence": "low", "reason": "term graph apply loop wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "z3-e530990a778e", "sa_class": "LOGIC", "confidence": "high", "reason": "strictness boolean formula wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "z3-f2490da70ca4", "sa_class": "LOGIC", "confidence": "low", "reason": "negation interval update wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "z3-f3cd4349f4cb", "sa_class": "ERROR", "confidence": "low", "reason": "polymorphic match failure not returned", "pass1": "ERROR", "pass2": "ERROR"}

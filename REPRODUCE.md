@@ -116,6 +116,27 @@ The pipeline scripts live in `pipeline/`. Run them from the repository root
    Produces `results/<repo>_result.json`, `results/category_breakdown.json`,
    and `results/REPORT.md`.
 
+## Reproducing the bug classification
+
+The classification of all 488 bugs into defect mechanisms (MEMORY / RESOURCE /
+ERROR / LOGIC / OTHER / UNKNOWN) is published in `classification/` so it can be
+audited or re-derived:
+
+1. `classification/snippets_v2/<repo>.jsonl` holds, for every bug, the exact
+   lines the maintainers' fix removed or rewrote (`"r": 1`) and the insertion
+   points for fixes that only add code (`"i": 1`), extracted from the
+   materialized pre-fix files. `pipeline/extract_class_snippets_v2.py`
+   regenerates them from `manifests/` and the pre-images.
+2. `classification/labels_pass1/` and `classification/labels_v2/` are two
+   independent blind classification passes over those snippets, using the rubric
+   in `classification/RUBRIC.md`. `classification/labels_final_overrides.jsonl`
+   records every adjudicated disagreement and the 16 Flow Analysis ground-truth
+   forcings.
+3. `pipeline/merge_classification.py` merges the two passes and the overrides
+   into `classification/final/` and writes `classification/adjudication.csv`
+   with all disagreements. Aggregate statistics land in
+   `results/bug_classification.json`.
+
 ## Raw evidence
 
 `raw-reports/<repo>/` contains the gzipped Parasoft XML reports (both

@@ -1,0 +1,47 @@
+{"bug_id": "opencv-03814c751e45", "sa_class": "LOGIC", "confidence": "low", "reason": "reprojectImageTo3D output copy loop reworked"}
+{"bug_id": "opencv-065ab5cc0087", "sa_class": "LOGIC", "confidence": "low", "reason": "allowTransposed handling accepted wrong matrix shapes"}
+{"bug_id": "opencv-08979782855f", "sa_class": "LOGIC", "confidence": "low", "reason": "duplicated trig table code unified across Hough variants"}
+{"bug_id": "opencv-0d05063bd5c0", "sa_class": "LOGIC", "confidence": "low", "reason": "missing dist/tdist swap, wrong clustering update"}
+{"bug_id": "opencv-0d3161877178", "sa_class": "LOGIC", "confidence": "low", "reason": "distance metric comparison formula reworked"}
+{"bug_id": "opencv-140d51577a07", "sa_class": "LOGIC", "confidence": "low", "reason": "OpenCL resize path invoked at wrong point"}
+{"bug_id": "opencv-174d41f7934b", "sa_class": "LOGIC", "confidence": "low", "reason": "big_coord float precision gives wrong vertex placement"}
+{"bug_id": "opencv-1974f51bd214", "sa_class": "LOGIC", "confidence": "low", "reason": "GEMM result size computed wrongly"}
+{"bug_id": "opencv-1d1387aa8e47", "sa_class": "LOGIC", "confidence": "low", "reason": "BORDER_TRANSPARENT condition wrongly excludes 3-channel"}
+{"bug_id": "opencv-212cd1521af9", "sa_class": "LOGIC", "confidence": "low", "reason": "AVX2 division replaced, wrong tilt correction math"}
+{"bug_id": "opencv-35e95d5fef31", "sa_class": "RESOURCE", "confidence": "low", "reason": "Impl released where still needed, wrong cleanup point"}
+{"bug_id": "opencv-3ddefc7290c5", "sa_class": "MEMORY", "confidence": "high", "reason": "bounds check allowed vi equal size, OOB index"}
+{"bug_id": "opencv-41e8688ee2f5", "sa_class": "LOGIC", "confidence": "low", "reason": "nonzero scan xmin/xmax update logic wrong"}
+{"bug_id": "opencv-4320d091f246", "sa_class": "LOGIC", "confidence": "low", "reason": "operator[] searched only first root wrongly"}
+{"bug_id": "opencv-4344998a81e0", "sa_class": "LOGIC", "confidence": "high", "reason": "rho offset formula wrong in line coordinates"}
+{"bug_id": "opencv-5cb9cd581ef5", "sa_class": "LOGIC", "confidence": "low", "reason": "shadowed loop index misindexes outputBlobs"}
+{"bug_id": "opencv-5ff1b89640bd", "sa_class": "MEMORY", "confidence": "low", "reason": "int-wise copy loop overruns non-multiple-of-4 pixels"}
+{"bug_id": "opencv-6a1bdf8d7893", "sa_class": "LOGIC", "confidence": "low", "reason": "missing point conversion before reshape, wrong input"}
+{"bug_id": "opencv-6c432b0cd808", "sa_class": "LOGIC", "confidence": "low", "reason": "missing lines vector validation, wrong N computed"}
+{"bug_id": "opencv-72b6a063e735", "sa_class": "LOGIC", "confidence": "low", "reason": "missing epsilon for degenerate rectangle intersection"}
+{"bug_id": "opencv-77dbf1631b69", "sa_class": "MEMORY", "confidence": "high", "reason": "fixed-point line drawing steps past image buffer"}
+{"bug_id": "opencv-78a11e75834c", "sa_class": "MEMORY", "confidence": "high", "reason": "mask loop indexes trainDescCollection out of bounds"}
+{"bug_id": "opencv-836aa6f1bcdb", "sa_class": "LOGIC", "confidence": "low", "reason": "expression result type returned wrongly as CV_8U"}
+{"bug_id": "opencv-83d848ddf557", "sa_class": "MEMORY", "confidence": "low", "reason": "FileNode storage offset handling reworked, dangling risk"}
+{"bug_id": "opencv-849409d58b10", "sa_class": "LOGIC", "confidence": "low", "reason": "JSON parse early-exit condition removed wrongly"}
+{"bug_id": "opencv-898ee6013960", "sa_class": "LOGIC", "confidence": "high", "reason": "complex multiplication sign formula wrong"}
+{"bug_id": "opencv-8c7ec21f40f2", "sa_class": "LOGIC", "confidence": "low", "reason": "iteration counter increment misplaced, wrong termination"}
+{"bug_id": "opencv-9147e633a50f", "sa_class": "LOGIC", "confidence": "low", "reason": "missing mask border handling, wrong clone region"}
+{"bug_id": "opencv-9a698f046e06", "sa_class": "MEMORY", "confidence": "low", "reason": "missing sizes validation feeds readRaw, overflow risk"}
+{"bug_id": "opencv-a3f10a0641a3", "sa_class": "LOGIC", "confidence": "low", "reason": "missing predict override delegates wrong path"}
+{"bug_id": "opencv-a841d77e12fa", "sa_class": "LOGIC", "confidence": "low", "reason": "homography decomposition matrix computation reworked"}
+{"bug_id": "opencv-a868f91ec13f", "sa_class": "MEMORY", "confidence": "high", "reason": "pyrUp border write indexes past row buffer"}
+{"bug_id": "opencv-b27a0cb90aed", "sa_class": "LOGIC", "confidence": "low", "reason": "missing quote validation for XML attribute values"}
+{"bug_id": "opencv-b7c9f43a731b", "sa_class": "LOGIC", "confidence": "low", "reason": "CvMatND conversion branch restructured, intent unclear"}
+{"bug_id": "opencv-b95e3c7e7f80", "sa_class": "LOGIC", "confidence": "low", "reason": "float precision in homography denominator calculation"}
+{"bug_id": "opencv-c4f59cf36a65", "sa_class": "MEMORY", "confidence": "low", "reason": "pyramid buffer sized from wrong level, OOB writes"}
+{"bug_id": "opencv-c4fd47005bde", "sa_class": "LOGIC", "confidence": "low", "reason": "input kind validation for polylines removed"}
+{"bug_id": "opencv-cb9f44f5771a", "sa_class": "MEMORY", "confidence": "low", "reason": "pyramid level offsets computed wrongly, OOB writes"}
+{"bug_id": "opencv-cef786b62d8e", "sa_class": "LOGIC", "confidence": "low", "reason": "only comment removed, defect intent unclear"}
+{"bug_id": "opencv-cfc1dfc23f11", "sa_class": "LOGIC", "confidence": "low", "reason": "contour chain termination condition wrong"}
+{"bug_id": "opencv-d97911c694c2", "sa_class": "UNKNOWN", "confidence": "high", "reason": "no snippet could be extracted"}
+{"bug_id": "opencv-da1a55ec7dbb", "sa_class": "LOGIC", "confidence": "high", "reason": "sRGB clamp condition written wrongly"}
+{"bug_id": "opencv-dcdb346f556f", "sa_class": "LOGIC", "confidence": "high", "reason": "wrong matrix elements read for rotation decomposition"}
+{"bug_id": "opencv-eb23b61a6803", "sa_class": "MEMORY", "confidence": "low", "reason": "distance transform table indexing and buffer undersized"}
+{"bug_id": "opencv-f418aa091479", "sa_class": "MEMORY", "confidence": "low", "reason": "edge fill copy bound and comparator, mixed mechanisms"}
+{"bug_id": "opencv-f624dc51adf5", "sa_class": "LOGIC", "confidence": "low", "reason": "scalar conversion and compare fast path wrong"}
+{"bug_id": "opencv-ff66d0af4e7e", "sa_class": "MEMORY", "confidence": "high", "reason": "fixed-size fmt_pairs array overflows on malformed input"}

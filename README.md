@@ -26,6 +26,7 @@ We took the 14 C/C++ repositories from [SWE-sweep](https://swesweep.com) ("SWE-s
 
 - Flow Analysis (deep interprocedural defect checks, BD-*) alone caught **16/488 (3.3%)**: integer wraparound, use-before-initialization, index out of range, unreachable switch branches, unused values, errno misuse. See the per-repo rule breakdowns in `results/REPORT.md`.
 - The rest of the matches come from MISRA/CERT coding-standard rules landing on the buggy lines.
+- **Bug classification.** We classified all 488 bugs by defect mechanism with two independent blind passes plus adjudication (`classification/RUBRIC.md`). Only **162 (33.2%)** are the kind of defect a static analyzer targets (memory/UB 119, leaks/concurrency 16, error handling 27); the other two thirds are logic and requirements bugs. On those 162, Parasoft flagged **63 (38.9%)** at the changed region and **38 (23.5%)** strictly on the removed line, close to its all-bugs rates (37.5% / 21.1%). The logic bugs are what review, requirements-based testing, and structural coverage exist for, and neither the static analyzer nor the LLM agents (4.5%) reliably find them.
 
 ## How to read this honestly
 

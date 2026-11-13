@@ -1,0 +1,109 @@
+{"bug_id": "duckdb-0072efd0dc57", "sa_class": "LOGIC", "confidence": "low", "reason": "unique constraint name/index handling wrong branch", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-0134ded867ec", "sa_class": "RESOURCE", "confidence": "low", "reason": "sample sink wrongly marked parallel, race risk", "pass1": "RESOURCE", "pass2": "RESOURCE"}
+{"bug_id": "duckdb-025b1abedd19", "sa_class": "LOGIC", "confidence": "low", "reason": "cross product transform tree built wrongly", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-064a85ba2b9e", "sa_class": "LOGIC", "confidence": "low", "reason": "alias visibility check rejects valid references", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-0bcc094e9155", "sa_class": "LOGIC", "confidence": "low", "reason": "join transform region, defect only in additions", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-0e8e823ac5dd", "sa_class": "LOGIC", "confidence": "low", "reason": "collation applied to discarded copy, ignored", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-15becaa25700", "sa_class": "LOGIC", "confidence": "low", "reason": "dependent join binding offsets wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-165dc49e8f37", "sa_class": "MEMORY", "confidence": "high", "reason": "bit copy guard off-by-one, caught ARR39", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "duckdb-16912ea8773c", "sa_class": "LOGIC", "confidence": "low", "reason": "RLE run counter incremented wrongly on change", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-1790251e63cf", "sa_class": "LOGIC", "confidence": "low", "reason": "pivot aggregate transform region, defect in additions", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-19a0be39629f", "sa_class": "LOGIC", "confidence": "low", "reason": "coalesce wrongly listed as null propagating", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-19c1b85d79d3", "sa_class": "OTHER", "confidence": "low", "reason": "include removal, build defect", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "duckdb-1b0e6e7cf25b", "sa_class": "LOGIC", "confidence": "low", "reason": "list reduce selection index computed wrongly", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-1b72fe675ead", "sa_class": "LOGIC", "confidence": "low", "reason": "enum function returns single wrong value", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "duckdb-1e65f66ebffc", "sa_class": "LOGIC", "confidence": "low", "reason": "has_tz wrongly initialized to true", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-1e81c42dd1a4", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "OTHER", "pass2": "UNKNOWN"}
+{"bug_id": "duckdb-200dcf6a4fde", "sa_class": "LOGIC", "confidence": "low", "reason": "mark join simplification wrong condition", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-2020c8d7a281", "sa_class": "MEMORY", "confidence": "high", "reason": "integer wrap feeding recursion, caught BD-PB-INTWRAP", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-21cff7c1d5c6", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "OTHER", "pass2": "UNKNOWN"}
+{"bug_id": "duckdb-2217f9b6532e", "sa_class": "LOGIC", "confidence": "low", "reason": "varchar to timestamp cast claimed invertible", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-22ad99fe6d43", "sa_class": "LOGIC", "confidence": "low", "reason": "subquery transformed before type selection", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-2380f9735ed0", "sa_class": "LOGIC", "confidence": "low", "reason": "ICU weekday bounds checked against wrong size", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-24278e9ffd28", "sa_class": "LOGIC", "confidence": "low", "reason": "append initialization count bookkeeping wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-282d562aa395", "sa_class": "LOGIC", "confidence": "low", "reason": "constant comparison child side picked wrongly", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-2b390ca9f79d", "sa_class": "LOGIC", "confidence": "low", "reason": "foreign key info collected on wrong events", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-350ed10c5eea", "sa_class": "LOGIC", "confidence": "low", "reason": "LIKE underscore matching edge case wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-35212bbdc849", "sa_class": "ERROR", "confidence": "low", "reason": "missing switch case validation, caught BD-PB-SWITCH", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "duckdb-36c38199ce20", "sa_class": "LOGIC", "confidence": "low", "reason": "window operator added as aggregate relation", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-37580a29144b", "sa_class": "LOGIC", "confidence": "low", "reason": "negative exponent unhandled", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "duckdb-3a50d7579d15", "sa_class": "LOGIC", "confidence": "low", "reason": "on-conflict filter uses wrong column ids", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-3f1087fd04f8", "sa_class": "MEMORY", "confidence": "low", "reason": "Reference into empty-initialized chunk", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "duckdb-3f3cf4083ba4", "sa_class": "LOGIC", "confidence": "low", "reason": "delim join condition flip loop wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-3f7b28468e2e", "sa_class": "LOGIC", "confidence": "low", "reason": "missing filter result handling", "pass1": "LOGIC", "pass2": "ERROR"}
+{"bug_id": "duckdb-43b086a35dd5", "sa_class": "MEMORY", "confidence": "low", "reason": "array child sliced with unscaled bounds", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "duckdb-4473cf27097c", "sa_class": "LOGIC", "confidence": "low", "reason": "join relation extraction traversal wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-46a43d62ed7c", "sa_class": "MEMORY", "confidence": "low", "reason": "printf small-int format arg type confusion", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "duckdb-4815019d7a34", "sa_class": "LOGIC", "confidence": "low", "reason": "filter planning conditions incomplete", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-4b18f32ec21e", "sa_class": "MEMORY", "confidence": "low", "reason": "time parse args can read past end, caught ARR39", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "duckdb-4c125bd36641", "sa_class": "LOGIC", "confidence": "low", "reason": "aggregate relation child descent loop wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-4f2d8e8eaf2f", "sa_class": "MEMORY", "confidence": "low", "reason": "radix scatter args corrupt key locations", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "duckdb-4fae7f8bb350", "sa_class": "MEMORY", "confidence": "low", "reason": "cost computed on uninitialized estimator", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "duckdb-4fc939834090", "sa_class": "LOGIC", "confidence": "low", "reason": "trailing boolean struct flag handling wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-55543d201747", "sa_class": "MEMORY", "confidence": "high", "reason": "integer wrap, caught BD-PB-INTWRAP", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-5a33d9a1c013", "sa_class": "ERROR", "confidence": "low", "reason": "parser exception not caught", "pass1": "LOGIC", "pass2": "ERROR"}
+{"bug_id": "duckdb-5b031435d1c2", "sa_class": "LOGIC", "confidence": "low", "reason": "padding bits not set", "pass1": "ERROR", "pass2": "LOGIC"}
+{"bug_id": "duckdb-5b6992a0f3a6", "sa_class": "LOGIC", "confidence": "low", "reason": "first/arg_min tie-break error expression region", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-5e618dfa2d4f", "sa_class": "LOGIC", "confidence": "low", "reason": "FTS ignore string unescaped in macro SQL", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-61c3cfc37903", "sa_class": "LOGIC", "confidence": "low", "reason": "right semi/anti join match propagation region", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-62047414f1fa", "sa_class": "LOGIC", "confidence": "low", "reason": "view column name fallback mixes names/aliases", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-62e8b51ffa88", "sa_class": "MEMORY", "confidence": "low", "reason": "early return skips scan state initialization", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "duckdb-647f5416bff8", "sa_class": "LOGIC", "confidence": "low", "reason": "IN clause rewriter additions region", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-663c7d842c69", "sa_class": "LOGIC", "confidence": "low", "reason": "delete conflict detection too strict", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-675eb44147c9", "sa_class": "LOGIC", "confidence": "low", "reason": "double to decimal boundary check wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-685162621323", "sa_class": "LOGIC", "confidence": "low", "reason": "list cast null child handling wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-69a6459a8108", "sa_class": "LOGIC", "confidence": "low", "reason": "same-side tie-break (LOGIC)", "pass1": "OTHER", "pass2": "LOGIC"}
+{"bug_id": "duckdb-6dcb9e7c2bb4", "sa_class": "LOGIC", "confidence": "low", "reason": "numeric_limits unsupported types return wrong values", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-6f234f9c4978", "sa_class": "LOGIC", "confidence": "low", "reason": "result vector type copied from input wrongly", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-7463773a3cb5", "sa_class": "LOGIC", "confidence": "low", "reason": "ASOF join filter pushdown conditions", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-75521326481f", "sa_class": "MEMORY", "confidence": "low", "reason": "CreateIndexInfo fields left uninitialized", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "duckdb-7b570403d686", "sa_class": "LOGIC", "confidence": "low", "reason": "filter selection on non-flat vector wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-7fa52ed2bd69", "sa_class": "MEMORY", "confidence": "low", "reason": "unchecked C-style bind_data casts, type confusion", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "duckdb-824a50418841", "sa_class": "LOGIC", "confidence": "low", "reason": "enum_range returns VARCHAR list not ENUM", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-8450ad72d657", "sa_class": "MEMORY", "confidence": "low", "reason": "dictionary child references payload wrongly", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "duckdb-85e3b88d8300", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "OTHER", "pass2": "UNKNOWN"}
+{"bug_id": "duckdb-863b896717f1", "sa_class": "MEMORY", "confidence": "low", "reason": "append without Flatten invalidates vector", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "duckdb-8679358a0503", "sa_class": "LOGIC", "confidence": "low", "reason": "timestamp cast invertibility block wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-86fe04caf9f4", "sa_class": "LOGIC", "confidence": "low", "reason": "shift bound computed with wrong type", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-8a3e974e8727", "sa_class": "LOGIC", "confidence": "low", "reason": "nested map keys serialized wrongly", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-8dcd0ac1cae0", "sa_class": "LOGIC", "confidence": "low", "reason": "ARRAY sublink transform region", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-8ef8ca9824ab", "sa_class": "MEMORY", "confidence": "high", "reason": "StringValue::Get before null check", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "duckdb-8fee68dc6ef2", "sa_class": "LOGIC", "confidence": "low", "reason": "pivot construction and binding region", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-9247c5568ef1", "sa_class": "LOGIC", "confidence": "low", "reason": "window partitions compared as unordered set", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-94dd9ceb3b3a", "sa_class": "LOGIC", "confidence": "low", "reason": "UNION wrongly allows removing dedup columns", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-95c312388f7b", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "OTHER", "pass2": "UNKNOWN"}
+{"bug_id": "duckdb-96cd6f4c49c4", "sa_class": "ERROR", "confidence": "low", "reason": "unvalidated value range, caught BD-PB-VALRANGE", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-99482115caaa", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "OTHER", "pass2": "UNKNOWN"}
+{"bug_id": "duckdb-9dda7601a697", "sa_class": "LOGIC", "confidence": "low", "reason": "foreign key lookup uses INVALID_CATALOG", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-a3491d68d372", "sa_class": "MEMORY", "confidence": "high", "reason": "BOM probe reads past buffer end", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "duckdb-a36a17c4de98", "sa_class": "LOGIC", "confidence": "low", "reason": "cast invertibility check uses wrong type", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-a5eb42c56587", "sa_class": "LOGIC", "confidence": "low", "reason": "alter binder rewritten, binding behavior wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-a61365926289", "sa_class": "LOGIC", "confidence": "low", "reason": "parquet list child length computed wrongly", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-a82cf49f86dd", "sa_class": "LOGIC", "confidence": "low", "reason": "RANGE frame TIME conversion skipped wrongly", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-ab8e5666b8b2", "sa_class": "LOGIC", "confidence": "low", "reason": "select list transformed before FROM clause", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-af0f5334fb87", "sa_class": "LOGIC", "confidence": "low", "reason": "dependent join pushdown side handling wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-b16e2dce4c66", "sa_class": "LOGIC", "confidence": "low", "reason": "datediff epoch division truncates toward zero", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-b189dd7ff15f", "sa_class": "LOGIC", "confidence": "low", "reason": "unnest column index incremented off by one", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-b219521ef1e5", "sa_class": "LOGIC", "confidence": "low", "reason": "year specifiers wrongly skip offset handling", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-b59aa14f8b3f", "sa_class": "LOGIC", "confidence": "low", "reason": "exponent loop stops when result reaches zero", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-b6d9ac9ac4c4", "sa_class": "LOGIC", "confidence": "low", "reason": "base_binding captured after being overwritten", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-b9b1bb8a239b", "sa_class": "LOGIC", "confidence": "low", "reason": "binding rewritten, mechanism not visible", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "duckdb-ba44421804d6", "sa_class": "LOGIC", "confidence": "low", "reason": "recursive CTE dependent join flatten order", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-c6f9dfd6591b", "sa_class": "LOGIC", "confidence": "low", "reason": "RHS column replacement condition too narrow", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-c9112165759d", "sa_class": "RESOURCE", "confidence": "low", "reason": "segments moved before lock taken, data race", "pass1": "RESOURCE", "pass2": "RESOURCE"}
+{"bug_id": "duckdb-cfdd5889da28", "sa_class": "LOGIC", "confidence": "low", "reason": "stddev combine formula handling", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-da5c7335ea4b", "sa_class": "LOGIC", "confidence": "low", "reason": "window partition pushdown additions region", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-dbd78f790c07", "sa_class": "LOGIC", "confidence": "low", "reason": "JSON read null handling restructured", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-dc96153f0266", "sa_class": "LOGIC", "confidence": "low", "reason": "missing final flush skews size estimate", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "duckdb-de68e49f3522", "sa_class": "RESOURCE", "confidence": "low", "reason": "aggregate intermediate states not destroyed", "pass1": "LOGIC", "pass2": "RESOURCE"}
+{"bug_id": "duckdb-e2c62d0b96d9", "sa_class": "LOGIC", "confidence": "low", "reason": "unnest alias read before binding", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-e544467a8f42", "sa_class": "LOGIC", "confidence": "low", "reason": "nested correlated subquery planning condition", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-e5c74941dc92", "sa_class": "LOGIC", "confidence": "low", "reason": "USING columns unquoted in SQL output", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-eca6287b0265", "sa_class": "LOGIC", "confidence": "low", "reason": "JSON lambda binding fallback wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-ef0ded97b22b", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "OTHER", "pass2": "UNKNOWN"}
+{"bug_id": "duckdb-f0ea35020083", "sa_class": "LOGIC", "confidence": "low", "reason": "conjunction dedup removes wrong conjunct", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-f2cf1db95264", "sa_class": "RESOURCE", "confidence": "low", "reason": "dropped child column not committed", "pass1": "LOGIC", "pass2": "RESOURCE"}
+{"bug_id": "duckdb-f42aff9fc29f", "sa_class": "LOGIC", "confidence": "low", "reason": "payload scan missing", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "duckdb-fa43a31dc1a0", "sa_class": "LOGIC", "confidence": "low", "reason": "create table wrongly disables stream result", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-fbcfadceb477", "sa_class": "LOGIC", "confidence": "high", "reason": "macros recursively defined in terms of themselves", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "duckdb-ffb453f07fce", "sa_class": "LOGIC", "confidence": "low", "reason": "arg_min/max by-type dispatch incomplete", "pass1": "LOGIC", "pass2": "LOGIC"}

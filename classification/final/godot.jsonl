@@ -1,0 +1,17 @@
+{"bug_id": "godot-141d838cb0a9", "sa_class": "LOGIC", "confidence": "low", "reason": "line parsing behavior, no removed lines", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "godot-1487db8f8067", "sa_class": "MEMORY", "confidence": "low", "reason": "same-side tie-break (MEMORY)", "pass1": "MEMORY", "pass2": "RESOURCE"}
+{"bug_id": "godot-16e44a6ee5fd", "sa_class": "LOGIC", "confidence": "high", "reason": "line-break algorithm picks wrong breaks", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "godot-1ae6171b9aa5", "sa_class": "LOGIC", "confidence": "low", "reason": "anchor/min-size cache invalidation wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "godot-1c09cb9eb560", "sa_class": "LOGIC", "confidence": "low", "reason": "connection flags save/parse behavior wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "godot-2a35121cb587", "sa_class": "LOGIC", "confidence": "high", "reason": "class doc description handling wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "godot-3cec1823b69a", "sa_class": "LOGIC", "confidence": "low", "reason": "bracket/string and caret logic wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "godot-4a105bb044ef", "sa_class": "MEMORY", "confidence": "low", "reason": "lock index ref/unref imbalance, lifetime", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "godot-5a307011ac8b", "sa_class": "LOGIC", "confidence": "high", "reason": "matrix inversion algorithm wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "godot-6191f779e20c", "sa_class": "MEMORY", "confidence": "low", "reason": "same-side tie-break (MEMORY)", "pass1": "ERROR", "pass2": "MEMORY"}
+{"bug_id": "godot-663987b95b26", "sa_class": "LOGIC", "confidence": "high", "reason": "UTF-8 sequence decoding wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "godot-6ca6a961c8e1", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "LOGIC", "pass2": "UNKNOWN"}
+{"bug_id": "godot-979d80320b3c", "sa_class": "LOGIC", "confidence": "high", "reason": "text extents reset condition wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "godot-ad060d7c9da5", "sa_class": "LOGIC", "confidence": "low", "reason": "geometry plane math, no removed lines", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "godot-bddc285d34b7", "sa_class": "LOGIC", "confidence": "high", "reason": "sRGB conversion formula wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "godot-c985347ac8f8", "sa_class": "LOGIC", "confidence": "high", "reason": "epsilon comparison logic wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "godot-dc71181af3af", "sa_class": "LOGIC", "confidence": "low", "reason": "compiler warning emission behavior wrong", "pass1": "LOGIC", "pass2": "LOGIC"}

@@ -2,7 +2,7 @@
 
 **By ESL (Engineering Software Lab), eswlab.com**
 
-The debate at this year's MISRA Conference was the one every quality manager in avionics, automotive, and medical devices is having right now: with LLM coding agents resolving GitHub issues end to end, are the traditional methods, static analysis, coding standards like MISRA, structural coverage, human review, still relevant, or are we funding yesterday's safety net?
+The debate at MISRA Conference 2026 (Manchester, UK, 10 November 2026) was the one every quality manager in avionics, automotive, and medical devices is having right now: with LLM coding agents resolving GitHub issues end to end, are the traditional methods, static analysis, coding standards like MISRA, structural coverage, human review, still relevant, or are we funding yesterday's safety net?
 
 Instead of arguing, we measured. We took the hardest autonomous-bug benchmark we could find, SWE-sweep, built by researchers from Meta FAIR, Harvard, and Stanford, and pointed a commercial static analysis tool at exactly the same bugs. This article reports what happened, how we made the comparison fair, and why we believe the results matter for anyone shipping software where a bug can cost lives.
 
@@ -66,6 +66,14 @@ Those are exactly the defect classes that matter in DO-178C and ISO 26262 land: 
 
 The other 167 matches came from MISRA and CERT rules landing on buggy lines: type-category mismatches, C-style casts, pointer arithmetic, unused values. A flag is not a diagnosis, but for a reviewer it is a pointer to the exact line where a real bug lives.
 
+### What static analysis could even see
+
+A fair question follows: of the 488 bugs, how many are even the kind of defect a static analyzer targets? The SWE-sweep authors themselves note that most of their bugs can only be recognized by inferring the intended behavior from the repository. So we classified every bug by the mechanism of its defect, judged from the code the maintainers' fix removed, using two independent blind classification passes plus adjudication of every disagreement, with the rubric and all 488 per-bug labels published in the repository.
+
+The result: only **162 of the 488 bugs (33.2%)** are in a static analyzer's wheelhouse, memory safety and undefined behavior (119), leaks and concurrency (16), and error handling or API contract violations (27). The other two thirds are logic and requirements bugs: wrong operators, wrong constants, wrong branch, wrong protocol step, wrong interpretation of a specification. No deterministic tool flags those by design, and the SWE-sweep agents did not reliably find them either.
+
+On those 162 mechanism bugs, Parasoft flagged **63 (38.9%)** at the changed region and **38 (23.5%)** on the exact removed line, close to its all-bugs rates of 37.5% and 21.1%. The classification does not inflate the headline; it clarifies the division of labor. A third of real-world bugs are mechanism defects a deterministic tool can flag with auditable findings, and the tool's hit rate there is roughly its overall rate. The other two thirds, the logic bugs, are what design review, requirements traceability, requirements-based testing, and structural coverage exist for, in every regulated industry. An LLM agent contributes little on either layer today: 4.5% overall, and it has no qualification story on either layer either.
+
 ## Read this honestly, please
 
 Two numbers this close in a table invite over-reading, so here is what the comparison does and does not say:
@@ -79,7 +87,7 @@ Two numbers this close in a table invite over-reading, so here is what the compa
 
 If you build software under DO-178C, ISO 26262, IEC 62304, or IEC 61504, two conclusions follow directly.
 
-**First, the traditional stack is not obsolete; it is the load-bearing wall.** Deterministic static analysis with MISRA/CERT rule sets flagged a third of all real historical bugs at the defective lines, a fifth of them on the exact line, in codebases where the best autonomous agent closed under five percent. And the traditional stack does not stop at static analysis: requirements-based testing, structural coverage up to MC/DC, and human review each add layers the agent result never touches.
+**First, the traditional stack is not obsolete; it is the load-bearing wall.** Deterministic static analysis with MISRA/CERT rule sets flagged a third of all real historical bugs at the defective lines, a fifth of them on the exact line, in codebases where the best autonomous agent closed under five percent. And the traditional stack does not stop at static analysis: the two thirds of bugs that are logic and requirements defects are exactly what requirements-based testing, structural coverage up to MC/DC, and human review each add layers for, layers the agent result never touches.
 
 **Second, and more decisive than any percentage: qualification.** Every tool in the traditional stack is deterministic and auditable, so it can be qualified under DO-330 or ISO 26262's tool confidence levels with documented criteria. An LLM agent is nondeterministic: the same repository can yield different results on consecutive runs, and its failures are silent, it reports success on code that does not work. In a safety argument, actively misleading evidence is worse than missing evidence. Until there is an accepted qualification scheme for nondeterministic learned tools, they cannot enter the certification evidence, regardless of how good their scores get.
 

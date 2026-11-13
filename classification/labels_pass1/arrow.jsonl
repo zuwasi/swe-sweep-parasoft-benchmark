@@ -1,0 +1,47 @@
+{"bug_id": "arrow-0cc9fb2dd29f", "sa_class": "LOGIC", "confidence": "low", "reason": "reader properties ignored scan batch size options"}
+{"bug_id": "arrow-121fb8b54251", "sa_class": "LOGIC", "confidence": "low", "reason": "hash omits array data contents"}
+{"bug_id": "arrow-19465d9c4aac", "sa_class": "LOGIC", "confidence": "low", "reason": "field path binding used wrong lookup"}
+{"bug_id": "arrow-1a3fe19e8bf0", "sa_class": "RESOURCE", "confidence": "high", "reason": "aborted_ flag read without synchronization data race"}
+{"bug_id": "arrow-264e1ebbe40c", "sa_class": "LOGIC", "confidence": "low", "reason": "mixed bit reader correctness fixes"}
+{"bug_id": "arrow-26f5542e1be5", "sa_class": "LOGIC", "confidence": "high", "reason": "checked wrong isset min/max field"}
+{"bug_id": "arrow-2cdadc752c2e", "sa_class": "LOGIC", "confidence": "low", "reason": "cast lookup special case mishandled"}
+{"bug_id": "arrow-2fd06f68a200", "sa_class": "ERROR", "confidence": "low", "reason": "computed strides never validated against data"}
+{"bug_id": "arrow-369f913202de", "sa_class": "LOGIC", "confidence": "low", "reason": "pointer cast to int64 constant in codegen"}
+{"bug_id": "arrow-3d2dc9c86ad0", "sa_class": "LOGIC", "confidence": "low", "reason": "ValueOrElse alternative forwarding wrong"}
+{"bug_id": "arrow-3e14973c5f12", "sa_class": "LOGIC", "confidence": "low", "reason": "Equals rework of self comparison"}
+{"bug_id": "arrow-40583d085a58", "sa_class": "LOGIC", "confidence": "low", "reason": "writer Close handling incomplete"}
+{"bug_id": "arrow-479fccb220cc", "sa_class": "LOGIC", "confidence": "high", "reason": "date truncation rounds toward zero not floor"}
+{"bug_id": "arrow-48d0b45c48f0", "sa_class": "LOGIC", "confidence": "high", "reason": "missing increment causes wrong loop scan"}
+{"bug_id": "arrow-4bbc9f6cd795", "sa_class": "ERROR", "confidence": "low", "reason": "binary to string cast lacks validation"}
+{"bug_id": "arrow-4c84f1faa214", "sa_class": "LOGIC", "confidence": "low", "reason": "no snippet lines available"}
+{"bug_id": "arrow-4e8d0cead54f", "sa_class": "MEMORY", "confidence": "low", "reason": "error return leaves output uninitialized"}
+{"bug_id": "arrow-5a279df3fd5a", "sa_class": "LOGIC", "confidence": "low", "reason": "schema field index lookup wrong"}
+{"bug_id": "arrow-5abdc0d1a217", "sa_class": "LOGIC", "confidence": "low", "reason": "nested child layouts not accumulated"}
+{"bug_id": "arrow-60dfbaf3519c", "sa_class": "LOGIC", "confidence": "low", "reason": "record reader accounting wrong"}
+{"bug_id": "arrow-624e0738ed5f", "sa_class": "LOGIC", "confidence": "high", "reason": "timestamp unit chosen wrong branch"}
+{"bug_id": "arrow-67205dcd9782", "sa_class": "MEMORY", "confidence": "high", "reason": "null check tests wrong variable causes deref"}
+{"bug_id": "arrow-6cc9de91ea5e", "sa_class": "LOGIC", "confidence": "low", "reason": "dictionary view type mismatch mishandled"}
+{"bug_id": "arrow-836fa5c90cf9", "sa_class": "LOGIC", "confidence": "high", "reason": "translate map insert duplicates mishandled"}
+{"bug_id": "arrow-8a41d3fa0ac8", "sa_class": "LOGIC", "confidence": "low", "reason": "null type replace mask ignores mask"}
+{"bug_id": "arrow-8a6d1850de5a", "sa_class": "LOGIC", "confidence": "low", "reason": "map type built from wrong child fields"}
+{"bug_id": "arrow-8c472a2596ce", "sa_class": "LOGIC", "confidence": "high", "reason": "missing logical type annotations in written schema"}
+{"bug_id": "arrow-97c0b6198f30", "sa_class": "LOGIC", "confidence": "low", "reason": "aggregator merge cast and mean wrong"}
+{"bug_id": "arrow-97ed55fe5885", "sa_class": "LOGIC", "confidence": "low", "reason": "date parse month day handling wrong"}
+{"bug_id": "arrow-98c930cfb2f6", "sa_class": "MEMORY", "confidence": "low", "reason": "int truncation undersizes decompression buffer"}
+{"bug_id": "arrow-9a0cb740d8ac", "sa_class": "LOGIC", "confidence": "low", "reason": "writer row group handling wrong"}
+{"bug_id": "arrow-9f952a8a44b5", "sa_class": "LOGIC", "confidence": "low", "reason": "slice size estimate wrong"}
+{"bug_id": "arrow-a642ccf7200e", "sa_class": "LOGIC", "confidence": "low", "reason": "dictionary child data copy mishandled"}
+{"bug_id": "arrow-a7cd3ba57ac2", "sa_class": "MEMORY", "confidence": "low", "reason": "memcpy length from wrong array offsets"}
+{"bug_id": "arrow-b4b15ce0d6ab", "sa_class": "MEMORY", "confidence": "low", "reason": "constructors dropped memory alignment parameter"}
+{"bug_id": "arrow-b831ede509b4", "sa_class": "LOGIC", "confidence": "low", "reason": "throttle accounting condition wrong"}
+{"bug_id": "arrow-be576c6bbb37", "sa_class": "LOGIC", "confidence": "low", "reason": "timestamp varchar formatting wrong"}
+{"bug_id": "arrow-c1cc8abccb1b", "sa_class": "MEMORY", "confidence": "low", "reason": "bitmap copy without null buffer check"}
+{"bug_id": "arrow-c844b43f97c5", "sa_class": "MEMORY", "confidence": "low", "reason": "child data spans not filled"}
+{"bug_id": "arrow-d0cd5512a992", "sa_class": "ERROR", "confidence": "high", "reason": "kernel errors not propagated to caller"}
+{"bug_id": "arrow-d4e732abe1d1", "sa_class": "LOGIC", "confidence": "low", "reason": "slice offset condition wrong for variable length"}
+{"bug_id": "arrow-d7a1dcf3bafd", "sa_class": "LOGIC", "confidence": "low", "reason": "implicit cast options wrong"}
+{"bug_id": "arrow-db58ca99eaa0", "sa_class": "LOGIC", "confidence": "low", "reason": "true_count null check wrong"}
+{"bug_id": "arrow-e4fc3a8e2c13", "sa_class": "LOGIC", "confidence": "low", "reason": "remaining rows formula double counts offset"}
+{"bug_id": "arrow-eb9c7276cf24", "sa_class": "LOGIC", "confidence": "low", "reason": "writer page counters reset wrong"}
+{"bug_id": "arrow-eef26b83f5e8", "sa_class": "MEMORY", "confidence": "low", "reason": "statistics null check wrong pointer"}
+{"bug_id": "arrow-f5b99cc3814b", "sa_class": "LOGIC", "confidence": "low", "reason": "utf8 continuation length counting wrong"}

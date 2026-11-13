@@ -1,0 +1,40 @@
+{"bug_id": "tarantool-02d1749c6bfb", "sa_class": "MEMORY", "confidence": "high", "reason": "missing bounds check before reading ring buffer record"}
+{"bug_id": "tarantool-067eeb123c0e", "sa_class": "MEMORY", "confidence": "low", "reason": "iterator lacks index ref and vtable init; use-after-free risk"}
+{"bug_id": "tarantool-0b1d99f9080c", "sa_class": "LOGIC", "confidence": "high", "reason": "missing old_privilege init; grant replaces old privileges wrongly"}
+{"bug_id": "tarantool-0e02e4373959", "sa_class": "LOGIC", "confidence": "high", "reason": "wrong comparison result type resolution rules"}
+{"bug_id": "tarantool-0e3671b1b049", "sa_class": "LOGIC", "confidence": "low", "reason": "concurrent box.cfg race plus missing snapshot recovery triggers"}
+{"bug_id": "tarantool-217abe7a70be", "sa_class": "LOGIC", "confidence": "low", "reason": "cursor index incremented in wrong place; wrong register used"}
+{"bug_id": "tarantool-3203ce795485", "sa_class": "MEMORY", "confidence": "high", "reason": "unclamped strtol width indexes pow10 out of bounds"}
+{"bug_id": "tarantool-35044a57ea04", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong argument table parsing for backtrace option"}
+{"bug_id": "tarantool-354f1a67549b", "sa_class": "MEMORY", "confidence": "high", "reason": "msgpack map parsed without byte bounds; overread"}
+{"bug_id": "tarantool-39735317fbaf", "sa_class": "MEMORY", "confidence": "low", "reason": "dequote relies on zero termination; reads past buffer"}
+{"bug_id": "tarantool-40d35b1255f4", "sa_class": "LOGIC", "confidence": "low", "reason": "unconditional negative sign flag for zero remainder"}
+{"bug_id": "tarantool-452a757c1c97", "sa_class": "MEMORY", "confidence": "high", "reason": "off-by-one bound allows thread_id equal to count; OOB"}
+{"bug_id": "tarantool-46aa6eb83fb9", "sa_class": "MEMORY", "confidence": "high", "reason": "space pointer stored in VDBE; dangling after yield"}
+{"bug_id": "tarantool-46b0022d552a", "sa_class": "LOGIC", "confidence": "low", "reason": "decimal comparison loses sign or precision via wrong conversion"}
+{"bug_id": "tarantool-4753065c09ed", "sa_class": "MEMORY", "confidence": "low", "reason": "stale merge_source pointer pushed; use-after-free"}
+{"bug_id": "tarantool-4e1bd4f2ca09", "sa_class": "RESOURCE", "confidence": "high", "reason": "transport never stopped; missing cleanup on garbage collection"}
+{"bug_id": "tarantool-4f3f87493c3a", "sa_class": "RESOURCE", "confidence": "low", "reason": "greeting read lacks timeout; hang on dead peer"}
+{"bug_id": "tarantool-67319bd2abd7", "sa_class": "MEMORY", "confidence": "low", "reason": "types array shifted with out-of-bounds read"}
+{"bug_id": "tarantool-7516474ad8c9", "sa_class": "ERROR", "confidence": "high", "reason": "assert assumes rc zero; return unchecked in release"}
+{"bug_id": "tarantool-7530007077a3", "sa_class": "LOGIC", "confidence": "low", "reason": "unique_part_count set with inverted uniqueness logic"}
+{"bug_id": "tarantool-77c69aba7b2a", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong iterator type sets for MVCC gap tracking"}
+{"bug_id": "tarantool-78ccf4ee3c7f", "sa_class": "LOGIC", "confidence": "high", "reason": "hash iterator uses wrong direction function"}
+{"bug_id": "tarantool-8c4fecf8c4f6", "sa_class": "MEMORY", "confidence": "low", "reason": "key matched without decoding; wrong field offset read"}
+{"bug_id": "tarantool-8cfc91109fe1", "sa_class": "LOGIC", "confidence": "high", "reason": "index part normalization transformation wrong"}
+{"bug_id": "tarantool-95c521353f4e", "sa_class": "RESOURCE", "confidence": "low", "reason": "fiber cancellation during WAL yield leaves entry inconsistent"}
+{"bug_id": "tarantool-9eaa7be00afa", "sa_class": "LOGIC", "confidence": "high", "reason": "wrong else branch in datetime handling"}
+{"bug_id": "tarantool-a0264983c4a6", "sa_class": "ERROR", "confidence": "low", "reason": "index validation moved; previously applied inconsistently"}
+{"bug_id": "tarantool-b01da1bbf9f4", "sa_class": "LOGIC", "confidence": "high", "reason": "lag computed wrongly when timestamp zero"}
+{"bug_id": "tarantool-c2e562efa2e4", "sa_class": "LOGIC", "confidence": "low", "reason": "wakeup on dead fiber; wrong state handling"}
+{"bug_id": "tarantool-c8612c63469d", "sa_class": "MEMORY", "confidence": "high", "reason": "assert-only null check; release build dereferences null"}
+{"bug_id": "tarantool-d32112b21656", "sa_class": "LOGIC", "confidence": "low", "reason": "psearch returns incomparable vclock; wrong files garbage collected"}
+{"bug_id": "tarantool-d527e3e234ed", "sa_class": "MEMORY", "confidence": "high", "reason": "story deleted while still gap-tracked; use-after-free"}
+{"bug_id": "tarantool-dad93ce21d26", "sa_class": "LOGIC", "confidence": "high", "reason": "wrong column type mapping constant"}
+{"bug_id": "tarantool-dbfb0940d12f", "sa_class": "LOGIC", "confidence": "high", "reason": "wrong conflict detection condition in MVCC"}
+{"bug_id": "tarantool-e409eec61dc6", "sa_class": "MEMORY", "confidence": "low", "reason": "values not cleared; union reused with wrong type tag"}
+{"bug_id": "tarantool-f3e2922c14ee", "sa_class": "RESOURCE", "confidence": "low", "reason": "bound values not unbound after execution; stale references"}
+{"bug_id": "tarantool-f4801b8daa83", "sa_class": "LOGIC", "confidence": "low", "reason": "rounding via sprintf with huge precision; wrong value"}
+{"bug_id": "tarantool-f7aac1b241c3", "sa_class": "MEMORY", "confidence": "low", "reason": "wrong field pointer for comparison; possible overread"}
+{"bug_id": "tarantool-f90cfe93f0ad", "sa_class": "LOGIC", "confidence": "high", "reason": "wrong stdin execution condition"}
+{"bug_id": "tarantool-fc35d5a6cfe7", "sa_class": "LOGIC", "confidence": "low", "reason": "tree iterator state mishandled after tuple clarify"}

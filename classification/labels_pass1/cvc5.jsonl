@@ -1,0 +1,38 @@
+{"bug_id": "cvc5-0190fa8ae7ec", "sa_class": "LOGIC", "confidence": "low", "reason": "term traversal insertion order wrong"}
+{"bug_id": "cvc5-024cc837ea11", "sa_class": "LOGIC", "confidence": "high", "reason": "plus flattening mishandles mixed arithmetic"}
+{"bug_id": "cvc5-11eabe28d431", "sa_class": "ERROR", "confidence": "low", "reason": "assert asserts wrong rewrite property"}
+{"bug_id": "cvc5-1337df3bc465", "sa_class": "LOGIC", "confidence": "high", "reason": "proof step built with wrong arguments"}
+{"bug_id": "cvc5-15ce999a65bb", "sa_class": "ERROR", "confidence": "low", "reason": "unit equality inference sent wrongly"}
+{"bug_id": "cvc5-169d417c6b41", "sa_class": "LOGIC", "confidence": "low", "reason": "equivalence class iteration missing increment"}
+{"bug_id": "cvc5-18943577ecec", "sa_class": "LOGIC", "confidence": "low", "reason": "normalizeConstant uses wrong cardinality"}
+{"bug_id": "cvc5-308a909279a9", "sa_class": "ERROR", "confidence": "low", "reason": "inferences sent with wrong arguments"}
+{"bug_id": "cvc5-3489f19d0af7", "sa_class": "MEMORY", "confidence": "low", "reason": "stored dangling model pointer"}
+{"bug_id": "cvc5-39fc8377f26f", "sa_class": "LOGIC", "confidence": "low", "reason": "no snippet lines available"}
+{"bug_id": "cvc5-3d08a22f361b", "sa_class": "LOGIC", "confidence": "low", "reason": "loop rewrite min max condition wrong"}
+{"bug_id": "cvc5-50f4bf9c8c66", "sa_class": "LOGIC", "confidence": "low", "reason": "fold over union order wrong"}
+{"bug_id": "cvc5-647ecea6ab0d", "sa_class": "LOGIC", "confidence": "low", "reason": "datatype cardinality arg types wrong"}
+{"bug_id": "cvc5-6f19e69efd06", "sa_class": "LOGIC", "confidence": "low", "reason": "early return skips solution construction"}
+{"bug_id": "cvc5-6f88c8072d5a", "sa_class": "LOGIC", "confidence": "low", "reason": "power rewrite exponent handling wrong"}
+{"bug_id": "cvc5-726a3ded06b0", "sa_class": "ERROR", "confidence": "low", "reason": "proof rule argument type asserts wrong"}
+{"bug_id": "cvc5-8c19798c9c2d", "sa_class": "LOGIC", "confidence": "low", "reason": "effort loop bounds wrong"}
+{"bug_id": "cvc5-8d2b297c1bbc", "sa_class": "LOGIC", "confidence": "low", "reason": "solver loop restructure wrong"}
+{"bug_id": "cvc5-8fd2c025e245", "sa_class": "LOGIC", "confidence": "low", "reason": "representative depth mode missing case"}
+{"bug_id": "cvc5-92a35b3a1356", "sa_class": "LOGIC", "confidence": "low", "reason": "equalities extracted from explanation wrong"}
+{"bug_id": "cvc5-9abdf24fe930", "sa_class": "LOGIC", "confidence": "low", "reason": "quantifier pre rewrite merges wrong"}
+{"bug_id": "cvc5-9c7602939dee", "sa_class": "LOGIC", "confidence": "low", "reason": "string type rule checks wrong argument"}
+{"bug_id": "cvc5-a6fa2c8060f2", "sa_class": "ERROR", "confidence": "high", "reason": "decompose success unchecked assertion"}
+{"bug_id": "cvc5-a874c6f84e37", "sa_class": "LOGIC", "confidence": "low", "reason": "inst constant condition wrong"}
+{"bug_id": "cvc5-a92827dd3f89", "sa_class": "ERROR", "confidence": "low", "reason": "normalize constant asserts non constant"}
+{"bug_id": "cvc5-aa2797db1fd7", "sa_class": "LOGIC", "confidence": "low", "reason": "null representative fallback unsound"}
+{"bug_id": "cvc5-c443eedc46d1", "sa_class": "LOGIC", "confidence": "low", "reason": "RAN division rewrite wrong"}
+{"bug_id": "cvc5-c6c6ba5bd904", "sa_class": "LOGIC", "confidence": "low", "reason": "division children insertion wrong"}
+{"bug_id": "cvc5-cb7581ed4265", "sa_class": "ERROR", "confidence": "low", "reason": "API precondition checks wrong"}
+{"bug_id": "cvc5-d440f0779a99", "sa_class": "LOGIC", "confidence": "low", "reason": "generic multiply rewrite wrong"}
+{"bug_id": "cvc5-d73f0189501b", "sa_class": "LOGIC", "confidence": "low", "reason": "string model length splits wrong"}
+{"bug_id": "cvc5-d9746c57e9f2", "sa_class": "LOGIC", "confidence": "low", "reason": "difficulty proof asserts wrong"}
+{"bug_id": "cvc5-e1ed9a524e71", "sa_class": "LOGIC", "confidence": "low", "reason": "int to bv size handling wrong"}
+{"bug_id": "cvc5-ee122a56fa79", "sa_class": "LOGIC", "confidence": "low", "reason": "proof check condition wrong"}
+{"bug_id": "cvc5-f0994ce1b268", "sa_class": "LOGIC", "confidence": "low", "reason": "finite field negation rewrite wrong"}
+{"bug_id": "cvc5-f218e48e2ada", "sa_class": "LOGIC", "confidence": "low", "reason": "substr length bound comparison wrong"}
+{"bug_id": "cvc5-f313728ce254", "sa_class": "LOGIC", "confidence": "low", "reason": "operator translation exception condition wrong"}
+{"bug_id": "cvc5-ffc998069294", "sa_class": "LOGIC", "confidence": "low", "reason": "clause level optimization wrong"}

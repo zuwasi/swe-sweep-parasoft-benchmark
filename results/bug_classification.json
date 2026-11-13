@@ -1,0 +1,269 @@
+{
+  "method": "Two independent blind classification passes over the fixed-version removed/inserted lines of each of the 488 SWE-sweep bugs, adjudicated by the analyst with priority to the 16 bugs Parasoft Flow Analysis caught (ground truth for mechanism). Classes: MEMORY (memory safety/UB), RESOURCE (leaks/concurrency), ERROR (error handling/API contract), LOGIC (wrong decision/formula/spec), OTHER (build/test/docs), UNKNOWN (no snippet extractable, 19 bugs, excluded from the SA-addressable denominator). See classification/RUBRIC.md.",
+  "totals": {
+    "bugs": 488,
+    "class_counts": {
+      "LOGIC": 300,
+      "RESOURCE": 16,
+      "MEMORY": 119,
+      "ERROR": 27,
+      "UNKNOWN": 19,
+      "OTHER": 7
+    },
+    "sa_addressable": 162,
+    "sa_addressable_pct": 33.2,
+    "sa_caught_region": 63,
+    "pct_sa_region": 38.9,
+    "sa_caught_strict": 38,
+    "pct_sa_strict": 23.5,
+    "found_region_all": 183,
+    "pct_region_all": 37.5,
+    "low_confidence_labels": 400
+  },
+  "per_repo": {
+    "duckdb": {
+      "language": "C++",
+      "bugs": 109,
+      "class_counts": {
+        "LOGIC": 79,
+        "RESOURCE": 4,
+        "MEMORY": 16,
+        "OTHER": 1,
+        "UNKNOWN": 6,
+        "ERROR": 3
+      },
+      "sa_addressable": 23,
+      "sa_caught_region": 16,
+      "sa_caught_strict": 8,
+      "pct_sa_region": 69.6,
+      "pct_sa_strict": 34.8,
+      "found_region_all": 56,
+      "pct_region_all": 51.4
+    },
+    "gdal": {
+      "language": "C++",
+      "bugs": 72,
+      "class_counts": {
+        "LOGIC": 40,
+        "RESOURCE": 3,
+        "MEMORY": 24,
+        "UNKNOWN": 4,
+        "OTHER": 1
+      },
+      "sa_addressable": 27,
+      "sa_caught_region": 2,
+      "sa_caught_strict": 0,
+      "pct_sa_region": 7.4,
+      "pct_sa_strict": 0.0,
+      "found_region_all": 3,
+      "pct_region_all": 4.2
+    },
+    "arrow": {
+      "language": "C++",
+      "bugs": 47,
+      "class_counts": {
+        "LOGIC": 26,
+        "RESOURCE": 2,
+        "MEMORY": 13,
+        "ERROR": 4,
+        "UNKNOWN": 1,
+        "OTHER": 1
+      },
+      "sa_addressable": 19,
+      "sa_caught_region": 5,
+      "sa_caught_strict": 3,
+      "pct_sa_region": 26.3,
+      "pct_sa_strict": 15.8,
+      "found_region_all": 10,
+      "pct_region_all": 21.3
+    },
+    "opencv": {
+      "language": "C++",
+      "bugs": 47,
+      "class_counts": {
+        "LOGIC": 31,
+        "RESOURCE": 1,
+        "MEMORY": 12,
+        "ERROR": 2,
+        "UNKNOWN": 1
+      },
+      "sa_addressable": 15,
+      "sa_caught_region": 9,
+      "sa_caught_strict": 5,
+      "pct_sa_region": 60.0,
+      "pct_sa_strict": 33.3,
+      "found_region_all": 32,
+      "pct_region_all": 68.1
+    },
+    "tarantool": {
+      "language": "C",
+      "bugs": 40,
+      "class_counts": {
+        "MEMORY": 12,
+        "LOGIC": 21,
+        "ERROR": 5,
+        "RESOURCE": 2
+      },
+      "sa_addressable": 19,
+      "sa_caught_region": 4,
+      "sa_caught_strict": 2,
+      "pct_sa_region": 21.1,
+      "pct_sa_strict": 10.5,
+      "found_region_all": 5,
+      "pct_region_all": 12.5
+    },
+    "cvc5": {
+      "language": "C++",
+      "bugs": 38,
+      "class_counts": {
+        "LOGIC": 30,
+        "ERROR": 6,
+        "MEMORY": 1,
+        "UNKNOWN": 1
+      },
+      "sa_addressable": 7,
+      "sa_caught_region": 2,
+      "sa_caught_strict": 2,
+      "pct_sa_region": 28.6,
+      "pct_sa_strict": 28.6,
+      "found_region_all": 17,
+      "pct_region_all": 44.7
+    },
+    "php-src": {
+      "language": "C",
+      "bugs": 26,
+      "class_counts": {
+        "MEMORY": 11,
+        "UNKNOWN": 3,
+        "LOGIC": 10,
+        "ERROR": 1,
+        "OTHER": 1
+      },
+      "sa_addressable": 12,
+      "sa_caught_region": 4,
+      "sa_caught_strict": 4,
+      "pct_sa_region": 33.3,
+      "pct_sa_strict": 33.3,
+      "found_region_all": 11,
+      "pct_region_all": 42.3
+    },
+    "micropython": {
+      "language": "C",
+      "bugs": 22,
+      "class_counts": {
+        "LOGIC": 13,
+        "RESOURCE": 1,
+        "MEMORY": 5,
+        "ERROR": 2,
+        "OTHER": 1
+      },
+      "sa_addressable": 8,
+      "sa_caught_region": 2,
+      "sa_caught_strict": 1,
+      "pct_sa_region": 25.0,
+      "pct_sa_strict": 12.5,
+      "found_region_all": 4,
+      "pct_region_all": 18.2
+    },
+    "proj": {
+      "language": "C++",
+      "bugs": 21,
+      "class_counts": {
+        "OTHER": 2,
+        "LOGIC": 14,
+        "MEMORY": 3,
+        "UNKNOWN": 1,
+        "ERROR": 1
+      },
+      "sa_addressable": 4,
+      "sa_caught_region": 3,
+      "sa_caught_strict": 1,
+      "pct_sa_region": 75.0,
+      "pct_sa_strict": 25.0,
+      "found_region_all": 10,
+      "pct_region_all": 47.6
+    },
+    "godot": {
+      "language": "C++",
+      "bugs": 17,
+      "class_counts": {
+        "LOGIC": 13,
+        "MEMORY": 3,
+        "UNKNOWN": 1
+      },
+      "sa_addressable": 3,
+      "sa_caught_region": 1,
+      "sa_caught_strict": 1,
+      "pct_sa_region": 33.3,
+      "pct_sa_strict": 33.3,
+      "found_region_all": 7,
+      "pct_region_all": 41.2
+    },
+    "jerryscript": {
+      "language": "C",
+      "bugs": 15,
+      "class_counts": {
+        "LOGIC": 9,
+        "MEMORY": 5,
+        "ERROR": 1
+      },
+      "sa_addressable": 6,
+      "sa_caught_region": 5,
+      "sa_caught_strict": 5,
+      "pct_sa_region": 83.3,
+      "pct_sa_strict": 83.3,
+      "found_region_all": 13,
+      "pct_region_all": 86.7
+    },
+    "hdf5": {
+      "language": "C",
+      "bugs": 14,
+      "class_counts": {
+        "MEMORY": 8,
+        "LOGIC": 4,
+        "UNKNOWN": 1,
+        "RESOURCE": 1
+      },
+      "sa_addressable": 9,
+      "sa_caught_region": 6,
+      "sa_caught_strict": 4,
+      "pct_sa_region": 66.7,
+      "pct_sa_strict": 44.4,
+      "found_region_all": 6,
+      "pct_region_all": 42.9
+    },
+    "z3": {
+      "language": "C++",
+      "bugs": 11,
+      "class_counts": {
+        "LOGIC": 8,
+        "MEMORY": 1,
+        "ERROR": 2
+      },
+      "sa_addressable": 3,
+      "sa_caught_region": 0,
+      "sa_caught_strict": 0,
+      "pct_sa_region": 0.0,
+      "pct_sa_strict": 0.0,
+      "found_region_all": 3,
+      "pct_region_all": 27.3
+    },
+    "libexpat": {
+      "language": "C",
+      "bugs": 9,
+      "class_counts": {
+        "RESOURCE": 2,
+        "LOGIC": 2,
+        "MEMORY": 5
+      },
+      "sa_addressable": 7,
+      "sa_caught_region": 4,
+      "sa_caught_strict": 2,
+      "pct_sa_region": 57.1,
+      "pct_sa_strict": 28.6,
+      "found_region_all": 6,
+      "pct_region_all": 66.7
+    }
+  },
+  "per_bug_labels": "classification/final/all.jsonl"
+}

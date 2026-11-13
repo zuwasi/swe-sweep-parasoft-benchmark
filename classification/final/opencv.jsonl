@@ -1,0 +1,47 @@
+{"bug_id": "opencv-03814c751e45", "sa_class": "LOGIC", "confidence": "low", "reason": "reprojectImageTo3D 32SC3 handling wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-065ab5cc0087", "sa_class": "LOGIC", "confidence": "low", "reason": "allowTransposed matrix reuse check wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-08979782855f", "sa_class": "LOGIC", "confidence": "low", "reason": "API signature change", "pass1": "ERROR", "pass2": "LOGIC"}
+{"bug_id": "opencv-0d05063bd5c0", "sa_class": "LOGIC", "confidence": "low", "reason": "kmeans center/dist bookkeeping wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-0d3161877178", "sa_class": "LOGIC", "confidence": "low", "reason": "approxPolyDP distance formula wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-140d51577a07", "sa_class": "LOGIC", "confidence": "low", "reason": "resize fallback condition wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-174d41f7934b", "sa_class": "LOGIC", "confidence": "low", "reason": "Subdiv2D big coordinate computation wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-1974f51bd214", "sa_class": "LOGIC", "confidence": "low", "reason": "MatExpr size missing GEMM case", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-1d1387aa8e47", "sa_class": "LOGIC", "confidence": "low", "reason": "remap BORDER_TRANSPARENT not skipped", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-212cd1521af9", "sa_class": "LOGIC", "confidence": "low", "reason": "AVX blendv operands swapped, div by zero", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-35e95d5fef31", "sa_class": "RESOURCE", "confidence": "low", "reason": "FileStorage destructor cleanup wrong", "pass1": "RESOURCE", "pass2": "RESOURCE"}
+{"bug_id": "opencv-3ddefc7290c5", "sa_class": "MEMORY", "confidence": "high", "reason": "unchecked var index, OOB read", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "opencv-41e8688ee2f5", "sa_class": "LOGIC", "confidence": "low", "reason": "nonzero scan bounds update wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-4320d091f246", "sa_class": "LOGIC", "confidence": "low", "reason": "roots guard rewritten, mechanism unclear", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "opencv-4344998a81e0", "sa_class": "LOGIC", "confidence": "high", "reason": "Hough rho offset formula wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-5cb9cd581ef5", "sa_class": "LOGIC", "confidence": "low", "reason": "outputs gathered with wrong indexing", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-5ff1b89640bd", "sa_class": "MEMORY", "confidence": "low", "reason": "copy loop reads past pixel width", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "opencv-6a1bdf8d7893", "sa_class": "LOGIC", "confidence": "low", "reason": "input reshape/conversion wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-6c432b0cd808", "sa_class": "LOGIC", "confidence": "low", "reason": "Hough lines drawing checks wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-72b6a063e735", "sa_class": "LOGIC", "confidence": "low", "reason": "rotated rect intersection logic wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-77dbf1631b69", "sa_class": "MEMORY", "confidence": "high", "reason": "thick line pointer offset overflow", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "opencv-78a11e75834c", "sa_class": "MEMORY", "confidence": "low", "reason": "same-side tie-break (MEMORY)", "pass1": "ERROR", "pass2": "MEMORY"}
+{"bug_id": "opencv-836aa6f1bcdb", "sa_class": "LOGIC", "confidence": "low", "reason": "MatExpr comparison type wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-83d848ddf557", "sa_class": "MEMORY", "confidence": "low", "reason": "missing FileNode constructor, uninitialized use", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "opencv-849409d58b10", "sa_class": "LOGIC", "confidence": "low", "reason": "parser EOF block control flow wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-898ee6013960", "sa_class": "LOGIC", "confidence": "high", "reason": "float overflow in spectrum division", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-8c7ec21f40f2", "sa_class": "LOGIC", "confidence": "low", "reason": "eigen iteration counter not incremented", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-9147e633a50f", "sa_class": "LOGIC", "confidence": "low", "reason": "seamless clone ROI logic wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-9a698f046e06", "sa_class": "MEMORY", "confidence": "low", "reason": "dims unchecked, sizes stack overflow", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "opencv-a3f10a0641a3", "sa_class": "LOGIC", "confidence": "low", "reason": "same-side tie-break (LOGIC)", "pass1": "OTHER", "pass2": "LOGIC"}
+{"bug_id": "opencv-a841d77e12fa", "sa_class": "LOGIC", "confidence": "low", "reason": "normal vector constructed wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-a868f91ec13f", "sa_class": "MEMORY", "confidence": "high", "reason": "row index can exceed buffer", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "opencv-b27a0cb90aed", "sa_class": "ERROR", "confidence": "high", "reason": "unchecked quote parse, caught BD-PB-CHECKRET", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-b7c9f43a731b", "sa_class": "LOGIC", "confidence": "low", "reason": "nD array argument handling wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-b95e3c7e7f80", "sa_class": "LOGIC", "confidence": "low", "reason": "collinearity test formula wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-c4f59cf36a65", "sa_class": "MEMORY", "confidence": "low", "reason": "pyramid buffer sizing wrong", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "opencv-c4fd47005bde", "sa_class": "LOGIC", "confidence": "low", "reason": "STD_VECTOR_MAT kind not handled", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-cb9f44f5771a", "sa_class": "LOGIC", "confidence": "low", "reason": "OCL branch flow wrong", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "opencv-cef786b62d8e", "sa_class": "LOGIC", "confidence": "low", "reason": "TIFF pages loop wrote wrong pages", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-cfc1dfc23f11", "sa_class": "LOGIC", "confidence": "low", "reason": "contour trace stop condition wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-d97911c694c2", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "LOGIC", "pass2": "UNKNOWN"}
+{"bug_id": "opencv-da1a55ec7dbb", "sa_class": "LOGIC", "confidence": "high", "reason": "clip macro precedence bug", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-dcdb346f556f", "sa_class": "ERROR", "confidence": "low", "reason": "math error handling, caught BD-PB-ERRNO", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "opencv-eb23b61a6803", "sa_class": "MEMORY", "confidence": "low", "reason": "sat_tab base offset off, OOB read", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "opencv-f418aa091479", "sa_class": "MEMORY", "confidence": "low", "reason": "hline memcpy overflows line buffer", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "opencv-f624dc51adf5", "sa_class": "MEMORY", "confidence": "low", "reason": "convert func called with wrong size", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "opencv-ff66d0af4e7e", "sa_class": "MEMORY", "confidence": "low", "reason": "decodeFormat fmt_pairs overflow unchecked", "pass1": "MEMORY", "pass2": "MEMORY"}

@@ -1,0 +1,17 @@
+{"bug_id": "godot-141d838cb0a9", "sa_class": "LOGIC", "confidence": "low", "reason": "line parsing behavior, no removed lines"}
+{"bug_id": "godot-1487db8f8067", "sa_class": "MEMORY", "confidence": "low", "reason": "refcounted objects wrongly pooled, lifetime risk"}
+{"bug_id": "godot-16e44a6ee5fd", "sa_class": "LOGIC", "confidence": "high", "reason": "line-break algorithm picks wrong breaks"}
+{"bug_id": "godot-1ae6171b9aa5", "sa_class": "LOGIC", "confidence": "high", "reason": "anchor/min-size cache invalidation wrong"}
+{"bug_id": "godot-1c09cb9eb560", "sa_class": "LOGIC", "confidence": "high", "reason": "connection flags save/parse behavior wrong"}
+{"bug_id": "godot-2a35121cb587", "sa_class": "LOGIC", "confidence": "high", "reason": "class doc description handling wrong"}
+{"bug_id": "godot-3cec1823b69a", "sa_class": "LOGIC", "confidence": "high", "reason": "bracket/string and caret logic wrong"}
+{"bug_id": "godot-4a105bb044ef", "sa_class": "MEMORY", "confidence": "low", "reason": "lock index ref/unref imbalance, lifetime"}
+{"bug_id": "godot-5a307011ac8b", "sa_class": "LOGIC", "confidence": "high", "reason": "matrix inversion algorithm wrong"}
+{"bug_id": "godot-6191f779e20c", "sa_class": "ERROR", "confidence": "low", "reason": "unchecked script argument deref and count"}
+{"bug_id": "godot-663987b95b26", "sa_class": "LOGIC", "confidence": "high", "reason": "UTF-8 sequence decoding wrong"}
+{"bug_id": "godot-6ca6a961c8e1", "sa_class": "LOGIC", "confidence": "low", "reason": "string utf8 handling, no pre-image available"}
+{"bug_id": "godot-979d80320b3c", "sa_class": "LOGIC", "confidence": "high", "reason": "text extents reset condition wrong"}
+{"bug_id": "godot-ad060d7c9da5", "sa_class": "LOGIC", "confidence": "low", "reason": "geometry plane math, no removed lines"}
+{"bug_id": "godot-bddc285d34b7", "sa_class": "LOGIC", "confidence": "high", "reason": "sRGB conversion formula wrong"}
+{"bug_id": "godot-c985347ac8f8", "sa_class": "LOGIC", "confidence": "high", "reason": "epsilon comparison logic wrong"}
+{"bug_id": "godot-dc71181af3af", "sa_class": "LOGIC", "confidence": "high", "reason": "compiler warning emission behavior wrong"}

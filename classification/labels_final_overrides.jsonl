@@ -1,0 +1,118 @@
+{"bug_id": "arrow-40583d085a58", "sa_class": "ERROR", "confidence": "low", "reason": "missing schema validation at insertion point"}
+{"bug_id": "arrow-5a279df3fd5a", "sa_class": "MEMORY", "confidence": "low", "reason": "stale map index indexes fields_ unchecked"}
+{"bug_id": "arrow-836fa5c90cf9", "sa_class": "LOGIC", "confidence": "low", "reason": "empty replacement value not handled"}
+{"bug_id": "arrow-97c0b6198f30", "sa_class": "OTHER", "confidence": "low", "reason": "missing include, build defect"}
+{"bug_id": "arrow-9a0cb740d8ac", "sa_class": "RESOURCE", "confidence": "low", "reason": "row group writer not closed before new one"}
+{"bug_id": "arrow-9f952a8a44b5", "sa_class": "MEMORY", "confidence": "high", "reason": "slice arithmetic can overflow, caught ARR39"}
+{"bug_id": "arrow-b831ede509b4", "sa_class": "MEMORY", "confidence": "low", "reason": "unsigned add in throttle check can wrap"}
+{"bug_id": "arrow-c844b43f97c5", "sa_class": "MEMORY", "confidence": "low", "reason": "child data filled before span fully initialized"}
+{"bug_id": "arrow-d0cd5512a992", "sa_class": "ERROR", "confidence": "low", "reason": "missing kCanReturnErrors contract flag"}
+{"bug_id": "arrow-d4e732abe1d1", "sa_class": "MEMORY", "confidence": "high", "reason": "inverted fixed-size ternary feeds buffer slicing"}
+{"bug_id": "arrow-db58ca99eaa0", "sa_class": "MEMORY", "confidence": "low", "reason": "wrong null_count condition skips buffer check"}
+{"bug_id": "cvc5-11eabe28d431", "sa_class": "LOGIC", "confidence": "low", "reason": "missing rewrite step, wrong preprocessing"}
+{"bug_id": "cvc5-15ce999a65bb", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong inference id sent"}
+{"bug_id": "cvc5-9c7602939dee", "sa_class": "ERROR", "confidence": "low", "reason": "type-check error reporting rewritten"}
+{"bug_id": "cvc5-a92827dd3f89", "sa_class": "ERROR", "confidence": "low", "reason": "assert used where release handling needed"}
+{"bug_id": "cvc5-f313728ce254", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong exception guard condition"}
+{"bug_id": "duckdb-165dc49e8f37", "sa_class": "MEMORY", "confidence": "high", "reason": "bit copy guard off-by-one, caught ARR39"}
+{"bug_id": "duckdb-19c1b85d79d3", "sa_class": "OTHER", "confidence": "low", "reason": "include removal, build defect"}
+{"bug_id": "duckdb-1b72fe675ead", "sa_class": "LOGIC", "confidence": "low", "reason": "enum function returns single wrong value"}
+{"bug_id": "duckdb-35212bbdc849", "sa_class": "ERROR", "confidence": "low", "reason": "missing switch case validation, caught BD-PB-SWITCH"}
+{"bug_id": "duckdb-37580a29144b", "sa_class": "LOGIC", "confidence": "low", "reason": "negative exponent unhandled"}
+{"bug_id": "duckdb-3f1087fd04f8", "sa_class": "MEMORY", "confidence": "low", "reason": "Reference into empty-initialized chunk"}
+{"bug_id": "duckdb-3f7b28468e2e", "sa_class": "LOGIC", "confidence": "low", "reason": "missing filter result handling"}
+{"bug_id": "duckdb-4b18f32ec21e", "sa_class": "MEMORY", "confidence": "low", "reason": "time parse args can read past end, caught ARR39"}
+{"bug_id": "duckdb-4f2d8e8eaf2f", "sa_class": "MEMORY", "confidence": "low", "reason": "radix scatter args corrupt key locations"}
+{"bug_id": "duckdb-4fae7f8bb350", "sa_class": "MEMORY", "confidence": "low", "reason": "cost computed on uninitialized estimator"}
+{"bug_id": "duckdb-5a33d9a1c013", "sa_class": "ERROR", "confidence": "low", "reason": "parser exception not caught"}
+{"bug_id": "duckdb-5b031435d1c2", "sa_class": "LOGIC", "confidence": "low", "reason": "padding bits not set"}
+{"bug_id": "duckdb-62e8b51ffa88", "sa_class": "MEMORY", "confidence": "low", "reason": "early return skips scan state initialization"}
+{"bug_id": "duckdb-8450ad72d657", "sa_class": "MEMORY", "confidence": "low", "reason": "dictionary child references payload wrongly"}
+{"bug_id": "duckdb-863b896717f1", "sa_class": "MEMORY", "confidence": "low", "reason": "append without Flatten invalidates vector"}
+{"bug_id": "duckdb-a3491d68d372", "sa_class": "MEMORY", "confidence": "high", "reason": "BOM probe reads past buffer end"}
+{"bug_id": "duckdb-b9b1bb8a239b", "sa_class": "LOGIC", "confidence": "low", "reason": "binding rewritten, mechanism not visible"}
+{"bug_id": "duckdb-dc96153f0266", "sa_class": "LOGIC", "confidence": "low", "reason": "missing final flush skews size estimate"}
+{"bug_id": "duckdb-de68e49f3522", "sa_class": "RESOURCE", "confidence": "low", "reason": "aggregate intermediate states not destroyed"}
+{"bug_id": "duckdb-f2cf1db95264", "sa_class": "RESOURCE", "confidence": "low", "reason": "dropped child column not committed"}
+{"bug_id": "duckdb-f42aff9fc29f", "sa_class": "LOGIC", "confidence": "low", "reason": "payload scan missing"}
+{"bug_id": "gdal-006b8e03a33f", "sa_class": "LOGIC", "confidence": "low", "reason": "early return skips attaching lines"}
+{"bug_id": "gdal-00cc4be4d0a2", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong warning and option reset"}
+{"bug_id": "gdal-014fe459d126", "sa_class": "RESOURCE", "confidence": "low", "reason": "duplicate json objects leak"}
+{"bug_id": "gdal-0f92097b1f96", "sa_class": "LOGIC", "confidence": "low", "reason": "element filter and counter logic"}
+{"bug_id": "gdal-117d4b5060bb", "sa_class": "MEMORY", "confidence": "low", "reason": "uninitialized member vectors"}
+{"bug_id": "gdal-142747db21b5", "sa_class": "MEMORY", "confidence": "low", "reason": "empty SRS returned as live reference"}
+{"bug_id": "gdal-1ed37a29feee", "sa_class": "MEMORY", "confidence": "high", "reason": "warp thread fields uninitialized"}
+{"bug_id": "gdal-21f4a3ec2ba2", "sa_class": "MEMORY", "confidence": "low", "reason": "string recode corrupts, mechanism unclear"}
+{"bug_id": "gdal-424d521138b6", "sa_class": "MEMORY", "confidence": "low", "reason": "missing members, uninitialized use"}
+{"bug_id": "gdal-44e37a15a6cf", "sa_class": "MEMORY", "confidence": "low", "reason": "string recode corrupts, mechanism unclear"}
+{"bug_id": "gdal-4682a0e8a013", "sa_class": "MEMORY", "confidence": "low", "reason": "null SRS name passed to cache lookup"}
+{"bug_id": "gdal-504022e1901c", "sa_class": "MEMORY", "confidence": "high", "reason": "warp thread fields uninitialized"}
+{"bug_id": "gdal-539e9769dc6c", "sa_class": "LOGIC", "confidence": "low", "reason": "json size output wrong"}
+{"bug_id": "gdal-5ce400c64f69", "sa_class": "MEMORY", "confidence": "high", "reason": "fixed 256-byte attribute buffer overflow"}
+{"bug_id": "gdal-5f6e44b21f5f", "sa_class": "LOGIC", "confidence": "low", "reason": "axis swap missing"}
+{"bug_id": "gdal-7105d81a6103", "sa_class": "LOGIC", "confidence": "low", "reason": "throw on empty geometry removed"}
+{"bug_id": "gdal-8726ac905a3f", "sa_class": "MEMORY", "confidence": "low", "reason": "empty SRS returned as live reference"}
+{"bug_id": "gdal-a7cb51debb42", "sa_class": "MEMORY", "confidence": "high", "reason": "uint64 size truncated to uint32"}
+{"bug_id": "gdal-af647aafa367", "sa_class": "MEMORY", "confidence": "high", "reason": "nXSize*2 int overflow"}
+{"bug_id": "gdal-b04821ff327c", "sa_class": "LOGIC", "confidence": "low", "reason": "header scan condition wrong"}
+{"bug_id": "gdal-b3b735d2a02d", "sa_class": "OTHER", "confidence": "low", "reason": "missing include, build defect"}
+{"bug_id": "gdal-cf0c25eb9ec4", "sa_class": "LOGIC", "confidence": "low", "reason": "defect not visible in snippet"}
+{"bug_id": "gdal-d424863f5f51", "sa_class": "MEMORY", "confidence": "high", "reason": "uint64 size truncated to uint32"}
+{"bug_id": "gdal-d49547f1a1be", "sa_class": "LOGIC", "confidence": "high", "reason": "missing tile matrix fields"}
+{"bug_id": "hdf5-336148f0f3e2", "sa_class": "MEMORY", "confidence": "low", "reason": "attribute name termination, caught EXP45"}
+{"bug_id": "hdf5-553ad641d344", "sa_class": "MEMORY", "confidence": "high", "reason": "struct freed before return, caught VOVR"}
+{"bug_id": "hdf5-aa1b6edb1d73", "sa_class": "RESOURCE", "confidence": "high", "reason": "datatype not closed on error path"}
+{"bug_id": "hdf5-cd22c0502f29", "sa_class": "MEMORY", "confidence": "high", "reason": "hslab pointer may be null"}
+{"bug_id": "jerryscript-042a8ceedc15", "sa_class": "LOGIC", "confidence": "low", "reason": "property key selection, mechanism unclear"}
+{"bug_id": "jerryscript-5144355d084f", "sa_class": "MEMORY", "confidence": "high", "reason": "result value mishandled, caught EXP39"}
+{"bug_id": "jerryscript-63583f11d059", "sa_class": "MEMORY", "confidence": "low", "reason": "zero-length literal skews compression size"}
+{"bug_id": "jerryscript-662bbee88446", "sa_class": "MEMORY", "confidence": "high", "reason": "missing null check after species create"}
+{"bug_id": "libexpat-0c5dbd0bb0a5", "sa_class": "RESOURCE", "confidence": "low", "reason": "amplification accounting missing, exhaustion guard"}
+{"bug_id": "libexpat-30d93b149d3d", "sa_class": "LOGIC", "confidence": "low", "reason": "suspend condition precedence"}
+{"bug_id": "libexpat-f67d952cb3de", "sa_class": "LOGIC", "confidence": "low", "reason": "defect not visible in snippet"}
+{"bug_id": "micropython-80ab54d7145c", "sa_class": "LOGIC", "confidence": "high", "reason": "duplicate keyword argument not rejected"}
+{"bug_id": "micropython-bdadb90505c7", "sa_class": "MEMORY", "confidence": "low", "reason": "aggregate size computation missing"}
+{"bug_id": "micropython-d4d265304c55", "sa_class": "MEMORY", "confidence": "high", "reason": "dest used uninitialized when rhs empty"}
+{"bug_id": "micropython-ec6689a8cc86", "sa_class": "MEMORY", "confidence": "high", "reason": "args2 realloc growth bug"}
+{"bug_id": "micropython-ef93b8337084", "sa_class": "ERROR", "confidence": "low", "reason": "unchecked int conversion in slice_indices"}
+{"bug_id": "opencv-08979782855f", "sa_class": "LOGIC", "confidence": "low", "reason": "API signature change"}
+{"bug_id": "opencv-4320d091f246", "sa_class": "LOGIC", "confidence": "low", "reason": "roots guard rewritten, mechanism unclear"}
+{"bug_id": "opencv-83d848ddf557", "sa_class": "MEMORY", "confidence": "low", "reason": "missing FileNode constructor, uninitialized use"}
+{"bug_id": "opencv-a868f91ec13f", "sa_class": "MEMORY", "confidence": "high", "reason": "row index can exceed buffer"}
+{"bug_id": "opencv-cb9f44f5771a", "sa_class": "LOGIC", "confidence": "low", "reason": "OCL branch flow wrong"}
+{"bug_id": "opencv-f624dc51adf5", "sa_class": "MEMORY", "confidence": "low", "reason": "convert func called with wrong size"}
+{"bug_id": "php-src-20b922f94767", "sa_class": "MEMORY", "confidence": "high", "reason": "terminator written without bounds check, caught VOVR"}
+{"bug_id": "php-src-21c8f6bd6ded", "sa_class": "MEMORY", "confidence": "high", "reason": "hash update refcount mishandled"}
+{"bug_id": "php-src-644f4c81235d", "sa_class": "ERROR", "confidence": "low", "reason": "missing return true in state deserializer"}
+{"bug_id": "php-src-a1232a3e55b9", "sa_class": "OTHER", "confidence": "low", "reason": "gc_full field removed, structural change"}
+{"bug_id": "php-src-b9ca7425664a", "sa_class": "LOGIC", "confidence": "low", "reason": "insert-mem helper rewritten"}
+{"bug_id": "php-src-bba9204567b2", "sa_class": "LOGIC", "confidence": "high", "reason": "postfields read before copy complete"}
+{"bug_id": "php-src-db25b1aca2fe", "sa_class": "MEMORY", "confidence": "low", "reason": "key handling rewritten, mechanism unclear"}
+{"bug_id": "proj-06b0cf9e684f", "sa_class": "OTHER", "confidence": "low", "reason": "missing include, build defect"}
+{"bug_id": "proj-1ddd02a36695", "sa_class": "MEMORY", "confidence": "low", "reason": "null cartesianCS deref unchecked"}
+{"bug_id": "proj-4831a51d8731", "sa_class": "MEMORY", "confidence": "low", "reason": "null cartesianCS deref unchecked"}
+{"bug_id": "proj-6e4ea9d02a9a", "sa_class": "OTHER", "confidence": "low", "reason": "missing include, build defect"}
+{"bug_id": "proj-bfab0375ca89", "sa_class": "MEMORY", "confidence": "low", "reason": "null cartesianCS deref unchecked"}
+{"bug_id": "tarantool-217abe7a70be", "sa_class": "MEMORY", "confidence": "high", "reason": "index loop can run off array end"}
+{"bug_id": "tarantool-46aa6eb83fb9", "sa_class": "LOGIC", "confidence": "low", "reason": "VDBE op arguments wrong"}
+{"bug_id": "tarantool-46b0022d552a", "sa_class": "ERROR", "confidence": "low", "reason": "decode result only asserted"}
+{"bug_id": "tarantool-4753065c09ed", "sa_class": "MEMORY", "confidence": "low", "reason": "source pointer uninitialized on bad params"}
+{"bug_id": "tarantool-67319bd2abd7", "sa_class": "MEMORY", "confidence": "low", "reason": "missing return yields garbage pointer"}
+{"bug_id": "tarantool-8c4fecf8c4f6", "sa_class": "LOGIC", "confidence": "high", "reason": "field walk function flawed"}
+{"bug_id": "tarantool-c2e562efa2e4", "sa_class": "ERROR", "confidence": "low", "reason": "dead fiber wakeup, not visible in snippet"}
+{"bug_id": "tarantool-e409eec61dc6", "sa_class": "LOGIC", "confidence": "low", "reason": "float stored as double type"}
+{"bug_id": "tarantool-f3e2922c14ee", "sa_class": "LOGIC", "confidence": "high", "reason": "unbind handling wrong"}
+{"bug_id": "tarantool-f7aac1b241c3", "sa_class": "MEMORY", "confidence": "low", "reason": "array header decoded unchecked"}
+{"bug_id": "z3-6aeffc53878d", "sa_class": "MEMORY", "confidence": "low", "reason": "unsigned k2 computation can wrap"}
+{"bug_id": "duckdb-2020c8d7a281", "sa_class": "MEMORY", "confidence": "high", "reason": "integer wrap feeding recursion, caught BD-PB-INTWRAP"}
+{"bug_id": "duckdb-55543d201747", "sa_class": "MEMORY", "confidence": "high", "reason": "integer wrap, caught BD-PB-INTWRAP"}
+{"bug_id": "duckdb-96cd6f4c49c4", "sa_class": "ERROR", "confidence": "low", "reason": "unvalidated value range, caught BD-PB-VALRANGE"}
+{"bug_id": "opencv-b27a0cb90aed", "sa_class": "ERROR", "confidence": "high", "reason": "unchecked quote parse, caught BD-PB-CHECKRET"}
+{"bug_id": "opencv-dcdb346f556f", "sa_class": "ERROR", "confidence": "low", "reason": "math error handling, caught BD-PB-ERRNO"}
+{"bug_id": "jerryscript-1eb47ad8b475", "sa_class": "MEMORY", "confidence": "high", "reason": "property pointer not initialized, caught BD-PB-NOTINIT"}
+{"bug_id": "jerryscript-25396dc4b88b", "sa_class": "ERROR", "confidence": "high", "reason": "fmod result unchecked, caught BD-PB-ERRNO"}
+{"bug_id": "jerryscript-9bf98944df1f", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong return value type, caught BD-PB-CC"}
+{"bug_id": "jerryscript-edaaae2dd276", "sa_class": "MEMORY", "confidence": "high", "reason": "digits buffer overflow for zero, caught multi BD"}
+{"bug_id": "hdf5-410d9d0e6a1f", "sa_class": "MEMORY", "confidence": "low", "reason": "conversion buffer handling, caught VOVR"}
+{"bug_id": "hdf5-46ec0c6c502b", "sa_class": "MEMORY", "confidence": "high", "reason": "conversion buffer sizing, caught VOVR"}
+{"bug_id": "hdf5-fe3e4ec13a61", "sa_class": "MEMORY", "confidence": "low", "reason": "conversion buffer handling, caught VOVR"}

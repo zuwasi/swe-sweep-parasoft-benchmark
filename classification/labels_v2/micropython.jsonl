@@ -1,0 +1,22 @@
+{"bug_id": "micropython-1010a6f1bf3f", "sa_class": "LOGIC", "confidence": "high", "reason": "wrong comma grouping condition in int formatting"}
+{"bug_id": "micropython-105ab25a289b", "sa_class": "LOGIC", "confidence": "low", "reason": "unhandled ops fall into divmod default"}
+{"bug_id": "micropython-506e74919e0d", "sa_class": "LOGIC", "confidence": "high", "reason": "f-string argument start not recorded by lexer"}
+{"bug_id": "micropython-56f308119e16", "sa_class": "LOGIC", "confidence": "high", "reason": "exception variable not cleaned in try-finally compile"}
+{"bug_id": "micropython-5c51fb896d80", "sa_class": "RESOURCE", "confidence": "high", "reason": "close runs with GIL released; race on fd"}
+{"bug_id": "micropython-639baaf0eaee", "sa_class": "LOGIC", "confidence": "high", "reason": "wrong nan or inf domain error condition"}
+{"bug_id": "micropython-8074d176612b", "sa_class": "LOGIC", "confidence": "high", "reason": "wrong argument count condition in string formatting"}
+{"bug_id": "micropython-80ab54d7145c", "sa_class": "LOGIC", "confidence": "high", "reason": "duplicate keyword argument not detected"}
+{"bug_id": "micropython-830236cc7dce", "sa_class": "LOGIC", "confidence": "low", "reason": "__new__ wrapping block placed after return; dead"}
+{"bug_id": "micropython-85267a3c1ee8", "sa_class": "MEMORY", "confidence": "high", "reason": "to_bytes length math overflows buffer"}
+{"bug_id": "micropython-8625d05e0e82", "sa_class": "MEMORY", "confidence": "low", "reason": "memoryview offset and flag bits conflict; wrong slice offset"}
+{"bug_id": "micropython-88f383264f04", "sa_class": "LOGIC", "confidence": "high", "reason": "setattr and delattr wrongly delegated to getattr"}
+{"bug_id": "micropython-b12fef09f055", "sa_class": "LOGIC", "confidence": "high", "reason": "missing type retrieval for classmethod binding"}
+{"bug_id": "micropython-b3d62f80e40b", "sa_class": "LOGIC", "confidence": "low", "reason": "async-for bytecode labels wrong; except level mismatch"}
+{"bug_id": "micropython-b53492729a4a", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong early return for negative exponent"}
+{"bug_id": "micropython-bc4a5e14e72f", "sa_class": "MEMORY", "confidence": "low", "reason": "unvalidated int arg used as address pointer"}
+{"bug_id": "micropython-bdadb90505c7", "sa_class": "MEMORY", "confidence": "low", "reason": "aggregate size ignores pointer fields; undersized buffer"}
+{"bug_id": "micropython-c14ecec3cf60", "sa_class": "LOGIC", "confidence": "low", "reason": "union aliasing corrupts parsed print arguments"}
+{"bug_id": "micropython-d4d265304c55", "sa_class": "MEMORY", "confidence": "high", "reason": "pow result left uninitialized for zero exponent"}
+{"bug_id": "micropython-ec6689a8cc86", "sa_class": "MEMORY", "confidence": "high", "reason": "bounds check ignores remaining fixed args; overflow"}
+{"bug_id": "micropython-ef93b8337084", "sa_class": "ERROR", "confidence": "low", "reason": "wrong int conversion API for slice indices"}
+{"bug_id": "micropython-f30ec885b80c", "sa_class": "OTHER", "confidence": "high", "reason": "preprocessor guard restructure; no runtime defect"}

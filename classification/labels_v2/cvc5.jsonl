@@ -1,0 +1,38 @@
+{"bug_id": "cvc5-0190fa8ae7ec", "sa_class": "LOGIC", "confidence": "low", "reason": "children pushed into visit without registration guard"}
+{"bug_id": "cvc5-024cc837ea11", "sa_class": "LOGIC", "confidence": "high", "reason": "sum accumulation mishandled nested ADD terms"}
+{"bug_id": "cvc5-11eabe28d431", "sa_class": "LOGIC", "confidence": "low", "reason": "learned rewrite breaks assertion rewrite invariant"}
+{"bug_id": "cvc5-1337df3bc465", "sa_class": "LOGIC", "confidence": "low", "reason": "tester merge conflict proof step constructed wrongly"}
+{"bug_id": "cvc5-15ce999a65bb", "sa_class": "LOGIC", "confidence": "low", "reason": "unit injectivity inference sent with wrong explanation"}
+{"bug_id": "cvc5-169d417c6b41", "sa_class": "LOGIC", "confidence": "low", "reason": "equivalence class iteration and congruence handling wrong"}
+{"bug_id": "cvc5-18943577ecec", "sa_class": "LOGIC", "confidence": "low", "reason": "normalizeConstant cardinality taken from wrong type"}
+{"bug_id": "cvc5-308a909279a9", "sa_class": "ERROR", "confidence": "low", "reason": "lemmas sent with wrong inference id and flags"}
+{"bug_id": "cvc5-3489f19d0af7", "sa_class": "MEMORY", "confidence": "low", "reason": "stale model pointer dereferenced during interceptModel"}
+{"bug_id": "cvc5-39fc8377f26f", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet lines extracted"}
+{"bug_id": "cvc5-3d08a22f361b", "sa_class": "LOGIC", "confidence": "low", "reason": "re.loop rewrite to re.none applied wrongly"}
+{"bug_id": "cvc5-50f4bf9c8c66", "sa_class": "LOGIC", "confidence": "low", "reason": "fold over union rewritten in wrong order"}
+{"bug_id": "cvc5-647ecea6ab0d", "sa_class": "LOGIC", "confidence": "low", "reason": "datatype cardinality and model type enumeration wrong"}
+{"bug_id": "cvc5-6f19e69efd06", "sa_class": "LOGIC", "confidence": "low", "reason": "infeasible conjecture result returned wrongly"}
+{"bug_id": "cvc5-6f88c8072d5a", "sa_class": "LOGIC", "confidence": "low", "reason": "power rewritten into children exceeding node limits"}
+{"bug_id": "cvc5-726a3ded06b0", "sa_class": "ERROR", "confidence": "low", "reason": "proof checker requires Real where Integer allowed"}
+{"bug_id": "cvc5-8c19798c9c2d", "sa_class": "LOGIC", "confidence": "low", "reason": "unprocessed quantifier wrongly treated as complete"}
+{"bug_id": "cvc5-8d2b297c1bbc", "sa_class": "LOGIC", "confidence": "low", "reason": "pending facts flushed at wrong loop point"}
+{"bug_id": "cvc5-8fd2c025e245", "sa_class": "LOGIC", "confidence": "low", "reason": "representative scoring ignores configured mode"}
+{"bug_id": "cvc5-92a35b3a1356", "sa_class": "LOGIC", "confidence": "low", "reason": "explanation decomposition only handles EQUAL kind"}
+{"bug_id": "cvc5-9abdf24fe930", "sa_class": "LOGIC", "confidence": "low", "reason": "quantifier pre and post rewrites removed as incorrect"}
+{"bug_id": "cvc5-9c7602939dee", "sa_class": "ERROR", "confidence": "low", "reason": "type rule rejects valid non-string-like sequence terms"}
+{"bug_id": "cvc5-a6fa2c8060f2", "sa_class": "ERROR", "confidence": "low", "reason": "decomposeTerm failure asserted instead of handled"}
+{"bug_id": "cvc5-a874c6f84e37", "sa_class": "LOGIC", "confidence": "low", "reason": "cegqi filtering of instantiation constants wrong"}
+{"bug_id": "cvc5-a92827dd3f89", "sa_class": "LOGIC", "confidence": "low", "reason": "lambda index constness check wrong for arrays"}
+{"bug_id": "cvc5-aa2797db1fd7", "sa_class": "LOGIC", "confidence": "low", "reason": "MBQE model value mapping for fresh variables wrong"}
+{"bug_id": "cvc5-c443eedc46d1", "sa_class": "LOGIC", "confidence": "low", "reason": "real algebraic number divided incorrectly by denominator"}
+{"bug_id": "cvc5-c6c6ba5bd904", "sa_class": "LOGIC", "confidence": "low", "reason": "total division children built incorrectly"}
+{"bug_id": "cvc5-cb7581ed4265", "sa_class": "ERROR", "confidence": "low", "reason": "unnecessary incremental-solving precondition on getUnsatAssumptions"}
+{"bug_id": "cvc5-d440f0779a99", "sa_class": "LOGIC", "confidence": "low", "reason": "division and mult rewrite falls through unchanged"}
+{"bug_id": "cvc5-d73f0189501b", "sa_class": "LOGIC", "confidence": "low", "reason": "string model length assignment produces duplicate values"}
+{"bug_id": "cvc5-d9746c57e9f2", "sa_class": "LOGIC", "confidence": "low", "reason": "difficulty map collected and asserted wrongly"}
+{"bug_id": "cvc5-e1ed9a524e71", "sa_class": "LOGIC", "confidence": "low", "reason": "int-to-bv uses global option for wrong size"}
+{"bug_id": "cvc5-ee122a56fa79", "sa_class": "LOGIC", "confidence": "low", "reason": "lemma proof checks gated incorrectly"}
+{"bug_id": "cvc5-f0994ce1b268", "sa_class": "LOGIC", "confidence": "low", "reason": "finite field negation expressed as wrong multiplication"}
+{"bug_id": "cvc5-f218e48e2ada", "sa_class": "LOGIC", "confidence": "low", "reason": "substr constant length end-bound check missing"}
+{"bug_id": "cvc5-f313728ce254", "sa_class": "ERROR", "confidence": "low", "reason": "untranslatable integer operator throws instead of handling"}
+{"bug_id": "cvc5-ffc998069294", "sa_class": "LOGIC", "confidence": "low", "reason": "resolution chain conclusion and levels recorded wrongly"}

@@ -1,0 +1,14 @@
+{"bug_id": "hdf5-336148f0f3e2", "sa_class": "MEMORY", "confidence": "low", "reason": "attribute name termination, caught EXP45", "pass1": "OTHER", "pass2": "MEMORY"}
+{"bug_id": "hdf5-3d50b7243378", "sa_class": "MEMORY", "confidence": "low", "reason": "same-side tie-break (MEMORY)", "pass1": "RESOURCE", "pass2": "MEMORY"}
+{"bug_id": "hdf5-410d9d0e6a1f", "sa_class": "MEMORY", "confidence": "low", "reason": "conversion buffer handling, caught VOVR", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "hdf5-46ec0c6c502b", "sa_class": "MEMORY", "confidence": "high", "reason": "conversion buffer sizing, caught VOVR", "pass1": "RESOURCE", "pass2": "MEMORY"}
+{"bug_id": "hdf5-50b75316c1c9", "sa_class": "LOGIC", "confidence": "high", "reason": "diminfo validity checks used wrong stride", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "hdf5-553ad641d344", "sa_class": "MEMORY", "confidence": "high", "reason": "struct freed before return, caught VOVR", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "hdf5-699a00aef417", "sa_class": "MEMORY", "confidence": "low", "reason": "added check around attribute buffer sizing", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "hdf5-88382b2cfcd4", "sa_class": "LOGIC", "confidence": "low", "reason": "noop path detection condition wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "hdf5-8b449df9cbdd", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extractable", "pass1": "LOGIC", "pass2": "UNKNOWN"}
+{"bug_id": "hdf5-aa1b6edb1d73", "sa_class": "RESOURCE", "confidence": "high", "reason": "datatype not closed on error path", "pass1": "LOGIC", "pass2": "RESOURCE"}
+{"bug_id": "hdf5-aefd1d02488b", "sa_class": "LOGIC", "confidence": "high", "reason": "diminfo validity checks used wrong stride", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "hdf5-bcc7226672c8", "sa_class": "LOGIC", "confidence": "high", "reason": "diminfo validity checks used wrong stride", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "hdf5-cd22c0502f29", "sa_class": "MEMORY", "confidence": "high", "reason": "hslab pointer may be null", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "hdf5-fe3e4ec13a61", "sa_class": "MEMORY", "confidence": "low", "reason": "conversion buffer handling, caught VOVR", "pass1": "MEMORY", "pass2": "MEMORY"}

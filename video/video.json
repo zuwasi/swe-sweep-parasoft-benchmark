@@ -2,48 +2,120 @@
   "output": "parasoft-vs-swe-sweep.mp4",
   "voice": "en-GB-RyanNeural",
   "spoken": [
-    ["C/C++test", "C, C plus plus test"],
-    ["HDF5", "H D F five"],
-    ["SWE sweep", "S W E sweep"],
-    ["eswlab", "E S W lab"],
-    ["MISRA", "MISRA"]
+    [
+      "C/C++test",
+      "C, C plus plus test"
+    ],
+    [
+      "HDF5",
+      "H D F five"
+    ],
+    [
+      "SWE sweep",
+      "S W E sweep"
+    ],
+    [
+      "eswlab",
+      "E S W lab"
+    ],
+    [
+      "MISRA",
+      "MISRA"
+    ]
   ],
   "title_card": {
     "scene": "01",
-    "title": ["Static Analysis", "vs the AI Agents"],
+    "title": [
+      "Static Analysis",
+      "vs the AI Agents"
+    ],
     "tagline": "488 real bugs. Measured.",
     "subtitle": "Parasoft C/C++test  |  SWE-sweep benchmark  |  MISRA / CERT",
     "footer": "Engineering Software Lab  /  2026"
   },
   "slides": {
-    "02": {"kicker": "The debate", "headline": ["If AI writes the code,", "do we still need static analysis?"],
-           "bullets": ["MISRA Conference 2026: the question on the floor",
-                       "LLM agents find and fix bugs, but how many?",
-                       "Safety critical industries need evidence, not impressions"]},
-    "03": {"kicker": "The benchmark", "headline": ["488 real bugs,", "14 C and C++ repositories"],
-           "bullets": ["SWE-sweep accepted bugs (Meta FAIR, 2026)",
-                       "Byte-identical bug-era code, the project's own compile flags",
-                       "Parasoft C/C++test: Flow Analysis + MISRA C 2025 / C++ 2023 + SEI CERT"]},
-    "06": {"kicker": "The result", "headline": ["37.5% of the bugs flagged,", "vs 4.5% by the best AI agent"],
-           "bullets": ["183 of 488 bugs: a Parasoft finding inside the changed code",
-                       "Flow Analysis alone caught 16 bugs outright",
-                       "Same code, same bugs, published benchmark"]},
-    "07": {"kicker": "Read it honestly", "headline": ["What this benchmark", "does not claim"],
-           "bullets": ["Agents searched whole repositories; the analyzer got the buggy files",
-                       "Most hits are coding standard rules, not proven root causes",
-                       "Reproducible: full pipeline and configs on GitHub"]}
+    "02": {
+      "kicker": "The debate",
+      "headline": [
+        "If AI writes the code,",
+        "do we still need static analysis?"
+      ],
+      "bullets": [
+        "MISRA Conference 2026, Manchester, 10 November 2026",
+        "LLM agents find and fix bugs, but how many?",
+        "Safety critical industries need evidence, not impressions"
+      ]
+    },
+    "03": {
+      "kicker": "The benchmark",
+      "headline": [
+        "488 real bugs,",
+        "14 C and C++ repositories"
+      ],
+      "bullets": [
+        "SWE-sweep accepted bugs (Meta FAIR, 2026)",
+        "Byte-identical bug-era code, the project's own compile flags",
+        "Parasoft C/C++test: Flow Analysis + MISRA C 2025 / C++ 2023 + SEI CERT"
+      ]
+    },
+    "06": {
+      "kicker": "The result",
+      "headline": [
+        "37.5% of the bugs flagged,",
+        "vs 4.5% by the best AI agent"
+      ],
+      "bullets": [
+        "183 of 488 bugs: a Parasoft finding inside the changed code",
+        "Flow Analysis alone caught 16 bugs outright",
+        "Same code, same bugs, published benchmark"
+      ]
+    },
+    "07": {
+      "kicker": "Read it honestly",
+      "headline": [
+        "What this benchmark",
+        "does not claim"
+      ],
+      "bullets": [
+        "Agents searched whole repositories; the analyzer got the buggy files",
+        "Most hits are coding standard rules, not proven root causes",
+        "Reproducible: full pipeline and configs on GitHub"
+      ]
+    },
+    "08": {
+      "kicker": "Classification",
+      "headline": [
+        "Only a third of the bugs",
+        "are static analysis's kind of bug"
+      ],
+      "bullets": [
+        "162 of 488: memory, resource, and error handling defects",
+        "Parasoft on that third: 38.9%, above its 37.5% overall rate",
+        "The logic two thirds: review, requirements-based testing, coverage"
+      ]
+    }
   },
   "end_card": {
-    "scene": "08",
-    "headline": ["The traditional method", "still wins on real bugs."],
+    "scene": "09",
+    "headline": [
+      "The traditional method",
+      "still wins on real bugs."
+    ],
     "product": "Parasoft C/C++test",
     "footnote": "14 repos, 488 bugs. Full data: github.com/zuwasi/swe-sweep-parasoft-benchmark"
   },
   "thumbnail": {
-    "title": ["Static analysis beats", "AI agents"],
+    "title": [
+      "Static analysis beats",
+      "AI agents"
+    ],
     "subtitle": "488 real C/C++ bugs measured",
     "product": "Parasoft C/C++test",
-    "badge": {"from": "4.5%", "to": "37.5%", "caption": "bugs found in changed code"}
+    "badge": {
+      "from": "4.5%",
+      "to": "37.5%",
+      "caption": "bugs found in changed code"
+    }
   },
   "masks": []
 }

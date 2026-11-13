@@ -1,0 +1,15 @@
+{"bug_id": "jerryscript-042a8ceedc15", "sa_class": "LOGIC", "confidence": "low", "reason": "property key selection, mechanism unclear", "pass1": "RESOURCE", "pass2": "LOGIC"}
+{"bug_id": "jerryscript-072dcea299cd", "sa_class": "LOGIC", "confidence": "low", "reason": "literal decode order and delta wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "jerryscript-1eb47ad8b475", "sa_class": "MEMORY", "confidence": "high", "reason": "property pointer not initialized, caught BD-PB-NOTINIT", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "jerryscript-25396dc4b88b", "sa_class": "ERROR", "confidence": "high", "reason": "fmod result unchecked, caught BD-PB-ERRNO", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "jerryscript-2b0230207b47", "sa_class": "LOGIC", "confidence": "low", "reason": "duplicated label check restructure wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "jerryscript-32f5320c7e4d", "sa_class": "LOGIC", "confidence": "low", "reason": "this.x assignment opcode sequence wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "jerryscript-4afcc94994c8", "sa_class": "LOGIC", "confidence": "low", "reason": "unary opcode handling rewritten wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "jerryscript-5144355d084f", "sa_class": "MEMORY", "confidence": "high", "reason": "result value mishandled, caught EXP39", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "jerryscript-5ca8de954fce", "sa_class": "LOGIC", "confidence": "low", "reason": "ternary allowed as assignment target", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "jerryscript-63583f11d059", "sa_class": "MEMORY", "confidence": "low", "reason": "zero-length literal skews compression size", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "jerryscript-662bbee88446", "sa_class": "MEMORY", "confidence": "high", "reason": "missing null check after species create", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "jerryscript-9bf98944df1f", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong return value type, caught BD-PB-CC", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "jerryscript-bf72a9ea61e4", "sa_class": "LOGIC", "confidence": "low", "reason": "isfinite implementation rewritten", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "jerryscript-df8c37f98e76", "sa_class": "LOGIC", "confidence": "high", "reason": "used is_enumerable for configurable flag", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "jerryscript-edaaae2dd276", "sa_class": "MEMORY", "confidence": "high", "reason": "digits buffer overflow for zero, caught multi BD", "pass1": "LOGIC", "pass2": "LOGIC"}

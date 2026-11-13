@@ -1,0 +1,26 @@
+{"bug_id": "php-src-0119a932f650", "sa_class": "MEMORY", "confidence": "low", "reason": "live loop var not rooted; GC frees in-use value"}
+{"bug_id": "php-src-04ebc4662274", "sa_class": "MEMORY", "confidence": "low", "reason": "missing early return for persistent stream filter"}
+{"bug_id": "php-src-0d43ce0140da", "sa_class": "UNKNOWN", "confidence": "high", "reason": "no snippet could be extracted"}
+{"bug_id": "php-src-1b0195b0b102", "sa_class": "LOGIC", "confidence": "low", "reason": "inheritance flag checks restructured; wrong method duplication"}
+{"bug_id": "php-src-20b922f94767", "sa_class": "MEMORY", "confidence": "high", "reason": "terminator written past version buffer"}
+{"bug_id": "php-src-21c8f6bd6ded", "sa_class": "MEMORY", "confidence": "high", "reason": "cookie name freed by hash delete; use-after-free"}
+{"bug_id": "php-src-3dd6d56bed43", "sa_class": "MEMORY", "confidence": "low", "reason": "wrong length passed to strncasecmp; overread"}
+{"bug_id": "php-src-57b891db5eac", "sa_class": "LOGIC", "confidence": "low", "reason": "manual lowercase class lookup replaced; wrong lookup path"}
+{"bug_id": "php-src-644f4c81235d", "sa_class": "LOGIC", "confidence": "low", "reason": "missing seed state validation"}
+{"bug_id": "php-src-67638986e670", "sa_class": "MEMORY", "confidence": "low", "reason": "stale hashtable pointer in iterator; wrong table accessed"}
+{"bug_id": "php-src-6d6eeee39f95", "sa_class": "MEMORY", "confidence": "high", "reason": "hex decode allocates half without validating input length"}
+{"bug_id": "php-src-7708c3973f86", "sa_class": "LOGIC", "confidence": "low", "reason": "assert condition misses assertions-disabled case"}
+{"bug_id": "php-src-7fcb8a2206e5", "sa_class": "MEMORY", "confidence": "low", "reason": "comment length not validated before libzip truncation"}
+{"bug_id": "php-src-81a2694ec050", "sa_class": "MEMORY", "confidence": "low", "reason": "generator fiber flags mishandled; premature free"}
+{"bug_id": "php-src-9301c38f27df", "sa_class": "LOGIC", "confidence": "high", "reason": "rounding formula numerically wrong"}
+{"bug_id": "php-src-98f103396d0e", "sa_class": "LOGIC", "confidence": "low", "reason": "missing try finally range overlap check"}
+{"bug_id": "php-src-a1232a3e55b9", "sa_class": "MEMORY", "confidence": "low", "reason": "GC buffer not released; tmpvars not rooted during GC"}
+{"bug_id": "php-src-a4774432f3b4", "sa_class": "LOGIC", "confidence": "high", "reason": "flags argument not passed to zip_stat_index"}
+{"bug_id": "php-src-b9ca7425664a", "sa_class": "LOGIC", "confidence": "low", "reason": "insert-then-fill hash pattern; defect mechanism unclear"}
+{"bug_id": "php-src-bba9204567b2", "sa_class": "LOGIC", "confidence": "high", "reason": "postfields stored on cloned handle instead of original"}
+{"bug_id": "php-src-c3a5e71d0aa1", "sa_class": "UNKNOWN", "confidence": "high", "reason": "no snippet could be extracted"}
+{"bug_id": "php-src-c94f35c6ad55", "sa_class": "UNKNOWN", "confidence": "high", "reason": "no snippet could be extracted"}
+{"bug_id": "php-src-db25b1aca2fe", "sa_class": "MEMORY", "confidence": "high", "reason": "hash owns key string; released afterwards; use-after-free"}
+{"bug_id": "php-src-eaf37a8bb3ef", "sa_class": "MEMORY", "confidence": "low", "reason": "curl handle refcount mishandled; use-after-free"}
+{"bug_id": "php-src-ef72be6a423c", "sa_class": "LOGIC", "confidence": "high", "reason": "zero_fraction flag false; double exported without decimal"}
+{"bug_id": "php-src-f79aeee502d8", "sa_class": "LOGIC", "confidence": "high", "reason": "missing intersection type variance check"}

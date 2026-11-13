@@ -1,0 +1,40 @@
+{"bug_id": "tarantool-02d1749c6bfb", "sa_class": "MEMORY", "confidence": "low", "reason": "record size sum can overflow validation, no removed lines", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "tarantool-067eeb123c0e", "sa_class": "MEMORY", "confidence": "low", "reason": "wrong decompress end pointer, out-of-bounds", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "tarantool-0b1d99f9080c", "sa_class": "LOGIC", "confidence": "low", "reason": "privilege replace condition ignores grantor change", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-0e02e4373959", "sa_class": "LOGIC", "confidence": "high", "reason": "wrong result type for integer operands", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-0e3671b1b049", "sa_class": "LOGIC", "confidence": "low", "reason": "cfg locking and snapshot version handling, unclear", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-217abe7a70be", "sa_class": "MEMORY", "confidence": "high", "reason": "index loop can run off array end", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "tarantool-3203ce795485", "sa_class": "MEMORY", "confidence": "high", "reason": "negative width indexes pow10 out of bounds", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "tarantool-35044a57ea04", "sa_class": "LOGIC", "confidence": "low", "reason": "backtrace option key handling rewritten", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-354f1a67549b", "sa_class": "MEMORY", "confidence": "high", "reason": "loop iterates total count, overreads msgpack", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "tarantool-39735317fbaf", "sa_class": "MEMORY", "confidence": "low", "reason": "dequote assumed zero-terminated, overreads", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "tarantool-40d35b1255f4", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong sign flag for negative modulo", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-452a757c1c97", "sa_class": "MEMORY", "confidence": "high", "reason": "off-by-one bound allows OOB thread stats", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "tarantool-46aa6eb83fb9", "sa_class": "LOGIC", "confidence": "low", "reason": "VDBE op arguments wrong", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "tarantool-46b0022d552a", "sa_class": "ERROR", "confidence": "low", "reason": "decode result only asserted", "pass1": "MEMORY", "pass2": "LOGIC"}
+{"bug_id": "tarantool-4753065c09ed", "sa_class": "MEMORY", "confidence": "low", "reason": "source pointer uninitialized on bad params", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "tarantool-4e1bd4f2ca09", "sa_class": "RESOURCE", "confidence": "low", "reason": "callback GC-ed prematurely, lifetime issue", "pass1": "RESOURCE", "pass2": "RESOURCE"}
+{"bug_id": "tarantool-4f3f87493c3a", "sa_class": "ERROR", "confidence": "low", "reason": "same-side tie-break (ERROR)", "pass1": "ERROR", "pass2": "RESOURCE"}
+{"bug_id": "tarantool-67319bd2abd7", "sa_class": "MEMORY", "confidence": "low", "reason": "missing return yields garbage pointer", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "tarantool-7516474ad8c9", "sa_class": "ERROR", "confidence": "high", "reason": "asserted lookup success instead of handling", "pass1": "ERROR", "pass2": "ERROR"}
+{"bug_id": "tarantool-7530007077a3", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong unique_part_count for non-unique index", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-77c69aba7b2a", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong iterator start and gap-track conditions", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-78ccf4ee3c7f", "sa_class": "LOGIC", "confidence": "high", "reason": "GT iterator reused GE continuation function", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-8c4fecf8c4f6", "sa_class": "LOGIC", "confidence": "high", "reason": "field walk function flawed", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "tarantool-8cfc91109fe1", "sa_class": "LOGIC", "confidence": "high", "reason": "index parts parsing and simplify flag wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-95c521353f4e", "sa_class": "RESOURCE", "confidence": "low", "reason": "cancellation during yield corrupts journal entry", "pass1": "RESOURCE", "pass2": "RESOURCE"}
+{"bug_id": "tarantool-9eaa7be00afa", "sa_class": "LOGIC", "confidence": "low", "reason": "timestamp usec/msec cases mishandled", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-a0264983c4a6", "sa_class": "ERROR", "confidence": "low", "reason": "index def validation added as API check", "pass1": "ERROR", "pass2": "ERROR"}
+{"bug_id": "tarantool-b01da1bbf9f4", "sa_class": "LOGIC", "confidence": "high", "reason": "zero timestamp yields bogus relay lag", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-c2e562efa2e4", "sa_class": "ERROR", "confidence": "low", "reason": "dead fiber wakeup, not visible in snippet", "pass1": "ERROR", "pass2": "LOGIC"}
+{"bug_id": "tarantool-c8612c63469d", "sa_class": "MEMORY", "confidence": "high", "reason": "null Lua state dereferenced in error path", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "tarantool-d32112b21656", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong vclock search deletes needed WALs", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-d527e3e234ed", "sa_class": "MEMORY", "confidence": "low", "reason": "story deleted while still referenced", "pass1": "MEMORY", "pass2": "MEMORY"}
+{"bug_id": "tarantool-dad93ce21d26", "sa_class": "LOGIC", "confidence": "high", "reason": "ANY type mapped to wrong field type", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-dbfb0940d12f", "sa_class": "LOGIC", "confidence": "low", "reason": "MVCC conflict skip condition wrong", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-e409eec61dc6", "sa_class": "LOGIC", "confidence": "low", "reason": "float stored as double type", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "tarantool-f3e2922c14ee", "sa_class": "LOGIC", "confidence": "high", "reason": "unbind handling wrong", "pass1": "LOGIC", "pass2": "RESOURCE"}
+{"bug_id": "tarantool-f4801b8daa83", "sa_class": "LOGIC", "confidence": "low", "reason": "round via sprintf wrong for big precision", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-f7aac1b241c3", "sa_class": "MEMORY", "confidence": "low", "reason": "array header decoded unchecked", "pass1": "LOGIC", "pass2": "MEMORY"}
+{"bug_id": "tarantool-f90cfe93f0ad", "sa_class": "LOGIC", "confidence": "high", "reason": "wrong stdin/tty branch condition", "pass1": "LOGIC", "pass2": "LOGIC"}
+{"bug_id": "tarantool-fc35d5a6cfe7", "sa_class": "LOGIC", "confidence": "low", "reason": "iterator reposition after delete wrong", "pass1": "LOGIC", "pass2": "LOGIC"}

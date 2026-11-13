@@ -1,0 +1,26 @@
+{"bug_id": "php-src-0119a932f650", "sa_class": "MEMORY", "confidence": "high", "reason": "GC missed live tmpvar kinds, UAF"}
+{"bug_id": "php-src-04ebc4662274", "sa_class": "MEMORY", "confidence": "high", "reason": "asserted filter found, NULL deref"}
+{"bug_id": "php-src-0d43ce0140da", "sa_class": "LOGIC", "confidence": "low", "reason": "dead silent-mode block moved, behavior mix"}
+{"bug_id": "php-src-1b0195b0b102", "sa_class": "LOGIC", "confidence": "high", "reason": "pre-checked inheritance skipped final/static checks"}
+{"bug_id": "php-src-20b922f94767", "sa_class": "LOGIC", "confidence": "high", "reason": "trailing dot kept in canonical version"}
+{"bug_id": "php-src-21c8f6bd6ded", "sa_class": "LOGIC", "confidence": "low", "reason": "cookie hash key handling rewritten"}
+{"bug_id": "php-src-3dd6d56bed43", "sa_class": "MEMORY", "confidence": "low", "reason": "wrong strncasecmp length, OOB read"}
+{"bug_id": "php-src-57b891db5eac", "sa_class": "LOGIC", "confidence": "low", "reason": "class lookup path rewritten, contract unclear"}
+{"bug_id": "php-src-644f4c81235d", "sa_class": "ERROR", "confidence": "low", "reason": "missing seed state validation on unserialize"}
+{"bug_id": "php-src-67638986e670", "sa_class": "MEMORY", "confidence": "low", "reason": "iterator compare on poisoned stale table"}
+{"bug_id": "php-src-6d6eeee39f95", "sa_class": "ERROR", "confidence": "high", "reason": "odd hexBinary accepted, spec requires even"}
+{"bug_id": "php-src-7708c3973f86", "sa_class": "LOGIC", "confidence": "low", "reason": "inactive assert skipped argument parsing"}
+{"bug_id": "php-src-7fcb8a2206e5", "sa_class": "ERROR", "confidence": "low", "reason": "comment set macro used wrong zip API args"}
+{"bug_id": "php-src-81a2694ec050", "sa_class": "RESOURCE", "confidence": "low", "reason": "generator dtor skipped in fiber, leak"}
+{"bug_id": "php-src-9301c38f27df", "sa_class": "LOGIC", "confidence": "high", "reason": "rounding algorithm wrong for tie modes"}
+{"bug_id": "php-src-98f103396d0e", "sa_class": "LOGIC", "confidence": "low", "reason": "finally breakout range check off"}
+{"bug_id": "php-src-a1232a3e55b9", "sa_class": "OTHER", "confidence": "low", "reason": "removed gc_full field init, refactor"}
+{"bug_id": "php-src-a4774432f3b4", "sa_class": "LOGIC", "confidence": "low", "reason": "user flags ignored in zip stat call"}
+{"bug_id": "php-src-b9ca7425664a", "sa_class": "MEMORY", "confidence": "low", "reason": "hash insert mem alloc pattern rewritten"}
+{"bug_id": "php-src-bba9204567b2", "sa_class": "MEMORY", "confidence": "low", "reason": "cloned postfields shallow copy lifetime"}
+{"bug_id": "php-src-c3a5e71d0aa1", "sa_class": "MEMORY", "confidence": "high", "reason": "offset plus count signed overflow UB"}
+{"bug_id": "php-src-c94f35c6ad55", "sa_class": "LOGIC", "confidence": "high", "reason": "magic .phar prefix check too weak"}
+{"bug_id": "php-src-db25b1aca2fe", "sa_class": "LOGIC", "confidence": "low", "reason": "hosts list token handling rewritten"}
+{"bug_id": "php-src-eaf37a8bb3ef", "sa_class": "MEMORY", "confidence": "low", "reason": "multi handle list refcount lifetime wrong"}
+{"bug_id": "php-src-ef72be6a423c", "sa_class": "LOGIC", "confidence": "high", "reason": "export used limited precision for doubles"}
+{"bug_id": "php-src-f79aeee502d8", "sa_class": "LOGIC", "confidence": "low", "reason": "inheritance type checks, no removed lines"}

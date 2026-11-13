@@ -1,0 +1,15 @@
+{"bug_id": "jerryscript-042a8ceedc15", "sa_class": "RESOURCE", "confidence": "low", "reason": "property list ownership and free rewritten"}
+{"bug_id": "jerryscript-072dcea299cd", "sa_class": "LOGIC", "confidence": "high", "reason": "literal decode order and delta wrong"}
+{"bug_id": "jerryscript-1eb47ad8b475", "sa_class": "LOGIC", "confidence": "high", "reason": "array length setter return and flow wrong"}
+{"bug_id": "jerryscript-25396dc4b88b", "sa_class": "LOGIC", "confidence": "high", "reason": "fmod gives negative TimeWithinDay"}
+{"bug_id": "jerryscript-2b0230207b47", "sa_class": "LOGIC", "confidence": "high", "reason": "duplicated label check restructure wrong"}
+{"bug_id": "jerryscript-32f5320c7e4d", "sa_class": "LOGIC", "confidence": "high", "reason": "this.x assignment opcode sequence wrong"}
+{"bug_id": "jerryscript-4afcc94994c8", "sa_class": "LOGIC", "confidence": "high", "reason": "unary opcode handling rewritten wrong"}
+{"bug_id": "jerryscript-5144355d084f", "sa_class": "LOGIC", "confidence": "low", "reason": "wrapper object ToPrimitive and deref order"}
+{"bug_id": "jerryscript-5ca8de954fce", "sa_class": "LOGIC", "confidence": "high", "reason": "ternary allowed as assignment target"}
+{"bug_id": "jerryscript-63583f11d059", "sa_class": "LOGIC", "confidence": "high", "reason": "zero-length literal skipped in size count"}
+{"bug_id": "jerryscript-662bbee88446", "sa_class": "LOGIC", "confidence": "low", "reason": "concat fast path handling, no removed lines"}
+{"bug_id": "jerryscript-9bf98944df1f", "sa_class": "LOGIC", "confidence": "high", "reason": "NaN string returned for numeric getters"}
+{"bug_id": "jerryscript-bf72a9ea61e4", "sa_class": "LOGIC", "confidence": "low", "reason": "isfinite implementation rewritten"}
+{"bug_id": "jerryscript-df8c37f98e76", "sa_class": "LOGIC", "confidence": "high", "reason": "used is_enumerable for configurable flag"}
+{"bug_id": "jerryscript-edaaae2dd276", "sa_class": "LOGIC", "confidence": "high", "reason": "digit count off by one in rounding"}

@@ -1,0 +1,109 @@
+{"bug_id": "duckdb-0072efd0dc57", "sa_class": "LOGIC", "confidence": "low", "reason": "constraint rename/drop index fixup logic wrong"}
+{"bug_id": "duckdb-0134ded867ec", "sa_class": "RESOURCE", "confidence": "low", "reason": "parallel reservoir sink races on shared sample state"}
+{"bug_id": "duckdb-025b1abedd19", "sa_class": "LOGIC", "confidence": "low", "reason": "USING columns lost in ToString/serialization"}
+{"bug_id": "duckdb-064a85ba2b9e", "sa_class": "LOGIC", "confidence": "low", "reason": "alias index bound wrong with expanded select list"}
+{"bug_id": "duckdb-0bcc094e9155", "sa_class": "LOGIC", "confidence": "low", "reason": "join condition quals never transformed"}
+{"bug_id": "duckdb-0e8e823ac5dd", "sa_class": "LOGIC", "confidence": "low", "reason": "collation pushed on wrong unbound copy"}
+{"bug_id": "duckdb-15becaa25700", "sa_class": "LOGIC", "confidence": "low", "reason": "delim offsets computed wrong for lateral depth"}
+{"bug_id": "duckdb-165dc49e8f37", "sa_class": "LOGIC", "confidence": "high", "reason": "size>2 comparison skips copying short bitstrings"}
+{"bug_id": "duckdb-16912ea8773c", "sa_class": "LOGIC", "confidence": "low", "reason": "RLE flush/seen_count state machine wrong"}
+{"bug_id": "duckdb-1790251e63cf", "sa_class": "LOGIC", "confidence": "low", "reason": "pivot aggregates not transformed"}
+{"bug_id": "duckdb-19a0be39629f", "sa_class": "LOGIC", "confidence": "low", "reason": "COALESCE case missing in expression check"}
+{"bug_id": "duckdb-19c1b85d79d3", "sa_class": "MEMORY", "confidence": "low", "reason": "raw pointers into plan dangle after moves"}
+{"bug_id": "duckdb-1b0e6e7cf25b", "sa_class": "LOGIC", "confidence": "low", "reason": "selection vector bookkeeping wrong across reduce loops"}
+{"bug_id": "duckdb-1b72fe675ead", "sa_class": "LOGIC", "confidence": "low", "reason": "enum_first returns wrong value"}
+{"bug_id": "duckdb-1e65f66ebffc", "sa_class": "LOGIC", "confidence": "low", "reason": "has_tz initialized true, wrong result type"}
+{"bug_id": "duckdb-1e81c42dd1a4", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extracted (empty lines)"}
+{"bug_id": "duckdb-200dcf6a4fde", "sa_class": "LOGIC", "confidence": "low", "reason": "semi-join conversion check too narrow"}
+{"bug_id": "duckdb-2020c8d7a281", "sa_class": "LOGIC", "confidence": "low", "reason": "nested bracket parsing mis-tracks levels"}
+{"bug_id": "duckdb-21cff7c1d5c6", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extracted (empty lines)"}
+{"bug_id": "duckdb-2217f9b6532e", "sa_class": "LOGIC", "confidence": "low", "reason": "varchar-to-timestamp cast wrongly treated invertible"}
+{"bug_id": "duckdb-22ad99fe6d43", "sa_class": "LOGIC", "confidence": "low", "reason": "missing sublink type/comparison validation"}
+{"bug_id": "duckdb-2380f9735ed0", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong day-name bounds check"}
+{"bug_id": "duckdb-24278e9ffd28", "sa_class": "LOGIC", "confidence": "low", "reason": "append_count remaining bookkeeping wrong"}
+{"bug_id": "duckdb-282d562aa395", "sa_class": "LOGIC", "confidence": "low", "reason": "null constants mishandled in constant-move rule"}
+{"bug_id": "duckdb-2b390ca9f79d", "sa_class": "LOGIC", "confidence": "low", "reason": "FK dependency/creation flow mishandled"}
+{"bug_id": "duckdb-350ed10c5eea", "sa_class": "LOGIC", "confidence": "low", "reason": "LIKE underscore/case handling wrong per byte"}
+{"bug_id": "duckdb-35212bbdc849", "sa_class": "MEMORY", "confidence": "low", "reason": "missing window arg-count check precedes OOB access"}
+{"bug_id": "duckdb-36c38199ce20", "sa_class": "LOGIC", "confidence": "low", "reason": "aggregate ops wrongly added to relation mapping"}
+{"bug_id": "duckdb-37580a29144b", "sa_class": "LOGIC", "confidence": "low", "reason": "exponent handling formula wrong for negative exponent"}
+{"bug_id": "duckdb-3a50d7579d15", "sa_class": "LOGIC", "confidence": "low", "reason": "ON CONFLICT column mapping uses wrong ids"}
+{"bug_id": "duckdb-3f1087fd04f8", "sa_class": "MEMORY", "confidence": "low", "reason": "filtered_input references wrong/uninitialized vectors"}
+{"bug_id": "duckdb-3f3cf4083ba4", "sa_class": "LOGIC", "confidence": "low", "reason": "delim comparison not flipped"}
+{"bug_id": "duckdb-3f7b28468e2e", "sa_class": "ERROR", "confidence": "low", "reason": "transitive filter result value unchecked"}
+{"bug_id": "duckdb-43b086a35dd5", "sa_class": "MEMORY", "confidence": "low", "reason": "array child sliced with wrong bounds"}
+{"bug_id": "duckdb-4473cf27097c", "sa_class": "LOGIC", "confidence": "low", "reason": "cross product restrictions not respected"}
+{"bug_id": "duckdb-46a43d62ed7c", "sa_class": "MEMORY", "confidence": "low", "reason": "printf format args type-confused for narrow types"}
+{"bug_id": "duckdb-4815019d7a34", "sa_class": "LOGIC", "confidence": "low", "reason": "empty filter/aggregate branch conditions wrong"}
+{"bug_id": "duckdb-4b18f32ec21e", "sa_class": "MEMORY", "confidence": "low", "reason": "time parse reads past string end"}
+{"bug_id": "duckdb-4c125bd36641", "sa_class": "LOGIC", "confidence": "low", "reason": "aggregate parent search loop logic wrong"}
+{"bug_id": "duckdb-4f2d8e8eaf2f", "sa_class": "MEMORY", "confidence": "low", "reason": "radix scatter writes wrong key offsets for lists"}
+{"bug_id": "duckdb-4fae7f8bb350", "sa_class": "MEMORY", "confidence": "low", "reason": "join node plans hold dangling references"}
+{"bug_id": "duckdb-4fc939834090", "sa_class": "LOGIC", "confidence": "low", "reason": "list_zip size decrement wrong"}
+{"bug_id": "duckdb-55543d201747", "sa_class": "LOGIC", "confidence": "low", "reason": "compressed materialization optimizer state wrong"}
+{"bug_id": "duckdb-5a33d9a1c013", "sa_class": "ERROR", "confidence": "low", "reason": "exception in type-suggestion path unhandled"}
+{"bug_id": "duckdb-5b031435d1c2", "sa_class": "LOGIC", "confidence": "low", "reason": "bit padding bits ignored, wrong bit indices"}
+{"bug_id": "duckdb-5b6992a0f3a6", "sa_class": "LOGIC", "confidence": "low", "reason": "scalar subquery error wrapping missing"}
+{"bug_id": "duckdb-5e618dfa2d4f", "sa_class": "LOGIC", "confidence": "low", "reason": "FTS ignore-list regex built wrongly"}
+{"bug_id": "duckdb-61c3cfc37903", "sa_class": "LOGIC", "confidence": "low", "reason": "list hash ignores selection vector"}
+{"bug_id": "duckdb-62047414f1fa", "sa_class": "LOGIC", "confidence": "low", "reason": "view column alias fallback wrong"}
+{"bug_id": "duckdb-62e8b51ffa88", "sa_class": "MEMORY", "confidence": "low", "reason": "early return leaves scan state uninitialized"}
+{"bug_id": "duckdb-647f5416bff8", "sa_class": "LOGIC", "confidence": "low", "reason": "unused column removal for IN join wrong"}
+{"bug_id": "duckdb-663c7d842c69", "sa_class": "LOGIC", "confidence": "low", "reason": "deletion conflict detection wrong"}
+{"bug_id": "duckdb-675eb44147c9", "sa_class": "LOGIC", "confidence": "low", "reason": "decimal cast boundary comparison wrong"}
+{"bug_id": "duckdb-685162621323", "sa_class": "LOGIC", "confidence": "low", "reason": "list-to-array cast null propagation wrong"}
+{"bug_id": "duckdb-69a6459a8108", "sa_class": "LOGIC", "confidence": "low", "reason": "missing operator equality breaks plan matching"}
+{"bug_id": "duckdb-6dcb9e7c2bb4", "sa_class": "LOGIC", "confidence": "low", "reason": "float/double limit constants wrong"}
+{"bug_id": "duckdb-6f234f9c4978", "sa_class": "LOGIC", "confidence": "low", "reason": "map/struct result vector type wrong"}
+{"bug_id": "duckdb-7463773a3cb5", "sa_class": "LOGIC", "confidence": "low", "reason": "join filter pushdown for special joins wrong"}
+{"bug_id": "duckdb-75521326481f", "sa_class": "MEMORY", "confidence": "low", "reason": "CreateIndexInfo members left uninitialized"}
+{"bug_id": "duckdb-7b570403d686", "sa_class": "LOGIC", "confidence": "low", "reason": "filter selection handling wrong after scan"}
+{"bug_id": "duckdb-7fa52ed2bd69", "sa_class": "MEMORY", "confidence": "low", "reason": "raw deref of possibly-null bind/global state"}
+{"bug_id": "duckdb-824a50418841", "sa_class": "LOGIC", "confidence": "low", "reason": "enum_range builds wrong list value"}
+{"bug_id": "duckdb-8450ad72d657", "sa_class": "MEMORY", "confidence": "low", "reason": "dictionary child access on non-dictionary vector"}
+{"bug_id": "duckdb-85e3b88d8300", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extracted (empty lines)"}
+{"bug_id": "duckdb-863b896717f1", "sa_class": "MEMORY", "confidence": "low", "reason": "Flatten on non-flat append vector corrupts data"}
+{"bug_id": "duckdb-8679358a0503", "sa_class": "LOGIC", "confidence": "low", "reason": "cast pushdown conditions wrong for timestamp sources"}
+{"bug_id": "duckdb-86fe04caf9f4", "sa_class": "LOGIC", "confidence": "low", "reason": "shift bound computed/compared wrongly"}
+{"bug_id": "duckdb-8a3e974e8727", "sa_class": "LOGIC", "confidence": "low", "reason": "json map creation key handling wrong"}
+{"bug_id": "duckdb-8dcd0ac1cae0", "sa_class": "LOGIC", "confidence": "low", "reason": "ARRAY subquery transform missing"}
+{"bug_id": "duckdb-8ef8ca9824ab", "sa_class": "MEMORY", "confidence": "high", "reason": "string read from NULL value before null check"}
+{"bug_id": "duckdb-8fee68dc6ef2", "sa_class": "LOGIC", "confidence": "low", "reason": "pivot bindings not propagated"}
+{"bug_id": "duckdb-9247c5568ef1", "sa_class": "LOGIC", "confidence": "low", "reason": "window equality ignores partition semantics"}
+{"bug_id": "duckdb-94dd9ceb3b3a", "sa_class": "LOGIC", "confidence": "low", "reason": "column removal for set operations wrong"}
+{"bug_id": "duckdb-95c312388f7b", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extracted (empty lines)"}
+{"bug_id": "duckdb-96cd6f4c49c4", "sa_class": "LOGIC", "confidence": "low", "reason": "quoted identifier parsing in USE wrong"}
+{"bug_id": "duckdb-99482115caaa", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extracted (empty lines)"}
+{"bug_id": "duckdb-9dda7601a697", "sa_class": "LOGIC", "confidence": "low", "reason": "FK lookup uses wrong catalog argument"}
+{"bug_id": "duckdb-a3491d68d372", "sa_class": "LOGIC", "confidence": "low", "reason": "tokenizer quote handling missing"}
+{"bug_id": "duckdb-a36a17c4de98", "sa_class": "LOGIC", "confidence": "low", "reason": "non-invertible casts pushed into IN constants"}
+{"bug_id": "duckdb-a5eb42c56587", "sa_class": "LOGIC", "confidence": "low", "reason": "alter binder column binding wrong"}
+{"bug_id": "duckdb-a61365926289", "sa_class": "LOGIC", "confidence": "low", "reason": "parquet list child writer steps missing"}
+{"bug_id": "duckdb-a82cf49f86dd", "sa_class": "LOGIC", "confidence": "low", "reason": "RANGE frame validation condition wrong"}
+{"bug_id": "duckdb-ab8e5666b8b2", "sa_class": "LOGIC", "confidence": "low", "reason": "select list transform placement wrong"}
+{"bug_id": "duckdb-af0f5334fb87", "sa_class": "LOGIC", "confidence": "low", "reason": "correlated pushdown into join side missing"}
+{"bug_id": "duckdb-b16e2dce4c66", "sa_class": "LOGIC", "confidence": "low", "reason": "datediff minute truncation formula wrong"}
+{"bug_id": "duckdb-b189dd7ff15f", "sa_class": "LOGIC", "confidence": "low", "reason": "unnest binding index update wrong"}
+{"bug_id": "duckdb-b219521ef1e5", "sa_class": "LOGIC", "confidence": "low", "reason": "strftime offset parsing wrong"}
+{"bug_id": "duckdb-b59aa14f8b3f", "sa_class": "LOGIC", "confidence": "low", "reason": "integer cast exponent loop wrong"}
+{"bug_id": "duckdb-b6d9ac9ac4c4", "sa_class": "LOGIC", "confidence": "low", "reason": "window dependent-join bindings wrong"}
+{"bug_id": "duckdb-b9b1bb8a239b", "sa_class": "MEMORY", "confidence": "low", "reason": "missing UNNEST arg/depth checks precede OOB binding"}
+{"bug_id": "duckdb-ba44421804d6", "sa_class": "LOGIC", "confidence": "low", "reason": "dependent join flattening in visitor wrong"}
+{"bug_id": "duckdb-c6f9dfd6591b", "sa_class": "LOGIC", "confidence": "low", "reason": "RHS refs replaced without type check"}
+{"bug_id": "duckdb-c9112165759d", "sa_class": "RESOURCE", "confidence": "low", "reason": "MoveSegments before lock, checkpoint race"}
+{"bug_id": "duckdb-cfdd5889da28", "sa_class": "LOGIC", "confidence": "low", "reason": "stddev combine formula wrong"}
+{"bug_id": "duckdb-da5c7335ea4b", "sa_class": "LOGIC", "confidence": "low", "reason": "window correlated pushdown missing"}
+{"bug_id": "duckdb-dbd78f790c07", "sa_class": "LOGIC", "confidence": "low", "reason": "JSON null handling in extract wrong"}
+{"bug_id": "duckdb-dc96153f0266", "sa_class": "MEMORY", "confidence": "low", "reason": "missing flush leads to zero division or null fn"}
+{"bug_id": "duckdb-de68e49f3522", "sa_class": "RESOURCE", "confidence": "low", "reason": "window aggregate states not destroyed"}
+{"bug_id": "duckdb-e2c62d0b96d9", "sa_class": "LOGIC", "confidence": "low", "reason": "unnest named-parameter alias detection wrong"}
+{"bug_id": "duckdb-e544467a8f42", "sa_class": "LOGIC", "confidence": "low", "reason": "nested correlated subquery planning condition wrong"}
+{"bug_id": "duckdb-e5c74941dc92", "sa_class": "LOGIC", "confidence": "low", "reason": "USING column quoting in ToString wrong"}
+{"bug_id": "duckdb-eca6287b0265", "sa_class": "LOGIC", "confidence": "low", "reason": "lambda/JSON arrow binding conflict mishandled"}
+{"bug_id": "duckdb-ef0ded97b22b", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet extracted (empty lines)"}
+{"bug_id": "duckdb-f0ea35020083", "sa_class": "LOGIC", "confidence": "low", "reason": "non-AND conjunct handling produces bad expression"}
+{"bug_id": "duckdb-f2cf1db95264", "sa_class": "RESOURCE", "confidence": "low", "reason": "dropped list child column not cleaned up"}
+{"bug_id": "duckdb-f42aff9fc29f", "sa_class": "MEMORY", "confidence": "low", "reason": "payload chunk never initialized or scanned"}
+{"bug_id": "duckdb-fa43a31dc1a0", "sa_class": "LOGIC", "confidence": "low", "reason": "allow_stream_result flag wrongly forced"}
+{"bug_id": "duckdb-fbcfadceb477", "sa_class": "LOGIC", "confidence": "high", "reason": "self-referential macros recurse infinitely"}
+{"bug_id": "duckdb-ffb453f07fce", "sa_class": "LOGIC", "confidence": "low", "reason": "missing by-type switch case throws for valid input"}

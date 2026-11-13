@@ -1,0 +1,17 @@
+{"bug_id": "godot-141d838cb0a9", "sa_class": "LOGIC", "confidence": "low", "reason": "indent loop misses skip case, space_count not reset"}
+{"bug_id": "godot-1487db8f8067", "sa_class": "RESOURCE", "confidence": "low", "reason": "reused stack slots retain stale object refs, refcount leak"}
+{"bug_id": "godot-16e44a6ee5fd", "sa_class": "LOGIC", "confidence": "high", "reason": "line-breaking break flags and boundaries computed wrongly"}
+{"bug_id": "godot-1ae6171b9aa5", "sa_class": "LOGIC", "confidence": "low", "reason": "anchor/min-size caching and set_position branches wrong"}
+{"bug_id": "godot-1c09cb9eb560", "sa_class": "LOGIC", "confidence": "low", "reason": "wrong connection save conditions for editable instances"}
+{"bug_id": "godot-2a35121cb587", "sa_class": "LOGIC", "confidence": "high", "reason": "doc string built from wrong source, base docs dropped"}
+{"bug_id": "godot-3cec1823b69a", "sa_class": "LOGIC", "confidence": "low", "reason": "bracket skip, search and caret selection decisions wrong"}
+{"bug_id": "godot-4a105bb044ef", "sa_class": "MEMORY", "confidence": "low", "reason": "debug lock keeps object pointer, unref after free"}
+{"bug_id": "godot-5a307011ac8b", "sa_class": "LOGIC", "confidence": "high", "reason": "singular check mid-elimination leaves matrix half inverted"}
+{"bug_id": "godot-6191f779e20c", "sa_class": "MEMORY", "confidence": "low", "reason": "float args truncated to int, UB feeding array resize"}
+{"bug_id": "godot-663987b95b26", "sa_class": "LOGIC", "confidence": "high", "reason": "overlong and 5-byte UTF-8 sequences wrongly accepted"}
+{"bug_id": "godot-6ca6a961c8e1", "sa_class": "UNKNOWN", "confidence": "low", "reason": "no snippet lines extracted"}
+{"bug_id": "godot-979d80320b3c", "sa_class": "LOGIC", "confidence": "high", "reason": "extents reset wrongly gated on start_line==1"}
+{"bug_id": "godot-ad060d7c9da5", "sa_class": "LOGIC", "confidence": "high", "reason": "missing parallel-plane check divides by near zero"}
+{"bug_id": "godot-bddc285d34b7", "sa_class": "LOGIC", "confidence": "high", "reason": "sRGB conversion formulas use wrong constants/branches"}
+{"bug_id": "godot-c985347ac8f8", "sa_class": "LOGIC", "confidence": "high", "reason": "epsilon comparisons pick wrong Euler branch, NaN angles"}
+{"bug_id": "godot-dc71181af3af", "sa_class": "LOGIC", "confidence": "low", "reason": "warning emitted under wrong condition"}

@@ -1,0 +1,11 @@
+{"bug_id": "z3-21693e1cea96", "sa_class": "LOGIC", "confidence": "low", "reason": "parametric declaration application gated on wrong condition"}
+{"bug_id": "z3-6aeffc53878d", "sa_class": "MEMORY", "confidence": "low", "reason": "unsigned subtraction of k can underflow constraint bound"}
+{"bug_id": "z3-7c5e71fa9a15", "sa_class": "LOGIC", "confidence": "low", "reason": "term equality comparison wrong or debug-only"}
+{"bug_id": "z3-845ca575f448", "sa_class": "LOGIC", "confidence": "low", "reason": "uminus case unimplemented in arith plugin"}
+{"bug_id": "z3-9b51ad4d5969", "sa_class": "ERROR", "confidence": "low", "reason": "algebraic API check wrongly rejects valid input"}
+{"bug_id": "z3-b29e3fbe839f", "sa_class": "LOGIC", "confidence": "low", "reason": "sticky bit zero-extend uses wrong width constant"}
+{"bug_id": "z3-ce2e010dd3c0", "sa_class": "LOGIC", "confidence": "low", "reason": "are_siblings unwraps nested sorts incorrectly"}
+{"bug_id": "z3-e0dd0ca5d4f1", "sa_class": "LOGIC", "confidence": "low", "reason": "QE misses datatype accessor terms"}
+{"bug_id": "z3-e530990a778e", "sa_class": "LOGIC", "confidence": "high", "reason": "bound strictness computed with wrong symmetry conditions"}
+{"bug_id": "z3-f2490da70ca4", "sa_class": "LOGIC", "confidence": "low", "reason": "algebraic number negation not handled for cells"}
+{"bug_id": "z3-f3cd4349f4cb", "sa_class": "ERROR", "confidence": "low", "reason": "polymorphic match failure reported but execution continues"}
