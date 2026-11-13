@@ -1,0 +1,19 @@
+{"bug_id": "gdal-006b8e03a33f", "decision": "NONSA", "confidence": "high", "reason": "early return skips polygon attachment, output logic"}
+{"bug_id": "gdal-014fe459d126", "decision": "SA", "confidence": "high", "reason": "duplicate JSON objects leaked, resource leak"}
+{"bug_id": "gdal-117d4b5060bb", "decision": "SA", "confidence": "high", "reason": "members used uninitialized, uninitialized read"}
+{"bug_id": "gdal-142747db21b5", "decision": "SA", "confidence": "high", "reason": "missing empty-SRS check returns live reference"}
+{"bug_id": "gdal-21f4a3ec2ba2", "decision": "SA", "confidence": "low", "reason": "string recode handling, memory class kept, uncertain"}
+{"bug_id": "gdal-22389fee67bc", "decision": "SA", "confidence": "high", "reason": "PNG error path leaks buffers, missing cleanup"}
+{"bug_id": "gdal-231f5e1235cb", "decision": "SA", "confidence": "high", "reason": "pointer members uninitialized before use"}
+{"bug_id": "gdal-2ded60d7a181", "decision": "SA", "confidence": "high", "reason": "terminator written one past array, OOB write"}
+{"bug_id": "gdal-3bd8d57ad655", "decision": "SA", "confidence": "high", "reason": "PNG error path leaks buffers, missing cleanup"}
+{"bug_id": "gdal-424d521138b6", "decision": "SA", "confidence": "high", "reason": "header struct fields used uninitialized"}
+{"bug_id": "gdal-44e37a15a6cf", "decision": "SA", "confidence": "low", "reason": "string recode handling, memory class kept, uncertain"}
+{"bug_id": "gdal-4682a0e8a013", "decision": "SA", "confidence": "high", "reason": "null SRS name passed to lookup, null deref"}
+{"bug_id": "gdal-6717ca55be0c", "decision": "SA", "confidence": "high", "reason": "bad clamp bounds yield out-of-bounds read"}
+{"bug_id": "gdal-7421035a3c5d", "decision": "SA", "confidence": "high", "reason": "boundary array overrun in antimeridian handling"}
+{"bug_id": "gdal-773b9bc02944", "decision": "SA", "confidence": "high", "reason": "missing dimension bounds check, OOB index"}
+{"bug_id": "gdal-7ccad1918967", "decision": "SA", "confidence": "high", "reason": "pointer members uninitialized before use"}
+{"bug_id": "gdal-8726ac905a3f", "decision": "SA", "confidence": "high", "reason": "missing empty-SRS check returns live reference"}
+{"bug_id": "gdal-a859743432e2", "decision": "SA", "confidence": "high", "reason": "papszContent ownership never transferred, leak"}
+{"bug_id": "gdal-f72f1eda99e3", "decision": "SA", "confidence": "high", "reason": "papszContent ownership never transferred, leak"}

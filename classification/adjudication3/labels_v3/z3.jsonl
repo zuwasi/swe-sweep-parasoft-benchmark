@@ -1,0 +1,6 @@
+{"bug_id": "z3-6aeffc53878d", "decision": "NONSA", "confidence": "low", "reason": "unsigned underflow feeds solver threshold, not memory access"}
+{"bug_id": "z3-7c5e71fa9a15", "decision": "NONSA", "confidence": "high", "reason": "wrong term equality comparison; debug-only logic defect"}
+{"bug_id": "z3-9b51ad4d5969", "decision": "SA", "confidence": "high", "reason": "invalid input returns null without setting API error code"}
+{"bug_id": "z3-b29e3fbe839f", "decision": "NONSA", "confidence": "high", "reason": "wrong zero-extend width constant; expression construction logic"}
+{"bug_id": "z3-ce2e010dd3c0", "decision": "NONSA", "confidence": "high", "reason": "missing nested sort unwrapping; sibling detection logic only"}
+{"bug_id": "z3-f3cd4349f4cb", "decision": "SA", "confidence": "high", "reason": "match failure sets error code but execution continues"}

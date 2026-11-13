@@ -1,0 +1,14 @@
+{"bug_id": "tarantool-02d1749c6bfb", "decision": "SA", "confidence": "high", "reason": "missing buffer bounds validation before record parsing"}
+{"bug_id": "tarantool-067eeb123c0e", "decision": "SA", "confidence": "high", "reason": "wrong decompressed data end pointer, out-of-bounds"}
+{"bug_id": "tarantool-35044a57ea04", "decision": "NONSA", "confidence": "high", "reason": "backtrace option plumbing, wrong output only"}
+{"bug_id": "tarantool-39735317fbaf", "decision": "SA", "confidence": "high", "reason": "assumed zero-terminated input, out-of-bounds read"}
+{"bug_id": "tarantool-46b0022d552a", "decision": "SA", "confidence": "high", "reason": "unchecked conversion results leave decimal uninitialized"}
+{"bug_id": "tarantool-4753065c09ed", "decision": "SA", "confidence": "high", "reason": "missing null params check, uninitialized source used"}
+{"bug_id": "tarantool-4e1bd4f2ca09", "decision": "SA", "confidence": "low", "reason": "premature callback GC causes use-after-free"}
+{"bug_id": "tarantool-4f3f87493c3a", "decision": "SA", "confidence": "high", "reason": "wrongly checked read return, incomplete greeting used"}
+{"bug_id": "tarantool-67319bd2abd7", "decision": "SA", "confidence": "low", "reason": "missing return yields garbage pointer to caller"}
+{"bug_id": "tarantool-95c521353f4e", "decision": "SA", "confidence": "low", "reason": "cancellation during yield corrupts journal entry state"}
+{"bug_id": "tarantool-a0264983c4a6", "decision": "SA", "confidence": "low", "reason": "missing index validity check, contract validation"}
+{"bug_id": "tarantool-c2e562efa2e4", "decision": "SA", "confidence": "low", "reason": "assert-only dead fiber check, release corrupts scheduler"}
+{"bug_id": "tarantool-d527e3e234ed", "decision": "SA", "confidence": "high", "reason": "story deleted while gap-tracked, use-after-free"}
+{"bug_id": "tarantool-f7aac1b241c3", "decision": "SA", "confidence": "high", "reason": "array header decoded without bounds check, out-of-bounds"}

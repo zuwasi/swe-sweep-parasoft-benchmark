@@ -1,0 +1,5 @@
+{"bug_id": "micropython-8625d05e0e82", "decision": "SA", "confidence": "high", "reason": "unmasked typecode and offset feed memcpy size and address"}
+{"bug_id": "micropython-b53492729a4a", "decision": "NONSA", "confidence": "high", "reason": "wrong early-exit condition in pow; pure arithmetic logic"}
+{"bug_id": "micropython-bc4a5e14e72f", "decision": "SA", "confidence": "low", "reason": "truncated int becomes raw struct address; missing validation"}
+{"bug_id": "micropython-bdadb90505c7", "decision": "SA", "confidence": "high", "reason": "missing aggregate size feeds pointer arithmetic and buffer length"}
+{"bug_id": "micropython-ef93b8337084", "decision": "SA", "confidence": "low", "reason": "wrongly checked int conversion; slice.indices contract violation"}

@@ -1,0 +1,20 @@
+{"bug_id": "arrow-121fb8b54251", "decision": "NONSA", "confidence": "high", "reason": "hash omits contents, wrong hash values only"}
+{"bug_id": "arrow-264e1ebbe40c", "decision": "NONSA", "confidence": "low", "reason": "decoder state handling for malformed widths, no memory defect"}
+{"bug_id": "arrow-2cdadc752c2e", "decision": "NONSA", "confidence": "high", "reason": "registry alias lookup mishandled"}
+{"bug_id": "arrow-2fd06f68a200", "decision": "SA", "confidence": "high", "reason": "missing stride validation allows out of bounds tensor reads"}
+{"bug_id": "arrow-40583d085a58", "decision": "SA", "confidence": "high", "reason": "missing schema validation is contract violation"}
+{"bug_id": "arrow-4bbc9f6cd795", "decision": "SA", "confidence": "low", "reason": "cast skips required validation, contract violation"}
+{"bug_id": "arrow-4e8d0cead54f", "decision": "SA", "confidence": "high", "reason": "conversion status never checked"}
+{"bug_id": "arrow-5a279df3fd5a", "decision": "SA", "confidence": "high", "reason": "wrapped type code used as field index out of bounds"}
+{"bug_id": "arrow-8a6d1850de5a", "decision": "NONSA", "confidence": "high", "reason": "map built from wrong child fields"}
+{"bug_id": "arrow-98c930cfb2f6", "decision": "SA", "confidence": "low", "reason": "stale buffer size exposes uninitialized bytes"}
+{"bug_id": "arrow-9a0cb740d8ac", "decision": "SA", "confidence": "high", "reason": "row group writer never closed before new one"}
+{"bug_id": "arrow-a642ccf7200e", "decision": "NONSA", "confidence": "low", "reason": "dictionary span plumbing mishandled, wrong values"}
+{"bug_id": "arrow-a7cd3ba57ac2", "decision": "SA", "confidence": "high", "reason": "memcpy lengths from wrong arrays overflow buffers"}
+{"bug_id": "arrow-b4b15ce0d6ab", "decision": "NONSA", "confidence": "high", "reason": "missing ordered flag plumbing only"}
+{"bug_id": "arrow-b831ede509b4", "decision": "SA", "confidence": "high", "reason": "wrong throttle condition deadlocks writer"}
+{"bug_id": "arrow-c1cc8abccb1b", "decision": "SA", "confidence": "high", "reason": "copies null validity bitmap, null deref"}
+{"bug_id": "arrow-c844b43f97c5", "decision": "SA", "confidence": "high", "reason": "dictionary child data missing, later out of bounds access"}
+{"bug_id": "arrow-d0cd5512a992", "decision": "SA", "confidence": "low", "reason": "missing error-capable flag and zero-length error handling"}
+{"bug_id": "arrow-db58ca99eaa0", "decision": "SA", "confidence": "high", "reason": "unknown null count treated as zero, null deref"}
+{"bug_id": "arrow-eef26b83f5e8", "decision": "SA", "confidence": "high", "reason": "null check guards wrong pointer, null deref"}

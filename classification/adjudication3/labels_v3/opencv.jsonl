@@ -1,0 +1,33 @@
+{"bug_id": "opencv-03814c751e45", "decision": "NONSA", "confidence": "high", "reason": "wrong normalization constant in Givens math, no memory impact"}
+{"bug_id": "opencv-0d3161877178", "decision": "NONSA", "confidence": "high", "reason": "wrong distance formula, pure numeric output error"}
+{"bug_id": "opencv-174d41f7934b", "decision": "NONSA", "confidence": "high", "reason": "wrong scale constant, numeric output only"}
+{"bug_id": "opencv-1974f51bd214", "decision": "NONSA", "confidence": "high", "reason": "missing GEMM case yields wrong result size"}
+{"bug_id": "opencv-212cd1521af9", "decision": "NONSA", "confidence": "high", "reason": "swapped intrinsic operands, wrong values only"}
+{"bug_id": "opencv-35e95d5fef31", "decision": "SA", "confidence": "high", "reason": "destructor cleanup causes object lifetime bug"}
+{"bug_id": "opencv-41e8688ee2f5", "decision": "NONSA", "confidence": "high", "reason": "wrong scan break yields wrong bounding rect"}
+{"bug_id": "opencv-4320d091f246", "decision": "NONSA", "confidence": "high", "reason": "wrong document search logic, no memory issue"}
+{"bug_id": "opencv-5cb9cd581ef5", "decision": "SA", "confidence": "low", "reason": "wrong loop index can index outputBlobs out of bounds"}
+{"bug_id": "opencv-5ff1b89640bd", "decision": "SA", "confidence": "high", "reason": "wrong-width copy loop reads and writes out of bounds"}
+{"bug_id": "opencv-6a1bdf8d7893", "decision": "NONSA", "confidence": "low", "reason": "missing input copy mutates caller data, no memory error"}
+{"bug_id": "opencv-6c432b0cd808", "decision": "SA", "confidence": "low", "reason": "missing empty check lets checkVector throw unexpectedly"}
+{"bug_id": "opencv-72b6a063e735", "decision": "NONSA", "confidence": "high", "reason": "degenerate rect yields wrong intersection output"}
+{"bug_id": "opencv-78a11e75834c", "decision": "SA", "confidence": "high", "reason": "indexes empty descriptor collection out of bounds"}
+{"bug_id": "opencv-836aa6f1bcdb", "decision": "NONSA", "confidence": "high", "reason": "wrong type constant returned"}
+{"bug_id": "opencv-83d848ddf557", "decision": "SA", "confidence": "high", "reason": "FileNode lifetime bug, use after free"}
+{"bug_id": "opencv-849409d58b10", "decision": "NONSA", "confidence": "low", "reason": "parser EOF control flow error only"}
+{"bug_id": "opencv-8c7ec21f40f2", "decision": "NONSA", "confidence": "low", "reason": "missing iteration limit causes hang, not memory"}
+{"bug_id": "opencv-9147e633a50f", "decision": "SA", "confidence": "low", "reason": "missing empty ROI guard causes unexpected exception"}
+{"bug_id": "opencv-9a698f046e06", "decision": "SA", "confidence": "high", "reason": "unchecked dims overflow fixed sizes stack buffer"}
+{"bug_id": "opencv-a3f10a0641a3", "decision": "NONSA", "confidence": "high", "reason": "missing predict override dispatch"}
+{"bug_id": "opencv-a841d77e12fa", "decision": "NONSA", "confidence": "low", "reason": "wrong normal vector formula"}
+{"bug_id": "opencv-b7c9f43a731b", "decision": "NONSA", "confidence": "high", "reason": "inverted continuity condition"}
+{"bug_id": "opencv-b95e3c7e7f80", "decision": "NONSA", "confidence": "high", "reason": "collinearity formula omits z terms"}
+{"bug_id": "opencv-c4f59cf36a65", "decision": "SA", "confidence": "high", "reason": "wrong pyramid buffer size allows out of bounds writes"}
+{"bug_id": "opencv-c4fd47005bde", "decision": "NONSA", "confidence": "high", "reason": "wrong input kind dispatch"}
+{"bug_id": "opencv-cef786b62d8e", "decision": "NONSA", "confidence": "low", "reason": "TIFF page loop writes wrong pages"}
+{"bug_id": "opencv-cfc1dfc23f11", "decision": "NONSA", "confidence": "high", "reason": "wrong contour trace stop condition"}
+{"bug_id": "opencv-dcdb346f556f", "decision": "NONSA", "confidence": "high", "reason": "missing degenerate-case branch in rotation math"}
+{"bug_id": "opencv-eb23b61a6803", "decision": "SA", "confidence": "high", "reason": "wrong table offset reads out of bounds"}
+{"bug_id": "opencv-f418aa091479", "decision": "SA", "confidence": "high", "reason": "memcpy overruns line buffer"}
+{"bug_id": "opencv-f624dc51adf5", "decision": "SA", "confidence": "high", "reason": "calls null converter function pointer for CV_16F"}
+{"bug_id": "opencv-ff66d0af4e7e", "decision": "SA", "confidence": "high", "reason": "unchecked format pairs overflow stack array"}

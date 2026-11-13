@@ -1,0 +1,10 @@
+{"bug_id": "proj-06b0cf9e684f", "decision": "NONSA", "confidence": "low", "reason": "missing include build defect, not detectable mechanism"}
+{"bug_id": "proj-082e3620a0bb", "decision": "NONSA", "confidence": "high", "reason": "wrong export context flag, formatting logic"}
+{"bug_id": "proj-1ddd02a36695", "decision": "SA", "confidence": "high", "reason": "missing Cartesian CS check before deref"}
+{"bug_id": "proj-210490c1df4f", "decision": "NONSA", "confidence": "high", "reason": "wrong CRS chosen in transformation chain, logic"}
+{"bug_id": "proj-4831a51d8731", "decision": "SA", "confidence": "high", "reason": "missing Cartesian CS check before deref"}
+{"bug_id": "proj-5819b33a303f", "decision": "NONSA", "confidence": "high", "reason": "wrong z_out parameters, formatting logic"}
+{"bug_id": "proj-a289af9c5fe7", "decision": "NONSA", "confidence": "high", "reason": "wrong CRS chosen in transformation chain, logic"}
+{"bug_id": "proj-bfab0375ca89", "decision": "SA", "confidence": "high", "reason": "missing Cartesian CS check before deref"}
+{"bug_id": "proj-caba6901ef48", "decision": "NONSA", "confidence": "low", "reason": "identifiers reference usage unclear, no context"}
+{"bug_id": "proj-d1e39e45b0a6", "decision": "NONSA", "confidence": "high", "reason": "wrong CRS chosen in transformation chain, logic"}

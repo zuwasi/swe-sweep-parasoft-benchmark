@@ -153,26 +153,35 @@
     "swe_sweep_best_overall_pct": 4.5
   },
   "classification": {
-    "method": "Two independent blind classification passes over the fixed-version removed/inserted lines of each of the 488 SWE-sweep bugs, adjudicated by the analyst with priority to the 16 bugs Parasoft Flow Analysis caught (ground truth for mechanism). Classes: MEMORY (memory safety/UB), RESOURCE (leaks/concurrency), ERROR (error handling/API contract), LOGIC (wrong decision/formula/spec), OTHER (build/test/docs), UNKNOWN (no snippet extractable, 19 bugs, excluded from the SA-addressable denominator). See classification/RUBRIC.md.",
+    "method": "Three-pass classification: two independent blind passes over the fixed-version removed/inserted lines of each of the 488 SWE-sweep bugs, adjudicated by the analyst with priority to the 16 bugs Parasoft Flow Analysis caught (ground truth for mechanism), then a third boundary pass that re-judged the 228 adjudication-relevant low-confidence labels with full pre-image context (labels and method in classification/adjudication3/). Classes: MEMORY (memory safety/UB), RESOURCE (leaks/concurrency), ERROR (error handling/API contract), LOGIC (wrong decision/formula/spec), OTHER (build/test/docs), UNKNOWN (no snippet extractable, 19 bugs, excluded from the SA-addressable denominator). See classification/RUBRIC.md.",
     "totals": {
       "bugs": 488,
       "class_counts": {
         "LOGIC": 300,
         "RESOURCE": 16,
-        "MEMORY": 119,
-        "ERROR": 27,
+        "MEMORY": 120,
+        "ERROR": 26,
         "UNKNOWN": 19,
         "OTHER": 7
       },
       "sa_addressable": 162,
       "sa_addressable_pct": 33.2,
-      "sa_caught_region": 63,
-      "pct_sa_region": 38.9,
-      "sa_caught_strict": 38,
-      "pct_sa_strict": 23.5,
+      "sa_caught_region": 67,
+      "pct_sa_region": 41.4,
+      "sa_caught_strict": 40,
+      "pct_sa_strict": 24.7,
       "found_region_all": 183,
       "pct_region_all": 37.5,
-      "low_confidence_labels": 400
+      "low_confidence_labels": 400,
+      "pass3_boundary_cases": 228,
+      "pass3_flips": {
+        "sa_to_nonsa": 5,
+        "nonsa_to_sa": 5
+      },
+      "pass3_range_pct_sa_region": [
+        38.8,
+        41.4
+      ]
     }
   }
 }

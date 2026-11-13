@@ -1,0 +1,9 @@
+{"bug_id": "jerryscript-042a8ceedc15", "decision": "NONSA", "confidence": "low", "reason": "array property selection wrong, output logic only"}
+{"bug_id": "jerryscript-072dcea299cd", "decision": "NONSA", "confidence": "low", "reason": "literal re-encoding comparison wrong, codegen logic"}
+{"bug_id": "jerryscript-2b0230207b47", "decision": "NONSA", "confidence": "high", "reason": "duplicate label check restructure, parser logic"}
+{"bug_id": "jerryscript-32f5320c7e4d", "decision": "NONSA", "confidence": "high", "reason": "wrong opcode sequence, codegen logic"}
+{"bug_id": "jerryscript-4afcc94994c8", "decision": "NONSA", "confidence": "high", "reason": "unary opcode combination logic wrong"}
+{"bug_id": "jerryscript-5ca8de954fce", "decision": "NONSA", "confidence": "high", "reason": "ternary accepted as assignment target, grammar logic"}
+{"bug_id": "jerryscript-63583f11d059", "decision": "SA", "confidence": "high", "reason": "size accounting undercounts zero-length literals, buffer overflow"}
+{"bug_id": "jerryscript-9bf98944df1f", "decision": "NONSA", "confidence": "high", "reason": "wrong return value type, output logic"}
+{"bug_id": "jerryscript-bf72a9ea61e4", "decision": "NONSA", "confidence": "high", "reason": "isfinite implementation rewritten, math logic"}

@@ -1,0 +1,8 @@
+{"bug_id": "libexpat-0c5dbd0bb0a5", "decision": "SA", "confidence": "low", "reason": "missing amplification accounting allows resource exhaustion"}
+{"bug_id": "libexpat-30d93b149d3d", "decision": "NONSA", "confidence": "low", "reason": "wrong suspend condition precedence, state machine error"}
+{"bug_id": "libexpat-4e25524fb119", "decision": "SA", "confidence": "high", "reason": "tempPool cleared while strings referenced, use-after-free"}
+{"bug_id": "libexpat-69f40cffb664", "decision": "SA", "confidence": "high", "reason": "missing allocation failure check, unchecked error path"}
+{"bug_id": "libexpat-8e5c789e8d3b", "decision": "SA", "confidence": "high", "reason": "missing buffer size computation, overflow on growth"}
+{"bug_id": "libexpat-cf1142438f11", "decision": "SA", "confidence": "high", "reason": "overflow guard compiled out, realloc size overflow"}
+{"bug_id": "libexpat-e567e550f1be", "decision": "SA", "confidence": "low", "reason": "version output pointers unset, uninitialized pointer use"}
+{"bug_id": "libexpat-f67d952cb3de", "decision": "SA", "confidence": "low", "reason": "encoding name stored in temporary pool, use-after-free"}

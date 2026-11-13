@@ -1,0 +1,15 @@
+{"bug_id": "php-src-0119a932f650", "decision": "SA", "confidence": "high", "reason": "wrong kind comparison frees live temporaries causing use-after-free"}
+{"bug_id": "php-src-04ebc4662274", "decision": "SA", "confidence": "high", "reason": "missing null return for unfound filter causes null dereference"}
+{"bug_id": "php-src-1b0195b0b102", "decision": "NONSA", "confidence": "high", "reason": "skipped inheritance checks, semantic validation logic only"}
+{"bug_id": "php-src-3dd6d56bed43", "decision": "SA", "confidence": "high", "reason": "wrong string length argument causes out-of-bounds read"}
+{"bug_id": "php-src-57b891db5eac", "decision": "NONSA", "confidence": "high", "reason": "autoload branch selection wrong, no memory mechanism"}
+{"bug_id": "php-src-644f4c81235d", "decision": "SA", "confidence": "low", "reason": "missing return value violates bool contract, unchecked by callers"}
+{"bug_id": "php-src-67638986e670", "decision": "SA", "confidence": "high", "reason": "stale iterator table pointer, freed HashTable access"}
+{"bug_id": "php-src-6d6eeee39f95", "decision": "SA", "confidence": "high", "reason": "buffer allocated half of hex length, overflow write"}
+{"bug_id": "php-src-7708c3973f86", "decision": "NONSA", "confidence": "low", "reason": "inactive assert skips argument parsing, behavioral contract only"}
+{"bug_id": "php-src-7fcb8a2206e5", "decision": "SA", "confidence": "low", "reason": "int comment length feeds zip API memory access"}
+{"bug_id": "php-src-81a2694ec050", "decision": "SA", "confidence": "high", "reason": "generator dtor during fiber suspend, use-after-free"}
+{"bug_id": "php-src-98f103396d0e", "decision": "NONSA", "confidence": "high", "reason": "missing jump validation is compiler semantic logic"}
+{"bug_id": "php-src-a1232a3e55b9", "decision": "NONSA", "confidence": "low", "reason": "field initialization removed in refactor, no defect mechanism"}
+{"bug_id": "php-src-db25b1aca2fe", "decision": "SA", "confidence": "low", "reason": "string key lifetime rewritten, plausible ownership bug"}
+{"bug_id": "php-src-eaf37a8bb3ef", "decision": "SA", "confidence": "high", "reason": "missing refcount on stored handle, use-after-free"}

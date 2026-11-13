@@ -1,0 +1,21 @@
+{"bug_id": "cvc5-11eabe28d431", "decision": "NONSA", "confidence": "high", "reason": "missing preprocessing rewrite step, pure solver logic"}
+{"bug_id": "cvc5-1337df3bc465", "decision": "NONSA", "confidence": "high", "reason": "proof step built with wrong arguments, no memory angle"}
+{"bug_id": "cvc5-15ce999a65bb", "decision": "NONSA", "confidence": "low", "reason": "wrong inference id constant, semantic plumbing not detectable"}
+{"bug_id": "cvc5-308a909279a9", "decision": "NONSA", "confidence": "low", "reason": "wrong arguments to internal inference API, plumbing logic"}
+{"bug_id": "cvc5-3489f19d0af7", "decision": "SA", "confidence": "high", "reason": "dangling TheoryModel pointer stored, use-after-free"}
+{"bug_id": "cvc5-647ecea6ab0d", "decision": "NONSA", "confidence": "high", "reason": "datatype cardinality computed wrong, solver logic only"}
+{"bug_id": "cvc5-6f88c8072d5a", "decision": "NONSA", "confidence": "high", "reason": "power rewriter returns wrong nodes, rewriter logic"}
+{"bug_id": "cvc5-726a3ded06b0", "decision": "NONSA", "confidence": "low", "reason": "wrong assert predicates on proof args, no memory angle"}
+{"bug_id": "cvc5-8c19798c9c2d", "decision": "NONSA", "confidence": "high", "reason": "effort loop and instantiation control flow logic"}
+{"bug_id": "cvc5-92a35b3a1356", "decision": "NONSA", "confidence": "high", "reason": "wrong kind check extracting equalities, logic"}
+{"bug_id": "cvc5-9abdf24fe930", "decision": "NONSA", "confidence": "high", "reason": "quantifier rewriter merge logic, no memory angle"}
+{"bug_id": "cvc5-9c7602939dee", "decision": "SA", "confidence": "low", "reason": "type-check error reported through wrong channel"}
+{"bug_id": "cvc5-a6fa2c8060f2", "decision": "SA", "confidence": "high", "reason": "success flag checked only by assert, unchecked value"}
+{"bug_id": "cvc5-a874c6f84e37", "decision": "NONSA", "confidence": "high", "reason": "wrong condition guarding inst constants, logic"}
+{"bug_id": "cvc5-a92827dd3f89", "decision": "SA", "confidence": "low", "reason": "assert instead of handling non-constant case, contract gap"}
+{"bug_id": "cvc5-aa2797db1fd7", "decision": "SA", "confidence": "low", "reason": "missing null check on representative before use"}
+{"bug_id": "cvc5-cb7581ed4265", "decision": "SA", "confidence": "high", "reason": "missing API precondition check, contract violation"}
+{"bug_id": "cvc5-d73f0189501b", "decision": "NONSA", "confidence": "high", "reason": "string model bookkeeping logic, style rules only"}
+{"bug_id": "cvc5-e1ed9a524e71", "decision": "NONSA", "confidence": "low", "reason": "int width for bv size, no memory access"}
+{"bug_id": "cvc5-f0994ce1b268", "decision": "NONSA", "confidence": "high", "reason": "finite field negation rewrite wrong, rewriter logic"}
+{"bug_id": "cvc5-f313728ce254", "decision": "NONSA", "confidence": "high", "reason": "wrong exception guard condition, branch logic"}

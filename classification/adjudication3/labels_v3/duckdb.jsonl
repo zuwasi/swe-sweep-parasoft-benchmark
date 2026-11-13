@@ -1,0 +1,57 @@
+{"bug_id": "duckdb-0072efd0dc57", "decision": "NONSA", "confidence": "low", "reason": "constraint name/index branch handling, no memory angle"}
+{"bug_id": "duckdb-0134ded867ec", "decision": "SA", "confidence": "low", "reason": "wrong parallel flag causes data race on sample state"}
+{"bug_id": "duckdb-025b1abedd19", "decision": "NONSA", "confidence": "high", "reason": "cross product ToString/transform logic only"}
+{"bug_id": "duckdb-064a85ba2b9e", "decision": "NONSA", "confidence": "high", "reason": "overly strict alias comparison rejects valid input"}
+{"bug_id": "duckdb-0e8e823ac5dd", "decision": "NONSA", "confidence": "high", "reason": "collation applied to discarded copy, dead computation"}
+{"bug_id": "duckdb-15becaa25700", "decision": "NONSA", "confidence": "high", "reason": "planner binding offsets computed wrongly"}
+{"bug_id": "duckdb-1790251e63cf", "decision": "NONSA", "confidence": "high", "reason": "missing pivot aggregate transform, pure addition logic"}
+{"bug_id": "duckdb-19a0be39629f", "decision": "NONSA", "confidence": "high", "reason": "wrong expression type in null propagation condition"}
+{"bug_id": "duckdb-19c1b85d79d3", "decision": "NONSA", "confidence": "high", "reason": "missing includes and declarations, build defect"}
+{"bug_id": "duckdb-1b0e6e7cf25b", "decision": "NONSA", "confidence": "low", "reason": "selection index computed wrongly, no OOB evidence"}
+{"bug_id": "duckdb-22ad99fe6d43", "decision": "NONSA", "confidence": "high", "reason": "subquery transformed before type selection, ordering logic"}
+{"bug_id": "duckdb-24278e9ffd28", "decision": "NONSA", "confidence": "high", "reason": "append count bookkeeping error, no memory access"}
+{"bug_id": "duckdb-350ed10c5eea", "decision": "NONSA", "confidence": "high", "reason": "LIKE underscore consumes wrong characters"}
+{"bug_id": "duckdb-35212bbdc849", "decision": "SA", "confidence": "high", "reason": "missing parameter count validation, contract violation"}
+{"bug_id": "duckdb-36c38199ce20", "decision": "NONSA", "confidence": "high", "reason": "window operator added as aggregate relation, planner logic"}
+{"bug_id": "duckdb-3a50d7579d15", "decision": "NONSA", "confidence": "high", "reason": "on-conflict filter uses wrong column ids"}
+{"bug_id": "duckdb-3f1087fd04f8", "decision": "SA", "confidence": "high", "reason": "reference into empty-initialized chunk, uninitialized read"}
+{"bug_id": "duckdb-43b086a35dd5", "decision": "SA", "confidence": "high", "reason": "child vector sliced with unscaled bounds, out-of-bounds"}
+{"bug_id": "duckdb-46a43d62ed7c", "decision": "SA", "confidence": "high", "reason": "small-int varargs type confusion in format args"}
+{"bug_id": "duckdb-4b18f32ec21e", "decision": "SA", "confidence": "high", "reason": "wrong length bound, reads past string end, ARR39"}
+{"bug_id": "duckdb-4c125bd36641", "decision": "NONSA", "confidence": "high", "reason": "wrong child descent loop, planner logic only"}
+{"bug_id": "duckdb-4f2d8e8eaf2f", "decision": "SA", "confidence": "high", "reason": "wrong radix scatter args corrupt key locations, ARR39"}
+{"bug_id": "duckdb-4fae7f8bb350", "decision": "SA", "confidence": "high", "reason": "cost computed on uninitialized estimator, EXP39 caught"}
+{"bug_id": "duckdb-5a33d9a1c013", "decision": "SA", "confidence": "high", "reason": "parser exception escapes uncaught, missing error handling"}
+{"bug_id": "duckdb-5b031435d1c2", "decision": "NONSA", "confidence": "high", "reason": "padding bits not set, wrong output values only"}
+{"bug_id": "duckdb-61c3cfc37903", "decision": "NONSA", "confidence": "high", "reason": "right semi join match propagation logic only"}
+{"bug_id": "duckdb-62047414f1fa", "decision": "NONSA", "confidence": "low", "reason": "alias versus names fallback returns wrong name"}
+{"bug_id": "duckdb-62e8b51ffa88", "decision": "SA", "confidence": "high", "reason": "early return skips scan state init, uninitialized use"}
+{"bug_id": "duckdb-647f5416bff8", "decision": "NONSA", "confidence": "high", "reason": "IN clause rewriter additions, pure logic feature"}
+{"bug_id": "duckdb-675eb44147c9", "decision": "NONSA", "confidence": "high", "reason": "decimal boundary comparison uses wrong constant"}
+{"bug_id": "duckdb-685162621323", "decision": "NONSA", "confidence": "high", "reason": "validity check branch inverted, wrong nulling logic"}
+{"bug_id": "duckdb-6dcb9e7c2bb4", "decision": "NONSA", "confidence": "high", "reason": "numeric limits return wrong values for types"}
+{"bug_id": "duckdb-6f234f9c4978", "decision": "NONSA", "confidence": "high", "reason": "result vector type copied wrongly, data value error"}
+{"bug_id": "duckdb-7463773a3cb5", "decision": "NONSA", "confidence": "high", "reason": "ASOF join pushdown conditions, planner logic"}
+{"bug_id": "duckdb-75521326481f", "decision": "SA", "confidence": "low", "reason": "constructor leaves fields uninitialized, uninit read"}
+{"bug_id": "duckdb-7b570403d686", "decision": "NONSA", "confidence": "low", "reason": "filter on non-flat vector yields wrong rows, not OOB"}
+{"bug_id": "duckdb-7fa52ed2bd69", "decision": "SA", "confidence": "high", "reason": "unchecked bind_data casts, type confusion"}
+{"bug_id": "duckdb-8450ad72d657", "decision": "SA", "confidence": "low", "reason": "dictionary child references wrong vector, invalid aliasing"}
+{"bug_id": "duckdb-863b896717f1", "decision": "SA", "confidence": "low", "reason": "append without proper flatten invalidates vector buffers"}
+{"bug_id": "duckdb-8679358a0503", "decision": "NONSA", "confidence": "high", "reason": "timestamp cast condition placed wrongly, logic"}
+{"bug_id": "duckdb-86fe04caf9f4", "decision": "NONSA", "confidence": "low", "reason": "shift bound computed with wrong type width"}
+{"bug_id": "duckdb-8dcd0ac1cae0", "decision": "NONSA", "confidence": "high", "reason": "ARRAY sublink transform additions, pure logic"}
+{"bug_id": "duckdb-8fee68dc6ef2", "decision": "NONSA", "confidence": "high", "reason": "pivot construction and binding additions, logic"}
+{"bug_id": "duckdb-96cd6f4c49c4", "decision": "SA", "confidence": "low", "reason": "unvalidated index range feeding input access, VALRANGE"}
+{"bug_id": "duckdb-a5eb42c56587", "decision": "NONSA", "confidence": "high", "reason": "alter binder rewrite, binding behavior logic"}
+{"bug_id": "duckdb-a61365926289", "decision": "NONSA", "confidence": "low", "reason": "parquet child length computed wrongly, data error"}
+{"bug_id": "duckdb-ab8e5666b8b2", "decision": "NONSA", "confidence": "high", "reason": "select list transformed before FROM, ordering logic"}
+{"bug_id": "duckdb-b16e2dce4c66", "decision": "NONSA", "confidence": "high", "reason": "epoch division truncates toward zero, wrong formula"}
+{"bug_id": "duckdb-b9b1bb8a239b", "decision": "NONSA", "confidence": "low", "reason": "binding rewrite mechanism not visible in snippet"}
+{"bug_id": "duckdb-c6f9dfd6591b", "decision": "NONSA", "confidence": "high", "reason": "column replacement condition too narrow, logic"}
+{"bug_id": "duckdb-c9112165759d", "decision": "SA", "confidence": "high", "reason": "segments moved before lock taken, data race"}
+{"bug_id": "duckdb-de68e49f3522", "decision": "SA", "confidence": "high", "reason": "aggregate intermediate states never destroyed, leak"}
+{"bug_id": "duckdb-e5c74941dc92", "decision": "NONSA", "confidence": "high", "reason": "USING columns unquoted in SQL output text"}
+{"bug_id": "duckdb-eca6287b0265", "decision": "NONSA", "confidence": "high", "reason": "JSON lambda binding fallback, wrong branch logic"}
+{"bug_id": "duckdb-f2cf1db95264", "decision": "SA", "confidence": "high", "reason": "missing child column drop commit, leaked data"}
+{"bug_id": "duckdb-f42aff9fc29f", "decision": "NONSA", "confidence": "high", "reason": "missing payload scan produces incomplete results"}
+{"bug_id": "duckdb-ffb453f07fce", "decision": "NONSA", "confidence": "high", "reason": "incomplete by-type dispatch, missing cases logic"}

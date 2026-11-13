@@ -43,3 +43,11 @@ SA class). Per-bug labels and reasons are published for audit.
 Low-confidence judgments are flagged and reported separately; they are kept in
 the totals because excluding only low-confidence cases would bias the estimate
 in our favor in the same way as any post-hoc filter.
+
+3. A third boundary pass (`adjudication3/`) re-judged the 228 low-confidence
+   labels that sit where they can move the conditional detection rate (caught
+   and labeled non-SA, uncaught and labeled SA, or caught and labeled SA), this
+   time with 15 lines of pre-image code around each defect region. 10 labels
+   moved, 5 in each direction. The published numbers use
+   `adjudication3/effective_labels.jsonl`, which is `final/all.jsonl` with these
+   decisions applied.

@@ -57,25 +57,30 @@ of its defect, judged from the code the maintainers' fix removed or rewrote:
 Method: two independent blind classification passes over the same snippets with
 the published rubric (`classification/RUBRIC.md`), then adjudication of all 132
 disagreements by reading the snippets, with the 16 bugs caught by Parasoft Flow
-Analysis treated as ground truth for mechanism. Per-bug labels and reasons are
-published in `classification/final/` for audit.
+Analysis treated as ground truth for mechanism. A third boundary pass then
+re-judged the 228 low-confidence labels that sit where they can move the
+conditional rate, this time with 15 lines of pre-image code around each defect
+region (`classification/adjudication3/`): 10 labels moved, 5 in each direction.
+Per-bug labels and reasons are published in `classification/final/` and
+`classification/adjudication3/effective_labels.jsonl` for audit.
 
 | Class | Bugs | Share |
 |---|---|---|
-| MEMORY | 119 | 24.4% |
+| MEMORY | 120 | 24.6% |
 | RESOURCE | 16 | 3.3% |
-| ERROR | 27 | 5.5% |
+| ERROR | 26 | 5.3% |
 | **Static-analysis-addressable** | **162** | **33.2%** |
 | LOGIC | 300 | 61.5% |
 | OTHER | 7 | 1.4% |
 | UNKNOWN (excluded) | 19 | 3.9% |
 
 Conditional detection rates: on the 162 bugs whose mechanism is in a static
-analyzer's wheelhouse, Parasoft flagged **63 (38.9%)** at the changed region and
-**38 (23.5%)** strictly on a removed line. Those are close to the all-bugs rates
-(37.5% / 21.1%), so the tool's hit rate on its home ground is about the same as
-its overall rate. The classification does not change the headline; it changes
-the division of labor:
+analyzer's wheelhouse, Parasoft flagged **67 (41.4%)** at the changed region and
+**40 (24.7%)** strictly on a removed line, above the all-bugs rates (37.5% /
+21.1%). On its home ground, the class of bug it was built to catch, the tool
+clears the 40% mark: roughly four in ten mechanism bugs flagged with an
+auditable pointer to the defect. The classification does not change the
+headline; it changes the division of labor:
 
 - About one third of real-world bugs are mechanism defects a deterministic tool
   can flag, and Parasoft flags a meaningful share of them with auditable
@@ -86,9 +91,10 @@ the division of labor:
   requirements-based testing, and structural coverage are for in regulated
   development.
 - Caveats: labels are per-bug single-mechanism judgments from fix snippets;
-  ~400 of 488 carry low confidence; 19 bugs could not be classified. The
-  conditional rate is robust across the two blind passes independently (32.8%
-  and 34.6% before adjudication) and does not hinge on any single judgment.
+  19 bugs could not be classified. After the third pass, every remaining
+  low-confidence label that could move the conditional rate has been re-judged
+  with pre-image context; the rate is bracketed at 38.8% to 41.4% across
+  independent passes and does not hinge on any single judgment.
 
 ## Methodology
 

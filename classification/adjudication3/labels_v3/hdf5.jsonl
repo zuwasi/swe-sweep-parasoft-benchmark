@@ -1,0 +1,5 @@
+{"bug_id": "hdf5-336148f0f3e2", "decision": "SA", "confidence": "high", "reason": "get_name ignored caller buffer size; out-of-bounds write"}
+{"bug_id": "hdf5-3d50b7243378", "decision": "SA", "confidence": "low", "reason": "conversion buffer ownership and alloc handling; memory lifetime defect"}
+{"bug_id": "hdf5-410d9d0e6a1f", "decision": "SA", "confidence": "high", "reason": "background buffer read past seq_len; VOVR confirms overrun"}
+{"bug_id": "hdf5-699a00aef417", "decision": "SA", "confidence": "low", "reason": "unchecked element count feeds buffer size computation"}
+{"bug_id": "hdf5-fe3e4ec13a61", "decision": "SA", "confidence": "high", "reason": "unchecked element count feeds buffer size; VOVR fired"}

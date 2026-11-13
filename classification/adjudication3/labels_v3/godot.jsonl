@@ -1,0 +1,6 @@
+{"bug_id": "godot-141d838cb0a9", "decision": "NONSA", "confidence": "high", "reason": "added empty-line guard; indentation behavior only, no memory angle"}
+{"bug_id": "godot-1487db8f8067", "decision": "SA", "confidence": "low", "reason": "temp pool reuse for refcounted types risks stale object references"}
+{"bug_id": "godot-1c09cb9eb560", "decision": "NONSA", "confidence": "high", "reason": "connection flag save/parse semantics; no memory or contract angle"}
+{"bug_id": "godot-4a105bb044ef", "decision": "SA", "confidence": "high", "reason": "debug lock unrefs object after free; use-after-free lifetime defect"}
+{"bug_id": "godot-6191f779e20c", "decision": "SA", "confidence": "high", "reason": "range argument overflow feeds array resize size"}
+{"bug_id": "godot-dc71181af3af", "decision": "NONSA", "confidence": "high", "reason": "wrong warning emission condition; compiler output logic only"}
