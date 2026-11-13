@@ -90,7 +90,8 @@
       ],
       "bullets": [
         "162 of 488: memory, resource, and error handling defects",
-        "Parasoft on that third: 38.9%, above its 37.5% overall rate",
+        "Parasoft on that third: 41.4%, clearing the 40% mark",
+        "24.7% on the exact defect line; robust at 38.8% to 41.4% across passes",
         "The logic two thirds: review, requirements-based testing, coverage"
       ]
     }
