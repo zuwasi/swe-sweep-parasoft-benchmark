@@ -52,6 +52,8 @@ For every bug, we reconstructed the exact moment the bug existed:
 
 Counting only findings on the exact line the maintainer's fix changed, Parasoft still found **21.1%** of all bugs, roughly five times the agents' end-to-end resolution rate.
 
+And 37.5% is the tool working across *all* bugs, the majority of which are logic defects no deterministic tool targets. After the classification below, the sharper number appears: on the 162 bugs whose mechanism is a static analyzer's business, Parasoft flagged **41.4%**.
+
 ### Where the deep engine shines
 
 The most interesting slice is not the style rules, it is Flow Analysis, the interprocedural engine that reasons about data flow rather than code shape. It independently caught **16 real defects**, including:
@@ -79,7 +81,7 @@ On those 162 mechanism bugs, Parasoft flagged **67 (41.4%)** at the changed regi
 Two numbers this close in a table invite over-reading, so here is what the comparison does and does not say:
 
 - **The tasks are different.** We pointed the tool at the known buggy files. SWE-sweep agents had to find the bugs inside repositories of up to 1.9 million lines, understand them, and produce fixes that pass hidden tests. Static analysis detection at a known location is an easier problem than autonomous discovery and repair. This is a comparison of *detection on buggy code* versus *autonomous end-to-end resolution*, and we say so everywhere it counts.
-- **A flag is not a fix.** Our 37.5% means a human would get a pointer to the defect; someone still has to judge and fix it.
+- **A flag is not a fix.** Our 37.5% overall, 41.4% on the mechanism bugs, means a human would get a pointer to the defect; someone still has to judge and fix it.
 - **On pure deep-defect detection the two approaches are close**: Flow Analysis alone caught 3.3% versus the agents' 4.5%. The large gap comes from the rule-based sweep of the buggy lines.
 - **Coverage is imperfect.** 13 of 679 bug-era files could not be recovered from git history; GDAL's generated-code surface defeated preprocessing for many files. The details and workarounds are documented in the repository.
 

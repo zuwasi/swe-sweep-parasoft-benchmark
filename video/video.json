@@ -61,11 +61,12 @@
     "06": {
       "kicker": "The result",
       "headline": [
-        "37.5% of the bugs flagged,",
-        "vs 4.5% by the best AI agent"
+        "41.4% on the bugs of its kind,",
+        "37.5% of all 488 vs 4.5% by agents"
       ],
       "bullets": [
         "183 of 488 bugs: a Parasoft finding inside the changed code",
+        "67 of the 162 mechanism bugs: 41.4%, clearing the 40% mark",
         "Flow Analysis alone caught 16 bugs outright",
         "Same code, same bugs, published benchmark"
       ]
@@ -110,12 +111,12 @@
       "Static analysis beats",
       "AI agents"
     ],
-    "subtitle": "488 real C/C++ bugs measured",
+    "subtitle": "488 real C/C++ bugs",
     "product": "Parasoft C/C++test",
     "badge": {
       "from": "4.5%",
-      "to": "37.5%",
-      "caption": "bugs found in changed code"
+      "to": "41.4%",
+      "caption": "of the bugs of its kind"
     }
   },
   "masks": []

@@ -5,6 +5,7 @@ Date: 2026-11-12. Tool: Parasoft C/C++test Standard: 2026.1.3 for the six C repo
 ## Headline
 
 - Parasoft flags at least one finding directly on the changed lines of **183/488 bugs (37.5%)** (any rule; line in the bug's changed region).
+- On the **162** bugs whose defect mechanism is one a static analyzer targets (classification below), it flags **67 (41.4%)** at the changed region and **40 (24.7%)** on the exact removed line.
 - Strictly on a line the fix removed or changed: **103/488 (21.1%)**.
 - Flow Analysis (deep interprocedural checks, BD-*) alone: **16/488 (3.3%)**.
 - SWE-sweep's own best process (LLM agents searching the whole repo) resolved **22.0/488 bugs (4.5%)** across these same repositories.

@@ -22,7 +22,7 @@ Flow Analysis flagged integer conversion overflows, on lines the upstream fixes 
 
 ## Scene 6
 
-Here is the result across all fourteen repositories. Parasoft flagged a finding inside the changed code of thirty seven point five percent of the bugs. The best AI agent process in the SWE sweep paper found four point five percent.
+Here is the result across all fourteen repositories. Parasoft flagged a finding inside the changed code of thirty seven point five percent of all bugs. And on the one hundred sixty two bugs that are static analysis's kind of bug, it found forty one point four percent, clearing the forty percent mark. The best AI agent process in the SWE sweep paper found four point five percent.
 
 ## Scene 7
 

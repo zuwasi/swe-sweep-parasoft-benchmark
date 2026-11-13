@@ -23,6 +23,7 @@ We took the 14 C/C++ repositories from [SWE-sweep](https://swesweep.com) ("SWE-s
 | z3 | C++ | 11 | 3 | 27.3% | 9.1% | 0.0% |
 | libexpat | C | 9 | 6 | 66.7% | 44.4% | 44.4% |
 | **Total** | | **488** | **183** | **37.5%** | **21.1%** | **~4.5%** |
+| **Of which: the 162 mechanism bugs** | | **162** | **67** | **41.4%** | **24.7%** | | |
 
 - Flow Analysis (deep interprocedural defect checks, BD-*) alone caught **16/488 (3.3%)**: integer wraparound, use-before-initialization, index out of range, unreachable switch branches, unused values, errno misuse. See the per-repo rule breakdowns in `results/REPORT.md`.
 - The rest of the matches come from MISRA/CERT coding-standard rules landing on the buggy lines.
