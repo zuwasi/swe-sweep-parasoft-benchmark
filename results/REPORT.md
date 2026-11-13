@@ -107,7 +107,7 @@ headline; it changes the division of labor:
 
 ## Reading the numbers honestly
 
-- Scope: analysis ran on the bug files only (not whole-repo search), so this measures detection on the buggy code, not autonomous discovery in a 1M-line repo. SWE-sweep's agents had to search the whole repo without hints; Parasoft here was pointed at the files.
+- Scope: analysis ran on the bug files only (not whole-repo search), so this measures detection on the buggy code, not autonomous discovery in a 1M-line repo. SWE-sweep's agents had to search the whole repo without hints; we pointed Parasoft at the bug files.
 - Rule mix: most hits are coding-standard rules (CERT/MISRA) firing on the buggy lines, e.g. CERT INT31 (unsafe integer conversion) and ARR39 (pointer arithmetic), MISRA 0.1.2 (unused value), 8.0.1. Deep Flow Analysis findings (null deref, overflow, OOB) account for 16 of the 183 found bugs.
 - Coverage gaps: a handful of pre-image blobs (13 of 679) were absent from fetched git history; cvc5's generated headers mostly mismatch the bug-era code, so its 44.7% is a lower bound; gdal's large generated/external surface made many files fail to preprocess (4.2%).
 - SWE-sweep percentages are each repo's best published agent result (micro-averaged per repo on their leaderboard).

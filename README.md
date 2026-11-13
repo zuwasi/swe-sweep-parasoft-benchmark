@@ -31,7 +31,7 @@ We took the 14 C/C++ repositories from [SWE-sweep](https://swesweep.com) ("SWE-s
 
 ## How to read this honestly
 
-- **Different tasks.** Parasoft was pointed at the known buggy files; SWE-sweep agents had to search whole repositories (up to 1.9M lines) with no hints, understand each bug, and produce a passing fix. This benchmark measures detection on buggy code, not autonomous discovery.
+- **Different tasks.** We pointed Parasoft at the known buggy files; SWE-sweep agents had to search whole repositories (up to 1.9M lines) with no hints, understand each bug, and produce a passing fix. This benchmark measures detection on buggy code, not autonomous discovery.
 - **Flag vs fix.** A static analysis flag is a lead for a human, not a fix. SWE-sweep's number requires the agent to make hidden tests pass.
 - **Deep checks vs style.** On true-defect detection (Flow Analysis alone), the tool's 3.3% and the agents' 4.5% are comparable. The large gap is in the rule-based sweep of the buggy lines.
 - **Coverage caveats.** cvc5's result is a lower bound (generated-header drift); gdal's rate reflects preprocessing failures; 13 of 679 pre-image blobs were unavailable (see `REPRODUCE.md`).
