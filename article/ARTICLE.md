@@ -78,7 +78,7 @@ On those 162 mechanism bugs, Parasoft flagged **90 (55.6%)** at the changed regi
 
 - **A flag is not a fix.** Our 53.1% overall, 55.6% on the mechanism bugs, means a human would get a pointer to the defect; someone still has to judge and fix it. The agents' number, in turn, requires a passing fix, so the two measure different points of the same pipeline, and the gap between them is nonetheless ten to one.
 - **On pure deep-defect detection the two approaches are close**: Flow Analysis alone caught 4.1% versus the agents' 4.5%. The enormous gap comes from what happens when you add a comprehensive MISRA/CERT rule sweep and run it over the entire build, which is precisely how static analysis is deployed in industry.
-- **Coverage is imperfect, and we document every gap.** 13 of 679 bug-era files could not be recovered from git history; one godot source file exceeds the addressable memory of a single analysis process on a 64 GB machine and was excluded (no benchmark bug lives in it); gdal's accepted bugs are overwhelmingly logic-class, which its 4.2% reflects.
+- **Coverage is imperfect, and we document every gap.** One godot source file exceeds the addressable memory of a single analysis process on a 64 GB machine and was excluded (no benchmark bug lives in it); gdal's accepted bugs are overwhelmingly logic-class, which its 4.2% reflects. All 488 bugs were mapped into the scanned codebases.
 
 ## Why safety-critical teams should care
 
