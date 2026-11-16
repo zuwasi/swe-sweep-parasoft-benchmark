@@ -1,0 +1,286 @@
+{
+ "repo": "hdf5",
+ "bugs": [
+  {
+   "bug_id": "hdf5-336148f0f3e2",
+   "found_region": [
+    "CERT_C-EXP45-d",
+    "CERT_C-INT31-a",
+    "CERT_C-INT31-j",
+    "CERT_C-INT36-b",
+    "CERT_C-MSC41-a",
+    "MISRAC2025-DIR_4_5-a",
+    "MISRAC2025-RULE_10_1-a",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_11_11-a",
+    "MISRAC2025-RULE_11_5-b",
+    "MISRAC2025-RULE_12_1-a",
+    "MISRAC2025-RULE_13_4-a",
+    "MISRAC2025-RULE_14_4-a",
+    "MISRAC2025-RULE_15_1-a",
+    "MISRAC2025-RULE_15_3-a",
+    "MISRAC2025-RULE_15_6-a",
+    "MISRAC2025-RULE_15_6-b",
+    "MISRAC2025-RULE_15_7-a",
+    "MISRAC2025-RULE_17_7-a",
+    "MISRAC2025-RULE_17_8-a",
+    "MISRAC2025-RULE_20_7-b",
+    "MISRAC2025-RULE_8_3-b"
+   ],
+   "found_strict": [
+    "CERT_C-EXP45-d",
+    "CERT_C-INT36-b",
+    "CERT_C-MSC41-a",
+    "MISRAC2025-DIR_4_5-a",
+    "MISRAC2025-RULE_11_11-a",
+    "MISRAC2025-RULE_12_1-a",
+    "MISRAC2025-RULE_13_4-a",
+    "MISRAC2025-RULE_15_1-a",
+    "MISRAC2025-RULE_15_3-a",
+    "MISRAC2025-RULE_15_6-b",
+    "MISRAC2025-RULE_17_7-a",
+    "MISRAC2025-RULE_20_7-b"
+   ],
+   "aligned_hunks": 12,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "hdf5-3d50b7243378",
+   "found_region": [
+    "BD-PB-VOVR",
+    "CERT_C-EXP45-d",
+    "CERT_C-INT31-j",
+    "CERT_C-INT36-b",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_11_11-a",
+    "MISRAC2025-RULE_11_2-a",
+    "MISRAC2025-RULE_11_5-b",
+    "MISRAC2025-RULE_12_1-a",
+    "MISRAC2025-RULE_13_4-a",
+    "MISRAC2025-RULE_13_5-a",
+    "MISRAC2025-RULE_14_4-a",
+    "MISRAC2025-RULE_15_1-a",
+    "MISRAC2025-RULE_15_6-b",
+    "MISRAC2025-RULE_20_7-b",
+    "MISRAC2025-RULE_2_2-b"
+   ],
+   "found_strict": [
+    "BD-PB-VOVR",
+    "CERT_C-EXP45-d",
+    "CERT_C-INT36-b",
+    "MISRAC2025-RULE_11_11-a",
+    "MISRAC2025-RULE_11_5-b",
+    "MISRAC2025-RULE_13_4-a",
+    "MISRAC2025-RULE_15_1-a",
+    "MISRAC2025-RULE_15_6-b",
+    "MISRAC2025-RULE_2_2-b"
+   ],
+   "aligned_hunks": 7,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "hdf5-410d9d0e6a1f",
+   "found_region": [
+    "BD-PB-VOVR",
+    "CERT_C-ARR39-b",
+    "CERT_C-INT31-e",
+    "CERT_C-INT31-m",
+    "MISRAC2025-RULE_10_1-e",
+    "MISRAC2025-RULE_10_7-a",
+    "MISRAC2025-RULE_10_8-a",
+    "MISRAC2025-RULE_11_5-b",
+    "MISRAC2025-RULE_12_1-a",
+    "MISRAC2025-RULE_15_1-a",
+    "MISRAC2025-RULE_17_7-a",
+    "MISRAC2025-RULE_18_4-a",
+    "MISRAC2025-RULE_2_2-b"
+   ],
+   "found_strict": [
+    "BD-PB-VOVR",
+    "CERT_C-ARR39-b",
+    "CERT_C-INT31-e",
+    "CERT_C-INT31-m",
+    "MISRAC2025-RULE_10_1-e",
+    "MISRAC2025-RULE_10_7-a",
+    "MISRAC2025-RULE_10_8-a",
+    "MISRAC2025-RULE_11_5-b",
+    "MISRAC2025-RULE_12_1-a",
+    "MISRAC2025-RULE_15_1-a",
+    "MISRAC2025-RULE_17_7-a",
+    "MISRAC2025-RULE_18_4-a",
+    "MISRAC2025-RULE_2_2-b"
+   ],
+   "aligned_hunks": 3,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "hdf5-46ec0c6c502b",
+   "found_region": [
+    "BD-PB-VOVR",
+    "CERT_C-EXP45-d",
+    "CERT_C-INT36-b",
+    "MISRAC2025-DIR_4_5-a",
+    "MISRAC2025-RULE_11_11-a",
+    "MISRAC2025-RULE_11_2-a",
+    "MISRAC2025-RULE_11_5-b",
+    "MISRAC2025-RULE_12_1-a",
+    "MISRAC2025-RULE_13_4-a",
+    "MISRAC2025-RULE_13_5-a",
+    "MISRAC2025-RULE_14_4-a",
+    "MISRAC2025-RULE_15_1-a",
+    "MISRAC2025-RULE_15_6-b",
+    "MISRAC2025-RULE_20_7-b",
+    "MISRAC2025-RULE_2_2-b"
+   ],
+   "found_strict": [
+    "BD-PB-VOVR",
+    "CERT_C-EXP45-d",
+    "CERT_C-INT36-b",
+    "MISRAC2025-RULE_11_11-a",
+    "MISRAC2025-RULE_11_5-b",
+    "MISRAC2025-RULE_13_4-a",
+    "MISRAC2025-RULE_15_1-a",
+    "MISRAC2025-RULE_15_6-b",
+    "MISRAC2025-RULE_2_2-b"
+   ],
+   "aligned_hunks": 7,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "hdf5-50b75316c1c9",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "hdf5-553ad641d344",
+   "found_region": [
+    "BD-PB-VOVR",
+    "CERT_C-INT31-j",
+    "MISRAC2025-DIR_4_6-b",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_11_5-b",
+    "MISRAC2025-RULE_12_1-a",
+    "MISRAC2025-RULE_15_1-a",
+    "MISRAC2025-RULE_15_6-b",
+    "MISRAC2025-RULE_17_7-a",
+    "MISRAC2025-RULE_17_8-a",
+    "MISRAC2025-RULE_20_7-b",
+    "MISRAC2025-RULE_2_2-b"
+   ],
+   "found_strict": [
+    "BD-PB-VOVR",
+    "CERT_C-INT31-j",
+    "MISRAC2025-DIR_4_6-b",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_11_5-b",
+    "MISRAC2025-RULE_12_1-a",
+    "MISRAC2025-RULE_15_1-a",
+    "MISRAC2025-RULE_17_7-a",
+    "MISRAC2025-RULE_17_8-a",
+    "MISRAC2025-RULE_20_7-b",
+    "MISRAC2025-RULE_2_2-b"
+   ],
+   "aligned_hunks": 3,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "hdf5-699a00aef417",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "hdf5-88382b2cfcd4",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 3,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "hdf5-8b449df9cbdd",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 0,
+   "unaligned_hunks": 1
+  },
+  {
+   "bug_id": "hdf5-aa1b6edb1d73",
+   "found_region": [
+    "BD-PB-VOVR",
+    "CERT_C-ARR39-b",
+    "CERT_C-EXP39-b",
+    "CERT_C-EXP45-d",
+    "CERT_C-INT36-b",
+    "CERT_C-POS54-a",
+    "MISRAC2025-RULE_10_8-a",
+    "MISRAC2025-RULE_11_11-a",
+    "MISRAC2025-RULE_11_5-b",
+    "MISRAC2025-RULE_13_4-a",
+    "MISRAC2025-RULE_13_5-a",
+    "MISRAC2025-RULE_18_4-a",
+    "MISRAC2025-RULE_20_7-b",
+    "MISRAC2025-RULE_2_2-b",
+    "MISRAC2025-RULE_2_8-a",
+    "MISRAC2025-RULE_8_4-a"
+   ],
+   "found_strict": [
+    "BD-PB-VOVR",
+    "CERT_C-ARR39-b",
+    "CERT_C-EXP39-b",
+    "CERT_C-EXP45-d",
+    "CERT_C-POS54-a",
+    "MISRAC2025-RULE_10_8-a",
+    "MISRAC2025-RULE_11_5-b",
+    "MISRAC2025-RULE_13_4-a",
+    "MISRAC2025-RULE_18_4-a",
+    "MISRAC2025-RULE_20_7-b",
+    "MISRAC2025-RULE_2_2-b",
+    "MISRAC2025-RULE_2_8-a"
+   ],
+   "aligned_hunks": 8,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "hdf5-aefd1d02488b",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "hdf5-bcc7226672c8",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "hdf5-cd22c0502f29",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "hdf5-fe3e4ec13a61",
+   "found_region": [
+    "BD-PB-VOVR",
+    "CERT_C-EXP45-d",
+    "MISRAC2025-RULE_13_4-a",
+    "MISRAC2025-RULE_15_1-a",
+    "MISRAC2025-RULE_2_2-b"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  }
+ ],
+ "total_violations": 150180,
+ "n_bugs": 14,
+ "found_region_count": 7,
+ "found_strict_count": 6,
+ "unaligned_hunks_total": 1
+}

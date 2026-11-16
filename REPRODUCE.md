@@ -3,8 +3,9 @@
 This document describes how to reconstruct and rerun the full benchmark:
 Parasoft C/C++test static analysis (Flow Analysis Standard + MISRA C 2025 +
 CERT C for C repos, Flow Analysis Standard + MISRA C++ 2023 + CERT C++ for
-C++ repos) on the exact pre-fix code of every accepted SWE-sweep bug in the
-14 C/C++ repositories, and the mapping of findings back to individual bugs.
+C++ repos) on the **complete buildable codebase** of each of the 14 C/C++
+repositories (every file the project's own build system compiles), and the
+mapping of findings back to individual SWE-sweep bugs.
 
 ## What you need
 
@@ -84,37 +85,51 @@ The pipeline scripts live in `pipeline/`. Run them from the repository root
      source (see `capture_flags*.sh` for the exact buildroot paths).
    - `libexpat` needs `-DXML_GE=1` (see `gen_bdf.py`).
 
-5. **Run Parasoft.**
+5. **Run Parasoft over the whole buildable codebase (published configuration).**
 
    ```bash
-   python3 pipeline/run_analysis.py
+   python3 pipeline_full/build_full_bdf.py <repo>...
+   python3 pipeline_full/run_full.py
+   python3 pipeline_full/map_full.py <repo>...
+   python3 pipeline_full/export_violations_full.py <repo>...
    ```
 
-   Generates a build data file per repo (`gen_bdf.py`), chunks it, and runs
+   `build_full_bdf.py` converts each repo's compile database into Parasoft
+   build data files and splits it into chunks sized for one cpptestcli run
+   (794 chunks across the 14 repos). Builds whose headers are generated were
+   provisioned first: micropython's `mpy-cross` and php-src were built from
+   the pinned sources; hdf5's build directory was supplied from a matching
+   build; cvc5 received GMP 6.3 headers and gdal received PROJ 9.8.1 headers
+   from matching conda packages. `run_full.py` runs
    `cpptestcli -config "user://SWEEP_C"` (C repos) or `"user://SWEEP_CPP"`
-   (C++ repos) with compiler id `gcc_13-64`, 6 parallel runs, each in its
-   own working directory and HOME to avoid `.cpptest` lock collisions.
+   (C++ repos) with compiler id `gcc_13-64`, several parallel runs, each in
+   its own working directory and HOME to avoid `.cpptest` lock collisions;
+   it is fully resumable (chunks with an existing `report.xml` are skipped).
+   One godot file, `core/variant/variant_call.cpp`, exceeds the memory a
+   single analysis process can address on a 64 GB machine and is excluded;
+   no benchmark bug lives in it. `map_full.py` deduplicates violations across
+   chunks by (file, line, rule) — 2,193,448 unique findings for our execution —
+   aligns every bug's changed region from the pre-fix file into the base_ref
+   tree by full-file diff, and reports per-bug matches. A bug counts as
+   **found (region)** when any violation lands on any line of the bug's
+   changed region; **strict** when it lands on a line the fix removed or
+   rewrote. `export_violations_full.py` writes the deduplicated findings to
+   `results_full/violations/<repo>_violations.tsv.gz` so the mapping can be
+   recomputed without rerunning the tool.
 
-6. **Map findings back to bugs.**
-
-   ```bash
-   python3 pipeline/map_findings.py
-   ```
-
-   A bug counts as **found (region)** when any violation lands on any line
-   of the bug's changed region in the pre-fix file; **strict** when it lands
-   on a line the fix removed or rewrote. `verify_alignment.py` sanity-checks
-   the blob/line alignment.
-
-7. **Aggregate.**
+6. **Aggregate.**
 
    ```bash
    python3 pipeline/category_breakdown.py
    python3 pipeline/build_report.py
    ```
 
-   Produces `results/<repo>_result.json`, `results/category_breakdown.json`,
-   and `results/REPORT.md`.
+   Produces `results_full/<repo>_full_result.json` (per-bug matched rule IDs)
+   and the aggregate tables in `results/REPORT.md`.
+
+   `pipeline/` also retains the single-file execution mode used for spot
+   checks (`pipeline/run_analysis.py`, `pipeline/map_findings.py`); the
+   published numbers come from the whole-project scan above.
 
 ## Reproducing the bug classification
 
@@ -139,21 +154,21 @@ audited or re-derived:
 
 ## Raw evidence
 
-`raw-reports/<repo>/` contains the gzipped Parasoft XML reports (both
-`FlowViol` and `StdViol` entries) from every run chunk of the original
-benchmark execution. Every number in `results/` can be recomputed from
-these files plus `manifests/`. The six C repositories ship one gzipped
-report per run chunk (`run<i>.xml.gz`) from the MISRA C 2025 execution
-(C/C++test Standard 2026.1.3); C++ repositories keep the merged reports
-from the 2025.2.0 execution.
+`results_full/violations/<repo>_violations.tsv.gz` contains the deduplicated
+findings (file, line, rule) from the published whole-project execution
+(2,193,448 triples across the 14 repositories). Every number in
+`results/REPORT.md` can be recomputed from these files plus `manifests/`,
+without rerunning C/C++test. The full raw XML reports of that execution are
+hundreds of gigabytes and are not shipped; they can be regenerated with
+`pipeline_full/`. `raw-reports/<repo>/` keeps gzipped XML reports from
+single-file spot-check runs.
 
 ## Known limitations (inherited by any reproduction)
 
-- Analysis scope is the bug files only, with real per-file compile flags;
-  this measures detection on buggy code, not whole-repo discovery.
-- cvc5: pre-images come from master commits newer than the 1.0.5 tag; only
-  2 of 54 C++ units preprocessed cleanly; its result is a lower bound.
-- gdal: large generated/external surface caused many preprocessing
-  failures (4.2% detection).
+- One godot file, `core/variant/variant_call.cpp`, exceeds the memory a
+  single analysis process can address on a 64 GB machine and is excluded;
+  no benchmark bug lives in it.
+- gdal's accepted bugs are heavily logic-class even within the mechanism
+  bucket, which its 4.2% detection rate reflects.
 - 13 of 679 pre-image blobs were absent from fetched git history
   (PR-only commits): duckdb 2, php-src 3, cvc5 1, gdal 1.

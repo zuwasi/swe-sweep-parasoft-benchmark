@@ -1,0 +1,462 @@
+{
+ "repo": "cvc5",
+ "bugs": [
+  {
+   "bug_id": "cvc5-0190fa8ae7ec",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-024cc837ea11",
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-13_3_3-a",
+    "MISRACPP2023-13_3_3-b",
+    "MISRACPP2023-7_0_1-a",
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-7_11_2-a",
+    "MISRACPP2023-8_14_1-a",
+    "MISRACPP2023-9_4_2-b"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 5,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-11eabe28d431",
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-7_0_1-a",
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-7_11_2-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_14_1-a",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-7_0_1-a",
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-7_11_2-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_14_1-a"
+   ],
+   "aligned_hunks": 3,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-1337df3bc465",
+   "found_region": [
+    "BD-PB-COOB",
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-7_0_1-a",
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-7_11_2-a"
+   ],
+   "found_strict": [
+    "BD-PB-COOB"
+   ],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-15ce999a65bb",
+   "found_region": [
+    "CERT_C-MSC41-a"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-169d417c6b41",
+   "found_region": [
+    "MISRACPP2023-13_3_3-a",
+    "MISRACPP2023-6_8_4-a",
+    "MISRACPP2023-8_0_1-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-6_8_4-a",
+    "MISRACPP2023-8_0_1-b"
+   ],
+   "aligned_hunks": 6,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-18943577ecec",
+   "found_region": [
+    "MISRACPP2023-8_14_1-a"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 1
+  },
+  {
+   "bug_id": "cvc5-308a909279a9",
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "CERT_CPP-DCL51-e",
+    "CERT_CPP-DCL51-f",
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-7_0_1-a",
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-7_11_2-a"
+   ],
+   "found_strict": [
+    "CERT_C-MSC41-a"
+   ],
+   "aligned_hunks": 5,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-3489f19d0af7",
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-15_0_1-b",
+    "MISRACPP2023-7_0_1-a",
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-7_11_2-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-0_1_2-a"
+   ],
+   "aligned_hunks": 5,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-39fc8377f26f",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 0,
+   "unaligned_hunks": 1
+  },
+  {
+   "bug_id": "cvc5-3d08a22f361b",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-50f4bf9c8c66",
+   "found_region": [
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_14_1-a",
+    "MISRACPP2023-9_4_1-a"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-647ecea6ab0d",
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_1-a",
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-7_11_2-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-6f19e69efd06",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-6f88c8072d5a",
+   "found_region": [
+    "CERT_C-MSC41-a"
+   ],
+   "found_strict": [
+    "CERT_C-MSC41-a"
+   ],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-726a3ded06b0",
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-7_0_1-a",
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-7_11_2-a"
+   ],
+   "found_strict": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-7_0_1-a",
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-7_11_2-a"
+   ],
+   "aligned_hunks": 12,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-8c19798c9c2d",
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-0_1_2-a"
+   ],
+   "found_strict": [
+    "CERT_C-MSC41-a"
+   ],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-8d2b297c1bbc",
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-7_0_1-a",
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-7_11_2-a"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-8fd2c025e245",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-92a35b3a1356",
+   "found_region": [
+    "CERT_C-MSC41-a"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-9abdf24fe930",
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_14_1-a"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-9c7602939dee",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-a6fa2c8060f2",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-a874c6f84e37",
+   "found_region": [
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "aligned_hunks": 3,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-a92827dd3f89",
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-7_0_1-a",
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-7_11_2-a"
+   ],
+   "found_strict": [
+    "CERT_C-MSC41-a"
+   ],
+   "aligned_hunks": 4,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-aa2797db1fd7",
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-6_0_3-a"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 3,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-c443eedc46d1",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-c6c6ba5bd904",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-cb7581ed4265",
+   "found_region": [
+    "MISRACPP2023-7_0_2-a"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-d440f0779a99",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-d73f0189501b",
+   "found_region": [
+    "CERT_C-EXP39-a",
+    "CERT_C-FLP36-a",
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_1-a",
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-7_11_2-a",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-7_0_1-a",
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-7_11_2-a"
+   ],
+   "aligned_hunks": 6,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-d9746c57e9f2",
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "CERT_CPP-DCL60-a",
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-13_3_3-a",
+    "MISRACPP2023-6_0_3-a",
+    "MISRACPP2023-6_2_1-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_1-a",
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-7_11_2-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-9_4_1-a",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-7_0_1-a",
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-7_11_2-a"
+   ],
+   "aligned_hunks": 12,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-e1ed9a524e71",
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-7_0_1-a",
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-7_11_2-a"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-ee122a56fa79",
+   "found_region": [
+    "MISRACPP2023-7_0_1-a",
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-7_11_2-a",
+    "MISRACPP2023-8_0_1-b"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-f0994ce1b268",
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-13_3_3-a",
+    "MISRACPP2023-13_3_3-b",
+    "MISRACPP2023-7_0_1-a",
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-7_11_2-a"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-f218e48e2ada",
+   "found_region": [
+    "CERT_C-INT31-m"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-f313728ce254",
+   "found_region": [
+    "CERT_C-MSC41-a"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "cvc5-ffc998069294",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 0,
+   "unaligned_hunks": 3
+  }
+ ],
+ "total_violations": 94769,
+ "n_bugs": 38,
+ "found_region_count": 27,
+ "found_strict_count": 12,
+ "unaligned_hunks_total": 5
+}

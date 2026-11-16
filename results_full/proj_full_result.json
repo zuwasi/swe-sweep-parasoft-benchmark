@@ -1,0 +1,275 @@
+{
+ "repo": "proj",
+ "bugs": [
+  {
+   "bug_id": "proj-06b0cf9e684f",
+   "found_region": [
+    "CERT_C-EXP39-b",
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-7_0_6-b",
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b"
+   ],
+   "found_strict": [
+    "CERT_C-EXP39-b",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b"
+   ],
+   "aligned_hunks": 5,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "proj-082e3620a0bb",
+   "found_region": [
+    "CERT_C-MSC41-a"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "proj-1ddd02a36695",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "proj-210490c1df4f",
+   "found_region": [
+    "CERT_C-EXP39-a",
+    "CERT_C-EXP39-b",
+    "CERT_C-MSC41-a",
+    "CERT_CPP-ERR56-b",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "CERT_C-EXP39-a",
+    "CERT_C-EXP39-b",
+    "CERT_CPP-ERR56-b",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "aligned_hunks": 7,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "proj-26c69d9d4768",
+   "found_region": [
+    "MISRACPP2023-8_0_1-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-8_0_1-b"
+   ],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "proj-4831a51d8731",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "proj-54e0eae5c2da",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 0,
+   "unaligned_hunks": 1
+  },
+  {
+   "bug_id": "proj-5819b33a303f",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "proj-5ea62cb8daa4",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "proj-6e4ea9d02a9a",
+   "found_region": [
+    "CERT_C-EXP39-b",
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-7_0_6-b",
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b"
+   ],
+   "found_strict": [
+    "CERT_C-EXP39-b",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b"
+   ],
+   "aligned_hunks": 5,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "proj-75bf558d4fa2",
+   "found_region": [
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "proj-782c2a51cca6",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "proj-97485ea29440",
+   "found_region": [
+    "CERT_C-EXP39-b",
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "proj-a289af9c5fe7",
+   "found_region": [
+    "CERT_C-EXP39-a",
+    "CERT_C-EXP39-b",
+    "CERT_C-MSC41-a",
+    "CERT_CPP-ERR56-b",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "CERT_C-EXP39-a",
+    "CERT_C-EXP39-b",
+    "CERT_CPP-ERR56-b",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "aligned_hunks": 7,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "proj-a2dc13a77ea7",
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-6_0_3-a",
+    "MISRACPP2023-6_5_1-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-6_0_3-a",
+    "MISRACPP2023-8_0_1-b"
+   ],
+   "aligned_hunks": 4,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "proj-b6a07d893aa2",
+   "found_region": [
+    "CERT_C-EXP39-b",
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "proj-bfab0375ca89",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "proj-caba6901ef48",
+   "found_region": [
+    "MISRACPP2023-0_1_2-a"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "proj-ccce4196bb18",
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-6_0_3-a"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "proj-d1e39e45b0a6",
+   "found_region": [
+    "CERT_C-EXP39-a",
+    "CERT_C-EXP39-b",
+    "CERT_C-MSC41-a",
+    "CERT_CPP-ERR56-b",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "CERT_C-EXP39-a",
+    "CERT_C-EXP39-b",
+    "CERT_CPP-ERR56-b",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-8_2_8-b",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "aligned_hunks": 7,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "proj-ded2371a16af",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  }
+ ],
+ "total_violations": 63518,
+ "n_bugs": 21,
+ "found_region_count": 13,
+ "found_strict_count": 7,
+ "unaligned_hunks_total": 1
+}

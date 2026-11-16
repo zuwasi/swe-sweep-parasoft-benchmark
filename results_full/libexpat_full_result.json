@@ -1,0 +1,139 @@
+{
+ "repo": "libexpat",
+ "bugs": [
+  {
+   "bug_id": "libexpat-0c5dbd0bb0a5",
+   "found_region": [
+    "CERT_C-EXP39-a",
+    "CERT_C-FLP36-a",
+    "CERT_C-INT31-a",
+    "CERT_C-INT31-j",
+    "MISRACPP2023-10_1_1-b",
+    "MISRACPP2023-7_0_5-a"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "libexpat-30d93b149d3d",
+   "found_region": [
+    "CERT_C-ARR39-b",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-8_0_1-b"
+   ],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "libexpat-44558a21f1b7",
+   "found_region": [
+    "CERT_C-ARR39-b",
+    "CERT_C-EXP36-a",
+    "CERT_C-EXP39-b",
+    "CERT_C-INT31-e",
+    "CERT_C-INT31-f",
+    "CERT_C-INT31-i",
+    "CERT_C-INT31-j",
+    "CERT_C-INT31-k",
+    "CERT_C-INT31-m",
+    "CERT_CPP-EXP55-a",
+    "MISRACPP2023-19_0_2-a",
+    "MISRACPP2023-19_3_1-a",
+    "MISRACPP2023-19_3_4-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_3-a",
+    "MISRACPP2023-7_0_4-a",
+    "MISRACPP2023-7_0_4-b",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_3-a",
+    "MISRACPP2023-8_2_6-a",
+    "MISRACPP2023-9_3_1-a",
+    "MISRACPP2023-9_3_1-b",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-19_0_2-a",
+    "MISRACPP2023-19_3_1-a",
+    "MISRACPP2023-19_3_4-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "aligned_hunks": 9,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "libexpat-4e25524fb119",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "libexpat-69f40cffb664",
+   "found_region": [
+    "CERT_C-INT36-b",
+    "MISRACPP2023-8_2_6-a"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "libexpat-8e5c789e8d3b",
+   "found_region": [
+    "CERT_C-ARR39-b",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "libexpat-cf1142438f11",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "libexpat-e567e550f1be",
+   "found_region": [
+    "CERT_C-INT31-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "libexpat-f67d952cb3de",
+   "found_region": [
+    "CERT_C-ARR39-b",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_6-a",
+    "MISRACPP2023-9_3_1-b",
+    "MISRACPP2023-9_4_1-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_6-a"
+   ],
+   "aligned_hunks": 3,
+   "unaligned_hunks": 0
+  }
+ ],
+ "total_violations": 7577,
+ "n_bugs": 9,
+ "found_region_count": 7,
+ "found_strict_count": 3,
+ "unaligned_hunks_total": 0
+}

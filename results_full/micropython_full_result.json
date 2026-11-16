@@ -1,0 +1,349 @@
+{
+ "repo": "micropython",
+ "bugs": [
+  {
+   "bug_id": "micropython-1010a6f1bf3f",
+   "found_region": [
+    "CERT_C-ARR39-b",
+    "CERT_C-INT31-a",
+    "MISRAC2025-RULE_10_1-a",
+    "MISRAC2025-RULE_12_1-a",
+    "MISRAC2025-RULE_13_3-a"
+   ],
+   "found_strict": [
+    "CERT_C-ARR39-b",
+    "CERT_C-INT31-a",
+    "MISRAC2025-RULE_10_1-a",
+    "MISRAC2025-RULE_12_1-a"
+   ],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "micropython-105ab25a289b",
+   "found_region": [
+    "MISRAC2025-RULE_15_1-a",
+    "MISRAC2025-RULE_15_2-a",
+    "MISRAC2025-RULE_15_3-a",
+    "MISRAC2025-RULE_15_5-a",
+    "MISRAC2025-RULE_21_8-d"
+   ],
+   "found_strict": [
+    "MISRAC2025-RULE_21_8-d"
+   ],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "micropython-506e74919e0d",
+   "found_region": [
+    "CERT_C-INT31-i",
+    "MISRAC2025-RULE_10_3-b"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "micropython-56f308119e16",
+   "found_region": [
+    "CERT_C-INT31-j",
+    "MISRAC2025-RULE_10_4-a"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "micropython-5c51fb896d80",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "micropython-639baaf0eaee",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "micropython-8074d176612b",
+   "found_region": [
+    "CERT_C-MSC41-a"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "micropython-80ab54d7145c",
+   "found_region": [
+    "CERT_C-INT31-e",
+    "CERT_C-INT31-j",
+    "CERT_C-MSC41-a",
+    "MISRAC2025-RULE_10_1-e",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_11_6-b",
+    "MISRAC2025-RULE_11_6-c",
+    "MISRAC2025-RULE_12_1-a",
+    "MISRAC2025-RULE_17_7-a"
+   ],
+   "found_strict": [
+    "CERT_C-INT31-j",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_12_1-a",
+    "MISRAC2025-RULE_17_7-a"
+   ],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "micropython-830236cc7dce",
+   "found_region": [
+    "CERT_C-DCL37-d"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "micropython-85267a3c1ee8",
+   "found_region": [
+    "BD-PB-INTWRAP",
+    "CERT_C-ARR39-b",
+    "CERT_C-DCL37-c",
+    "CERT_C-EXP32-a",
+    "CERT_C-EXP39-b",
+    "CERT_C-EXP40-a",
+    "CERT_C-INT30-a",
+    "CERT_C-INT31-a",
+    "CERT_C-INT31-e",
+    "CERT_C-INT31-h",
+    "CERT_C-INT31-i",
+    "CERT_C-INT31-j",
+    "CERT_C-INT31-l",
+    "CERT_C-INT31-m",
+    "CERT_C-MSC41-a",
+    "CERT_C-POS54-a",
+    "CERT_C-PRE31-c",
+    "MISRAC2025-DIR_4_1-i",
+    "MISRAC2025-DIR_4_1-k",
+    "MISRAC2025-DIR_4_6-b",
+    "MISRAC2025-DIR_4_9-a",
+    "MISRAC2025-RULE_10_1-a",
+    "MISRAC2025-RULE_10_1-e",
+    "MISRAC2025-RULE_10_3-a",
+    "MISRAC2025-RULE_10_3-b",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_10_6-a",
+    "MISRAC2025-RULE_10_7-a",
+    "MISRAC2025-RULE_11_5-b",
+    "MISRAC2025-RULE_11_6-b",
+    "MISRAC2025-RULE_11_6-c",
+    "MISRAC2025-RULE_11_8-a",
+    "MISRAC2025-RULE_12_1-a",
+    "MISRAC2025-RULE_12_2-b",
+    "MISRAC2025-RULE_12_3-a",
+    "MISRAC2025-RULE_13_3-a",
+    "MISRAC2025-RULE_14_2-b",
+    "MISRAC2025-RULE_14_2-d",
+    "MISRAC2025-RULE_14_4-a",
+    "MISRAC2025-RULE_15_5-a",
+    "MISRAC2025-RULE_17_12-a",
+    "MISRAC2025-RULE_17_7-a",
+    "MISRAC2025-RULE_17_8-a",
+    "MISRAC2025-RULE_18_2-a",
+    "MISRAC2025-RULE_18_4-a",
+    "MISRAC2025-RULE_19_3-a",
+    "MISRAC2025-RULE_1_1-a",
+    "MISRAC2025-RULE_1_1-b",
+    "MISRAC2025-RULE_1_3-o",
+    "MISRAC2025-RULE_20_12-a",
+    "MISRAC2025-RULE_20_5-a",
+    "MISRAC2025-RULE_20_7-b",
+    "MISRAC2025-RULE_21_8-d",
+    "MISRAC2025-RULE_2_1-h",
+    "MISRAC2025-RULE_5_10-a",
+    "MISRAC2025-RULE_5_5-a",
+    "MISRAC2025-RULE_5_5-b",
+    "MISRAC2025-RULE_6_1-a",
+    "MISRAC2025-RULE_8_13-a",
+    "MISRAC2025-RULE_8_6-b"
+   ],
+   "found_strict": [
+    "BD-PB-INTWRAP",
+    "CERT_C-ARR39-b",
+    "CERT_C-INT30-a",
+    "CERT_C-INT31-a",
+    "CERT_C-INT31-e",
+    "CERT_C-INT31-h",
+    "CERT_C-INT31-i",
+    "CERT_C-INT31-j",
+    "CERT_C-MSC41-a",
+    "CERT_C-POS54-a",
+    "MISRAC2025-DIR_4_1-k",
+    "MISRAC2025-DIR_4_9-a",
+    "MISRAC2025-RULE_10_1-a",
+    "MISRAC2025-RULE_10_1-e",
+    "MISRAC2025-RULE_10_3-a",
+    "MISRAC2025-RULE_10_3-b",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_11_6-b",
+    "MISRAC2025-RULE_11_6-c",
+    "MISRAC2025-RULE_12_1-a",
+    "MISRAC2025-RULE_13_3-a",
+    "MISRAC2025-RULE_14_4-a",
+    "MISRAC2025-RULE_15_5-a",
+    "MISRAC2025-RULE_17_7-a",
+    "MISRAC2025-RULE_17_8-a",
+    "MISRAC2025-RULE_18_4-a",
+    "MISRAC2025-RULE_1_3-o",
+    "MISRAC2025-RULE_20_5-a",
+    "MISRAC2025-RULE_6_1-a",
+    "MISRAC2025-RULE_8_6-b"
+   ],
+   "aligned_hunks": 11,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "micropython-8625d05e0e82",
+   "found_region": [
+    "CERT_C-DCL37-e",
+    "MISRAC2025-RULE_21_8-d",
+    "MISRAC2025-RULE_6_1-a"
+   ],
+   "found_strict": [
+    "MISRAC2025-RULE_6_1-a"
+   ],
+   "aligned_hunks": 4,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "micropython-88f383264f04",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "micropython-b12fef09f055",
+   "found_region": [
+    "CERT_C-EXP32-a",
+    "CERT_C-EXP40-a",
+    "MISRAC2025-RULE_11_5-b",
+    "MISRAC2025-RULE_11_8-a",
+    "MISRAC2025-RULE_17_8-a"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "micropython-b3d62f80e40b",
+   "found_region": [
+    "CERT_C-INT31-h",
+    "MISRAC2025-RULE_10_3-a",
+    "MISRAC2025-RULE_8_13-a"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 4,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "micropython-b53492729a4a",
+   "found_region": [
+    "CERT_C-INT31-j",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_12_1-a",
+    "MISRAC2025-RULE_15_5-a"
+   ],
+   "found_strict": [
+    "CERT_C-INT31-j",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_12_1-a"
+   ],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "micropython-bc4a5e14e72f",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "micropython-bdadb90505c7",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 3,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "micropython-c14ecec3cf60",
+   "found_region": [
+    "CERT_C-INT31-d",
+    "CERT_C-INT31-e",
+    "CERT_C-INT31-i",
+    "CERT_C-INT31-j",
+    "MISRAC2025-RULE_10_1-d",
+    "MISRAC2025-RULE_10_1-e",
+    "MISRAC2025-RULE_10_3-b",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_11_6-b",
+    "MISRAC2025-RULE_19_2-a",
+    "MISRAC2025-RULE_19_3-a"
+   ],
+   "found_strict": [
+    "MISRAC2025-RULE_19_2-a",
+    "MISRAC2025-RULE_19_3-a"
+   ],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "micropython-d4d265304c55",
+   "found_region": [
+    "CERT_C-INT31-j",
+    "MISRAC2025-RULE_10_4-a"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "micropython-ec6689a8cc86",
+   "found_region": [
+    "CERT_C-EXP45-d",
+    "CERT_C-INT31-j",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_11_5-b",
+    "MISRAC2025-RULE_13_4-a"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "micropython-ef93b8337084",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "micropython-f30ec885b80c",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  }
+ ],
+ "total_violations": 27384,
+ "n_bugs": 22,
+ "found_region_count": 15,
+ "found_strict_count": 7,
+ "unaligned_hunks_total": 0
+}

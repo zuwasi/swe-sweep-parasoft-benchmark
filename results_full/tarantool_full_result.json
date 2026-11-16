@@ -1,0 +1,653 @@
+{
+ "repo": "tarantool",
+ "bugs": [
+  {
+   "bug_id": "tarantool-02d1749c6bfb",
+   "found_region": [
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-067eeb123c0e",
+   "found_region": [
+    "CERT_CPP-EXP56-a",
+    "MISRACPP2023-7_11_1-a",
+    "MISRACPP2023-7_11_1-b"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-0b1d99f9080c",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-0e02e4373959",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-0e3671b1b049",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-217abe7a70be",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-3203ce795485",
+   "found_region": [
+    "CERT_C-ARR39-b",
+    "CERT_C-INT31-i",
+    "MISRACPP2023-21_2_2-a",
+    "MISRACPP2023-30_0_1-b",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_19_1-a",
+    "MISRACPP2023-8_2_6-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "CERT_C-ARR39-b",
+    "MISRACPP2023-21_2_2-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_6-a"
+   ],
+   "aligned_hunks": 3,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-35044a57ea04",
+   "found_region": [
+    "CERT_C-INT31-i",
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-6_5_1-a",
+    "MISRACPP2023-8_2_6-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-6_5_1-a"
+   ],
+   "aligned_hunks": 3,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-354f1a67549b",
+   "found_region": [
+    "CERT_C-ARR39-b",
+    "CERT_C-INT31-i",
+    "CERT_C-INT31-j",
+    "CERT_C-MSC41-a",
+    "CERT_CPP-DCL51-d",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-22_4_1-a",
+    "MISRACPP2023-5_10_1-b",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-8_18_2-a",
+    "MISRACPP2023-8_2_6-a",
+    "MISRACPP2023-9_3_1-a",
+    "MISRACPP2023-9_3_1-b",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "aligned_hunks": 4,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-39735317fbaf",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-40d35b1255f4",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-452a757c1c97",
+   "found_region": [
+    "CERT_C-INT31-h",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-46aa6eb83fb9",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 32,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-46b0022d552a",
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-10_1_1-a",
+    "MISRACPP2023-15_1_4-b",
+    "MISRACPP2023-22_3_1-a",
+    "MISRACPP2023-6_0_3-a",
+    "MISRACPP2023-6_5_2-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-7_0_6-b",
+    "MISRACPP2023-7_11_2-a",
+    "MISRACPP2023-8_19_1-a",
+    "MISRACPP2023-8_2_2-b",
+    "MISRACPP2023-9_4_2-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-0_1_2-a"
+   ],
+   "aligned_hunks": 3,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-4753065c09ed",
+   "found_region": [
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-8_2_6-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-8_2_6-a"
+   ],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-4e1bd4f2ca09",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-4f3f87493c3a",
+   "found_region": [
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-7_11_2-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-7_11_2-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-67319bd2abd7",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-7516474ad8c9",
+   "found_region": [
+    "CERT_C-INT31-i",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-8_2_6-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "CERT_C-INT31-i",
+    "MISRACPP2023-7_0_6-a"
+   ],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-7530007077a3",
+   "found_region": [
+    "CERT_C-INT31-j",
+    "MISRACPP2023-6_0_3-a",
+    "MISRACPP2023-6_5_2-a",
+    "MISRACPP2023-6_9_2-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-6_9_2-a"
+   ],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-77c69aba7b2a",
+   "found_region": [
+    "CERT_C-ARR39-b",
+    "CERT_C-EXP36-a",
+    "CERT_C-EXP39-b",
+    "CERT_C-EXP45-d",
+    "CERT_C-INT31-e",
+    "CERT_C-INT31-j",
+    "CERT_C-INT36-b",
+    "CERT_CPP-DCL51-d",
+    "CERT_CPP-EXP55-a",
+    "CERT_CPP-EXP56-a",
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-10_0_1-a",
+    "MISRACPP2023-10_1_1-a",
+    "MISRACPP2023-10_2_2-a",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-5_10_1-b",
+    "MISRACPP2023-5_10_1-c",
+    "MISRACPP2023-6_0_3-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_4-a",
+    "MISRACPP2023-7_11_1-a",
+    "MISRACPP2023-7_11_1-b",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_14_1-a",
+    "MISRACPP2023-8_18_2-a",
+    "MISRACPP2023-8_2_2-b",
+    "MISRACPP2023-8_2_3-a",
+    "MISRACPP2023-8_2_6-a",
+    "MISRACPP2023-8_7_1-b",
+    "MISRACPP2023-9_3_1-b",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": [
+    "CERT_CPP-EXP56-a",
+    "MISRACPP2023-6_0_3-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_2-b",
+    "MISRACPP2023-8_2_6-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "aligned_hunks": 6,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-78ccf4ee3c7f",
+   "found_region": [
+    "CERT_C-EXP39-b",
+    "CERT_CPP-EXP56-a",
+    "MISRACPP2023-19_3_1-a",
+    "MISRACPP2023-6_0_3-a",
+    "MISRACPP2023-6_5_2-a",
+    "MISRACPP2023-7_11_1-b",
+    "MISRACPP2023-8_2_2-b"
+   ],
+   "found_strict": [
+    "CERT_CPP-EXP56-a",
+    "MISRACPP2023-19_3_1-a"
+   ],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-8c4fecf8c4f6",
+   "found_region": [
+    "CERT_C-ARR39-b",
+    "CERT_C-EXP37-d",
+    "CERT_C-EXP45-d",
+    "CERT_C-FLP34-a",
+    "CERT_C-INT31-e",
+    "CERT_C-INT31-h",
+    "CERT_C-INT31-i",
+    "CERT_C-INT31-j",
+    "CERT_C-MSC41-a",
+    "CERT_C-PRE31-c",
+    "CERT_CPP-DCL60-a",
+    "MISRACPP2023-0_0_2-a",
+    "MISRACPP2023-0_2_4-a",
+    "MISRACPP2023-10_0_1-a",
+    "MISRACPP2023-10_1_1-a",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-12_2_1-a",
+    "MISRACPP2023-19_0_2-a",
+    "MISRACPP2023-19_3_1-a",
+    "MISRACPP2023-24_5_2-a",
+    "MISRACPP2023-5_10_1-f",
+    "MISRACPP2023-6_0_3-a",
+    "MISRACPP2023-6_2_1-a",
+    "MISRACPP2023-6_4_1-g",
+    "MISRACPP2023-6_5_2-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-7_0_4-a",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_18_2-a",
+    "MISRACPP2023-8_2_6-a",
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-9_3_1-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "CERT_C-ARR39-b",
+    "CERT_C-INT31-h",
+    "CERT_C-INT31-i",
+    "CERT_C-INT31-j",
+    "CERT_CPP-DCL60-a",
+    "MISRACPP2023-0_0_2-a",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-5_10_1-f",
+    "MISRACPP2023-6_2_1-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_6-a",
+    "MISRACPP2023-8_2_7-c",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "aligned_hunks": 11,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-8cfc91109fe1",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 11,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-95c521353f4e",
+   "found_region": [
+    "CERT_C-ARR39-b",
+    "CERT_C-INT31-i",
+    "MISRACPP2023-19_3_3-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-7_11_1-b",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-9_3_1-b",
+    "MISRACPP2023-9_5_1-a"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 4,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-9eaa7be00afa",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-a0264983c4a6",
+   "found_region": [
+    "CERT_C-INT31-i",
+    "CERT_C-INT31-j",
+    "CERT_C-MSC41-a",
+    "CERT_CPP-DCL60-a",
+    "CERT_CPP-INT50-a",
+    "MISRACPP2023-0_2_4-a",
+    "MISRACPP2023-10_1_1-a",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-15_1_4-b",
+    "MISRACPP2023-22_4_1-a",
+    "MISRACPP2023-6_0_3-a",
+    "MISRACPP2023-6_2_1-a",
+    "MISRACPP2023-6_4_1-g",
+    "MISRACPP2023-6_5_2-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-7_0_6-b",
+    "MISRACPP2023-7_11_1-a",
+    "MISRACPP2023-7_11_1-b",
+    "MISRACPP2023-7_11_2-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_1_2-a",
+    "MISRACPP2023-8_2_2-b",
+    "MISRACPP2023-8_2_6-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "CERT_C-MSC41-a",
+    "CERT_CPP-DCL60-a",
+    "CERT_CPP-INT50-a",
+    "MISRACPP2023-10_1_1-a",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-15_1_4-b",
+    "MISRACPP2023-22_4_1-a",
+    "MISRACPP2023-6_0_3-a",
+    "MISRACPP2023-6_2_1-a",
+    "MISRACPP2023-6_5_2-a",
+    "MISRACPP2023-7_0_6-b",
+    "MISRACPP2023-7_11_1-a",
+    "MISRACPP2023-7_11_1-b",
+    "MISRACPP2023-7_11_2-a",
+    "MISRACPP2023-8_2_2-b",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "aligned_hunks": 6,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-b01da1bbf9f4",
+   "found_region": [
+    "CERT_C-EXP39-a",
+    "MISRACPP2023-0_3_1-b",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "CERT_C-EXP39-a",
+    "MISRACPP2023-0_3_1-b",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-c2e562efa2e4",
+   "found_region": [
+    "CERT_C-INT31-e",
+    "CERT_C-INT31-j",
+    "MISRACPP2023-7_0_4-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-c8612c63469d",
+   "found_region": [
+    "CERT_C-ERR33-a",
+    "CERT_C-ERR33-d",
+    "CERT_C-FIO47-d",
+    "CERT_C-INT31-a",
+    "CERT_C-INT31-e",
+    "CERT_C-INT31-i",
+    "CERT_C-INT31-j",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-19_3_3-a",
+    "MISRACPP2023-30_0_1-b",
+    "MISRACPP2023-7_0_4-a",
+    "MISRACPP2023-7_0_5-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-7_11_2-a"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-d32112b21656",
+   "found_region": [
+    "MISRACPP2023-0_2_4-a",
+    "MISRACPP2023-10_1_1-a",
+    "MISRACPP2023-6_0_3-a",
+    "MISRACPP2023-6_5_2-a",
+    "MISRACPP2023-8_2_6-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-0_2_4-a",
+    "MISRACPP2023-10_1_1-a",
+    "MISRACPP2023-6_0_3-a",
+    "MISRACPP2023-6_5_2-a"
+   ],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-d527e3e234ed",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-dad93ce21d26",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-dbfb0940d12f",
+   "found_region": [
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_6-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_6-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-e409eec61dc6",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 3,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-f3e2922c14ee",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 3,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-f4801b8daa83",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-f7aac1b241c3",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 3,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-f90cfe93f0ad",
+   "found_region": [
+    "CERT_C-INT31-a",
+    "CERT_C-INT36-b",
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-21_2_2-a",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_2_6-a",
+    "MISRACPP2023-9_3_1-b",
+    "MISRACPP2023-9_6_1-a"
+   ],
+   "found_strict": [
+    "CERT_C-INT31-a",
+    "CERT_C-INT36-b",
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-21_2_2-a",
+    "MISRACPP2023-8_0_1-b"
+   ],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "tarantool-fc35d5a6cfe7",
+   "found_region": [
+    "CERT_C-INT31-d",
+    "CERT_C-INT31-i",
+    "CERT_C-INT31-j",
+    "CERT_C-MSC41-a",
+    "CERT_CPP-DCL51-d",
+    "CERT_CPP-EXP56-a",
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-10_2_3-a",
+    "MISRACPP2023-11_6_1-a",
+    "MISRACPP2023-19_3_3-a",
+    "MISRACPP2023-22_4_1-a",
+    "MISRACPP2023-5_10_1-b",
+    "MISRACPP2023-6_0_3-a",
+    "MISRACPP2023-6_5_2-a",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-7_11_1-a",
+    "MISRACPP2023-7_11_1-b",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_18_2-a",
+    "MISRACPP2023-8_2_6-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "CERT_C-INT31-d",
+    "CERT_C-INT31-i",
+    "CERT_C-INT31-j",
+    "CERT_CPP-DCL51-d",
+    "MISRACPP2023-10_2_3-a",
+    "MISRACPP2023-5_10_1-b",
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_6-a",
+    "MISRACPP2023-7_11_1-a",
+    "MISRACPP2023-7_11_1-b",
+    "MISRACPP2023-8_0_1-b",
+    "MISRACPP2023-8_18_2-a",
+    "MISRACPP2023-8_2_6-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "aligned_hunks": 6,
+   "unaligned_hunks": 0
+  }
+ ],
+ "total_violations": 199125,
+ "n_bugs": 40,
+ "found_region_count": 23,
+ "found_strict_count": 18,
+ "unaligned_hunks_total": 0
+}

@@ -1,0 +1,531 @@
+{
+ "repo": "gdal",
+ "bugs": [
+  {
+   "bug_id": "gdal-006b8e03a33f",
+   "found_region": [
+    "MISRACPP2023-6_9_2-a",
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-7_0_2-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-00cc4be4d0a2",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-014fe459d126",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-046bdf7ea2b1",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-0f209f8114d9",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-0f92097b1f96",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-117d4b5060bb",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 4,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-142747db21b5",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-1ed37a29feee",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 20,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-1ffea4d064fb",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-21f4a3ec2ba2",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-2200f505acc5",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 15,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-22389fee67bc",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-231f5e1235cb",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 20,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-27110150de2c",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-2ca07c262bf8",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 0,
+   "unaligned_hunks": 4
+  },
+  {
+   "bug_id": "gdal-2ded60d7a181",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-306b6a7740f5",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-3086778cd72a",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 4,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-35f0ff7f356c",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 4,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-3918a30cafcd",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 6,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-3bd8d57ad655",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-424d521138b6",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 5,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-44e37a15a6cf",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-45f004851fda",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-4682a0e8a013",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-4c8aab140a64",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-4d9083882a78",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-504022e1901c",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 20,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-539e9769dc6c",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-57efa1e4b4ab",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-5ce400c64f69",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 13,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-5f6e44b21f5f",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-6717ca55be0c",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-6b4837eba1e5",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 9,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-7105d81a6103",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 10,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-71288fa5574e",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-7421035a3c5d",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-75db3ff298af",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-773b9bc02944",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-789c1b646394",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-7bb604ce2c54",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-7c8b34554508",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-7ccad1918967",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 20,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-829fbcf7cf22",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-83c5ce57a20c",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-8726ac905a3f",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-8a4bee4f8d2a",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 0,
+   "unaligned_hunks": 1
+  },
+  {
+   "bug_id": "gdal-8deb4e1a2bc1",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 6,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-958621826b96",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-98e23cb90122",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-a4fe26122837",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-a7cb51debb42",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-a859743432e2",
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "CERT_CPP-MEM52-a",
+    "MISRACPP2023-21_6_1-a",
+    "MISRACPP2023-21_6_2-a"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-af647aafa367",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 3,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-b04821ff327c",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-b3b735d2a02d",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 19,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-b8a53b432511",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-bde706831cd5",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-c38033143519",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-cd56e6d8ae7a",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 3,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-cefd3547d91a",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 0,
+   "unaligned_hunks": 15
+  },
+  {
+   "bug_id": "gdal-cf0c25eb9ec4",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 5,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-d1937d5d1ad1",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-d424863f5f51",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-d49547f1a1be",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 12,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-d8a8cd51d51b",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 0,
+   "unaligned_hunks": 7
+  },
+  {
+   "bug_id": "gdal-df22e12654b3",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-e6d023672560",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-eff6ab423ab1",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 3,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-f079f407aa45",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 4,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "gdal-f72f1eda99e3",
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "CERT_CPP-MEM52-a",
+    "MISRACPP2023-21_6_1-a",
+    "MISRACPP2023-21_6_2-a"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  }
+ ],
+ "total_violations": 106263,
+ "n_bugs": 72,
+ "found_region_count": 3,
+ "found_strict_count": 1,
+ "unaligned_hunks_total": 27
+}

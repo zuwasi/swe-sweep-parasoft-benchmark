@@ -1,0 +1,293 @@
+{
+ "repo": "jerryscript",
+ "bugs": [
+  {
+   "bug_id": "jerryscript-042a8ceedc15",
+   "found_region": [
+    "CERT_C-EXP39-b",
+    "CERT_C-INT31-i",
+    "CERT_C-INT31-j",
+    "MISRAC2025-RULE_10_3-b",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_14_4-a",
+    "MISRAC2025-RULE_15_5-a",
+    "MISRAC2025-RULE_15_7-a"
+   ],
+   "found_strict": [
+    "CERT_C-INT31-j",
+    "MISRAC2025-RULE_10_4-a"
+   ],
+   "aligned_hunks": 9,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "jerryscript-072dcea299cd",
+   "found_region": [
+    "CERT_C-ARR39-b",
+    "MISRAC2025-RULE_13_3-a"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "jerryscript-1eb47ad8b475",
+   "found_region": [
+    "CERT_C-DCL37-d",
+    "CERT_C-EXP39-b",
+    "CERT_C-INT31-d",
+    "CERT_C-INT31-e",
+    "CERT_C-INT31-i",
+    "CERT_C-INT31-j",
+    "MISRAC2025-RULE_10_1-d",
+    "MISRAC2025-RULE_10_1-e",
+    "MISRAC2025-RULE_10_1-h",
+    "MISRAC2025-RULE_10_3-b",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_14_4-a",
+    "MISRAC2025-RULE_15_5-a",
+    "MISRAC2025-RULE_1_1-c",
+    "MISRAC2025-RULE_5_2-a"
+   ],
+   "found_strict": [
+    "CERT_C-DCL37-d",
+    "CERT_C-EXP39-b",
+    "CERT_C-INT31-d",
+    "CERT_C-INT31-e",
+    "CERT_C-INT31-j",
+    "MISRAC2025-RULE_10_1-d",
+    "MISRAC2025-RULE_10_1-e",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_14_4-a",
+    "MISRAC2025-RULE_15_5-a",
+    "MISRAC2025-RULE_1_1-c",
+    "MISRAC2025-RULE_5_2-a"
+   ],
+   "aligned_hunks": 7,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "jerryscript-25396dc4b88b",
+   "found_region": [
+    "BD-PB-ERRNO",
+    "CERT_C-ERR30-a",
+    "MISRAC2025-RULE_22_8-a",
+    "MISRAC2025-RULE_22_9-a",
+    "MISRAC2025-RULE_2_1-c"
+   ],
+   "found_strict": [
+    "BD-PB-ERRNO",
+    "CERT_C-ERR30-a",
+    "MISRAC2025-RULE_22_8-a",
+    "MISRAC2025-RULE_22_9-a"
+   ],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "jerryscript-2b0230207b47",
+   "found_region": [
+    "CERT_C-INT31-i",
+    "CERT_C-INT31-j",
+    "MISRAC2025-RULE_10_3-b",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_12_1-a",
+    "MISRAC2025-RULE_15_4-a"
+   ],
+   "found_strict": [
+    "CERT_C-INT31-j",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_12_1-a",
+    "MISRAC2025-RULE_15_4-a"
+   ],
+   "aligned_hunks": 8,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "jerryscript-32f5320c7e4d",
+   "found_region": [
+    "CERT_C-INT31-a",
+    "CERT_C-INT31-d",
+    "CERT_C-INT31-e",
+    "CERT_C-INT31-i",
+    "CERT_C-INT31-j",
+    "MISRAC2025-RULE_10_1-a",
+    "MISRAC2025-RULE_10_1-d",
+    "MISRAC2025-RULE_10_1-e",
+    "MISRAC2025-RULE_10_3-b",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_14_4-a",
+    "MISRAC2025-RULE_2_1-c"
+   ],
+   "found_strict": [
+    "CERT_C-INT31-a",
+    "CERT_C-INT31-d",
+    "CERT_C-INT31-e",
+    "CERT_C-INT31-i",
+    "CERT_C-INT31-j",
+    "MISRAC2025-RULE_10_1-a",
+    "MISRAC2025-RULE_10_1-d",
+    "MISRAC2025-RULE_10_1-e",
+    "MISRAC2025-RULE_10_3-b",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_14_4-a",
+    "MISRAC2025-RULE_2_1-c"
+   ],
+   "aligned_hunks": 3,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "jerryscript-4afcc94994c8",
+   "found_region": [
+    "CERT_C-INT31-d",
+    "CERT_C-INT31-i",
+    "CERT_C-INT31-j",
+    "MISRAC2025-RULE_10_1-d",
+    "MISRAC2025-RULE_10_3-b",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_10_5-a",
+    "MISRAC2025-RULE_10_8-a",
+    "MISRAC2025-RULE_12_1-a",
+    "MISRAC2025-RULE_20_12-a",
+    "MISRAC2025-RULE_2_1-c"
+   ],
+   "found_strict": [
+    "CERT_C-INT31-j",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_10_8-a",
+    "MISRAC2025-RULE_20_12-a",
+    "MISRAC2025-RULE_2_1-c"
+   ],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "jerryscript-5144355d084f",
+   "found_region": [
+    "CERT_C-EXP39-b",
+    "CERT_C-INT31-i",
+    "MISRAC2025-RULE_10_3-b",
+    "MISRAC2025-RULE_14_4-a",
+    "MISRAC2025-RULE_15_5-a",
+    "MISRAC2025-RULE_15_7-a"
+   ],
+   "found_strict": [
+    "CERT_C-INT31-i",
+    "MISRAC2025-RULE_10_3-b",
+    "MISRAC2025-RULE_14_4-a",
+    "MISRAC2025-RULE_15_5-a"
+   ],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "jerryscript-5ca8de954fce",
+   "found_region": [
+    "CERT_C-INT31-a",
+    "CERT_C-INT31-i",
+    "CERT_C-INT31-j",
+    "MISRAC2025-RULE_10_1-a",
+    "MISRAC2025-RULE_10_3-b",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_17_2-a",
+    "MISRAC2025-RULE_1_1-a",
+    "MISRAC2025-RULE_2_1-c"
+   ],
+   "found_strict": [
+    "CERT_C-INT31-j",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_17_2-a",
+    "MISRAC2025-RULE_1_1-a"
+   ],
+   "aligned_hunks": 3,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "jerryscript-63583f11d059",
+   "found_region": [
+    "CERT_C-INT31-a",
+    "CERT_C-INT31-d",
+    "CERT_C-INT31-e",
+    "CERT_C-INT31-j",
+    "MISRAC2025-RULE_10_1-a",
+    "MISRAC2025-RULE_10_1-d",
+    "MISRAC2025-RULE_10_1-e",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_14_4-a",
+    "MISRAC2025-RULE_2_1-c"
+   ],
+   "found_strict": [
+    "CERT_C-INT31-j",
+    "MISRAC2025-RULE_10_4-a"
+   ],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "jerryscript-662bbee88446",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "jerryscript-9bf98944df1f",
+   "found_region": [
+    "BD-PB-CC",
+    "MISRAC2025-RULE_14_3-ac",
+    "MISRAC2025-RULE_15_5-a"
+   ],
+   "found_strict": [
+    "MISRAC2025-RULE_15_5-a"
+   ],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "jerryscript-bf72a9ea61e4",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "jerryscript-df8c37f98e76",
+   "found_region": [
+    "CERT_C-INT31-d",
+    "CERT_C-INT31-e",
+    "MISRAC2025-RULE_10_1-d",
+    "MISRAC2025-RULE_10_1-e",
+    "MISRAC2025-RULE_10_8-a"
+   ],
+   "found_strict": [
+    "CERT_C-INT31-d",
+    "CERT_C-INT31-e",
+    "MISRAC2025-RULE_10_1-d",
+    "MISRAC2025-RULE_10_1-e",
+    "MISRAC2025-RULE_10_8-a"
+   ],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "jerryscript-edaaae2dd276",
+   "found_region": [
+    "BD-PB-VOVR",
+    "CERT_C-INT31-j",
+    "MISRAC2025-RULE_10_4-a",
+    "MISRAC2025-RULE_2_2-b"
+   ],
+   "found_strict": [
+    "CERT_C-INT31-j",
+    "MISRAC2025-RULE_10_4-a"
+   ],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  }
+ ],
+ "total_violations": 34169,
+ "n_bugs": 15,
+ "found_region_count": 13,
+ "found_strict_count": 12,
+ "unaligned_hunks_total": 0
+}

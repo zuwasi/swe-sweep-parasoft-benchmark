@@ -1,0 +1,120 @@
+{
+ "repo": "z3",
+ "bugs": [
+  {
+   "bug_id": "z3-21693e1cea96",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 3,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "z3-6aeffc53878d",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 4,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "z3-7c5e71fa9a15",
+   "found_region": [
+    "MISRACPP2023-0_2_2-a",
+    "MISRACPP2023-16_6_1-a",
+    "MISRACPP2023-6_5_1-a",
+    "MISRACPP2023-6_8_4-a",
+    "MISRACPP2023-9_3_1-a",
+    "MISRACPP2023-9_3_1-b",
+    "MISRACPP2023-9_4_1-a"
+   ],
+   "found_strict": [
+    "MISRACPP2023-0_2_2-a",
+    "MISRACPP2023-16_6_1-a",
+    "MISRACPP2023-6_8_4-a",
+    "MISRACPP2023-9_3_1-a",
+    "MISRACPP2023-9_4_1-a"
+   ],
+   "aligned_hunks": 6,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "z3-845ca575f448",
+   "found_region": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-7_0_6-b"
+   ],
+   "found_strict": [
+    "CERT_C-MSC41-a",
+    "MISRACPP2023-7_0_6-b"
+   ],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "z3-9b51ad4d5969",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 4,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "z3-b29e3fbe839f",
+   "found_region": [
+    "MISRACPP2023-10_0_1-a",
+    "MISRACPP2023-8_0_1-b"
+   ],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "z3-ce2e010dd3c0",
+   "found_region": [
+    "MISRACPP2023-0_1_2-a",
+    "MISRACPP2023-6_4_1-g",
+    "MISRACPP2023-8_14_1-a",
+    "MISRACPP2023-8_1_2-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "found_strict": [
+    "MISRACPP2023-6_4_1-g",
+    "MISRACPP2023-8_1_2-a",
+    "MISRACPP2023-9_3_1-b"
+   ],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "z3-e0dd0ca5d4f1",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "z3-e530990a778e",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 2,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "z3-f2490da70ca4",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  },
+  {
+   "bug_id": "z3-f3cd4349f4cb",
+   "found_region": [],
+   "found_strict": [],
+   "aligned_hunks": 1,
+   "unaligned_hunks": 0
+  }
+ ],
+ "total_violations": 89545,
+ "n_bugs": 11,
+ "found_region_count": 4,
+ "found_strict_count": 3,
+ "unaligned_hunks_total": 0
+}
