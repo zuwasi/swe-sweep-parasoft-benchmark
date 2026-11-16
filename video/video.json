@@ -54,20 +54,20 @@
       ],
       "bullets": [
         "SWE-sweep accepted bugs (Meta FAIR, 2026)",
-        "Byte-identical bug-era code, the project's own compile flags",
+        "Complete buildable codebases, every file the build compiles",
         "Parasoft C/C++test: Flow Analysis + MISRA C 2025 / C++ 2023 + SEI CERT"
       ]
     },
     "06": {
       "kicker": "The result",
       "headline": [
-        "41.4% on the bugs of its kind,",
-        "37.5% of all 488 vs 4.5% by agents"
+        "55.6% on the bugs of its kind,",
+        "53.1% of all 488 vs 4.5% by agents"
       ],
       "bullets": [
-        "183 of 488 bugs: a Parasoft finding inside the changed code",
-        "67 of the 162 mechanism bugs: 41.4%, clearing the 40% mark",
-        "Flow Analysis alone caught 16 bugs outright",
+        "259 of 488 bugs: a Parasoft finding inside the changed code",
+        "90 of the 162 mechanism bugs: 55.6%, well past the 50% mark",
+        "Full codebase scans, every file the build compiles, no hints",
         "Same code, same bugs, published benchmark"
       ]
     },
@@ -78,9 +78,9 @@
         "does not claim"
       ],
       "bullets": [
-        "Agents searched whole repositories; the analyzer got the buggy files",
-        "Most hits are coding standard rules, not proven root causes",
-        "Reproducible: full pipeline and configs on GitHub"
+        "A flag is a lead for an engineer, not a fix",
+        "The agents had to make hidden tests pass; we measure detection",
+        "Not every flagged rule is the real bug"
       ]
     },
     "08": {
@@ -91,9 +91,9 @@
       ],
       "bullets": [
         "162 of 488: memory, resource, and error handling defects",
-        "Parasoft on that third: 41.4%, clearing the 40% mark",
-        "24.7% on the exact defect line; robust at 38.8% to 41.4% across passes",
-        "The logic two thirds: review, requirements-based testing, coverage"
+        "Parasoft on that third: 55.6%, clearing the 50% mark",
+        "32.1% on the exact defect line",
+        "The logic two thirds: review, requirements-based testing, structural coverage"
       ]
     }
   },
@@ -115,7 +115,7 @@
     "product": "Parasoft C/C++test",
     "badge": {
       "from": "4.5%",
-      "to": "41.4%",
+      "to": "55.6%",
       "caption": "of the bugs of its kind"
     }
   },
