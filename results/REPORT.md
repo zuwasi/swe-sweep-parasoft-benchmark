@@ -8,7 +8,7 @@ Date: 2026-11-16. Tool: Parasoft C/C++test Standard: 2026.1.3 for the six C repo
 - On the **162** bugs whose defect mechanism is one a static analyzer targets (classification below), it flags **90 (55.6%)** at the changed region and **52 (32.1%)** on the exact removed line.
 - Strictly on a line the fix removed or changed: **141/488 (28.9%)**.
 - Flow Analysis (deep interprocedural checks, BD-*) alone: **20/488 (4.1%)**.
-- SWE-sweep's own best process (LLM agents) resolved **22.0/488 bugs (4.5%)** across these same repositories.
+- SWE-sweep's own best published results (LLM agents, best model per repository from the live leaderboard, 18 evaluated models) resolved **25/488 bugs (5.1%)** across these same repositories.
 
 ## Per-repository results
 
@@ -20,8 +20,8 @@ Date: 2026-11-16. Tool: Parasoft C/C++test Standard: 2026.1.3 for the six C repo
 | opencv | C++ | 47 | 35 | 0 | 18 | 33 | 74.5% | 40.4% | 2.1% |
 | tarantool | C | 40 | 23 | 0 | 18 | 23 | 57.5% | 45.0% | 7.5% |
 | cvc5 | C++ | 38 | 27 | 1 | 21 | 22 | 71.1% | 31.6% | 2.6% |
-| php-src | C | 26 | 13 | 1 | 8 | 13 | 50.0% | 26.9% | 0.0% |
-| micropython | C | 22 | 15 | 1 | 14 | 13 | 68.2% | 31.8% | 0.0% |
+| php-src | C | 26 | 13 | 1 | 8 | 13 | 50.0% | 26.9% | 3.8% |
+| micropython | C | 22 | 15 | 1 | 14 | 13 | 68.2% | 31.8% | 9.1% |
 | proj | C++ | 21 | 13 | 0 | 10 | 12 | 61.9% | 33.3% | 9.5% |
 | godot | C++ | 17 | 13 | 0 | 9 | 12 | 76.5% | 41.2% | 0.0% |
 | jerryscript | C | 15 | 13 | 3 | 12 | 13 | 86.7% | 80.0% | 20.0% |
@@ -31,7 +31,7 @@ Date: 2026-11-16. Tool: Parasoft C/C++test Standard: 2026.1.3 for the six C repo
 
 | Aggregate | Bugs | Found (region) | % (region) | % (strict) | SWE-sweep |
 |---|---|---|---|---|---|
-| 14 C/C++ repos | 488 | 259 | 53.1% | 28.9% | 4.5% |
+| 14 C/C++ repos | 488 | 259 | 53.1% | 28.9% | 5.1% |
 | 162 mechanism bugs | 162 | 90 | 55.6% | 32.1% | |
 
 The FA / CERT / MISRA columns count the found bugs whose matched rule set includes at least one Flow Analysis (BD-*), CERT, or MISRA rule respectively; a bug matched by several rule families is counted in each, so the columns overlap.
@@ -90,7 +90,7 @@ headline; it changes the division of labor:
   can flag, and Parasoft flags the majority of them with auditable findings on
   the defective lines.
 - The remaining two thirds are logic and requirements defects. Neither static
-  analysis (by design) nor the SWE-sweep agents (4.5% overall) reliably finds
+  analysis (by design) nor the SWE-sweep agents (5.1% overall) reliably finds
   those. They are exactly what design review, requirements traceability,
   requirements-based testing, and structural coverage are for in regulated
   development.

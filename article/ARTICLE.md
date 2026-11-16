@@ -14,6 +14,12 @@ Most AI coding benchmarks hand the agent a codebase and a specific issue: "here 
 
 The results SWE-sweep published were sobering for the agents: the best model resolved **4.7%** of the 4,068 bugs in the dataset.
 
+### Who built it, what it builds on, and what a look costs
+
+SWE-sweep comes out of **Meta FAIR (Fundamental AI Research) with Harvard, Stanford, and the University of Washington**; the author team (Lieret, Ma, Kindi, Wei, Press, Yang and colleagues, paper dated October 1, 2026, an ICLR submission with an open-sourced harness) includes people behind SWE-bench itself. Methodologically it is SWE-bench's issue-PR mining turned inside out: real bug-fix pull requests with hidden fail-to-pass tests, the SZZ algorithm dating each bug's introduction, and a "buggiest commit" of each repository as the starting state, so the agent gets zero issue text and must discover what is broken before it can fix anything.
+
+Its leaderboard is the public record of what autonomous discovery can do. At the time of writing, 18 models have been evaluated with the mini-SWE-agent harness: the current leader, OpenAI's Astra 6, resolves **9.5%** of all 4,068 bugs for **$3,255** of inference per full sweep; the paper's original best (Sol 5.6 xhigh) resolved **4.7%** for **$7,230**. On the C and C++ side of the leaderboard, our 14 repositories, the best published results across all 18 models add up to **25 of 488 bugs (5.1%)**, with the single best repository result at 44.4% (libexpat, 4 of 9 bugs) and three repositories at exactly zero. And every agent look is a fresh purchase: assembling the leaderboard's best result per repository over our 14 codebases consumed roughly **$500** of inference, and repeating the attempt tomorrow costs the same again. The Parasoft scan that flagged 259 bugs took one fixed setup, real compile flags and a rule configuration, and once it exists it re-runs every night in CI for the cost of machine time. A nightly agent sweep of the same repositories would burn on the order of $180,000 of inference per year to keep resolving the same 25 bugs; a static analysis license covers years of daily full scans.
+
 We asked the complementary question: on these same repositories, what does mature, deterministic static analysis see when it runs the way it runs in industry, over the whole build?
 
 ## What we did
@@ -38,17 +44,17 @@ Then we ran the tool the way a serious engineering organization runs it:
 | opencv | C++ | 47 | 35 | **74.5%** | 2.1% |
 | cvc5 | C++ | 38 | 27 | **71.1%** | 2.6% |
 | duckdb | C++ | 109 | 75 | **68.8%** | 2.8% |
-| micropython | C | 22 | 15 | **68.2%** | 0.0% |
+| micropython | C | 22 | 15 | **68.2%** | 9.1% |
 | proj | C++ | 21 | 13 | **61.9%** | 9.5% |
 | tarantool | C | 40 | 23 | **57.5%** | 7.5% |
-| php-src | C | 26 | 13 | **50.0%** | 0.0% |
+| php-src | C | 26 | 13 | **50.0%** | 3.8% |
 | hdf5 | C | 14 | 7 | **50.0%** | 28.6% |
 | z3 | C++ | 11 | 4 | 36.4% | 0.0% |
 | arrow | C++ | 47 | 11 | 23.4% | 2.1% |
 | gdal | C++ | 72 | 3 | 4.2% | 0.0% |
-| **Total** | | **488** | **259** | **53.1%** | **~4.5%** |
+| **Total** | | **488** | **259** | **53.1%** | **~5.1%** |
 
-Parasoft C/C++test put a finding on the changed code of **more than half of all 488 real bugs**, including the many that are pure logic defects no deterministic tool targets. Counting only findings on the exact line the maintainer's fix changed, it still found **28.9%** of all bugs, roughly six times the agents' end-to-end resolution rate. Nine of the fourteen repositories cleared 50%, and duckdb alone contributed 75 detections on one of the hardest C++ codebases in the set.
+Parasoft C/C++test put a finding on the changed code of **more than half of all 488 real bugs**, including the many that are pure logic defects no deterministic tool targets. Counting only findings on the exact line the maintainer's fix changed, it still found **28.9%** of all bugs, nearly six times the agents' end-to-end resolution rate. Nine of the fourteen repositories cleared 50%, and duckdb alone contributed 75 detections on one of the hardest C++ codebases in the set.
 
 And the sharpest number comes after the classification below: on the 162 bugs whose mechanism is a static analyzer's business, Parasoft flagged **55.6%**.
 
@@ -72,19 +78,19 @@ A fair question follows: of the 488 bugs, how many are even the kind of defect a
 
 The result: only **162 of the 488 bugs (33.2%)** are in a static analyzer's wheelhouse, memory safety and undefined behavior (120), leaks and concurrency (16), and error handling or API contract violations (26). The other two thirds are logic and requirements bugs: wrong operators, wrong constants, wrong branch, wrong protocol step, wrong interpretation of a specification. No deterministic tool flags those by design, and the SWE-sweep agents did not reliably find them either.
 
-On those 162 mechanism bugs, Parasoft flagged **90 (55.6%)** at the changed region and **52 (32.1%)** on the exact removed line, above its all-bugs rates of 53.1% and 28.9%. On its home ground, the class of bug it was built to catch, the tool clears the 50% mark: more than five in ten mechanism bugs flagged with an auditable pointer to the defect, versus roughly one in twenty-two for the autonomous agents across all bugs. The classification does not inflate the headline; it clarifies the division of labor. A third of real-world bugs are mechanism defects a deterministic tool can flag with auditable findings, and the tool's hit rate there is its highest ground. The other two thirds, the logic bugs, are what design review, requirements traceability, requirements-based testing, and structural coverage exist for, in every regulated industry. An LLM agent contributes little on either layer today: 4.5% overall, and it has no qualification story on either layer either.
+On those 162 mechanism bugs, Parasoft flagged **90 (55.6%)** at the changed region and **52 (32.1%)** on the exact removed line, above its all-bugs rates of 53.1% and 28.9%. On its home ground, the class of bug it was built to catch, the tool clears the 50% mark: more than five in ten mechanism bugs flagged with an auditable pointer to the defect, versus roughly one in twenty for the autonomous agents across all bugs. The classification does not inflate the headline; it clarifies the division of labor. A third of real-world bugs are mechanism defects a deterministic tool can flag with auditable findings, and the tool's hit rate there is its highest ground. The other two thirds, the logic bugs, are what design review, requirements traceability, requirements-based testing, and structural coverage exist for, in every regulated industry. An LLM agent contributes little on either layer today: 5.1% overall, and it has no qualification story on either layer either.
 
 ## Read this honestly, please
 
 - **A flag is not a fix.** Our 53.1% overall, 55.6% on the mechanism bugs, means a human would get a pointer to the defect; someone still has to judge and fix it. The agents' number, in turn, requires a passing fix, so the two measure different points of the same pipeline, and the gap between them is nonetheless ten to one.
-- **On pure deep-defect detection the two approaches are close**: Flow Analysis alone caught 4.1% versus the agents' 4.5%. The enormous gap comes from what happens when you add a comprehensive MISRA/CERT rule sweep and run it over the entire build, which is precisely how static analysis is deployed in industry.
+- **On pure deep-defect detection the two approaches are close**: Flow Analysis alone caught 4.1% versus the agents' 5.1%. The enormous gap comes from what happens when you add a comprehensive MISRA/CERT rule sweep and run it over the entire build, which is precisely how static analysis is deployed in industry.
 - **Coverage is imperfect, and we document every gap.** One godot source file exceeds the addressable memory of a single analysis process on a 64 GB machine and was excluded (no benchmark bug lives in it); gdal's accepted bugs are overwhelmingly logic-class, which its 4.2% reflects. All 488 bugs were mapped into the scanned codebases.
 
 ## Why safety-critical teams should care
 
 If you build software under DO-178C, ISO 26262, IEC 62304, or IEC 61504, two conclusions follow directly.
 
-**First, the traditional stack is not obsolete; it is the load-bearing wall.** Deterministic static analysis with MISRA/CERT rule sets, run over the whole build, flagged more than half of all real historical bugs at the defective lines and 55.6% of the mechanism bugs it is designed for, in codebases where the best autonomous agent closed under five percent. And the traditional stack does not stop at static analysis: the two thirds of bugs that are logic and requirements defects are exactly what requirements-based testing, structural coverage up to MC/DC, and human review each add layers for, layers the agent result never touches.
+**First, the traditional stack is not obsolete; it is the load-bearing wall.** Deterministic static analysis with MISRA/CERT rule sets, run over the whole build, flagged more than half of all real historical bugs at the defective lines and 55.6% of the mechanism bugs it is designed for, in codebases where the best autonomous agents closed at about five percent. And the traditional stack does not stop at static analysis: the two thirds of bugs that are logic and requirements defects are exactly what requirements-based testing, structural coverage up to MC/DC, and human review each add layers for, layers the agent result never touches.
 
 **Second, and more decisive than any percentage: qualification.** Every tool in the traditional stack is deterministic and auditable, so it can be qualified under DO-330 or ISO 26262's tool confidence levels with documented criteria. An LLM agent is nondeterministic: the same repository can yield different results on consecutive runs, and its failures are silent, it reports success on code that does not work. In a safety argument, actively misleading evidence is worse than missing evidence. Until there is an accepted qualification scheme for nondeterministic learned tools, they cannot enter the certification evidence, regardless of how good their scores get.
 
