@@ -29,6 +29,22 @@ We took the 14 C/C++ repositories from [SWE-sweep](https://swesweep.com) ("SWE-s
 - The rest of the matches come from MISRA/CERT coding-standard rules landing on the buggy lines.
 - **Bug classification.** We classified all 488 bugs by defect mechanism with two independent blind passes plus adjudication, then a third boundary pass re-judged the 228 labels closest to the static-analysis boundary with full pre-image context (`classification/RUBRIC.md`, `classification/adjudication3/`). Only **162 (33.2%)** are the kind of defect a static analyzer targets (memory/UB 120, leaks/concurrency 16, error handling 26); the other two thirds are logic and requirements bugs. On those 162, Parasoft flagged **90 (55.6%)** at the changed region and **52 (32.1%)** strictly on the removed line, above its all-bugs rates (53.1% / 28.9%). The logic bugs are what review, requirements-based testing, and structural coverage exist for, and neither the static analyzer nor the LLM agents (5.1%) reliably find them.
 
+## Follow-up experiment: Claude Code, cold start, on one repository
+
+To probe the strongest agentic setup we could assemble against the same ground truth, we ran **Claude Code** (claude 2.1.303, subscription default model) equipped with the open-source **Claude-BugHunter** skill bundle (83 bug-hunting skills, MIT / CC-BY-4.0) on **duckdb** at exactly this benchmark's start state (v0.10.0, commit `20b1486d`). Cold start in the strict sense: a fresh session, no memory, no `CLAUDE.md` in the tree, skills installed project-locally only, filesystem deny rules blocking any access to this repository or any benchmark data, and a prompt containing no hints of any kind. In about 65 minutes of engagement (one interruption by the subscription rate limit), the agent built duckdb with AddressSanitizer and UBSan, ran parallel code reviews across storage, parquet, C API, window, optimizer, casts, and self-terminated with an explicit coverage statement. It reported **79 countable findings** (about 95 defects including minor items), most verified with SQL reproductions on its own sanitizer build.
+
+Mapped against the same 109 accepted duckdb bugs with the same changed-line matching rule as the Parasoft evaluation:
+
+| Method | Found (changed region) | Found (exact defect line) |
+| --- | --- | --- |
+| Parasoft C/C++test, whole-codebase scan (this benchmark) | **75 (68.8%)** | 60 (55.0%) |
+| SWE-sweep leaderboard best on duckdb | 3 (2.8%) | n/a |
+| Claude Code + Claude-BugHunter, one cold-start engagement | **7 (6.4%)** | 6 (5.5%) |
+
+Reading: the strongest agentic setup we could assemble beats the published leaderboard best on duckdb, but only marginally, and it remains an order of magnitude below the deterministic tool. Caveats, stated plainly: the engagement ran about one hour rather than the 12-hour agent budget SWE-sweep gives, so this is a data point, not an equal-budget comparison; 5 of the 109 bugs are pure-addition fixes with no removed lines and are unmatchable by our rule for any detector; and 72 of the 79 findings are defects the benchmark never cataloged (parquet decoder corruption reachable from untrusted files, gzip header over-read, C API exceptions escaping `extern "C"`, window and optimizer wrong-result bugs), verified by the agent with SQL repros. That is the agentic mode's genuine strength, novel discovery at the cost of nondeterminism and, today, no qualification path into a safety case.
+
+Evidence: `cbh-duckdb/` in this repository (the agent's full BUG-HUNT-REPORT.md, the bug-level mapping JSON, and both session logs).
+
 ## How to read this honestly
 
 - **Flag vs fix.** A static analysis flag is a lead for a human, not a fix. SWE-sweep's number requires the agent to understand the bug and produce a passing fix; this benchmark measures detection of the defect the maintainers later fixed.

@@ -1,0 +1,24 @@
+The report is written to `./BUG-HUNT-REPORT.md` and lists about 95 defects. Most were reproduced on an ASan+UBSan build of the CLI; each has file and line, how it shows up at runtime, severity, a repro and a suggested fix. My working log is `./BUG-HUNT-LOG.md`, and no source files were changed (`git status` shows only those two new files).
+
+Five parallel reviewers covered storage/compression, casts and types, execution/optimizer, parquet/C API/catalog, and functions. The functions reviewer was cut off by a rate limit, so for that area I ran an edge-case query battery myself instead of a line-by-line review. Findings the reviewers reproduced are marked "by reviewer" in the report; I re-ran a sample of 17 of them and all reproduced.
+
+**Most serious:**
+- **RLE compression corrupts data with default settings** (`rle.cpp`): a value run longer than 65,535 rows writes a zero-length run, so after `CHECKPOINT` every later row in the segment is off by one.
+- **Memory-unsafe reads of untrusted files:**
+  - Parquet: string memcpy lengths and dictionary indexes are not bounds-checked, and a crafted header causes a division by zero.
+  - Gzip: a heap over-read when parsing the header of a second gzip member (`gzip_file_system.cpp:172`).
+- **Heap buffer overflow write from plain SQL:** `list_resize([1,2], 9223372036854775807)` overflows the size calculation in `Vector::Resize`.
+- **Catalog integrity:** a `CREATE … IF NOT EXISTS` that does nothing still records dependencies. A later DROP then removes unrelated objects, for example a unique index on another table (after which duplicates are accepted) or a whole table.
+- **Wrong query results:** window frames with `EXCLUDE`, streaming `first_value`, ASOF joins with NULL keys, ANTI joins folded to empty, several optimizer rewrites, and `range()` cardinality leading `SUM` to overflow.
+- **Silent truncation:** `read_text`/`read_blob` lose data for files between 2 and 4 GiB. String results over 4 GiB (e.g. from `repeat`) are cut to their length modulo 2^32.
+- **Injection and path issues:** `PRAGMA storage_info` runs injected SQL. Hive-partitioned `COPY` can write outside the target directory. `COPY … (QUOTE '')` hangs forever on data containing a NUL byte.
+- **Configuration and export:**
+  - `SET memory_limit='1e300TB'` wraps to 0 bytes, and the CLI then aborts with `std::terminate`.
+  - `IMPORT DATABASE` with a non-COPY statement in `load.sql` invalidates the whole database.
+  - `EXPORT DATABASE` produces SQL that cannot be re-imported.
+
+The report also covers 17 cast and type bugs (rounding, interval arithmetic and comparison, bit functions, a strptime out-of-bounds read), 13 C API defects (mostly exceptions escaping `extern "C"` functions), and the remaining storage and function issues.
+
+**Not covered:** ICU, httpfs, the JSON reader internals and WAL replay. The scalar, list and aggregate functions only got the black-box tests described above.
+
+Repro inputs are in `/tmp/cbh-scratch-*` and the sanitizer build is at `/tmp/cbh-build/duckdb`.
