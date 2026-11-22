@@ -1,0 +1,1057 @@
+[
+ {
+  "finding": "BUG-001",
+  "sev": "Critical",
+  "title": "Heap buffer overflow write, OOB read, and resource leaks in `H5O_efl_decode` when `nused > nalloc`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-002",
+  "sev": "Critical",
+  "title": "Heap double-free in `H5O_copy_expand_ref` when copying region reference arrays containing zero entries",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-003",
+  "sev": "Critical",
+  "title": "Multiplication integer overflow leading to undersized allocation and heap buffer overflow write in virtual dataset decoding",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-004",
+  "sev": "High",
+  "title": "Integer overflow/underflow, heap OOB reads, and unchecked NULL dereference in object header prefix/chunk deserialization",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-005",
+  "sev": "High",
+  "title": "Broken buffer bounds check (`data_size > p_size` instead of remaining bytes), unchecked pointer advances, and multiplication overflow in `H5O_attr_decode`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-006",
+  "sev": "High",
+  "title": "Missing buffer bounds check in version 3 fill value decoding causes arbitrary heap buffer over-read",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-007",
+  "sev": "High",
+  "title": "Pointer compared with `< 0` instead of `== NULL` in `H5O_fill_old_decode` causes NULL pointer dereference",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-008",
+  "sev": "High",
+  "title": "Missing buffer bounds checks, unbounded `strlen`/`memcpy`, reachable `HDassert`s, and error-path leaks in `H5O_dtype_decode_helper`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-009",
+  "sev": "High",
+  "title": "Unbounded `HDstrlen` and unchecked `p += name_length` bypass `p_end` check in `H5O__pline_decode`, causing heap OOB reads",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-010",
+  "sev": "High",
+  "title": "Unbounded infinite recursion (stack overflow) on self-referential committed shared messages and missing bounds/type validation",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-011",
+  "sev": "High",
+  "title": "Unchecked 16-bit length in `H5O_drvinfo_decode` causes up to 64 KB heap buffer over-read",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-012",
+  "sev": "High",
+  "title": "Missing bounds checks in v1 `H5O_fsinfo_decode` (and wrong address-size constant in v0) cause heap buffer over-read",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-013",
+  "sev": "High",
+  "title": "Heap buffer over-read and pointer underflow on truncated dataspace messages in `H5O__sdspace_decode`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-014",
+  "sev": "High",
+  "title": "`H5O_btreek_decode` ignores `p_size` (heap over-read) and accepts invalid `0`/out-of-range B-tree `K` and `sym_leaf_k` values",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-015",
+  "sev": "High",
+  "title": "`p_size` completely ignored across 9 object header message decoders, causing heap buffer over-reads on truncated messages",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-016",
+  "sev": "High",
+  "title": "Loop skips adjacent message after `HDmemmove` in `H5O__alloc_new_chunk`, corrupting object header",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-017",
+  "sev": "Medium",
+  "title": "Bitmask truncation in `H5O_dtype_encode_helper`/`H5O_dtype_size_helper` silently erases valid opaque datatype tags of length 249\u2013255",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-018",
+  "sev": "Medium",
+  "title": "Missing `p_end` checks on header/target reads and pointer-wraparound bypass in `H5O__link_decode`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-019",
+  "sev": "Medium",
+  "title": "Unbounded `H5MM_strdup` heap over-read in `H5O__name_decode`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-020",
+  "sev": "Medium",
+  "title": "Error-path memory leak of `cont_msg_info.msgs` in `H5O_protect`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-021",
+  "sev": "Critical",
+  "title": "Out-of-bounds function pointer call via unchecked `sect_type` and unbounded buffer reads in `H5FS__cache_sinfo_deserialize`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-022",
+  "sev": "Critical",
+  "title": "Heap buffer overflow write/read on `sinfo->bins[]` via off-by-one `nbins` and unvalidated section sizes",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-023",
+  "sev": "Critical",
+  "title": "Stack buffer overflow via unchecked `map[]` byte in `UNIQUE_MEMBERS` and unbounded heap over-read in `H5FD_multi_sb_decode`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-024",
+  "sev": "Critical",
+  "title": "Heap buffer overflow write and over-read in `H5F__accum_read` due to wrong `overlap_size` formula (`(addr + size) - buf_off`)",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-025",
+  "sev": "Critical",
+  "title": "Heap buffer overflow write, data corruption, and skip-list desync in `H5PB_read`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-026",
+  "sev": "Critical",
+  "title": "Unbounded heap buffer overflow in `curlwritecallback` and un-NUL-terminated over-read in `H5FD_s3comms_s3r_getsize`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-027",
+  "sev": "Critical",
+  "title": "Unsigned `size_t` integer overflow in `H5FD__core_write`/`H5FD__core_truncate` causes undersized `realloc` and heap buffer overflow",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-028",
+  "sev": "Critical",
+  "title": "Accepting `sizeof_addr`/`sizeof_size` of 16 or 32 triggers heap over-read in root symbol table decoding and 1-byte OOB read in `H5F_addr_decode_len`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-029",
+  "sev": "Critical",
+  "title": "Unbounded heap buffer over-read in driver info block decoding (`H5FD_sb_load` receives no buffer length) and `min_eoa` overflow",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-030",
+  "sev": "High",
+  "title": "Stack buffer overflow via unchecked `HDstrcat` in `H5FD_s3comms_aws_canonical_request`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-031",
+  "sev": "High",
+  "title": "Out-of-bounds memory reads in `H5FD_s3comms_parse_url` (unchecked `tmpstr += 3` and missing `*` in `if (tmpstr == 0)`)",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-032",
+  "sev": "High",
+  "title": "Corrupted dirty offset tracking in `H5F__accum_write` (`=` instead of `-=`) causing OOB flush and file corruption",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-033",
+  "sev": "High",
+  "title": "Unsigned 64-bit integer overflow in `H5FD_read`/`H5FD_write` bypasses EOA bounds check",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-034",
+  "sev": "High",
+  "title": "`HGOTO_ERROR` inside `done:` in `H5FD__family_open` causes double-free/UAF/infinite loop, plus off-by-one OOB read in `H5FD__family_get_handle`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-035",
+  "sev": "High",
+  "title": "Guaranteed NULL pointer dereference in Splitter VFD when `ignore_wo_errs` is enabled and W/O open fails",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-036",
+  "sev": "High",
+  "title": "Heap buffer overflow past fixed `iosize` and unchecked `HDfopen` NULL dereference in Log VFD",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-037",
+  "sev": "High",
+  "title": "Unvalidated on-disk `fsinfo` fields cause divide-by-zero (`page_size == 0`), `eoa_pre_fsm_fsalloc` underflow, and incomplete FSM clearing",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-038",
+  "sev": "High",
+  "title": "Use-after-free of `H5FD_class_t` (`driver`) in `H5FD_close` when closing a file whose VFD was unregistered",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-039",
+  "sev": "High",
+  "title": "Use-after-free of expunged `sblock`/`drvinfo` on `H5F__super_read` failure, plus unclosed `ext_loc` and unpin of unpinned `sblock`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-040",
+  "sev": "High",
+  "title": "Unsigned integer underflow/overflow on attacker-controlled `base_addr`/`stored_eof` and superblock v0/v1 `ext_addr` type confusion",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-041",
+  "sev": "High",
+  "title": "Use-after-free in `H5F__unmount` when two handles to the same underlying file are mounted at different mount points",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-042",
+  "sev": "High",
+  "title": "Use-after-free and double-free in `H5F__mount` error cleanup after mount table insertion",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-043",
+  "sev": "High",
+  "title": "Use-after-free via dangling global `H5F_sfile_head_g` node and NULL pointer dereference in `H5F__new` error cleanup",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-044",
+  "sev": "High",
+  "title": "Inverted `herr_t` check (`result <= 0`) in `H5F_try_close` reads uninitialized `obj_count`/`objs[]` on `H5F_get_obj_ids` failure",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-045",
+  "sev": "High",
+  "title": "Out-of-bounds `HDmemset` write and superblock v2/v3 checksum corruption in `H5F__get_file_image`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-046",
+  "sev": "High",
+  "title": "Invalid `H5MM_xfree` on custom `image_malloc` memory, infinite loop on EOF, FD leaks, and always-true `!(o_flags & O_RDONLY)` check in `H5FD__core_open`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-047",
+  "sev": "High",
+  "title": "Stack buffer overflow in `MPI_Bcast` (MPI < 3), negative `size_i` bypass, corrupt `HDmemset` on derived datatypes, and unreset MPI file view",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-048",
+  "sev": "High",
+  "title": "Integer overflow, 32-bit `tSize` truncation, silent short reads leaving uninitialized memory, NULL deref, and pointer comparison in `H5FDhdfs.c`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-049",
+  "sev": "High",
+  "title": "Unbalanced `curl_global_cleanup` tearing down global libcurl state on early error, range integer overflow, and NULL dereference in `H5FDros3.c`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-050",
+  "sev": "Medium",
+  "title": "Use-after-free / dangling pointer in `f->shared->fs_man[type]` in `H5MF_sects_debug`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-051",
+  "sev": "Medium",
+  "title": "Wrong metadata page type comparison (`H5F_MEM_PAGE_META == page_entry->type`) fails to protect non-superblock metadata pages from eviction",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-052",
+  "sev": "Medium",
+  "title": "`HDmemset` zeroes only first filesystem block of `copy_buf`, writing uninitialized heap memory to disk on misaligned multi-block Direct VFD writes",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-053",
+  "sev": "Medium",
+  "title": "`H5FD__mirror_open` never populates `file->fa` (breaking `H5Fget_access_plist`/`H5Pget_fapl_mirror`) and performs unlooped TCP socket I/O",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-054",
+  "sev": "Medium",
+  "title": "Unconditional `H5FD_unlock` on `H5Fstart_swmr_write` precondition failure strips active file lock and leaks `obj_glocs`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-055",
+  "sev": "Medium",
+  "title": "NULL dereference in `H5FDget_vfd_handle`/`H5FD_stdio_get_handle`, broken `H5P_isa_class` check, and missing EOA overflow checks in `H5FDstdio.c`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-056",
+  "sev": "Medium",
+  "title": "Unchecked `chunk_btree_k == 0`, missing upper bounds on B-tree `K`/`sym_leaf_k`, and `status_flags` 32-to-8-bit truncation in superblock decode",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-057",
+  "sev": "Critical",
+  "title": "Unvalidated `node_nrec` causes heap buffer overflow during v2 B-tree internal/leaf deserialization and checksum verification",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-058",
+  "sev": "Critical",
+  "title": "Unvalidated `node_size` and `rrec_size` in v2 B-tree header cause division-by-zero, unsigned underflow, and decoder heap over-read",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-059",
+  "sev": "Critical",
+  "title": "Double-free of `hdr` and free of uninitialized `node_info` pointers on `H5B2__hdr_init` failure",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-060",
+  "sev": "Critical",
+  "title": "Missing client class check on `H5B2_open` causes cross-class type confusion and NULL dereference",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-061",
+  "sev": "Critical",
+  "title": "Unvalidated Fixed Array header fields cause shift UB, integer overflow in `npages`/`dblk_size`, NULL dereference, and heap buffer overflow",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-062",
+  "sev": "Critical",
+  "title": "Unvalidated Extensible Array header fields cause division-by-zero, `H5_EXP2` 32-bit signed shift overflow, `nsblks` underflow, and decoder heap over-read",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-063",
+  "sev": "High",
+  "title": "Out-of-bounds heap read and cache protect leak in `H5B2_index` when `all_nrec` exceeds `node_nrec`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-064",
+  "sev": "High",
+  "title": "Missing index bounds check and class validation in `H5FA_get`/`H5FA_set`/`H5FA_open` cause heap OOB access and caller buffer overflow",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-065",
+  "sev": "High",
+  "title": "Missing bounds check on `sblk_idx < hdr->nsblks` in `H5EA__lookup_elmt` causes heap OOB read/write",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-066",
+  "sev": "High",
+  "title": "`H5B__copy` double-frees `old_bt->child` and dereferences NULL; `H5B_create`/`H5B__cache_deserialize` pass uninitialized pointers to `H5B__node_dest`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-067",
+  "sev": "High",
+  "title": "Uninitialized read of `bt->child[0]` plus infinite loop and stack-overflow recursion on cyclic sibling/child pointers in `H5B__get_info_helper`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-068",
+  "sev": "Medium",
+  "title": "`H5B2__cache_int_deserialize` and `H5B2__create_internal` return internal-node buffers to the leaf free-list factory on allocation error",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-069",
+  "sev": "Medium",
+  "title": "`H5EA__cache_hdr_deserialize` computes `index_blk_size` before `hdr->nsblks` is initialized, causing unconditional unsigned underflow on every valid EA load",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-070",
+  "sev": "Medium",
+  "title": "`HGOTO_ERROR` inside `done:` label in `H5EA__hdr_delete` causes infinite loop on unprotect failure",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-071",
+  "sev": "Medium",
+  "title": "`H5B__insert_helper` calls `HDabort()` in release builds on corrupted/unsorted v1 B-tree keys",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-072",
+  "sev": "Critical",
+  "title": "Stack buffer overflow in `H5SM_get_info` and OOB free-list array indexing via unvalidated `sohm_table.nindexes`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-073",
+  "sev": "Critical",
+  "title": "Heap buffer over-read, heap buffer overflow, and OOB free-list indexing via unvalidated SOHM `list_max` and `num_messages`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-074",
+  "sev": "Critical",
+  "title": "Unchecked object sizes and `H5HG_ALIGN` overflow in `H5HG__cache_heap_deserialize` causing infinite loop, pointer wraparound, and heap buffer over-read",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-075",
+  "sev": "Critical",
+  "title": "Out-of-bounds `heap->obj[]` access and NULL dereference via unvalidated on-disk `hobj->idx`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-076",
+  "sev": "Critical",
+  "title": "Heap buffer over-read, integer overflow bypass, infinite allocation loop on cycles, and wrong-variable zero check in `H5HL__fl_deserialize`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-077",
+  "sev": "Critical",
+  "title": "Unconditional NULL pointer dereference in `H5HF__cache_dblock_deserialize` for filtered unchecksummed direct blocks, plus decompressed-size mismatch OOB",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-078",
+  "sev": "Critical",
+  "title": "Unsigned underflow and wraparound bypass in `H5HF__man_op_real` via unvalidated on-disk `dblock->block_off` causing heap buffer underflow read/write",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-079",
+  "sev": "Critical",
+  "title": "Heap buffer over-read in `H5HF__cache_hdr_deserialize` passing total header `len` instead of `hdr->filter_len` to `H5O_msg_decode`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-080",
+  "sev": "Critical",
+  "title": "Unvalidated doubling-table parameters on header deserialization causing OOB array traversal, divide-by-zero, integer underflow, and OOB heap-ID reads",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-081",
+  "sev": "High",
+  "title": "Use-after-free / double-free of cached SOHM master table and leak of `table->indexes` on error in `H5SM_init`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-082",
+  "sev": "High",
+  "title": "Heap buffer over-read and unsigned underflow in `H5HG__hdr_deserialize`/`H5HG__cache_heap_deserialize` during speculative load",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-083",
+  "sev": "High",
+  "title": "Heap buffer over-read in `H5HL__hdr_deserialize` during speculative local heap prefix load near EOA",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-084",
+  "sev": "High",
+  "title": "Heap buffer overflow in `H5HF__huge_op_real` when reading filtered huge objects whose decompressed length exceeds stored unfiltered size",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-085",
+  "sev": "High",
+  "title": "Wrong bitmask (`0x0F00` on `uint8_t`) truncating extended tiny object lengths, plus OOB reads in `H5HF__tiny_op_real`, `H5HF__man_dblock_locate`, and `H5HF__sect_indirect_deserialize`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-086",
+  "sev": "Medium",
+  "title": "`H5HG_link` never serializes updated `nrefs` into `heap->chunk`, silently losing reference count changes on disk",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-087",
+  "sev": "Medium",
+  "title": "Reloading an empty local heap (`dblk_size == 0`) leaves `single_cache_obj = FALSE`, causing assertion failure / 0-byte datablock load in `H5HL_protect`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-088",
+  "sev": "Critical",
+  "title": "Unsigned integer underflow (`nbytes < 4`) in `H5Z__filter_fletcher32` causes massive heap buffer over-read and crash",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-089",
+  "sev": "Critical",
+  "title": "Unsigned integer underflow (`nbytes < 4`) in `H5Z__filter_szip` causes heap over-read and passes `~SIZE_MAX` length to `SZ_BufftoBuffDecompress`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-090",
+  "sev": "Critical",
+  "title": "32-bit multiplication overflow (`d_nelmts * p.size`), unchecked `nbytes`, and unvalidated `minbits` in `H5Z__filter_scaleoffset` cause heap buffer overflow and over-read",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-091",
+  "sev": "Critical",
+  "title": "Unchecked `member_offset` heap buffer overflow, `d_nelmts * cd_values[4]` 32-bit overflow, division-by-zero, OOB `cd_values`/input reads, and `outbuf` leak in `H5Znbit.c`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-092",
+  "sev": "Critical",
+  "title": "Off-by-one check (`idx > pline->nused`) in `H5Z_modify` causes NULL dereference, heap OOB write, and arbitrary `free()`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-093",
+  "sev": "Critical",
+  "title": "Missing internal `name` pointer fixup across `realloc` in `H5Z_append` causes use-after-free and invalid `free()`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-094",
+  "sev": "Critical",
+  "title": "Stack buffer overflow (`HDmemset(dims, 0, rank * sizeof(dims[0]))`) via unchecked `rank` and unbounded buffer reads in `H5S__point_deserialize`/`H5S__hyper_deserialize`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-095",
+  "sev": "Critical",
+  "title": "Heap buffer overflow and over-read in `H5S__point_project_simple` when projecting up to higher rank",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-096",
+  "sev": "Critical",
+  "title": "Compact dataset `compact.size` never validated against dataspace*datatype size, causing heap buffer overflow/over-read and NULL dereference on I/O",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-097",
+  "sev": "Critical",
+  "title": "Unchecked decompressed and on-disk chunk sizes in `H5D__chunk_lock` cause heap buffer overflow and over-read",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-098",
+  "sev": "Critical",
+  "title": "`H5D__virtual_write_one` passes `dst_type_id` (VDS storage type) instead of `src_type_id` (memory type) to `H5D__write`, causing buffer over-read and silent corruption",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-099",
+  "sev": "Critical",
+  "title": "Stack buffer overflow (`scaled[32] = 0`) in `H5D__chunk_direct_write`, `H5D__chunk_direct_read`, and `H5D__get_chunk_storage_size` for 32D datasets",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-100",
+  "sev": "Critical",
+  "title": "Heap buffer overflows on `buf`/`bkg` and double-free on error in `H5D__chunk_copy_cb`/`H5D__chunk_copy`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-101",
+  "sev": "Critical",
+  "title": "Heap buffer overflow and over-read in `H5D__fill_init` when `max_buf_size < max_elmt_size` (plus unchecked NULL `HDmemset`)",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-102",
+  "sev": "High",
+  "title": "Division by zero (`SIGFPE`) before the zero check on `layout->dim[u]` in `H5D__chunk_set_info_real`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-103",
+  "sev": "High",
+  "title": "Unchecked `NULL` child in data-transform parser causes immediate NULL pointer dereference in `H5Z__op_is_numbs`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-104",
+  "sev": "High",
+  "title": "Wrong dimension index (`unlim_dim_source` instead of `unlim_dim_virtual`) reads uninitialized stack memory in `H5D__virtual_set_extent_unlim`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-105",
+  "sev": "High",
+  "title": "Missing coordinate swizzling in `H5D__earray_idx_iterate_cb` when `unlim_dim > 0`, silently corrupting copied/converted datasets",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-106",
+  "sev": "High",
+  "title": "Off-by-one bounds check (`>` instead of `>=`) in `H5S__point_is_valid` accepts out-of-bounds point coordinates",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-107",
+  "sev": "High",
+  "title": "`H5Sselect_copy`/`H5S_select_copy` lacks rank validation (heap OOB), crashes on self-copy, and double-frees on copy failure",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-108",
+  "sev": "High",
+  "title": "`H5S__combine_select` unconditionally dereferences NULL `hslab` when result is empty (`H5S_SEL_NONE`)",
+  "bugs": {
+   "hdf5-cd22c0502f29": {
+    "region": [
+     10456,
+     10457,
+     10458,
+     10459,
+     10460
+    ],
+    "strict": [
+     10459
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-109",
+  "sev": "High",
+  "title": "`H5S_combine_hyperslab` corrupts/drops regular hyperslabs on non-overlapping `OR`/`XOR`/`NOTB`, and `H5Scombine_hyperslab` omits `stride == 0` validation",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-110",
+  "sev": "High",
+  "title": "`H5S_hyper_get_first_inc_block` sets `partial = FALSE` instead of `*partial = FALSE`, leaving VDS caller stack variable uninitialized",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-111",
+  "sev": "High",
+  "title": "`H5S_set_extent_simple` fails to release point/hyperslab selection when rank changes, causing rank-mismatch heap OOB accesses",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-112",
+  "sev": "Medium",
+  "title": "`H5Z__filter_deflate` reports `*buf_size = nbytes` smaller than compressed output and truncates `avail_out` to 32-bit `uInt` on >4 GiB inflate",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-113",
+  "sev": "Medium",
+  "title": "Unchecked integer division by zero (and `LONG_MIN / -1`) in data-transform constant folding and evaluation",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-114",
+  "sev": "Medium",
+  "title": "Unlooped `HDread`/`HDwrite` in `H5Defl.c` silently zero-corrupts reads > 2 GiB (or interrupted reads), plus 32-bit truncation and slot-sum overflow",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-115",
+  "sev": "Medium",
+  "title": "Out-of-bounds/NULL `chunk_list[j].scaled` indexing, 32-bit `size_t`/`hsize_t` MPI mismatches, and unchecked `H5MM_calloc` in parallel chunked I/O",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-116",
+  "sev": "Medium",
+  "title": "`H5D__scatter_mem`, `H5D__compound_opt_read`, and `H5Dfill` return `0` (`SUCCEED`) on error, silently masking failures",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-117",
+  "sev": "Medium",
+  "title": "Error-path leak in `H5S_decode`, wrong cumulative displacement in `H5S__obtain_datatype`, inverted comparison in `H5D__virtual_copy_layout`, and broken scientific-notation copy in `H5Z_xform_copy`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-118",
+  "sev": "Critical",
+  "title": "Arbitrary-length heap buffer overflow reading variable-length data from disk (`len` ignored in `H5HG_read`)",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-119",
+  "sev": "Critical",
+  "title": "Stack buffer overflow in bitfield conversion `H5T__conv_b_b` (missing `dst->shared->size <= sizeof(dbuf)` check)",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-120",
+  "sev": "Critical",
+  "title": "Stack buffer overflow (`tbuf[32]`) on >32-byte enums and unsigned underflow NULL dereference (`nmembs == 0`) in `H5T__sort_value`/`H5T__sort_name`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-121",
+  "sev": "Critical",
+  "title": "Stack buffer overflow (`H5T__bit_get_d` > 64 bits) and union type confusion (`src.u.f.esize`) in `H5T__conv_i_f`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-122",
+  "sev": "Critical",
+  "title": "Heap buffer overflow, `size_t` underflow, and unchecked NULL dereference in float-to-integer conversion `H5T__conv_f_i`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-123",
+  "sev": "Critical",
+  "title": "Heap buffer overflow in `H5T__get_native_type` when converting `H5T_ENUM` member values where `super_type` is larger than `nat_super_type`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-124",
+  "sev": "Critical",
+  "title": "Heap buffer overflow write (`nsyms > 2 * sym_leaf_k`) and heap buffer over-read decoding `SNOD` symbol table nodes",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-125",
+  "sev": "Critical",
+  "title": "Unbounded buffer overflow in `H5G_get_name_by_addr` (`size < 2`) and OOB underflow write (`name[-1]`) across group name getters (`size == 0`)",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-126",
+  "sev": "Critical",
+  "title": "Double-free, uninitialized pointer free, and unupdated `alloc_nlinks` in `H5G__node_build_table`/`H5G__ent_to_link`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-127",
+  "sev": "Critical",
+  "title": "NULL dereference and unbounded heap buffer over-read decoding external link values in `H5Lexternal.c`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-128",
+  "sev": "Critical",
+  "title": "Integer underflow unbounded buffer overflow in `H5Aget_name` (`buf_size == 0`), `name[-1]` write in `H5Aget_name_by_idx`, and uninitialized pointer free in `H5A__compact_build_table`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-129",
+  "sev": "Critical",
+  "title": "Unbounded heap buffer over-read decoding region references, plus heap leak and uninitialized heap disclosure in `H5R__create`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-130",
+  "sev": "High",
+  "title": "Broken subset check (uninitialized index heap over-read), range overflow, and wrong callback argument (`H5T_t *` instead of `s`) in enum conversion",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-131",
+  "sev": "High",
+  "title": "Silent floating-point data corruption (`denormalized` never reset), signed shift UB (`esize == 63`), and `msize == 0` OOB read in `H5T__conv_f_f`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-132",
+  "sev": "High",
+  "title": "Integer overflows bypassing compound bounds check in `H5T__insert` and wrapping array datatype size in `H5T__array_create`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-133",
+  "sev": "High",
+  "title": "Inverted-sign underflow checks in `H5T__complete_copy` allow unsigned wraparound of compound member offsets and size",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-134",
+  "sev": "High",
+  "title": "Integer overflow in `H5Tset_fields` (`epos + esize`, `mpos + msize`) and missing overlap check when `mpos == epos`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-135",
+  "sev": "High",
+  "title": "Integer overflow creating zero-sized/zero-precision datatypes and inverted `H5T_ENUM` assertion in `H5T__set_precision`/`H5T__set_size`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-136",
+  "sev": "High",
+  "title": "Heap buffer overflow and uninitialized pointer free on error in `H5G__compact_build_table`/`H5G__dense_build_table`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-137",
+  "sev": "High",
+  "title": "Infinite recursion / stack overflow in `H5G_visit`/`H5G_visit_cb` on hard-link cycles with `rc <= 1`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-138",
+  "sev": "High",
+  "title": "Stack use-after-scope in `H5L__link_cb`/`H5L__move_dest_cb`, unchecked NULL deref in `H5L__create_ud`, and stripped leading `/` in `H5L_exists_tolerant`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-139",
+  "sev": "Medium",
+  "title": "Wrong borrow in `H5T__bit_dec`, missing read-only check in `H5Tenum_insert`, 2-byte over-read/leak in `H5T_decode`, VL-string misclassification in `H5T_detect_class`, and empty enum/compound bugs",
+  "bugs": {
+   "hdf5-aa1b6edb1d73": {
+    "region": [
+     3114,
+     3465,
+     3466,
+     3467,
+     3468,
+     3469,
+     3470,
+     3471
+    ],
+    "strict": [
+     3465,
+     3466,
+     3467,
+     3468,
+     3469,
+     3470,
+     3471
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-140",
+  "sev": "Critical",
+  "title": "Heap buffer overflow allocating `fd_parent_addrs` with `H5F_SIZEOF_ADDR(f)` instead of `sizeof(haddr_t)` in cache image reconstruction",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-141",
+  "sev": "Critical",
+  "title": "Out-of-bounds write into `H5C_t` via unvalidated on-disk `ring` byte during cache image reconstruction",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-142",
+  "sev": "Critical",
+  "title": "Unbounded heap OOB reads and missing checksum verification when decoding metadata cache image blocks",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-143",
+  "sev": "Critical",
+  "title": "Heap buffer overflow via unbounded `HDstrcpy` in `H5P__facc_cache_config_dec`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-144",
+  "sev": "Critical",
+  "title": "Unchecked `enc_size` (0\u2013255) passed to `UINT64DECODE_VAR` causes OOB buffer reads across `H5Pdecode`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-145",
+  "sev": "Critical",
+  "title": "Unvalidated recursive `H5P__decode` (stack overflow / type confusion) and untrusted `*pp += fapl_size` advance in `H5P__lacc_elink_fapl_dec`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-146",
+  "sev": "Critical",
+  "title": "Unbounded `H5MM_xstrdup`, untrusted cursor advance, and error-path leaks in `H5P__dcrt_ext_file_list_dec` and `H5P__dcrt_fill_value_dec`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-147",
+  "sev": "High",
+  "title": "Out-of-bounds array write and struct corruption in `H5P__dcrt_layout_dec` via unchecked `ndims` (> 33)",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-148",
+  "sev": "High",
+  "title": "Multiplication integer overflow causing heap buffer overflow in `H5P__dcrt_layout_dec` (VDS) and `H5P__ocrt_pipeline_dec` (plus unconditional `filter.name` leak)",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-149",
+  "sev": "High",
+  "title": "Premature class destruction (use-after-free) and NULL dereference on error in `H5P_copy_plist`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-150",
+  "sev": "High",
+  "title": "Wrong `copy_data` (child instead of parent) passed to parent class `copy_func` in `H5P_copy_plist`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-151",
+  "sev": "High",
+  "title": "Zero-sized properties with `create`/`copy`/`del`/`close` callbacks always fail via `H5MM_malloc(0)` and leak the property list in `H5P_close`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-152",
+  "sev": "High",
+  "title": "Duplicate properties in `H5Pdecode` leak heap memory/IDs and `value_buf` leaks on `realloc` failure",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-153",
+  "sev": "High",
+  "title": "Use-after-free via dangling `type_info->last_id_info` and unchecked `marked` nodes in `H5I_clear_type`/`H5I__find_id`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-154",
+  "sev": "High",
+  "title": "`H5Isearch()` always aborts after first non-matching ID due to wrong initial `ret_value = H5_ITER_ERROR` in `H5I__search_cb`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-155",
+  "sev": "High",
+  "title": "Out-of-bounds heap read/write and NULL-hole table corruption in `H5PLinsert()` when path table is empty",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-156",
+  "sev": "High",
+  "title": "Stack buffer overflow via unbounded `HDsprintf` on Windows and path memory leak on subdirectories in `H5PL__find_plugin_in_path`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-157",
+  "sev": "High",
+  "title": "1-byte buffer underflow (`buf[-1] = '\\0'`) across 7 public string-getter APIs (`H5E`/`H5PL`/`H5P`) when non-NULL buffer is passed with `size == 0`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-158",
+  "sev": "High",
+  "title": "NULL pointer dereference in `H5C_cork` when uncorking an uncorked, uncached object via `H5Oenable_mdc_flushes`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-159",
+  "sev": "High",
+  "title": "Use-after-free on error path and parallel `coll_next`/`coll_prev` copy-paste corruption in `H5C__deserialize_prefetched_entry`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-160",
+  "sev": "High",
+  "title": "Guaranteed NULL pointer dereference in `H5AC_protect`, `H5AC_create`, and `H5AC_set_cache_auto_resize_config` error/logging paths",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-161",
+  "sev": "High",
+  "title": "Forward loop over mutated `flush_dep_parent[]` array skips half of flush dependency parents during prefetched entry eviction",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-162",
+  "sev": "High",
+  "title": "Corrupted doubly-linked list `prev` pointers on free-block coalescing in `H5MP_free` and unaligned factory page size in `H5MP_create`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-163",
+  "sev": "High",
+  "title": "Use-after-free of `H5FL_blk_node_t` in `H5FL_blk_malloc` during GC retry, `H5FL_TRACK` underflow, and `H5FL_arr_realloc` NULL dereference",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-164",
+  "sev": "High",
+  "title": "Wrong outer stride and double-counted `old_extent` in `H5_mpio_create_large_type` cause silent corruption / OOB parallel I/O",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-165",
+  "sev": "High",
+  "title": "Off-by-one heap buffer overflow in `H5_mpi_info_cmp` via `MPI_Info_get`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-166",
+  "sev": "High",
+  "title": "`H5RS_dup` increments refcount without duplicating wrapped strings, causing use-after-free",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-167",
+  "sev": "Medium",
+  "title": "Data race reading `mutex->lock_count` after releasing `mutex->atomic_lock` in `H5TS_mutex_unlock`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-168",
+  "sev": "Medium",
+  "title": "`H5HP_insert` leaves `heap->nobjs == heap->nalloc` on realloc failure, causing OOB heap access on `H5HP_remove`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-169",
+  "sev": "Medium",
+  "title": "`H5E__set_current_stack` corrupts error stack with stale IDs on partial copy failure; `H5Epush2` lacks `fmt == NULL` and ID-type checks",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-170",
+  "sev": "Medium",
+  "title": "NULL deref in `H5_get_option`, dangling `message` in MDC log teardown, broken `safe_iterating` in `H5SL_try_free_safe`, `H5PL_cache_g` NULL overwrite on OOM, and skipped `seen` tracking in multi-level plist inheritance",
+  "bugs": {}
+ }
+]

@@ -1,0 +1,1989 @@
+[
+ {
+  "finding": "ARROW-001",
+  "sev": "Critical",
+  "title": "IPC RecordBatchSerializer::VisitArray emits extra validity buffer for ExtensionArray over Null/Union storage, desynchronizing IPC reader",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-002",
+  "sev": "Critical",
+  "title": "IPC ReadFieldsSubset / IoRecordedRandomAccessFile allows out-of-bounds buffer pointer, negative read length, uninitialized heap leak on short reads, and breaks V4 format",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-003",
+  "sev": "Critical",
+  "title": "Feather V1 WritePaddedWithOffset unconditionally reads 1 byte past the end of input buffers for sliced bitmaps/booleans",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-004",
+  "sev": "Critical",
+  "title": "Feather V1 ReaderV1 lacks FlatBuffers verification, suffers uint32_t footer size wraparound, unchecked null pointers, and negative SliceBuffer sizes",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-005",
+  "sev": "Critical",
+  "title": "ThriftDeserializer::DeserializeMessage + AesDecryptor::GcmDecrypt/CtrDecrypt suffer heap buffer overflow and under-read on encrypted Parquet metadata",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-006",
+  "sev": "Critical",
+  "title": "DeltaLengthByteArrayDecoder::SetData leaves num_valid_values_, length_idx_, and stale decoder_ uninitialized/dangling on 0-length pages (UAF & OOB read)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-007",
+  "sev": "Critical",
+  "title": "DeltaBitPackDecoder / DeltaLengthByteArrayDecoder / DeltaByteArrayDecoder signed int32 truncation & overflow on total_value_count_ and padding_bits",
+  "bugs": {
+   "arrow-264e1ebbe40c": {
+    "region": [
+     2379,
+     2380,
+     2381,
+     2382,
+     2473,
+     2474,
+     2475,
+     2476,
+     2477,
+     2478,
+     2479,
+     2480,
+     2481,
+     2482,
+     2483,
+     2484,
+     2485,
+     2499,
+     2500,
+     2501,
+     2502,
+     2503,
+     2504,
+     2505,
+     2506,
+     2507,
+     2508,
+     2509,
+     2510,
+     2511,
+     2512,
+     2513,
+     2514,
+     2520,
+     2521,
+     2522,
+     2523,
+     2524,
+     2525,
+     2526,
+     2527,
+     2528,
+     2529,
+     2530,
+     2531,
+     2532,
+     2533,
+     2534,
+     2535,
+     2536,
+     2537,
+     2538
+    ],
+    "strict": [
+     2380,
+     2381,
+     2474,
+     2481,
+     2482,
+     2502,
+     2503,
+     2510,
+     2511,
+     2523,
+     2526,
+     2529,
+     2530,
+     2535
+    ]
+   }
+  }
+ },
+ {
+  "finding": "ARROW-008",
+  "sev": "Critical",
+  "title": "BlockSplitBloomFilter::Deserialize heap buffer over-read on truncated stream and Init() uint32_t truncation to 0 causing OOB read/write",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-009",
+  "sev": "Critical",
+  "title": "Swapped _wfullpath arguments in PlatformFilename::Real() cause buffer overflow and empty return on Windows",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-010",
+  "sev": "Critical",
+  "title": "UTF8Decode and UTF8DecodeReverse perform unbounded memory reads (and potential output overflow) on invalid/truncated UTF-8",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-011",
+  "sev": "Critical",
+  "title": "UriFromAbsolutePath on Unix passes non-NUL-terminated std::string_view to uriUnixFilenameToUriStringA (heap over-read and overflow)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-012",
+  "sev": "Critical",
+  "title": "Signed integer overflow (-INT32_MIN) in DecimalFromString causes out-of-bounds ScaleMultipliers read / segfault",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-013",
+  "sev": "Critical",
+  "title": "Integer underflow and massive heap buffer overflow in parallel_memcopy when input does not cross a block_size boundary",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-014",
+  "sev": "Critical",
+  "title": "ChunkResolver::Resolve heap buffer over-read on consecutive out-of-bounds lookups",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-015",
+  "sev": "Critical",
+  "title": "DictionaryType::ComputeFingerprint returns non-empty '0'/'1' for unfingerprintable value types, causing distinct dictionary types to compare equal",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-016",
+  "sev": "Critical",
+  "title": "ValidateArray / ValidateArrayFull omits data.offset < 0 check and overflows data.length + data.offset + 1 in ValidateOffsets",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-017",
+  "sev": "Critical",
+  "title": "Concatenate OOB vector read on empty binary/list arrays with null offsets buffer and heap over-read in PutOffsets",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-018",
+  "sev": "Critical",
+  "title": "Tensor::Make / ValidateTensorParameters skips buffer-size validation whenever strides is empty (default row-major)",
+  "bugs": {
+   "arrow-2fd06f68a200": {
+    "region": [
+     213,
+     214,
+     215,
+     216,
+     217,
+     218
+    ],
+    "strict": []
+   }
+  }
+ },
+ {
+  "finding": "ARROW-019",
+  "sev": "Critical",
+  "title": "CSV PresizedValueDescWriter heap buffer overflow on rows with excess columns and signed 32-bit capacity overflow",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-020",
+  "sev": "Critical",
+  "title": "JSON BlockParser HandlerBase::Null passes builder_ by value, leaving stale inline BuilderPtr inside arrays (DCHECK crash & OOB ListArray offsets)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-021",
+  "sev": "Critical",
+  "title": "JSON BlockParser HandlerBase::Null calls builder_stack_.back() on empty stack for top-level null (OOB read / crash)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-022",
+  "sev": "Critical",
+  "title": "JSON Converter and ChunkedArrayBuilder suffer C++ object type confusion (unchecked static_cast) on cross-block JSON kind mismatches",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-023",
+  "sev": "Critical",
+  "title": "JSON BlockParser::ReserveScalarStorage passes (size - available_storage) to ReserveData, under-reserving and overflowing heap on multi-call Parse()",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-024",
+  "sev": "Critical",
+  "title": "Out-of-bounds write to static kZeroSizeArea for BooleanType in chunked replace_with_mask, fill_null_forward, and fill_null_backward",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-025",
+  "sev": "Critical",
+  "title": "Type confusion and heap buffer overflow/over-read in choose (DispatchBest ignores middle arguments & omits CheckIdenticalTypes)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-026",
+  "sev": "Critical",
+  "title": "Signed int64_t overflow in utf8_slice_codeunits and binary_slice (MaxCodeunits) causes 0-byte / undersized allocation and buffer overflow",
+  "bugs": {
+   "arrow-9f952a8a44b5": {
+    "region": [
+     1090,
+     1091,
+     1092,
+     1093,
+     1094,
+     1095,
+     1096
+    ],
+    "strict": [
+     1093
+    ]
+   }
+  }
+ },
+ {
+  "finding": "ARROW-027",
+  "sev": "Critical",
+  "title": "Heap buffer overflow in utf8_{lpad,rpad,center} and ascii_{lpad,rpad,center} for negative or large PadOptions::width",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-028",
+  "sev": "Critical",
+  "title": "Heap buffer overflow (int64_t wraparound) and spurious null-slot errors in binary_repeat (MaxCodeunits)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-029",
+  "sev": "Critical",
+  "title": "Type confusion and heap OOB read in round_to_multiple when multiple is an integer scalar and input is Decimal128/256 or Float32",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-030",
+  "sev": "Critical",
+  "title": "Type confusion in partition_nth_indices on ChunkedArray due to stale base.exec_chunked = ArraySortIndicesChunked",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-031",
+  "sev": "Critical",
+  "title": "Negative num_processed in BlockedBloomFilter::FindImp causes heap under-read and 8-byte heap buffer overflow write",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-032",
+  "sev": "Critical",
+  "title": "TaskSchedulerImpl::Abort ignores TaskGroupState::ALL_TASKS_STARTED, causing UAF and double callback; related races in StartTaskGroup and ExecuteMore",
+  "bugs": {
+   "arrow-1a3fe19e8bf0": {
+    "region": [
+     140,
+     141,
+     142,
+     279,
+     280,
+     281,
+     282,
+     283,
+     284,
+     384,
+     385,
+     386,
+     387,
+     388,
+     389,
+     390,
+     391,
+     392,
+     393,
+     394,
+     395,
+     396,
+     397,
+     398,
+     399,
+     400,
+     401,
+     402,
+     403,
+     404,
+     405,
+     406,
+     407,
+     408,
+     409,
+     410,
+     411,
+     412,
+     413
+    ],
+    "strict": [
+     280,
+     281,
+     388,
+     393,
+     394,
+     395,
+     396,
+     397,
+     398,
+     399,
+     400,
+     401,
+     402,
+     403,
+     404,
+     405,
+     407,
+     408,
+     409
+    ]
+   }
+  }
+ },
+ {
+  "finding": "ARROW-033",
+  "sev": "Critical",
+  "title": "AsofJoinNode::Init initializes KeyHasher with output_schema() instead of inputs[i]->output_schema() (type confusion & heap over-read)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-034",
+  "sev": "Critical",
+  "title": "Use-after-free in ~AsofJoinNode() via EndFromProcessThread() spawning async task capturing raw this",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-035",
+  "sev": "Critical",
+  "title": "ExecBatchBuilder::NumRowsToSkip omits column->offset and miscounts duplicate row_ids, causing 8-byte heap buffer over-read",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-036",
+  "sev": "Critical",
+  "title": "GroupedListImpl::Consume reads batch[0].array from ExecValue union without checking is_scalar() (type confusion / crash)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-037",
+  "sev": "Critical",
+  "title": "GrouperFastImpl::GetUniques reads uninitialized memory as allocation size on 0 groups (varlen keys) and builds invalid dictionary type",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-038",
+  "sev": "Critical",
+  "title": "CheckQuantileOptions accepts NaN, causing std::sort UB and out-of-bounds memory corruption in quantile",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-039",
+  "sev": "Critical",
+  "title": "S3FileSystem DeleteObjectsAsync drops all keys past index 1000 and sends empty DeleteObjectsRequests",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-040",
+  "sev": "Critical",
+  "title": "Globber::Impl::PatternToRegex infinite out-of-bounds heap read on trailing backslash",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-041",
+  "sev": "Critical",
+  "title": "Heap buffer over-reads and uint32_t integer overflow in UCX PayloadHeaderFrame::ToFlightData",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-042",
+  "sev": "Critical",
+  "title": "Unlocked default-constructed std::unique_lock shadows connections_mutex_ in UcxClientImpl (data race / memory corruption)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-043",
+  "sev": "Critical",
+  "title": "Self-deadlock in UcpCallDriver::Impl::Close() holding frame_mutex_ across MakeProgress()",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-044",
+  "sev": "Critical",
+  "title": "Heap OOB reads on unvalidated Substrait emit.output_mapping indices",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-045",
+  "sev": "Critical",
+  "title": "Unchecked Result dereference (ValueOrDie abort) and null DataType via OutputType::type() in FromProto(ProjectRel)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-046",
+  "sev": "Critical",
+  "title": "Use-after-free of InHolder<DecimalScalar128> baked as raw pointer constant into cached LLVM object code",
+  "bugs": {
+   "arrow-369f913202de": {
+    "region": [
+     1094,
+     1095,
+     1096,
+     1097,
+     1098,
+     1099,
+     1100
+    ],
+    "strict": [
+     1097,
+     1098,
+     1099
+    ]
+   }
+  }
+ },
+ {
+  "finding": "ARROW-047",
+  "sev": "Critical",
+  "title": "Heap OOB under-read on SelectionVectors with indices >= 32,768 due to sign-extension of unsigned uint16/uint32 indices",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-048",
+  "sev": "Critical",
+  "title": "Heap buffer overflow and uninitialized read on 0-slot SelectionVectors in CodeGenExprValue do-while loop",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-049",
+  "sev": "Critical",
+  "title": "Heap buffer overflow (PKCS#7 padding), key OOB read, null deref on error, and EVP_CIPHER_CTX leak in Gandiva AES functions",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-050",
+  "sev": "Critical",
+  "title": "Deterministic 1-byte heap buffer overflow (NUL overwrite) and broken digest check in gdv_hash_using_openssl (md5/sha1/sha256/sha512)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-051",
+  "sev": "Critical",
+  "title": "Deterministic 1-byte heap buffer overflow in to_hex_int64 and to_hex_int32",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-052",
+  "sev": "Critical",
+  "title": "Heap buffer overflow and negative-length memcpy crash in byte_substr_binary_int32_int32",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-053",
+  "sev": "Critical",
+  "title": "Heap buffer overflow, negative memcpy crash, and OOB UTF-8 read in mask_utf8_utf8_utf8_utf8 and gdv_mask_first_n_utf8_int32",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-054",
+  "sev": "Critical",
+  "title": "Heap buffer overflow, unbounded OOB read, and negative *out_len in lpad/rpad and utf8_length_ignore_invalid",
+  "bugs": {
+   "arrow-f5b99cc3814b": {
+    "region": [
+     207,
+     208,
+     209,
+     210,
+     211,
+     212,
+     213
+    ],
+    "strict": [
+     210
+    ]
+   }
+  }
+ },
+ {
+  "finding": "ARROW-055",
+  "sev": "Critical",
+  "title": "Integer truncation/overflow heap buffer overflows in castVARCHAR/castVARBINARY, repeat_utf8_int32, and negative size corruption in SimpleArena::Allocate",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-056",
+  "sev": "Critical",
+  "title": "Heap use-after-free and permanent deadlock/leak on duplicate ObjectIDs in Plasma Get requests",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-057",
+  "sev": "Critical",
+  "title": "Unchecked negative/overflowing data_size/metadata_size in Plasma CreateObject causes footprint bypass, shared-memory heap overflow, and server abort",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-058",
+  "sev": "Critical",
+  "title": "Missing FlatBuffers verification (DCHECK-only) and length checks in Plasma IPC protocol cause heap over-reads, OOB vector reads, and server crashes",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-059",
+  "sev": "Critical",
+  "title": "Heap use-after-free, multi-threaded data race on chunks_, and ignored cls_cxx_read errors in Skyhook Ceph OSD plugin",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-060",
+  "sev": "Critical",
+  "title": "Unverified FlatBuffers deserialization and null pointer dereferences in DeserializeScanRequest inside Ceph OSD",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-061",
+  "sev": "Critical",
+  "title": "C++ type confusion (invalid vtable dispatch) and null-pointer write in garrow_buffer_slice / garrow_mutable_buffer_slice",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-062",
+  "sev": "Critical",
+  "title": "Stack buffer over-read and off-by-one uninitialized stack read in garrow_array_builder_append_values (GBytes** overload)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-063",
+  "sev": "High",
+  "title": "ArrayStreamBatchReader::ReadNext after Close() causes use-after-free on ExportedArrayStream::PrivateData",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-064",
+  "sev": "High",
+  "title": "SchemaImporter::ProcessDecimal calls aborting decimal128()/decimal256() constructors on untrusted precision",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-065",
+  "sev": "High",
+  "title": "SchemaImporter::DoImport passes unchecked negative n_children to std::vector::resize() and ArrayImporter allows negative buffer sizes",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-066",
+  "sev": "High",
+  "title": "Feather V1 WriteColumnV1 crashes with OOB access on 0-chunk empty ChunkedArray",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-067",
+  "sev": "High",
+  "title": "IPC DecompressBuffer fails on spec-compliant uncompressed_size == -1 sentinel in compressed RecordBatches",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-068",
+  "sev": "High",
+  "title": "IPC DictionaryMemo::ReifyDictionary and DictionaryResolver mutate cached dictionary state unsynchronized across concurrent reads",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-069",
+  "sev": "High",
+  "title": "ByteStreamSplitDecoder::SetData rejects every valid nullable BYTE_STREAM_SPLIT page containing nulls",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-070",
+  "sev": "High",
+  "title": "SerializedPageReader::NextPage treats omitted DataPageHeaderV2.is_compressed as false instead of Thrift spec default true",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-071",
+  "sev": "High",
+  "title": "SerializedPageReader::DecompressIfNeeded never shrinks/slices decompression_buffer_ and discards Decompress() actual byte count",
+  "bugs": {
+   "arrow-98c930cfb2f6": {
+    "region": [
+     553,
+     554,
+     555,
+     556,
+     557,
+     558,
+     559,
+     560,
+     561,
+     562
+    ],
+    "strict": [
+     556,
+     557,
+     558,
+     559
+    ]
+   }
+  }
+ },
+ {
+  "finding": "ARROW-072",
+  "sev": "High",
+  "title": "DictDecoderImpl::DecodeIndices and DecodeIndicesSpaced do not validate dictionary index bounds, producing invalid Arrow DictionaryArrays",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-073",
+  "sev": "High",
+  "title": "DecryptKeyLocally passes negative length to std::string constructor on short encrypted keys and AesEncryptor ignores RAND_bytes failure",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-074",
+  "sev": "High",
+  "title": "CudaBufferWriterImpl::Write lacks bounds check against buffer size_ and WriteAt fails to flush before Seek(), corrupting GPU memory",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-075",
+  "sev": "High",
+  "title": "Signed 32-bit integer overflows in BitWriter::PutValue (heap overflow) and BitReader::GetBatch (heap underflow) for buffers >= 256 MiB",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-076",
+  "sev": "High",
+  "title": "Out-of-bounds read and wrong value in BitReader::GetAligned<bool> when num_bytes == 0 (RLE bit_width == 0)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-077",
+  "sev": "High",
+  "title": "BasicDecimal128/256::Rescale silently wraps around on overflow and reads ScaleMultipliers out-of-bounds for |delta_scale| > kMaxScale",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-078",
+  "sev": "High",
+  "title": "Out-of-bounds heap read in TDigest::Quantile(NaN) (reachable from tdigest / hash_tdigest kernels)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-079",
+  "sev": "High",
+  "title": "Streaming GZip and BZ2 codecs report corrupted bytes_read / bytes_written when buffer length exceeds UINT_MAX",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-080",
+  "sev": "High",
+  "title": "Data race / UAF on MergedGenerator::State::final_error and silent error loss",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-081",
+  "sev": "High",
+  "title": "Race conditions in ReadaheadGenerator cause permanent deadlock or double MarkFinished()",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-082",
+  "sev": "High",
+  "title": "ThrottleImpl ignores paused_ in Release() and TryAcquire(), breaking ThrottledAsyncTaskScheduler::Pause()",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-083",
+  "sev": "High",
+  "title": "Reference cycle leak in ThrottledAsyncTaskSchedulerImpl::ContinueTasks()",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-084",
+  "sev": "High",
+  "title": "Use-after-free in SerialExecutor::SpawnReal reading this->state_->finished after copying state_",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-085",
+  "sev": "High",
+  "title": "MemoryMapRemap checks new_addr == NULL instead of *new_addr == NULL on Windows",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-086",
+  "sev": "High",
+  "title": "Null dereference and lost O_NONBLOCK flag in SelfPipeImpl at-fork handlers",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-087",
+  "sev": "High",
+  "title": "MakeSequencedMergedGenerator accepts max_subscriptions == 0, causing SpscQueue(0) heap overflow / assert crash",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-088",
+  "sev": "High",
+  "title": "ValidateArrayImpl::Visit(FixedSizeListType) ignores data.offset, allowing OOB child reads after ValidateFull()",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-089",
+  "sev": "High",
+  "title": "ValidateArrayImpl omits null-buffer checks for UnionType and null-child checks for nested types (segfault in ValidateFull)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-090",
+  "sev": "High",
+  "title": "ValidateArrayFull omits child/dictionary type equality checks for List, FixedSizeList, and Dictionary arrays",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-091",
+  "sev": "High",
+  "title": "Array::GetScalar(int64_t i) and ChunkedArray::GetScalar(int64_t i) omit i < 0 check, causing heap under-read",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-092",
+  "sev": "High",
+  "title": "CleanListOffsets + ListArray::FromArrays / MapArray::FromArrays heap over-read and corrupted null bitmap on sliced offsets with nulls",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-093",
+  "sev": "High",
+  "title": "MapArray constructor applies map offset to child pair_data (OOB struct) and MapArray::SetData ignores pair_data->offset",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-094",
+  "sev": "High",
+  "title": "StructArray::field(int i) has concurrent data race and use-after-free on lazy boxed_fields_[i]",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-095",
+  "sev": "High",
+  "title": "TensorEquals OOB vector read and crash on 0-dimensional float/double tensors",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-096",
+  "sev": "High",
+  "title": "NullArrayFactory::GetBufferLength omits child recursion for variable-size lists, allocating undersized shared buffers (heap over-read)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-097",
+  "sev": "High",
+  "title": "ViewDataImpl OOB vector read in GetDictionaryView and undersized/misaligned null bitmap on sliced Struct views",
+  "bugs": {
+   "arrow-5abdc0d1a217": {
+    "region": [
+     594,
+     595
+    ],
+    "strict": []
+   }
+  }
+ },
+ {
+  "finding": "ARROW-098",
+  "sev": "High",
+  "title": "AdaptiveUIntBuilder::AppendValues omits CommitPendingData(), causing debug abort and release corruption / overflow",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-099",
+  "sev": "High",
+  "title": "TransposeDictIndices null-pointer dereference on sliced DictionaryArray with kUnknownNullCount and null bitmap",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-100",
+  "sev": "High",
+  "title": "ArrayDataEndianSwapper dereferences null value buffers for fixed-width, decimal, and interval types on unvalidated IPC data",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-101",
+  "sev": "High",
+  "title": "SparseCSFIndex and SparseCOOIndex lack bounds, ndim, and buffer-size validation (underflow, OOB read, crash)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-102",
+  "sev": "High",
+  "title": "BaseBinaryBuilder::AppendValues(const std::vector<std::string>&) bypasses ValidateOverflow, truncating 32-bit offsets",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-103",
+  "sev": "High",
+  "title": "CSV CustomDecimalPointValueDecoder unsynchronized mutable temp_ buffer causes data race, corruption, and UAF under multi-threaded readers",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-104",
+  "sev": "High",
+  "title": "CSV CustomDecimalPointValueDecoder::Initialize indexes mapping_[256] with signed char decimal_point (buffer underflow)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-105",
+  "sev": "High",
+  "title": "CSV InferringColumnBuilder::TryConvertChunk race across lock.unlock() causes null pointer dereference on reset parsers_[i]",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-106",
+  "sev": "High",
+  "title": "CSV SSE42Filter::Matches uses implicit-length _mm_cmpistrc, treating 0x00 bytes as string terminators and silently skipping delimiters/quotes/newlines",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-107",
+  "sev": "High",
+  "title": "CSV CSVWriterImpl::WriteTable leaks uninitialized heap memory or duplicates headers/rows on 0-length chunks",
+  "bugs": {
+   "arrow-9a0cb740d8ac": {
+    "region": [
+     552
+    ],
+    "strict": []
+   }
+  }
+ },
+ {
+  "finding": "ARROW-108",
+  "sev": "High",
+  "title": "CSV CSVWriterImpl OOB write in WriteHeader and uninitialized heap leak in TranslateMinimalBatch on 0-column schemas",
+  "bugs": {
+   "arrow-9a0cb740d8ac": {
+    "region": [
+     547,
+     548,
+     549,
+     550
+    ],
+    "strict": [
+     549
+    ]
+   }
+  }
+ },
+ {
+  "finding": "ARROW-109",
+  "sev": "High",
+  "title": "CSV CSVBufferIterator prematurely terminates stream (silent data truncation) when stripping straddling '\\n' or UTF-8 BOM empties a buffer",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-110",
+  "sev": "High",
+  "title": "CSV BlockParser allows 4 GiB blocks while ParsedValueDesc::offset is 31-bit (2 GiB - 1), causing offset wraparound and OOB reads",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-111",
+  "sev": "High",
+  "title": "Signed int64_t overflow in choose bypasses bounds check for index == INT64_MAX (OOB read batch.values[INT64_MIN])",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-112",
+  "sev": "High",
+  "title": "Unsigned size_t underflow in GetZone (strptime) causes OOB read / segfault on empty format string \"\"",
+  "bugs": {
+   "arrow-48d0b45c48f0": {
+    "region": [
+     1220,
+     1221,
+     1222,
+     1223,
+     1224,
+     1225,
+     1226
+    ],
+    "strict": [
+     1223
+    ]
+   }
+  }
+ },
+ {
+  "finding": "ARROW-113",
+  "sev": "High",
+  "title": "Null pointer dereference and signed int32_t offset overflow when casting sliced FixedSizeBinary to Binary/String",
+  "bugs": {
+   "arrow-c1cc8abccb1b": {
+    "region": [
+     338,
+     339,
+     340,
+     341,
+     342,
+     343,
+     344,
+     345,
+     346,
+     347
+    ],
+    "strict": [
+     341,
+     342,
+     343,
+     344
+    ]
+   }
+  }
+ },
+ {
+  "finding": "ARROW-114",
+  "sev": "High",
+  "title": "CopyDataUtils<BooleanType>::CopyData(ArraySpan, ...) ignores in.offset, producing wrong results on sliced BooleanArrays",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-115",
+  "sev": "High",
+  "title": "Out-of-bounds read / segfault in indices_nonzero on a 0-chunk ChunkedArray",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-116",
+  "sev": "High",
+  "title": "list_element OOB read on empty index array and narrowing truncation in index bounds check",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-117",
+  "sev": "High",
+  "title": "Infinite loop and unbounded OOM in replace_substring when pattern is empty \"\"",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-118",
+  "sev": "High",
+  "title": "min_element_wise / max_element_wise on FixedSizeBinary ignores array.offset on sliced arrays",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-119",
+  "sev": "High",
+  "title": "round with RoundMode::HALF_TO_ODD on negative decimals rounds in the wrong direction (Sign() is always truthy)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-120",
+  "sev": "High",
+  "title": "Temporal rounding (floor/ceil/round_temporal): division by zero (multiple == 0), local-vs-UTC mismatch, and ignored ceil_is_strictly_greater",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-121",
+  "sev": "High",
+  "title": "Temporal arithmetic kernels execute error-producing ops on null slots and silently truncate 64-bit Duration to 32-bit for Time32",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-122",
+  "sev": "High",
+  "title": "Missing 32-bit offset overflow checks in take (ListType), utf8_normalize, and replace_substring",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-123",
+  "sev": "High",
+  "title": "Missing kernel/type/variant validation crashes in IfElseFunction, FilterRecordBatch/FilterMetaFunction, is_in/index_in, select_k_unstable, and CastMetaFunction",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-124",
+  "sev": "High",
+  "title": "KeyCompare::NullUpdateColumnToRow on AVX2 ignores are_cols_in_encoding_order, checking wrong column's null bit in GrouperFastImpl",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-125",
+  "sev": "High",
+  "title": "VarStdState::Consume overwrites state instead of accumulating across batches (silent data corruption in ScalarAggregateNode)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-126",
+  "sev": "High",
+  "title": "ScalarAggregator::Consume overwrite, Kleene logic, and Cancelled-error bugs in CountDistinctImpl, BooleanAnyImpl, BooleanAllImpl, and IndexImpl",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-127",
+  "sev": "High",
+  "title": "GroupedReducingAggregator::Merge and GroupedTDigestImpl::Merge read this->no_nulls_ instead of other->no_nulls_",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-128",
+  "sev": "High",
+  "title": "GroupedBooleanAggregator::Consume omits input.offset when indexing values bitmap on sliced BooleanArrays",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-129",
+  "sev": "High",
+  "title": "GroupedDistinctImpl::Finalize segfaults on Type::NA and GroupedCountDistinctImpl::Finalize returns inverted counts on Type::NA",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-130",
+  "sev": "High",
+  "title": "AsofJoinNode::time_value breaks monotonic ordering for negative signed timestamps and integers",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-131",
+  "sev": "High",
+  "title": "AsofJoinNode BuilderAppend<BooleanType> offsets bitmap pointer by source->offset bytes instead of bits (wrong results & heap over-read)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-132",
+  "sev": "High",
+  "title": "AsofJoinNode performs one-sided Rehash() on RHS null by-key, permanently breaking join matching",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-133",
+  "sev": "High",
+  "title": "AsofJoinNode KeyHasher::HashesFor caches raw non-owning const RecordBatch* (ABA stale-cache & heap over-read)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-134",
+  "sev": "High",
+  "title": "HashJoinBasicImpl::ProbeBatch_ResidualFilter omits dict_build_.PostDecode() for right-side dictionary keys",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-135",
+  "sev": "High",
+  "title": "BlockedBloomFilter::FindImp_avx2 sign-extends _mm256_movemask_epi8, forcing 100% false positives on lanes 4-7 when lane 3 matches",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-136",
+  "sev": "High",
+  "title": "Expression::Equals omits arguments.size() check (heap OOB read & wrong equality) and dereferences null impl_",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-137",
+  "sev": "High",
+  "title": "Missing bounds and type checks in Expression::Deserialize, SimplifyIsValidGuarantee, and Expression::ToString (OOB reads/writes)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-138",
+  "sev": "High",
+  "title": "DatasetWriterImpl::CloseLargestFile null pointer dereference when max_open_files is saturated by closing files",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-139",
+  "sev": "High",
+  "title": "DatasetWriterImpl::DoWriteRecordBatch leaks rows_in_flight_throttle permits on open_files_throttle stall, causing permanent deadlock",
+  "bugs": {
+   "arrow-b831ede509b4": {
+    "region": [
+     54,
+     55,
+     56,
+     57,
+     58,
+     59,
+     60,
+     71,
+     72,
+     73,
+     74,
+     75,
+     76,
+     77
+    ],
+    "strict": [
+     57,
+     74
+    ]
+   }
+  }
+ },
+ {
+  "finding": "ARROW-140",
+  "sev": "High",
+  "title": "LocalFileSystem::GetFileInfoGenerator stores dangling reference to io_context_ (use-after-free)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-141",
+  "sev": "High",
+  "title": "ScanNode::ListFragmentTask::AddScanTasks stray early 'return Status::OK();' breaks readahead, signals premature completion, and causes UAF on InMemoryFragment",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-142",
+  "sev": "High",
+  "title": "AssertNoTrailingSlash and HasLeadingSlash perform out-of-bounds reads on empty path strings",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-143",
+  "sev": "High",
+  "title": "RemoveAncestor throws uncaught std::out_of_range / corrupts paths on trailing slashes, and AncestorsFromBasePath calls pop_back() on empty vector",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-144",
+  "sev": "High",
+  "title": "TransformInputStream::Read buffer overflow / OOB read on negative nbytes (and Abort() leaves closed() false)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-145",
+  "sev": "High",
+  "title": "MemoryMappedFile::InitMMap maps past EOF when offset > 0, causing SIGBUS and bypassing Resize() partial-map guard",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-146",
+  "sev": "High",
+  "title": "S3 ObjectInputFile::ReadAt omits nbytes < 0 check, passing huge size_t to PreallocatedStreamBuf",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-147",
+  "sev": "High",
+  "title": "CsvFileScanner / ScanNode fixed batch-count estimation causes null dereference or silent data truncation",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-148",
+  "sev": "High",
+  "title": "S3FileSystem::Impl::WalkAsync silently discards TreeWalker::WalkAsync errors",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-149",
+  "sev": "High",
+  "title": "GcsFileSystem::Impl::CreateDirMarkerRecursive silently swallows CreateDirMarker errors and returns Status::OK()",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-150",
+  "sev": "High",
+  "title": "ParquetFileFragment::TryCountRows returns full-file row count on row-group subsets, reads OOB on empty expressions, and SetMetadata accepts negative row-group indices",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-151",
+  "sev": "High",
+  "title": "FileInterface::CloseAsync and S3 ObjectOutputStream::CloseAsync capture raw this across async continuations (UAF & destructor race)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-152",
+  "sev": "High",
+  "title": "Dead unsigned overflow check in UCX PayloadHeaderFieldSize and unchecked int32_t overflow in HeadersFrame::Make",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-153",
+  "sev": "High",
+  "title": "Permanent deadlocks and unjoined std::thread (std::terminate) in UCX WriteClientStream / ExchangeClientStream",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-154",
+  "sev": "High",
+  "title": "Variable shadowing defeats 0-byte payload workaround in UcpCallDriver::Impl::SendFrameAsync (UCX crash)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-155",
+  "sev": "High",
+  "title": "Uninitialized listening_ atomic causes UB / null dereference in ~UcxServerImpl() on failed Init()",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-156",
+  "sev": "High",
+  "title": "Malformed/unknown protobuf handling defects in gRPC FlightDataDeserialize and ReadBytesZeroCopy",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-157",
+  "sev": "High",
+  "title": "Copy-paste bug in Flight SQL ColumnMetadata: GetIsCaseSensitive/GetIsReadOnly/GetIsSearchable all read kIsAutoIncrement",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-158",
+  "sev": "High",
+  "title": "Null pointer dereference in FlightSqlClient::ExecuteSubstraitUpdate when server sends no PutResult metadata",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-159",
+  "sev": "High",
+  "title": "Wrong variable assigned (key_type = value.type()) breaks all heterogeneously typed Substrait Map literals",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-160",
+  "sev": "High",
+  "title": "Out-of-bounds vector access (declarations[0]) on empty Substrait Plan in MakeSingleDeclarationPlan",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-161",
+  "sev": "High",
+  "title": "Heap OOB read on callptr->arguments[0..1] in FromProto(JoinRel)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-162",
+  "sev": "High",
+  "title": "Unvalidated Decimal precision triggers ARROW_CHECK abort on untrusted Substrait plans",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-163",
+  "sev": "High",
+  "title": "Unreachable() crash / UB on empty or unknown SimpleExtensionDeclaration in Substrait plan",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-164",
+  "sev": "High",
+  "title": "AddExtensionSetToPlan throws uncaught std::out_of_range on non-contiguous anchors, and ExtensionSet::AddUri duplicates/collides URIs",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-165",
+  "sev": "High",
+  "title": "Substrait Plan minimum version check is dead code (uint32_t < 0 && ... is always false)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-166",
+  "sev": "High",
+  "title": "NormalizeArray drops slice offsets for all nested types, misaligns BitmapAnd, and skips nested structs under non-null parent structs",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-167",
+  "sev": "High",
+  "title": "Integer division defeats std::floor in ORC TimestampAppender::VisitValue, writing negative nanoseconds for pre-1970 timestamps",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-168",
+  "sev": "High",
+  "title": "Heap buffer over-read and mid-character UTF-8 truncation in AppendFixedBinaryBatch for ORC CHAR columns",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-169",
+  "sev": "High",
+  "title": "OOB read / segfault in ORCFileWriter::Impl::Write on 0-column Tables",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-170",
+  "sev": "High",
+  "title": "Uncaught liborc C++ exceptions escape ORCFileReader::ReadNext/ReadBatch and ORCFileWriter::Write/Close",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-171",
+  "sev": "High",
+  "title": "Heap buffer overflow (up to 7 bytes) in BitMapAccumulator::IntersectBitMaps for caller-allocated output bitmaps",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-172",
+  "sev": "High",
+  "title": "Unconditional heap OOB read and infinite loop in translate_utf8_utf8_utf8",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-173",
+  "sev": "High",
+  "title": "Heap OOB read and heap overflow on truncated UTF-8 (plus 2*data_len overflow) in gdv_fn_lower_utf8, gdv_fn_upper_utf8, and gdv_fn_initcap_utf8",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-174",
+  "sev": "High",
+  "title": "Heap OOB read and wrong output length in castVARCHAR_utf8_int64 and castVARCHAR_binary_int64 alignment loop",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-175",
+  "sev": "High",
+  "title": "Unbounded heap OOB read in set_error_for_date passing non-NUL-terminated buffer to %s",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-176",
+  "sev": "High",
+  "title": "Out-of-bounds read / segfault in gdv_fn_substring_index when cnt == INT32_MIN",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-177",
+  "sev": "High",
+  "title": "Guaranteed null-pointer dereference in ToDateHolder::Make checking literal_pattern instead of literal_suppress_errors",
+  "bugs": {
+   "arrow-67205dcd9782": {
+    "region": [
+     51,
+     52,
+     53,
+     54,
+     55,
+     56,
+     57
+    ],
+    "strict": [
+     54
+    ]
+   }
+  }
+ },
+ {
+  "finding": "ARROW-178",
+  "sev": "High",
+  "title": "LLVM function prototype type mismatches in AddGlobalMappingForFunc (castVARBINARY float32/float64, dec_to_string, time_with_zone)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-179",
+  "sev": "High",
+  "title": "Out-of-bounds static table reads in round_int32_int32, round_int64_int32, truncate_int64_int32, and decimalops::RoundWithNegativeScale",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-180",
+  "sev": "High",
+  "title": "Negative *out_length crash and null dereference in castVARCHAR_decimal128_int64",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-181",
+  "sev": "High",
+  "title": "Hardware SIGFPE crash on INT_MIN / -1 and INT_MIN % -1 in Gandiva integer divide/div/mod",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-182",
+  "sev": "High",
+  "title": "Missing bounds and null validation in Projector::ValidateArrayDataCapacity and SelectionVector factories",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-183",
+  "sev": "High",
+  "title": "PlasmaClient::Impl::CreateAndSealBatch hashes std::vector<std::string> control structs instead of element bytes (corrupt hashes & heap address leak)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-184",
+  "sev": "High",
+  "title": "Data race on function-local static digest buffer in PlasmaClient::Impl::CreateAndSeal",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-185",
+  "sev": "High",
+  "title": "Double-close, dangling event-loop callback (end() dereference), and partial-send abort in PlasmaStore::SendNotifications / DisconnectClient",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-186",
+  "sev": "High",
+  "title": "External store reload truncates metadata (immediate crash with HashTableStore) and leaks/corrupts entry state on Get failure",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-187",
+  "sev": "High",
+  "title": "Heap buffer underflow on AcceptClient failure (-1) and incomplete event-loop resize in PlasmaStore::ConnectClient",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-188",
+  "sev": "High",
+  "title": "Heap buffer underflow/overflow via missing negative & overflow checks in garrow_mutable_buffer_set_data",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-189",
+  "sev": "High",
+  "title": "Heap buffer over-read, unbounded stack VLAs, and division-by-zero in C GLib array-builder.cpp",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-190",
+  "sev": "High",
+  "title": "C++ type confusion via static_pointer_cast, permanent reference-cycle leak, and broken get_storage for Extension types/arrays in C GLib",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-191",
+  "sev": "High",
+  "title": "Heap use-after-free and double-unref when clearing nullable properties in arrow-dataset-glib",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-192",
+  "sev": "High",
+  "title": "Heap use-after-free in parquet-glib metadata/statistics wrappers (and abstract-type instantiation on INT96)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-193",
+  "sev": "High",
+  "title": "garrow_feather_file_reader_read_indices prepends n_indices copies of column 0",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-194",
+  "sev": "High",
+  "title": "Unconstructed C++ members (UB) and memory leaks (missing finalize) in GArrowCSVReadOptions and GArrowJSONReadOptions",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-195",
+  "sev": "High",
+  "title": "Null-pointer dereference in garrow_s3_initialize(NULL, &error) and abstract-type instantiation in garrow_file_system_new_raw",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-196",
+  "sev": "High",
+  "title": "Broken Utf8NormalizeOptions dispatch, enum GType in g_object_new, fallback null dereference, and refcount bugs in compute.cpp",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-197",
+  "sev": "Medium",
+  "title": "ArrayStreamBatchReader::StatusFromCError missing break after case ENOSYS misreports NotImplemented as IOError",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-198",
+  "sev": "Medium",
+  "title": "ArrayExporter::Export fails to unwrap ExtensionType before HasValidityBitmap check, exporting invalid buffer count for Union/Null extension arrays",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-199",
+  "sev": "Medium",
+  "title": "SchemaImporter::ProcessMap silently discards entries/key/value field names, nullability, and metadata",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-200",
+  "sev": "Medium",
+  "title": "ColumnWriterImpl::BuildDataPageV2 writes num_values as num_rows, writes null_count=0 when stats disabled, and leaks a wasted CopySlice",
+  "bugs": {
+   "arrow-eb9c7276cf24": {
+    "region": [
+     928,
+     929,
+     930,
+     931,
+     932,
+     933,
+     937,
+     938,
+     939,
+     940,
+     941,
+     942,
+     943,
+     944,
+     945,
+     946,
+     947,
+     948
+    ],
+    "strict": [
+     940,
+     945
+    ]
+   }
+  }
+ },
+ {
+  "finding": "ARROW-201",
+  "sev": "Medium",
+  "title": "CudaBufferReader::DoRead accepts negative nbytes, moving position_ backwards and creating negative-sized CudaBuffer",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-202",
+  "sev": "Medium",
+  "title": "GZipCompressor and GZipCodec pass compression_level_ as memLevel to deflateInit2 (ignoring configured compression level)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-203",
+  "sev": "Medium",
+  "title": "Decimal256::FromReal(float) and Decimal256::ToFloat produce NaN / UB for |scale| >= 39",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-204",
+  "sev": "Medium",
+  "title": "BasicDecimal128/256::FitsInPrecision wrongly returns true for minimum two's-complement value (-2^127 / -2^255)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-205",
+  "sev": "Medium",
+  "title": "ParseTimestampISO8601 leaves *out_zone_offset_present unmodified on YYYY-MM-DD strings",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-206",
+  "sev": "Medium",
+  "title": "OptionalBinaryBitBlockCounter::NextOrNotBlock returns wrong popcount when left_bitmap == nullptr",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-207",
+  "sev": "Medium",
+  "title": "CountingSemaphore::Close() fails to notify WaitForWaiters() when num_waiters_ == 0",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-208",
+  "sev": "Medium",
+  "title": "AllComplete calls out.MarkFinished(status) while holding non-recursive state->mutex (self-deadlock risk)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-209",
+  "sev": "Medium",
+  "title": "GetCurrentRSS() on Linux reads first field of /proc/self/statm (VmSize) instead of second field (VmRSS)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-210",
+  "sev": "Medium",
+  "title": "FixedSizeListArray::FromArrays(values, type) divides by zero (SIGFPE) when list_size == 0",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-211",
+  "sev": "Medium",
+  "title": "StructArray::GetFlattenedField and SparseUnionArray::GetFlattenedField abort on union children and corrupt NullType children",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-212",
+  "sev": "Medium",
+  "title": "RecordBatch::FromStructArray and FieldPath::Get ignore StructArray slice offset and length",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-213",
+  "sev": "Medium",
+  "title": "DenseUnionArray::Make and SparseUnionArray::Make produce invalid / OOB union arrays on mismatched or sliced inputs",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-214",
+  "sev": "Medium",
+  "title": "FlattenListArray fails on all-null lists with non-empty spans and segfaults on empty lists with null offsets buffer",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-215",
+  "sev": "Medium",
+  "title": "TypeEqualsVisitor omits FixedSizeListType::list_size() check when fingerprints are empty",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-216",
+  "sev": "Medium",
+  "title": "MakeArrayFromScalar fails with Invalid for length == 0 on valid List, FixedSizeList, and Map scalars",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-217",
+  "sev": "Medium",
+  "title": "Table::CombineChunks fails on single binary chunk >= kBinaryMemoryLimit and CombineChunksToBatch silently drops remaining chunks",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-218",
+  "sev": "Medium",
+  "title": "LoggingMemoryPool::Reallocate silently drops custom alignment parameter",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-219",
+  "sev": "Medium",
+  "title": "DictionaryUnifier::UnifyChunkedArray mutates caller's input ArrayData in place for nested dictionaries",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-220",
+  "sev": "Medium",
+  "title": "SimpleRecordBatch does not override ValidateFull(), causing OOB vector read when column count mismatches schema",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-221",
+  "sev": "Medium",
+  "title": "CSV InferringColumnDecoder data race on converter_, duplicate conversion on every non-first block, and broken error propagation",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-222",
+  "sev": "Medium",
+  "title": "JSON MultiStringStream and CSV Lexer OOB read/crash on empty block with non-empty partial, plus unaligned uint64_t read UB",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-223",
+  "sev": "Medium",
+  "title": "CSV CountRowsAsync ignores skip_rows_after_names and counts skipped invalid rows",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-224",
+  "sev": "Medium",
+  "title": "CSV UnquotedColumnPopulator falsely rejects masked null-slot bytes (leaking them) and NoQuoteInArray calls memchr(nullptr, ..., 0) UB",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-225",
+  "sev": "Medium",
+  "title": "JSON TableReaderImpl::Read leaves background TaskGroup tasks running after early error return (MemoryPool UAF)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-226",
+  "sev": "Medium",
+  "title": "CastList::HandleOffsets passes end offset instead of length to Slice, and AddTypeToTypeCast registers FixedSizeList cast under StructType::type_id",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-227",
+  "sev": "Medium",
+  "title": "BinaryJoinElementWise misuses string_view::data() == nullptr as null sentinel, breaking valid empty strings with null data buffer",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-228",
+  "sev": "Medium",
+  "title": "ShiftTime checks int64_t overflow bounds for 32-bit Time32Type output and triggers signed overflow UB on null slots",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-229",
+  "sev": "Medium",
+  "title": "RowTableImpl::ResizeOptionalVaryingLengthBuffer & EncodeSelected read offsets()[num_rows] on fixed-length tables; AppendEmpty wipes existing rows; AppendSelectionFrom truncates row_id to uint16_t",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-230",
+  "sev": "Medium",
+  "title": "BooleanKeyEncoder::Encode encodes null BooleanScalar as kValidByte (false) instead of kNullByte",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-231",
+  "sev": "Medium",
+  "title": "ScalarAggregateNode::Make dereferences null function->default_options() for functions without default options (e.g., index)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-232",
+  "sev": "Medium",
+  "title": "GroupedTDigestImpl::Resize appends new_num_groups instead of added_groups (quadratic memory leak)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-233",
+  "sev": "Medium",
+  "title": "GroupedMeanImpl::Finish fails with Division by 0 on Decimal types when min_count == 0 and a group has 0 valid values",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-234",
+  "sev": "Medium",
+  "title": "TDigestImpl::Consume increments count by 1 instead of batch.length for scalar inputs",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-235",
+  "sev": "Medium",
+  "title": "ColumnArrayFromArrayDataAndMetadata accesses array_data->buffers[1] out-of-bounds for Type::NA",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-236",
+  "sev": "Medium",
+  "title": "AsofJoinNode InputState::Advance always returns false on batch boundaries (have_active_batch &= !queue_.TryPop())",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-237",
+  "sev": "Medium",
+  "title": "HashJoinSchema::CollectFilterColumns searches right_seen_paths with uncorrected *path, duplicating right-side filter columns",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-238",
+  "sev": "Medium",
+  "title": "Data races on empty partitions in SwissTableForJoinBuild::PrtnMerge / CopyVaryingLength, unsynchronized HashJoinBasicImpl::cancelled_, and wrong DCHECK in HashJoinNode::ErrorReceived",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-239",
+  "sev": "Medium",
+  "title": "GroupedVarStdImpl::ConsumeImpl passes full array.length instead of chunk length in no-null int8/16/32 chunking loop (OOB read)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-240",
+  "sev": "Medium",
+  "title": "Signed 32-bit integer overflow in SwissTable::grow_double hash buffer size calculation",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-241",
+  "sev": "Medium",
+  "title": "BufferedInputStream::Impl::Peek fails to invalidate cached raw_pos_, corrupting subsequent Tell() results (and Peek/DoPeek omit nbytes < 0 check)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-242",
+  "sev": "Medium",
+  "title": "S3 ObjectOutputStream::UploadPart permanently deadlocks Flush()/Close() if SubmitIO fails",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-243",
+  "sev": "Medium",
+  "title": "KeyValuePartitioningFactory::DoInspect indexes options_.schema by discovery position rather than field name for HivePartitioningFactory",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-244",
+  "sev": "Medium",
+  "title": "FileSystemDataset::ReplaceSchema silently drops partitioning_",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-245",
+  "sev": "Medium",
+  "title": "ReadRangeCache::LazyImpl::Read holds entry_mutex across blocking I/O (fut.result()), serializing reads and risking deadlock",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-246",
+  "sev": "Medium",
+  "title": "HDFS shim data race on lazy symbol resolution, silent OK on missing symbols, and spurious EOF when buffer_size == 0",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-247",
+  "sev": "Medium",
+  "title": "Null pointer dereference in ToProto(const Result&, pb::Result*) when result.body is null",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-248",
+  "sev": "Medium",
+  "title": "Null dereference in ~ServerSignalHandler() and dangling running_instance_ on error in FlightServerBase::Serve()",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-249",
+  "sev": "Medium",
+  "title": "FilterRelationConverter always fails when filter_expression is already bound",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-250",
+  "sev": "Medium",
+  "title": "ToProto(case_when) mishandles case_when without explicit else branch (emits null else_ or reads OOB)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-251",
+  "sev": "Medium",
+  "title": "Truncation through int8_t in ORCFileReader::GetWriterId/GetWriterVersion corrupts WriterId::kUnknown and WriterVersion::kMax",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-252",
+  "sev": "Medium",
+  "title": "decimalops::RoundWithNegativeScale always truncates instead of rounding (swapped scale args to ComputeRoundingDelta)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-253",
+  "sev": "Medium",
+  "title": "Wrong leap year check in IsLastDayOfMonth and is_last_day_of_month (TmYear() off by 1900)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-254",
+  "sev": "Medium",
+  "title": "Corrupted millisecond formatting (castVARCHAR_timestamp_int64) and forward truncation (date_trunc_*) on pre-1970 timestamps",
+  "bugs": {
+   "arrow-479fccb220cc": {
+    "region": [
+     445,
+     446,
+     447,
+     448,
+     449
+    ],
+    "strict": [
+     445,
+     446,
+     447,
+     448
+    ]
+   },
+   "arrow-be576c6bbb37": {
+    "region": [
+     927,
+     928,
+     929,
+     930
+    ],
+    "strict": [
+     927
+    ]
+   }
+  }
+ },
+ {
+  "finding": "ARROW-255",
+  "sev": "Medium",
+  "title": "NULL input validity ignored in elt, soundex, and empty-length NULLs in from_hex",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-256",
+  "sev": "Medium",
+  "title": "LikeHolder::TryOptimize deletes literal backslashes via std::remove, corrupting SQL LIKE patterns",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-257",
+  "sev": "Medium",
+  "title": "Silent overflow bypasses in castINT/BIGINT_varbinary, decimalops::FromInt64 (std::abs(INT64_MIN) UB), and decimalops::FromDouble",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-258",
+  "sev": "Medium",
+  "title": "Wrong results in Gandiva pmod for negative divisors and precision loss for int64 > 2^53",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-259",
+  "sev": "Medium",
+  "title": "Signed overflow in left/right(INT32_MIN), unsigned GANDIVA_CACHE_SIZE check in cache.cc, and UB in LruCache(0)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-260",
+  "sev": "Medium",
+  "title": "ExprValidator::Visit(InExpressionNode) skips validating child eval_expr() (null NativeFunction* crash in ExprDecomposer)",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-261",
+  "sev": "Medium",
+  "title": "/dev/shm memory clamping has no effect (SetFootprintLimit called beforehand) and unchecked open/fstatvfs reads uninitialized stack memory",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-262",
+  "sev": "Medium",
+  "title": "PlasmaStore::AbortObject leaves aborted objects in QuotaAwarePolicy, causing server abort on recreate and quota leak",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-263",
+  "sev": "Medium",
+  "title": "IoCtxInterface::read treats every successful non-empty RADOS read as an error and passes negative -errno to StatusFromErrno",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-264",
+  "sev": "Low",
+  "title": "IdentityImpliesEqualityNansNotEqual ignores DictionaryType and ExtensionType, breaking NaN self-comparison",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-265",
+  "sev": "Low",
+  "title": "ArrayRangeEquals passes end indices instead of lengths to PrintDiff",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-266",
+  "sev": "Low",
+  "title": "ListImpl diff formatter omits null check for child elements and truncates LargeList loop index to int32_t",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-267",
+  "sev": "Low",
+  "title": "BufferBuilder::Reset() leaves data_ as a dangling pointer to freed buffer memory",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-268",
+  "sev": "Low",
+  "title": "BufferOutputStream::Finish() null-pointer dereference on repeated call",
+  "bugs": {}
+ },
+ {
+  "finding": "ARROW-269",
+  "sev": "Low",
+  "title": "FileSystemFromUriOrPath silently ignores caller's io_context for local absolute paths",
+  "bugs": {}
+ }
+]

@@ -1,0 +1,5331 @@
+[
+  {
+    "id": "BUG-001",
+    "sev": "Critical",
+    "title": "SparseMat::convertTo(Mat&) reads value bytes as idx[1] on 1D SparseMat, causing wild-pointer OOB write",
+    "files": [
+      [
+        "modules/core/src/matrix_sparse.cpp",
+        333,
+        355
+      ]
+    ]
+  },
+  {
+    "id": "BUG-002",
+    "sev": "Critical",
+    "title": "cv::norm multi-channel CV_16F heap buffer over-read and NORM_INF float-to-int bit reinterpretation",
+    "files": [
+      [
+        "modules/core/src/norm.cpp",
+        663,
+        708
+      ],
+      [
+        "modules/core/src/norm.cpp",
+        1138,
+        1186
+      ]
+    ]
+  },
+  {
+    "id": "BUG-003",
+    "sev": "Critical",
+    "title": "cv::inRange reads past 1-element scalar buffer on multi-channel src",
+    "files": [
+      [
+        "modules/core/src/arithm.cpp",
+        1785,
+        1792
+      ],
+      [
+        "modules/core/src/arithm.cpp",
+        1670,
+        1677
+      ]
+    ]
+  },
+  {
+    "id": "BUG-004",
+    "sev": "Critical",
+    "title": "cv::scaleAdd dispatches CV_16F to scaleAdd_64f, causing 4x heap buffer overflow write",
+    "files": [
+      [
+        "modules/core/src/matmul.cpp",
+        2405,
+        2420
+      ]
+    ]
+  },
+  {
+    "id": "BUG-005",
+    "sev": "Critical",
+    "title": "cv::polarToCart on CV_64F with empty magnitude memcpys float bits into double* output",
+    "files": [
+      [
+        "modules/core/src/mathfuncs.cpp",
+        630,
+        647
+      ]
+    ]
+  },
+  {
+    "id": "BUG-006",
+    "sev": "Critical",
+    "title": "In-place cv::gemm on CV_64FC2 overwrites output D with uninitialized heap memory",
+    "files": [
+      [
+        "modules/core/src/matmul.cpp",
+        1599,
+        1631
+      ]
+    ]
+  },
+  {
+    "id": "BUG-007",
+    "sev": "Critical",
+    "title": "cv::checkRange 4x heap buffer over-read on CV_16F and wrong integer lower-bound rounding",
+    "files": [
+      [
+        "modules/core/src/mathfuncs.cpp",
+        1481,
+        1528
+      ]
+    ]
+  },
+  {
+    "id": "BUG-008",
+    "sev": "Critical",
+    "title": "cv::findNonZero 4x heap over-read and misaligned double* load on CV_16F",
+    "files": [
+      [
+        "modules/core/src/count_non_zero.cpp",
+        332,
+        372
+      ]
+    ]
+  },
+  {
+    "id": "BUG-009",
+    "sev": "Critical",
+    "title": "NULL function pointer call (SIGSEGV) on CV_16F across arithm.cpp and channels.cpp dispatch tables",
+    "files": [
+      [
+        "modules/core/src/arithm.cpp",
+        199,
+        330
+      ],
+      [
+        "modules/core/src/arithm.cpp",
+        1237,
+        1312
+      ],
+      [
+        "modules/core/src/arithm.cpp",
+        1764,
+        1826
+      ]
+    ]
+  },
+  {
+    "id": "BUG-010",
+    "sev": "Critical",
+    "title": "cv::invert(..., DECOMP_SVD) reads w[n-1] out of bounds into vt on wide (m < n) matrices",
+    "files": [
+      [
+        "modules/core/src/lapack.cpp",
+        860,
+        874
+      ]
+    ]
+  },
+  {
+    "id": "BUG-011",
+    "sev": "Critical",
+    "title": "cv::pow on CV_32S with INT_MIN and negative exponent causes UB and stack OOB read tab[INT_MIN + 2]",
+    "files": [
+      [
+        "modules/core/src/mathfuncs.cpp",
+        1033,
+        1042
+      ]
+    ]
+  },
+  {
+    "id": "BUG-012",
+    "sev": "Critical",
+    "title": "cv::solve omits _src2.rows == src.rows validation (heap OOB read) and dereferences NULL on 0x0 matrices",
+    "files": [
+      [
+        "modules/core/src/lapack.cpp",
+        1086,
+        1226
+      ],
+      [
+        "modules/core/src/lapack.cpp",
+        1352,
+        1363
+      ]
+    ]
+  },
+  {
+    "id": "BUG-013",
+    "sev": "Critical",
+    "title": "JSONParser::parseValue heap buffer overflow on string literals exceeding 5,120 bytes",
+    "files": [
+      [
+        "modules/core/src/persistence_json.cpp",
+        559,
+        641
+      ],
+      [
+        "modules/core/src/persistence_json.cpp",
+        847,
+        847
+      ]
+    ]
+  },
+  {
+    "id": "BUG-014",
+    "sev": "Critical",
+    "title": "Stack buffer overflow in fs::calcElemSize and fs::decodeSimpleFormat (and SIGFPE on empty dt)",
+    "files": [
+      [
+        "modules/core/src/persistence.cpp",
+        178,
+        178
+      ],
+      [
+        "modules/core/src/persistence.cpp",
+        224,
+        241
+      ],
+      [
+        "modules/core/src/persistence.cpp",
+        268,
+        277
+      ]
+    ]
+  },
+  {
+    "id": "BUG-015",
+    "sev": "Critical",
+    "title": "Stack buffer overflow (sizes[CV_MAX_DIM]) and negative-index stack write (idx[k]) in Mat/SparseMat persistence readers",
+    "files": [
+      [
+        "modules/core/src/persistence_types.cpp",
+        140,
+        147
+      ],
+      [
+        "modules/core/src/persistence_types.cpp",
+        173,
+        180
+      ],
+      [
+        "modules/core/src/persistence_types.cpp",
+        199,
+        213
+      ]
+    ]
+  },
+  {
+    "id": "BUG-016",
+    "sev": "Critical",
+    "title": "Heap buffer overflow and double-semicolon corruption in XMLParser::parseValue on unknown XML entities",
+    "files": [
+      [
+        "modules/core/src/persistence_xml.cpp",
+        600,
+        631
+      ],
+      [
+        "modules/core/src/persistence_xml.cpp",
+        814,
+        814
+      ]
+    ]
+  },
+  {
+    "id": "BUG-017",
+    "sev": "Critical",
+    "title": "Heap buffer overflow and wrong slice pitch (0) in 3D non-continuous OpenCLAllocator::download/upload/copy",
+    "files": [
+      [
+        "modules/core/src/ocl.cpp",
+        5173,
+        5191
+      ],
+      [
+        "modules/core/src/ocl.cpp",
+        5306,
+        5315
+      ],
+      [
+        "modules/core/src/ocl.cpp",
+        5447,
+        5456
+      ],
+      [
+        "modules/core/src/ocl.cpp",
+        5633,
+        5639
+      ]
+    ]
+  },
+  {
+    "id": "BUG-018",
+    "sev": "High",
+    "title": "MatConstIterator::seek breaks N-D non-continuous iteration (premature stop) and underflows 2D negative offsets",
+    "files": [
+      [
+        "modules/core/src/matrix_iterator.cpp",
+        247,
+        292
+      ]
+    ]
+  },
+  {
+    "id": "BUG-019",
+    "sev": "High",
+    "title": "cv::perspectiveTransform multiplies by homogeneous w instead of dividing by w in generic (scn, dcn) path",
+    "files": [
+      [
+        "modules/core/src/matmul.cpp",
+        2222,
+        2246
+      ]
+    ]
+  },
+  {
+    "id": "BUG-020",
+    "sev": "High",
+    "title": "MatExpr wrong results: (s/A).mul(B) divides by s, abs((A-B)+s) drops s, GEMM size() ignores transposes",
+    "files": [
+      [
+        "modules/core/src/matrix_expressions.cpp",
+        391,
+        402
+      ],
+      [
+        "modules/core/src/matrix_expressions.cpp",
+        569,
+        579
+      ],
+      [
+        "modules/core/src/matrix_expressions.cpp",
+        1171,
+        1172
+      ],
+      [
+        "modules/core/src/matrix_expressions.cpp",
+        1315,
+        1325
+      ]
+    ]
+  },
+  {
+    "id": "BUG-021",
+    "sev": "High",
+    "title": "cv::kmeans silently drops updated labels for 1xN KMEANS_USE_INITIAL_LABELS and underflows index -1 on NaN/Inf",
+    "files": [
+      [
+        "modules/core/src/kmeans.cpp",
+        114,
+        157
+      ],
+      [
+        "modules/core/src/kmeans.cpp",
+        245,
+        259
+      ],
+      [
+        "modules/core/src/kmeans.cpp",
+        370,
+        396
+      ],
+      [
+        "modules/core/src/kmeans.cpp",
+        454,
+        454
+      ]
+    ]
+  },
+  {
+    "id": "BUG-022",
+    "sev": "High",
+    "title": "_OutputArray::create shifts by CV_MAT_TYPE instead of CV_MAT_DEPTH for fixedDepthMask, breaking cv::solvePoly",
+    "files": [
+      [
+        "modules/core/src/matrix_wrap.cpp",
+        1306,
+        1306
+      ],
+      [
+        "modules/core/src/matrix_wrap.cpp",
+        1340,
+        1340
+      ],
+      [
+        "modules/core/src/matrix_wrap.cpp",
+        1359,
+        1359
+      ],
+      [
+        "modules/core/src/matrix_wrap.cpp",
+        1368,
+        1368
+      ],
+      [
+        "modules/core/src/matrix_wrap.cpp",
+        1395,
+        1395
+      ],
+      [
+        "modules/core/src/matrix_wrap.cpp",
+        1524,
+        1524
+      ],
+      [
+        "modules/core/src/matrix_wrap.cpp",
+        1582,
+        1582
+      ],
+      [
+        "modules/core/src/matrix_wrap.cpp",
+        1642,
+        1642
+      ]
+    ]
+  },
+  {
+    "id": "BUG-023",
+    "sev": "High",
+    "title": "PCA with retainedVariance drops required component (off-by-one) and crashes on 1-row datasets",
+    "files": [
+      [
+        "modules/core/src/pca.cpp",
+        171,
+        199
+      ],
+      [
+        "modules/core/src/pca.cpp",
+        279,
+        288
+      ]
+    ]
+  },
+  {
+    "id": "BUG-024",
+    "sev": "High",
+    "title": "In-place cv::pow(m, power, m) checks overwritten output x0[k] instead of saved input x[k]",
+    "files": [
+      [
+        "modules/core/src/mathfuncs.cpp",
+        1307,
+        1358
+      ]
+    ]
+  },
+  {
+    "id": "BUG-025",
+    "sev": "High",
+    "title": "Signed integer overflow in RNG::fill / cv::randu collapses CV_32S [INT_MIN, INT_MAX] to constant INT_MIN",
+    "files": [
+      [
+        "modules/core/src/rand.cpp",
+        408,
+        412
+      ],
+      [
+        "modules/core/src/rand.cpp",
+        465,
+        476
+      ]
+    ]
+  },
+  {
+    "id": "BUG-026",
+    "sev": "High",
+    "title": "FormattedImpl::reset() omits resetting cn=0 for FMT_MATLAB, causing heap buffer over-read on 2nd pass",
+    "files": [
+      [
+        "modules/core/src/out.cpp",
+        124,
+        158
+      ]
+    ]
+  },
+  {
+    "id": "BUG-027",
+    "sev": "High",
+    "title": "DECOMP_EIG produces NaN/Inf on negative-semidefinite matrices; DECOMP_QR returns true with NaN on singular matrices",
+    "files": [
+      [
+        "modules/core/src/lapack.cpp",
+        681,
+        691
+      ],
+      [
+        "modules/core/src/lapack.cpp",
+        890,
+        894
+      ],
+      [
+        "modules/core/src/matrix_decomp.cpp",
+        217,
+        229
+      ],
+      [
+        "modules/core/src/matrix_decomp.cpp",
+        284,
+        285
+      ]
+    ]
+  },
+  {
+    "id": "BUG-028",
+    "sev": "High",
+    "title": "SVD::compute and SVD::backSubst for Matx declare vt with transposed dimensions Matx<T,n,nm>, crashing on wide Matx",
+    "files": [
+      [
+        "modules/core/include/opencv2/core/operations.hpp",
+        323,
+        328
+      ],
+      [
+        "modules/core/include/opencv2/core/operations.hpp",
+        342,
+        342
+      ]
+    ]
+  },
+  {
+    "id": "BUG-029",
+    "sev": "High",
+    "title": "CommandLineParser heap OOB vector read on malformed keys, uninitialized bool return, and impl memory leak",
+    "files": [
+      [
+        "modules/core/src/command_line_parser.cpp",
+        75,
+        94
+      ],
+      [
+        "modules/core/src/command_line_parser.cpp",
+        203,
+        233
+      ]
+    ]
+  },
+  {
+    "id": "BUG-030",
+    "sev": "High",
+    "title": "softfloat/softdouble pow overflows INT_MIN (returns 1/x) and log(+Inf)/cbrt(subnormal) return wrong values",
+    "files": [
+      [
+        "modules/core/src/softfloat.cpp",
+        3865,
+        3960
+      ],
+      [
+        "modules/core/src/softfloat.cpp",
+        3980,
+        3980
+      ],
+      [
+        "modules/core/src/softfloat.cpp",
+        4007,
+        4007
+      ],
+      [
+        "modules/core/src/softfloat.cpp",
+        4055,
+        4066
+      ]
+    ]
+  },
+  {
+    "id": "BUG-031",
+    "sev": "High",
+    "title": "1-byte heap buffer overflow in FileStorage::getDefaultObjectName on filenames >= 1032 chars starting with non-alpha",
+    "files": [
+      [
+        "modules/core/src/persistence.cpp",
+        1848,
+        1874
+      ]
+    ]
+  },
+  {
+    "id": "BUG-032",
+    "sev": "High",
+    "title": "Lost wakeup, data race on cv::Ptr<ParallelJob>, and UAF on threads vector in pthreads ThreadPool",
+    "files": [
+      [
+        "modules/core/src/parallel_impl.cpp",
+        243,
+        254
+      ],
+      [
+        "modules/core/src/parallel_impl.cpp",
+        373,
+        398
+      ],
+      [
+        "modules/core/src/parallel_impl.cpp",
+        541,
+        596
+      ],
+      [
+        "modules/core/src/parallel_impl.cpp",
+        689,
+        697
+      ]
+    ]
+  },
+  {
+    "id": "BUG-033",
+    "sev": "High",
+    "title": "YAMLParser heap underflow read in parseKey and inverted hex/octal radix + skipped char in parseValue",
+    "files": [
+      [
+        "modules/core/src/persistence_yml.cpp",
+        395,
+        421
+      ],
+      [
+        "modules/core/src/persistence_yml.cpp",
+        598,
+        612
+      ]
+    ]
+  },
+  {
+    "id": "BUG-034",
+    "sev": "High",
+    "title": "Infinite loop in FileStorage::Impl::parseBase64 and FD leaks + uninitialized stack read in FileStorage::Impl::open",
+    "files": [
+      [
+        "modules/core/src/persistence.cpp",
+        395,
+        426
+      ],
+      [
+        "modules/core/src/persistence.cpp",
+        513,
+        524
+      ],
+      [
+        "modules/core/src/persistence.cpp",
+        715,
+        730
+      ],
+      [
+        "modules/core/src/persistence.cpp",
+        1633,
+        1702
+      ]
+    ]
+  },
+  {
+    "id": "BUG-035",
+    "sev": "High",
+    "title": "TLS memory leak on POSIX and concurrent UAF/data race in TlsStorage",
+    "files": [
+      [
+        "modules/core/src/system.cpp",
+        1300,
+        1303
+      ],
+      [
+        "modules/core/src/system.cpp",
+        1361,
+        1375
+      ],
+      [
+        "modules/core/src/system.cpp",
+        1423,
+        1478
+      ]
+    ]
+  },
+  {
+    "id": "BUG-036",
+    "sev": "High",
+    "title": "Broken double-checked locking in TraceManager / CV_SINGLETON_LAZY_INIT_ and ocl::Context::getDefault race/lockout",
+    "files": [
+      [
+        "modules/core/src/trace.cpp",
+        823,
+        899
+      ],
+      [
+        "modules/core/src/precomp.hpp",
+        368,
+        376
+      ],
+      [
+        "modules/core/src/ocl.cpp",
+        2090,
+        2141
+      ],
+      [
+        "modules/core/src/ocl.cpp",
+        2309,
+        2401
+      ]
+    ]
+  },
+  {
+    "id": "BUG-037",
+    "sev": "High",
+    "title": "NULL pointer dereferences in IPP N-D extractChannel/insertChannel/split/merge and ipp_Mat_setTo_Mat type confusion",
+    "files": [
+      [
+        "modules/core/src/channels.cpp",
+        361,
+        410
+      ],
+      [
+        "modules/core/src/split.cpp",
+        263,
+        280
+      ],
+      [
+        "modules/core/src/merge.cpp",
+        255,
+        272
+      ],
+      [
+        "modules/core/src/copy.cpp",
+        475,
+        483
+      ]
+    ]
+  },
+  {
+    "id": "BUG-038",
+    "sev": "High",
+    "title": "Uninitialized SIMD v_zero register in integer cv::divide/reciprocal on ARM NEON and C++ fallback",
+    "files": [
+      [
+        "modules/core/src/arithm.simd.hpp",
+        1577,
+        1581
+      ],
+      [
+        "modules/core/src/arithm.simd.hpp",
+        1827,
+        1831
+      ]
+    ]
+  },
+  {
+    "id": "BUG-039",
+    "sev": "High",
+    "title": "va_intel.cpp heap buffer overflow on odd-dimension images and swapped YV12 U/V pitches",
+    "files": [
+      [
+        "modules/core/src/va_intel.cpp",
+        211,
+        255
+      ],
+      [
+        "modules/core/src/va_intel.cpp",
+        346,
+        482
+      ]
+    ]
+  },
+  {
+    "id": "BUG-040",
+    "sev": "Medium",
+    "title": "cv::getHardwareFeatureName(-1) out-of-bounds global array read before g_hwFeatureNames",
+    "files": [
+      [
+        "modules/core/src/system.cpp",
+        308,
+        311
+      ],
+      [
+        "modules/core/src/system.cpp",
+        654,
+        658
+      ]
+    ]
+  },
+  {
+    "id": "BUG-041",
+    "sev": "Medium",
+    "title": "JSONParser::parseKey stale pointer after skipSpaces, ocl::Kernel::set(Image2D) NULL deref, and GL/DX ACCESS_READ bug",
+    "files": [
+      [
+        "modules/core/src/persistence_json.cpp",
+        393,
+        423
+      ],
+      [
+        "modules/core/src/ocl.cpp",
+        2979,
+        2984
+      ],
+      [
+        "modules/core/src/ocl.cpp",
+        5007,
+        5027
+      ],
+      [
+        "modules/core/src/directx.cpp",
+        896,
+        896
+      ]
+    ]
+  },
+  {
+    "id": "BUG-042",
+    "sev": "Critical",
+    "title": "Signed 16-bit step overflow in RemapVec_8u (sstep == 0x8000) causes heap buffer underflow read / SEGV",
+    "files": [
+      [
+        "modules/imgproc/src/imgwarp.cpp",
+        446,
+        455
+      ],
+      [
+        "modules/imgproc/src/imgwarp.cpp",
+        502,
+        505
+      ]
+    ]
+  },
+  {
+    "id": "BUG-043",
+    "sev": "Critical",
+    "title": "Signed 32-bit overflow in Circle() passes huge negative length to memset() in ICV_HLINE_X",
+    "files": [
+      [
+        "modules/imgproc/src/drawing.cpp",
+        1071,
+        1077
+      ],
+      [
+        "modules/imgproc/src/drawing.cpp",
+        1502,
+        1559
+      ]
+    ]
+  },
+  {
+    "id": "BUG-044",
+    "sev": "Critical",
+    "title": "Null-pointer / underflow dereference (SEGV) in cv::fillPoly -> CollectPolyEdges on empty contour (npts[i] == 0)",
+    "files": [
+      [
+        "modules/imgproc/src/drawing.cpp",
+        1270,
+        1277
+      ],
+      [
+        "modules/imgproc/src/drawing.cpp",
+        2017,
+        2021
+      ]
+    ]
+  },
+  {
+    "id": "BUG-045",
+    "sev": "Critical",
+    "title": "Unchecked accumulator index in cv::HoughLinesPointSet causes arbitrary heap OOB write / SEGV",
+    "files": [
+      [
+        "modules/imgproc/src/hough.cpp",
+        955,
+        977
+      ]
+    ]
+  },
+  {
+    "id": "BUG-046",
+    "sev": "Critical",
+    "title": "Stack use-after-scope and dangling stack pointer returned by cvHoughCircles with CvMat storage",
+    "files": [
+      [
+        "modules/imgproc/src/hough.cpp",
+        1918,
+        1938
+      ]
+    ]
+  },
+  {
+    "id": "BUG-047",
+    "sev": "Critical",
+    "title": "Unsigned underflow in cvGetQuadrangleSubPix on width <= 2 or height <= 2 bypasses bounds checks (heap OOB read)",
+    "files": [
+      [
+        "modules/imgproc/src/samplers.cpp",
+        289,
+        327
+      ]
+    ]
+  },
+  {
+    "id": "BUG-048",
+    "sev": "Critical",
+    "title": "Heap buffer overflow write in cv::filter2D DFT path (dftFilter2D) when filtering ROI submatrices",
+    "files": [
+      [
+        "modules/imgproc/src/filter.cpp",
+        3614,
+        3652
+      ],
+      [
+        "modules/imgproc/src/filter.cpp",
+        3775,
+        3863
+      ]
+    ]
+  },
+  {
+    "id": "BUG-049",
+    "sev": "Critical",
+    "title": "Heap buffer over-read / SEGV in cv::bilateralFilter (CV_32F) with BORDER_CONSTANT or non-isolated ROI",
+    "files": [
+      [
+        "modules/imgproc/src/bilateral_filter.cpp",
+        1189,
+        1212
+      ],
+      [
+        "modules/imgproc/src/bilateral_filter.cpp",
+        745,
+        748
+      ],
+      [
+        "modules/imgproc/src/bilateral_filter.cpp",
+        804,
+        809
+      ]
+    ]
+  },
+  {
+    "id": "BUG-050",
+    "sev": "Critical",
+    "title": "Heap buffer overflow write in LabelingGranaParallel (cv::connectedComponents CCL_GRANA) on odd-height images",
+    "files": [
+      [
+        "modules/imgproc/src/connectedcomponents.cpp",
+        841,
+        850
+      ],
+      [
+        "modules/imgproc/src/connectedcomponents.cpp",
+        1879,
+        1879
+      ],
+      [
+        "modules/imgproc/src/connectedcomponents.cpp",
+        2545,
+        2545
+      ],
+      [
+        "modules/imgproc/src/connectedcomponents.cpp",
+        2563,
+        2565
+      ]
+    ]
+  },
+  {
+    "id": "BUG-051",
+    "sev": "Critical",
+    "title": "Heap buffer overflow read & write in cv::cvtColor YUV422-to-BGR/BGRA conversions for odd widths",
+    "files": [
+      [
+        "modules/imgproc/src/color_yuv.cpp",
+        2159,
+        2177
+      ],
+      [
+        "modules/imgproc/src/color_yuv.cpp",
+        2209,
+        2229
+      ],
+      [
+        "modules/imgproc/src/color_yuv.cpp",
+        2631,
+        2637
+      ]
+    ]
+  },
+  {
+    "id": "BUG-052",
+    "sev": "Critical",
+    "title": "Heap buffer overflow write in cv::EMD / cvCalcEMD2 lower_bound path",
+    "files": [
+      [
+        "modules/imgproc/src/emd.cpp",
+        354,
+        376
+      ],
+      [
+        "modules/imgproc/src/emd.cpp",
+        438,
+        456
+      ]
+    ]
+  },
+  {
+    "id": "BUG-053",
+    "sev": "Critical",
+    "title": "Stack buffer overflow in cv::calcHist and cv::calcBackProject when dims > CV_MAX_DIM (32)",
+    "files": [
+      [
+        "modules/imgproc/src/histogram.cpp",
+        1198,
+        1209
+      ],
+      [
+        "modules/imgproc/src/histogram.cpp",
+        1900,
+        1912
+      ]
+    ]
+  },
+  {
+    "id": "BUG-054",
+    "sev": "Critical",
+    "title": "if instead of for in hlineResizeCn<uint8_t, ufixedpoint16, 2, true, 4> causes OOB/uninitialized offset deref on AVX2/AVX-512/scalar",
+    "files": [
+      [
+        "modules/imgproc/src/resize.cpp",
+        617,
+        624
+      ],
+      [
+        "modules/imgproc/src/resize.cpp",
+        663,
+        669
+      ],
+      [
+        "modules/imgproc/src/resize.cpp",
+        809,
+        826
+      ]
+    ]
+  },
+  {
+    "id": "BUG-055",
+    "sev": "Critical",
+    "title": "Heap buffer underflow and overflow reads in AVX2 resizeNNInvokerAVX2 for 2-byte pixels",
+    "files": [
+      [
+        "modules/imgproc/src/resize.avx2.cpp",
+        173,
+        193
+      ],
+      [
+        "modules/imgproc/src/resize.avx2.cpp",
+        207,
+        227
+      ]
+    ]
+  },
+  {
+    "id": "BUG-056",
+    "sev": "Critical",
+    "title": "Concurrent union-find array P[] overwrite and data race in LabelingWuParallel (CCL_WU)",
+    "files": [
+      [
+        "modules/imgproc/src/connectedcomponents.cpp",
+        291,
+        291
+      ],
+      [
+        "modules/imgproc/src/connectedcomponents.cpp",
+        367,
+        367
+      ],
+      [
+        "modules/imgproc/src/connectedcomponents.cpp",
+        617,
+        619
+      ]
+    ]
+  },
+  {
+    "id": "BUG-057",
+    "sev": "High",
+    "title": "Inverted NNDeltaTab_i table shifts nearest-neighbor cv::remap fixed-point coordinates by +1",
+    "files": [
+      [
+        "modules/imgproc/src/imgwarp.cpp",
+        237,
+        238
+      ],
+      [
+        "modules/imgproc/src/imgwarp.cpp",
+        1119,
+        1133
+      ]
+    ]
+  },
+  {
+    "id": "BUG-058",
+    "sev": "High",
+    "title": "cv::warpPolar(..., WARP_INVERSE_MAP) clobbers _dst with copyMakeBorder, breaking cvLinearPolar/cvLogPolar & BORDER_TRANSPARENT",
+    "files": [
+      [
+        "modules/imgproc/src/imgwarp.cpp",
+        3327,
+        3380
+      ],
+      [
+        "modules/imgproc/src/imgwarp.cpp",
+        3397,
+        3420
+      ]
+    ]
+  },
+  {
+    "id": "BUG-059",
+    "sev": "High",
+    "title": "32-bit signed overflow in FillConvexPoly causes UB and integer divide-by-zero (SIGFPE)",
+    "files": [
+      [
+        "modules/imgproc/src/drawing.cpp",
+        1151,
+        1151
+      ],
+      [
+        "modules/imgproc/src/drawing.cpp",
+        1207,
+        1220
+      ]
+    ]
+  },
+  {
+    "id": "BUG-060",
+    "sev": "High",
+    "title": "cv::drawContours crashes on empty contours and performs unchecked OOB access on hierarchy child indices",
+    "files": [
+      [
+        "modules/imgproc/src/drawing.cpp",
+        2452,
+        2467
+      ],
+      [
+        "modules/imgproc/src/drawing.cpp",
+        2506,
+        2546
+      ],
+      [
+        "modules/imgproc/src/drawing.cpp",
+        2606,
+        2606
+      ]
+    ]
+  },
+  {
+    "id": "BUG-061",
+    "sev": "High",
+    "title": "HoughLinesSDiv OOB write when rn == 0 or tn == 0, and returns uninitialized memory for sentinel row",
+    "files": [
+      [
+        "modules/imgproc/src/hough.cpp",
+        279,
+        292
+      ],
+      [
+        "modules/imgproc/src/hough.cpp",
+        331,
+        331
+      ],
+      [
+        "modules/imgproc/src/hough.cpp",
+        438,
+        453
+      ]
+    ]
+  },
+  {
+    "id": "BUG-062",
+    "sev": "High",
+    "title": "Heap OOB read in cvFindNextContour on 1-row images and uninitialized output in cv::findContours with CV_CHAIN_CODE",
+    "files": [
+      [
+        "modules/imgproc/src/contours.cpp",
+        214,
+        214
+      ],
+      [
+        "modules/imgproc/src/contours.cpp",
+        288,
+        288
+      ],
+      [
+        "modules/imgproc/src/contours.cpp",
+        1017,
+        1034
+      ],
+      [
+        "modules/imgproc/src/contours.cpp",
+        1834,
+        1837
+      ]
+    ]
+  },
+  {
+    "id": "BUG-063",
+    "sev": "High",
+    "title": "cv::minEnclosingCircle returns NaN for duplicate or collinear points at radius >= 2048",
+    "files": [
+      [
+        "modules/imgproc/src/shapedescr.cpp",
+        45,
+        45
+      ],
+      [
+        "modules/imgproc/src/shapedescr.cpp",
+        60,
+        119
+      ]
+    ]
+  },
+  {
+    "id": "BUG-064",
+    "sev": "High",
+    "title": "maskBoundingRect (cv::boundingRect) misses non-zero pixels in unaligned row prefixes",
+    "files": [
+      [
+        "modules/imgproc/src/shapedescr.cpp",
+        866,
+        883
+      ]
+    ]
+  },
+  {
+    "id": "BUG-065",
+    "sev": "High",
+    "title": "cv::intersectConvexConvex leaks sentinel (FLT_MAX, FLT_MAX) into output and reads result0[-1] OOB",
+    "files": [
+      [
+        "modules/imgproc/src/geometry.cpp",
+        392,
+        392
+      ],
+      [
+        "modules/imgproc/src/geometry.cpp",
+        424,
+        432
+      ],
+      [
+        "modules/imgproc/src/geometry.cpp",
+        481,
+        481
+      ]
+    ]
+  },
+  {
+    "id": "BUG-066",
+    "sev": "High",
+    "title": "Infinite loop in cv::minEnclosingTriangle (advanceBToRightChain) on small polygons",
+    "files": [
+      [
+        "modules/imgproc/src/min_enclosing_triangle.cpp",
+        97,
+        97
+      ],
+      [
+        "modules/imgproc/src/min_enclosing_triangle.cpp",
+        459,
+        466
+      ],
+      [
+        "modules/imgproc/src/min_enclosing_triangle.cpp",
+        1529,
+        1540
+      ]
+    ]
+  },
+  {
+    "id": "BUG-067",
+    "sev": "High",
+    "title": "cv::cvtColorTwoPlane ignores uvsrc.step and misses type/channel checks, causing heap buffer over-read",
+    "files": [
+      [
+        "modules/imgproc/src/color_yuv.cpp",
+        2689,
+        2706
+      ]
+    ]
+  },
+  {
+    "id": "BUG-068",
+    "sev": "High",
+    "title": "Bayer2RGB_EdgeAware ignores dst.step on ROIs, overwriting pixels outside dstRoi",
+    "files": [
+      [
+        "modules/imgproc/src/demosaicing.cpp",
+        1533,
+        1603
+      ]
+    ]
+  },
+  {
+    "id": "BUG-069",
+    "sev": "High",
+    "title": "Heap buffer over-read in cv::spatialGradient on 1-column images (src.cols == 1)",
+    "files": [
+      [
+        "modules/imgproc/src/spatialgradient.cpp",
+        292,
+        298
+      ]
+    ]
+  },
+  {
+    "id": "BUG-070",
+    "sev": "High",
+    "title": "Infinite loop and OOM crash in cv::floodFill on CV_32F images containing -0.0f filled with +0.0",
+    "files": [
+      [
+        "modules/imgproc/src/floodfill.cpp",
+        193,
+        204
+      ],
+      [
+        "modules/imgproc/src/floodfill.cpp",
+        520,
+        525
+      ]
+    ]
+  },
+  {
+    "id": "BUG-071",
+    "sev": "High",
+    "title": "cv::phaseCorrelate corrupts read-only InputArray inputs in-place on optimal DFT sizes and crashes on Nx1 vectors",
+    "files": [
+      [
+        "modules/imgproc/src/phasecorr.cpp",
+        81,
+        146
+      ],
+      [
+        "modules/imgproc/src/phasecorr.cpp",
+        373,
+        388
+      ],
+      [
+        "modules/imgproc/src/phasecorr.cpp",
+        537,
+        562
+      ]
+    ]
+  },
+  {
+    "id": "BUG-072",
+    "sev": "High",
+    "title": "cv::threshold CV_16S THRESH_TRUNC out-of-range fast path fills 0 instead of SHRT_MIN (-32768)",
+    "files": [
+      [
+        "modules/imgproc/src/thresh.cpp",
+        1441,
+        1455
+      ]
+    ]
+  },
+  {
+    "id": "BUG-073",
+    "sev": "High",
+    "title": "Masked cv::matchTemplate reads img.type() instead of mask.type() and uses mask instead of mask2 in TM_SQDIFF",
+    "files": [
+      [
+        "modules/imgproc/src/templmatch.cpp",
+        773,
+        773
+      ],
+      [
+        "modules/imgproc/src/templmatch.cpp",
+        813,
+        823
+      ]
+    ]
+  },
+  {
+    "id": "BUG-074",
+    "sev": "High",
+    "title": "cv::compareHist(SparseMat, SparseMat, HISTCMP_CHISQR_ALT) drops bins where H1 == 0 && H2 != 0",
+    "files": [
+      [
+        "modules/imgproc/src/histogram.cpp",
+        2162,
+        2175
+      ]
+    ]
+  },
+  {
+    "id": "BUG-075",
+    "sev": "High",
+    "title": "cv::medianBlur 16-bit histogram bucket overflow crashes with CV_Assert(k < 16) for large ksize",
+    "files": [
+      [
+        "modules/imgproc/src/median_blur.cpp",
+        80,
+        80
+      ],
+      [
+        "modules/imgproc/src/median_blur.cpp",
+        200,
+        225
+      ]
+    ]
+  },
+  {
+    "id": "BUG-076",
+    "sev": "High",
+    "title": "cv::Canny SIMD L1 magnitude negates SHRT_MIN gradients; OpenCL Canny divides threshold by 16 twice for aperture 7",
+    "files": [
+      [
+        "modules/imgproc/src/canny.cpp",
+        162,
+        166
+      ],
+      [
+        "modules/imgproc/src/canny.cpp",
+        472,
+        477
+      ],
+      [
+        "modules/imgproc/src/canny.cpp",
+        966,
+        976
+      ]
+    ]
+  },
+  {
+    "id": "BUG-077",
+    "sev": "High",
+    "title": "cv::pyrUp missing * cn multiplier leaves rightmost column uninitialized for odd dstsize.width (plus misaligned int store)",
+    "files": [
+      [
+        "modules/imgproc/src/pyramids.cpp",
+        275,
+        275
+      ],
+      [
+        "modules/imgproc/src/pyramids.cpp",
+        559,
+        582
+      ]
+    ]
+  },
+  {
+    "id": "BUG-078",
+    "sev": "High",
+    "title": "LineSegmentDetectorImpl::rect_nfa copy-paste (tailp->p.x for y), integer slope truncation, and missing log_gamma in nfa()",
+    "files": [
+      [
+        "modules/imgproc/src/lsd.cpp",
+        1024,
+        1033
+      ],
+      [
+        "modules/imgproc/src/lsd.cpp",
+        1043,
+        1043
+      ],
+      [
+        "modules/imgproc/src/lsd.cpp",
+        1074,
+        1076
+      ]
+    ]
+  },
+  {
+    "id": "BUG-079",
+    "sev": "High",
+    "title": "Copy-paste index and zip bugs in AVX-512 resize.cpp paths corrupt resized output",
+    "files": [
+      [
+        "modules/imgproc/src/resize.cpp",
+        351,
+        354
+      ],
+      [
+        "modules/imgproc/src/resize.cpp",
+        2216,
+        2238
+      ]
+    ]
+  },
+  {
+    "id": "BUG-080",
+    "sev": "High",
+    "title": "VNG Bayer demosaicing: 2-row vertical shift, broken < 8 fallback, wrong gradNW/gradSE, and broken dcn == 4",
+    "files": [
+      [
+        "modules/imgproc/src/demosaicing.cpp",
+        971,
+        998
+      ],
+      [
+        "modules/imgproc/src/demosaicing.cpp",
+        1156,
+        1163
+      ],
+      [
+        "modules/imgproc/src/demosaicing.cpp",
+        1398,
+        1398
+      ],
+      [
+        "modules/imgproc/src/demosaicing.cpp",
+        1454,
+        1454
+      ],
+      [
+        "modules/imgproc/src/demosaicing.cpp",
+        1700,
+        1721
+      ]
+    ]
+  },
+  {
+    "id": "BUG-081",
+    "sev": "High",
+    "title": "cv::rotatedRectangleIntersection uninitialized distPt reads when N > 8; HoughCircles phantom (0,0,0) circle; GeneralizedHoughGuil angleEq bug",
+    "files": [
+      [
+        "modules/imgproc/src/intersection.cpp",
+        230,
+        279
+      ],
+      [
+        "modules/imgproc/src/hough.cpp",
+        1356,
+        1370
+      ],
+      [
+        "modules/imgproc/src/generalized_hough.cpp",
+        618,
+        633
+      ]
+    ]
+  },
+  {
+    "id": "BUG-082",
+    "sev": "Medium",
+    "title": "cv::sqrBoxFilter signed 32-bit int overflow for CV_8U kernels with area >= 33026 and crash on BORDER_ISOLATED",
+    "files": [
+      [
+        "modules/imgproc/src/box_filter.cpp",
+        1783,
+        1804
+      ]
+    ]
+  },
+  {
+    "id": "BUG-083",
+    "sev": "Medium",
+    "title": "HSV2BGR SIMD vs scalar mismatch on negative hue (plus unsynchronized static LUT init race in RGB2HSV_b)",
+    "files": [
+      [
+        "modules/imgproc/src/color_hsv.cpp",
+        29,
+        48
+      ],
+      [
+        "modules/imgproc/src/color_hsv.cpp",
+        217,
+        274
+      ]
+    ]
+  },
+  {
+    "id": "BUG-084",
+    "sev": "Medium",
+    "title": "CCStatsOp::finish signed int overflow (INT_MIN - INT_MAX + 1) and NaN centroids when background area == 0",
+    "files": [
+      [
+        "modules/imgproc/src/connectedcomponents.cpp",
+        145,
+        157
+      ]
+    ]
+  },
+  {
+    "id": "BUG-085",
+    "sev": "Medium",
+    "title": "fitLine3D premature IRLS termination, Subdiv2D::findNearest leaves nearestPt uninit, and Integral_SIMD dead AVX-512 block",
+    "files": [
+      [
+        "modules/imgproc/src/linefit.cpp",
+        529,
+        549
+      ],
+      [
+        "modules/imgproc/src/subdivision2d.cpp",
+        663,
+        664
+      ],
+      [
+        "modules/imgproc/src/sumpixels.cpp",
+        110,
+        115
+      ],
+      [
+        "modules/imgproc/src/sumpixels.cpp",
+        177,
+        182
+      ]
+    ]
+  },
+  {
+    "id": "BUG-086",
+    "sev": "Critical",
+    "title": "32-bit integer overflow in TiffDecoder::readData buffer_size leads to stack/heap buffer overflow",
+    "files": [
+      [
+        "modules/imgcodecs/src/grfmt_tiff.cpp",
+        352,
+        376
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_tiff.cpp",
+        391,
+        396
+      ]
+    ]
+  },
+  {
+    "id": "BUG-087",
+    "sev": "Critical",
+    "title": "Heap buffer overflow write and signed int overflow in TiffDecoder::readData_32FC3",
+    "files": [
+      [
+        "modules/imgcodecs/src/grfmt_tiff.cpp",
+        545,
+        574
+      ]
+    ]
+  },
+  {
+    "id": "BUG-088",
+    "sev": "Critical",
+    "title": "Heap buffer over-read and unchecked _TIFFmalloc NULL deref in TiffDecoder::readData_32FC1",
+    "files": [
+      [
+        "modules/imgcodecs/src/grfmt_tiff.cpp",
+        240,
+        245
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_tiff.cpp",
+        302,
+        305
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_tiff.cpp",
+        576,
+        613
+      ]
+    ]
+  },
+  {
+    "id": "BUG-089",
+    "sev": "Critical",
+    "title": "Unbounded heap buffer overflow / infinite loop (DEPTH <= 0) and 1.5x row overflow in PAMDecoder::basic_conversion",
+    "files": [
+      [
+        "modules/imgcodecs/src/grfmt_pam.cpp",
+        170,
+        220
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_pam.cpp",
+        422,
+        428
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_pam.cpp",
+        483,
+        500
+      ]
+    ]
+  },
+  {
+    "id": "BUG-090",
+    "sev": "Critical",
+    "title": "Signed 32-bit integer overflow in Jpeg2KDecoder::readComponent8u/16u causes heap buffer underflow write",
+    "files": [
+      [
+        "modules/imgcodecs/src/grfmt_jpeg2000.cpp",
+        341,
+        341
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_jpeg2000.cpp",
+        405,
+        405
+      ]
+    ]
+  },
+  {
+    "id": "BUG-091",
+    "sev": "Critical",
+    "title": "Heap buffer underflow write in ExrDecoder::UpSample / UpSampleX and signed 32-bit dataWindow.min.x overflow",
+    "files": [
+      [
+        "modules/imgcodecs/src/grfmt_exr.cpp",
+        218,
+        301
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_exr.cpp",
+        394,
+        432
+      ]
+    ]
+  },
+  {
+    "id": "BUG-092",
+    "sev": "Critical",
+    "title": "Heap buffer overflow write and NULL dereferences in GdalDecoder::write_pixel / write_ctable_pixel",
+    "files": [
+      [
+        "modules/imgcodecs/src/grfmt_gdal.cpp",
+        258,
+        278
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_gdal.cpp",
+        317,
+        341
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_gdal.cpp",
+        409,
+        409
+      ]
+    ]
+  },
+  {
+    "id": "BUG-093",
+    "sev": "High",
+    "title": "Heap buffer over-read in SunRasterEncoder::write on odd-width images",
+    "files": [
+      [
+        "modules/imgcodecs/src/grfmt_sunras.cpp",
+        408,
+        408
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_sunras.cpp",
+        422,
+        423
+      ]
+    ]
+  },
+  {
+    "id": "BUG-094",
+    "sev": "High",
+    "title": "Heap out-of-bounds vector read params[i+1] in PNG/JPEG/PxM/PAM/EXR encoders on odd-length params",
+    "files": [
+      [
+        "modules/imgcodecs/src/grfmt_png.cpp",
+        376,
+        393
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_jpeg.cpp",
+        605,
+        651
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_pxm.cpp",
+        413,
+        417
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_pam.cpp",
+        659,
+        664
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_exr.cpp",
+        579,
+        595
+      ]
+    ]
+  },
+  {
+    "id": "BUG-095",
+    "sev": "High",
+    "title": "Integer division-by-zero crash (SIGFPE) in TiffEncoder::writeLibTiff on empty Mat",
+    "files": [
+      [
+        "modules/imgcodecs/src/grfmt_tiff.cpp",
+        793,
+        795
+      ]
+    ]
+  },
+  {
+    "id": "BUG-096",
+    "sev": "High",
+    "title": "Uninitialized heap memory disclosure on truncated JPEG in JpegDecoder::readData (imdecode)",
+    "files": [
+      [
+        "modules/imgcodecs/src/grfmt_jpeg.cpp",
+        108,
+        111
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_jpeg.cpp",
+        444,
+        471
+      ]
+    ]
+  },
+  {
+    "id": "BUG-097",
+    "sev": "High",
+    "title": "setjmp/longjmp UB clobbering AutoBuffer & uninitialized cinfo.err in JpegEncoder/PngEncoder, plus FD/memory leaks in HDR/JP2/TIFF",
+    "files": [
+      [
+        "modules/imgcodecs/src/grfmt_jpeg.cpp",
+        558,
+        568
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_jpeg.cpp",
+        683,
+        683
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_png.cpp",
+        347,
+        347
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_png.cpp",
+        425,
+        425
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_hdr.cpp",
+        60,
+        102
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_jpeg2000.cpp",
+        87,
+        169
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_tiff.cpp",
+        212,
+        217
+      ]
+    ]
+  },
+  {
+    "id": "BUG-098",
+    "sev": "High",
+    "title": "Wrong depth / uninitialized memory in 16-bit JP2 grayscale load, EXR gray-as-color load, and 32/64-bit gray TIFF as color",
+    "files": [
+      [
+        "modules/imgcodecs/src/grfmt_jpeg2000.cpp",
+        193,
+        200
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_jpeg2000.cpp",
+        284,
+        284
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_exr.cpp",
+        330,
+        369
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_tiff.cpp",
+        497,
+        528
+      ]
+    ]
+  },
+  {
+    "id": "BUG-099",
+    "sev": "High",
+    "title": "ReadPAMHeaderLine uninitialized stack byte / non-NUL strtol, BMP RLE8 int overflow & RLE4 escapes, and ExifReader 32-bit wraparound",
+    "files": [
+      [
+        "modules/imgcodecs/src/grfmt_pam.cpp",
+        273,
+        301
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_bmp.cpp",
+        306,
+        324
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_bmp.cpp",
+        399,
+        426
+      ],
+      [
+        "modules/imgcodecs/src/exif.cpp",
+        221,
+        288
+      ],
+      [
+        "modules/imgcodecs/src/exif.cpp",
+        409,
+        467
+      ]
+    ]
+  },
+  {
+    "id": "BUG-100",
+    "sev": "Medium",
+    "title": "SunRasterDecoder confuses m_type with m_encoding, shifts 1<<32 UB, and decodes unpaletted grayscale to all-black",
+    "files": [
+      [
+        "modules/imgcodecs/src/grfmt_sunras.cpp",
+        93,
+        93
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_sunras.cpp",
+        103,
+        103
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_sunras.cpp",
+        179,
+        198
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_sunras.cpp",
+        259,
+        259
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_sunras.cpp",
+        267,
+        267
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_sunras.cpp",
+        345,
+        371
+      ]
+    ]
+  },
+  {
+    "id": "BUG-101",
+    "sev": "Medium",
+    "title": "WebPEncoder and Jpeg2KEncoder silently return true when fopen / jas_stream_fopen fails",
+    "files": [
+      [
+        "modules/imgcodecs/src/grfmt_webp.cpp",
+        313,
+        321
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_jpeg2000.cpp",
+        511,
+        522
+      ]
+    ]
+  },
+  {
+    "id": "BUG-102",
+    "sev": "Medium",
+    "title": "PAM RGB/BGR swap omitted, HDR/PFM ignore channel flags via convertTo, DICOM swaps W/H, OS/2 BMP forced grayscale",
+    "files": [
+      [
+        "modules/imgcodecs/src/grfmt_pam.cpp",
+        520,
+        559
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_hdr.cpp",
+        96,
+        100
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_pfm.cpp",
+        152,
+        152
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_gdcm.cpp",
+        151,
+        186
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_bmp.cpp",
+        82,
+        82
+      ],
+      [
+        "modules/imgcodecs/src/grfmt_bmp.cpp",
+        149,
+        181
+      ]
+    ]
+  },
+  {
+    "id": "BUG-103",
+    "sev": "Critical",
+    "title": "Stack-based buffer overflow in cvUndistortPointsInternal via multi-channel distCoeffs",
+    "files": [
+      [
+        "modules/calib3d/src/undistort.cpp",
+        376,
+        376
+      ],
+      [
+        "modules/calib3d/src/undistort.cpp",
+        395,
+        408
+      ]
+    ]
+  },
+  {
+    "id": "BUG-104",
+    "sev": "Critical",
+    "title": "Heap buffer overflow (rtype[npixels]) and underflow read (*--ws) in cv::filterSpeckles",
+    "files": [
+      [
+        "modules/calib3d/src/stereosgbm.cpp",
+        2297,
+        2309
+      ],
+      [
+        "modules/calib3d/src/stereosgbm.cpp",
+        2331,
+        2383
+      ]
+    ]
+  },
+  {
+    "id": "BUG-105",
+    "sev": "Critical",
+    "title": "Inverted _mm256_blendv_pd mask in AVX2 initUndistortRectifyMapLine_AVX breaks tilted-sensor undistortion",
+    "files": [
+      [
+        "modules/calib3d/src/undistort.avx2.cpp",
+        126,
+        128
+      ]
+    ]
+  },
+  {
+    "id": "BUG-106",
+    "sev": "Critical",
+    "title": "cv::solvePnP returns uninitialized rvec/tvec for CV_32F inputs with non-iterative solvers (EPNP/P3P/AP3P)",
+    "files": [
+      [
+        "modules/calib3d/src/solvepnp.cpp",
+        109,
+        161
+      ]
+    ]
+  },
+  {
+    "id": "BUG-107",
+    "sev": "Critical",
+    "title": "Heap buffer overflow in StereoSGBM for CV_8UC2 inputs (missing channel count validation)",
+    "files": [
+      [
+        "modules/calib3d/src/stereosgbm.cpp",
+        142,
+        142
+      ],
+      [
+        "modules/calib3d/src/stereosgbm.cpp",
+        162,
+        193
+      ],
+      [
+        "modules/calib3d/src/stereosgbm.cpp",
+        2157,
+        2158
+      ]
+    ]
+  },
+  {
+    "id": "BUG-108",
+    "sev": "Critical",
+    "title": "cv::rectify3Collinear never writes _Rmat3 (returns uninitialized memory) and crashes on aligned cameras",
+    "files": [
+      [
+        "modules/calib3d/src/calibration.cpp",
+        4185,
+        4223
+      ]
+    ]
+  },
+  {
+    "id": "BUG-109",
+    "sev": "High",
+    "title": "StereoBM type-confuses CV_16S cost buffer as int* when useShorts is false, corrupting adjacent rows and breaking validateDisparity",
+    "files": [
+      [
+        "modules/calib3d/src/stereobm.cpp",
+        613,
+        614
+      ],
+      [
+        "modules/calib3d/src/stereobm.cpp",
+        694,
+        694
+      ],
+      [
+        "modules/calib3d/src/stereobm.cpp",
+        888,
+        888
+      ],
+      [
+        "modules/calib3d/src/stereobm.cpp",
+        1056,
+        1059
+      ],
+      [
+        "modules/calib3d/src/stereobm.cpp",
+        1177,
+        1177
+      ]
+    ]
+  },
+  {
+    "id": "BUG-110",
+    "sev": "High",
+    "title": "cv::stereoRectify rotates all vertical stereo pairs 180 degrees backwards along -Z",
+    "files": [
+      [
+        "modules/calib3d/src/calibration.cpp",
+        2523,
+        2553
+      ]
+    ]
+  },
+  {
+    "id": "BUG-111",
+    "sev": "High",
+    "title": "cv::initWideAngleProjMap reads scenter before convertTo (cx=cy=0), swaps distortion coeffs, and omits parentheses",
+    "files": [
+      [
+        "modules/calib3d/src/undistort.cpp",
+        656,
+        672
+      ],
+      [
+        "modules/calib3d/src/undistort.cpp",
+        694,
+        695
+      ],
+      [
+        "modules/calib3d/src/undistort.cpp",
+        713,
+        713
+      ]
+    ]
+  },
+  {
+    "id": "BUG-112",
+    "sev": "High",
+    "title": "cv::estimateAffine2D and estimateAffinePartial2D silently corrupt caller's const InputArray in-place",
+    "files": [
+      [
+        "modules/calib3d/src/ptsetreg.cpp",
+        821,
+        860
+      ],
+      [
+        "modules/calib3d/src/ptsetreg.cpp",
+        888,
+        927
+      ]
+    ]
+  },
+  {
+    "id": "BUG-113",
+    "sev": "High",
+    "title": "cv::fisheye::initUndistortRectifyMap leaves map1 and map2 uninitialized when m1type <= 0",
+    "files": [
+      [
+        "modules/calib3d/src/fisheye.cpp",
+        430,
+        432
+      ],
+      [
+        "modules/calib3d/src/fisheye.cpp",
+        508,
+        520
+      ]
+    ]
+  },
+  {
+    "id": "BUG-114",
+    "sev": "High",
+    "title": "StereoSGBM 3-way mode: SIGFPE div-by-zero when uniquenessRatio == 100, missing width1 <= 0 guard, and leaks",
+    "files": [
+      [
+        "modules/calib3d/src/stereosgbm.cpp",
+        1960,
+        1988
+      ],
+      [
+        "modules/calib3d/src/stereosgbm.cpp",
+        2018,
+        2019
+      ],
+      [
+        "modules/calib3d/src/stereosgbm.cpp",
+        2105,
+        2130
+      ]
+    ]
+  },
+  {
+    "id": "BUG-115",
+    "sev": "High",
+    "title": "Unchecked OOB read/write in public cv::validateDisparity on out-of-range disparity values",
+    "files": [
+      [
+        "modules/calib3d/src/stereosgbm.cpp",
+        2482,
+        2516
+      ]
+    ]
+  },
+  {
+    "id": "BUG-116",
+    "sev": "High",
+    "title": "cv::fisheye::estimateNewCameraMatrixForUndistortRectify scales cn[0] instead of cn[1], producing wrong/negative focal lengths",
+    "files": [
+      [
+        "modules/calib3d/src/fisheye.cpp",
+        573,
+        602
+      ]
+    ]
+  },
+  {
+    "id": "BUG-117",
+    "sev": "High",
+    "title": "cv::drawChessboardCorners heap OOB read when corners.size() < patternSize.area()",
+    "files": [
+      [
+        "modules/calib3d/src/calibinit.cpp",
+        2091,
+        2161
+      ]
+    ]
+  },
+  {
+    "id": "BUG-118",
+    "sev": "High",
+    "title": "StereoSGBM stale column x=0, skipped bottom SH2 rows, and pixDiff OOB read when SW2 >= width1",
+    "files": [
+      [
+        "modules/calib3d/src/stereosgbm.cpp",
+        426,
+        498
+      ],
+      [
+        "modules/calib3d/src/stereosgbm.cpp",
+        1650,
+        1716
+      ]
+    ]
+  },
+  {
+    "id": "BUG-119",
+    "sev": "High",
+    "title": "cv::sampsonDistance OOB read on non-continuous column slices and Debug-only size assertions",
+    "files": [
+      [
+        "modules/calib3d/src/fundam.cpp",
+        1109,
+        1124
+      ]
+    ]
+  },
+  {
+    "id": "BUG-120",
+    "sev": "High",
+    "title": "cv::stereoCalibrate always fails with CALIB_THIN_PRISM_MODEL; fisheye::calibrate NULL deref & stereoCalibrate assert typos",
+    "files": [
+      [
+        "modules/calib3d/src/calibration.cpp",
+        1408,
+        1410
+      ],
+      [
+        "modules/calib3d/src/calibration.cpp",
+        2016,
+        2016
+      ],
+      [
+        "modules/calib3d/src/calibration.cpp",
+        2034,
+        2038
+      ],
+      [
+        "modules/calib3d/src/fisheye.cpp",
+        815,
+        860
+      ]
+    ]
+  },
+  {
+    "id": "BUG-121",
+    "sev": "High",
+    "title": "Broken quad cleaning in findChessboardCorners, infinite loop in CirclesGridFinder::getFirstCorner, RHO (int) sign cast, and solve_deg3 NaN",
+    "files": [
+      [
+        "modules/calib3d/src/calibinit.cpp",
+        1233,
+        1299
+      ],
+      [
+        "modules/calib3d/src/circlesgrid.cpp",
+        1312,
+        1317
+      ],
+      [
+        "modules/calib3d/src/circlesgrid.cpp",
+        1606,
+        1630
+      ],
+      [
+        "modules/calib3d/src/rho.cpp",
+        1352,
+        1388
+      ],
+      [
+        "modules/calib3d/src/polynom_solver.cpp",
+        62,
+        71
+      ]
+    ]
+  },
+  {
+    "id": "BUG-122",
+    "sev": "High",
+    "title": "Wrong degrees of freedom (total - nparams_nz instead of 2*total - nparams_nz) in calibrateCamera standard deviations",
+    "files": [
+      [
+        "modules/calib3d/src/calibration.cpp",
+        1795,
+        1803
+      ]
+    ]
+  },
+  {
+    "id": "BUG-123",
+    "sev": "Medium",
+    "title": "cv::recoverPose crashes on CV_32F essential matrix E",
+    "files": [
+      [
+        "modules/calib3d/src/five-point.cpp",
+        468,
+        522
+      ]
+    ]
+  },
+  {
+    "id": "BUG-124",
+    "sev": "Medium",
+    "title": "StereoBM::compute crashes on CV_32FC1 fixed-type output when disp12MaxDiff >= 0 or speckleWindowSize > 0",
+    "files": [
+      [
+        "modules/calib3d/src/stereobm.cpp",
+        1062,
+        1063
+      ],
+      [
+        "modules/calib3d/src/stereobm.cpp",
+        1196,
+        1201
+      ],
+      [
+        "modules/calib3d/src/stereobm.cpp",
+        1239,
+        1240
+      ]
+    ]
+  },
+  {
+    "id": "BUG-125",
+    "sev": "Critical",
+    "title": "ChannelConcatInvoker 2x heap buffer overflow (OOB read/write) for CV_16S (FP16) tensors",
+    "files": [
+      [
+        "modules/dnn/src/layers/concat_layer.cpp",
+        133,
+        182
+      ]
+    ]
+  },
+  {
+    "id": "BUG-126",
+    "sev": "Critical",
+    "title": "DetectionOutputLayerImpl::GetPriorBBoxes guaranteed heap buffer over-read when variance_encoded_in_target == true",
+    "files": [
+      [
+        "modules/dnn/src/layers/detection_output_layer.cpp",
+        215,
+        215
+      ],
+      [
+        "modules/dnn/src/layers/detection_output_layer.cpp",
+        455,
+        455
+      ],
+      [
+        "modules/dnn/src/layers/detection_output_layer.cpp",
+        804,
+        830
+      ]
+    ]
+  },
+  {
+    "id": "BUG-127",
+    "sev": "Critical",
+    "title": "CropAndResizeLayerImpl unclamped box coordinates (heap OOB read / SEGV), div-by-zero on size 1, and batch OOB write",
+    "files": [
+      [
+        "modules/dnn/src/layers/crop_and_resize_layer.cpp",
+        31,
+        31
+      ],
+      [
+        "modules/dnn/src/layers/crop_and_resize_layer.cpp",
+        55,
+        55
+      ],
+      [
+        "modules/dnn/src/layers/crop_and_resize_layer.cpp",
+        63,
+        96
+      ]
+    ]
+  },
+  {
+    "id": "BUG-128",
+    "sev": "Critical",
+    "title": "Net::forward(vector<vector<Mat>>&, vector<String>&) shadowed loop variable causes heap OOB write (and pins.end() deref)",
+    "files": [
+      [
+        "modules/dnn/src/dnn.cpp",
+        2841,
+        2868
+      ]
+    ]
+  },
+  {
+    "id": "BUG-129",
+    "sev": "Critical",
+    "title": "Net::forward(OutputArrayOfArrays, vector<String>&) unchecked cast type confusion and FP16 output_blob aliasing",
+    "files": [
+      [
+        "modules/dnn/src/dnn.cpp",
+        2611,
+        2618
+      ],
+      [
+        "modules/dnn/src/dnn.cpp",
+        2814,
+        2839
+      ]
+    ]
+  },
+  {
+    "id": "BUG-130",
+    "sev": "Critical",
+    "title": "Heap buffer overflow in Torch readTorchStorage via 64-bit size truncation in Mat::create",
+    "files": [
+      [
+        "modules/dnn/src/torch/torch_importer.cpp",
+        250,
+        297
+      ]
+    ]
+  },
+  {
+    "id": "BUG-131",
+    "sev": "Critical",
+    "title": "Heap OOB read, negative offset wraparound, and storage type confusion in Torch readTorchTensor",
+    "files": [
+      [
+        "modules/dnn/src/torch/torch_importer.cpp",
+        390,
+        443
+      ]
+    ]
+  },
+  {
+    "id": "BUG-132",
+    "sev": "Critical",
+    "title": "Heap OOB read in ONNX getMatFromTensor due to missing buffer length validation",
+    "files": [
+      [
+        "modules/dnn/src/onnx/onnx_importer.cpp",
+        89,
+        141
+      ]
+    ]
+  },
+  {
+    "id": "BUG-133",
+    "sev": "Critical",
+    "title": "Caffe extractCustomParams union type confusion & OOB subfield access, plus empty repeated-message crash",
+    "files": [
+      [
+        "modules/dnn/src/caffe/caffe_importer.cpp",
+        106,
+        117
+      ],
+      [
+        "modules/dnn/src/caffe/caffe_importer.cpp",
+        203,
+        223
+      ]
+    ]
+  },
+  {
+    "id": "BUG-134",
+    "sev": "Critical",
+    "title": "Swapped push constant fields (global_size / nthreads) cause GPU buffer overflow in Vulkan OpPermute",
+    "files": [
+      [
+        "modules/dnn/src/vkcom/src/op_permute.cpp",
+        18,
+        22
+      ],
+      [
+        "modules/dnn/src/vkcom/src/op_permute.cpp",
+        136,
+        141
+      ],
+      [
+        "modules/dnn/src/vkcom/shader/permute.comp",
+        4,
+        8
+      ],
+      [
+        "modules/dnn/src/vkcom/shader/permute.comp",
+        30,
+        30
+      ]
+    ]
+  },
+  {
+    "id": "BUG-135",
+    "sev": "High",
+    "title": "Off-by-one order validation in PermuteLayerImpl causes heap OOB reads",
+    "files": [
+      [
+        "modules/dnn/src/layers/permute_layer.cpp",
+        85,
+        99
+      ],
+      [
+        "modules/dnn/src/layers/permute_layer.cpp",
+        130,
+        130
+      ],
+      [
+        "modules/dnn/src/layers/permute_layer.cpp",
+        215,
+        215
+      ],
+      [
+        "modules/dnn/src/layers/permute_layer.cpp",
+        365,
+        365
+      ]
+    ]
+  },
+  {
+    "id": "BUG-136",
+    "sev": "High",
+    "title": "Negative axis with slice_point in SliceLayerImpl causes negative-index heap OOB write / null deref",
+    "files": [
+      [
+        "modules/dnn/src/layers/slice_layer.cpp",
+        63,
+        78
+      ]
+    ]
+  },
+  {
+    "id": "BUG-137",
+    "sev": "High",
+    "title": "Copy-paste validation bug in BatchNormLayerImpl checks weightsBlobIndex instead of biasBlobIndex (heap OOB read)",
+    "files": [
+      [
+        "modules/dnn/src/layers/batch_norm_layer.cpp",
+        58,
+        73
+      ],
+      [
+        "modules/dnn/src/layers/batch_norm_layer.cpp",
+        90,
+        90
+      ]
+    ]
+  },
+  {
+    "id": "BUG-138",
+    "sev": "High",
+    "title": "MVNLayerImpl with fused BatchNorm heap OOB read for batch > 1 (1x1 spatial), dropped BN on batch >= 1, and OCL OOB",
+    "files": [
+      [
+        "modules/dnn/src/layers/mvn_layer.cpp",
+        323,
+        351
+      ],
+      [
+        "modules/dnn/src/opencl/mvn.cl",
+        275,
+        278
+      ]
+    ]
+  },
+  {
+    "id": "BUG-139",
+    "sev": "High",
+    "title": "Missing lower-bound check on roisData[0] in ROI/PSROI Pooling allows negative-index heap OOB read",
+    "files": [
+      [
+        "modules/dnn/src/layers/pooling_layer.cpp",
+        464,
+        465
+      ],
+      [
+        "modules/dnn/src/layers/pooling_layer.cpp",
+        727,
+        727
+      ],
+      [
+        "modules/dnn/src/layers/pooling_layer.cpp",
+        744,
+        744
+      ]
+    ]
+  },
+  {
+    "id": "BUG-140",
+    "sev": "High",
+    "title": "PowerFunctor::tryFuse computes algebraically wrong fused scale/shift when power != 1.0",
+    "files": [
+      [
+        "modules/dnn/src/layers/elementwise_layers.cpp",
+        1017,
+        1032
+      ]
+    ]
+  },
+  {
+    "id": "BUG-141",
+    "sev": "High",
+    "title": "BNLLFunctor omits + max(x, 0) on CPU and Halide, returning wrong values for all x > 0",
+    "files": [
+      [
+        "modules/dnn/src/layers/elementwise_layers.cpp",
+        848,
+        850
+      ],
+      [
+        "modules/dnn/src/layers/elementwise_layers.cpp",
+        866,
+        866
+      ]
+    ]
+  },
+  {
+    "id": "BUG-142",
+    "sev": "High",
+    "title": "RegionLayer swaps hNorm and wNorm, distorting YOLO v2/v3 box width & height on non-square inputs",
+    "files": [
+      [
+        "modules/dnn/src/layers/region_layer.cpp",
+        222,
+        222
+      ],
+      [
+        "modules/dnn/src/layers/region_layer.cpp",
+        241,
+        242
+      ],
+      [
+        "modules/dnn/src/layers/region_layer.cpp",
+        281,
+        284
+      ]
+    ]
+  },
+  {
+    "id": "BUG-143",
+    "sev": "High",
+    "title": "Net::getPerfProfile crashes before forward() (and getParam/setParam/connect allow negative OOB indices)",
+    "files": [
+      [
+        "modules/dnn/src/dnn.cpp",
+        1321,
+        1336
+      ],
+      [
+        "modules/dnn/src/dnn.cpp",
+        2961,
+        2977
+      ],
+      [
+        "modules/dnn/src/dnn.cpp",
+        3298,
+        3303
+      ]
+    ]
+  },
+  {
+    "id": "BUG-144",
+    "sev": "High",
+    "title": "Net::setInput / DataLayer double-applies scalefactor/mean across repeated forward() calls and skips updated scale on same-shape setInput",
+    "files": [
+      [
+        "modules/dnn/src/dnn.cpp",
+        574,
+        588
+      ],
+      [
+        "modules/dnn/src/dnn.cpp",
+        691,
+        704
+      ],
+      [
+        "modules/dnn/src/dnn.cpp",
+        864,
+        869
+      ],
+      [
+        "modules/dnn/src/dnn.cpp",
+        2939,
+        2959
+      ]
+    ]
+  },
+  {
+    "id": "BUG-145",
+    "sev": "High",
+    "title": "PoolingLayerImpl asymmetric padding check uses pad_b/pad_r instead of pad_t/pad_l, producing NaN in AVE pooling",
+    "files": [
+      [
+        "modules/dnn/src/layers/pooling_layer.cpp",
+        647,
+        653
+      ],
+      [
+        "modules/dnn/src/layers/pooling_layer.cpp",
+        926,
+        936
+      ]
+    ]
+  },
+  {
+    "id": "BUG-146",
+    "sev": "High",
+    "title": "Data race in ChannelConcatInvoker, OCL Slice/Eltwise/DetectionOutput/Conv+Eltwise fusion bugs, and PriorBox offset_h/w bug",
+    "files": [
+      [
+        "modules/dnn/src/layers/concat_layer.cpp",
+        164,
+        182
+      ],
+      [
+        "modules/dnn/src/layers/slice_layer.cpp",
+        199,
+        231
+      ],
+      [
+        "modules/dnn/src/layers/eltwise_layer.cpp",
+        146,
+        146
+      ],
+      [
+        "modules/dnn/src/layers/eltwise_layer.cpp",
+        297,
+        314
+      ],
+      [
+        "modules/dnn/src/layers/detection_output_layer.cpp",
+        246,
+        288
+      ],
+      [
+        "modules/dnn/src/layers/prior_box_layer.cpp",
+        256,
+        263
+      ],
+      [
+        "modules/dnn/src/dnn.cpp",
+        2006,
+        2108
+      ]
+    ]
+  },
+  {
+    "id": "BUG-147",
+    "sev": "High",
+    "title": "Importer bugs: TF sortByExecutionOrder/FusedBatchNorm/parseTensor/BlockLSTM/Mean, ONNX Gather/Unsqueeze/Gemm/Sub, Darknet route/shortcut/yolo/pad, Torch Padding/SoftMax/MaxUnpooling, Caffe BatchNorm",
+    "files": [
+      [
+        "modules/dnn/src/tensorflow/tf_graph_simplifier.cpp",
+        818,
+        887
+      ],
+      [
+        "modules/dnn/src/tensorflow/tf_importer.cpp",
+        96,
+        141
+      ],
+      [
+        "modules/dnn/src/tensorflow/tf_importer.cpp",
+        1478,
+        1508
+      ],
+      [
+        "modules/dnn/src/tensorflow/tf_importer.cpp",
+        1621,
+        1657
+      ],
+      [
+        "modules/dnn/src/tensorflow/tf_importer.cpp",
+        1817,
+        1837
+      ],
+      [
+        "modules/dnn/src/onnx/onnx_importer.cpp",
+        421,
+        433
+      ],
+      [
+        "modules/dnn/src/onnx/onnx_importer.cpp",
+        521,
+        540
+      ],
+      [
+        "modules/dnn/src/onnx/onnx_importer.cpp",
+        595,
+        682
+      ],
+      [
+        "modules/dnn/src/darknet/darknet_io.cpp",
+        386,
+        391
+      ],
+      [
+        "modules/dnn/src/darknet/darknet_io.cpp",
+        546,
+        636
+      ],
+      [
+        "modules/dnn/src/torch/torch_importer.cpp",
+        762,
+        788
+      ],
+      [
+        "modules/dnn/src/torch/torch_importer.cpp",
+        868,
+        878
+      ],
+      [
+        "modules/dnn/src/torch/torch_importer.cpp",
+        1187,
+        1219
+      ],
+      [
+        "modules/dnn/src/caffe/caffe_importer.cpp",
+        360,
+        381
+      ]
+    ]
+  },
+  {
+    "id": "BUG-148",
+    "sev": "High",
+    "title": "InfEngineBackendNet unsynchronized global sharedPlugins data race and CV_Error inside CV_NOEXCEPT methods",
+    "files": [
+      [
+        "modules/dnn/src/op_inf_engine.cpp",
+        218,
+        356
+      ],
+      [
+        "modules/dnn/src/op_inf_engine.cpp",
+        494,
+        557
+      ],
+      [
+        "modules/dnn/src/op_inf_engine.cpp",
+        648,
+        653
+      ]
+    ]
+  },
+  {
+    "id": "BUG-149",
+    "sev": "Medium",
+    "title": "cv::dnn::blobFromImage / blobFromImages silently mutates CV_32F caller images in-place",
+    "files": [
+      [
+        "modules/dnn/src/dnn.cpp",
+        246,
+        277
+      ]
+    ]
+  },
+  {
+    "id": "BUG-150",
+    "sev": "Medium",
+    "title": "getConvPoolPaddings truncates odd SAME padB/padR; ResizeLayer skips copy on matching size; vkcom OpBase UAF & computePoolOutputShape bugs",
+    "files": [
+      [
+        "modules/dnn/src/layers/layers_common.cpp",
+        219,
+        228
+      ],
+      [
+        "modules/dnn/src/layers/resize_layer.cpp",
+        71,
+        104
+      ],
+      [
+        "modules/dnn/src/vkcom/src/internal.cpp",
+        106,
+        144
+      ],
+      [
+        "modules/dnn/src/vkcom/src/op_base.cpp",
+        95,
+        103
+      ]
+    ]
+  },
+  {
+    "id": "BUG-151",
+    "sev": "Critical",
+    "title": "AKAZE full MLDB upright heap buffer overflow (40 bytes/row) and rotated assert crash when descriptor_channels < 3",
+    "files": [
+      [
+        "modules/features2d/src/kaze/AKAZEFeatures.cpp",
+        1198,
+        1206
+      ],
+      [
+        "modules/features2d/src/kaze/AKAZEFeatures.cpp",
+        1833,
+        1850
+      ],
+      [
+        "modules/features2d/src/kaze/AKAZEFeatures.cpp",
+        1985,
+        1985
+      ]
+    ]
+  },
+  {
+    "id": "BUG-152",
+    "sev": "Critical",
+    "title": "AKAZE generateDescriptorSubsample heap buffer overflow write when descriptor_size > 0 and descriptor_channels < 3",
+    "files": [
+      [
+        "modules/features2d/src/kaze/AKAZEFeatures.cpp",
+        2249,
+        2307
+      ]
+    ]
+  },
+  {
+    "id": "BUG-153",
+    "sev": "Critical",
+    "title": "FED time-step reordering heap buffer underflow read (tauh[-1]) in AKAZE and KAZE when sublevels >= 12",
+    "files": [
+      [
+        "modules/features2d/src/kaze/fed.cpp",
+        130,
+        151
+      ]
+    ]
+  },
+  {
+    "id": "BUG-154",
+    "sev": "Critical",
+    "title": "DescriptorMatcher::checkMasks heap OOB / null vector dereference with UMat or empty train descriptors",
+    "files": [
+      [
+        "modules/features2d/src/matchers.cpp",
+        620,
+        640
+      ]
+    ]
+  },
+  {
+    "id": "BUG-155",
+    "sev": "High",
+    "title": "Arbitrary heap OOB write via unchecked indexChange values in BRISK_Impl::generateKernel",
+    "files": [
+      [
+        "modules/features2d/src/brisk.cpp",
+        436,
+        481
+      ]
+    ]
+  },
+  {
+    "id": "BUG-156",
+    "sev": "High",
+    "title": "FAST TYPE_5_8 and TYPE_7_12 quick-rejection hardcodes 16-pixel pairs, dropping 100% / 50% of valid corners",
+    "files": [
+      [
+        "modules/features2d/src/fast.cpp",
+        181,
+        202
+      ]
+    ]
+  },
+  {
+    "id": "BUG-157",
+    "sev": "High",
+    "title": "ORB pyramid layout overlap / crash when firstLevel > 0 and NaN crash when scaleFactor == 1.0f",
+    "files": [
+      [
+        "modules/features2d/src/orb.cpp",
+        798,
+        805
+      ],
+      [
+        "modules/features2d/src/orb.cpp",
+        1024,
+        1060
+      ]
+    ]
+  },
+  {
+    "id": "BUG-158",
+    "sev": "High",
+    "title": "KAZE::compute skips multiscale derivatives (producing all-NaN descriptors) and KAZE omits DIFF_CHARBONNIER",
+    "files": [
+      [
+        "modules/features2d/src/kaze.cpp",
+        139,
+        160
+      ],
+      [
+        "modules/features2d/src/kaze/KAZEFeatures.cpp",
+        124,
+        135
+      ],
+      [
+        "modules/features2d/src/kaze/KAZEFeatures.cpp",
+        712,
+        735
+      ]
+    ]
+  },
+  {
+    "id": "BUG-159",
+    "sev": "High",
+    "title": "KeyPointsFilter::runByPixelsMask (and MSER) heap buffer over-read on subpixel keypoints near right/bottom border",
+    "files": [
+      [
+        "modules/features2d/src/keypoint.cpp",
+        149,
+        149
+      ],
+      [
+        "modules/features2d/src/mser.cpp",
+        726,
+        756
+      ],
+      [
+        "modules/features2d/src/mser.cpp",
+        1070,
+        1096
+      ]
+    ]
+  },
+  {
+    "id": "BUG-160",
+    "sev": "High",
+    "title": "BFMatcher::radiusMatch compactResult=true fails to resize output; DescriptorCollection copy ctor & set() bugs",
+    "files": [
+      [
+        "modules/features2d/src/matchers.cpp",
+        414,
+        455
+      ],
+      [
+        "modules/features2d/src/matchers.cpp",
+        786,
+        828
+      ],
+      [
+        "modules/features2d/src/matchers.cpp",
+        998,
+        1010
+      ]
+    ]
+  },
+  {
+    "id": "BUG-161",
+    "sev": "High",
+    "title": "AGAST and BRISK truncate x86 pixel offsets to signed 16-bit short, reading wrong rows when img.step >= 10923",
+    "files": [
+      [
+        "modules/features2d/src/agast.cpp",
+        76,
+        83
+      ],
+      [
+        "modules/features2d/src/agast.cpp",
+        838,
+        849
+      ],
+      [
+        "modules/features2d/src/agast_score.cpp",
+        102,
+        117
+      ]
+    ]
+  },
+  {
+    "id": "BUG-162",
+    "sev": "High",
+    "title": "BRISK_Impl::smoothedIntensity wrong corner offset (dy*cols+1), ignored image.step on ROIs, and swapped bilinear weights",
+    "files": [
+      [
+        "modules/features2d/src/brisk.cpp",
+        519,
+        521
+      ],
+      [
+        "modules/features2d/src/brisk.cpp",
+        561,
+        573
+      ],
+      [
+        "modules/features2d/src/brisk.cpp",
+        611,
+        645
+      ]
+    ]
+  },
+  {
+    "id": "BUG-163",
+    "sev": "Medium",
+    "title": "SimpleBlobDetector infinite loop when thresholdStep <= 0, NaN circularity filter bypass, and BOW crash on unmatched queries",
+    "files": [
+      [
+        "modules/features2d/src/blobdetector.cpp",
+        229,
+        231
+      ],
+      [
+        "modules/features2d/src/blobdetector.cpp",
+        311,
+        311
+      ],
+      [
+        "modules/features2d/src/bagofwords.cpp",
+        201,
+        206
+      ]
+    ]
+  },
+  {
+    "id": "BUG-164",
+    "sev": "Critical",
+    "title": "LshTable<unsigned char> heap OOB read & arbitrary heap OOB write when key_size > feature_size * 8",
+    "files": [
+      [
+        "modules/flann/include/opencv2/flann/lsh_table.h",
+        267,
+        279
+      ],
+      [
+        "modules/flann/include/opencv2/flann/lsh_table.h",
+        349,
+        374
+      ]
+    ]
+  },
+  {
+    "id": "BUG-165",
+    "sev": "Critical",
+    "title": "Unsigned underflow in LshTable<unsigned char>::getKey causes heap OOB read when feature_size < sizeof(size_t)",
+    "files": [
+      [
+        "modules/flann/include/opencv2/flann/lsh_table.h",
+        408,
+        420
+      ]
+    ]
+  },
+  {
+    "id": "BUG-166",
+    "sev": "Critical",
+    "title": "LshIndex::loadIndex leaves stale xor_masks_ causing heap OOB read / SEGV on knnSearch (plus dataset memory leak)",
+    "files": [
+      [
+        "modules/flann/include/opencv2/flann/lsh_index.h",
+        95,
+        101
+      ],
+      [
+        "modules/flann/include/opencv2/flann/lsh_index.h",
+        136,
+        149
+      ],
+      [
+        "modules/flann/include/opencv2/flann/lsh_index.h",
+        345,
+        350
+      ]
+    ]
+  },
+  {
+    "id": "BUG-167",
+    "sev": "Critical",
+    "title": "cv::flann::Index omits query.cols == veclen() check (heap OOB read), null-index check (NULL deref), and knn > 0 check",
+    "files": [
+      [
+        "modules/flann/src/miniflann.cpp",
+        487,
+        523
+      ],
+      [
+        "modules/flann/src/miniflann.cpp",
+        667,
+        667
+      ],
+      [
+        "modules/flann/include/opencv2/flann/result_set.h",
+        104,
+        104
+      ]
+    ]
+  },
+  {
+    "id": "BUG-168",
+    "sev": "Critical",
+    "title": "cvflann::Hamming on ARM NEON reads up to 15 bytes OOB on non-16-byte-aligned descriptors (e.g. 61B AKAZE)",
+    "files": [
+      [
+        "modules/flann/include/opencv2/flann/dist.h",
+        428,
+        443
+      ],
+      [
+        "modules/flann/include/opencv2/flann/dist.h",
+        503,
+        523
+      ]
+    ]
+  },
+  {
+    "id": "BUG-169",
+    "sev": "High",
+    "title": "CompositeIndexParams sets algorithm to FLANN_INDEX_KMEANS instead of FLANN_INDEX_COMPOSITE",
+    "files": [
+      [
+        "modules/flann/src/miniflann.cpp",
+        212,
+        227
+      ],
+      [
+        "modules/flann/include/opencv2/flann/composite_index.h",
+        45,
+        62
+      ]
+    ]
+  },
+  {
+    "id": "BUG-170",
+    "sev": "High",
+    "title": "HierarchicalClusteringIndex infinite recursion / stack overflow on duplicate points with KMEANSPP/GroupWise and broken FLANN_CHECKS_UNLIMITED",
+    "files": [
+      [
+        "modules/flann/include/opencv2/flann/hierarchical_clustering_index.h",
+        200,
+        344
+      ],
+      [
+        "modules/flann/include/opencv2/flann/hierarchical_clustering_index.h",
+        547,
+        569
+      ],
+      [
+        "modules/flann/include/opencv2/flann/hierarchical_clustering_index.h",
+        681,
+        729
+      ],
+      [
+        "modules/flann/include/opencv2/flann/hierarchical_clustering_index.h",
+        750,
+        750
+      ]
+    ]
+  },
+  {
+    "id": "BUG-171",
+    "sev": "High",
+    "title": "KMeansIndex data race on cluster radii in parallel_for_, uninitialized read in getCenterOrdering, and ignored cb_index",
+    "files": [
+      [
+        "modules/flann/include/opencv2/flann/kmeans_index.h",
+        309,
+        317
+      ],
+      [
+        "modules/flann/include/opencv2/flann/kmeans_index.h",
+        370,
+        370
+      ],
+      [
+        "modules/flann/include/opencv2/flann/kmeans_index.h",
+        1014,
+        1020
+      ]
+    ]
+  },
+  {
+    "id": "BUG-172",
+    "sev": "High",
+    "title": "KDTreeIndex::loadIndex stores Node** in 'trees' param, KDTreeSingleIndex::middleSplit_ passes cutfeat instead of i, and saving.h OOB/leaks",
+    "files": [
+      [
+        "modules/flann/include/opencv2/flann/kdtree_index.h",
+        167,
+        167
+      ],
+      [
+        "modules/flann/include/opencv2/flann/kdtree_index.h",
+        281,
+        303
+      ],
+      [
+        "modules/flann/include/opencv2/flann/kdtree_single_index.h",
+        458,
+        469
+      ],
+      [
+        "modules/flann/include/opencv2/flann/saving.h",
+        116,
+        116
+      ],
+      [
+        "modules/flann/include/opencv2/flann/saving.h",
+        143,
+        143
+      ],
+      [
+        "modules/flann/include/opencv2/flann/saving.h",
+        158,
+        179
+      ],
+      [
+        "modules/flann/include/opencv2/flann/allocator.h",
+        124,
+        183
+      ]
+    ]
+  },
+  {
+    "id": "BUG-173",
+    "sev": "Critical",
+    "title": "DISOpticalFlow 8-byte heap-buffer-overflow read in SIMD 8x8 patch extraction",
+    "files": [
+      [
+        "modules/video/src/dis_flow.cpp",
+        266,
+        266
+      ],
+      [
+        "modules/video/src/dis_flow.cpp",
+        292,
+        292
+      ],
+      [
+        "modules/video/src/dis_flow.cpp",
+        487,
+        487
+      ],
+      [
+        "modules/video/src/dis_flow.cpp",
+        537,
+        537
+      ],
+      [
+        "modules/video/src/dis_flow.cpp",
+        607,
+        607
+      ],
+      [
+        "modules/video/src/dis_flow.cpp",
+        667,
+        667
+      ],
+      [
+        "modules/video/src/dis_flow.cpp",
+        705,
+        705
+      ]
+    ]
+  },
+  {
+    "id": "BUG-174",
+    "sev": "Critical",
+    "title": "DISOpticalFlow heap OOB vector read on small images (coarsest_scale < finest_scale)",
+    "files": [
+      [
+        "modules/video/src/dis_flow.cpp",
+        1383,
+        1389
+      ],
+      [
+        "modules/video/src/dis_flow.cpp",
+        1427,
+        1427
+      ]
+    ]
+  },
+  {
+    "id": "BUG-175",
+    "sev": "Critical",
+    "title": "DISOpticalFlow::collectGarbage() OOB vector access [10] before calc() and use-after-clear crash on subsequent calc()",
+    "files": [
+      [
+        "modules/video/src/dis_flow.cpp",
+        229,
+        235
+      ],
+      [
+        "modules/video/src/dis_flow.cpp",
+        307,
+        311
+      ],
+      [
+        "modules/video/src/dis_flow.cpp",
+        1471,
+        1473
+      ]
+    ]
+  },
+  {
+    "id": "BUG-176",
+    "sev": "Critical",
+    "title": "DISOpticalFlow stale initial_Ux/initial_Uy buffers cause heap OOB read when reusing instance with larger images",
+    "files": [
+      [
+        "modules/video/src/dis_flow.cpp",
+        249,
+        254
+      ],
+      [
+        "modules/video/src/dis_flow.cpp",
+        775,
+        780
+      ],
+      [
+        "modules/video/src/dis_flow.cpp",
+        852,
+        862
+      ]
+    ]
+  },
+  {
+    "id": "BUG-177",
+    "sev": "Critical",
+    "title": "BackgroundSubtractorKNN and BackgroundSubtractorMOG2 heap buffer overflow after setNSamples() / setNMixtures()",
+    "files": [
+      [
+        "modules/video/src/bgfg_KNN.cpp",
+        221,
+        221
+      ],
+      [
+        "modules/video/src/bgfg_KNN.cpp",
+        749,
+        752
+      ],
+      [
+        "modules/video/src/bgfg_gaussmix2.cpp",
+        193,
+        193
+      ],
+      [
+        "modules/video/src/bgfg_gaussmix2.cpp",
+        243,
+        243
+      ],
+      [
+        "modules/video/src/bgfg_gaussmix2.cpp",
+        712,
+        712
+      ],
+      [
+        "modules/video/src/bgfg_gaussmix2.cpp",
+        859,
+        862
+      ]
+    ]
+  },
+  {
+    "id": "BUG-178",
+    "sev": "High",
+    "title": "SparsePyrLKOpticalFlow corrupts criteria.epsilon & maxLevel across calc() calls and checks wrong OpenCL flag",
+    "files": [
+      [
+        "modules/video/src/lkpyramid.cpp",
+        815,
+        815
+      ],
+      [
+        "modules/video/src/lkpyramid.cpp",
+        1021,
+        1024
+      ],
+      [
+        "modules/video/src/lkpyramid.cpp",
+        1327,
+        1341
+      ]
+    ]
+  },
+  {
+    "id": "BUG-179",
+    "sev": "High",
+    "title": "BackgroundSubtractorKNN 1-byte heap over-read in getBackgroundImage() on 1-ch images and div-by-zero when learningRate == 0",
+    "files": [
+      [
+        "modules/video/src/bgfg_KNN.cpp",
+        759,
+        773
+      ],
+      [
+        "modules/video/src/bgfg_KNN.cpp",
+        828,
+        851
+      ]
+    ]
+  },
+  {
+    "id": "BUG-180",
+    "sev": "Medium",
+    "title": "findTransformECC MOTION_EUCLIDEAN uses asin instead of atan2; estimateRigidTransform omits scale on translation",
+    "files": [
+      [
+        "modules/video/src/ecc.cpp",
+        301,
+        301
+      ],
+      [
+        "modules/video/src/lkpyramid.cpp",
+        1431,
+        1504
+      ]
+    ]
+  },
+  {
+    "id": "BUG-181",
+    "sev": "Critical",
+    "title": "DetectionBasedTracker std::terminate() on destroy-without-run or run/stop/run, deadlock on destroy-without-stop, and data races/UAF",
+    "files": [
+      [
+        "modules/objdetect/src/detection_based_tracker.cpp",
+        188,
+        209
+      ],
+      [
+        "modules/objdetect/src/detection_based_tracker.cpp",
+        240,
+        299
+      ],
+      [
+        "modules/objdetect/src/detection_based_tracker.cpp",
+        343,
+        359
+      ],
+      [
+        "modules/objdetect/src/detection_based_tracker.cpp",
+        384,
+        425
+      ]
+    ]
+  },
+  {
+    "id": "BUG-182",
+    "sev": "Critical",
+    "title": "HOGDescriptor::setSVMDetector() and copyTo() null-pointer dereference when svmDetector is empty",
+    "files": [
+      [
+        "modules/objdetect/src/hog.cpp",
+        104,
+        133
+      ],
+      [
+        "modules/objdetect/src/hog.cpp",
+        209,
+        224
+      ]
+    ]
+  },
+  {
+    "id": "BUG-183",
+    "sev": "Critical",
+    "title": "HOGDescriptor::detectMultiScaleROI heap buffer overflow write on non-ascending scales",
+    "files": [
+      [
+        "modules/objdetect/src/hog.cpp",
+        3454,
+        3485
+      ]
+    ]
+  },
+  {
+    "id": "BUG-184",
+    "sev": "Critical",
+    "title": "CascadeClassifier stack/heap buffer overflow on Haar features with > 3 rects and missing return in copyVectorToUMat",
+    "files": [
+      [
+        "modules/objdetect/src/cascadedetect.cpp",
+        52,
+        57
+      ],
+      [
+        "modules/objdetect/src/cascadedetect.cpp",
+        551,
+        556
+      ],
+      [
+        "modules/objdetect/src/cascadedetect_convert.cpp",
+        155,
+        165
+      ]
+    ]
+  },
+  {
+    "id": "BUG-185",
+    "sev": "Critical",
+    "title": "QRCodeDetector swapped coordinates, unchecked OOB reads in versionDefinition(), and row-stride corruption / 168 GB alloc in samplingForVersion()",
+    "files": [
+      [
+        "modules/objdetect/src/qrcode.cpp",
+        143,
+        185
+      ],
+      [
+        "modules/objdetect/src/qrcode.cpp",
+        904,
+        942
+      ],
+      [
+        "modules/objdetect/src/qrcode.cpp",
+        953,
+        1002
+      ]
+    ]
+  },
+  {
+    "id": "BUG-186",
+    "sev": "High",
+    "title": "HOGDescriptor SIMD dot product heap buffer over-read when blockHistogramSize < 4",
+    "files": [
+      [
+        "modules/objdetect/src/hog.cpp",
+        1722,
+        1763
+      ],
+      [
+        "modules/objdetect/src/hog.cpp",
+        3560,
+        3601
+      ]
+    ]
+  },
+  {
+    "id": "BUG-187",
+    "sev": "High",
+    "title": "CascadeClassifier swaps width and height when loading/converting old-format non-square Haar cascades",
+    "files": [
+      [
+        "modules/objdetect/src/cascadedetect_convert.cpp",
+        120,
+        122
+      ],
+      [
+        "modules/objdetect/src/cascadedetect_convert.cpp",
+        200,
+        201
+      ]
+    ]
+  },
+  {
+    "id": "BUG-188",
+    "sev": "High",
+    "title": "HOGInvoker split mutex locking desynchronizes foundLocations from foundWeights",
+    "files": [
+      [
+        "modules/objdetect/src/hog.cpp",
+        1823,
+        1840
+      ]
+    ]
+  },
+  {
+    "id": "BUG-189",
+    "sev": "High",
+    "title": "CascadeClassifier 3-vector detectMultiScale overload unconditionally crashes when outputRejectLevels == false (default)",
+    "files": [
+      [
+        "modules/objdetect/src/cascadedetect.cpp",
+        1612,
+        1624
+      ],
+      [
+        "modules/objdetect/src/cascadedetect.cpp",
+        1678,
+        1694
+      ]
+    ]
+  },
+  {
+    "id": "BUG-190",
+    "sev": "Critical",
+    "title": "NPR edgePreservingFilter (NORMCONV_FILTER) / stylization heap-buffer-overflow read and div-by-zero on small smooth images",
+    "files": [
+      [
+        "modules/photo/src/npr.hpp",
+        257,
+        264
+      ],
+      [
+        "modules/photo/src/npr.hpp",
+        363,
+        390
+      ]
+    ]
+  },
+  {
+    "id": "BUG-191",
+    "sev": "Critical",
+    "title": "HDR linearResponse() & CalibrateRobertson 2048-byte heap buffer overflow write on 1-ch / 2-ch images",
+    "files": [
+      [
+        "modules/photo/src/hdr_common.cpp",
+        101,
+        108
+      ],
+      [
+        "modules/photo/src/calibrate.cpp",
+        225,
+        241
+      ],
+      [
+        "modules/photo/src/merge.cpp",
+        80,
+        83
+      ],
+      [
+        "modules/photo/src/merge.cpp",
+        330,
+        333
+      ]
+    ]
+  },
+  {
+    "id": "BUG-192",
+    "sev": "Critical",
+    "title": "fastNlMeansDenoising signed 32-bit dist_sums overflow causes heap-buffer-underflow read (and infinite loop for huge templateWindowSize)",
+    "files": [
+      [
+        "modules/photo/src/fast_nlmeans_denoising_invoker.hpp",
+        94,
+        100
+      ],
+      [
+        "modules/photo/src/fast_nlmeans_denoising_invoker.hpp",
+        155,
+        155
+      ],
+      [
+        "modules/photo/src/fast_nlmeans_denoising_invoker.hpp",
+        242,
+        243
+      ]
+    ]
+  },
+  {
+    "id": "BUG-193",
+    "sev": "High",
+    "title": "SeamlessCloning heap OOB access on 1-channel inputs, negative resize crash on small/empty masks, and wrong MIXED_CLONE metric",
+    "files": [
+      [
+        "modules/photo/src/seamless_cloning.cpp",
+        77,
+        83
+      ],
+      [
+        "modules/photo/src/seamless_cloning_impl.cpp",
+        244,
+        255
+      ],
+      [
+        "modules/photo/src/seamless_cloning_impl.cpp",
+        309,
+        314
+      ],
+      [
+        "modules/photo/src/seamless_cloning_impl.cpp",
+        365,
+        366
+      ]
+    ]
+  },
+  {
+    "id": "BUG-194",
+    "sev": "High",
+    "title": "cv::inpaint permanently skips row 0 and col 0 (off-by-one) and INPAINT_TELEA adds +0.5f bias to CV_32FC1 outputs",
+    "files": [
+      [
+        "modules/photo/src/inpaint.cpp",
+        302,
+        302
+      ],
+      [
+        "modules/photo/src/inpaint.cpp",
+        414,
+        414
+      ],
+      [
+        "modules/photo/src/inpaint.cpp",
+        504,
+        504
+      ],
+      [
+        "modules/photo/src/inpaint.cpp",
+        534,
+        534
+      ],
+      [
+        "modules/photo/src/inpaint.cpp",
+        622,
+        622
+      ],
+      [
+        "modules/photo/src/inpaint.cpp",
+        775,
+        775
+      ]
+    ]
+  },
+  {
+    "id": "BUG-195",
+    "sev": "High",
+    "title": "TonemapReinhard mutates member this->intensity across calls (plus constant-image NaN, TonemapMantiuk & AlignMTB crashes)",
+    "files": [
+      [
+        "modules/photo/src/tonemap.cpp",
+        229,
+        231
+      ],
+      [
+        "modules/photo/src/tonemap.cpp",
+        342,
+        358
+      ],
+      [
+        "modules/photo/src/align.cpp",
+        128,
+        134
+      ]
+    ]
+  },
+  {
+    "id": "BUG-196",
+    "sev": "Medium",
+    "title": "cv::fastNlMeansDenoisingMulti CV_16U + NORM_L1 always fails due to switch(srcImgs[0].type()) missing CV_16U cases",
+    "files": [
+      [
+        "modules/photo/src/denoising.cpp",
+        252,
+        306
+      ],
+      [
+        "modules/photo/src/denoising.cpp",
+        364,
+        370
+      ]
+    ]
+  },
+  {
+    "id": "BUG-197",
+    "sev": "Critical",
+    "title": "Default DTrees::create()->train() triggers 1<<INT_MAX shift UB and NULL deref on unpopulated cv_labels",
+    "files": [
+      [
+        "modules/ml/src/tree.cpp",
+        51,
+        62
+      ],
+      [
+        "modules/ml/src/tree.cpp",
+        240,
+        244
+      ],
+      [
+        "modules/ml/src/tree.cpp",
+        514,
+        518
+      ],
+      [
+        "modules/ml/src/tree.cpp",
+        604,
+        608
+      ]
+    ]
+  },
+  {
+    "id": "BUG-198",
+    "sev": "Critical",
+    "title": "DTreesImpl::findSplitCatClass stores binary loop counter instead of Gray code and asserts sum > 0 for every global class",
+    "files": [
+      [
+        "modules/ml/src/tree.cpp",
+        876,
+        884
+      ],
+      [
+        "modules/ml/src/tree.cpp",
+        903,
+        913
+      ],
+      [
+        "modules/ml/src/tree.cpp",
+        955,
+        955
+      ],
+      [
+        "modules/ml/src/tree.cpp",
+        976,
+        982
+      ]
+    ]
+  },
+  {
+    "id": "BUG-199",
+    "sev": "Critical",
+    "title": "Heap out-of-bounds read on class_ranges[class_count] in SVMImpl::do_train when a class is missing from training fold",
+    "files": [
+      [
+        "modules/ml/src/svm.cpp",
+        353,
+        360
+      ],
+      [
+        "modules/ml/src/svm.cpp",
+        1451,
+        1456
+      ]
+    ]
+  },
+  {
+    "id": "BUG-200",
+    "sev": "Critical",
+    "title": "KDTree::medianPartition hangs in infinite loop (or crashes CV_Assert) on duplicate coordinates",
+    "files": [
+      [
+        "modules/ml/src/kdtree.cpp",
+        94,
+        137
+      ]
+    ]
+  },
+  {
+    "id": "BUG-201",
+    "sev": "Critical",
+    "title": "KNearest::KDTREE passes mismatched matrices to KDTree::findNearest, leaving outputs uninitialized and returning 0",
+    "files": [
+      [
+        "modules/ml/src/knearest.cpp",
+        354,
+        419
+      ],
+      [
+        "modules/ml/src/knearest.cpp",
+        473,
+        480
+      ]
+    ]
+  },
+  {
+    "id": "BUG-202",
+    "sev": "Critical",
+    "title": "ANN_MLPImpl::calc_output_scale divides by zero (+Inf / NaN) for IDENTITY, RELU, and LEAKYRELU activations",
+    "files": [
+      [
+        "modules/ml/src/ann_mlp.cpp",
+        248,
+        264
+      ],
+      [
+        "modules/ml/src/ann_mlp.cpp",
+        800,
+        813
+      ]
+    ]
+  },
+  {
+    "id": "BUG-203",
+    "sev": "Critical",
+    "title": "TrainDataImpl::setData erroneously transposes non-continuous ROW_SAMPLE responses",
+    "files": [
+      [
+        "modules/ml/src/data.cpp",
+        299,
+        304
+      ]
+    ]
+  },
+  {
+    "id": "BUG-204",
+    "sev": "Critical",
+    "title": "NormalBayesClassifier NBPredictBody leaves cls = -1 on large/NaN inputs, causing heap buffer underflow read cls_labels[-1]",
+    "files": [
+      [
+        "modules/ml/src/nbayes.cpp",
+        224,
+        224
+      ],
+      [
+        "modules/ml/src/nbayes.cpp",
+        251,
+        251
+      ],
+      [
+        "modules/ml/src/nbayes.cpp",
+        273,
+        289
+      ]
+    ]
+  },
+  {
+    "id": "BUG-205",
+    "sev": "Critical",
+    "title": "DTreesImpl::predictTrees inverted COMPRESSED_INPUT check causes wrong feature indexing and OOB access",
+    "files": [
+      [
+        "modules/ml/src/tree.cpp",
+        1373,
+        1377
+      ],
+      [
+        "modules/ml/src/tree.cpp",
+        1414,
+        1416
+      ],
+      [
+        "modules/ml/src/tree.cpp",
+        1435,
+        1435
+      ],
+      [
+        "modules/ml/src/tree.cpp",
+        1461,
+        1461
+      ],
+      [
+        "modules/ml/src/boost.cpp",
+        205,
+        218
+      ]
+    ]
+  },
+  {
+    "id": "BUG-206",
+    "sev": "Critical",
+    "title": "SVMImpl::Solver::get_row_base LRU cache corruption causes heap buffer underflow write at lru_cache_data.ptr(-1)",
+    "files": [
+      [
+        "modules/ml/src/svm.cpp",
+        541,
+        581
+      ]
+    ]
+  },
+  {
+    "id": "BUG-207",
+    "sev": "Critical",
+    "title": "KDTree::build(..., copyAndReorderPoints=true) reads uninitialized points (and OOB on non-continuous ROIs) in computeSums",
+    "files": [
+      [
+        "modules/ml/src/kdtree.cpp",
+        170,
+        182
+      ],
+      [
+        "modules/ml/src/kdtree.cpp",
+        200,
+        205
+      ],
+      [
+        "modules/ml/src/kdtree.cpp",
+        255,
+        255
+      ]
+    ]
+  },
+  {
+    "id": "BUG-208",
+    "sev": "High",
+    "title": "SimulatedAnnealingANN_MLP::initVarMap omits output-layer weights and segfaults on 2-layer networks",
+    "files": [
+      [
+        "modules/ml/src/ann_mlp.cpp",
+        101,
+        107
+      ],
+      [
+        "modules/ml/src/ann_mlp.cpp",
+        117,
+        140
+      ]
+    ]
+  },
+  {
+    "id": "BUG-209",
+    "sev": "High",
+    "title": "Operator precedence bug in StatModel::calcError computes unweighted error count divided by sum(weights)",
+    "files": [
+      [
+        "modules/ml/src/inner_functions.cpp",
+        116,
+        117
+      ],
+      [
+        "modules/ml/src/inner_functions.cpp",
+        166,
+        170
+      ]
+    ]
+  },
+  {
+    "id": "BUG-210",
+    "sev": "High",
+    "title": "DTreesImpl::predictTrees infinite loop on categorical splits when PREPROCESSED_INPUT is set",
+    "files": [
+      [
+        "modules/ml/src/tree.cpp",
+        1429,
+        1467
+      ]
+    ]
+  },
+  {
+    "id": "BUG-211",
+    "sev": "High",
+    "title": "TrainDataImpl::getValues and getSample check raw sample indices against sampleIdx.total(), crashing on later subsets",
+    "files": [
+      [
+        "modules/ml/src/data.cpp",
+        128,
+        132
+      ],
+      [
+        "modules/ml/src/data.cpp",
+        885,
+        913
+      ],
+      [
+        "modules/ml/src/data.cpp",
+        961,
+        986
+      ]
+    ]
+  },
+  {
+    "id": "BUG-212",
+    "sev": "High",
+    "title": "SVM kernel & solver bugs: calc_sigmoid computes -tanh, solve_nu_svr hardcodes C=1, solve_one_class negative alpha, trainAuto 0-error failed folds",
+    "files": [
+      [
+        "modules/ml/src/svm.cpp",
+        198,
+        214
+      ],
+      [
+        "modules/ml/src/svm.cpp",
+        1100,
+        1110
+      ],
+      [
+        "modules/ml/src/svm.cpp",
+        1166,
+        1190
+      ],
+      [
+        "modules/ml/src/svm.cpp",
+        1683,
+        1723
+      ]
+    ]
+  },
+  {
+    "id": "BUG-213",
+    "sev": "High",
+    "title": "EM COV_MAT_SPHERICAL uses 1D logDetCov instead of d*log(var); NormalBayes pairs getTrainSamples with unfiltered getNormCatResponses; ANN weight indexing bugs",
+    "files": [
+      [
+        "modules/ml/src/em.cpp",
+        380,
+        380
+      ],
+      [
+        "modules/ml/src/em.cpp",
+        468,
+        473
+      ],
+      [
+        "modules/ml/src/nbayes.cpp",
+        58,
+        61
+      ],
+      [
+        "modules/ml/src/nbayes.cpp",
+        108,
+        113
+      ],
+      [
+        "modules/ml/src/ann_mlp.cpp",
+        943,
+        1002
+      ],
+      [
+        "modules/ml/src/ann_mlp.cpp",
+        1070,
+        1114
+      ],
+      [
+        "modules/ml/src/data.cpp",
+        51,
+        51
+      ],
+      [
+        "modules/ml/src/data.cpp",
+        600,
+        635
+      ]
+    ]
+  },
+  {
+    "id": "BUG-214",
+    "sev": "Critical",
+    "title": "Heap buffer over-read in DpSeamFinder::computeCosts on labels_ (and cascading image/gradient OOB reads)",
+    "files": [
+      [
+        "modules/stitching/src/seam_finders.cpp",
+        777,
+        821
+      ]
+    ]
+  },
+  {
+    "id": "BUG-215",
+    "sev": "Critical",
+    "title": "Null pointer dereference / unsigned underflow OOB read in detail::estimateFocal when features.size() <= 1",
+    "files": [
+      [
+        "modules/stitching/src/autocalib.cpp",
+        117,
+        125
+      ]
+    ]
+  },
+  {
+    "id": "BUG-216",
+    "sev": "Critical",
+    "title": "Heap buffer over-read in GraphCutSeamFinder and GraphCutSeamFinderGpu on CV_8UC3 images (missing CV_32F check)",
+    "files": [
+      [
+        "modules/stitching/src/seam_finders.cpp",
+        1138,
+        1138
+      ],
+      [
+        "modules/stitching/src/seam_finders.cpp",
+        1289,
+        1289
+      ],
+      [
+        "modules/stitching/src/seam_finders.cpp",
+        1306,
+        1306
+      ],
+      [
+        "modules/stitching/src/seam_finders.cpp",
+        1396,
+        1396
+      ],
+      [
+        "modules/stitching/src/seam_finders.cpp",
+        1445,
+        1445
+      ],
+      [
+        "modules/stitching/src/seam_finders.cpp",
+        1462,
+        1462
+      ]
+    ]
+  },
+  {
+    "id": "BUG-217",
+    "sev": "Critical",
+    "title": "Null pointer dereference in GainCompensator::feed and BlocksGainCompensator::feed when no images overlap",
+    "files": [
+      [
+        "modules/stitching/src/exposure_compensate.cpp",
+        150,
+        195
+      ],
+      [
+        "modules/stitching/src/exposure_compensate.cpp",
+        286,
+        286
+      ]
+    ]
+  },
+  {
+    "id": "BUG-218",
+    "sev": "Critical",
+    "title": "Heap OOB read in FeaturesMatcher::operator() and BestOf2NearestRangeMatcher due to mask.rows assertion typo",
+    "files": [
+      [
+        "modules/stitching/src/matchers.cpp",
+        343,
+        351
+      ],
+      [
+        "modules/stitching/src/matchers.cpp",
+        491,
+        499
+      ]
+    ]
+  },
+  {
+    "id": "BUG-219",
+    "sev": "Critical",
+    "title": "Heap OOB read in Stitcher::composePanorama(images, pano) after leaveBiggestComponent drops an image",
+    "files": [
+      [
+        "modules/stitching/src/stitcher.cpp",
+        132,
+        157
+      ],
+      [
+        "modules/stitching/src/stitcher.cpp",
+        469,
+        481
+      ]
+    ]
+  },
+  {
+    "id": "BUG-220",
+    "sev": "High",
+    "title": "Blender::createDefault(FEATHER, try_gpu) passes bool try_gpu as float sharpness, producing all-black output",
+    "files": [
+      [
+        "modules/stitching/src/blenders.cpp",
+        68,
+        76
+      ],
+      [
+        "modules/stitching/include/opencv2/stitching/detail/blenders.hpp",
+        103,
+        103
+      ]
+    ]
+  },
+  {
+    "id": "BUG-221",
+    "sev": "High",
+    "title": "AffineWarper uses R.t() instead of R.inv(), breaking any scaling or shear",
+    "files": [
+      [
+        "modules/stitching/src/warpers.cpp",
+        133,
+        133
+      ],
+      [
+        "modules/stitching/src/warpers.cpp",
+        328,
+        344
+      ]
+    ]
+  },
+  {
+    "id": "BUG-222",
+    "sev": "High",
+    "title": "SphericalWarper and SphericalPortraitWarper::detectResultRoi check y > 0 instead of z > 0 (missing poles & div-by-zero)",
+    "files": [
+      [
+        "modules/stitching/src/warpers.cpp",
+        356,
+        382
+      ],
+      [
+        "modules/stitching/src/warpers.cpp",
+        399,
+        425
+      ]
+    ]
+  },
+  {
+    "id": "BUG-223",
+    "sev": "High",
+    "title": "PyRotationWarper default ctor NULL dereferences in warpRoi/buildMaps/warpPoint/warpBackward and no-op getScale/setScale",
+    "files": [
+      [
+        "modules/stitching/src/warpers.cpp",
+        91,
+        116
+      ],
+      [
+        "modules/stitching/include/opencv2/stitching/warpers.hpp",
+        56,
+        56
+      ],
+      [
+        "modules/stitching/include/opencv2/stitching/warpers.hpp",
+        113,
+        114
+      ]
+    ]
+  },
+  {
+    "id": "BUG-224",
+    "sev": "High",
+    "title": "Wrong matrix multiplication order in AffineBasedEstimator, BundleAdjusterAffine, and BundleAdjusterAffinePartial",
+    "files": [
+      [
+        "modules/stitching/src/motion_estimators.cpp",
+        102,
+        106
+      ],
+      [
+        "modules/stitching/src/motion_estimators.cpp",
+        319,
+        321
+      ],
+      [
+        "modules/stitching/src/motion_estimators.cpp",
+        711,
+        711
+      ],
+      [
+        "modules/stitching/src/motion_estimators.cpp",
+        841,
+        841
+      ]
+    ]
+  },
+  {
+    "id": "BUG-225",
+    "sev": "High",
+    "title": "BestOf2NearestRangeMatcher::operator() is non-virtually hidden; repeated composePanorama() crashes; matchImages masks OOB; BundleAdjusterBase 0-matches NULL deref",
+    "files": [
+      [
+        "modules/stitching/include/opencv2/stitching/detail/matchers.hpp",
+        140,
+        140
+      ],
+      [
+        "modules/stitching/include/opencv2/stitching/detail/matchers.hpp",
+        205,
+        205
+      ],
+      [
+        "modules/stitching/src/stitcher.cpp",
+        172,
+        210
+      ],
+      [
+        "modules/stitching/src/stitcher.cpp",
+        441,
+        444
+      ],
+      [
+        "modules/stitching/src/motion_estimators.cpp",
+        246,
+        272
+      ]
+    ]
+  },
+  {
+    "id": "BUG-226",
+    "sev": "High",
+    "title": "Broken OpenCL/CUDA MultiBandBlender CV_16S paths (compile error, div-by-zero on w==0, NaN, and unset dst_mask)",
+    "files": [
+      [
+        "modules/stitching/src/opencl/multibandblend.cl",
+        221,
+        297
+      ],
+      [
+        "modules/stitching/src/cuda/multiband_blend.cu",
+        62,
+        75
+      ],
+      [
+        "modules/stitching/src/blenders.cpp",
+        641,
+        652
+      ]
+    ]
+  },
+  {
+    "id": "BUG-227",
+    "sev": "Medium",
+    "title": "calibrateRotatingCamera produces NaN for any valid homography with det(H) < 0",
+    "files": [
+      [
+        "modules/stitching/src/autocalib.cpp",
+        148,
+        152
+      ]
+    ]
+  },
+  {
+    "id": "BUG-228",
+    "sev": "Medium",
+    "title": "selectRandomSubset uses signed randu<int>(), returning > count elements (even when count == 0)",
+    "files": [
+      [
+        "modules/stitching/src/util.cpp",
+        168,
+        179
+      ]
+    ]
+  },
+  {
+    "id": "BUG-229",
+    "sev": "Medium",
+    "title": "resultRoiIntersection returns positive-area gap Rect for disjoint rects; uninitialized ExposureCompensator::updateGain; focalsFromHomography swap bug",
+    "files": [
+      [
+        "modules/stitching/src/util.cpp",
+        140,
+        153
+      ],
+      [
+        "modules/stitching/include/opencv2/stitching/detail/exposure_compensate.hpp",
+        92,
+        92
+      ],
+      [
+        "modules/stitching/src/autocalib.cpp",
+        63,
+        91
+      ]
+    ]
+  },
+  {
+    "id": "BUG-230",
+    "sev": "Critical",
+    "title": "Global buffer underflow (cat_table[-4064]) and stack OOB/uninit read (huff_dc_tab) in grayscale MJPEG encoding",
+    "files": [
+      [
+        "modules/videoio/src/cap_mjpeg_encoder.cpp",
+        1132,
+        1136
+      ],
+      [
+        "modules/videoio/src/cap_mjpeg_encoder.cpp",
+        1298,
+        1307
+      ],
+      [
+        "modules/videoio/src/cap_mjpeg_encoder.cpp",
+        1432,
+        1448
+      ]
+    ]
+  },
+  {
+    "id": "BUG-231",
+    "sev": "Critical",
+    "title": "MjpegEncoder division-by-zero on nstripes == 0, plus heap OOB write in put_bits and unsigned underflow in mjpeg_buffer_keeper",
+    "files": [
+      [
+        "modules/videoio/src/cap_mjpeg_encoder.cpp",
+        161,
+        184
+      ],
+      [
+        "modules/videoio/src/cap_mjpeg_encoder.cpp",
+        306,
+        306
+      ],
+      [
+        "modules/videoio/src/cap_mjpeg_encoder.cpp",
+        333,
+        334
+      ],
+      [
+        "modules/videoio/src/cap_mjpeg_encoder.cpp",
+        1182,
+        1194
+      ],
+      [
+        "modules/videoio/src/cap_mjpeg_encoder.cpp",
+        1521,
+        1521
+      ]
+    ]
+  },
+  {
+    "id": "BUG-232",
+    "sev": "Critical",
+    "title": "Format-string vulnerability and stack buffer overflow in cap_images.cpp (sprintf into _MAX_PATH)",
+    "files": [
+      [
+        "modules/videoio/src/cap_images.cpp",
+        121,
+        126
+      ],
+      [
+        "modules/videoio/src/cap_images.cpp",
+        220,
+        226
+      ],
+      [
+        "modules/videoio/src/cap_images.cpp",
+        277,
+        280
+      ],
+      [
+        "modules/videoio/src/cap_images.cpp",
+        357,
+        358
+      ],
+      [
+        "modules/videoio/src/cap_images.cpp",
+        388,
+        389
+      ]
+    ]
+  },
+  {
+    "id": "BUG-233",
+    "sev": "Critical",
+    "title": "Heap corruption (cvFree on malloc buffer) and double-free in V4L2 when disabling CAP_PROP_CONVERT_RGB",
+    "files": [
+      [
+        "modules/videoio/src/cap_v4l.cpp",
+        585,
+        590
+      ],
+      [
+        "modules/videoio/src/cap_v4l.cpp",
+        722,
+        722
+      ],
+      [
+        "modules/videoio/src/cap_v4l.cpp",
+        1791,
+        1797
+      ],
+      [
+        "modules/videoio/src/cap_v4l.cpp",
+        1857,
+        1872
+      ],
+      [
+        "modules/videoio/src/cap_v4l.cpp",
+        1915,
+        1924
+      ]
+    ]
+  },
+  {
+    "id": "BUG-234",
+    "sev": "Critical",
+    "title": "Unconditional heap buffer overflow (off-by-one row j <= height) in V4L2 yuv411p_to_rgb24",
+    "files": [
+      [
+        "modules/videoio/src/cap_v4l.cpp",
+        990,
+        1019
+      ]
+    ]
+  },
+  {
+    "id": "BUG-235",
+    "sev": "High",
+    "title": "Heap buffer overflow in CvCaptureCAM_V4L::createBuffers when driver allocates > MAX_V4L_BUFFERS (10)",
+    "files": [
+      [
+        "modules/videoio/src/cap_v4l.cpp",
+        309,
+        309
+      ],
+      [
+        "modules/videoio/src/cap_v4l.cpp",
+        658,
+        668
+      ],
+      [
+        "modules/videoio/src/cap_v4l.cpp",
+        696,
+        718
+      ]
+    ]
+  },
+  {
+    "id": "BUG-236",
+    "sev": "High",
+    "title": "Out-of-bounds std::deque iterator dereference in MotionJpegCapture::setProperty on negative CAP_PROP_POS_FRAMES",
+    "files": [
+      [
+        "modules/videoio/src/cap_mjpeg_decoder.cpp",
+        92,
+        111
+      ],
+      [
+        "modules/videoio/src/cap_mjpeg_decoder.cpp",
+        138,
+        176
+      ]
+    ]
+  },
+  {
+    "id": "BUG-237",
+    "sev": "High",
+    "title": "Smart-pointer truthiness bug (if (m_file_stream) instead of if (*m_file_stream)) causes uninitialized stack reads in AVI parser",
+    "files": [
+      [
+        "modules/videoio/src/container_avi.cpp",
+        295,
+        295
+      ],
+      [
+        "modules/videoio/src/container_avi.cpp",
+        326,
+        326
+      ],
+      [
+        "modules/videoio/src/container_avi.cpp",
+        383,
+        482
+      ],
+      [
+        "modules/videoio/src/container_avi.cpp",
+        517,
+        538
+      ]
+    ]
+  },
+  {
+    "id": "BUG-238",
+    "sev": "High",
+    "title": "Guaranteed NULL pointer dereference in VideoWriter_create debug logging (inverted ternary)",
+    "files": [
+      [
+        "modules/videoio/src/videoio_registry.cpp",
+        578,
+        579
+      ]
+    ]
+  },
+  {
+    "id": "BUG-239",
+    "sev": "High",
+    "title": "Heap OOB read writing non-contiguous ROI Mat in FFmpeg & GStreamer writers; GStreamer GstCaps UAF & close() NULL deref",
+    "files": [
+      [
+        "modules/videoio/src/cap_ffmpeg_impl.hpp",
+        1818,
+        1824
+      ],
+      [
+        "modules/videoio/src/cap_gstreamer.cpp",
+        514,
+        546
+      ],
+      [
+        "modules/videoio/src/cap_gstreamer.cpp",
+        853,
+        854
+      ],
+      [
+        "modules/videoio/src/cap_gstreamer.cpp",
+        1172,
+        1174
+      ],
+      [
+        "modules/videoio/src/cap_gstreamer.cpp",
+        1261,
+        1283
+      ],
+      [
+        "modules/videoio/src/cap_gstreamer.cpp",
+        1713,
+        1732
+      ]
+    ]
+  },
+  {
+    "id": "BUG-240",
+    "sev": "High",
+    "title": "FFmpeg FPS infinite loop (fps=Inf) & leaks; GPhoto2 sprintf stack overflow; DC1394 negative propId OOB; XINE UAF/double-free; DShow infinite loop",
+    "files": [
+      [
+        "modules/videoio/src/cap_ffmpeg_impl.hpp",
+        1598,
+        1603
+      ],
+      [
+        "modules/videoio/src/cap_ffmpeg_impl.hpp",
+        1873,
+        1873
+      ],
+      [
+        "modules/videoio/src/cap_ffmpeg_impl.hpp",
+        2465,
+        2465
+      ],
+      [
+        "modules/videoio/src/cap_gphoto2.cpp",
+        810,
+        816
+      ],
+      [
+        "modules/videoio/src/cap_dc1394_v2.cpp",
+        336,
+        336
+      ],
+      [
+        "modules/videoio/src/cap_dc1394_v2.cpp",
+        653,
+        653
+      ],
+      [
+        "modules/videoio/src/cap_dc1394_v2.cpp",
+        704,
+        704
+      ],
+      [
+        "modules/videoio/src/cap_xine.cpp",
+        87,
+        90
+      ],
+      [
+        "modules/videoio/src/cap_xine.cpp",
+        261,
+        285
+      ],
+      [
+        "modules/videoio/src/cap_dshow.cpp",
+        3229,
+        3282
+      ]
+    ]
+  },
+  {
+    "id": "BUG-241",
+    "sev": "Critical",
+    "title": "Deterministic heap use-after-free (delete this followed by member read) in Qt GuiReceiver::isLastWindow",
+    "files": [
+      [
+        "modules/highgui/src/window_QT.cpp",
+        816,
+        828
+      ],
+      [
+        "modules/highgui/src/window_QT.h",
+        156,
+        156
+      ]
+    ]
+  },
+  {
+    "id": "BUG-242",
+    "sev": "Critical",
+    "title": "Type confusion and potential OOB read via unrelated QWheelEvent* to QMouseEvent* C-cast in window_QT.cpp",
+    "files": [
+      [
+        "modules/highgui/src/window_QT.cpp",
+        2363,
+        2375
+      ],
+      [
+        "modules/highgui/src/window_QT.cpp",
+        2749,
+        2752
+      ],
+      [
+        "modules/highgui/src/window_QT.cpp",
+        3247,
+        3247
+      ]
+    ]
+  },
+  {
+    "id": "BUG-243",
+    "sev": "High",
+    "title": "Dangling pointer UAF in Qt cvGetWindowName and top-level QWidget type confusion / OOB read",
+    "files": [
+      [
+        "modules/highgui/src/window_QT.cpp",
+        399,
+        424
+      ],
+      [
+        "modules/highgui/src/window_QT.cpp",
+        568,
+        574
+      ],
+      [
+        "modules/highgui/src/window_QT.cpp",
+        1143,
+        1160
+      ]
+    ]
+  },
+  {
+    "id": "BUG-244",
+    "sev": "High",
+    "title": "Win32 cvWaitKey use-after-free on window->next after WM_CLOSE, MinGW stack overflow on long names, and uninit trackbar->minval",
+    "files": [
+      [
+        "modules/highgui/src/window_w32.cpp",
+        107,
+        112
+      ],
+      [
+        "modules/highgui/src/window_w32.cpp",
+        322,
+        324
+      ],
+      [
+        "modules/highgui/src/window_w32.cpp",
+        1940,
+        1988
+      ],
+      [
+        "modules/highgui/src/window_w32.cpp",
+        2133,
+        2145
+      ],
+      [
+        "modules/highgui/src/window_w32.cpp",
+        2328,
+        2328
+      ]
+    ]
+  },
+  {
+    "id": "BUG-245",
+    "sev": "Medium",
+    "title": "Cocoa KVC type confusion on '@'-prefixed window names, GTK zero-height crash / inverted scroll, and selectROI OOB box",
+    "files": [
+      [
+        "modules/highgui/src/window_cocoa.mm",
+        165,
+        176
+      ],
+      [
+        "modules/highgui/src/window_cocoa.mm",
+        344,
+        344
+      ],
+      [
+        "modules/highgui/src/window_gtk.cpp",
+        245,
+        289
+      ],
+      [
+        "modules/highgui/src/window_gtk.cpp",
+        1806,
+        1833
+      ],
+      [
+        "modules/highgui/src/roiSelector.cpp",
+        35,
+        82
+      ],
+      [
+        "modules/highgui/src/roiSelector.cpp",
+        137,
+        176
+      ]
+    ]
+  },
+  {
+    "id": "BUG-246",
+    "sev": "Critical",
+    "title": "GFluidResize + FluidDownscaleMapper NULL pointer dereference on downscale ratios near 1.0 (e.g. 2001 -> 2000)",
+    "files": [
+      [
+        "modules/gapi/src/backends/fluid/gfluidbackend.cpp",
+        283,
+        291
+      ],
+      [
+        "modules/gapi/src/backends/fluid/gfluidbackend.cpp",
+        317,
+        335
+      ],
+      [
+        "modules/gapi/src/backends/fluid/gfluidcore.cpp",
+        2014,
+        2029
+      ],
+      [
+        "modules/gapi/src/backends/fluid/gfluidcore.cpp",
+        2083,
+        2083
+      ]
+    ]
+  },
+  {
+    "id": "BUG-247",
+    "sev": "Critical",
+    "title": "Fluid run_sepfilter & GFluidGaussBlur heap OOB read/write for non-square separable kernels (kxLen != 3, kyLen == 3)",
+    "files": [
+      [
+        "modules/gapi/src/backends/fluid/gfluidimgproc.cpp",
+        630,
+        653
+      ],
+      [
+        "modules/gapi/src/backends/fluid/gfluidimgproc.cpp",
+        837,
+        864
+      ]
+    ]
+  },
+  {
+    "id": "BUG-248",
+    "sev": "Critical",
+    "title": "Fluid BufferStorageWithBorder (BORDER_REFLECT_101) negative ring index causes heap underflow OOB read on thin (height <= border) images",
+    "files": [
+      [
+        "modules/gapi/src/backends/fluid/gfluidbuffer.cpp",
+        51,
+        64
+      ],
+      [
+        "modules/gapi/src/backends/fluid/gfluidbuffer.cpp",
+        159,
+        170
+      ],
+      [
+        "modules/gapi/src/backends/fluid/gfluidbuffer_priv.hpp",
+        165,
+        165
+      ]
+    ]
+  },
+  {
+    "id": "BUG-249",
+    "sev": "Critical",
+    "title": "cv::gapi::own::Mat::create ignores _type, causing heap buffer overflow in copyTo",
+    "files": [
+      [
+        "modules/gapi/include/opencv2/gapi/own/mat.hpp",
+        206,
+        216
+      ],
+      [
+        "modules/gapi/include/opencv2/gapi/own/mat.hpp",
+        228,
+        235
+      ]
+    ]
+  },
+  {
+    "id": "BUG-250",
+    "sev": "Critical",
+    "title": "GFluidExecutable silently zeroes all compile-time constant GScalar arguments in single-island Fluid graphs",
+    "files": [
+      [
+        "modules/gapi/src/backends/fluid/gfluidbackend.cpp",
+        655,
+        662
+      ],
+      [
+        "modules/gapi/src/backends/fluid/gfluidbackend.cpp",
+        1090,
+        1103
+      ]
+    ]
+  },
+  {
+    "id": "BUG-251",
+    "sev": "High",
+    "title": "GFluidResize ignores (fx, fy) when outSz == Size(0, 0), dividing by zero and crashing GFluidExecutable",
+    "files": [
+      [
+        "modules/gapi/src/backends/fluid/gfluidcore.cpp",
+        2031,
+        2054
+      ],
+      [
+        "modules/gapi/src/backends/fluid/gfluidbackend.cpp",
+        789,
+        789
+      ]
+    ]
+  },
+  {
+    "id": "BUG-252",
+    "sev": "High",
+    "title": "GComputation::apply formats_are_same heap OOB read when called with fewer inputs than cached",
+    "files": [
+      [
+        "modules/gapi/src/api/gcomputation.cpp",
+        81,
+        99
+      ],
+      [
+        "modules/gapi/src/api/gcomputation.cpp",
+        105,
+        119
+      ]
+    ]
+  },
+  {
+    "id": "BUG-253",
+    "sev": "High",
+    "title": "CPU/OCL BORDER_CONSTANT filters swap (x,y) in ROI & kernY/kernX in SepFilter, and crash Sobel(FILTER_SCHARR) (plus Fluid Sobel Scharr crash)",
+    "files": [
+      [
+        "modules/gapi/src/backends/cpu/gcpuimgproc.cpp",
+        19,
+        105
+      ],
+      [
+        "modules/gapi/src/backends/cpu/gcpuimgproc.cpp",
+        136,
+        146
+      ],
+      [
+        "modules/gapi/src/backends/ocl/goclimgproc.cpp",
+        20,
+        147
+      ],
+      [
+        "modules/gapi/src/backends/fluid/gfluidimgproc.cpp",
+        985,
+        1005
+      ]
+    ]
+  },
+  {
+    "id": "BUG-254",
+    "sev": "High",
+    "title": "Fluid GFluidSplit3/Split4/Merge3/Merge4 ignore depth, corrupting non-CV_8U images and leaving 75% of float rows uninitialized",
+    "files": [
+      [
+        "modules/gapi/src/backends/fluid/gfluidcore.cpp",
+        1744,
+        1893
+      ]
+    ]
+  },
+  {
+    "id": "BUG-255",
+    "sev": "High",
+    "title": "Fluid GFluidDilate initializes max accumulator to numeric_limits<float>::min(), clamping all negative CV_32F pixels to +1.175e-38f",
+    "files": [
+      [
+        "modules/gapi/src/backends/fluid/gfluidimgproc_func.simd.hpp",
+        1232,
+        1276
+      ],
+      [
+        "modules/gapi/src/backends/fluid/gfluidimgproc_func.simd.hpp",
+        1432,
+        1502
+      ]
+    ]
+  },
+  {
+    "id": "BUG-256",
+    "sev": "High",
+    "title": "Fluid GFluidCartToPolar returns angles in [-pi, +pi] instead of [0, 2*pi), violating API contract and CPU/OCL parity",
+    "files": [
+      [
+        "modules/gapi/src/backends/fluid/gfluidcore.cpp",
+        1952,
+        1965
+      ]
+    ]
+  },
+  {
+    "id": "BUG-257",
+    "sev": "High",
+    "title": "Fluid scheduler deadlocks and asserts on diamond resize graphs (calcLatency ignores resize rate & Buffer uses max instead of sum)",
+    "files": [
+      [
+        "modules/gapi/src/backends/fluid/gfluidbackend.cpp",
+        904,
+        971
+      ],
+      [
+        "modules/gapi/src/backends/fluid/gfluidbackend.cpp",
+        1168,
+        1168
+      ],
+      [
+        "modules/gapi/src/backends/fluid/gfluidbuffer.cpp",
+        547,
+        547
+      ]
+    ]
+  },
+  {
+    "id": "BUG-258",
+    "sev": "High",
+    "title": "cv::gapi::erode3x3 and dilate3x3 unconditionally crash on Fluid backend (empty kernel Mat())",
+    "files": [
+      [
+        "modules/gapi/src/api/kernels_imgproc.cpp",
+        58,
+        74
+      ],
+      [
+        "modules/gapi/src/backends/fluid/gfluidimgproc.cpp",
+        1279,
+        1279
+      ],
+      [
+        "modules/gapi/src/backends/fluid/gfluidimgproc.cpp",
+        1365,
+        1365
+      ]
+    ]
+  },
+  {
+    "id": "BUG-259",
+    "sev": "High",
+    "title": "GIntegral::outMeta and GLUT::outMeta infer wrong output depths, crashing CPU via reallocation and losing output on OCL",
+    "files": [
+      [
+        "modules/gapi/include/opencv2/gapi/core.hpp",
+        343,
+        348
+      ],
+      [
+        "modules/gapi/include/opencv2/gapi/core.hpp",
+        445,
+        449
+      ]
+    ]
+  },
+  {
+    "id": "BUG-260",
+    "sev": "High",
+    "title": "cv::gapi::own::Rect::operator=(const cv::Rect&) sets y = other.x (and own::saturate broken signed/unsigned/float clamping)",
+    "files": [
+      [
+        "modules/gapi/include/opencv2/gapi/own/types.hpp",
+        38,
+        45
+      ],
+      [
+        "modules/gapi/include/opencv2/gapi/own/saturate.hpp",
+        25,
+        46
+      ],
+      [
+        "modules/gapi/include/opencv2/gapi/own/saturate.hpp",
+        73,
+        77
+      ]
+    ]
+  },
+  {
+    "id": "BUG-261",
+    "sev": "High",
+    "title": "OCL GOCLMask discards output via tracked_cv_umat; Fluid crashes on unused split3 outputs & SIMD int16 wrap; compound kernels crash on non-dynamic args",
+    "files": [
+      [
+        "modules/gapi/src/backends/ocl/goclcore.cpp",
+        104,
+        108
+      ],
+      [
+        "modules/gapi/src/backends/fluid/gfluidbackend.cpp",
+        1317,
+        1336
+      ],
+      [
+        "modules/gapi/src/backends/fluid/gfluidimgproc_func.simd.hpp",
+        645,
+        748
+      ],
+      [
+        "modules/gapi/src/compiler/gmodel.cpp",
+        101,
+        111
+      ]
+    ]
+  },
+  {
+    "id": "BUG-262",
+    "sev": "Medium",
+    "title": "GFluidInRange/Threshold saturate bounds before compare; gapi::threshold rejects OTSU/TRIANGLE bitmasks; GCompiled::reshape leaves outMetas() stale",
+    "files": [
+      [
+        "modules/gapi/src/backends/fluid/gfluidcore.cpp",
+        1460,
+        1488
+      ],
+      [
+        "modules/gapi/src/backends/fluid/gfluidcore.cpp",
+        1555,
+        1575
+      ],
+      [
+        "modules/gapi/src/api/kernels_core.cpp",
+        262,
+        272
+      ],
+      [
+        "modules/gapi/src/compiler/gcompiled.cpp",
+        68,
+        73
+      ],
+      [
+        "modules/gapi/src/api/gbackend.cpp",
+        111,
+        116
+      ],
+      [
+        "modules/gapi/src/api/gbackend.cpp",
+        178,
+        183
+      ]
+    ]
+  }
+]

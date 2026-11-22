@@ -1,0 +1,798 @@
+[
+ {
+  "finding": "BH-001",
+  "sev": "Critical",
+  "title": "Cloning InternalIterator OOB/fptr deref",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-002",
+  "sev": "Critical",
+  "title": "__toString re-entrancy in concat_function",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-003",
+  "sev": "Critical",
+  "title": "Weakref resurrection UAF during notify",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-004",
+  "sev": "Critical",
+  "title": "WeakMap value destructor re-entrancy in gc",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-005",
+  "sev": "Critical",
+  "title": "__toString re-entrancy during hash sort",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-006",
+  "sev": "High",
+  "title": "Optimizer backward underflow on first-class callable args",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-007",
+  "sev": "High",
+  "title": "zend_std_unset_property UAF write across __unset",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-008",
+  "sev": "High",
+  "title": "readonly bypass across __toString coercion",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-009",
+  "sev": "High",
+  "title": "Generator yield from re-entrant UAF and Generator::throw NULL deref",
+  "bugs": {
+   "php-src-81a2694ec050": {
+    "region": [
+     721,
+     722,
+     723,
+     724,
+     725,
+     726,
+     751,
+     752,
+     753,
+     754,
+     755,
+     756,
+     757,
+     764,
+     765,
+     766,
+     767,
+     768,
+     769,
+     770,
+     771
+    ],
+    "strict": [
+     754,
+     767,
+     768
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BH-010",
+  "sev": "High",
+  "title": "restore_exception_handler re-entrant UAF",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-011",
+  "sev": "High",
+  "title": "Unpinned $previous exception UAF in __toString",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-012",
+  "sev": "High",
+  "title": "Wrong HashTable checked for HT_ITERATORS_OVERFLOW in zend_hash_iterator_pos_ex",
+  "bugs": {
+   "php-src-67638986e670": {
+    "region": [
+     566,
+     567,
+     568,
+     569,
+     570,
+     571,
+     572
+    ],
+    "strict": [
+     569
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BH-013",
+  "sev": "High",
+  "title": "tsrm_realpath_r stack overflow Windows / readlink off-by-one",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-014",
+  "sev": "High",
+  "title": "_is_numeric_string_ex signed wrap-around",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-015",
+  "sev": "Medium",
+  "title": "fiber.stack_size size_t overflow",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-016",
+  "sev": "Medium",
+  "title": "Closure::call refcount leak generator closures",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-017",
+  "sev": "Medium",
+  "title": "Property type invariance bypass self/parent",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-018",
+  "sev": "Medium",
+  "title": "Optimizer pass1 ignores named arguments",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-019",
+  "sev": "Critical",
+  "title": "array_multisort UAF/type confusion/overflow",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-020",
+  "sev": "Critical",
+  "title": "unserialize allowed_classes UAF/COW violation",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-021",
+  "sev": "Critical",
+  "title": "var_unserializer enum E: missing serialize_lock",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-022",
+  "sev": "Critical",
+  "title": "stream_filter_remove UAF via re-entrant filter callback",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-023",
+  "sev": "Critical",
+  "title": "_php_stream_filter_flush unbounded overflow stale readbuflen",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-024",
+  "sev": "Critical",
+  "title": "user filter bucket brigade stack UAF",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-025",
+  "sev": "Critical",
+  "title": "userspace stream callbacks fclose on active stream",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-026",
+  "sev": "High",
+  "title": "array_column dangling property slot UAF",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-027",
+  "sev": "High",
+  "title": "dns_get_mx stack over-read php_parserr A6",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-028",
+  "sev": "High",
+  "title": "convert.* filters pestealloc NUL mismatch over-read",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-029",
+  "sev": "High",
+  "title": "qprint decode/encode over-read underflow",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-030",
+  "sev": "High",
+  "title": "stream_filter_register builtin collision UAF",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-031",
+  "sev": "High",
+  "title": "ftp dirstream size_t underflow / url_stat over-read",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-032",
+  "sev": "High",
+  "title": "browscap premature free / type confusion",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-033",
+  "sev": "Medium",
+  "title": "stream_socket_enable_crypto type confusion",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-034",
+  "sev": "Medium",
+  "title": "Proxy-Authorization leak to origin",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-035",
+  "sev": "Medium",
+  "title": "mail() bare LF header injection",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-036",
+  "sev": "Critical",
+  "title": "ReflectionEnumBackedCase getBackingValue type confusion",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-037",
+  "sev": "Critical",
+  "title": "ArrayObject/ArrayIterator sort UAF type confusion",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-038",
+  "sev": "Critical",
+  "title": "FFI::arrayType integer overflow undersized alloc",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-039",
+  "sev": "Critical",
+  "title": "SplHeap/SplPriorityQueue re-entrant compare UAF",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-040",
+  "sev": "High",
+  "title": "FFI CType accessors UAF / addr missing remember_type",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-041",
+  "sev": "High",
+  "title": "FFI anonymous bit-fields double-free",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-042",
+  "sev": "High",
+  "title": "SplObjectStorage/MultipleIterator UAF",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-043",
+  "sev": "High",
+  "title": "SplFixedArray offsetUnset re-entrant setSize",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-044",
+  "sev": "High",
+  "title": "SplDoublyLinkedList offsetSet re-entrant dtor UAF",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-045",
+  "sev": "High",
+  "title": "RecursiveIteratorIterator NULL deref/double-free",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-046",
+  "sev": "Medium",
+  "title": "spl_autoload_unregister NULL deref",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-047",
+  "sev": "Critical",
+  "title": "soap to_zval_object_ex in-place zobj->ce overwrite",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-048",
+  "sev": "Critical",
+  "title": "soap Z_ADDREF_P on non-refcounted prop / dangling arr",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-049",
+  "sev": "Critical",
+  "title": "xml_parse_into_struct level=0 underflow",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-050",
+  "sev": "Critical",
+  "title": "xml_parse_into_struct data/info UAF",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-051",
+  "sev": "Critical",
+  "title": "dom_xpath_ext_function_php underflow/NULL release",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-052",
+  "sev": "Critical",
+  "title": "dom_zvals_to_fragment UAF adjacent DOMText",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-053",
+  "sev": "Critical",
+  "title": "simplexml abstract instantiation / constant AST exposure",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-054",
+  "sev": "Critical",
+  "title": "finfo_file re-entrant constructor UAF",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-055",
+  "sev": "High",
+  "title": "xml toffset unclamped over-read",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-056",
+  "sev": "High",
+  "title": "xsl_ext_function_php underflow alloc",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-057",
+  "sev": "High",
+  "title": "XSLTProcessor importStylesheet NULL deref",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-058",
+  "sev": "High",
+  "title": "php_xsl_apply_stylesheet re-entrant UAF",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-059",
+  "sev": "High",
+  "title": "transformToDoc unchecked object_init_ex",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-060",
+  "sev": "High",
+  "title": "soap unchecked object_init_ex",
+  "bugs": {
+   "php-src-3dd6d56bed43": {
+    "region": [
+     1384,
+     1385,
+     1386,
+     1387,
+     1388
+    ],
+    "strict": [
+     1385
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BH-061",
+  "sev": "High",
+  "title": "libxml callable type confusion / entity loader UAF",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-062",
+  "sev": "High",
+  "title": "dom_sanity_check_node_list_for_insertion NULL deref",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-063",
+  "sev": "High",
+  "title": "sxe_property_get_adr NULL deref",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-064",
+  "sev": "High",
+  "title": "xmlwriter re-entrant double-free",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-065",
+  "sev": "Medium",
+  "title": "xmlreader subclass bypass / libxml leaks",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-066",
+  "sev": "Critical",
+  "title": "zlib dictionary interior efree/double-free",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-067",
+  "sev": "Critical",
+  "title": "zlib filter uninitialized persistent flag",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-068",
+  "sev": "Critical",
+  "title": "ZipArchive addGlob/addPattern uninitialized zip_options",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-069",
+  "sev": "High",
+  "title": "phar_wrapper_rename NULL deref / metadata UAF",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-070",
+  "sev": "High",
+  "title": "phar cyclic TAR symlink unbounded recursion",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-071",
+  "sev": "High",
+  "title": "exif thumbnail uninitialized disclosure",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-072",
+  "sev": "High",
+  "title": "filter IPv6 SSRF bypass",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-073",
+  "sev": "Medium",
+  "title": "bzdecompress 32-bit overflow / multiplier",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-074",
+  "sev": "Critical",
+  "title": "mb_ereg_replace_callback cached regex UAF",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-075",
+  "sev": "Critical",
+  "title": "intl converter resurrection UAF",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-076",
+  "sev": "Critical",
+  "title": "Spoofchecker errorCode UAF",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-077",
+  "sev": "Critical",
+  "title": "json_encode in-place mutation UAF",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-078",
+  "sev": "Critical",
+  "title": "preg_replace_callback_array UAF/leak",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-079",
+  "sev": "High",
+  "title": "iconv stream filter bucket UAF",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-080",
+  "sev": "High",
+  "title": "mb_regex_substitute unclamped lengths OOB",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-081",
+  "sev": "High",
+  "title": "_php_iconv_strpos uninit read underflow",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-082",
+  "sev": "Medium",
+  "title": "DatePeriod NULL derefs",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-083",
+  "sev": "Medium",
+  "title": "resourcebundle uninit stack disclosure",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-084",
+  "sev": "Low",
+  "title": "iconv_mime_decode_headers duplicate headers",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-085",
+  "sev": "Critical",
+  "title": "DBA flatfile record length wrap-around overflow",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-086",
+  "sev": "Critical",
+  "title": "pdo_odbc unchecked memcpy overflow",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-087",
+  "sev": "Critical",
+  "title": "pdo_parse_params bound_params UAF",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-088",
+  "sev": "Critical",
+  "title": "PDOStatement fetchAll ctor_args UAF",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-089",
+  "sev": "Critical",
+  "title": "mysqlnd packet bounds validation missing",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-090",
+  "sev": "Critical",
+  "title": "mysqlnd/mysqli re-entrant __toString/__destruct UAF",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-091",
+  "sev": "Critical",
+  "title": "sqlite3 bind params UAF",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-092",
+  "sev": "Critical",
+  "title": "pdo_sqlite aggregate double-free on exception",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-093",
+  "sev": "High",
+  "title": "mysqlnd 0xFE auth-switch underflow",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-094",
+  "sev": "High",
+  "title": "mysqli/pgsql unchecked object_init_ex",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-095",
+  "sev": "Critical",
+  "title": "openssl negative tag_len overflow",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-096",
+  "sev": "High",
+  "title": "openssl wildcard hostname underflow",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-097",
+  "sev": "High",
+  "title": "sockets SCM_RIGHTS off-by-one / fd 0",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-098",
+  "sev": "High",
+  "title": "sockets sin6_addr type confusion",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-099",
+  "sev": "High",
+  "title": "xxh3 clone UAF",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-100",
+  "sev": "High",
+  "title": "hash_pbkdf2 float precision overflow",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-101",
+  "sev": "High",
+  "title": "ldap rebind VM stack UAF",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-102",
+  "sev": "High",
+  "title": "ldap do_modify uninit efree",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-103",
+  "sev": "High",
+  "title": "snmp mixed allocator corruption",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-104",
+  "sev": "High",
+  "title": "ftp non-blocking stream UAF",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-105",
+  "sev": "High",
+  "title": "ftp_readline off-by-one overflow",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-106",
+  "sev": "High",
+  "title": "curl multi double-free push callback",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-107",
+  "sev": "High",
+  "title": "curl READFUNCTION uninit buffer disclosure",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-108",
+  "sev": "High",
+  "title": "session_set_save_handler re-entrant double-free",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-109",
+  "sev": "High",
+  "title": "Randomizer unserialize NULL deref / status leak",
+  "bugs": {
+   "php-src-644f4c81235d": {
+    "region": [
+     146,
+     147,
+     148,
+     149,
+     150
+    ],
+    "strict": []
+   }
+  }
+ },
+ {
+  "finding": "BH-110",
+  "sev": "Medium",
+  "title": "sodium missing RETURN_THROWS",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-111",
+  "sev": "Medium",
+  "title": "opcache blacklist backtrack not reset",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-112",
+  "sev": "Critical",
+  "title": "gmp compound op failure UAF",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-113",
+  "sev": "Critical",
+  "title": "imageloadfont partial read overflow",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-114",
+  "sev": "High",
+  "title": "gd GIF LZW stack OOB/uninit",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-115",
+  "sev": "High",
+  "title": "imap_mail_compose overflow / imap_headers underflow",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-116",
+  "sev": "High",
+  "title": "readline signed char OOB",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-117",
+  "sev": "High",
+  "title": "msg_send NULL deref on serialize failure",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-118",
+  "sev": "High",
+  "title": "sysvshm re-entrant shm_detach",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-119",
+  "sev": "High",
+  "title": "tidy buf.size underflow",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-120",
+  "sev": "Medium",
+  "title": "bcmath scale INT_MAX overflows",
+  "bugs": {}
+ },
+ {
+  "finding": "BH-121",
+  "sev": "Medium",
+  "title": "posix ERANGE retry NULL deref",
+  "bugs": {}
+ }
+]

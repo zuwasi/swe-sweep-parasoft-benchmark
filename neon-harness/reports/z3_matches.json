@@ -1,0 +1,870 @@
+[
+ {
+  "finding": "Z3-001",
+  "sev": "Critical",
+  "title": "`mpf_manager::fma` produces wrong results for `sbits < 4` (`1.0*1.0+1.0 = 8.0`)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-002",
+  "sev": "High",
+  "title": "Unsigned underflow in `mpn_manager::div` causes ~16 GB heap buffer overflow write",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-003",
+  "sev": "High",
+  "title": "Inverted loop condition in `prime_generator::operator()` causes heap OOB read or infinite loop",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-004",
+  "sev": "High",
+  "title": "Signed diff trick in `u_gcd` returns wrong GCD and infinite-loops for `abs(u - v) >= 2^31`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-005",
+  "sev": "High",
+  "title": "`mpf_manager::to_double` / `to_float` corrupts smaller-format subnormals (off by `2^896` for Float32)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-006",
+  "sev": "High",
+  "title": "`mpf_manager::set(..., double/float)` turns overflowing finite values into NaN instead of \u00b1Inf",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-007",
+  "sev": "High",
+  "title": "`mpfx_manager::set_core(mpq)` flips sign and `get_int64`/`get_uint64` reads 4 bytes OOB",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-008",
+  "sev": "Medium",
+  "title": "`mpf::mpf(unsigned, unsigned)` passes own uninitialized members to `set(ebits, sbits)`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-009",
+  "sev": "Medium",
+  "title": "Non-sticky `std::setw` in `mpz_manager::display_hex` truncates hex output for >=96-bit numerals",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-010",
+  "sev": "Medium",
+  "title": "Infinite loop in `power(..., unsigned p, ...)` across `mpz`/`mpq`/`mpff`/`mpfx`/`s_integer` for `p >= 2^31`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-011",
+  "sev": "Critical",
+  "title": "`slice_solver::pop` fails to pop inner solver assertions, causing false `unsat` after `pop`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-012",
+  "sev": "High",
+  "title": "`parallel_tactic` returns unsound `unsat` when `parallel.threads.max=0` (and overwrites `m_core`)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-013",
+  "sev": "High",
+  "title": "Heap OOB access in `dimacs_frontend::verify_solution` with `sat.dimacs.core=true model_validate=true`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-014",
+  "sev": "Medium",
+  "title": "Null pointer passed to `std::string` in `datalog_frontend` aborts on `z3 -dl -in`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-015",
+  "sev": "Critical",
+  "title": "Heap use-after-free in `func_interp::compress()` via dangling pointers in `m_entry_table`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-016",
+  "sev": "Critical",
+  "title": "Type confusion / heap corruption in `z3::rcf_num` arithmetic operators (`reinterpret_cast<context*>(&m_ctx)`)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-017",
+  "sev": "High",
+  "title": "`model_evaluator` array equality checks range finiteness instead of domain finiteness (wrong `false`)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-018",
+  "sev": "High",
+  "title": "Missing de Bruijn variable reversal in `(model-add ...)` causes wrong evaluation and sort crash",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-019",
+  "sev": "High",
+  "title": "Off-by-one `>` instead of `>=` in `Z3_apply_result_get_subgoal` causes OOB heap read",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-020",
+  "sev": "High",
+  "title": "`Z3_mk_numeral` and `Z3_mk_int*` accept `ROUNDING_MODE_SORT` and read OOB parameters",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-021",
+  "sev": "High",
+  "title": "OOB `func_decl::m_domain` reads in `Z3_mk_transitive_closure`, `Z3_add_rec_def`, and polymorphic `Z3_mk_app`",
+  "bugs": {
+   "z3-f3cd4349f4cb": {
+    "region": [
+     193,
+     194,
+     195,
+     196,
+     197,
+     198,
+     199,
+     200,
+     201,
+     202,
+     203
+    ],
+    "strict": [
+     194,
+     195,
+     196,
+     197,
+     198,
+     199,
+     200,
+     203
+    ]
+   }
+  }
+ },
+ {
+  "finding": "Z3-022",
+  "sev": "High",
+  "title": "Null pointer dereference in `Z3_solver_import_model_converter` on lazily uninitialized solvers",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-023",
+  "sev": "High",
+  "title": "`CHECK_SORTS` macro omits null check, causing null deref in `Z3_mk_func_decl`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-024",
+  "sev": "High",
+  "title": "Unchecked array index in `z3_replayer` `@` directive causes heap OOB read via `z3 -log`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-025",
+  "sev": "High",
+  "title": "Null pointer dereference in `cmd_context::get_consequences` when `m_solver == nullptr`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-026",
+  "sev": "High",
+  "title": "Null pointer dereference in `poly_factor_cmd::execute` when `(poly/factor)` called with 0 args",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-027",
+  "sev": "Medium",
+  "title": "Type confusion in `Z3_optimize_maximize`/`minimize` casting `AST_VAR` to `app*`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-028",
+  "sev": "Medium",
+  "title": "Stale scanner `m_id` checked without `curr_is_identifier()` crashes debug and rejects valid SMT-LIB2",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-029",
+  "sev": "Critical",
+  "title": "`seq_rewriter::is_suffix` omits `lens.size() == 1`, causing unsound `str.substr` folding (`unsat` \u2192 `sat`)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-030",
+  "sev": "Critical",
+  "title": "De Bruijn variable capture in `array_rewriter::mk_eq_core` & `mk_map_core`, plus `:expand-store-eq` bug",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-031",
+  "sev": "Critical",
+  "title": "`bound_simplifier` asserts `(div y z) >= 0` without checking `y >= 0` (`sat` \u2192 `unsat`)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-032",
+  "sev": "Critical",
+  "title": "`fpa2bv_converter::mk_to_fp_unsigned` exponent wraparound (`unsat` \u2192 `sat`) and `mk_to_fp_signed` OOB extract",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-033",
+  "sev": "Critical",
+  "title": "`bv_rewriter` unsoundly combines `ext_rotate_left`/`right` via `bvadd`/`bvsub` for non-pow2 widths",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-034",
+  "sev": "Critical",
+  "title": "`bit_blaster_rewriter` `:blast_quant true` drops shift on non-BV vars (variable capture & sort corruption)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-035",
+  "sev": "Critical",
+  "title": "`macro-finder` tactic fails to revert `unsafe_macros()` used in `as-array`/`map` (`unsat` \u2192 `sat`)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-036",
+  "sev": "Critical",
+  "title": "`bv2int_translator` omits `abs` in `OP_BSMOD`, causing unsound `sat` under `smt.bv.solver=2`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-037",
+  "sev": "Critical",
+  "title": "Heap buffer overflow write in `sls::bv_fixed` (`OP_BMUL`) and signed overflow UB in `sls::bv_valuation::set_bw`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-038",
+  "sev": "Critical",
+  "title": "Stack use-after-return in `euf::specrel_plugin::register_node` via `[&]` capture of local `p`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-039",
+  "sev": "Critical",
+  "title": "Inverted cache check in `ast_translation::push_frame` causes null deref translating polymorphic functions",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-040",
+  "sev": "Critical",
+  "title": "`array_decl_plugin::mk_array_ext` type-confuses non-array sort params (`bad_variant_access`) and hits `UNREACHABLE()`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-041",
+  "sev": "High",
+  "title": "Out-of-bounds read `domain[1]` with `arity == 1` in `fpa_decl_plugin::mk_to_fp`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-042",
+  "sev": "High",
+  "title": "`fpa2bv_rewriter` leaks `m_bindings` and produces ill-sorted `lambda` binding Float vars",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-043",
+  "sev": "High",
+  "title": "`demodulator_simplifier::reschedule_demodulators` asserts `f == p.first->get_decl()` on RHS occurrences",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-044",
+  "sev": "High",
+  "title": "Unchecked `to_app` on quantifier in `extract_eqs` and missing `else` / ignored `m_allow_bool` in `solve_context_eqs`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-045",
+  "sev": "High",
+  "title": "`fpa_rewriter::mk_to_ieee_bv` constructs 0-width BV for `(_ NaN 2 2)` under `rewriter.hi_fp_unspecified=true`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-046",
+  "sev": "High",
+  "title": "Unchecked `to_app(r)` on labeled quantifier in `nnf::imp::process_label` with proofs enabled",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-047",
+  "sev": "High",
+  "title": "Infinite OOB inner loop in `distinct` (`i < args.size()`) and null `m_model` deref in `sls::datatype_plugin`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-048",
+  "sev": "High",
+  "title": "Unsigned underflow infinite loop / OOM in `sls::seq_plugin` for `str.replace_all` with empty pattern",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-049",
+  "sev": "High",
+  "title": "Input/output buffer aliasing in n-ary `OP_BMUL` in `sls::bv_eval` always computes `0`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-050",
+  "sev": "High",
+  "title": "Signed 32-bit integer overflow in `bv_decl_plugin` (`get_extend_size` / `OP_REPEAT`) wraps BV width",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-051",
+  "sev": "Critical",
+  "title": "Missing `num_user_scopes() == 0` guard in `pb::solver::convert_eq_k` leaks constraints across `pop`",
+  "bugs": {
+   "z3-6aeffc53878d": {
+    "region": [
+     254,
+     255,
+     256,
+     257,
+     258,
+     259,
+     260,
+     261,
+     262,
+     263,
+     264
+    ],
+    "strict": [
+     257,
+     261
+    ]
+   }
+  }
+ },
+ {
+  "finding": "Z3-052",
+  "sev": "Critical",
+  "title": "Unsound `default(store(a,u,v)) == default(a)` axiom for unitary-domain arrays (`sat` \u2192 `unsat`)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-053",
+  "sev": "Critical",
+  "title": "Inverted polarity (`~signx`) in int-blasted `bvashr` axiom in `arith_axioms` causes infinite loop / unsoundness",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-054",
+  "sev": "Critical",
+  "title": "`dt::solver::check` skips splits when `smt.dt_lazy_splits=0`, causing null deref (`con->num_args()`)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-055",
+  "sev": "Critical",
+  "title": "`specrel::solver::visit` skips foreign subterm internalization (`unsat` \u2192 `sat` and `to_app` crash)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-056",
+  "sev": "Critical",
+  "title": "`anf_simplifier` runs after `reinit_assumptions()` at `scope_lvl() == 1`, crashing/corrupting clauses",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-057",
+  "sev": "High",
+  "title": "Local variable `x` shadows parameter `x` in `arith::solver::mk_power_axiom` (guaranteed null deref)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-058",
+  "sev": "High",
+  "title": "Non-Bool terms passed to `mk_literal` in `bv::solver::internalize_interp` when `rewriter.hi_div0=false`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-059",
+  "sev": "High",
+  "title": "`ddfw_wrapper` produces empty/undersized model causing OOB read / assertion failure in `sat_tactic`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-060",
+  "sev": "High",
+  "title": "Binary DRAT emission omits learned units and terminating empty clause (`sat_drat.cpp:671-688`)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-061",
+  "sev": "High",
+  "title": "`sat.threads=0` with `sat.ddfw.threads=1` underflows `num_extra_solvers` to `UINT_MAX` (32 GB OOM abort)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-062",
+  "sev": "High",
+  "title": "`sat.lookahead.reward=ternary` hits `UNREACHABLE()` on any >=4-literal clause",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-063",
+  "sev": "Critical",
+  "title": "`theory_special_relations` tree-order disequality check computes `visited` from wrong endpoint (`sat` \u2192 `unsat`)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-064",
+  "sev": "Critical",
+  "title": "`theory_special_relations` unguarded `next(x,y) != x, y` TC axioms cause false `unsat` on 2-element sorts",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-065",
+  "sev": "Critical",
+  "title": "Inverted polarity in `theory_datatype` `:subterm` recursive axiom (`sat` \u2192 `unsat`)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-066",
+  "sev": "Critical",
+  "title": "`theory_char` forces `b <= 0x2FFFF` on `char.from_bv(b)`, causing false `unsat` for valid 18-bit BVs",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-067",
+  "sev": "Critical",
+  "title": "Missing BV\u2013EUF theory combination in `theory_intblast` (`smt.bv.solver=2`) causes unsound `sat`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-068",
+  "sev": "Critical",
+  "title": "Short-circuit OR in `theory_array_full::instantiate_default_store_axiom` skips `default(B) = B[eps]` (`unsat` \u2192 `sat`)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-069",
+  "sev": "High",
+  "title": "`smt_consequences` calls `m.mk_const(C)` on non-nullary datatype constructor recognizer",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-070",
+  "sev": "High",
+  "title": "`theory_recfun::assert_body_axiom` hardcodes `Bool` sort for fresh constant equated to non-Bool RHS",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-071",
+  "sev": "High",
+  "title": "`smt_implied_equalities` proceeds on `l_undef` with null model (assertion crash / null deref)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-072",
+  "sev": "High",
+  "title": "Guaranteed null pointer dereference in `smt_tactic::user_propagate_register_on_binding`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-073",
+  "sev": "Critical",
+  "title": "Unsound exponentiation lemmas in `nla::powers::check` (`x >= 3 => x^y > y + 1` fails for `y < 0`)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-074",
+  "sev": "Critical",
+  "title": "`bit_matrix::col_iterator::next()` skips set bits at multiples of 64; `row_iterator` reads OOB on empty matrix",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-075",
+  "sev": "High",
+  "title": "`dd::fdd::sup`/`inf` returns elements outside set when variables are skipped; `contains` crashes on `false_bdd`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-076",
+  "sev": "Critical",
+  "title": "`injectivity_tactic` leaks `m_map` and rewriter cache across sibling subgoals (`sat` \u2192 `unsat`)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-077",
+  "sev": "Critical",
+  "title": "`special-relations` tactic replaces built-in `<=` with uninterpreted `linear-order` (`unsat` \u2192 `sat`)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-078",
+  "sev": "Critical",
+  "title": "`reduce-args` breaks congruence between `(f x)` and `(f (bvadd #x0 x))` (`unsat` \u2192 `sat`)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-079",
+  "sev": "Critical",
+  "title": "`pb-preprocess` resolution ignores zero coefficients in `pbge` (`unsat` \u2192 `sat`)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-080",
+  "sev": "Critical",
+  "title": "`eq2bv` unsoundly imposes `x >= 0` on upper-bounded-only `Int` variables (`sat` \u2192 `unsat`)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-081",
+  "sev": "Critical",
+  "title": "`fix-dl-var` early `return` abandons `m_todo` validation of nested non-DL terms (`sat` \u2192 `unsat`)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-082",
+  "sev": "Critical",
+  "title": "`pb2bv` treats any non-zero LHS numeral equality `(= 5 x)` on 0-1 var as `(= 1 x)` (`unsat` \u2192 `sat`)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-083",
+  "sev": "Critical",
+  "title": "`diff-neq` unclamped `m_max_neg_k` truncates 64-bit bounds to 32-bit `int` (`unsat` \u2192 `sat`)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-084",
+  "sev": "High",
+  "title": "`fm_model_converter` produces invalid models on mixed algebraic/rational bounds (plus `del_constraint` use-after-destroy)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-085",
+  "sev": "High",
+  "title": "`bvarray2uf` passes BV-sorted `e` instead of array-sorted `f_a` to `mk_uf_for_array` on BV-array `ite`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-086",
+  "sev": "High",
+  "title": "`recover-01` unclamped `recover_01_max_bits` causes `1 << 32` shift UB and massive OOB read",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-087",
+  "sev": "High",
+  "title": "`dt2bv` produces ill-sorted `lambda` because `check_fd::operator()(quantifier*)` is a no-op",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-088",
+  "sev": "Medium",
+  "title": "Stale assertion leakage across subgoals in `qfbv-sls` and `sls-smt`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-089",
+  "sev": "Critical",
+  "title": "`datalog_parser` formats `int m_curr_char` as decimal ASCII string (`'S'` \u2192 `\"83\"`), breaking `.dl` parser",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-090",
+  "sev": "Critical",
+  "title": "`bmc::qlinear::get_model` (`fp.engine=qbmc`) evaluates vars at rule index `i` instead of `level` and OOBs on base rules",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-091",
+  "sev": "High",
+  "title": "`aig_exporter` omits output/tail-only predicates from `preds_bitsize` (assertion crash / state-0 aliasing)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-092",
+  "sev": "High",
+  "title": "`ddnf::compile_eq` indexes `m_ddnfs` by constant slice width instead of variable width",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-093",
+  "sev": "High",
+  "title": "`tab::imp::query` skips `query_is_tautology` on initial goal (`sat` \u2192 `unsat`) and drops disjunctive query rules",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-094",
+  "sev": "High",
+  "title": "`tb::selection::andrei_select` reads `m_var_scores[idx]` OOB when predicate has no defining rules",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-095",
+  "sev": "High",
+  "title": "`Z3_fixedpoint_query` clears `m_clauses`, causing `Z3_fixedpoint_get_answer` to dereference empty vector",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-096",
+  "sev": "Critical",
+  "title": "Uninitialized `psort_nw::m_t` read in `sortmax` causes UBSan invalid enum load and unsound MaxSAT",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-097",
+  "sev": "Critical",
+  "title": "`optsmt::lex` dispatches to box-mode `symba_opt()`, returning stale models and wrong lex objectives",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-098",
+  "sev": "Critical",
+  "title": "`app_const_arr_rewriter` unconditionally rewrites `C(acc(t))` \u2192 `t` without `is_C(t)` in default `qe2`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-099",
+  "sev": "Critical",
+  "title": "`array_plugin::solve_store` iterates nested stores backwards, breaking aliasing indices (`sat` \u2192 `unsat`)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-100",
+  "sev": "Critical",
+  "title": "`datatype_plugin::subst_rec` drops recognizer guards and treats nullary constructors as infinite (`unsat` \u2192 `sat`)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-101",
+  "sev": "Critical",
+  "title": "`mbp_array_tg` compares `a1 == e2` instead of `a1 == e2->get_arg(0)`, dropping array Ackermannization & causing OOB",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-102",
+  "sev": "High",
+  "title": "`mbp_dt_tg::rm_accessor` unconditionally equates `v` to accessor's constructor even when `m_mdl(v)` differs",
+  "bugs": {
+   "z3-e0dd0ca5d4f1": {
+    "region": [
+     163,
+     164,
+     165,
+     166,
+     167,
+     168
+    ],
+    "strict": []
+   }
+  }
+ },
+ {
+  "finding": "Z3-103",
+  "sev": "Critical",
+  "title": "Sign-flip in `pb::solver::round_to_one`, spurious `m_overflow` in `get_coeff(literal)`, and signed cut overflow",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-104",
+  "sev": "Critical",
+  "title": "`fpa::solver` conjoins mandatory side conditions inside negatable atom equivalence",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-105",
+  "sev": "Critical",
+  "title": "`sat::local_search` treats non-conflicting binary propagation queue overflow as UNSAT proof",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-106",
+  "sev": "High",
+  "title": "Uninitialized `m_zero_var`/`m_one_var` (`UINT_MAX`) and `lpvar`/`theory_var` confusion in `arith::solver::add_equality`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-107",
+  "sev": "High",
+  "title": "Heap UAF via `m_selects_domain` reallocation during range-for in `array::solver::collect_selects`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-108",
+  "sev": "High",
+  "title": "Heap UAF on dangling `watch_list&` across base-level `try_lit` in `sat::probing::process_core`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-109",
+  "sev": "High",
+  "title": "Heap UAF via `m_occurs` reallocation during range-for in `euf::relevancy::propagate_relevant`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-110",
+  "sev": "High",
+  "title": "Heap UAF in `sat::solver::bounded_local_search()` from inverted `scoped_limits`/`scoped_ls` destruction order",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-111",
+  "sev": "High",
+  "title": "Use-after-destroy of `reslimit` in `sat::parallel::reset()`, off-by-one `_get_clauses()`, and `ex_msg` data race",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-112",
+  "sev": "Medium",
+  "title": "`tmp_clause::set()` never updates `m_approx` bloom filter on reuse, breaking binary subsumption",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-113",
+  "sev": "Critical",
+  "title": "`nla::intervals::conflict_u_l` checks `b.m_upper_open` instead of `b.m_lower_open`, dropping conflict deps",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-114",
+  "sev": "Critical",
+  "title": "`grobner::normalize_coeff` skips `>1000`-bit monomials while dividing others, corrupting equations",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-115",
+  "sev": "Critical",
+  "title": "Inverted `is_int(monomial)` and three unsound propagation bugs in `subpaving::context_t`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-116",
+  "sev": "High",
+  "title": "Inward rounding in `interval_manager::div_mul` / odd `power` and uninitialized `one` (`0`) in `nth_root_pos`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-117",
+  "sev": "High",
+  "title": "Missing containment check in `algebraic_numbers::compare_core` Sturm-Tarski fallback",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-118",
+  "sev": "High",
+  "title": "Type confusion (`rational_value` downcast) & leak in `inv_algebraic`, plus infinite loop in `power`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-119",
+  "sev": "High",
+  "title": "Use-after-GC / UAF in `dd::bdd_manager` (`mk_quant`/`mk_ite_rec`) and `null_pdd` GC OOB in `dd::pdd_manager`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-120",
+  "sev": "Medium",
+  "title": "`model_based_opt::def::dec_ref()` executes `++m_ref_count` instead of `--m_ref_count` (leak / wrap UAF)",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-121",
+  "sev": "Critical",
+  "title": "Unscoped `m_rw` cache in `theory_fpa::pop_scope_eh()` drops side conditions across `push`/`pop`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-122",
+  "sev": "Critical",
+  "title": "`smt_parallel::sls_worker` & `theory_sls` ignore `check-sat-assuming`, race on `ast_manager`, and leave `m_checking` set",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-123",
+  "sev": "High",
+  "title": "Heap UAF on `m_prop` reference in `theory_user_propagator::propagate_consequence` and unchecked `(theory_bv*)` cast",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-124",
+  "sev": "Critical",
+  "title": "Stale `bound` in `theory_pb::internalize_card` and unsound unit resolution / leaked marks in `resolve_conflict`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-125",
+  "sev": "Critical",
+  "title": "`theory_diff_logic` / `dense_diff_logic` `mk_ineq` omits objective constant; `dense_diff_logic::value` indexes `m_assignment[v]` OOB",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-126",
+  "sev": "Critical",
+  "title": "Use-after-free on temporary `expr_ref` in `evaluator_cfg::get_macro()` for polymorphic function models",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-127",
+  "sev": "Critical",
+  "title": "Dangling `uint_set&` trail UAF in `bv::slice` and unchecked 1-arg `m_canonical.get()` OOB read in `euf::completion`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-128",
+  "sev": "Critical",
+  "title": "`seq::eq_solver` `str.from_ubv` wrong max-digit bound, modular BV overflow, and missing sort check",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-129",
+  "sev": "High",
+  "title": "Missing `return true` in `proof_checker` `PR_PUSH_QUANT` and cross-`ast_manager` UAF in `replace_proof_converter::translate`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-130",
+  "sev": "Critical",
+  "title": "`mk_ineq_atom` applies `gcd_simplify` to even factors (`p^2 > 0`); `reinit_cache` fails to update `root_atom::m_x`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-131",
+  "sev": "Critical",
+  "title": "`opt_preprocess` mutex rewriting overwrites existing soft constraint weights on key collision",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-132",
+  "sev": "High",
+  "title": "Heap UAF via range-for + `push_back` in `arith_project_plugin::maximize` and uneliminated var leak on `(mod x (- 2))`",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-133",
+  "sev": "High",
+  "title": "`hnf` drops inner binders; `interval_relation`/`bound_relation` soundness bugs; Spacer `gas` underflow & `dl_mk_array_instantiation` broken odometer",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-134",
+  "sev": "High",
+  "title": "`zstring::extract` overflow/negative-index OOB; lazy Ackermannization infinite loop on `select` & unpinned array UAF",
+  "bugs": {}
+ },
+ {
+  "finding": "Z3-135",
+  "sev": "High",
+  "title": "`substitution_tree` variadic-app OOB read; `euf_egraph::pop` use-after-destroy; `bv_bounds` unchecked `to_app`; `aig::mk_xor` leak",
+  "bugs": {}
+ }
+]

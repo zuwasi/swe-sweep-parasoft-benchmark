@@ -1,0 +1,2667 @@
+[
+  {
+    "id": "Z3-001",
+    "sev": "Critical",
+    "title": "`mpf_manager::fma` produces wrong results for `sbits < 4` (`1.0*1.0+1.0 = 8.0`)",
+    "files": [
+      [
+        "src/util/mpf.cpp",
+        918,
+        939
+      ]
+    ]
+  },
+  {
+    "id": "Z3-002",
+    "sev": "High",
+    "title": "Unsigned underflow in `mpn_manager::div` causes ~16 GB heap buffer overflow write",
+    "files": [
+      [
+        "src/util/mpn.cpp",
+        147,
+        153
+      ]
+    ]
+  },
+  {
+    "id": "Z3-003",
+    "sev": "High",
+    "title": "Inverted loop condition in `prime_generator::operator()` causes heap OOB read or infinite loop",
+    "files": [
+      [
+        "src/util/prime_generator.cpp",
+        87,
+        98
+      ]
+    ]
+  },
+  {
+    "id": "Z3-004",
+    "sev": "High",
+    "title": "Signed diff trick in `u_gcd` returns wrong GCD and infinite-loops for `abs(u - v) >= 2^31`",
+    "files": [
+      [
+        "src/util/mpz.cpp",
+        96,
+        112
+      ]
+    ]
+  },
+  {
+    "id": "Z3-005",
+    "sev": "High",
+    "title": "`mpf_manager::to_double` / `to_float` corrupts smaller-format subnormals (off by `2^896` for Float32)",
+    "files": [
+      [
+        "src/util/mpf.cpp",
+        1710,
+        1767
+      ],
+      [
+        "src/api/api_numeral.cpp",
+        259,
+        264
+      ]
+    ]
+  },
+  {
+    "id": "Z3-006",
+    "sev": "High",
+    "title": "`mpf_manager::set(..., double/float)` turns overflowing finite values into NaN instead of \u00b1Inf",
+    "files": [
+      [
+        "src/util/mpf.cpp",
+        128,
+        140
+      ],
+      [
+        "src/util/mpf.cpp",
+        164,
+        176
+      ]
+    ]
+  },
+  {
+    "id": "Z3-007",
+    "sev": "High",
+    "title": "`mpfx_manager::set_core(mpq)` flips sign and `get_int64`/`get_uint64` reads 4 bytes OOB",
+    "files": [
+      [
+        "src/util/mpfx.cpp",
+        283,
+        299
+      ],
+      [
+        "src/util/mpfx.cpp",
+        685,
+        707
+      ],
+      [
+        "src/util/mpfx.cpp",
+        104,
+        120
+      ]
+    ]
+  },
+  {
+    "id": "Z3-008",
+    "sev": "Medium",
+    "title": "`mpf::mpf(unsigned, unsigned)` passes own uninitialized members to `set(ebits, sbits)`",
+    "files": [
+      [
+        "src/util/mpf.cpp",
+        39,
+        42
+      ]
+    ]
+  },
+  {
+    "id": "Z3-009",
+    "sev": "Medium",
+    "title": "Non-sticky `std::setw` in `mpz_manager::display_hex` truncates hex output for >=96-bit numerals",
+    "files": [
+      [
+        "src/util/mpz.cpp",
+        1825,
+        1828
+      ]
+    ]
+  },
+  {
+    "id": "Z3-010",
+    "sev": "Medium",
+    "title": "Infinite loop in `power(..., unsigned p, ...)` across `mpz`/`mpq`/`mpff`/`mpfx`/`s_integer` for `p >= 2^31`",
+    "files": [
+      [
+        "src/util/mpz.cpp",
+        1962,
+        1971
+      ],
+      [
+        "src/util/mpq.cpp",
+        292,
+        301
+      ],
+      [
+        "src/util/mpff.cpp",
+        1044,
+        1053
+      ],
+      [
+        "src/util/mpfx.cpp",
+        641,
+        650
+      ],
+      [
+        "src/util/s_integer.cpp",
+        27,
+        36
+      ]
+    ]
+  },
+  {
+    "id": "Z3-011",
+    "sev": "Critical",
+    "title": "`slice_solver::pop` fails to pop inner solver assertions, causing false `unsat` after `pop`",
+    "files": [
+      [
+        "src/solver/slice_solver.cpp",
+        288,
+        296
+      ]
+    ]
+  },
+  {
+    "id": "Z3-012",
+    "sev": "High",
+    "title": "`parallel_tactic` returns unsound `unsat` when `parallel.threads.max=0` (and overwrites `m_core`)",
+    "files": [
+      [
+        "src/solver/parallel_tactical.cpp",
+        402,
+        402
+      ],
+      [
+        "src/solver/parallel_tactical.cpp",
+        438,
+        450
+      ],
+      [
+        "src/solver/parallel_tactical.cpp",
+        480,
+        485
+      ],
+      [
+        "src/solver/parallel_tactical.cpp",
+        738,
+        760
+      ]
+    ]
+  },
+  {
+    "id": "Z3-013",
+    "sev": "High",
+    "title": "Heap OOB access in `dimacs_frontend::verify_solution` with `sat.dimacs.core=true model_validate=true`",
+    "files": [
+      [
+        "src/shell/dimacs_frontend.cpp",
+        141,
+        163
+      ],
+      [
+        "src/shell/dimacs_frontend.cpp",
+        253,
+        270
+      ]
+    ]
+  },
+  {
+    "id": "Z3-014",
+    "sev": "Medium",
+    "title": "Null pointer passed to `std::string` in `datalog_frontend` aborts on `z3 -dl -in`",
+    "files": [
+      [
+        "src/shell/datalog_frontend.cpp",
+        142,
+        142
+      ]
+    ]
+  },
+  {
+    "id": "Z3-015",
+    "sev": "Critical",
+    "title": "Heap use-after-free in `func_interp::compress()` via dangling pointers in `m_entry_table`",
+    "files": [
+      [
+        "src/model/func_interp.cpp",
+        290,
+        339
+      ],
+      [
+        "src/model/func_interp.cpp",
+        233,
+        243
+      ],
+      [
+        "src/model/func_interp.cpp",
+        183,
+        195
+      ]
+    ]
+  },
+  {
+    "id": "Z3-016",
+    "sev": "Critical",
+    "title": "Type confusion / heap corruption in `z3::rcf_num` arithmetic operators (`reinterpret_cast<context*>(&m_ctx)`)",
+    "files": [
+      [
+        "src/api/c++/z3++.h",
+        4830,
+        4931
+      ],
+      [
+        "src/api/c++/z3++.h",
+        5031,
+        5031
+      ],
+      [
+        "src/api/c++/z3++.h",
+        191,
+        196
+      ]
+    ]
+  },
+  {
+    "id": "Z3-017",
+    "sev": "High",
+    "title": "`model_evaluator` array equality checks range finiteness instead of domain finiteness (wrong `false`)",
+    "files": [
+      [
+        "src/model/model_evaluator.cpp",
+        528,
+        544
+      ]
+    ]
+  },
+  {
+    "id": "Z3-018",
+    "sev": "High",
+    "title": "Missing de Bruijn variable reversal in `(model-add ...)` causes wrong evaluation and sort crash",
+    "files": [
+      [
+        "src/parsers/smt2/smt2parser.cpp",
+        2333,
+        2348
+      ]
+    ]
+  },
+  {
+    "id": "Z3-019",
+    "sev": "High",
+    "title": "Off-by-one `>` instead of `>=` in `Z3_apply_result_get_subgoal` causes OOB heap read",
+    "files": [
+      [
+        "src/api/api_tactic.cpp",
+        515,
+        529
+      ]
+    ]
+  },
+  {
+    "id": "Z3-020",
+    "sev": "High",
+    "title": "`Z3_mk_numeral` and `Z3_mk_int*` accept `ROUNDING_MODE_SORT` and read OOB parameters",
+    "files": [
+      [
+        "src/api/api_numeral.cpp",
+        28,
+        38
+      ],
+      [
+        "src/api/api_numeral.cpp",
+        79,
+        86
+      ],
+      [
+        "src/api/api_context.cpp",
+        234,
+        238
+      ]
+    ]
+  },
+  {
+    "id": "Z3-021",
+    "sev": "High",
+    "title": "OOB `func_decl::m_domain` reads in `Z3_mk_transitive_closure`, `Z3_add_rec_def`, and polymorphic `Z3_mk_app`",
+    "files": [
+      [
+        "src/api/api_special_relations.cpp",
+        54,
+        57
+      ],
+      [
+        "src/api/api_ast.cpp",
+        155,
+        161
+      ],
+      [
+        "src/api/api_ast.cpp",
+        193,
+        203
+      ]
+    ]
+  },
+  {
+    "id": "Z3-022",
+    "sev": "High",
+    "title": "Null pointer dereference in `Z3_solver_import_model_converter` on lazily uninitialized solvers",
+    "files": [
+      [
+        "src/api/api_solver.cpp",
+        294,
+        300
+      ]
+    ]
+  },
+  {
+    "id": "Z3-023",
+    "sev": "High",
+    "title": "`CHECK_SORTS` macro omits null check, causing null deref in `Z3_mk_func_decl`",
+    "files": [
+      [
+        "src/api/api_context.h",
+        277,
+        277
+      ],
+      [
+        "src/api/api_ast.cpp",
+        229,
+        229
+      ]
+    ]
+  },
+  {
+    "id": "Z3-024",
+    "sev": "High",
+    "title": "Unchecked array index in `z3_replayer` `@` directive causes heap OOB read via `z3 -log`",
+    "files": [
+      [
+        "src/api/z3_replayer.cpp",
+        560,
+        570
+      ]
+    ]
+  },
+  {
+    "id": "Z3-025",
+    "sev": "High",
+    "title": "Null pointer dereference in `cmd_context::get_consequences` when `m_solver == nullptr`",
+    "files": [
+      [
+        "src/cmd_context/cmd_context.cpp",
+        1853,
+        1858
+      ]
+    ]
+  },
+  {
+    "id": "Z3-026",
+    "sev": "High",
+    "title": "Null pointer dereference in `poly_factor_cmd::execute` when `(poly/factor)` called with 0 args",
+    "files": [
+      [
+        "src/cmd_context/extra_cmds/polynomial_cmds.cpp",
+        231,
+        235
+      ]
+    ]
+  },
+  {
+    "id": "Z3-027",
+    "sev": "Medium",
+    "title": "Type confusion in `Z3_optimize_maximize`/`minimize` casting `AST_VAR` to `app*`",
+    "files": [
+      [
+        "src/api/api_opt.cpp",
+        103,
+        121
+      ]
+    ]
+  },
+  {
+    "id": "Z3-028",
+    "sev": "Medium",
+    "title": "Stale scanner `m_id` checked without `curr_is_identifier()` crashes debug and rejects valid SMT-LIB2",
+    "files": [
+      [
+        "src/parsers/smt2/smt2parser.cpp",
+        419,
+        419
+      ],
+      [
+        "src/parsers/smt2/smt2parser.cpp",
+        1013,
+        1013
+      ],
+      [
+        "src/parsers/smt2/smt2parser.cpp",
+        1396,
+        1397
+      ],
+      [
+        "src/parsers/smt2/smt2parser.cpp",
+        1673,
+        1673
+      ],
+      [
+        "src/parsers/smt2/smt2scanner.cpp",
+        38,
+        49
+      ],
+      [
+        "src/parsers/smt2/smt2scanner.cpp",
+        211,
+        211
+      ],
+      [
+        "src/parsers/smt2/smt2scanner.cpp",
+        230,
+        264
+      ]
+    ]
+  },
+  {
+    "id": "Z3-029",
+    "sev": "Critical",
+    "title": "`seq_rewriter::is_suffix` omits `lens.size() == 1`, causing unsound `str.substr` folding (`unsat` \u2192 `sat`)",
+    "files": [
+      [
+        "src/ast/rewriter/seq_rewriter.cpp",
+        691,
+        700
+      ],
+      [
+        "src/ast/rewriter/seq_rewriter.cpp",
+        966,
+        971
+      ]
+    ]
+  },
+  {
+    "id": "Z3-030",
+    "sev": "Critical",
+    "title": "De Bruijn variable capture in `array_rewriter::mk_eq_core` & `mk_map_core`, plus `:expand-store-eq` bug",
+    "files": [
+      [
+        "src/ast/rewriter/array_rewriter.cpp",
+        834,
+        839
+      ],
+      [
+        "src/ast/rewriter/array_rewriter.cpp",
+        480,
+        495
+      ],
+      [
+        "src/ast/rewriter/array_rewriter.cpp",
+        881,
+        888
+      ]
+    ]
+  },
+  {
+    "id": "Z3-031",
+    "sev": "Critical",
+    "title": "`bound_simplifier` asserts `(div y z) >= 0` without checking `y >= 0` (`sat` \u2192 `unsat`)",
+    "files": [
+      [
+        "src/ast/simplifiers/bound_simplifier.cpp",
+        404,
+        419
+      ]
+    ]
+  },
+  {
+    "id": "Z3-032",
+    "sev": "Critical",
+    "title": "`fpa2bv_converter::mk_to_fp_unsigned` exponent wraparound (`unsat` \u2192 `sat`) and `mk_to_fp_signed` OOB extract",
+    "files": [
+      [
+        "src/ast/fpa/fpa2bv_converter.cpp",
+        3093,
+        3093
+      ],
+      [
+        "src/ast/fpa/fpa2bv_converter.cpp",
+        3224,
+        3224
+      ],
+      [
+        "src/ast/fpa/fpa2bv_converter.cpp",
+        3232,
+        3232
+      ],
+      [
+        "src/ast/fpa/fpa2bv_converter.cpp",
+        3403,
+        3412
+      ]
+    ]
+  },
+  {
+    "id": "Z3-033",
+    "sev": "Critical",
+    "title": "`bv_rewriter` unsoundly combines `ext_rotate_left`/`right` via `bvadd`/`bvsub` for non-pow2 widths",
+    "files": [
+      [
+        "src/ast/rewriter/bv_rewriter.cpp",
+        2263,
+        2270
+      ],
+      [
+        "src/ast/rewriter/bv_rewriter.cpp",
+        2287,
+        2294
+      ]
+    ]
+  },
+  {
+    "id": "Z3-034",
+    "sev": "Critical",
+    "title": "`bit_blaster_rewriter` `:blast_quant true` drops shift on non-BV vars (variable capture & sort corruption)",
+    "files": [
+      [
+        "src/ast/rewriter/bit_blaster/bit_blaster_rewriter.cpp",
+        579,
+        638
+      ]
+    ]
+  },
+  {
+    "id": "Z3-035",
+    "sev": "Critical",
+    "title": "`macro-finder` tactic fails to revert `unsafe_macros()` used in `as-array`/`map` (`unsat` \u2192 `sat`)",
+    "files": [
+      [
+        "src/ast/macros/macro_finder.cpp",
+        311,
+        336
+      ],
+      [
+        "src/ast/macros/quasi_macros.cpp",
+        365,
+        402
+      ]
+    ]
+  },
+  {
+    "id": "Z3-036",
+    "sev": "Critical",
+    "title": "`bv2int_translator` omits `abs` in `OP_BSMOD`, causing unsound `sat` under `smt.bv.solver=2`",
+    "files": [
+      [
+        "src/ast/rewriter/bv2int_translator.cpp",
+        436,
+        456
+      ],
+      [
+        "src/ast/rewriter/arith_rewriter.cpp",
+        1576,
+        1592
+      ],
+      [
+        "src/ast/rewriter/bv2int_translator.cpp",
+        222,
+        226
+      ],
+      [
+        "src/ast/rewriter/bv2int_translator.cpp",
+        346,
+        350
+      ]
+    ]
+  },
+  {
+    "id": "Z3-037",
+    "sev": "Critical",
+    "title": "Heap buffer overflow write in `sls::bv_fixed` (`OP_BMUL`) and signed overflow UB in `sls::bv_valuation::set_bw`",
+    "files": [
+      [
+        "src/ast/sls/sls_bv_fixed.cpp",
+        419,
+        424
+      ],
+      [
+        "src/ast/sls/sls_bv_fixed.cpp",
+        460,
+        469
+      ],
+      [
+        "src/ast/sls/sls_bv_valuation.cpp",
+        28,
+        28
+      ],
+      [
+        "src/ast/sls/sls_bv_valuation.cpp",
+        173,
+        173
+      ]
+    ]
+  },
+  {
+    "id": "Z3-038",
+    "sev": "Critical",
+    "title": "Stack use-after-return in `euf::specrel_plugin::register_node` via `[&]` capture of local `p`",
+    "files": [
+      [
+        "src/ast/euf/euf_specrel_plugin.cpp",
+        29,
+        43
+      ],
+      [
+        "src/ast/euf/euf_specrel_plugin.cpp",
+        60,
+        64
+      ]
+    ]
+  },
+  {
+    "id": "Z3-039",
+    "sev": "Critical",
+    "title": "Inverted cache check in `ast_translation::push_frame` causes null deref translating polymorphic functions",
+    "files": [
+      [
+        "src/ast/ast_translation.cpp",
+        67,
+        75
+      ],
+      [
+        "src/ast/ast_translation.cpp",
+        163,
+        166
+      ]
+    ]
+  },
+  {
+    "id": "Z3-040",
+    "sev": "Critical",
+    "title": "`array_decl_plugin::mk_array_ext` type-confuses non-array sort params (`bad_variant_access`) and hits `UNREACHABLE()`",
+    "files": [
+      [
+        "src/ast/array_decl_plugin.cpp",
+        298,
+        314
+      ],
+      [
+        "src/ast/array_decl_plugin.cpp",
+        467,
+        475
+      ]
+    ]
+  },
+  {
+    "id": "Z3-041",
+    "sev": "High",
+    "title": "Out-of-bounds read `domain[1]` with `arity == 1` in `fpa_decl_plugin::mk_to_fp`",
+    "files": [
+      [
+        "src/ast/fpa_decl_plugin.cpp",
+        526,
+        538
+      ]
+    ]
+  },
+  {
+    "id": "Z3-042",
+    "sev": "High",
+    "title": "`fpa2bv_rewriter` leaks `m_bindings` and produces ill-sorted `lambda` binding Float vars",
+    "files": [
+      [
+        "src/ast/fpa/fpa2bv_rewriter.cpp",
+        182,
+        208
+      ],
+      [
+        "src/ast/fpa/fpa2bv_rewriter.cpp",
+        249,
+        277
+      ]
+    ]
+  },
+  {
+    "id": "Z3-043",
+    "sev": "High",
+    "title": "`demodulator_simplifier::reschedule_demodulators` asserts `f == p.first->get_decl()` on RHS occurrences",
+    "files": [
+      [
+        "src/ast/simplifiers/demodulator_simplifier.cpp",
+        160,
+        187
+      ]
+    ]
+  },
+  {
+    "id": "Z3-044",
+    "sev": "High",
+    "title": "Unchecked `to_app` on quantifier in `extract_eqs` and missing `else` / ignored `m_allow_bool` in `solve_context_eqs`",
+    "files": [
+      [
+        "src/ast/simplifiers/extract_eqs.cpp",
+        107,
+        128
+      ],
+      [
+        "src/ast/simplifiers/solve_context_eqs.cpp",
+        207,
+        207
+      ],
+      [
+        "src/ast/simplifiers/solve_context_eqs.cpp",
+        267,
+        286
+      ]
+    ]
+  },
+  {
+    "id": "Z3-045",
+    "sev": "High",
+    "title": "`fpa_rewriter::mk_to_ieee_bv` constructs 0-width BV for `(_ NaN 2 2)` under `rewriter.hi_fp_unspecified=true`",
+    "files": [
+      [
+        "src/ast/rewriter/fpa_rewriter.cpp",
+        780,
+        780
+      ]
+    ]
+  },
+  {
+    "id": "Z3-046",
+    "sev": "High",
+    "title": "Unchecked `to_app(r)` on labeled quantifier in `nnf::imp::process_label` with proofs enabled",
+    "files": [
+      [
+        "src/ast/normal_forms/nnf.cpp",
+        698,
+        703
+      ],
+      [
+        "src/ast/normal_forms/nnf.cpp",
+        452,
+        461
+      ]
+    ]
+  },
+  {
+    "id": "Z3-047",
+    "sev": "High",
+    "title": "Infinite OOB inner loop in `distinct` (`i < args.size()`) and null `m_model` deref in `sls::datatype_plugin`",
+    "files": [
+      [
+        "src/ast/sls/sls_datatype_plugin.cpp",
+        869,
+        878
+      ],
+      [
+        "src/ast/sls/sls_datatype_plugin.cpp",
+        446,
+        446
+      ],
+      [
+        "src/ast/sls/sls_datatype_plugin.cpp",
+        970,
+        970
+      ]
+    ]
+  },
+  {
+    "id": "Z3-048",
+    "sev": "High",
+    "title": "Unsigned underflow infinite loop / OOM in `sls::seq_plugin` for `str.replace_all` with empty pattern",
+    "files": [
+      [
+        "src/ast/sls/sls_seq_plugin.cpp",
+        460,
+        483
+      ]
+    ]
+  },
+  {
+    "id": "Z3-049",
+    "sev": "High",
+    "title": "Input/output buffer aliasing in n-ary `OP_BMUL` in `sls::bv_eval` always computes `0`",
+    "files": [
+      [
+        "src/ast/sls/sls_bv_eval.cpp",
+        442,
+        452
+      ],
+      [
+        "src/ast/sls/sls_bv_eval.cpp",
+        811,
+        818
+      ]
+    ]
+  },
+  {
+    "id": "Z3-050",
+    "sev": "High",
+    "title": "Signed 32-bit integer overflow in `bv_decl_plugin` (`get_extend_size` / `OP_REPEAT`) wraps BV width",
+    "files": [
+      [
+        "src/ast/bv_decl_plugin.cpp",
+        416,
+        416
+      ],
+      [
+        "src/ast/bv_decl_plugin.cpp",
+        421,
+        430
+      ],
+      [
+        "src/ast/bv_decl_plugin.cpp",
+        613,
+        621
+      ]
+    ]
+  },
+  {
+    "id": "Z3-051",
+    "sev": "Critical",
+    "title": "Missing `num_user_scopes() == 0` guard in `pb::solver::convert_eq_k` leaks constraints across `pop`",
+    "files": [
+      [
+        "src/sat/smt/pb_internalize.cpp",
+        251,
+        277
+      ],
+      [
+        "src/sat/smt/pb_solver.cpp",
+        1918,
+        1937
+      ]
+    ]
+  },
+  {
+    "id": "Z3-052",
+    "sev": "Critical",
+    "title": "Unsound `default(store(a,u,v)) == default(a)` axiom for unitary-domain arrays (`sat` \u2192 `unsat`)",
+    "files": [
+      [
+        "src/sat/smt/array_axioms.cpp",
+        402,
+        453
+      ]
+    ]
+  },
+  {
+    "id": "Z3-053",
+    "sev": "Critical",
+    "title": "Inverted polarity (`~signx`) in int-blasted `bvashr` axiom in `arith_axioms` causes infinite loop / unsoundness",
+    "files": [
+      [
+        "src/sat/smt/arith_axioms.cpp",
+        310,
+        339
+      ],
+      [
+        "src/smt/theory_lra.cpp",
+        2587,
+        2616
+      ]
+    ]
+  },
+  {
+    "id": "Z3-054",
+    "sev": "Critical",
+    "title": "`dt::solver::check` skips splits when `smt.dt_lazy_splits=0`, causing null deref (`con->num_args()`)",
+    "files": [
+      [
+        "src/sat/smt/dt_solver.cpp",
+        724,
+        748
+      ],
+      [
+        "src/sat/smt/dt_solver.cpp",
+        763,
+        792
+      ]
+    ]
+  },
+  {
+    "id": "Z3-055",
+    "sev": "Critical",
+    "title": "`specrel::solver::visit` skips foreign subterm internalization (`unsat` \u2192 `sat` and `to_app` crash)",
+    "files": [
+      [
+        "src/sat/smt/specrel_solver.cpp",
+        87,
+        108
+      ]
+    ]
+  },
+  {
+    "id": "Z3-056",
+    "sev": "Critical",
+    "title": "`anf_simplifier` runs after `reinit_assumptions()` at `scope_lvl() == 1`, crashing/corrupting clauses",
+    "files": [
+      [
+        "src/sat/sat_solver.cpp",
+        2085,
+        2109
+      ],
+      [
+        "src/sat/sat_anf_simplifier.cpp",
+        65,
+        106
+      ],
+      [
+        "src/sat/sat_elim_eqs.cpp",
+        158,
+        197
+      ],
+      [
+        "src/sat/sat_xor_finder.cpp",
+        126,
+        126
+      ]
+    ]
+  },
+  {
+    "id": "Z3-057",
+    "sev": "High",
+    "title": "Local variable `x` shadows parameter `x` in `arith::solver::mk_power_axiom` (guaranteed null deref)",
+    "files": [
+      [
+        "src/sat/smt/arith_axioms.cpp",
+        69,
+        91
+      ]
+    ]
+  },
+  {
+    "id": "Z3-058",
+    "sev": "High",
+    "title": "Non-Bool terms passed to `mk_literal` in `bv::solver::internalize_interp` when `rewriter.hi_div0=false`",
+    "files": [
+      [
+        "src/sat/smt/bv_internalize.cpp",
+        539,
+        560
+      ]
+    ]
+  },
+  {
+    "id": "Z3-059",
+    "sev": "High",
+    "title": "`ddfw_wrapper` produces empty/undersized model causing OOB read / assertion failure in `sat_tactic`",
+    "files": [
+      [
+        "src/sat/sat_ddfw_wrapper.cpp",
+        31,
+        84
+      ],
+      [
+        "src/ast/sls/sat_ddfw.cpp",
+        235,
+        235
+      ],
+      [
+        "src/ast/sls/sat_ddfw.cpp",
+        389,
+        389
+      ],
+      [
+        "src/sat/tactic/sat_tactic.cpp",
+        125,
+        125
+      ]
+    ]
+  },
+  {
+    "id": "Z3-060",
+    "sev": "High",
+    "title": "Binary DRAT emission omits learned units and terminating empty clause (`sat_drat.cpp:671-688`)",
+    "files": [
+      [
+        "src/sat/sat_drat.cpp",
+        671,
+        688
+      ],
+      [
+        "src/sat/sat_solver.cpp",
+        425,
+        425
+      ],
+      [
+        "src/sat/sat_solver.cpp",
+        440,
+        440
+      ],
+      [
+        "src/sat/sat_solver.cpp",
+        2454,
+        2454
+      ]
+    ]
+  },
+  {
+    "id": "Z3-061",
+    "sev": "High",
+    "title": "`sat.threads=0` with `sat.ddfw.threads=1` underflows `num_extra_solvers` to `UINT_MAX` (32 GB OOM abort)",
+    "files": [
+      [
+        "src/sat/sat_config.cpp",
+        98,
+        98
+      ],
+      [
+        "src/sat/sat_solver.cpp",
+        1244,
+        1251
+      ],
+      [
+        "src/sat/sat_solver.cpp",
+        1470,
+        1470
+      ],
+      [
+        "src/sat/sat_solver.cpp",
+        1503,
+        1503
+      ],
+      [
+        "src/sat/sat_parallel.cpp",
+        101,
+        104
+      ]
+    ]
+  },
+  {
+    "id": "Z3-062",
+    "sev": "High",
+    "title": "`sat.lookahead.reward=ternary` hits `UNREACHABLE()` on any >=4-literal clause",
+    "files": [
+      [
+        "src/sat/sat_lookahead.cpp",
+        1063,
+        1063
+      ],
+      [
+        "src/sat/sat_lookahead.cpp",
+        1483,
+        1508
+      ]
+    ]
+  },
+  {
+    "id": "Z3-063",
+    "sev": "Critical",
+    "title": "`theory_special_relations` tree-order disequality check computes `visited` from wrong endpoint (`sat` \u2192 `unsat`)",
+    "files": [
+      [
+        "src/smt/theory_special_relations.cpp",
+        411,
+        449
+      ]
+    ]
+  },
+  {
+    "id": "Z3-064",
+    "sev": "Critical",
+    "title": "`theory_special_relations` unguarded `next(x,y) != x, y` TC axioms cause false `unsat` on 2-element sorts",
+    "files": [
+      [
+        "src/smt/theory_special_relations.cpp",
+        114,
+        130
+      ],
+      [
+        "src/smt/theory_special_relations.cpp",
+        356,
+        382
+      ]
+    ]
+  },
+  {
+    "id": "Z3-065",
+    "sev": "Critical",
+    "title": "Inverted polarity in `theory_datatype` `:subterm` recursive axiom (`sat` \u2192 `unsat`)",
+    "files": [
+      [
+        "src/smt/theory_datatype.cpp",
+        559,
+        580
+      ],
+      [
+        "src/smt/theory_datatype.cpp",
+        597,
+        645
+      ]
+    ]
+  },
+  {
+    "id": "Z3-066",
+    "sev": "Critical",
+    "title": "`theory_char` forces `b <= 0x2FFFF` on `char.from_bv(b)`, causing false `unsat` for valid 18-bit BVs",
+    "files": [
+      [
+        "src/smt/theory_char.cpp",
+        288,
+        299
+      ],
+      [
+        "src/smt/theory_char.cpp",
+        329,
+        332
+      ],
+      [
+        "src/smt/theory_char.cpp",
+        381,
+        393
+      ]
+    ]
+  },
+  {
+    "id": "Z3-067",
+    "sev": "Critical",
+    "title": "Missing BV\u2013EUF theory combination in `theory_intblast` (`smt.bv.solver=2`) causes unsound `sat`",
+    "files": [
+      [
+        "src/smt/theory_intblast.cpp",
+        39,
+        80
+      ],
+      [
+        "src/smt/theory_intblast.cpp",
+        142,
+        165
+      ],
+      [
+        "src/smt/theory_intblast.h",
+        66,
+        67
+      ]
+    ]
+  },
+  {
+    "id": "Z3-068",
+    "sev": "Critical",
+    "title": "Short-circuit OR in `theory_array_full::instantiate_default_store_axiom` skips `default(B) = B[eps]` (`unsat` \u2192 `sat`)",
+    "files": [
+      [
+        "src/smt/theory_array_full.cpp",
+        694,
+        729
+      ]
+    ]
+  },
+  {
+    "id": "Z3-069",
+    "sev": "High",
+    "title": "`smt_consequences` calls `m.mk_const(C)` on non-nullary datatype constructor recognizer",
+    "files": [
+      [
+        "src/smt/smt_consequences.cpp",
+        85,
+        91
+      ],
+      [
+        "src/smt/smt_consequences.cpp",
+        168,
+        196
+      ],
+      [
+        "src/smt/smt_consequences.cpp",
+        257,
+        269
+      ]
+    ]
+  },
+  {
+    "id": "Z3-070",
+    "sev": "High",
+    "title": "`theory_recfun::assert_body_axiom` hardcodes `Bool` sort for fresh constant equated to non-Bool RHS",
+    "files": [
+      [
+        "src/smt/theory_recfun.cpp",
+        380,
+        387
+      ]
+    ]
+  },
+  {
+    "id": "Z3-071",
+    "sev": "High",
+    "title": "`smt_implied_equalities` proceeds on `l_undef` with null model (assertion crash / null deref)",
+    "files": [
+      [
+        "src/smt/smt_implied_equalities.cpp",
+        169,
+        173
+      ],
+      [
+        "src/smt/smt_implied_equalities.cpp",
+        286,
+        317
+      ],
+      [
+        "src/smt/smt_implied_equalities.cpp",
+        338,
+        358
+      ]
+    ]
+  },
+  {
+    "id": "Z3-072",
+    "sev": "High",
+    "title": "Guaranteed null pointer dereference in `smt_tactic::user_propagate_register_on_binding`",
+    "files": [
+      [
+        "src/smt/tactic/smt_tactic_core.cpp",
+        211,
+        211
+      ],
+      [
+        "src/smt/tactic/smt_tactic_core.cpp",
+        337,
+        340
+      ],
+      [
+        "src/smt/tactic/smt_tactic_core.cpp",
+        405,
+        407
+      ]
+    ]
+  },
+  {
+    "id": "Z3-073",
+    "sev": "Critical",
+    "title": "Unsound exponentiation lemmas in `nla::powers::check` (`x >= 3 => x^y > y + 1` fails for `y < 0`)",
+    "files": [
+      [
+        "src/math/lp/nla_powers.cpp",
+        130,
+        136
+      ],
+      [
+        "src/math/lp/nla_powers.cpp",
+        169,
+        170
+      ],
+      [
+        "src/math/lp/nla_powers.cpp",
+        182,
+        196
+      ],
+      [
+        "src/math/lp/nla_powers.cpp",
+        229,
+        230
+      ]
+    ]
+  },
+  {
+    "id": "Z3-074",
+    "sev": "Critical",
+    "title": "`bit_matrix::col_iterator::next()` skips set bits at multiples of 64; `row_iterator` reads OOB on empty matrix",
+    "files": [
+      [
+        "src/math/simplex/bit_matrix.cpp",
+        30,
+        38
+      ],
+      [
+        "src/math/simplex/bit_matrix.h",
+        81,
+        81
+      ]
+    ]
+  },
+  {
+    "id": "Z3-075",
+    "sev": "High",
+    "title": "`dd::fdd::sup`/`inf` returns elements outside set when variables are skipped; `contains` crashes on `false_bdd`",
+    "files": [
+      [
+        "src/math/dd/dd_fdd.cpp",
+        123,
+        138
+      ],
+      [
+        "src/math/dd/dd_fdd.cpp",
+        221,
+        233
+      ],
+      [
+        "src/math/dd/dd_fdd.cpp",
+        285,
+        297
+      ]
+    ]
+  },
+  {
+    "id": "Z3-076",
+    "sev": "Critical",
+    "title": "`injectivity_tactic` leaks `m_map` and rewriter cache across sibling subgoals (`sat` \u2192 `unsat`)",
+    "files": [
+      [
+        "src/tactic/core/injectivity_tactic.cpp",
+        254,
+        281
+      ]
+    ]
+  },
+  {
+    "id": "Z3-077",
+    "sev": "Critical",
+    "title": "`special-relations` tactic replaces built-in `<=` with uninterpreted `linear-order` (`unsat` \u2192 `sat`)",
+    "files": [
+      [
+        "src/tactic/core/special_relations_tactic.cpp",
+        25,
+        39
+      ],
+      [
+        "src/tactic/core/special_relations_tactic.cpp",
+        137,
+        172
+      ]
+    ]
+  },
+  {
+    "id": "Z3-078",
+    "sev": "Critical",
+    "title": "`reduce-args` breaks congruence between `(f x)` and `(f (bvadd #x0 x))` (`unsat` \u2192 `sat`)",
+    "files": [
+      [
+        "src/tactic/core/reduce_args_tactic.cpp",
+        73,
+        86
+      ],
+      [
+        "src/tactic/core/reduce_args_tactic.cpp",
+        180,
+        203
+      ],
+      [
+        "src/tactic/core/reduce_args_tactic.cpp",
+        335,
+        348
+      ]
+    ]
+  },
+  {
+    "id": "Z3-079",
+    "sev": "Critical",
+    "title": "`pb-preprocess` resolution ignores zero coefficients in `pbge` (`unsat` \u2192 `sat`)",
+    "files": [
+      [
+        "src/tactic/core/pb_preprocess_tactic.cpp",
+        123,
+        125
+      ],
+      [
+        "src/tactic/core/pb_preprocess_tactic.cpp",
+        472,
+        536
+      ]
+    ]
+  },
+  {
+    "id": "Z3-080",
+    "sev": "Critical",
+    "title": "`eq2bv` unsoundly imposes `x >= 0` on upper-bounded-only `Int` variables (`sat` \u2192 `unsat`)",
+    "files": [
+      [
+        "src/tactic/arith/eq2bv_tactic.cpp",
+        241,
+        258
+      ],
+      [
+        "src/tactic/arith/eq2bv_tactic.cpp",
+        287,
+        311
+      ]
+    ]
+  },
+  {
+    "id": "Z3-081",
+    "sev": "Critical",
+    "title": "`fix-dl-var` early `return` abandons `m_todo` validation of nested non-DL terms (`sat` \u2192 `unsat`)",
+    "files": [
+      [
+        "src/tactic/arith/fix_dl_var_tactic.cpp",
+        87,
+        92
+      ],
+      [
+        "src/tactic/arith/fix_dl_var_tactic.cpp",
+        145,
+        176
+      ]
+    ]
+  },
+  {
+    "id": "Z3-082",
+    "sev": "Critical",
+    "title": "`pb2bv` treats any non-zero LHS numeral equality `(= 5 x)` on 0-1 var as `(= 1 x)` (`unsat` \u2192 `sat`)",
+    "files": [
+      [
+        "src/tactic/arith/pb2bv_tactic.cpp",
+        642,
+        671
+      ]
+    ]
+  },
+  {
+    "id": "Z3-083",
+    "sev": "Critical",
+    "title": "`diff-neq` unclamped `m_max_neg_k` truncates 64-bit bounds to 32-bit `int` (`unsat` \u2192 `sat`)",
+    "files": [
+      [
+        "src/tactic/arith/diff_neq_tactic.cpp",
+        62,
+        67
+      ],
+      [
+        "src/tactic/arith/diff_neq_tactic.cpp",
+        95,
+        105
+      ],
+      [
+        "src/tactic/arith/diff_neq_tactic.cpp",
+        136,
+        138
+      ]
+    ]
+  },
+  {
+    "id": "Z3-084",
+    "sev": "High",
+    "title": "`fm_model_converter` produces invalid models on mixed algebraic/rational bounds (plus `del_constraint` use-after-destroy)",
+    "files": [
+      [
+        "src/tactic/arith/fm_tactic.cpp",
+        137,
+        163
+      ],
+      [
+        "src/tactic/arith/fm_tactic.cpp",
+        229,
+        289
+      ],
+      [
+        "src/tactic/arith/fm_tactic.cpp",
+        563,
+        565
+      ],
+      [
+        "src/qe/lite/qe_lite_tactic.cpp",
+        1139,
+        1141
+      ]
+    ]
+  },
+  {
+    "id": "Z3-085",
+    "sev": "High",
+    "title": "`bvarray2uf` passes BV-sorted `e` instead of array-sorted `f_a` to `mk_uf_for_array` on BV-array `ite`",
+    "files": [
+      [
+        "src/tactic/bv/bvarray2uf_rewriter.cpp",
+        175,
+        183
+      ]
+    ]
+  },
+  {
+    "id": "Z3-086",
+    "sev": "High",
+    "title": "`recover-01` unclamped `recover_01_max_bits` causes `1 << 32` shift UB and massive OOB read",
+    "files": [
+      [
+        "src/tactic/arith/recover_01_tactic.cpp",
+        85,
+        87
+      ],
+      [
+        "src/tactic/arith/recover_01_tactic.cpp",
+        240,
+        296
+      ]
+    ]
+  },
+  {
+    "id": "Z3-087",
+    "sev": "High",
+    "title": "`dt2bv` produces ill-sorted `lambda` because `check_fd::operator()(quantifier*)` is a no-op",
+    "files": [
+      [
+        "src/tactic/bv/dt2bv_tactic.cpp",
+        84,
+        90
+      ]
+    ]
+  },
+  {
+    "id": "Z3-088",
+    "sev": "Medium",
+    "title": "Stale assertion leakage across subgoals in `qfbv-sls` and `sls-smt`",
+    "files": [
+      [
+        "src/tactic/sls/sls_tactic.cpp",
+        172,
+        175
+      ],
+      [
+        "src/tactic/sls/sls_tactic.cpp",
+        212,
+        213
+      ],
+      [
+        "src/tactic/sls/sls_tactic.cpp",
+        267,
+        271
+      ]
+    ]
+  },
+  {
+    "id": "Z3-089",
+    "sev": "Critical",
+    "title": "`datalog_parser` formats `int m_curr_char` as decimal ASCII string (`'S'` \u2192 `\"83\"`), breaking `.dl` parser",
+    "files": [
+      [
+        "src/muz/fp/datalog_parser.cpp",
+        234,
+        234
+      ],
+      [
+        "src/muz/fp/datalog_parser.cpp",
+        265,
+        268
+      ],
+      [
+        "src/util/string_buffer.h",
+        91,
+        94
+      ],
+      [
+        "src/util/string_buffer.h",
+        147,
+        150
+      ]
+    ]
+  },
+  {
+    "id": "Z3-090",
+    "sev": "Critical",
+    "title": "`bmc::qlinear::get_model` (`fp.engine=qbmc`) evaluates vars at rule index `i` instead of `level` and OOBs on base rules",
+    "files": [
+      [
+        "src/muz/bmc/dl_bmc_engine.cpp",
+        275,
+        298
+      ],
+      [
+        "src/muz/bmc/dl_bmc_engine.cpp",
+        308,
+        308
+      ],
+      [
+        "src/muz/bmc/dl_bmc_engine.cpp",
+        347,
+        354
+      ]
+    ]
+  },
+  {
+    "id": "Z3-091",
+    "sev": "High",
+    "title": "`aig_exporter` omits output/tail-only predicates from `preds_bitsize` (assertion crash / state-0 aliasing)",
+    "files": [
+      [
+        "src/muz/rel/aig_exporter.cpp",
+        25,
+        39
+      ],
+      [
+        "src/muz/rel/aig_exporter.cpp",
+        60,
+        71
+      ],
+      [
+        "src/muz/rel/aig_exporter.cpp",
+        184,
+        195
+      ]
+    ]
+  },
+  {
+    "id": "Z3-092",
+    "sev": "High",
+    "title": "`ddnf::compile_eq` indexes `m_ddnfs` by constant slice width instead of variable width",
+    "files": [
+      [
+        "src/muz/ddnf/ddnf.cpp",
+        635,
+        645
+      ],
+      [
+        "src/muz/ddnf/ddnf.cpp",
+        831,
+        838
+      ]
+    ]
+  },
+  {
+    "id": "Z3-093",
+    "sev": "High",
+    "title": "`tab::imp::query` skips `query_is_tautology` on initial goal (`sat` \u2192 `unsat`) and drops disjunctive query rules",
+    "files": [
+      [
+        "src/muz/tab/tab_context.cpp",
+        1362,
+        1371
+      ],
+      [
+        "src/muz/tab/tab_context.cpp",
+        1411,
+        1417
+      ]
+    ]
+  },
+  {
+    "id": "Z3-094",
+    "sev": "High",
+    "title": "`tb::selection::andrei_select` reads `m_var_scores[idx]` OOB when predicate has no defining rules",
+    "files": [
+      [
+        "src/muz/tab/tab_context.cpp",
+        834,
+        852
+      ],
+      [
+        "src/muz/tab/tab_context.cpp",
+        911,
+        925
+      ]
+    ]
+  },
+  {
+    "id": "Z3-095",
+    "sev": "High",
+    "title": "`Z3_fixedpoint_query` clears `m_clauses`, causing `Z3_fixedpoint_get_answer` to dereference empty vector",
+    "files": [
+      [
+        "src/muz/tab/tab_context.cpp",
+        1374,
+        1401
+      ],
+      [
+        "src/muz/tab/tab_context.cpp",
+        1540,
+        1540
+      ],
+      [
+        "src/muz/tab/tab_context.cpp",
+        1567,
+        1567
+      ],
+      [
+        "src/api/api_datalog.cpp",
+        295,
+        301
+      ]
+    ]
+  },
+  {
+    "id": "Z3-096",
+    "sev": "Critical",
+    "title": "Uninitialized `psort_nw::m_t` read in `sortmax` causes UBSan invalid enum load and unsound MaxSAT",
+    "files": [
+      [
+        "src/opt/sortmax.cpp",
+        35,
+        35
+      ],
+      [
+        "src/opt/sortmax.cpp",
+        61,
+        61
+      ],
+      [
+        "src/util/sorting_network.h",
+        186,
+        188
+      ],
+      [
+        "src/util/sorting_network.h",
+        227,
+        227
+      ],
+      [
+        "src/util/sorting_network.h",
+        1364,
+        1364
+      ]
+    ]
+  },
+  {
+    "id": "Z3-097",
+    "sev": "Critical",
+    "title": "`optsmt::lex` dispatches to box-mode `symba_opt()`, returning stale models and wrong lex objectives",
+    "files": [
+      [
+        "src/opt/optsmt.cpp",
+        508,
+        519
+      ],
+      [
+        "src/opt/optsmt.cpp",
+        305,
+        367
+      ]
+    ]
+  },
+  {
+    "id": "Z3-098",
+    "sev": "Critical",
+    "title": "`app_const_arr_rewriter` unconditionally rewrites `C(acc(t))` \u2192 `t` without `is_C(t)` in default `qe2`",
+    "files": [
+      [
+        "src/qe/qe_mbp.cpp",
+        99,
+        123
+      ]
+    ]
+  },
+  {
+    "id": "Z3-099",
+    "sev": "Critical",
+    "title": "`array_plugin::solve_store` iterates nested stores backwards, breaking aliasing indices (`sat` \u2192 `unsat`)",
+    "files": [
+      [
+        "src/qe/qe_array_plugin.cpp",
+        212,
+        259
+      ]
+    ]
+  },
+  {
+    "id": "Z3-100",
+    "sev": "Critical",
+    "title": "`datatype_plugin::subst_rec` drops recognizer guards and treats nullary constructors as infinite (`unsat` \u2192 `sat`)",
+    "files": [
+      [
+        "src/qe/qe_datatype_plugin.cpp",
+        703,
+        734
+      ],
+      [
+        "src/qe/qe_datatype_plugin.cpp",
+        656,
+        661
+      ]
+    ]
+  },
+  {
+    "id": "Z3-101",
+    "sev": "Critical",
+    "title": "`mbp_array_tg` compares `a1 == e2` instead of `a1 == e2->get_arg(0)`, dropping array Ackermannization & causing OOB",
+    "files": [
+      [
+        "src/qe/mbp/mbp_arrays_tg.cpp",
+        412,
+        433
+      ]
+    ]
+  },
+  {
+    "id": "Z3-102",
+    "sev": "High",
+    "title": "`mbp_dt_tg::rm_accessor` unconditionally equates `v` to accessor's constructor even when `m_mdl(v)` differs",
+    "files": [
+      [
+        "src/qe/mbp/mbp_dt_tg.cpp",
+        75,
+        105
+      ],
+      [
+        "src/qe/mbp/mbp_dt_tg.cpp",
+        163,
+        170
+      ]
+    ]
+  },
+  {
+    "id": "Z3-103",
+    "sev": "Critical",
+    "title": "Sign-flip in `pb::solver::round_to_one`, spurious `m_overflow` in `get_coeff(literal)`, and signed cut overflow",
+    "files": [
+      [
+        "src/sat/smt/pb_solver.cpp",
+        544,
+        550
+      ],
+      [
+        "src/sat/smt/pb_solver.cpp",
+        888,
+        904
+      ],
+      [
+        "src/sat/smt/pb_solver.cpp",
+        1253,
+        1268
+      ]
+    ]
+  },
+  {
+    "id": "Z3-104",
+    "sev": "Critical",
+    "title": "`fpa::solver` conjoins mandatory side conditions inside negatable atom equivalence",
+    "files": [
+      [
+        "src/sat/smt/fpa_solver.cpp",
+        176,
+        192
+      ],
+      [
+        "src/sat/smt/fpa_solver.cpp",
+        299,
+        317
+      ]
+    ]
+  },
+  {
+    "id": "Z3-105",
+    "sev": "Critical",
+    "title": "`sat::local_search` treats non-conflicting binary propagation queue overflow as UNSAT proof",
+    "files": [
+      [
+        "src/sat/sat_local_search.cpp",
+        181,
+        216
+      ],
+      [
+        "src/sat/sat_local_search.cpp",
+        654,
+        669
+      ]
+    ]
+  },
+  {
+    "id": "Z3-106",
+    "sev": "High",
+    "title": "Uninitialized `m_zero_var`/`m_one_var` (`UINT_MAX`) and `lpvar`/`theory_var` confusion in `arith::solver::add_equality`",
+    "files": [
+      [
+        "src/sat/smt/arith_solver.cpp",
+        308,
+        322
+      ],
+      [
+        "src/sat/smt/arith_solver.cpp",
+        1555,
+        1556
+      ],
+      [
+        "src/sat/smt/arith_internalize.cpp",
+        311,
+        314
+      ]
+    ]
+  },
+  {
+    "id": "Z3-107",
+    "sev": "High",
+    "title": "Heap UAF via `m_selects_domain` reallocation during range-for in `array::solver::collect_selects`",
+    "files": [
+      [
+        "src/sat/smt/array_model.cpp",
+        198,
+        207
+      ],
+      [
+        "src/sat/smt/array_model.cpp",
+        221,
+        221
+      ],
+      [
+        "src/sat/smt/array_model.cpp",
+        246,
+        257
+      ]
+    ]
+  },
+  {
+    "id": "Z3-108",
+    "sev": "High",
+    "title": "Heap UAF on dangling `watch_list&` across base-level `try_lit` in `sat::probing::process_core`",
+    "files": [
+      [
+        "src/sat/sat_probing.cpp",
+        169,
+        189
+      ]
+    ]
+  },
+  {
+    "id": "Z3-109",
+    "sev": "High",
+    "title": "Heap UAF via `m_occurs` reallocation during range-for in `euf::relevancy::propagate_relevant`",
+    "files": [
+      [
+        "src/sat/smt/euf_relevancy.cpp",
+        251,
+        282
+      ],
+      [
+        "src/sat/smt/euf_relevancy.h",
+        136,
+        136
+      ]
+    ]
+  },
+  {
+    "id": "Z3-110",
+    "sev": "High",
+    "title": "Heap UAF in `sat::solver::bounded_local_search()` from inverted `scoped_limits`/`scoped_ls` destruction order",
+    "files": [
+      [
+        "src/sat/sat_solver.cpp",
+        1365,
+        1378
+      ],
+      [
+        "src/util/rlimit.cpp",
+        86,
+        91
+      ]
+    ]
+  },
+  {
+    "id": "Z3-111",
+    "sev": "High",
+    "title": "Use-after-destroy of `reslimit` in `sat::parallel::reset()`, off-by-one `_get_clauses()`, and `ex_msg` data race",
+    "files": [
+      [
+        "src/sat/sat_parallel.cpp",
+        93,
+        99
+      ],
+      [
+        "src/sat/sat_parallel.cpp",
+        188,
+        188
+      ],
+      [
+        "src/sat/sat_parallel.h",
+        67,
+        73
+      ],
+      [
+        "src/sat/sat_solver.cpp",
+        1562,
+        1569
+      ]
+    ]
+  },
+  {
+    "id": "Z3-112",
+    "sev": "Medium",
+    "title": "`tmp_clause::set()` never updates `m_approx` bloom filter on reuse, breaking binary subsumption",
+    "files": [
+      [
+        "src/sat/sat_clause.cpp",
+        138,
+        157
+      ],
+      [
+        "src/sat/sat_simplifier.cpp",
+        435,
+        435
+      ],
+      [
+        "src/sat/sat_simplifier.cpp",
+        489,
+        493
+      ],
+      [
+        "src/sat/sat_clause.h",
+        118,
+        121
+      ]
+    ]
+  },
+  {
+    "id": "Z3-113",
+    "sev": "Critical",
+    "title": "`nla::intervals::conflict_u_l` checks `b.m_upper_open` instead of `b.m_lower_open`, dropping conflict deps",
+    "files": [
+      [
+        "src/math/lp/nla_intervals.cpp",
+        337,
+        354
+      ],
+      [
+        "src/math/lp/nla_intervals.cpp",
+        371,
+        383
+      ]
+    ]
+  },
+  {
+    "id": "Z3-114",
+    "sev": "Critical",
+    "title": "`grobner::normalize_coeff` skips `>1000`-bit monomials while dividing others, corrupting equations",
+    "files": [
+      [
+        "src/math/grobner/grobner.cpp",
+        468,
+        488
+      ]
+    ]
+  },
+  {
+    "id": "Z3-115",
+    "sev": "Critical",
+    "title": "Inverted `is_int(monomial)` and three unsound propagation bugs in `subpaving::context_t`",
+    "files": [
+      [
+        "src/math/subpaving/subpaving_t_def.h",
+        658,
+        665
+      ],
+      [
+        "src/math/subpaving/subpaving_t_def.h",
+        1410,
+        1450
+      ],
+      [
+        "src/math/subpaving/subpaving_t_def.h",
+        1517,
+        1522
+      ],
+      [
+        "src/math/subpaving/subpaving_t_def.h",
+        1617,
+        1630
+      ]
+    ]
+  },
+  {
+    "id": "Z3-116",
+    "sev": "High",
+    "title": "Inward rounding in `interval_manager::div_mul` / odd `power` and uninitialized `one` (`0`) in `nth_root_pos`",
+    "files": [
+      [
+        "src/math/interval/interval_def.h",
+        365,
+        374
+      ],
+      [
+        "src/math/interval/interval_def.h",
+        874,
+        911
+      ],
+      [
+        "src/math/interval/interval_def.h",
+        1366,
+        1385
+      ]
+    ]
+  },
+  {
+    "id": "Z3-117",
+    "sev": "High",
+    "title": "Missing containment check in `algebraic_numbers::compare_core` Sturm-Tarski fallback",
+    "files": [
+      [
+        "src/math/polynomial/algebraic_numbers.cpp",
+        2031,
+        2073
+      ],
+      [
+        "src/math/polynomial/upolynomial.cpp",
+        2539,
+        2549
+      ]
+    ]
+  },
+  {
+    "id": "Z3-118",
+    "sev": "High",
+    "title": "Type confusion (`rational_value` downcast) & leak in `inv_algebraic`, plus infinite loop in `power`",
+    "files": [
+      [
+        "src/math/realclosure/realclosure.cpp",
+        5658,
+        5696
+      ],
+      [
+        "src/math/realclosure/realclosure.cpp",
+        5833,
+        5847
+      ]
+    ]
+  },
+  {
+    "id": "Z3-119",
+    "sev": "High",
+    "title": "Use-after-GC / UAF in `dd::bdd_manager` (`mk_quant`/`mk_ite_rec`) and `null_pdd` GC OOB in `dd::pdd_manager`",
+    "files": [
+      [
+        "src/math/dd/dd_bdd.cpp",
+        655,
+        656
+      ],
+      [
+        "src/math/dd/dd_bdd.cpp",
+        704,
+        744
+      ],
+      [
+        "src/math/dd/dd_pdd.cpp",
+        607,
+        635
+      ],
+      [
+        "src/math/dd/dd_pdd.cpp",
+        656,
+        667
+      ],
+      [
+        "src/math/dd/dd_pdd.cpp",
+        1614,
+        1616
+      ]
+    ]
+  },
+  {
+    "id": "Z3-120",
+    "sev": "Medium",
+    "title": "`model_based_opt::def::dec_ref()` executes `++m_ref_count` instead of `--m_ref_count` (leak / wrap UAF)",
+    "files": [
+      [
+        "src/math/simplex/model_based_opt.cpp",
+        90,
+        95
+      ],
+      [
+        "src/math/simplex/model_based_opt.cpp",
+        47,
+        56
+      ]
+    ]
+  },
+  {
+    "id": "Z3-121",
+    "sev": "Critical",
+    "title": "Unscoped `m_rw` cache in `theory_fpa::pop_scope_eh()` drops side conditions across `push`/`pop`",
+    "files": [
+      [
+        "src/smt/theory_fpa.cpp",
+        275,
+        285
+      ],
+      [
+        "src/smt/theory_fpa.cpp",
+        414,
+        418
+      ],
+      [
+        "src/ast/fpa/fpa2bv_converter.cpp",
+        2787,
+        2838
+      ]
+    ]
+  },
+  {
+    "id": "Z3-122",
+    "sev": "Critical",
+    "title": "`smt_parallel::sls_worker` & `theory_sls` ignore `check-sat-assuming`, race on `ast_manager`, and leave `m_checking` set",
+    "files": [
+      [
+        "src/smt/smt_parallel.cpp",
+        67,
+        102
+      ],
+      [
+        "src/smt/smt_parallel.cpp",
+        259,
+        306
+      ],
+      [
+        "src/smt/smt_parallel.cpp",
+        572,
+        586
+      ],
+      [
+        "src/smt/theory_sls.cpp",
+        79,
+        114
+      ],
+      [
+        "src/smt/theory_sls.cpp",
+        235,
+        242
+      ]
+    ]
+  },
+  {
+    "id": "Z3-123",
+    "sev": "High",
+    "title": "Heap UAF on `m_prop` reference in `theory_user_propagator::propagate_consequence` and unchecked `(theory_bv*)` cast",
+    "files": [
+      [
+        "src/smt/theory_user_propagator.cpp",
+        203,
+        205
+      ],
+      [
+        "src/smt/theory_user_propagator.cpp",
+        220,
+        223
+      ],
+      [
+        "src/smt/theory_user_propagator.cpp",
+        311,
+        344
+      ],
+      [
+        "src/smt/theory_user_propagator.cpp",
+        376,
+        388
+      ]
+    ]
+  },
+  {
+    "id": "Z3-124",
+    "sev": "Critical",
+    "title": "Stale `bound` in `theory_pb::internalize_card` and unsound unit resolution / leaked marks in `resolve_conflict`",
+    "files": [
+      [
+        "src/smt/theory_pb.cpp",
+        784,
+        836
+      ],
+      [
+        "src/smt/theory_pb.cpp",
+        1674,
+        1690
+      ],
+      [
+        "src/smt/theory_pb.cpp",
+        1842,
+        1900
+      ]
+    ]
+  },
+  {
+    "id": "Z3-125",
+    "sev": "Critical",
+    "title": "`theory_diff_logic` / `dense_diff_logic` `mk_ineq` omits objective constant; `dense_diff_logic::value` indexes `m_assignment[v]` OOB",
+    "files": [
+      [
+        "src/smt/theory_diff_logic_def.h",
+        1302,
+        1305
+      ],
+      [
+        "src/smt/theory_diff_logic_def.h",
+        1363,
+        1383
+      ],
+      [
+        "src/smt/theory_diff_logic_def.h",
+        1411,
+        1413
+      ],
+      [
+        "src/smt/theory_dense_diff_logic_def.h",
+        848,
+        850
+      ],
+      [
+        "src/smt/theory_dense_diff_logic_def.h",
+        899,
+        909
+      ],
+      [
+        "src/smt/theory_dense_diff_logic_def.h",
+        1027,
+        1031
+      ],
+      [
+        "src/smt/theory_dense_diff_logic_def.h",
+        1104,
+        1104
+      ]
+    ]
+  },
+  {
+    "id": "Z3-126",
+    "sev": "Critical",
+    "title": "Use-after-free on temporary `expr_ref` in `evaluator_cfg::get_macro()` for polymorphic function models",
+    "files": [
+      [
+        "src/model/model_evaluator.cpp",
+        393,
+        409
+      ]
+    ]
+  },
+  {
+    "id": "Z3-127",
+    "sev": "Critical",
+    "title": "Dangling `uint_set&` trail UAF in `bv::slice` and unchecked 1-arg `m_canonical.get()` OOB read in `euf::completion`",
+    "files": [
+      [
+        "src/ast/simplifiers/bv_slice.cpp",
+        99,
+        118
+      ],
+      [
+        "src/ast/simplifiers/euf_completion.cpp",
+        1129,
+        1141
+      ]
+    ]
+  },
+  {
+    "id": "Z3-128",
+    "sev": "Critical",
+    "title": "`seq::eq_solver` `str.from_ubv` wrong max-digit bound, modular BV overflow, and missing sort check",
+    "files": [
+      [
+        "src/ast/rewriter/seq_eq_solver.cpp",
+        225,
+        239
+      ],
+      [
+        "src/ast/rewriter/seq_eq_solver.cpp",
+        261,
+        314
+      ]
+    ]
+  },
+  {
+    "id": "Z3-129",
+    "sev": "High",
+    "title": "Missing `return true` in `proof_checker` `PR_PUSH_QUANT` and cross-`ast_manager` UAF in `replace_proof_converter::translate`",
+    "files": [
+      [
+        "src/ast/proofs/proof_checker.cpp",
+        452,
+        474
+      ],
+      [
+        "src/ast/proofs/proof_checker.cpp",
+        1277,
+        1333
+      ],
+      [
+        "src/ast/converters/replace_proof_converter.cpp",
+        78,
+        82
+      ]
+    ]
+  },
+  {
+    "id": "Z3-130",
+    "sev": "Critical",
+    "title": "`mk_ineq_atom` applies `gcd_simplify` to even factors (`p^2 > 0`); `reinit_cache` fails to update `root_atom::m_x`",
+    "files": [
+      [
+        "src/nlsat/nlsat_solver.cpp",
+        656,
+        673
+      ],
+      [
+        "src/nlsat/nlsat_solver.cpp",
+        3111,
+        3115
+      ],
+      [
+        "src/nlsat/nlsat_explain.cpp",
+        1730,
+        1748
+      ]
+    ]
+  },
+  {
+    "id": "Z3-131",
+    "sev": "Critical",
+    "title": "`opt_preprocess` mutex rewriting overwrites existing soft constraint weights on key collision",
+    "files": [
+      [
+        "src/opt/opt_preprocess.cpp",
+        216,
+        227
+      ]
+    ]
+  },
+  {
+    "id": "Z3-132",
+    "sev": "High",
+    "title": "Heap UAF via range-for + `push_back` in `arith_project_plugin::maximize` and uneliminated var leak on `(mod x (- 2))`",
+    "files": [
+      [
+        "src/qe/mbp/mbp_arith.cpp",
+        248,
+        248
+      ],
+      [
+        "src/qe/mbp/mbp_arith.cpp",
+        382,
+        382
+      ],
+      [
+        "src/qe/mbp/mbp_arith.cpp",
+        596,
+        596
+      ],
+      [
+        "src/qe/mbp/mbp_arith.cpp",
+        613,
+        615
+      ]
+    ]
+  },
+  {
+    "id": "Z3-133",
+    "sev": "High",
+    "title": "`hnf` drops inner binders; `interval_relation`/`bound_relation` soundness bugs; Spacer `gas` underflow & `dl_mk_array_instantiation` broken odometer",
+    "files": [
+      [
+        "src/muz/base/hnf.cpp",
+        420,
+        437
+      ],
+      [
+        "src/muz/base/hnf.cpp",
+        505,
+        511
+      ],
+      [
+        "src/muz/rel/dl_interval_relation.cpp",
+        538,
+        545
+      ],
+      [
+        "src/muz/rel/dl_interval_relation.cpp",
+        585,
+        591
+      ],
+      [
+        "src/muz/rel/dl_bound_relation.cpp",
+        469,
+        499
+      ],
+      [
+        "src/muz/rel/dl_bound_relation.cpp",
+        506,
+        508
+      ],
+      [
+        "src/muz/spacer/spacer_context.cpp",
+        4108,
+        4112
+      ],
+      [
+        "src/muz/spacer/spacer_global_generalizer.cpp",
+        743,
+        743
+      ],
+      [
+        "src/muz/spacer/spacer_expand_bnd_generalizer.cpp",
+        62,
+        64
+      ],
+      [
+        "src/muz/transforms/dl_mk_array_instantiation.cpp",
+        273,
+        289
+      ],
+      [
+        "src/muz/transforms/dl_mk_subsumption_checker.cpp",
+        279,
+        279
+      ]
+    ]
+  },
+  {
+    "id": "Z3-134",
+    "sev": "High",
+    "title": "`zstring::extract` overflow/negative-index OOB; lazy Ackermannization infinite loop on `select` & unpinned array UAF",
+    "files": [
+      [
+        "src/util/zstring.cpp",
+        231,
+        239
+      ],
+      [
+        "src/ackermannization/lackr.cpp",
+        255,
+        267
+      ],
+      [
+        "src/ackermannization/lackr_model_constructor.cpp",
+        220,
+        223
+      ],
+      [
+        "src/ackermannization/ackr_model_converter.cpp",
+        101,
+        101
+      ],
+      [
+        "src/ackermannization/ackr_model_converter.cpp",
+        126,
+        126
+      ],
+      [
+        "src/ackermannization/ackr_model_converter.cpp",
+        130,
+        158
+      ],
+      [
+        "src/ackermannization/ackr_helper.h",
+        107,
+        110
+      ]
+    ]
+  },
+  {
+    "id": "Z3-135",
+    "sev": "High",
+    "title": "`substitution_tree` variadic-app OOB read; `euf_egraph::pop` use-after-destroy; `bv_bounds` unchecked `to_app`; `aig::mk_xor` leak",
+    "files": [
+      [
+        "src/ast/substitution/substitution_tree.cpp",
+        108,
+        120
+      ],
+      [
+        "src/ast/substitution/substitution_tree.cpp",
+        151,
+        151
+      ],
+      [
+        "src/ast/substitution/substitution_tree.cpp",
+        312,
+        312
+      ],
+      [
+        "src/ast/substitution/substitution_tree.cpp",
+        398,
+        398
+      ],
+      [
+        "src/ast/substitution/substitution_tree.cpp",
+        483,
+        483
+      ],
+      [
+        "src/ast/euf/euf_egraph.cpp",
+        429,
+        431
+      ],
+      [
+        "src/ast/rewriter/bv_bounds.cpp",
+        131,
+        141
+      ],
+      [
+        "src/ast/rewriter/bv_bounds.cpp",
+        315,
+        315
+      ],
+      [
+        "src/ast/rewriter/bv_bounds.h",
+        112,
+        116
+      ],
+      [
+        "src/tactic/aig/aig.cpp",
+        565,
+        570
+      ],
+      [
+        "src/ast/rewriter/poly_rewriter_def.h",
+        1113,
+        1116
+      ],
+      [
+        "src/ast/rewriter/elim_bounds.cpp",
+        83,
+        85
+      ],
+      [
+        "src/ast/normal_forms/pull_quant.cpp",
+        281,
+        287
+      ],
+      [
+        "src/ast/sls/sls_arith_base.cpp",
+        2569,
+        2574
+      ],
+      [
+        "src/ast/sls/sls_arith_base.cpp",
+        1835,
+        1841
+      ],
+      [
+        "src/ast/sls/sls_arith_lookahead.cpp",
+        41,
+        47
+      ],
+      [
+        "src/ast/sls/sls_array_plugin.cpp",
+        333,
+        396
+      ]
+    ]
+  }
+]

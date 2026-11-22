@@ -1,0 +1,2294 @@
+[
+  {
+    "id": "GDAL-001",
+    "sev": "Critical",
+    "title": "`VSIPluginFilesystemHandler::Unlink()` calls POSIX `::unlink()` on host filesystem instead of `m_cb->unlink`",
+    "files": [
+      [
+        "port/cpl_vsil_plugin.cpp",
+        408,
+        413
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-002",
+    "sev": "Critical",
+    "title": "`VSIS3WriteHandle::WriteChunked()` binds stack-local `sWriteFuncData` and freed `headers` to persistent `CURL*` handle (stack UAR & heap UAF)",
+    "files": [
+      [
+        "port/cpl_vsil_s3.cpp",
+        1137,
+        1184
+      ],
+      [
+        "port/cpl_vsil_s3.cpp",
+        1286,
+        1295
+      ],
+      [
+        "port/cpl_vsil_s3.cpp",
+        1355,
+        1386
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-003",
+    "sev": "Critical",
+    "title": "`VSIGSFSHandler::UnlinkBatch()` writes to negative indices `panRet[j]` when unlinking fewer than `nBatchSize` files (heap buffer underflow)",
+    "files": [
+      [
+        "port/cpl_vsil_gs.cpp",
+        569,
+        570
+      ],
+      [
+        "port/cpl_vsil_gs.cpp",
+        585,
+        589
+      ],
+      [
+        "port/cpl_vsil_gs.cpp",
+        657,
+        659
+      ],
+      [
+        "port/cpl_vsil_gs.cpp",
+        742,
+        757
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-004",
+    "sev": "Critical",
+    "title": "64-bit unsigned wraparound in `VSIMemFile::SetLength()` allocates tiny buffer while setting huge `nLength` (heap buffer overflow)",
+    "files": [
+      [
+        "port/cpl_vsi_mem.cpp",
+        217,
+        276
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-005",
+    "sev": "High",
+    "title": "Unchecked `nNameLength` from `SQLDescribeCol()`/`SQLColAttribute()` causes stack buffer overflow on long column/type names",
+    "files": [
+      [
+        "port/cpl_odbc.cpp",
+        911,
+        935
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-006",
+    "sev": "High",
+    "title": "Persistent `CURL*` handles retain dangling stack (`&stProcessData`, `szCurlErrBuf`) and freed heap (`CURLOPT_MIMEPOST`) pointers across `CPLHTTPFetchEx()` calls",
+    "files": [
+      [
+        "port/cpl_http.cpp",
+        771,
+        783
+      ],
+      [
+        "port/cpl_http.cpp",
+        1286,
+        1322
+      ],
+      [
+        "port/cpl_http.cpp",
+        1486,
+        1486
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-007",
+    "sev": "High",
+    "title": "`CSLRemoveStrings()` indexes before normalizing `nFirstLineToDelete` (wild `free()`/OOB), fails to advance `ppszDst` (leak), and mishandles `ppapszRetStrings`",
+    "files": [
+      [
+        "port/cpl_string.cpp",
+        589,
+        652
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-008",
+    "sev": "High",
+    "title": "16-bit `GUInt16` overflow in `nDataLength` causes heap buffer overflow for non-ASCII ZIP entry names of length >= 65531",
+    "files": [
+      [
+        "port/cpl_minizip_zip.cpp",
+        2063,
+        2080
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-009",
+    "sev": "High",
+    "title": "`CPLLZ4Compressor()` unconditionally writes 4-byte header even when `HEADER=NO`, overflowing small buffers and corrupting raw LZ4 output",
+    "files": [
+      [
+        "port/cpl_compressor.cpp",
+        516,
+        557
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-010",
+    "sev": "High",
+    "title": "Stale `*pnLength` before `_GrowBuffer()` when closing `<?...?>` element causes heap buffer overflow in `CPLSerializeXMLNode()`",
+    "files": [
+      [
+        "port/cpl_minixml.cpp",
+        1061,
+        1077
+      ],
+      [
+        "port/cpl_minixml.cpp",
+        1151,
+        1174
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-011",
+    "sev": "High",
+    "title": "`CPLRecodeToWCharIconv()` casts single-NUL-terminated `char*` (and raw `CPLStrdup` error fallback) to `wchar_t*` (heap over-read & uninit read)",
+    "files": [
+      [
+        "port/cpl_recode_iconv.cpp",
+        115,
+        190
+      ],
+      [
+        "port/cpl_recode_iconv.cpp",
+        392,
+        399
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-012",
+    "sev": "High",
+    "title": "`VSICurlHandle::ReadMultiRangeSingleGet()` loops `iPart < nRanges` instead of `nMergedRanges`, causing OOB reads of `panSizes`/`ppData` and arbitrary `memcpy`",
+    "files": [
+      [
+        "port/cpl_vsil_curl.cpp",
+        2623,
+        2623
+      ],
+      [
+        "port/cpl_vsil_curl.cpp",
+        2674,
+        2761
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-013",
+    "sev": "High",
+    "title": "`VSICurlHandle::ReadMultiRange()` hangs forever on zero-sized range and reads uninitialized `asCurlErrors[iRange]` when ranges are merged",
+    "files": [
+      [
+        "port/cpl_vsil_curl.cpp",
+        2235,
+        2258
+      ],
+      [
+        "port/cpl_vsil_curl.cpp",
+        2313,
+        2360
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-014",
+    "sev": "High",
+    "title": "`VSIZipWriteHandle::Write()` passes `nBytesToWrite` instead of `nBytesToWrite - nWritten` when chunking writes > 2 GiB (~2 GiB heap over-read)",
+    "files": [
+      [
+        "port/cpl_vsil_gzip.cpp",
+        3207,
+        3220
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-015",
+    "sev": "High",
+    "title": "`CPLWorkerThreadPool::SubmitJobs()` frees job nodes on OOM rollback without restoring `psJobQueue` (UAF, double-free, freed function pointer call)",
+    "files": [
+      [
+        "port/cpl_worker_thread_pool.cpp",
+        275,
+        336
+      ],
+      [
+        "port/cpl_worker_thread_pool.cpp",
+        662,
+        678
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-016",
+    "sev": "High",
+    "title": "Win32 `CPLCreateJoinableThread()` starts thread before assigning `psInfo->hThread`, racing to premature `CPLFree(psInfo)` (UAF & double-free)",
+    "files": [
+      [
+        "port/cpl_multiproc.cpp",
+        1211,
+        1224
+      ],
+      [
+        "port/cpl_multiproc.cpp",
+        1259,
+        1291
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-017",
+    "sev": "High",
+    "title": "`/vsicrypt/` accepts `nSectorSize == 0` from file header, causing integer division by zero (`SIGFPE`) on first I/O",
+    "files": [
+      [
+        "port/cpl_vsil_crypt.cpp",
+        531,
+        533
+      ],
+      [
+        "port/cpl_vsil_crypt.cpp",
+        881,
+        899
+      ],
+      [
+        "port/cpl_vsil_crypt.cpp",
+        1127,
+        1128
+      ],
+      [
+        "port/cpl_vsil_crypt.cpp",
+        1183,
+        1183
+      ],
+      [
+        "port/cpl_vsil_crypt.cpp",
+        1338,
+        1338
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-018",
+    "sev": "High",
+    "title": "`VSIArchiveFilesystemHandler::IsLocal()` and `VSIGZipFilesystemHandler::SupportsSequentialWrite()` recurse infinitely on chained paths; `Stat()` calls `.back()` on empty entry name",
+    "files": [
+      [
+        "port/cpl_vsil_abstract_archive.cpp",
+        733,
+        744
+      ],
+      [
+        "port/cpl_vsil_abstract_archive.cpp",
+        885,
+        893
+      ],
+      [
+        "port/cpl_vsil_gzip.cpp",
+        2202,
+        2211
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-019",
+    "sev": "High",
+    "title": "`CPLZLibInflate()` with `outptr == nullptr` loops infinitely on `nBytes == 0` and doubles memory until OOM on any truncated input",
+    "files": [
+      [
+        "port/cpl_vsil_gzip.cpp",
+        3516,
+        3570
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-020",
+    "sev": "High",
+    "title": "Unsynchronized `std::map` data race in `VSISparseFileFilesystemHandler` and silent zeroing over mapped regions in `VSISparseFileHandle::Read()`",
+    "files": [
+      [
+        "port/cpl_vsil_sparsefile.cpp",
+        108,
+        108
+      ],
+      [
+        "port/cpl_vsil_sparsefile.cpp",
+        133,
+        144
+      ],
+      [
+        "port/cpl_vsil_sparsefile.cpp",
+        248,
+        253
+      ],
+      [
+        "port/cpl_vsil_sparsefile.cpp",
+        324,
+        328
+      ],
+      [
+        "port/cpl_vsil_sparsefile.cpp",
+        384,
+        384
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-021",
+    "sev": "Medium",
+    "title": "UTF-8 BOM lookahead in `CPLEscapeString(..., CPLES_XML)` reads up to 2 bytes past `szLength`",
+    "files": [
+      [
+        "port/cpl_string.cpp",
+        2091,
+        2100
+      ],
+      [
+        "port/cpl_string.cpp",
+        2267,
+        2283
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-022",
+    "sev": "Medium",
+    "title": "Inverted boolean logic (`pszLocale || EQUAL(pszLocale, \"\")`) in `CPLPrintTime()` dereferences NULL when `pszLocale == NULL`",
+    "files": [
+      [
+        "port/cpl_conv.cpp",
+        1498,
+        1535
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-023",
+    "sev": "Medium",
+    "title": "Exact-equality check (`m_osToken.size() == m_nMaxStringSize`) bypassed by multi-byte `\\uXXXX` decode (unbounded memory DoS)",
+    "files": [
+      [
+        "port/cpl_json_streaming_parser.cpp",
+        390,
+        421
+      ],
+      [
+        "port/cpl_json_streaming_parser.cpp",
+        542,
+        555
+      ],
+      [
+        "port/cpl_json_streaming_parser.cpp",
+        604,
+        612
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-024",
+    "sev": "Medium",
+    "title": "`CPLBloscDecompressor()` inverts `nSafeSize < *output_size` check and dereferences `output_size` without a NULL check",
+    "files": [
+      [
+        "port/cpl_compressor.cpp",
+        151,
+        170
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-025",
+    "sev": "Medium",
+    "title": "`cpl_unzLocateFile()` passes non-NUL-terminated stack buffer to `strcmp` when a ZIP entry filename has length >= 256",
+    "files": [
+      [
+        "port/cpl_minizip_unzip.cpp",
+        860,
+        866
+      ],
+      [
+        "port/cpl_minizip_unzip.cpp",
+        1001,
+        1007
+      ],
+      [
+        "port/cpl_minizip_unzip.cpp",
+        1201,
+        1214
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-026",
+    "sev": "Medium",
+    "title": "`VSIVirtualHandle::Truncate()` initializes `nCurOffset = nOriginalPos` after `SEEK_END`, over-extending files with extra zero bytes",
+    "files": [
+      [
+        "port/cpl_vsil.cpp",
+        3051,
+        3078
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-027",
+    "sev": "Medium",
+    "title": "`VSICurlHandle::PRead()` mutates `oFileProp` outside `m_oMutex`, racing with concurrent `PRead()` calls",
+    "files": [
+      [
+        "port/cpl_vsil_curl.cpp",
+        2817,
+        2835
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-028",
+    "sev": "Medium",
+    "title": "`get_page_limit()` treats `sscanf()` `EOF` (-1) as truthy (uninitialized return); fault handler leaks prior page data on partial tail pages",
+    "files": [
+      [
+        "port/cpl_userfaultfd.cpp",
+        141,
+        150
+      ],
+      [
+        "port/cpl_userfaultfd.cpp",
+        342,
+        365
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-029",
+    "sev": "High",
+    "title": "`GDALSimpleSURF::ConvertRGBToLuminosity()` multiplies column index by element byte size inside `SRCVAL` (deterministic heap over-read on non-8-bit rasters)",
+    "files": [
+      [
+        "alg/gdal_simplesurf.cpp",
+        191,
+        223
+      ],
+      [
+        "alg/gdalmatching.cpp",
+        153,
+        155
+      ],
+      [
+        "alg/gdalmatching.cpp",
+        207,
+        236
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-030",
+    "sev": "High",
+    "title": "Off-by-one observer bounds check (`nX > nXSize`) allows `nX == nXSize`, causing heap over-read and over-write on every scanline",
+    "files": [
+      [
+        "alg/viewshed.cpp",
+        273,
+        322
+      ],
+      [
+        "alg/viewshed.cpp",
+        412,
+        412
+      ],
+      [
+        "alg/viewshed.cpp",
+        435,
+        441
+      ],
+      [
+        "alg/viewshed.cpp",
+        560,
+        582
+      ],
+      [
+        "alg/viewshed.cpp",
+        723,
+        745
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-031",
+    "sev": "High",
+    "title": "Off-by-one error-cleanup loop (`i <= nBandCount`) in `GDALSimpleImageWarp()` passes out-of-bounds heap pointer to `VSIFree()`",
+    "files": [
+      [
+        "alg/gdalsimplewarp.cpp",
+        284,
+        319
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-032",
+    "sev": "High",
+    "title": "Delimiter-only `INIT_DEST=,` causes OOB heap under-read at `papszInitValues[-1]` and arbitrary pointer dereference",
+    "files": [
+      [
+        "alg/gdalwarpoperation.cpp",
+        706,
+        733
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-033",
+    "sev": "High",
+    "title": "`GDALCreateSimilarGenImgProjTransformer()` error path destroys shallow-copied sub-transformers still owned by original (UAF & double-free)",
+    "files": [
+      [
+        "alg/gdaltransformer.cpp",
+        1249,
+        1304
+      ],
+      [
+        "alg/gdaltransformer.cpp",
+        2612,
+        2631
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-034",
+    "sev": "High",
+    "title": "32-bit signed overflow in `iPrime` indexes `anPrimes[-10..-1]` on >2G-pixel integer rasters (OOB read & potential `SIGFPE`)",
+    "files": [
+      [
+        "alg/gdalchecksum.cpp",
+        72,
+        72
+      ],
+      [
+        "alg/gdalchecksum.cpp",
+        208,
+        224
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-035",
+    "sev": "High",
+    "title": "`ExponentialLevelRangeIterator::range()` returns inverted `[1, 0)` for distinct values `< 1.0`, causing ~4.29B iterations / OOM",
+    "files": [
+      [
+        "alg/marching_squares/level_generator.h",
+        74,
+        82
+      ],
+      [
+        "alg/marching_squares/level_generator.h",
+        224,
+        270
+      ],
+      [
+        "alg/marching_squares/square.h",
+        326,
+        379
+      ],
+      [
+        "alg/contour.cpp",
+        679,
+        723
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-036",
+    "sev": "High",
+    "title": "32-bit `int` overflow in `nScanlineBytes` causes division by zero or undersized `pabyChunkBuf` followed by heap buffer overflow",
+    "files": [
+      [
+        "alg/gdalrasterize.cpp",
+        1022,
+        1048
+      ],
+      [
+        "alg/gdalrasterize.cpp",
+        1407,
+        1430
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-037",
+    "sev": "High",
+    "title": "Unfiltered `NaN` pixels passed to `std::sort` in `GRA_Med`/`GRA_Q1`/`GRA_Q3` violate strict weak ordering (OOB memory access & crash)",
+    "files": [
+      [
+        "alg/gdalwarpkernel.cpp",
+        6848,
+        6866
+      ],
+      [
+        "alg/gdalwarpkernel.cpp",
+        1950,
+        2046
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-038",
+    "sev": "High",
+    "title": "Partial OOM cleanup in `GDALGridContextCreate()` calls `VSIFree()` instead of `VSIFreeAligned()` on aligned buffers (heap corruption)",
+    "files": [
+      [
+        "alg/gdalgrid.cpp",
+        2823,
+        2854
+      ],
+      [
+        "alg/gdalgrid.cpp",
+        2865,
+        2896
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-039",
+    "sev": "Medium",
+    "title": "Three `GDALCreateSimilar*Transformer` callbacks dereference newly created transformer without checking for `nullptr`",
+    "files": [
+      [
+        "alg/gdal_tps.cpp",
+        101,
+        104
+      ],
+      [
+        "alg/gdal_crs.cpp",
+        165,
+        168
+      ],
+      [
+        "alg/gdalgeoloc.cpp",
+        1625,
+        1630
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-040",
+    "sev": "Medium",
+    "title": "Inverse `GDALRPCTransform()` passes input `(pixel, line)` instead of computed `(long, lat)` to `RPCIsValidLongLat()`",
+    "files": [
+      [
+        "alg/gdal_rpc.cpp",
+        2191,
+        2216
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-041",
+    "sev": "Medium",
+    "title": "`GRA_Mode` drops `Int16` pixels with mode `-1` (sentinel collision); `GWKAOM_Fmode` has unsequenced modification/read UB and missing `break`",
+    "files": [
+      [
+        "alg/gdalwarpkernel.cpp",
+        6594,
+        6614
+      ],
+      [
+        "alg/gdalwarpkernel.cpp",
+        6640,
+        6685
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-042",
+    "sev": "Medium",
+    "title": "Multi-threaded pansharpening clamps sub-job offsets against full band instead of extracted `MEMDataset` and ignores `RasterIO` failure (uninit heap output)",
+    "files": [
+      [
+        "alg/gdalpansharpen.cpp",
+        1244,
+        1275
+      ],
+      [
+        "alg/gdalpansharpen.cpp",
+        1516,
+        1519
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-043",
+    "sev": "Critical",
+    "title": "`ECBand` hardcodes 256x256 block buffer while `IReadBlock()` writes `TSZ * TSZ` bytes (massive heap buffer overflow for any `TSZ > 256`)",
+    "files": [
+      [
+        "frmts/esric/esric_dataset.cpp",
+        219,
+        221
+      ],
+      [
+        "frmts/esric/esric_dataset.cpp",
+        368,
+        368
+      ],
+      [
+        "frmts/esric/esric_dataset.cpp",
+        402,
+        406
+      ],
+      [
+        "frmts/esric/esric_dataset.cpp",
+        416,
+        429
+      ],
+      [
+        "frmts/esric/esric_dataset.cpp",
+        495,
+        512
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-044",
+    "sev": "Critical",
+    "title": "`pread_curl()` unconditionally `memcpy`s HTTP 200 responses larger than `count` into fixed sector buffer (remote heap overflow) + `store.size() < m` typo",
+    "files": [
+      [
+        "frmts/wms/minidriver_mrf.cpp",
+        96,
+        110
+      ],
+      [
+        "frmts/wms/minidriver_mrf.cpp",
+        113,
+        148
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-045",
+    "sev": "Critical",
+    "title": "`JPEG_Codec::DecompressJPEG()` computes `linesize` from MRF `nbands` instead of `cinfo.output_components`, overflowing heap buffer in `jpeg_read_scanlines()`",
+    "files": [
+      [
+        "frmts/mrf/JPEG_band.cpp",
+        560,
+        560
+      ],
+      [
+        "frmts/mrf/JPEG_band.cpp",
+        653,
+        709
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-046",
+    "sev": "Critical",
+    "title": "Missing `return`/`break` on invalid UTF-8 in `UTF8ToUCS4()` causes infinite loop and unbounded heap buffer overflow write",
+    "files": [
+      [
+        "frmts/zarr/zarr_array.cpp",
+        52,
+        79
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-047",
+    "sev": "Critical",
+    "title": "Negative `H5Sget_simple_extent_dims()` cast to `unsigned` causes 4B-iter stack OOB read; 32-bit `nAttrElmts` overflow causes heap overflow in `H5Aread()`",
+    "files": [
+      [
+        "frmts/hdf5/hdf5dataset.cpp",
+        947,
+        1006
+      ],
+      [
+        "frmts/hdf5/hdf5dataset.cpp",
+        1474,
+        1501
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-048",
+    "sev": "Critical",
+    "title": "Unchecked `nc_get_att_double()`/`nc_get_att_int()` into 1- or 2-element stack buffers allows arbitrary stack buffer overflow",
+    "files": [
+      [
+        "frmts/netcdf/netcdfdataset.cpp",
+        821,
+        837
+      ],
+      [
+        "frmts/netcdf/netcdfdataset.cpp",
+        4479,
+        4543
+      ],
+      [
+        "frmts/netcdf/netcdfdataset.cpp",
+        12951,
+        12959
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-049",
+    "sev": "Critical",
+    "title": "Unchecked `nc_get_att_text()` into 127-/128-byte `NC_MAX_CHAR` and `property_name` stack buffers overflows the stack",
+    "files": [
+      [
+        "frmts/netcdf/netcdfsg.cpp",
+        784,
+        825
+      ],
+      [
+        "frmts/netcdf/netcdfsg.cpp",
+        1101,
+        1127
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-050",
+    "sev": "Critical",
+    "title": "Unchecked `SPH_SIZE`, `NUM_DSD`, `DSD_SIZE`, and `*(ds_data - 1) = '\\0'` allow arbitrary heap underflow and heap buffer overflow in `EnvisatFile_Open()`",
+    "files": [
+      [
+        "frmts/envisat/EnvisatFile.c",
+        312,
+        389
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-051",
+    "sev": "Critical",
+    "title": "Adding byte count `nBytesToRead * band_index` to `float *padfStokesMatrix` advances 4x too far, overflowing heap buffer by 2.8x in BIL/BSQ modes",
+    "files": [
+      [
+        "frmts/raw/cpgdataset.cpp",
+        360,
+        439
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-052",
+    "sev": "Critical",
+    "title": "`PCRasterRasterBand::IWriteBlock()` hardcodes `memcpy(buffer, source, nr_cols * 4)`, overflowing 1-byte `VS_BOOLEAN`/`VS_LDD` buffers by 4x",
+    "files": [
+      [
+        "frmts/pcraster/pcrasterrasterband.cpp",
+        325,
+        337
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-053",
+    "sev": "Critical",
+    "title": "Unbounded `IRS P6` `BANDS PRESENT` loop indexes past 7-element `fpChannels[7]` / `apoChannelFilenames[7]` member arrays (object/heap buffer overflow)",
+    "files": [
+      [
+        "frmts/raw/fastdataset.cpp",
+        50,
+        51
+      ],
+      [
+        "frmts/raw/fastdataset.cpp",
+        109,
+        110
+      ],
+      [
+        "frmts/raw/fastdataset.cpp",
+        206,
+        208
+      ],
+      [
+        "frmts/raw/fastdataset.cpp",
+        246,
+        266
+      ],
+      [
+        "frmts/raw/fastdataset.cpp",
+        714,
+        734
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-054",
+    "sev": "Critical",
+    "title": "`BMPDataset::Open()` permits `GA_Update` on 1/4/16/32-bit and RLE BMPs, causing heap underflow (`pabyScan[-1]`) and heap overflow in `IWriteBlock()`",
+    "files": [
+      [
+        "frmts/bmp/bmpdataset.cpp",
+        293,
+        326
+      ],
+      [
+        "frmts/bmp/bmpdataset.cpp",
+        545,
+        586
+      ],
+      [
+        "frmts/bmp/bmpdataset.cpp",
+        1095,
+        1096
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-055",
+    "sev": "Critical",
+    "title": "Signed 32-bit `nCols * nRows` overflow allocates undersized `pabyImage`, causing arbitrary heap buffer overflow write in `CTGDataset::ReadImagery()`",
+    "files": [
+      [
+        "frmts/ctg/ctgdataset.cpp",
+        191,
+        195
+      ],
+      [
+        "frmts/ctg/ctgdataset.cpp",
+        293,
+        293
+      ],
+      [
+        "frmts/ctg/ctgdataset.cpp",
+        316,
+        332
+      ],
+      [
+        "frmts/ctg/ctgdataset.cpp",
+        490,
+        505
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-056",
+    "sev": "Critical",
+    "title": "`pabyBlockBuf` sized for a single unpacked band overflows massively in `UnpackNBits()`/`PackNBits()` on multi-band 1/2/4-bit GeoRasters",
+    "files": [
+      [
+        "frmts/georaster/georaster_wrapper.cpp",
+        1676,
+        1679
+      ],
+      [
+        "frmts/georaster/georaster_wrapper.cpp",
+        1768,
+        1770
+      ],
+      [
+        "frmts/georaster/georaster_wrapper.cpp",
+        1974,
+        2003
+      ],
+      [
+        "frmts/georaster/georaster_wrapper.cpp",
+        2114,
+        2141
+      ],
+      [
+        "frmts/georaster/georaster_wrapper.cpp",
+        3845,
+        3935
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-057",
+    "sev": "Critical",
+    "title": "Unvalidated point-to-pixel coordinate conversion in `RDBRasterBandInternal::IReadBlock()` writes arbitrarily out of bounds of 256x256 tile buffer `pImage`",
+    "files": [
+      [
+        "frmts/rdb/rdbdataset.cpp",
+        287,
+        301
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-058",
+    "sev": "High",
+    "title": "Non-positive `level <= 0` in `KmlSingleDocCollectTiles()` causes negative-index heap underflow read/write `aosDescs[level - 1]`; huge `level` causes OOM DoS",
+    "files": [
+      [
+        "frmts/kmlsuperoverlay/kmlsuperoverlaydataset.cpp",
+        2330,
+        2377
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-059",
+    "sev": "High",
+    "title": "Negative `tiri.m_level` writes NUL out of bounds before stack buffer `szTileNumber[z]` and leaks uninitialized stack memory into HTTP URL",
+    "files": [
+      [
+        "frmts/wms/minidriver_virtualearth.cpp",
+        84,
+        101
+      ],
+      [
+        "frmts/wms/gdalwmsdataset.cpp",
+        473,
+        473
+      ],
+      [
+        "frmts/wms/gdalwmsdataset.cpp",
+        488,
+        491
+      ],
+      [
+        "frmts/wms/gdalwmsdataset.cpp",
+        521,
+        521
+      ],
+      [
+        "frmts/wms/gdalwmsrasterband.cpp",
+        495,
+        499
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-060",
+    "sev": "High",
+    "title": "Unchecked `m_nDepth` causes `soHash[i]` heap over-read; recursive `MakeDirs()` aliases `CPLGetDirname()` TLS buffer (UB/assert crash); unsynchronized clean-thread flags",
+    "files": [
+      [
+        "frmts/wms/gdalwmscache.cpp",
+        53,
+        55
+      ],
+      [
+        "frmts/wms/gdalwmscache.cpp",
+        95,
+        95
+      ],
+      [
+        "frmts/wms/gdalwmscache.cpp",
+        174,
+        205
+      ],
+      [
+        "frmts/wms/gdalwmscache.cpp",
+        279,
+        325
+      ],
+      [
+        "port/cpl_path.cpp",
+        204,
+        230
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-061",
+    "sev": "High",
+    "title": "Omitted or `Size=0` `<Kernel>` causes NULL dereference of `m_padfKernelCoefs[0]` in `FilterData()`; separable pass reads uninitialized `pafDstData` rows",
+    "files": [
+      [
+        "frmts/vrt/vrtfilters.cpp",
+        418,
+        420
+      ],
+      [
+        "frmts/vrt/vrtfilters.cpp",
+        500,
+        501
+      ],
+      [
+        "frmts/vrt/vrtfilters.cpp",
+        532,
+        565
+      ],
+      [
+        "frmts/vrt/vrtfilters.cpp",
+        601,
+        604
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-062",
+    "sev": "High",
+    "title": "`AirSARDataset::LoadLine()` frees `pabyCompressedLine` on partial OOM without nulling it, causing double-free in destructor and UAF on retry",
+    "files": [
+      [
+        "frmts/airsar/airsardataset.cpp",
+        278,
+        279
+      ],
+      [
+        "frmts/airsar/airsardataset.cpp",
+        301,
+        313
+      ],
+      [
+        "frmts/airsar/airsardataset.cpp",
+        320,
+        320
+      ],
+      [
+        "frmts/airsar/airsardataset.cpp",
+        352,
+        352
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-063",
+    "sev": "High",
+    "title": "Blank line in `.hdr` causes NULL deref in `GetNextItem()`; sparse `SetBand(4)` leaves NULL bands; off-by-one truncation & 32-bit seek overflow",
+    "files": [
+      [
+        "frmts/coasp/coasp_dataset.cpp",
+        196,
+        225
+      ],
+      [
+        "frmts/coasp/coasp_dataset.cpp",
+        319,
+        319
+      ],
+      [
+        "frmts/coasp/coasp_dataset.cpp",
+        448,
+        458
+      ],
+      [
+        "frmts/coasp/coasp_dataset.cpp",
+        489,
+        535
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-064",
+    "sev": "High",
+    "title": "32-bit signed overflow in `SPrintArray()` causes heap buffer overflow via `strcat`; unknown/64-bit HDF4 attribute types cause OOB read or misinterpretation",
+    "files": [
+      [
+        "frmts/hdf4/hdf4dataset.cpp",
+        117,
+        178
+      ],
+      [
+        "frmts/hdf4/hdf4dataset.cpp",
+        571,
+        607
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-065",
+    "sev": "High",
+    "title": "`HFAEntry::BuildEntryFromMIFObject()` unconditionally reads `pszField - 8`, underflowing heap buffers for non-pointer `c`/`C` or enum `e` fields",
+    "files": [
+      [
+        "frmts/hfa/hfaentry.cpp",
+        209,
+        229
+      ],
+      [
+        "frmts/hfa/hfafield.cpp",
+        872,
+        909
+      ],
+      [
+        "frmts/hfa/hfafield.cpp",
+        944,
+        948
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-066",
+    "sev": "High",
+    "title": "Unsigned 32-bit addition overflow in `NITFFetchAttribute()` bypasses bounds check and reads up to ~4 GB past `pabyAttributeSubsection`",
+    "files": [
+      [
+        "frmts/nitf/nitfimage.c",
+        3273,
+        3308
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-067",
+    "sev": "High",
+    "title": "Updating a `< 4096`-byte COG/ghost-header GeoTIFF writes uninitialized stack bytes from `abyHeader[4096]` directly into the output file",
+    "files": [
+      [
+        "frmts/gtiff/geotiff.cpp",
+        9508,
+        9531
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-068",
+    "sev": "High",
+    "title": "`EnvisatFile_GetFieldAsString()` checks only `nOffset >= nRecLen` instead of full field byte extent, causing heap over-reads on truncated `DSR_SIZE`",
+    "files": [
+      [
+        "frmts/envisat/records.c",
+        1189,
+        1201
+      ],
+      [
+        "frmts/envisat/records.c",
+        1225,
+        1435
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-069",
+    "sev": "High",
+    "title": "`Wkt2GeoReference()` passes NULL datum to `strstr()`, and `CPLStrdup(GetSpcs(...))` turns `nullptr` into `\"\"`, causing heap over-read & stack overflow in `NAD83to27()`",
+    "files": [
+      [
+        "frmts/idrisi/IdrisiDataset.cpp",
+        2938,
+        2962
+      ],
+      [
+        "frmts/idrisi/IdrisiDataset.cpp",
+        3227,
+        3240
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-070",
+    "sev": "High",
+    "title": "Metadata key `Class_10000_name` writes `nullptr` past `papszCategoryNames[10001]` (off-by-one heap overflow) and leaves array unterminated",
+    "files": [
+      [
+        "frmts/pcidsk/pcidskdataset2.cpp",
+        191,
+        231
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-071",
+    "sev": "High",
+    "title": "`XRITHeaderParser::parseHeader()` over-reads up to 33 bytes past header buffer, hangs on `headerRecordLength == 0`, reads uninit memory, and mis-shifts 64-bit size",
+    "files": [
+      [
+        "frmts/msg/xritheaderparser.cpp",
+        46,
+        72
+      ],
+      [
+        "frmts/msg/xritheaderparser.cpp",
+        97,
+        165
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-072",
+    "sev": "High",
+    "title": "`RS2CalibRasterBand::IReadBlock()` over-reads `m_nfTable[nBlockXOff + j]`, swaps wrong buffer (`pImage`), and passes `nLineSpace = 1` for `GDT_Byte`",
+    "files": [
+      [
+        "frmts/rs2/rs2dataset.cpp",
+        279,
+        302
+      ],
+      [
+        "frmts/rs2/rs2dataset.cpp",
+        386,
+        467
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-073",
+    "sev": "High",
+    "title": "`SAR_CEOSRasterBand::IReadBlock()` offsets past single-band `pabyRecord` for `CEOS_IL_LINE` bands `>= 2`; missing positive dimension/band validation",
+    "files": [
+      [
+        "frmts/ceos2/sar_ceosdataset.cpp",
+        255,
+        297
+      ],
+      [
+        "frmts/ceos2/sar_ceosdataset.cpp",
+        2037,
+        2041
+      ],
+      [
+        "frmts/ceos2/ceosrecipe.c",
+        517,
+        524
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-074",
+    "sev": "High",
+    "title": "`nZoomLevelCount == 0` reads `papoOvrBands[0]` out of bounds on zero-sized allocation; missing dimension validation, band leak, and uninit zlib output",
+    "files": [
+      [
+        "frmts/ozi/ozidataset.cpp",
+        277,
+        300
+      ],
+      [
+        "frmts/ozi/ozidataset.cpp",
+        462,
+        463
+      ],
+      [
+        "frmts/ozi/ozidataset.cpp",
+        516,
+        521
+      ],
+      [
+        "frmts/ozi/ozidataset.cpp",
+        573,
+        647
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-075",
+    "sev": "High",
+    "title": "`RIKRasterBand::IReadBlock()` allows `LZW_MAX_BITS < 9` (uninit stack read), wraps `GByte i` on RLE `count == 255`, and copies uninit heap on zlib failure",
+    "files": [
+      [
+        "frmts/rik/rikdataset.cpp",
+        335,
+        343
+      ],
+      [
+        "frmts/rik/rikdataset.cpp",
+        358,
+        386
+      ],
+      [
+        "frmts/rik/rikdataset.cpp",
+        480,
+        485
+      ],
+      [
+        "frmts/rik/rikdataset.cpp",
+        520,
+        527
+      ],
+      [
+        "frmts/rik/rikdataset.cpp",
+        557,
+        573
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-076",
+    "sev": "High",
+    "title": "`Identify()` reads past short basenames (`+ 4`), `Open()` omits `GDALCheckDatasetDimensions()`, and `IReadBlock()` computes negative/overflowing seek offsets",
+    "files": [
+      [
+        "frmts/jaxapalsar/jaxapalsardataset.cpp",
+        270,
+        284
+      ],
+      [
+        "frmts/jaxapalsar/jaxapalsardataset.cpp",
+        342,
+        347
+      ],
+      [
+        "frmts/jaxapalsar/jaxapalsardataset.cpp",
+        430,
+        430
+      ],
+      [
+        "frmts/jaxapalsar/jaxapalsardataset.cpp",
+        479,
+        479
+      ],
+      [
+        "frmts/jaxapalsar/jaxapalsardataset.cpp",
+        487,
+        487
+      ],
+      [
+        "frmts/jaxapalsar/jaxapalsardataset.cpp",
+        530,
+        535
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-077",
+    "sev": "High",
+    "title": "Copy-paste typo passes `psCEOS->nBands` instead of `psCEOS->nLines` to `GDALCheckDatasetDimensions()`, leaving `nRasterYSize` unvalidated; 32-bit offset overflows",
+    "files": [
+      [
+        "frmts/ceos/ceosdataset.cpp",
+        161,
+        166
+      ],
+      [
+        "frmts/ceos/ceosdataset.cpp",
+        189,
+        191
+      ],
+      [
+        "frmts/ceos/ceosopen.c",
+        308,
+        313
+      ],
+      [
+        "frmts/ceos/ceosopen.c",
+        340,
+        355
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-078",
+    "sev": "High",
+    "title": "`~NWT_GRDDataset()` dereferences NULL `pGrd` on invalid `BAND_COUNT`; `UpdateHeader()` calls `strlen()` on non-NUL-terminated 32-byte header fields",
+    "files": [
+      [
+        "frmts/northwood/grddataset.cpp",
+        444,
+        460
+      ],
+      [
+        "frmts/northwood/grddataset.cpp",
+        599,
+        627
+      ],
+      [
+        "frmts/northwood/grddataset.cpp",
+        704,
+        715
+      ],
+      [
+        "frmts/northwood/northwood.cpp",
+        94,
+        95
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-079",
+    "sev": "High",
+    "title": "`sscanf` on non-NUL-terminated packed header structs reads OOB; uninitialized `lines`/`cols`/`rad`/`pszRecord` used unchecked; dataset/file leaks on error",
+    "files": [
+      [
+        "frmts/msgn/msg_reader_core.cpp",
+        154,
+        155
+      ],
+      [
+        "frmts/msgn/msg_reader_core.cpp",
+        212,
+        271
+      ],
+      [
+        "frmts/msgn/msgndataset.cpp",
+        222,
+        248
+      ],
+      [
+        "frmts/msgn/msgndataset.cpp",
+        588,
+        641
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-080",
+    "sev": "High",
+    "title": "Partial `VSIFReadL` check `< 1` exposes/writes uninitialized heap memory; 32-bit `nBlockSize * nBlockYOff` overflows > 2 GiB; `pData` leaked on new dataset read",
+    "files": [
+      [
+        "frmts/ilwis/ilwisdataset.cpp",
+        729,
+        729
+      ],
+      [
+        "frmts/ilwis/ilwisdataset.cpp",
+        1589,
+        1589
+      ],
+      [
+        "frmts/ilwis/ilwisdataset.cpp",
+        1612,
+        1628
+      ],
+      [
+        "frmts/ilwis/ilwisdataset.cpp",
+        1798,
+        1804
+      ],
+      [
+        "frmts/ilwis/ilwisdataset.cpp",
+        1906,
+        1906
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-081",
+    "sev": "High",
+    "title": "`pszFilename[strlen(pszFilename) - 1]` underflows by 1 byte on empty or quoted `TILE_*.filename` values and mutates `papszTIL` in place",
+    "files": [
+      [
+        "frmts/til/tildataset.cpp",
+        294,
+        308
+      ],
+      [
+        "frmts/til/tildataset.cpp",
+        382,
+        396
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-082",
+    "sev": "High",
+    "title": "`TSXDataset::Open()` does not check `poBandData->GetRasterCount() >= 1` (NULL dereference), omits dimension validation, and leaks `pasGCPList`",
+    "files": [
+      [
+        "frmts/tsx/tsxdataset.cpp",
+        168,
+        171
+      ],
+      [
+        "frmts/tsx/tsxdataset.cpp",
+        252,
+        256
+      ],
+      [
+        "frmts/tsx/tsxdataset.cpp",
+        380,
+        406
+      ],
+      [
+        "frmts/tsx/tsxdataset.cpp",
+        550,
+        556
+      ],
+      [
+        "frmts/tsx/tsxdataset.cpp",
+        652,
+        658
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-083",
+    "sev": "High",
+    "title": "`HF2RasterBand::IReadBlock()` clamps against `std::numeric_limits<float>::min()` (`+1.175e-38`) instead of `lowest()`, corrupting all elevations `<= 0`",
+    "files": [
+      [
+        "frmts/hf2/hf2dataset.cpp",
+        219,
+        225
+      ],
+      [
+        "frmts/hf2/hf2dataset.cpp",
+        244,
+        250
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-084",
+    "sev": "High",
+    "title": "`if (iBitOffset == 0)` corrupts every even pixel after pixel 0 in 4-bit GenBin rasters; 32-bit `iBitOffset` overflows to negative heap index",
+    "files": [
+      [
+        "frmts/raw/genbindataset.cpp",
+        159,
+        160
+      ],
+      [
+        "frmts/raw/genbindataset.cpp",
+        186,
+        213
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-085",
+    "sev": "High",
+    "title": "32-bit signed integer overflows in `8 * nValueCount`, `nRasterXSize * nRasterYSize * 8 * iBand`, and `nBlockYOff * nBlockXSize`",
+    "files": [
+      [
+        "frmts/r/rdataset.cpp",
+        133,
+        139
+      ],
+      [
+        "frmts/r/rdataset.cpp",
+        437,
+        438
+      ],
+      [
+        "frmts/r/rdataset.cpp",
+        464,
+        467
+      ],
+      [
+        "frmts/r/rdataset.cpp",
+        564,
+        576
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-086",
+    "sev": "High",
+    "title": "Untrusted JPIP VBAS segment length and EOR marker are read from `pabyData` without verifying remaining buffer size (remote heap over-read & shift UB)",
+    "files": [
+      [
+        "frmts/jpipkak/jpipkakdataset.cpp",
+        841,
+        858
+      ],
+      [
+        "frmts/jpipkak/jpipkakdataset.cpp",
+        890,
+        898
+      ],
+      [
+        "frmts/jpipkak/jpipkakdataset.cpp",
+        953,
+        963
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-087",
+    "sev": "High",
+    "title": "Unchecked `pszCoverName + strlen(pszCoverName) - 4` in `AIGOpen()` causes heap buffer under-read on short paths including `\".\"`",
+    "files": [
+      [
+        "frmts/aigrid/aigopen.c",
+        54,
+        55
+      ],
+      [
+        "frmts/aigrid/aigdataset.cpp",
+        548,
+        555
+      ],
+      [
+        "frmts/aigrid/aigdataset.cpp",
+        640,
+        640
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-088",
+    "sev": "High",
+    "title": "Insufficient EXIF bounds check `nOffset < nCount - 8` permits a 1-3 byte heap buffer over-read when reading `nTIFFDirOff`",
+    "files": [
+      [
+        "frmts/heif/heifdataset.cpp",
+        404,
+        408
+      ],
+      [
+        "frmts/heif/heifdataset.cpp",
+        426,
+        434
+      ],
+      [
+        "frmts/heif/heifdataset.cpp",
+        453,
+        454
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-089",
+    "sev": "High",
+    "title": "`num_blocks_x * bytesPerBlock` overflows `uint32_t` for wide DXT3/DXT5 textures, bypassing file-size check and causing heap over-read in `IReadBlock()`",
+    "files": [
+      [
+        "frmts/dds/ddsdataset.cpp",
+        184,
+        200
+      ],
+      [
+        "frmts/dds/ddsdataset.cpp",
+        279,
+        283
+      ],
+      [
+        "frmts/dds/ddsdataset.cpp",
+        338,
+        355
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-090",
+    "sev": "High",
+    "title": "Missing null check after `GetArray()->Get(iElt)` in `GDALPDFDictionary::LookupObject()` causes NULL dereference on multi-segment lookup paths",
+    "files": [
+      [
+        "frmts/pdf/pdfobject.cpp",
+        412,
+        441
+      ],
+      [
+        "frmts/pdf/pdfdataset.cpp",
+        7155,
+        7158
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-091",
+    "sev": "High",
+    "title": "Broken XML sibling traversal causes infinite loop in `ReadLUT()`; `GDT_Int16` typo for `GDT_UInt16` bypasses null check before `sscanf()`; uninit `sscanf` reads",
+    "files": [
+      [
+        "frmts/safe/safedataset.cpp",
+        342,
+        387
+      ],
+      [
+        "frmts/safe/safedataset.cpp",
+        411,
+        413
+      ],
+      [
+        "frmts/safe/safedataset.cpp",
+        455,
+        482
+      ],
+      [
+        "frmts/safe/safedataset.cpp",
+        1995,
+        2002
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-092",
+    "sev": "High",
+    "title": "`std::sort` comparator falls back to object addresses (`&a < &b`), violating strict weak ordering (UB/OOB); inverted `eInterp != GCI_Undefined` check",
+    "files": [
+      [
+        "frmts/stacit/stacitdataset.cpp",
+        540,
+        547
+      ],
+      [
+        "frmts/stacit/stacitdataset.cpp",
+        574,
+        585
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-093",
+    "sev": "High",
+    "title": "EXIF box parsing leaks dangling non-owning `/vsimem/jxl/%p` pointer (UAF), passes full 1 MB buffer size, and uses no-op `CPL_LSBPTR32` for big-endian TIFF",
+    "files": [
+      [
+        "frmts/jpegxl/jpegxl.cpp",
+        317,
+        317
+      ],
+      [
+        "frmts/jpegxl/jpegxl.cpp",
+        334,
+        391
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-094",
+    "sev": "High",
+    "title": "4-band 4:2:0 alpha path `memcpy`s raw 32-bit `OPJ_INT32*` samples into 8-bit `GByte*` buffer using component 0's stride (corruption & potential OOB read)",
+    "files": [
+      [
+        "frmts/openjpeg/openjpegdataset.cpp",
+        1043,
+        1072
+      ],
+      [
+        "frmts/openjpeg/openjpegdataset.cpp",
+        1906,
+        1916
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-095",
+    "sev": "Medium",
+    "title": "Wrong `\"miles\"` unit factor (`1304.544` vs `1609.344`) and `strchr(..., '\\0')` `size -= 1` bug mis-maps `\"mm\"`/`\"mi\"` to `1.0 m` and `\"in\"` to `0.3048 m`",
+    "files": [
+      [
+        "frmts/gtiff/gt_citation.cpp",
+        99,
+        104
+      ],
+      [
+        "frmts/gtiff/gt_citation.cpp",
+        517,
+        531
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-096",
+    "sev": "Medium",
+    "title": "`delta_075_level_2_bc_0/1[32]` lookup tables omit 32nd entry (index 31 decodes as `0`); 32-bit `nInputBytes * 8` overflow; `L[8][5]` typo",
+    "files": [
+      [
+        "frmts/nitf/nitfaridpcm.cpp",
+        134,
+        139
+      ],
+      [
+        "frmts/nitf/nitfaridpcm.cpp",
+        229,
+        229
+      ],
+      [
+        "frmts/nitf/nitfaridpcm.cpp",
+        429,
+        429
+      ],
+      [
+        "frmts/nitf/nitfaridpcm.cpp",
+        440,
+        440
+      ],
+      [
+        "frmts/nitf/nitfaridpcm.cpp",
+        490,
+        490
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-097",
+    "sev": "Medium",
+    "title": "`DDFRecord::ReadHeader()` fails to reset `nFieldOffset = -1` on undefined field, leaving `nReuseHeader = TRUE` with uninitialized `DDFField`s",
+    "files": [
+      [
+        "frmts/iso8211/ddfrecord.cpp",
+        112,
+        153
+      ],
+      [
+        "frmts/iso8211/ddfrecord.cpp",
+        304,
+        307
+      ],
+      [
+        "frmts/iso8211/ddfrecord.cpp",
+        450,
+        458
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-098",
+    "sev": "Medium",
+    "title": "`URLRemoveKey()` enters infinite loop at `pos == 0` and calls `.back()` on empty string; `Join(..., true)` silently drops all elements at index >= 2",
+    "files": [
+      [
+        "frmts/wcs/wcsutils.cpp",
+        56,
+        78
+      ],
+      [
+        "frmts/wcs/wcsutils.cpp",
+        112,
+        140
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-099",
+    "sev": "Medium",
+    "title": "Unchecked `VSIFReadL()` into `CPLMalloc()` buffers parses uninitialized heap memory into GRIB2 band metadata and `m_dfNoData`",
+    "files": [
+      [
+        "frmts/grib/gribdataset.cpp",
+        305,
+        329
+      ],
+      [
+        "frmts/grib/gribdataset.cpp",
+        657,
+        768
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-100",
+    "sev": "Medium",
+    "title": "Uninitialized `nSize` and unchecked `VSIFSeekL`/`VSIFReadL` corrupt `m_anRecordOffsets` on truncated VICAR BASIC files; early return skips `bIsString` update",
+    "files": [
+      [
+        "frmts/pds/vicardataset.cpp",
+        941,
+        970
+      ],
+      [
+        "frmts/pds/vicarkeywordhandler.cpp",
+        298,
+        329
+      ],
+      [
+        "frmts/pds/vicarkeywordhandler.cpp",
+        425,
+        445
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-101",
+    "sev": "Medium",
+    "title": "`InterpolatePixelFunc()` validates `dfT` instead of `dfDt`, rejecting valid `t = 0` while allowing `dt = 0`/`NaN`/`< 0` into division by zero and UB",
+    "files": [
+      [
+        "frmts/vrt/pixelfunctions.cpp",
+        1265,
+        1280
+      ],
+      [
+        "frmts/vrt/pixelfunctions.cpp",
+        1331,
+        1352
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-102",
+    "sev": "Medium",
+    "title": "NITF 2.0-to-2.1 text segment date conversion maps `\"JUN\"` to `\"07\"` and omits `\"JUL\"` entirely (leaving July dates as `\"12\"`)",
+    "files": [
+      [
+        "frmts/nitf/nitfdataset.cpp",
+        6060,
+        6060
+      ],
+      [
+        "frmts/nitf/nitfdataset.cpp",
+        6070,
+        6097
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-103",
+    "sev": "Medium",
+    "title": "`COPY_YFIRST` leaves most of `pImage` uninitialized, multi-band byte swap uses wrong byte offsets, `space == 2` seeks past EOF, and `IT01` swaps wrong header field in place",
+    "files": [
+      [
+        "frmts/fit/fitdataset.cpp",
+        172,
+        183
+      ],
+      [
+        "frmts/fit/fitdataset.cpp",
+        199,
+        203
+      ],
+      [
+        "frmts/fit/fitdataset.cpp",
+        265,
+        301
+      ],
+      [
+        "frmts/fit/fitdataset.cpp",
+        951,
+        965
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-104",
+    "sev": "Medium",
+    "title": "`SIGDEMRasterBand::IReadBlock()` returns `CE_None` without populating `pImage` when `nLoadedBlockIndex == nBlockIndex` or on update seek failure",
+    "files": [
+      [
+        "frmts/sigdem/sigdemdataset.cpp",
+        528,
+        598
+      ],
+      [
+        "frmts/sigdem/sigdemdataset.cpp",
+        600,
+        643
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-105",
+    "sev": "Medium",
+    "title": "`EHdrDataset::Open()` unconditionally overwrites `nBits = 8` for `1 <= nBits <= 8`, breaking all sub-byte 1/2/4-bit EHdr datasets, plus write-error leak",
+    "files": [
+      [
+        "frmts/raw/ehdrdataset.cpp",
+        169,
+        169
+      ],
+      [
+        "frmts/raw/ehdrdataset.cpp",
+        232,
+        232
+      ],
+      [
+        "frmts/raw/ehdrdataset.cpp",
+        279,
+        289
+      ],
+      [
+        "frmts/raw/ehdrdataset.cpp",
+        1201,
+        1205
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-106",
+    "sev": "Medium",
+    "title": "`L1BGeolocRasterBand::IReadBlock()` passes `nGCPsPerLine` instead of `nGotGCPs` to `L1BInterpol()`, reading uninitialized knots and overwriting NoData tail",
+    "files": [
+      [
+        "frmts/l1b/l1bdataset.cpp",
+        2534,
+        2565
+      ],
+      [
+        "frmts/l1b/l1bdataset.cpp",
+        2595,
+        2628
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-107",
+    "sev": "Medium",
+    "title": "`ScanForMinMaxZ()` compares `pafRowVals[iCol] > pafRowMinZ[iRow]` instead of `pafRowMaxZ[iRow]` in both GS7BG & GSBG; `GS7BG::IWriteBlock()` seeks to wrong header offset",
+    "files": [
+      [
+        "frmts/gsg/gs7bgdataset.cpp",
+        199,
+        211
+      ],
+      [
+        "frmts/gsg/gs7bgdataset.cpp",
+        337,
+        340
+      ],
+      [
+        "frmts/gsg/gs7bgdataset.cpp",
+        362,
+        362
+      ],
+      [
+        "frmts/gsg/gsbgdataset.cpp",
+        188,
+        200
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-108",
+    "sev": "Medium",
+    "title": "`BTRasterBand::IWriteBlock()` computes `256 + nBlockXOff * nDataSize * nRasterYSize` and `CPLMalloc(nDataSize * nRasterYSize)` in 32-bit signed `int`",
+    "files": [
+      [
+        "frmts/raw/btdataset.cpp",
+        140,
+        143
+      ],
+      [
+        "frmts/raw/btdataset.cpp",
+        200,
+        218
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-109",
+    "sev": "Medium",
+    "title": "`LAN4BitRasterBand::IReadBlock()` reads `nRasterXSize / 2` bytes (rounding down) and unpacks uninitialized byte `pImage[(nRasterXSize - 1) / 2]` on odd widths",
+    "files": [
+      [
+        "frmts/raw/landataset.cpp",
+        230,
+        250
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-110",
+    "sev": "Medium",
+    "title": "Unvalidated `sHeader.NBPR` (`nLineOffset`) and 32-bit `int` overflow in `IReadBlock`/`IWriteBlock`; `ELASDataset::Create()` writes only `1 / nBandsIn` of each scanline",
+    "files": [
+      [
+        "frmts/elas/elasdataset.cpp",
+        183,
+        187
+      ],
+      [
+        "frmts/elas/elasdataset.cpp",
+        217,
+        221
+      ],
+      [
+        "frmts/elas/elasdataset.cpp",
+        348,
+        348
+      ],
+      [
+        "frmts/elas/elasdataset.cpp",
+        424,
+        427
+      ],
+      [
+        "frmts/elas/elasdataset.cpp",
+        579,
+        582
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-111",
+    "sev": "Medium",
+    "title": "`NDFDataset::Open()` fetches `\"USGS_PROJECTION_NUMBER\"` instead of `\"USGS_PROJECTION_PARAMETERS\"`, leaving all 15 USGS projection parameters zeroed",
+    "files": [
+      [
+        "frmts/raw/ndfdataset.cpp",
+        323,
+        344
+      ],
+      [
+        "frmts/raw/ndfdataset.cpp",
+        384,
+        391
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-112",
+    "sev": "Medium",
+    "title": "`/vsicurl/` header sniffer copies `tp.nBands`/`tp.nSize` before `OGR_DS_ExecuteSQL()` invokes callback and omits `+ i` in JPEG SOF0 parsing",
+    "files": [
+      [
+        "frmts/mbtiles/mbtilesdataset.cpp",
+        2364,
+        2416
+      ],
+      [
+        "frmts/mbtiles/mbtilesdataset.cpp",
+        2464,
+        2481
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-113",
+    "sev": "Medium",
+    "title": "2D TileDB arrays without `NUM_BANDS` metadata compute `nBlocksX`/`nBlocksY` with `nBlockXSize = nBlockYSize = -1` and look up off-by-one `TDB_VALUES_(i+1)`",
+    "files": [
+      [
+        "frmts/tiledb/tiledbdataset.cpp",
+        63,
+        64
+      ],
+      [
+        "frmts/tiledb/tiledbdataset.cpp",
+        1413,
+        1438
+      ],
+      [
+        "frmts/tiledb/tiledbdataset.cpp",
+        1463,
+        1522
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-114",
+    "sev": "Medium",
+    "title": "`PostGISRasterRasterBand::GetMinimum()` delegates to `VRTSourcedRasterBand::GetMaximum()`, and `GetOverviewDS()` checks `iOvr > GetOverviewCount()` instead of `>=`",
+    "files": [
+      [
+        "frmts/postgisraster/postgisrasterrasterband.cpp",
+        728,
+        738
+      ],
+      [
+        "frmts/postgisraster/postgisrasterdataset.cpp",
+        755,
+        760
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-115",
+    "sev": "Medium",
+    "title": "`GDALECWCompressor::Initialize()` swaps `padfGeoTransform[2]` and `padfGeoTransform[4]` in GMLJP2 XML pixel-center origin and `<gml:offsetVector>` elements",
+    "files": [
+      [
+        "frmts/ecw/ecwcreatecopy.cpp",
+        409,
+        439
+      ]
+    ]
+  },
+  {
+    "id": "GDAL-116",
+    "sev": "Medium",
+    "title": "`WEBPDataset::GetMetadata(\"xml:XMP\")` checks EXIF flag bit (`0x08`) instead of XMP (`0x04`), obsolete `\"META\"` FourCC instead of `\"XMP \"`, and omits RIFF odd-byte padding",
+    "files": [
+      [
+        "frmts/webp/webpdataset.cpp",
+        191,
+        264
+      ]
+    ]
+  }
+]

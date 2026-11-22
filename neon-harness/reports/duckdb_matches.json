@@ -1,0 +1,1487 @@
+[
+ {
+  "finding": "BUG-001",
+  "sev": "Critical",
+  "title": "`FilterPushdown::PushdownSetOperation` drops `DISTINCT` deduplication on `UNION`/`EXCEPT` when one branch is empty",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-002",
+  "sev": "Critical",
+  "title": "`Deliminator::RemoveInequalityJoinWithDelimGet` corrupts join conditions in-place on partial failure and breaks `NULL` semantics for `!=`",
+  "bugs": {
+   "duckdb-3f3cf4083ba4": {
+    "region": [
+     355,
+     356,
+     357,
+     358,
+     359,
+     360
+    ],
+    "strict": []
+   }
+  }
+ },
+ {
+  "finding": "BUG-003",
+  "sev": "Critical",
+  "title": "`FilterCombiner::FindTransitiveFilter` passes `IS [NOT] DISTINCT FROM` to `AddTransitiveFilters`, causing assert crash / silent wrong results",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-004",
+  "sev": "Critical",
+  "title": "`FilterCombiner::GenerateTableScanFilters` overflows signed `hugeint_t` subtraction in `IN`-to-range simplification",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-005",
+  "sev": "Critical",
+  "title": "`CompressedMaterialization` compresses 8\u201315 byte `VARCHAR` into signed `HUGEINT`, corrupting `ORDER BY` on non-ASCII UTF-8 strings",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-006",
+  "sev": "Critical",
+  "title": "`StatisticsPropagator` replaces `ANTI`/`RIGHT_ANTI` joins with `LOGICAL_EMPTY_RESULT` without checking build-side non-emptiness",
+  "bugs": {
+   "duckdb-55543d201747": {
+    "region": [
+     94,
+     95,
+     96,
+     97,
+     98,
+     99,
+     100,
+     101,
+     102,
+     103,
+     104,
+     105,
+     106,
+     107,
+     108,
+     109,
+     110,
+     111,
+     112,
+     113,
+     114,
+     115,
+     116,
+     117,
+     118,
+     119,
+     120,
+     121,
+     122,
+     123
+    ],
+    "strict": [
+     94,
+     95,
+     96,
+     97,
+     98,
+     99,
+     100,
+     105,
+     106,
+     107,
+     108,
+     109,
+     114,
+     116,
+     121
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-007",
+  "sev": "Critical",
+  "title": "`MoveConstantsRule` folds `IS [NOT] DISTINCT FROM NULL` to `NULL` and mishandles signed-min division overflow on `!=` and `>`",
+  "bugs": {
+   "duckdb-282d562aa395": {
+    "region": [
+     43,
+     44,
+     45
+    ],
+    "strict": []
+   }
+  }
+ },
+ {
+  "finding": "BUG-008",
+  "sev": "Critical",
+  "title": "`InClauseSimplificationRule` reverses `CastIsInvertible` arguments (dropping rows on `CAST(ts AS DATE) IN (...)`) and `ComparisonSimplificationRule` ignores `TRY_CAST`",
+  "bugs": {
+   "duckdb-a36a17c4de98": {
+    "region": [
+     26,
+     27,
+     28,
+     29,
+     30,
+     35,
+     36,
+     37,
+     38,
+     39,
+     40
+    ],
+    "strict": [
+     27
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-009",
+  "sev": "High",
+  "title": "`FilterPullup::Rewrite` pulls filters above `DISTINCT ON ... ORDER BY`, crashing `CompressedMaterialization` / dropping valid rows",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-010",
+  "sev": "High",
+  "title": "`StatisticsPropagator` underestimates `max_cardinality` for `GROUPING SETS`/`CUBE`, causing `int64_t` overflow in `sum_no_overflow`",
+  "bugs": {
+   "duckdb-55543d201747": {
+    "region": [
+     37,
+     38
+    ],
+    "strict": []
+   }
+  }
+ },
+ {
+  "finding": "BUG-011",
+  "sev": "High",
+  "title": "`StatisticsPropagator` omits `TIMESTAMP_{NS,MS,SEC} -> TIME` in non-monotonic cast stats check, pruning valid `TIME` rows",
+  "bugs": {
+   "duckdb-55543d201747": {
+    "region": [
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38
+    ],
+    "strict": [
+     27,
+     30,
+     31,
+     32,
+     34,
+     36
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-012",
+  "sev": "High",
+  "title": "`RegexOptimizationRule` drops mid-pattern `^`/`$` anchors, rewriting `regexp_matches(s, 'a$b')` to `LIKE '%ab%'`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-013",
+  "sev": "Medium",
+  "title": "`CommonAggregateOptimizer` deduplicates volatile aggregates such as `sum(nextval('s'))`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-014",
+  "sev": "Critical",
+  "title": "`GatherAliases` casts `BoundCTENode` to `BoundSelectNode`, causing assertion crash / type confusion on `MATERIALIZED` CTE in `UNION ... ORDER BY`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-015",
+  "sev": "High",
+  "title": "`Binder::CreatePlan(BoundRecursiveCTENode)` hardcodes `setop_all = true`, turning non-recursive `WITH RECURSIVE ... UNION` into `UNION ALL`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-016",
+  "sev": "High",
+  "title": "`Binder::CreatePlan(BoundSelectNode)` collapses multiple empty `GROUPING SETS ((), (), ())` to a single row",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-017",
+  "sev": "Medium",
+  "title": "`BindMacroExpression` fails to substitute direct macro parameters inside lambda expressions",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-018",
+  "sev": "Critical",
+  "title": "Heap use-after-free via uncleaned `Transformer::stored_cte_map` across multi-statement `CREATE MACRO ... TABLE (WITH ...); PIVOT ...;`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-019",
+  "sev": "Critical",
+  "title": "Type confusion -> wild pointer dereference (`SIGSEGV`) in `TransformTypeName` for `\"STRUCT\"($2)` and `\"UNION\"($2)`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-020",
+  "sev": "High",
+  "title": "Null pointer dereference in `TransformCreateSecretOptions` for valueless `TYPE` / `PROVIDER` options",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-021",
+  "sev": "High",
+  "title": "`TransformExplain` ignores `ANALYZE FALSE`, executing destructive statements (`EXPLAIN (ANALYZE FALSE) DELETE FROM t`)",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-022",
+  "sev": "High",
+  "title": "`JoinRef::ToString()` omits parentheses and emits `,` for `CROSS JOIN`, inverting join precedence in SQL round-trip",
+  "bugs": {
+   "duckdb-025b1abedd19": {
+    "region": [
+     10,
+     11,
+     12,
+     13,
+     14,
+     15,
+     16,
+     17,
+     22,
+     23,
+     24,
+     25,
+     26,
+     27,
+     28,
+     29,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44
+    ],
+    "strict": [
+     13,
+     25
+    ]
+   },
+   "duckdb-e5c74941dc92": {
+    "region": [
+     43,
+     44,
+     45,
+     46,
+     47,
+     48,
+     49
+    ],
+    "strict": [
+     46
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-023",
+  "sev": "High",
+  "title": "`TransformCreateSequence` overwrites user-specified `MINVALUE`/`MAXVALUE` when `INCREMENT BY` appears after them",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-024",
+  "sev": "Medium",
+  "title": "`TransformInterval` casts integer expressions through `DOUBLE`, losing precision on 64-bit values `> 2^53`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-025",
+  "sev": "Medium",
+  "title": "Debug `D_ASSERT` crash on empty enum label `CREATE TYPE e AS ENUM ('')`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-026",
+  "sev": "Medium",
+  "title": "Stale `window_clauses` and `last_param_type` leak across `UNION` branches and multi-statement queries",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-027",
+  "sev": "Critical",
+  "title": "Window `EXCLUDE CURRENT ROW / GROUP / TIES` ignores frame bounds when current row/peer group lies outside frame",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-028",
+  "sev": "Critical",
+  "title": "`FindTypedRangeBound` range-hint optimization truncates duplicate peer groups via `prev.end`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-029",
+  "sev": "Critical",
+  "title": "`RANGE` frame search bounds exclude current row and peers for `0 PRECEDING` end and `0 FOLLOWING` start",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-030",
+  "sev": "Critical",
+  "title": "`WindowDistinctAggregator::Finalize` crashes with OOB access on empty vector when `FILTER (WHERE false)` eliminates all rows",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-031",
+  "sev": "Critical",
+  "title": "`PhysicalAsOfJoin` populates `null_sensitive` with `lhs_orders.size()`, matching `NULL` keys and dropping `IS NOT DISTINCT FROM` NULLs",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-032",
+  "sev": "Critical",
+  "title": "`PhysicalUpdate::Sink` fails to slice `row_ids` during deduplication in `update_is_del_and_insert` mode, duplicating rows in `LIST` columns",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-033",
+  "sev": "Critical",
+  "title": "`PhysicalInsert` `ON CONFLICT` heap buffer over-read on `WHERE false`/`NULL` and spurious double-update error on `DO NOTHING`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-034",
+  "sev": "High",
+  "title": "`ExclusionFilter::ResetMask` skipped on empty frames in `first_value`/`last_value`/`nth_value`, permanently corrupting exclusion mask",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-035",
+  "sev": "High",
+  "title": "`WindowValueExecutor::Sink` ignores `vdata.sel` when building `ignore_nulls` from `CONSTANT_VECTOR`/`DICTIONARY_VECTOR`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-036",
+  "sev": "High",
+  "title": "`WindowLeadLagExecutor` and `ROWS` frame bounds never check `CellIsNull` on `NULL` offset expressions",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-037",
+  "sev": "High",
+  "title": "`PhysicalTopN` 64-bit unsigned overflow in `2ULL * (limit + offset)` silently drops rows",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-038",
+  "sev": "Medium",
+  "title": "`WindowSegmentTree::Evaluate` with `EXCLUDE` leaks heap-owning aggregate states (`right_part.statef` destructor never called)",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-039",
+  "sev": "Critical",
+  "title": "Heap buffer overflow write via type-confused `string_t` writes when `force_not_null` is enabled on non-`VARCHAR` columns",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-040",
+  "sev": "Critical",
+  "title": "Heap buffer over-read and OOB array access in `AddValueToVector` via unchecked `IsValueNull` length on trailing column with `nullstr`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-041",
+  "sev": "Critical",
+  "title": "Out-of-bounds read of `column_counts[2048]` in `CSVSniffer::AnalyzeDialectCandidate` when `skip >= 2048` or negative",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-042",
+  "sev": "Critical",
+  "title": "Unsynchronized data race and use-after-free in `CSVBufferManager::ResetBuffer` during parallel multi-buffer scans",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-043",
+  "sev": "High",
+  "title": "Out-of-bounds `file_types`/`column_mapping` access with `rejects_recovery_columns` under projection pushdown",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-044",
+  "sev": "High",
+  "title": "Uninitialized stack memory exposure and valid row-0 deletion in `CSVCast` under `ignore_errors=true` with custom date/timestamp formats",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-045",
+  "sev": "High",
+  "title": "Uninitialized `parse_types` read on cast error under projection pushdown",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-046",
+  "sev": "High",
+  "title": "Infinite loop in `COPY ... TO (FORMAT CSV, QUOTE '')` `AddEscapes` on strings containing NUL bytes",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-047",
+  "sev": "High",
+  "title": "Spurious trailing all-NULL row (`null_padding=true, parallel=false`) and stale `validity_mask` corrupting valid rows (`ignore_errors=true`)",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-048",
+  "sev": "High",
+  "title": "Assertion crash in `RemoveEscape` passing non-`VARCHAR` vector to `StringVector::EmptyString` on directly-cast numeric columns",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-049",
+  "sev": "High",
+  "title": "Missing `IsNull()` checks in `repeat_row`/timestamp `range`, unsigned wraparound in `repeat(val, -1)`, and silent 0 rows in full `generate_series`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-050",
+  "sev": "High",
+  "title": "Unchecked downcast / type confusion in `PragmaImportDatabase` when `load.sql` contains non-`COPY` statements",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-051",
+  "sev": "High",
+  "title": "1-byte heap buffer over-read in `BaseScanner::Process` and `ProcessExtraRow` fast-skip loops (dereference before bounds check)",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-052",
+  "sev": "Low",
+  "title": "Built-in `PRAGMA all_profiling_output` references nonexistent table function and uses invalid `ON (operator_id)` syntax",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-053",
+  "sev": "Critical",
+  "title": "RLE emits zero-length runs at `65535` (`UINT16_MAX`), causing silent data corruption under default compression and debug assert crash",
+  "bugs": {
+   "duckdb-16912ea8773c": {
+    "region": [
+     58,
+     59,
+     60,
+     61,
+     62,
+     63,
+     64,
+     65,
+     66,
+     67,
+     68
+    ],
+    "strict": [
+     61,
+     65
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-054",
+  "sev": "Critical",
+  "title": "ALP, ALPRD, and Patas `Skip()` unsigned integer underflow causes infinite loop / OOB pointer underflow",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-055",
+  "sev": "Critical",
+  "title": "`RowGroupCollection::ScheduleVacuumTasks` miscomputes `merge_count` across empty row groups, causing fatal `CHECKPOINT` crash and data loss",
+  "bugs": {
+   "duckdb-c9112165759d": {
+    "region": [
+     936,
+     937,
+     938,
+     939,
+     940,
+     941
+    ],
+    "strict": [
+     937
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-056",
+  "sev": "Critical",
+  "title": "`ArrayColumnData::FetchRow` and `RevertAppend` omit row-group `start` offset, returning wrong row's array or crashing OOB on RG >= 1",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-057",
+  "sev": "Critical",
+  "title": "`CommittedVersionOperator::UseDeletedVersion` treats uncommitted deletes as permanent, corrupting `CREATE UNIQUE INDEX` and `SET NOT NULL`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-058",
+  "sev": "Critical",
+  "title": "`ChunkVectorInfo::Delete` mutates `deleted[]` before conflict checks, permanently locking rows against future `DELETE`/`UPDATE` after rollback",
+  "bugs": {
+   "duckdb-663c7d842c69": {
+    "region": [
+     187,
+     188,
+     189,
+     190,
+     191,
+     192,
+     193
+    ],
+    "strict": [
+     190
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-059",
+  "sev": "Critical",
+  "title": "`WriteAheadLogDeserializer::ReplayCreateType` omits `if (DeserializeOnly()) return;`, silently discarding entire WAL on reopen",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-060",
+  "sev": "Critical",
+  "title": "`CheckpointWriter::GetCatalogEntries` writes tables before macros and cross-schema sequences, permanently bricking checkpointed DBs",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-061",
+  "sev": "Critical",
+  "title": "`DataTable::VerifyForeignKeyConstraint` resolves partner tables in `INVALID_CATALOG`, silently bypassing FKs in `ATTACH`ed databases",
+  "bugs": {
+   "duckdb-9dda7601a697": {
+    "region": [
+     414,
+     415
+    ],
+    "strict": [
+     415
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-062",
+  "sev": "High",
+  "title": "Checkpoint constant compression (even `uncompressed`) and RLE silently corrupt `-0.0` to `+0.0`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-063",
+  "sev": "High",
+  "title": "`ART::CheckConstraintsForChunk` asserts `LEAF_INLINED` on non-unique FK ART during `DELETE_FK` (crash / garbage row_t)",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-064",
+  "sev": "High",
+  "title": "`ReplayCreateIndex` allocates and writes persistent disk blocks during Pass 1 (`DeserializeOnly()`), leaking blocks and breaking `READ_ONLY` reopen",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-065",
+  "sev": "High",
+  "title": "`RowGroupCollection::RemoveFromIndexes` passes unsliced `row_identifiers` on multi-vector deletes, corrupting local PK/UNIQUE indexes",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-066",
+  "sev": "High",
+  "title": "`DuckSchemaEntry::AddEntryInternal` (`CREATE OR REPLACE TABLE`) bypasses `FindForeignKeyInformation`, breaking FK integrity and stranding phantom FKs",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-067",
+  "sev": "High",
+  "title": "`DuckTableEntry::RemoveColumn` mutates `column_dependency_manager` in place before validation/rollback and breaks `DROP COLUMN ... CASCADE` with `CHECK`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-068",
+  "sev": "High",
+  "title": "`Leaf::Remove` unconditionally pops `last_row_id` before checking if target `row_id` exists, corrupting non-unique ART leaves",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-069",
+  "sev": "High",
+  "title": "`BlockManager::RegisterBlock`/`UnregisterBlock` TOCTOU race, `StandardBufferManager::Pin` null deref on `can_destroy`, inverted `TryGetBlockIndex`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-070",
+  "sev": "High",
+  "title": "`DataTable` `ALTER COLUMN ... TYPE` constructor locks `this->append_lock` instead of `parent.append_lock`, racing with concurrent appends",
+  "bugs": {
+   "duckdb-24278e9ffd28": {
+    "region": [
+     151,
+     152,
+     153,
+     154,
+     155,
+     156,
+     157,
+     184
+    ],
+    "strict": [
+     154
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-071",
+  "sev": "Medium",
+  "title": "ALP & ALPRD `FindAndReplaceNullsInVector` reads self-written `vector_null_positions` and pollutes segment zonemap stats with `0.0`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-072",
+  "sev": "Medium",
+  "title": "`BitpackingFetchRow` assertion crash and signed integer overflow UB in `CONSTANT_DELTA` mode",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-073",
+  "sev": "Medium",
+  "title": "`SequenceCatalogEntry::NextValue` prematurely throws overflow before returning `INT64_MAX` and mutates `counter` before throwing",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-074",
+  "sev": "Medium",
+  "title": "`DuckTableEntry` `Copy`/`SetDefault`/`SetNotNull`/`DropNotNull`/`SetColumnComment` drops `temporary = true`, breaking `CREATE INDEX` on temp tables",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-075",
+  "sev": "Critical",
+  "title": "Global buffer over-read in `HugeIntegerCastOperation::HandleExponent` indexing `POWERS_OF_TEN[40]` out of bounds, plus `uint16_t` wraparound",
+  "bugs": {
+   "duckdb-37580a29144b": {
+    "region": [
+     1664,
+     1665,
+     1666
+    ],
+    "strict": []
+   }
+  }
+ },
+ {
+  "finding": "BUG-076",
+  "sev": "Critical",
+  "title": "`Uhugeint::POWERS_OF_TEN[38]` equals `10^37` (and `[39] == 0`), causing `CAST('1e38' AS UHUGEINT)` to silently return `10^37`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-077",
+  "sev": "Critical",
+  "title": "`Uhugeint::TrySubtractInPlace` misses borrow wraparound when `rhs.upper == UINT64_MAX`, silently returning `UINT64_MAX` instead of underflow",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-078",
+  "sev": "Critical",
+  "title": "`Time::TryConvertTimeTZ` allows huge hours (assert crash / 610 KB global OOB read past `digits[200]`) and drops minus sign on `-00:00:30`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-079",
+  "sev": "Critical",
+  "title": "Heap buffer overflow write in `Vector::Resize` for nested `ARRAY` types (`INT[10][2]`, `STRUCT(ARRAY)`) and truncated validity resize",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-080",
+  "sev": "Critical",
+  "title": "Heap buffer overflow read in `VectorOperations::Copy` for `PhysicalType::ARRAY` passing `source_offset * array_size` into already-offset `child_sel`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-081",
+  "sev": "Critical",
+  "title": "`ListLoopHash` fails to flatten constant `hashes` in `CombineHash`, returning identical hashes for distinct lists; `ArrayLoopHash` misses init/`sel`",
+  "bugs": {
+   "duckdb-61c3cfc37903": {
+    "region": [
+     92,
+     93,
+     94,
+     95,
+     96
+    ],
+    "strict": []
+   }
+  }
+ },
+ {
+  "finding": "BUG-082",
+  "sev": "Critical",
+  "title": "`TupleDataCastToArrayListGather` / `TupleDataCastToArrayStructGather` ignore sparse `target_sel`, casting uninitialized `cast_vector[0]`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-083",
+  "sev": "Critical",
+  "title": "`RadixScatterListVector` fails to advance `key_locations` on empty lists and passes `width - 1` instead of `width - 2`, corrupting sort order",
+  "bugs": {
+   "duckdb-4f2d8e8eaf2f": {
+    "region": [
+     125,
+     126,
+     127,
+     128,
+     129,
+     130,
+     131
+    ],
+    "strict": [
+     128
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-084",
+  "sev": "High",
+  "title": "`Bit::BitToBlob` checks `if (size > 2)` instead of `if (size > 1)`, corrupting every 2-byte `BIT -> BLOB` cast with uninitialized/zero 2nd byte",
+  "bugs": {
+   "duckdb-165dc49e8f37": {
+    "region": [
+     179,
+     180,
+     182,
+     183,
+     184,
+     185
+    ],
+    "strict": [
+     182
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-085",
+  "sev": "High",
+  "title": "`Bit::BitPosition` uses non-backtracking naive scan, missing valid bit substrings (`bit_position('10'::BIT, '110'::BIT) == 0`)",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-086",
+  "sev": "High",
+  "title": "`Interval::FromCString` (`interval_parse_time`) performs unchecked `int64_t` addition (UB) and negates entire `result.micros` (`-11:00:00`)",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-087",
+  "sev": "High",
+  "title": "`Comparators` fails to skip serialized bytes of NULL `STRUCT`/`ARRAY` elements (assert crash / wrong sort) and omits `UHUGEINT`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-088",
+  "sev": "High",
+  "title": "`Radix::EncodeData<interval_t>` encodes unnormalized fields, sorting `25 hours` before `1 day` and splitting equal intervals in `PARTITION BY`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-089",
+  "sev": "High",
+  "title": "`StringUtil::RTrim` rejects negative signed `char`, silently truncating trailing UTF-8 in `PARTITION_BY` paths; `GetFilePath(\"\")` underflows",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-090",
+  "sev": "High",
+  "title": "`LocalFileSystem::Read`/`Write` omit `location += bytes_read` on partial `pread`/`pwrite`, corrupting >2 GiB / short I/O",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-091",
+  "sev": "High",
+  "title": "`Vector::Slice(other, offset, end)` slices `ARRAY` child vector at `[offset, end)` instead of `[offset * array_size, end * array_size)`",
+  "bugs": {
+   "duckdb-43b086a35dd5": {
+    "region": [
+     166,
+     167,
+     168,
+     169,
+     170,
+     171
+    ],
+    "strict": [
+     169
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-092",
+  "sev": "High",
+  "title": "`HeapScatterArrayVector`/`HeapGatherArrayVector` do not advance `array_validitymask_location` across 2048-element chunks",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-093",
+  "sev": "Medium",
+  "title": "`ExpressionExecutor` omits `ARRAY` in `CASE`/`COALESCE` (`FillSwitch`) and omits nested types in `WHERE ... BETWEEN`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-094",
+  "sev": "Medium",
+  "title": "`Timestamp::TryConvertTimestampTZ` silently turns finite timestamps near `INT64_MAX` into `infinity` after UTC offset subtraction",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-095",
+  "sev": "Critical",
+  "title": "`bitstring_agg` on `UHUGEINT` wraps `UHUGEINT_MAX + 1` to `0`, allocating 1-byte buffer and causing arbitrary OOB write; crashes on `min > max`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-096",
+  "sev": "Critical",
+  "title": "`MapConcatFunction` omits `map_format.validity.RowIsValid(index)`, causing `SIGSEGV` on typed `NULL::MAP` rows",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-097",
+  "sev": "Critical",
+  "title": "`ListToArrayCast` heap buffer over-read on `source_cc` and `payload_vector` in slow and fast paths",
+  "bugs": {
+   "duckdb-685162621323": {
+    "region": [
+     208,
+     209,
+     210,
+     211,
+     212,
+     213,
+     214,
+     228,
+     229,
+     230,
+     231,
+     232,
+     233,
+     234,
+     235,
+     236,
+     237,
+     238,
+     239
+    ],
+    "strict": [
+     211,
+     231,
+     232,
+     233,
+     234,
+     235,
+     236
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-098",
+  "sev": "Critical",
+  "title": "`VectorStringTo{Array,Map,Struct,List}` confuse source `idx` with destination `i`, causing OOB validity writes and uninitialized `list_entry_t` crash",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-099",
+  "sev": "Critical",
+  "title": "`MapUtil::ReinterpretMap` (`map_from_entries`) causes type confusion crash (`VectorListBuffer` cast to `VectorChildBuffer`) on dictionary vectors",
+  "bugs": {
+   "duckdb-6f234f9c4978": {
+    "region": [
+     14,
+     15,
+     16,
+     17,
+     18,
+     19,
+     20,
+     21,
+     22,
+     31,
+     32,
+     33,
+     34
+    ],
+    "strict": [
+     17,
+     18,
+     19
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-100",
+  "sev": "Critical",
+  "title": "`MAP(keys, values)` heap buffer over-read past 16-byte constant buffer, cross-row misalignment, and UBSan pointer overflow on `MAP(NULL, NULL)`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-101",
+  "sev": "Critical",
+  "title": "`list_where` heap buffer over-read and cross-row data leak when selection list exceeds input list; `list_select` `INT64_MIN` UB and empty-list crash",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-102",
+  "sev": "Critical",
+  "title": "`ListFlattenFunction` (`flatten`) assumes contiguous ascending child lists, returning `[]`, leaking sliced elements, or underflow-crashing",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-103",
+  "sev": "Critical",
+  "title": "`EnumLastFunction` underflows `enum_size - 1` on empty `ENUM ()` (ASan heap buffer over-read); `EnumRangeBoundaryFunction` crashes / repeats row 0",
+  "bugs": {
+   "duckdb-1b72fe675ead": {
+    "region": [
+     15,
+     16,
+     17,
+     18,
+     20,
+     21
+    ],
+    "strict": [
+     18
+    ]
+   },
+   "duckdb-824a50418841": {
+    "region": [
+     28,
+     29,
+     30,
+     31,
+     32,
+     33,
+     34
+    ],
+    "strict": [
+     31
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-104",
+  "sev": "Critical",
+  "title": "`DecimalRoundNegativePrecisionFunction` triggers global buffer over-read past `POWERS_OF_TEN`, returns `0` for `NULL`, and violates `DECIMAL` width",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-105",
+  "sev": "Critical",
+  "title": "`RegexExtractBind`/`RegexExtractStructFunction` type confusion / null pointer dereference on `regexp_extract(..., NULL::VARCHAR[])`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-106",
+  "sev": "Critical",
+  "title": "`ListZipFunction` triggers 8 GiB OOM crash on `list_zip(true)` and uninitialized `bool` UBSan crash on `list_zip([1, 2], [3], NULL::BOOL)`",
+  "bugs": {
+   "duckdb-4fc939834090": {
+    "region": [
+     132,
+     133,
+     134
+    ],
+    "strict": [
+     133
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-107",
+  "sev": "High",
+  "title": "`BIT` bitwise operators (`&`, `|`, `^`, `~`, `<<`, `>>`) and `set_bit` omit `target.Finalize()`, leaving stale 4-byte `string_t` prefixes on >88-bit strings",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-108",
+  "sev": "High",
+  "title": "`ListResizeFunction` mutates non-constant default column to `CONSTANT_VECTOR` and passes `def_index` as `source_offset`, corrupting values / crashing",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-109",
+  "sev": "High",
+  "title": "`ArrayToArrayCast`/`ArrayToVarcharCast`/`ArrayToListCast` crash on constant `[NULL, ...]::INT[N]`, under-flatten child, and `SetNull` on constant",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-110",
+  "sev": "High",
+  "title": "`MapCastSwitch` (`CAST(MAP AS MAP)`/`TRY_CAST`) delegates to `ListToListCast`, creating duplicate keys and NULL keys violating `MAP` invariants",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-111",
+  "sev": "High",
+  "title": "`ToUnionCast` returns early on failed `TRY_CAST` leaving uninitialized union tags (`TAG_OUT_OF_RANGE`)",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-112",
+  "sev": "High",
+  "title": "`EnumEnumCast` never sets `CONSTANT_VECTOR` (crashing constant folding) and ignores cast errors when `error_message != nullptr`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-113",
+  "sev": "High",
+  "title": "`VectorStringToMap` pass-1/pass-2 count mismatch crashes on `TRY_CAST('{NULL=1, a=2}' AS MAP)`; `SplitStruct` reads 1 byte OOB on unclosed `'{'`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-114",
+  "sev": "High",
+  "title": "`ListGradeUpBind` crashes with NULL deref on `UNKNOWN` parameter and type confusion on `ARRAY`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-115",
+  "sev": "High",
+  "title": "`StructInsertFunction` omits NULL validity propagation despite `DEFAULT_NULL_HANDLING`, crashing in Debug / turning NULL structs non-NULL in Release",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-116",
+  "sev": "High",
+  "title": "`mode()` sliding window underflows `size_t` count on `NaN` (returning `NaN` forever); `entropy()` treats identical `NaN`s as distinct",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-117",
+  "sev": "High",
+  "title": "`reservoir_quantile` and `approx_quantile` accept `NaN` quantile parameter (Debug assert crash / Release OOB `std::nth_element`)",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-118",
+  "sev": "High",
+  "title": "`median`/`quantile_cont` on `'infinity'::TIMESTAMP` or max finite timestamps overflows `std::llround`, aborting with uncaught exception (`SIGABRT`)",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-119",
+  "sev": "High",
+  "title": "Windowed `quantile` skip-list path ignores negative quantiles (`desc`); `QuantileCompare` uses raw `<` on `NaN` (order-dependent wrong results)",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-120",
+  "sev": "High",
+  "title": "`BindDecimalArgMinMax` reads pre-cast `arguments[1]->return_type`, crashing on `SMALLINT`/`FLOAT`/`NULL` and dropping collations",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-121",
+  "sev": "High",
+  "title": "`DateTruncStatistics` copies validity from specifier literal and `PropagateSimpleDatePartStatistics` omits `SetHasNull()` on `infinity`, breaking `IS NULL`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-122",
+  "sev": "High",
+  "title": "`array_cosine_similarity` and `list_cosine_similarity` clamp `NaN` to `-1.0`; `list_cosine_similarity` rejects NULLs in filtered-out rows",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-123",
+  "sev": "High",
+  "title": "`parse_path`/`parse_filename`/`parse_dirname` only check `sec_arg.validity.RowIsValid(0)`, corrupting all rows when row 0 has `NULL` option",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-124",
+  "sev": "High",
+  "title": "Signed integer overflow UB in `repeat`, `array_slice`, `to_weeks`, `date_diff`, `gcd`/`lcm(HUGEINT_MIN)`, `INTERVAL` ops, and `time_bucket` (`-infinity`)",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-125",
+  "sev": "High",
+  "title": "`make_date`/`make_time` silently truncate `int64_t` to `int32_t` & `NaN` float-to-int UB; `string_split_regex` ignores options on non-constant pattern",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-126",
+  "sev": "Medium",
+  "title": "`bit_count((-1)::HUGEINT)` overflows `int8_t` to `-128`; `round(NaN/Inf, -1)` returns `0.0`; `quantile_disc(1, NULL::DOUBLE[])` crashes; `bar()` byte/char mismatch",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-127",
+  "sev": "High",
+  "title": "`RegexExtractStructFunction` and `LeastGreatestFunction` pin input buffer before `ToUnifiedFormat` flattens `FSST_VECTOR`s (heap UAF risk)",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-128",
+  "sev": "Critical",
+  "title": "Sandbox escape & path traversal in `LocalFileSecretStorage` bypasses `enable_external_access=false`, `disabled_filesystems`, `lock_configuration`; broken `IF EXISTS`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-129",
+  "sev": "Critical",
+  "title": "Sandbox escape in `QueryProfiler::WriteToFile` (`SET profile_output` writes arbitrary host files via raw `std::ofstream`)",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-130",
+  "sev": "Critical",
+  "title": "Heap buffer overflow write in `ArrowUnionData::Append` when `from > 0` (`batch_size < chunk_size`)",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-131",
+  "sev": "High",
+  "title": "`ClientContext::Query` silently swallows execution errors of DML/DDL statements following a `SELECT` in multi-statement queries",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-132",
+  "sev": "High",
+  "title": "`BaseAppender::AppendDataChunk` reads `types[i]` out of bounds when `chunk.ColumnCount() > types.size()` and skips check when `<`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-133",
+  "sev": "High",
+  "title": "`duckdb_arrow_scan` checks Arrow `get_schema()` against `DuckDBError` (`1`) instead of `!= 0`, reading uninitialized `ArrowSchema` and leaking schema",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-134",
+  "sev": "High",
+  "title": "Uncaught C++ exception (`SIGABRT`) across `extern \"C\"` in `duckdb_result_chunk_count` / `duckdb_result_get_chunk` on failed queries",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-135",
+  "sev": "High",
+  "title": "`ArrowAppender` exports `MAP` with 64-bit offsets under 32-bit Arrow `\"+m\"` schema when `arrow_large_buffer_size = true`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-136",
+  "sev": "High",
+  "title": "Variable shadowing in `ClientContext::ExecuteTaskInternal` overwrites worker-thread exceptions with `INTERRUPT`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-137",
+  "sev": "Medium",
+  "title": "`DatabaseManager::DetachDatabase` uses case-sensitive comparison, allowing `DETACH \"MEMORY\"` to detach the active default database",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-138",
+  "sev": "Medium",
+  "title": "`duckdb_param_type` always returns `DUCKDB_TYPE_INVALID` for named parameters",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-139",
+  "sev": "Medium",
+  "title": "Empty scope `\"\"` unconditionally overwrites longer prefix match in `BaseSecret::MatchScore`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-140",
+  "sev": "Medium",
+  "title": "`duckdb_bind_set_cardinality` inverts `is_exact`, and `duckdb_get_int64` on SQL `NULL` throws uncaught C++ exception",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-141",
+  "sev": "Critical",
+  "title": "Heap buffer overflow write in `ColumnReader::PreparePageV2` via unvalidated page sizes and level lengths",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-142",
+  "sev": "Critical",
+  "title": "Heap use-after-free across multi-page encoding transitions (`DELTA_BINARY_PACKED` -> `PLAIN`) in `ColumnReader::PrepareRead`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-143",
+  "sev": "Critical",
+  "title": "Unchecked dictionary index heap buffer over-read (and missing null check) in Parquet `StringParquetValueConversion::DictRead` / `Offsets`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-144",
+  "sev": "High",
+  "title": "Division by zero (`miniblocks_per_block == 0`) and heap buffer over-read (`block_value_count % miniblocks_per_block != 0`) in `DbpDecoder`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-145",
+  "sev": "High",
+  "title": "Silent `TIMETZ` timezone offset loss on Parquet write and cumulative/racy `stats_null_count` corruption across row groups",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-146",
+  "sev": "Critical",
+  "title": "32-bit integer overflow heap write and premature `memcpy` over-read in `PrepareDeltaByteArray` / `PrepareDeltaLengthByteArray`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-147",
+  "sev": "High",
+  "title": "Heap buffer over-read and null deref in `ThriftFileTransport::read` prefetch fallback, plus `ParquetCrypto` unsigned underflow",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-148",
+  "sev": "High",
+  "title": "Corrupt decoding of high-precision (`> 38`) Parquet decimals and wrong rejection of negative wide decimals",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-149",
+  "sev": "Critical",
+  "title": "Type confusion and heap UAF in `JSONExecutors::BinaryExecute` wildcard path (`json_keys(..., '$[*]')` passes `result` instead of `child_entry`)",
+  "bugs": {
+   "duckdb-dbd78f790c07": {
+    "region": [
+     76,
+     77,
+     78,
+     79,
+     80,
+     81,
+     82
+    ],
+    "strict": [
+     79
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-150",
+  "sev": "Critical",
+  "title": "Type confusion and ASan crash in `CAST(MAP {100: 'a'} AS JSON)` (`CreateValuesMap` reads non-`VARCHAR` keys as `string_t*`)",
+  "bugs": {
+   "duckdb-8a3e974e8727": {
+    "region": [
+     310,
+     311,
+     312,
+     313,
+     314,
+     315
+    ],
+    "strict": [
+     314
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-151",
+  "sev": "High",
+  "title": "Missing `ARRAY` in `GetJSONType` crashes `CAST(ARRAY(STRUCT) AS JSON)` (`std::out_of_range`) and turns `to_json(ARRAY)` into JSON string",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-152",
+  "sev": "High",
+  "title": "Heap buffer over-read past end of `string_t` in `JSONCommon::ReadInteger` / `ValidatePath` on 19-digit unclosed array index",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-153",
+  "sev": "High",
+  "title": "`TRY_CAST(JSON AS STRUCT)` returns non-NULL struct, `TRY_CAST(JSON AS MAP)` throws, and `json_structure` hits format-string internal error",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-154",
+  "sev": "Medium",
+  "title": "Null pointer passed to `std::string` in `json_deserialize_sql` on non-string `error_type`/`error_message`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-155",
+  "sev": "High",
+  "title": "`SkipWhitespace` receives `remaining` instead of `buffer_size` in `DetectFormatAndRecordType`; `JsonDeserializer::ReadDataPtr` calls `Blob::ToString`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-156",
+  "sev": "Critical",
+  "title": "Integer division by zero (`SIGFPE` / UBSan crash) in ICU `time_bucket(INTERVAL '0 days', TIMESTAMPTZ ...)`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-157",
+  "sev": "High",
+  "title": "Cross-row `icu::Calendar` timezone state leak in `VARCHAR -> TIMESTAMPTZ` cast and `strptime`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-158",
+  "sev": "Medium",
+  "title": "`ICUTableRangeFunction` emits 1 row instead of 0 for `range(ts, ts, INTERVAL 1 DAY)`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-159",
+  "sev": "High",
+  "title": "Vector type confusion (`BIGINT` read as `int32_t*`) and unchecked IPv4 upper-bound overflow in `INET - BIGINT`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-160",
+  "sev": "Medium",
+  "title": "`IPAddress::TryParse` ignores trailing garbage after CIDR mask (`'127.0.0.1/24garbage'::INET`)",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-161",
+  "sev": "High",
+  "title": "`GetFTSSchema` prepends catalog name, breaking `drop_fts_index` and bypassing `overwrite=0` on `ATTACH`ed databases",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-162",
+  "sev": "High",
+  "title": "Unescaped SQL interpolation and unvalidated `doc_id` in `FTSIndexing::IndexingScript` (parser errors / SQL injection)",
+  "bugs": {
+   "duckdb-5e618dfa2d4f": {
+    "region": [
+     73,
+     74,
+     75,
+     76,
+     77,
+     78,
+     79
+    ],
+    "strict": [
+     76
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-163",
+  "sev": "Medium",
+  "title": "`match_bm25(..., conjunctive := 1)` always returns `NULL` when query contains stopwords",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-164",
+  "sev": "Critical",
+  "title": "Stack-based buffer overflow in `doubleToString` (`aBuf[256]`) reachable via `text(1e300, '0')` or `text(1e20, '0.' || repeat('0', 300))`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-165",
+  "sev": "High",
+  "title": "Infinite loop and UB float-to-unsigned conversion in fraction formatting on `NaN`, plus off-by-one Sunday empty string",
+  "bugs": {
+   "duckdb-2380f9735ed0": {
+    "region": [
+     187,
+     188,
+     189,
+     190,
+     191,
+     192
+    ],
+    "strict": [
+     188,
+     189
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-166",
+  "sev": "Critical",
+  "title": "Unchecked `location`/`nr_bytes` heap buffer over-read on cached files in `HTTPFileSystem::Read` and uninitialized stack read in `S3FileSystem::UrlDecode`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-167",
+  "sev": "Medium",
+  "title": "Unsigned underflow `pos - last_pos` in `GenerateSuggestions` after quoted identifier followed by whitespace",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-168",
+  "sev": "High",
+  "title": "Guaranteed NULL pointer dereferences inside `if (!pVal)` in `sqlite3_value_{double,int64,text}` plus uninitialized `pVal->db` wild-pointer write",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-169",
+  "sev": "High",
+  "title": "NULL dereference in `sqlite3_column_bytes` before `sqlite3_step` (`SIGABRT`) and silent BLOB corruption when `column_bytes` precedes `column_blob`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-170",
+  "sev": "Critical",
+  "title": "Heap buffer over-read in SQLite UDF wrapper `CastToVectorSQLiteValue` ignoring `vec_data.sel` when `AllValid()` on constant/dictionary vectors",
+  "bugs": {}
+ }
+]

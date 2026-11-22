@@ -1,0 +1,1868 @@
+[
+ {
+  "finding": "F-001",
+  "sev": "Critical",
+  "title": "Privilege escalation via new-owner UID check in `on_replace_dd_space()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-002",
+  "sev": "Critical",
+  "title": "Pre-authentication stack/heap OOB write via unvalidated replica ID in `mp_decode_vclock_ignore0()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-003",
+  "sev": "Critical",
+  "title": "Remote format string vulnerability in `xrow_decode_error()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-004",
+  "sev": "Critical",
+  "title": "Pre-authentication remote crash via 16-to-8-bit truncation of `msg->header.type` in `iproto_msg_decode()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-005",
+  "sev": "Critical",
+  "title": "Pre-authentication MsgPack type confusion and OOB read/crash in `xrow_decode_sql()` / `tx_process_sql()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-006",
+  "sev": "Critical",
+  "title": "Remote arbitrary OOB 32-bit increment via unvalidated `req->vote` in `raft_process_msg()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-007",
+  "sev": "Critical",
+  "title": "Remote single-UDP-packet NULL dereference crash on forwarding and ECB stack OOB/uninitialized read",
+  "bugs": {}
+ },
+ {
+  "finding": "F-008",
+  "sev": "Critical",
+  "title": "Heap buffer overflow in Vinyl UPSERT normalization via negative `request->index_base`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-009",
+  "sev": "Critical",
+  "title": "Stack buffer overflow in `xlog_meta_parse()` on single-line header (`eol == end` vs `eol == NULL`)",
+  "bugs": {}
+ },
+ {
+  "finding": "F-010",
+  "sev": "Critical",
+  "title": "Use-after-free, double-free, and NULL-underflow crash in `txn_on_timeout()` during yielding sub-statements",
+  "bugs": {}
+ },
+ {
+  "finding": "F-011",
+  "sev": "Critical",
+  "title": "Deterministic use-after-free in `memtx_tx_on_space_delete()` on space drop/alter with concurrent MVCC readers",
+  "bugs": {}
+ },
+ {
+  "finding": "F-012",
+  "sev": "Critical",
+  "title": "Heap type confusion and OOB access destroying disabled functional `TREE` index",
+  "bugs": {
+   "tarantool-77c69aba7b2a": {
+    "region": [
+     1746,
+     1747,
+     1748
+    ],
+    "strict": [
+     1746,
+     1747,
+     1748
+    ]
+   }
+  }
+ },
+ {
+  "finding": "F-013",
+  "sev": "Critical",
+  "title": "Region heap OOB write and OOB MsgPack read in `tuple_constraint_def_decode_fkey()` when `old_count > 0`",
+  "bugs": {
+   "tarantool-354f1a67549b": {
+    "region": [
+     254,
+     255,
+     256,
+     257,
+     258,
+     259,
+     260,
+     265,
+     266,
+     267,
+     268,
+     269,
+     270,
+     271
+    ],
+    "strict": [
+     257,
+     268
+    ]
+   }
+  }
+ },
+ {
+  "finding": "F-014",
+  "sev": "Critical",
+  "title": "Shift-count UB (`1U << ext_type`), missing `MP_EXT` payload validation, and hardcoded UUID offset in `field_def.h` / `tuple_compare.cc`",
+  "bugs": {
+   "tarantool-46b0022d552a": {
+    "region": [
+     268,
+     271,
+     272,
+     273,
+     274,
+     275,
+     276,
+     277,
+     281,
+     282,
+     283,
+     284,
+     285,
+     286
+    ],
+    "strict": [
+     274
+    ]
+   }
+  }
+ },
+ {
+  "finding": "F-015",
+  "sev": "Critical",
+  "title": "Signed `INT32_MIN` negation overflow in splice `offset`/`cut_length` causing OOB read/heap overflow/crash",
+  "bugs": {}
+ },
+ {
+  "finding": "F-016",
+  "sev": "Critical",
+  "title": "32-bit unsigned wraparound in `xrow_update_op_do_nop_delete()` causing unbounded OOB read on nested array delete",
+  "bugs": {
+   "tarantool-8c4fecf8c4f6": {
+    "region": [
+     289,
+     290,
+     291,
+     292,
+     293,
+     294,
+     295,
+     296,
+     298
+    ],
+    "strict": [
+     292,
+     293
+    ]
+   }
+  }
+ },
+ {
+  "finding": "F-017",
+  "sev": "Critical",
+  "title": "Unbounded heap OOB read, stream desynchronization, and 64-bit truncation in `interval_unpack()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-018",
+  "sev": "Critical",
+  "title": "Heap OOB read, length underflow, and unvalidated `tzindex` OOB/NULL crash in `datetime_unpack()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-019",
+  "sev": "Critical",
+  "title": "Heap OOB read, length underflow, and scale truncation in `decimal_unpack()`, plus ignored NULL return in `xrow_mp_read_arg_arith()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-020",
+  "sev": "Critical",
+  "title": "Heap and region buffer overflow in `vdbe_field_ref_create()` on tuples exceeding declared `field_count`",
+  "bugs": {
+   "tarantool-46aa6eb83fb9": {
+    "region": [
+     232,
+     233,
+     234,
+     235
+    ],
+    "strict": [
+     232
+    ]
+   }
+  }
+ },
+ {
+  "finding": "F-021",
+  "sev": "Critical",
+  "title": "Remote heap buffer overflow and NULL dereference via missing `vdbeUnbind()` in `sql_bind_{str,bin,array,map}_static()`",
+  "bugs": {
+   "tarantool-f3e2922c14ee": {
+    "region": [
+     525,
+     526,
+     527,
+     528,
+     529,
+     530
+    ],
+    "strict": []
+   }
+  }
+ },
+ {
+  "finding": "F-022",
+  "sev": "Critical",
+  "title": "Format string vulnerability in `OP_SetDiag` passing user-controlled SQL strings directly to `box_error_set()`",
+  "bugs": {
+   "tarantool-46aa6eb83fb9": {
+    "region": [
+     102,
+     103,
+     104,
+     105,
+     106,
+     107,
+     108,
+     109,
+     110,
+     111,
+     112,
+     113,
+     114,
+     115,
+     419,
+     420,
+     421,
+     422,
+     423,
+     3557
+    ],
+    "strict": [
+     105,
+     112,
+     422,
+     423
+    ]
+   }
+  }
+ },
+ {
+  "finding": "F-023",
+  "sev": "Critical",
+  "title": "Region buffer overflow in `generate_column_metadata()` on repeated bind variables and misindexed `sql_bind_type()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-024",
+  "sev": "Critical",
+  "title": "Use-after-free of `struct space`, `space_def`, and `index` across yields during VDBE execution",
+  "bugs": {
+   "tarantool-46aa6eb83fb9": {
+    "region": [
+     1245,
+     1246,
+     1247,
+     1248,
+     1249,
+     1250,
+     1251,
+     1252,
+     2367,
+     2368,
+     2369,
+     2370,
+     2372,
+     2373,
+     2374,
+     2375,
+     2376,
+     2377,
+     2378,
+     2379,
+     2380,
+     2381,
+     2382,
+     2400,
+     2401,
+     2402,
+     2403,
+     2404,
+     2405,
+     3471,
+     3472,
+     3473,
+     3474,
+     3475,
+     3476,
+     3477,
+     3478,
+     3479,
+     3480,
+     3481,
+     3555,
+     3556,
+     3557,
+     3558,
+     3559,
+     3560,
+     3561,
+     3562
+    ],
+    "strict": [
+     1248,
+     1250,
+     2367,
+     2375,
+     2376,
+     2377,
+     2378,
+     2379,
+     2403,
+     3474,
+     3475,
+     3476,
+     3477,
+     3478,
+     3558,
+     3559
+    ]
+   }
+  }
+ },
+ {
+  "finding": "F-025",
+  "sev": "Critical",
+  "title": "Heap buffer over-read and NUL-terminator bypass in UTF-8 whitespace tokenization (`U8_NEXT_UNSAFE`)",
+  "bugs": {}
+ },
+ {
+  "finding": "F-026",
+  "sev": "Critical",
+  "title": "Missing `len > 0` check in `str_to_bool()` causing 4 GB OOB read/crash on empty or whitespace strings",
+  "bugs": {}
+ },
+ {
+  "finding": "F-027",
+  "sev": "Critical",
+  "title": "`port_vdbemem_dump_lua()` mutates `mem->z` in place via `luamp_decode()`, causing heap over-read on reuse",
+  "bugs": {}
+ },
+ {
+  "finding": "F-028",
+  "sev": "Critical",
+  "title": "Type confusion and arbitrary pointer write via unchecked `opts.buffer` in `net_box`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-029",
+  "sev": "Critical",
+  "title": "Use-after-free and double-put of `cord_ibuf` when a Lua `__serialize` metamethod yields",
+  "bugs": {
+   "tarantool-8c4fecf8c4f6": {
+    "region": [
+     283,
+     284,
+     285,
+     286,
+     287,
+     288,
+     289,
+     290,
+     291,
+     292,
+     293,
+     294,
+     295,
+     296,
+     298
+    ],
+    "strict": [
+     286,
+     287,
+     292,
+     293
+    ]
+   }
+  }
+ },
+ {
+  "finding": "F-030",
+  "sev": "Critical",
+  "title": "Use-after-free of `struct merge_source` during `merger:ipairs()` / `merger:pairs()` iteration",
+  "bugs": {
+   "tarantool-4753065c09ed": {
+    "region": [
+     1025,
+     1026,
+     1027,
+     1028,
+     1029,
+     1030,
+     1034,
+     1035,
+     1036,
+     1037,
+     1038,
+     1039,
+     1040,
+     1041,
+     1042,
+     1043,
+     1044,
+     1045,
+     1046,
+     1047,
+     1048,
+     1049
+    ],
+    "strict": [
+     1037,
+     1038,
+     1039,
+     1040
+    ]
+   }
+  }
+ },
+ {
+  "finding": "F-031",
+  "sev": "Critical",
+  "title": "Stack/heap use-after-free of `struct netbox_request` after yielding `on_push` callback",
+  "bugs": {}
+ },
+ {
+  "finding": "F-032",
+  "sev": "Critical",
+  "title": "Live child coroutine Lua stack and registry corruption on `fiber:join(timeout)` timeout",
+  "bugs": {}
+ },
+ {
+  "finding": "F-033",
+  "sev": "Critical",
+  "title": "Heap use-after-free of `struct popen_handle` on concurrent `ph:close()` during `wait()`, `read()`, or `write()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-034",
+  "sev": "High",
+  "title": "`*field == MP_NIL` compares raw byte against enum `0`, bypassing complex FK delete checks on integer `0` and mis-handling `NULL`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-035",
+  "sev": "High",
+  "title": "Unchecked `NULL` return from `xrow_upsert_execute()` in `space_before_replace()` turns failed `UPSERT` into `DELETE` and invokes UB",
+  "bugs": {}
+ },
+ {
+  "finding": "F-036",
+  "sev": "High",
+  "title": "Yield-unsafe `rlist_foreach_entry` UAF, shared `complex_key_buffer` corruption on Vinyl FKs, and FK delete bypass via `before_replace`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-037",
+  "sev": "High",
+  "title": "Use-after-free of `fiber()->storage.credentials` when a yielding `setuid` function is dropped during execution",
+  "bugs": {}
+ },
+ {
+  "finding": "F-038",
+  "sev": "High",
+  "title": "Intrusive heap double-insert corruption, tuple leak, and NULL-deref crash when `merger_next()` is retried after error",
+  "bugs": {}
+ },
+ {
+  "finding": "F-039",
+  "sev": "High",
+  "title": "`tuple_hash_slowpath()` skips `tuple_field_raw_by_part()` on sequential JSON-path parts, corrupting HASH index lookups",
+  "bugs": {}
+ },
+ {
+  "finding": "F-040",
+  "sev": "High",
+  "title": "Hash mismatch for equal `DECIMAL`/`FLOAT`/`DOUBLE`/integer and cross-timezone `DATETIME` breaks Vinyl bloom filters and HASH indexes",
+  "bugs": {}
+ },
+ {
+  "finding": "F-041",
+  "sev": "High",
+  "title": "Prefix `memcmp` without token boundary check in `xrow_update_route_next()` breaks valid multi-op JSON-path updates",
+  "bugs": {
+   "tarantool-8c4fecf8c4f6": {
+    "region": [
+     329,
+     330,
+     331,
+     332,
+     333,
+     334,
+     335
+    ],
+    "strict": [
+     331,
+     332
+    ]
+   }
+  }
+ },
+ {
+  "finding": "F-042",
+  "sev": "High",
+  "title": "Map key deletion in `xrow_update_op_do_nop_delete()` assumes minimal MsgPack string header size, corrupting non-minimal keys",
+  "bugs": {
+   "tarantool-8c4fecf8c4f6": {
+    "region": [
+     298,
+     299,
+     300,
+     301,
+     302,
+     303,
+     304,
+     305,
+     306
+    ],
+    "strict": [
+     301,
+     302,
+     303,
+     304
+    ]
+   }
+  }
+ },
+ {
+  "finding": "F-043",
+  "sev": "High",
+  "title": "`fkey_update_index_common()` matches JSON-path, multikey, functional, RTREE, and BITSET indexes as FK indexes",
+  "bugs": {}
+ },
+ {
+  "finding": "F-044",
+  "sev": "High",
+  "title": "`sql_stmt_cache_update()` omits `mem_used` accounting, causing `size_t` underflow that permanently breaks SQL `PREPARE`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-045",
+  "sev": "High",
+  "title": "`mem_cmp_uuid()` uses raw `memcmp` on host-endian `struct tt_uuid`, corrupting SQL UUID ordering vs B-tree indexes",
+  "bugs": {}
+ },
+ {
+  "finding": "F-046",
+  "sev": "High",
+  "title": "`str_to_dec()` passes non-NUL-terminated `mem->z` to `decimal_from_string()`, causing heap over-read and wrong casts",
+  "bugs": {}
+ },
+ {
+  "finding": "F-047",
+  "sev": "High",
+  "title": "`mem_cmp_msgpack()` passes post-header pointer `*b` instead of `buf` to `mp_str()` on `MP_INTERVAL`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-048",
+  "sev": "High",
+  "title": "`func_lower_upper()` passes old smaller `size` instead of `new_len` to ICU after `realloc`, leaking uninitialized heap memory",
+  "bugs": {}
+ },
+ {
+  "finding": "F-049",
+  "sev": "High",
+  "title": "`quoteFunc()` formats uninitialized output register `&context->pOut->u.{dt,itv}` instead of `&argv[0]` for `DATETIME`/`INTERVAL`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-050",
+  "sev": "High",
+  "title": "`func_char()` accepts UTF-16 surrogates (`0xD800..0xDFFF`), causing Debug assertion crash or uninitialized heap disclosure",
+  "bugs": {}
+ },
+ {
+  "finding": "F-051",
+  "sev": "High",
+  "title": "`func_printf()` ignores `argv[0].n` (heap over-read) and dereferences `NULL` on `sqlStrAccumFinish()` failure",
+  "bugs": {}
+ },
+ {
+  "finding": "F-052",
+  "sev": "High",
+  "title": "`func_randomblob()` and `func_zeroblob()` lack `SQL_LIMIT_LENGTH` check and truncate `uint64_t` length to `int`/`uint32_t`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-053",
+  "sev": "High",
+  "title": "`likeFunc()` calls `U8_NEXT` before checking `end == 0` on empty `ESCAPE ''` and `soundexFunc()` ignores `argv[0].n`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-054",
+  "sev": "High",
+  "title": "Out-of-bounds register read, omitted rowid, and silent data loss in `generateSortTail()` for `SRT_Table`/`SRT_EphemTab`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-055",
+  "sev": "High",
+  "title": "Out-of-bounds read, assertion crash, and absent-field miscomparison in `tarantoolsqlIdxKeyCompare()`",
+  "bugs": {
+   "tarantool-f7aac1b241c3": {
+    "region": [
+     749,
+     750,
+     751,
+     752,
+     753,
+     760,
+     761,
+     762,
+     763,
+     764,
+     765,
+     766,
+     767,
+     783,
+     784,
+     785,
+     786,
+     787,
+     788,
+     789,
+     790
+    ],
+    "strict": [
+     750,
+     786,
+     787
+    ]
+   }
+  }
+ },
+ {
+  "finding": "F-056",
+  "sev": "High",
+  "title": "Wrong query results in `OP_Seek{LT,GT,LE,GE}` due to in-place key mutation, ignored `SORT_ORDER_DESC`, and missing truncation",
+  "bugs": {}
+ },
+ {
+  "finding": "F-057",
+  "sev": "High",
+  "title": "Heap buffer over-read, `_trigger` SQL corruption, unchecked NULL deref, and leak in `tarantoolsqlRenameTrigger()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-058",
+  "sev": "High",
+  "title": "Dangling `P4_STATIC` pointers into rotating `tt_sprintf()` buffer stored in `OP_SetDiag`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-059",
+  "sev": "High",
+  "title": "Heap buffer over-read and wrong integer parsing in `sql_atoi64()` on leading whitespace",
+  "bugs": {}
+ },
+ {
+  "finding": "F-060",
+  "sev": "High",
+  "title": "`MEM_TYPE_INT` negative-zero invariant violation in `sql_rem_int()` and `sql_atoi64()`",
+  "bugs": {
+   "tarantool-40d35b1255f4": {
+    "region": [
+     1097,
+     1098,
+     1099,
+     1100,
+     1101,
+     1102
+    ],
+    "strict": [
+     1100
+    ]
+   }
+  }
+ },
+ {
+  "finding": "F-061",
+  "sev": "High",
+  "title": "Unsigned 64-bit wraparound bypassing overflow check in `sql_sub_int()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-062",
+  "sev": "High",
+  "title": "Non-contiguous register allocation in `expr_code_map()` corrupts `OP_Map` output for non-leaf expressions",
+  "bugs": {}
+ },
+ {
+  "finding": "F-063",
+  "sev": "High",
+  "title": "NULL dereference / heap OOB read in `sql_pragma_index_info()` on spaces without format",
+  "bugs": {}
+ },
+ {
+  "finding": "F-064",
+  "sev": "High",
+  "title": "Variable shadowing silently drops index collation and `assert(part_count == 1)` crashes in `sqlAddCollateType()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-065",
+  "sev": "High",
+  "title": "Missing `parse->is_aborted` and NULL dereference crash in `sql_create_index()` / `sqlAddPrimaryKey()`",
+  "bugs": {
+   "tarantool-a0264983c4a6": {
+    "region": [
+     2842,
+     2843
+    ],
+    "strict": [
+     2842
+    ]
+   }
+  }
+ },
+ {
+  "finding": "F-066",
+  "sev": "High",
+  "title": "Broken `LIKE` byte-increment prefix optimization for `unicode_ci` collation returns empty results",
+  "bugs": {}
+ },
+ {
+  "finding": "F-067",
+  "sev": "High",
+  "title": "Unconditional `p->ignoreRaised++` and premature `p->nChange++` in `OP_Update` disable triggers and miscount rows",
+  "bugs": {
+   "tarantool-46aa6eb83fb9": {
+    "region": [
+     3555,
+     3556,
+     3557,
+     3558,
+     3559,
+     3560,
+     3561,
+     3562
+    ],
+    "strict": [
+     3558,
+     3559
+    ]
+   }
+  }
+ },
+ {
+  "finding": "F-068",
+  "sev": "High",
+  "title": "Uninitialized `pSrcIdx` crash, dead `pSrcIdx == NULL` check, and missing `ROLLBACK` handling in `xferOptimization()`",
+  "bugs": {
+   "tarantool-46aa6eb83fb9": {
+    "region": [
+     1119,
+     1228,
+     1229,
+     1230,
+     1231,
+     1232,
+     1233,
+     1234,
+     1235,
+     1236,
+     1237,
+     1238
+    ],
+    "strict": [
+     1228,
+     1234,
+     1235
+    ]
+   }
+  }
+ },
+ {
+  "finding": "F-069",
+  "sev": "High",
+  "title": "Wrong collation pointer on `TK_CONCAT` and dead `if (coll == NULL)` check in `sql_expr_coll()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-070",
+  "sev": "High",
+  "title": "NULL dereference on duplicate `MP_ERROR_STACK`, unbounded OOB reads in `MP_ERROR` decoding/printing, leaks, and OOM NULL deref",
+  "bugs": {}
+ },
+ {
+  "finding": "F-071",
+  "sev": "High",
+  "title": "Multithreaded use-after-free and concurrent fd close on fiber cancellation in `applier_thread_data_destroy()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-072",
+  "sev": "High",
+  "title": "Multithreaded use-after-free via post-increment `lsr_id++` in `applier_thread_reader_f()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-073",
+  "sev": "High",
+  "title": "Out-of-bounds `replica_by_id[]` read and controlled write via unvalidated `row.replica_id` in `applier_subscribe()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-074",
+  "sev": "High",
+  "title": "Use-after-free of `msg->p_ibuf` after `iproto_msg_delete(msg)` in `net_end_join()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-075",
+  "sev": "High",
+  "title": "Use-after-free and wrong-user authentication across yielding `on_auth` triggers in `authenticate()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-076",
+  "sev": "High",
+  "title": "Broken MsgPack type checks and uninitialized `gc_vclock` in `xrow_decode_{synchro,raft,ballot}()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-077",
+  "sev": "High",
+  "title": "Pre-authentication `IPROTO_PACKET_SIZE_MAX` bypass allowing arbitrary multi-GB allocation from 9-byte header",
+  "bugs": {}
+ },
+ {
+  "finding": "F-078",
+  "sev": "High",
+  "title": "Use-after-free of prepared `struct sql_stmt` across fiber yield when concurrently unprepared and evicted",
+  "bugs": {
+   "tarantool-f3e2922c14ee": {
+    "region": [
+     592,
+     593,
+     594,
+     595,
+     596,
+     597,
+     598,
+     599,
+     600,
+     601,
+     602,
+     603
+    ],
+    "strict": [
+     595,
+     596
+    ]
+   }
+  }
+ },
+ {
+  "finding": "F-079",
+  "sev": "High",
+  "title": "Silent data loss in Vinyl reverse scans when last key in a run is an `UPSERT`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-080",
+  "sev": "High",
+  "title": "Concurrency race in `txn_limbo` between timeout rollback/confirm and PROMOTE/DEMOTE, plus missing `lsn == -1` check",
+  "bugs": {}
+ },
+ {
+  "finding": "F-081",
+  "sev": "High",
+  "title": "Use-after-free and double-free on OOM in `memtx_tx_track_gap_slow()`",
+  "bugs": {
+   "tarantool-fc35d5a6cfe7": {
+    "region": [
+     2799,
+     2800
+    ],
+    "strict": []
+   }
+  }
+ },
+ {
+  "finding": "F-082",
+  "sev": "High",
+  "title": "Error-path `in_index = NULL` corruption and gap UAF in `memtx_tx_history_add_insert_stmt()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-083",
+  "sev": "High",
+  "title": "Dangling fiber `txn` pointer and triggers on `txn_begin()` OOM error path",
+  "bugs": {
+   "tarantool-fc35d5a6cfe7": {
+    "region": [
+     503,
+     504,
+     505,
+     506,
+     507,
+     508,
+     509,
+     510
+    ],
+    "strict": [
+     504,
+     505,
+     506,
+     507
+    ]
+   }
+  }
+ },
+ {
+  "finding": "F-084",
+  "sev": "High",
+  "title": "Missing format argument (`path`) in `vy_run_recover()` `ER_INVALID_INDEX_FILE` causing OOB read/crash",
+  "bugs": {}
+ },
+ {
+  "finding": "F-085",
+  "sev": "High",
+  "title": "Tuple leak, corrupted `on_replace` triggers, and stale secondary entries during Vinyl `exclude_null` index builds",
+  "bugs": {}
+ },
+ {
+  "finding": "F-086",
+  "sev": "High",
+  "title": "Error swallowing in `vy_point_lookup_scan_mems()` (`return 0` instead of `return rc`) returns stale/missing data on OOM",
+  "bugs": {}
+ },
+ {
+  "finding": "F-087",
+  "sev": "High",
+  "title": "Multiple NULL-pointer dereferences and silent OOM upsert drop in Vinyl error paths",
+  "bugs": {}
+ },
+ {
+  "finding": "F-088",
+  "sev": "High",
+  "title": "Use-after-free in `func_cache_delete()` due to comparing `funcs_by_name` bucket index against `mh_end(funcs)`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-089",
+  "sev": "High",
+  "title": "Uninitialized heap memory used as user password hash (`malloc` instead of `calloc` for `user->hash2`)",
+  "bugs": {}
+ },
+ {
+  "finding": "F-090",
+  "sev": "High",
+  "title": "Missing `MP_STR` type check and unbounded `strncasecmp(..., 9)` heap over-read in `user_def_fill_auth_data()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-091",
+  "sev": "High",
+  "title": "NULL pointer dereference in `on_replace_dd_fk_constraint()` when parent space has sparse index IDs",
+  "bugs": {}
+ },
+ {
+  "finding": "F-092",
+  "sev": "High",
+  "title": "Uninitialized MVCC snapshot cleaner and raw dirty `*res` tuple persisted in `memtx_hash` snapshot iterator",
+  "bugs": {
+   "tarantool-067eeb123c0e": {
+    "region": [
+     518,
+     519,
+     520,
+     522,
+     542,
+     543,
+     544,
+     545,
+     546,
+     547
+    ],
+    "strict": [
+     520
+    ]
+   }
+  }
+ },
+ {
+  "finding": "F-093",
+  "sev": "High",
+  "title": "`HASH` index `ITER_GT` iterator sets `next_raw = hash_iterator_ge_raw_base`, bypassing MVCC clarification after first tuple",
+  "bugs": {
+   "tarantool-78ccf4ee3c7f": {
+    "region": [
+     118,
+     119,
+     120,
+     121,
+     122,
+     123,
+     124,
+     139,
+     140,
+     141,
+     142,
+     143,
+     144,
+     145,
+     146,
+     147
+    ],
+    "strict": [
+     121,
+     142,
+     143,
+     144
+    ]
+   }
+  }
+ },
+ {
+  "finding": "F-094",
+  "sev": "High",
+  "title": "Multikey `TREE` iterator dereferences invalidated `tree_iterator` after MVCC story GC bound",
+  "bugs": {
+   "tarantool-fc35d5a6cfe7": {
+    "region": [
+     575,
+     576,
+     577,
+     578,
+     579,
+     580
+    ],
+    "strict": [
+     578
+    ]
+   }
+  }
+ },
+ {
+  "finding": "F-095",
+  "sev": "High",
+  "title": "Space format alter does not validate existing SQL FK column references, causing NULL deref / heap OOB read",
+  "bugs": {}
+ },
+ {
+  "finding": "F-096",
+  "sev": "High",
+  "title": "Unreachable abort crash when inserting/granting privileges on `'collation'`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-097",
+  "sev": "High",
+  "title": "NULL dereference on missing `opts.sql` and orphaned/corrupted trigger on `space_id` reassignment in `on_replace_dd_trigger()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-098",
+  "sev": "High",
+  "title": "Functional index keys permanently leaked on destroy and OOM errors silently swallowed during build",
+  "bugs": {}
+ },
+ {
+  "finding": "F-099",
+  "sev": "High",
+  "title": "Partial IPROTO packet with 5 uninitialized bytes sent on encode error and heap OOB write on yielding `__serialize` in `net_box`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-100",
+  "sev": "High",
+  "title": "Unbounded worker Lua stack leak on every SQL DQL `execute`, `prepare`, and `on_push` response in `net_box`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-101",
+  "sev": "High",
+  "title": "Off-by-one OOB array access in `box.stat.net.thread[iproto_threads_count + 1]`",
+  "bugs": {
+   "tarantool-452a757c1c97": {
+    "region": [
+     242,
+     243,
+     244,
+     245,
+     246,
+     247,
+     248
+    ],
+    "strict": [
+     245
+    ]
+   }
+  }
+ },
+ {
+  "finding": "F-102",
+  "sev": "High",
+  "title": "Heap buffer underflow via embedded NUL byte in `box.lib` symbol name",
+  "bugs": {}
+ },
+ {
+  "finding": "F-103",
+  "sev": "High",
+  "title": "NULL pointer dereference in `key_def.new()` (`path = {}`) and fiber region leak on non-table part",
+  "bugs": {}
+ },
+ {
+  "finding": "F-104",
+  "sev": "High",
+  "title": "Use-after-free of unanchored Lua strings after `lua_pop` / `lua_replace` in `serialize_lua.c` and `watcher.c`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-105",
+  "sev": "High",
+  "title": "Signed `INT32_MIN` overflow and missing `lua_checkstack()` in `tuple:slice()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-106",
+  "sev": "High",
+  "title": "Missing `lua_checkstack()` before `lua_xmove` / unbounded pushes across `box/lua` plus `sources` leak in `merger.c`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-107",
+  "sev": "High",
+  "title": "`before_replace` trigger validates pre-trigger input tuple instead of trigger-returned tuple",
+  "bugs": {}
+ },
+ {
+  "finding": "F-108",
+  "sev": "High",
+  "title": "NULL dereference, heap OOB read, and stack leak in `console.completion_handler()` / `lua_rl_complete()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-109",
+  "sev": "High",
+  "title": "Type confusion (`lua_hashstring`) and `lua_next` contract violation in `space:frommap()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-110",
+  "sev": "High",
+  "title": "Heap buffer over-read in `lbox_socket_recvfrom()` when `MSG_TRUNC` flag is specified",
+  "bugs": {}
+ },
+ {
+  "finding": "F-111",
+  "sev": "High",
+  "title": "Heap buffer overflow (OOB write) in `parse_headers()` when `max_header_name_length == 0`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-112",
+  "sev": "High",
+  "title": "Unsigned integer underflow causing heap buffer underflow read in `lbox_tonumber64()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-113",
+  "sev": "High",
+  "title": "Empty `argv` accepted by `luaT_popen_parse_argv()` triggers heap OOB write and unbounded heap OOB read",
+  "bugs": {}
+ },
+ {
+  "finding": "F-114",
+  "sev": "High",
+  "title": "Missing `lua_checkstack()` causing Lua stack heap buffer overflows in `pickle.unpack`, `msgpack`, and `fiber`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-115",
+  "sev": "High",
+  "title": "Float-to-`uint32_t` truncation and UB in `lua_field_inspect_table()` / `luaL_arrlen()` silently drops/corrupts table data",
+  "bugs": {}
+ },
+ {
+  "finding": "F-116",
+  "sev": "High",
+  "title": "Unbounded C-stack recursion in `lua_field_try_serialize()` and ignored `lua_pcall` error in `lua_field_inspect_ucdata()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-117",
+  "sev": "High",
+  "title": "Missing lower-bound check on `digest_len` and embedded-NUL truncation of passwords/salts in `lua_pbkdf2()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-118",
+  "sev": "High",
+  "title": "NULL pointer dereference on `(char *)NULL` cdata in `msgpack` C-pointer decoders",
+  "bugs": {}
+ },
+ {
+  "finding": "F-119",
+  "sev": "High",
+  "title": "`freeaddrinfo()` on non-head interior pointer and uninitialized `free(ai_local.ai_addr)` in `coio_connect_timeout()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-120",
+  "sev": "High",
+  "title": "Out-of-bounds read past format string NUL terminator and OOB `pow10[]` read via `(int)strtol()` in `tnt_strftime()`",
+  "bugs": {
+   "tarantool-3203ce795485": {
+    "region": [
+     276,
+     277,
+     278,
+     279,
+     280,
+     281,
+     282,
+     283,
+     299,
+     300,
+     301,
+     302,
+     303,
+     304,
+     305
+    ],
+    "strict": [
+     279,
+     280,
+     302
+    ]
+   }
+  }
+ },
+ {
+  "finding": "F-121",
+  "sev": "High",
+  "title": "Out-of-bounds reads, assertion crash, unsigned `size_t` hiding timezone errors, and unbounded `alloca` in `tnt_strptime()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-122",
+  "sev": "High",
+  "title": "Wrong vote target (`raft->self` instead of `new_vote`) in `raft_sm_schedule_new_vote()` corrupts split-vote detection",
+  "bugs": {}
+ },
+ {
+  "finding": "F-123",
+  "sev": "High",
+  "title": "Non-safe `rlist_foreach_entry` during `fiber_wakeup` and missing `ev_timer_stop` UAF in `fiber_pool_destroy()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-124",
+  "sev": "High",
+  "title": "Multiple datetime/interval arithmetic, truncation, `NaN` bypass, and uninitialized-field bugs in `datetime.c`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-125",
+  "sev": "High",
+  "title": "Out-of-bounds read in `timezone_raw_lookup()` (`strcasecmp` ignores `len`) and case-sensitivity lookup failure",
+  "bugs": {}
+ },
+ {
+  "finding": "F-126",
+  "sev": "High",
+  "title": "Infinite loop on large JSON-path array index (`>= 2^30`), unchecked integer overflow, and 64-to-32 pointer-diff truncation",
+  "bugs": {}
+ },
+ {
+  "finding": "F-127",
+  "sev": "High",
+  "title": "Empty buffer check failure, OOB read, cyclic infinite loop, `uint32_t` truncation, and live-record loss in `prbuf.c`",
+  "bugs": {
+   "tarantool-02d1749c6bfb": {
+    "region": [
+     206,
+     207,
+     208,
+     209,
+     210,
+     211
+    ],
+    "strict": []
+   }
+  }
+ },
+ {
+  "finding": "F-128",
+  "sev": "High",
+  "title": "Heap buffer overflow and uninitialized `strcat()` on `getcwd()` failure in `abspath()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-129",
+  "sev": "High",
+  "title": "Out-of-bounds `memset()` past `ps_buffer` via unclamped `vsnprintf()` return value in `proc_title_set()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-130",
+  "sev": "Medium",
+  "title": "`new_tuple` reference count leak whenever `tuple_constraint_fkey_check_delete()` rejects a DML request",
+  "bugs": {}
+ },
+ {
+  "finding": "F-131",
+  "sev": "Medium",
+  "title": "`space_before_replace()` fires `before_replace` triggers even when `space->run_triggers == false` if space has foreign keys",
+  "bugs": {}
+ },
+ {
+  "finding": "F-132",
+  "sev": "Medium",
+  "title": "Latent 4 GB `memset` unsigned underflow (`fieldno - end_fieldno + 1`) and `data_end - data` overflow in `tuple_extract_key_slowpath_raw()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-133",
+  "sev": "Medium",
+  "title": "`field_type_by_name()` uses `strncasecmp(..., len)` without length check, accepting `\"\"`, `\"n\"`, `\"s\"` as valid field types",
+  "bugs": {}
+ },
+ {
+  "finding": "F-134",
+  "sev": "Medium",
+  "title": "Embedded NUL byte in `OPT_STRPTR` DDL options crashes Debug (`assert(strlen(ptr) == str_len)`) and truncates in Release",
+  "bugs": {}
+ },
+ {
+  "finding": "F-135",
+  "sev": "Medium",
+  "title": "`tuple_to_yaml()` embeds NUL bytes between libyaml chunks, silently truncating tuples larger than ~16 KB",
+  "bugs": {}
+ },
+ {
+  "finding": "F-136",
+  "sev": "Medium",
+  "title": "`tuple_validate_raw()` and `tuple_field_map_create()` bypass `exact_field_count` / constraints when `tuple_format_field_count == 0`",
+  "bugs": {
+   "tarantool-8c4fecf8c4f6": {
+    "region": [
+     166,
+     168,
+     169
+    ],
+    "strict": []
+   }
+  }
+ },
+ {
+  "finding": "F-137",
+  "sev": "Medium",
+  "title": "`port_{lua,c}_get_vdbemem()` bypasses `mem_set_double()` NaN-to-NULL invariant and leaks `Mem`/region on `mpstream` error",
+  "bugs": {
+   "tarantool-e409eec61dc6": {
+    "region": [
+     3549,
+     3550,
+     3551,
+     3552,
+     3553,
+     3554,
+     3555,
+     3556,
+     3557,
+     3558,
+     3678,
+     3679,
+     3680,
+     3681,
+     3682,
+     3683,
+     3684,
+     3685,
+     3686,
+     3687
+    ],
+    "strict": [
+     3550,
+     3555,
+     3679,
+     3681,
+     3684,
+     3686
+    ]
+   }
+  }
+ },
+ {
+  "finding": "F-138",
+  "sev": "Medium",
+  "title": "`func_round_double()` unbounded `tt_sprintf` precision, `func_unicode()` `UINT64_MAX` on invalid UTF-8, and missing length limit in `replaceFunc()`",
+  "bugs": {
+   "tarantool-f4801b8daa83": {
+    "region": [
+     995,
+     996,
+     997,
+     998,
+     999
+    ],
+    "strict": [
+     996,
+     997,
+     998
+    ]
+   }
+  }
+ },
+ {
+  "finding": "F-139",
+  "sev": "Medium",
+  "title": "Missing `diag_set()` on overflowed decimal literal in `expr_code_dec()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-140",
+  "sev": "Medium",
+  "title": "Missing `case TK_GE:` in `sql_expr_type()` misreports `>=` expression type as `any` instead of `boolean`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-141",
+  "sev": "Medium",
+  "title": "Deterministic heap memory leaks in `sqlVXPrintf()`, `vdbe_emit_halt_with_presence_test()`, `vdbe_emit_ck_constraint()`, and `parse_def.h`",
+  "bugs": {
+   "tarantool-46aa6eb83fb9": {
+    "region": [
+     3545,
+     3546,
+     3547,
+     3548,
+     3555,
+     3556,
+     3557,
+     3558,
+     3559,
+     3560
+    ],
+    "strict": [
+     3545,
+     3558,
+     3559
+    ]
+   }
+  }
+ },
+ {
+  "finding": "F-142",
+  "sev": "Medium",
+  "title": "Wrong and missing read tracking on secondary-index duplicate error in `memtx_tx.c` (MVCC serializability violation)",
+  "bugs": {}
+ },
+ {
+  "finding": "F-143",
+  "sev": "Medium",
+  "title": "Uninitialized stack `vclock` copied into caller output on `wal_sync()` failure",
+  "bugs": {}
+ },
+ {
+  "finding": "F-144",
+  "sev": "Medium",
+  "title": "ZSTD/ibuf memory leaks and unchecked `obuf_alloc()` NULL dereference in `xlog.c`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-145",
+  "sev": "Medium",
+  "title": "Unchecked `matras_alloc()` NULL dereference and destructive failed replace corrupting BITSET secondary index on OOM",
+  "bugs": {}
+ },
+ {
+  "finding": "F-146",
+  "sev": "Medium",
+  "title": "Silent error swallowing in `vy_page_find_key()` and spurious `on_replace` trigger firing on skipped `vy_upsert()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-147",
+  "sev": "Medium",
+  "title": "Double-unref (`tuple_unref`) and reference leaks in `memtx_space_replace_tuple()` under `ENABLE_TUPLE_COMPRESSION`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-148",
+  "sev": "Medium",
+  "title": "32-bit bitmask truncation in `fk_constraint_check_dup_links()` bypasses duplicate column validation for columns 32..63",
+  "bugs": {}
+ },
+ {
+  "finding": "F-149",
+  "sev": "Medium",
+  "title": "Foreign-key referenced unique index can be altered to `unique = false` without triggering rebuild check",
+  "bugs": {}
+ },
+ {
+  "finding": "F-150",
+  "sev": "Medium",
+  "title": "Missing rollback trigger and schema version bump when toggling CK constraint `is_enabled`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-151",
+  "sev": "Medium",
+  "title": "Use-after-free on OOM and stale `fk_constraint_mask` on parent space change in `on_replace_dd_fk_constraint()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-152",
+  "sev": "Medium",
+  "title": "Non-NUL-terminated MsgPack string passed to `%s` in `func_def_new_from_tuple()` error diagnostics",
+  "bugs": {}
+ },
+ {
+  "finding": "F-153",
+  "sev": "Medium",
+  "title": "Memory leaks on error/exception and unchecked allocation NULL dereferences in `alter.cc`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-154",
+  "sev": "Medium",
+  "title": "Memory leak and dangling trigger assertion crash on `anon_replicas` error path in `replicaset_update()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-155",
+  "sev": "Medium",
+  "title": "Missing `obuf_rollback_to_svp()` on `tuple_to_obuf()` failure in `tx_process1()` leaks 33 uninitialized bytes and desyncs framing",
+  "bugs": {}
+ },
+ {
+  "finding": "F-156",
+  "sev": "Medium",
+  "title": "Permanent `ibuf` and `diag` memory leaks on every applier reconnect in `applier_thread_detach_applier()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-157",
+  "sev": "Medium",
+  "title": "Unchecked `xrow_encode_raft()` leaves stack `row` uninitialized on OOM and swallowed `xstream_write()` errors",
+  "bugs": {}
+ },
+ {
+  "finding": "F-158",
+  "sev": "Medium",
+  "title": "Wrong table index (`i` vs `-1`) in `lbox_push_ck_constraint()` crashes DDL or corrupts `space.index`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-159",
+  "sev": "Medium",
+  "title": "Broken stack protocol in `box.stat.memtx.tx` (`__call` and `__index`) caches stale stats forever",
+  "bugs": {}
+ },
+ {
+  "finding": "F-160",
+  "sev": "Medium",
+  "title": "Memory leak of `struct xlog_cursor` when `xlog_cursor_open()` fails",
+  "bugs": {}
+ },
+ {
+  "finding": "F-161",
+  "sev": "Medium",
+  "title": "Fiber region memory leaks on error paths in `src/box/lua/execute.c`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-162",
+  "sev": "Medium",
+  "title": "Non-string keys in `box.session.settings` silently read/mutate setting #0",
+  "bugs": {}
+ },
+ {
+  "finding": "F-163",
+  "sev": "Medium",
+  "title": "Wrong pointer checked after `region_alloc` (`fields == NULL` instead of `fields[i].name == NULL`) in `lbox_tuple_format_new()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-164",
+  "sev": "Medium",
+  "title": "`console.readline()` permanently wedges `readline_L` on cancel and leaves dangling `interactive_fb` / SIGINT callback on error",
+  "bugs": {}
+ },
+ {
+  "finding": "F-165",
+  "sev": "Medium",
+  "title": "`cord_ibuf` memory and trigger leak across `luaL_error`/`luaT_error` longjmp in `msgpack` and `utf8.char`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-166",
+  "sev": "Medium",
+  "title": "Stack indexing bug in `lbox_trigger_reset()` registers wrong value when extra arguments are passed",
+  "bugs": {
+   "tarantool-46aa6eb83fb9": {
+    "region": [
+     193,
+     194,
+     195,
+     196,
+     197,
+     198,
+     199,
+     200,
+     201,
+     227,
+     228,
+     229,
+     230,
+     231,
+     232,
+     233,
+     234,
+     235
+    ],
+    "strict": [
+     196,
+     197,
+     198,
+     230,
+     231,
+     232
+    ]
+   }
+  }
+ },
+ {
+  "finding": "F-167",
+  "sev": "Medium",
+  "title": "Prefix and embedded-NUL matching bug in `luaT_popen_parse_stdX()` (`strncmp` with `action_len`)",
+  "bugs": {}
+ },
+ {
+  "finding": "F-168",
+  "sev": "Medium",
+  "title": "Wrong stack index (`-1`) and silent `uint32_t` truncation in `luaT_fiber_channel()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-169",
+  "sev": "Medium",
+  "title": "Wrong stack indexing in `luamp_object_iterator()` and lost custom serializer config in `luamp_iterator_take_array()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-170",
+  "sev": "Medium",
+  "title": "Unbounded `strlen` on non-NUL-terminated `AF_UNIX` `sun_path` and IPv4 `255.255.255.255` rejected by `inet_addr()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-171",
+  "sev": "Medium",
+  "title": "Signed `INT_MIN` overflow in `utf8_sub()` and invalid UTF-8 emitted by `utf8_char()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-172",
+  "sev": "Medium",
+  "title": "Inverted `strcmp(method, \"PATCH\")` check (missing `== 0`) corrupts `PATCH`/`DELETE`/`OPTIONS` framing plus mempool leak",
+  "bugs": {}
+ },
+ {
+  "finding": "F-173",
+  "sev": "Medium",
+  "title": "NULL pointer dereference on OOM in `mpstream_encode_double()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-174",
+  "sev": "Medium",
+  "title": "Inverted `u->host != NULL` check in `evio_service_entry_reuse_addr()` treats port-only TCP URIs as UNIX sockets",
+  "bugs": {}
+ },
+ {
+  "finding": "F-175",
+  "sev": "Medium",
+  "title": "Uppercase IPv6 hex rejected by `uri_raw_parse()` (`[0-9a-fa-f]` typo) and unbracketed by `uri_format()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-176",
+  "sev": "Medium",
+  "title": "Duplicate broadcast packet storm in `swim_bcast_task_next_addr()` (`task->i->ifa_next` instead of `i->ifa_next`)",
+  "bugs": {}
+ },
+ {
+  "finding": "F-177",
+  "sev": "Medium",
+  "title": "Lost `errno` in `coio_write()` and infinite worker-thread loop on EOF in `coio_copyfile()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-178",
+  "sev": "Medium",
+  "title": "Double-free on OOM, post-clear memory leaks, and NULL pointer dereferences in `src/lib/bitset/`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-179",
+  "sev": "Medium",
+  "title": "Double-close of pipe fds on error and unsafe `vfork()` global logger / heap mutations in `popen_new()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-180",
+  "sev": "Medium",
+  "title": "Out-of-bounds array read `evstr[EV_ERROR]` in `curl_sock_cb()` under debug logging",
+  "bugs": {}
+ },
+ {
+  "finding": "F-181",
+  "sev": "Medium",
+  "title": "`syslog_connect_remote()` connects to `inf->ai_addr` instead of `ptr->ai_addr` and `log_syslog_init()` calls `strlen(NULL)` on OOM",
+  "bugs": {}
+ },
+ {
+  "finding": "F-182",
+  "sev": "Medium",
+  "title": "Region OOB write on dynamic trigger registration, timeout overrun, and joinable fiber leak in `trigger_fiber_run()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-183",
+  "sev": "Low",
+  "title": "`memtx_tree_data_is_equal()` ignores `hint`, causing multikey/functional iterator position recovery to skip entries",
+  "bugs": {
+   "tarantool-7530007077a3": {
+    "region": [
+     104,
+     105,
+     106,
+     107,
+     108,
+     109
+    ],
+    "strict": [
+     106
+    ]
+   },
+   "tarantool-fc35d5a6cfe7": {
+    "region": [
+     408,
+     409,
+     410,
+     411,
+     412,
+     413,
+     414,
+     502,
+     503,
+     504,
+     505,
+     506,
+     507,
+     508
+    ],
+    "strict": [
+     410,
+     411,
+     412,
+     413,
+     504,
+     505,
+     506,
+     507
+    ]
+   }
+  }
+ },
+ {
+  "finding": "F-184",
+  "sev": "Low",
+  "title": "`session_close()` checks `rlist_empty(&session->in_shutdown_list)` instead of `&shutdown_list`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-185",
+  "sev": "Low",
+  "title": "Assertion failure (`con->state == IPROTO_CONNECTION_DESTROYED`) on OOM in `iproto_on_accept()`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-186",
+  "sev": "Low",
+  "title": "Unescaped backslashes, duplicated UTF-8 BOM bytes, signed-char UB, and unquoted keys in `serialize_lua.c`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-187",
+  "sev": "Low",
+  "title": "`fiber_obj:info({bt = false})` reads stack slot `1` (`self`) instead of slot `2`, ignoring options table",
+  "bugs": {
+   "tarantool-35044a57ea04": {
+    "region": [
+     320,
+     321,
+     322,
+     323,
+     324,
+     325,
+     326,
+     327,
+     328,
+     329,
+     330,
+     331,
+     519,
+     520,
+     521,
+     522,
+     523,
+     524,
+     525
+    ],
+    "strict": [
+     320,
+     322,
+     324,
+     325,
+     328,
+     522
+    ]
+   }
+  }
+ },
+ {
+  "finding": "F-188",
+  "sev": "Low",
+  "title": "Latent negative-index OOB read in `luaL_isnull()`, `lua_pop(L, -1)` stack clear in `errno.c`, and wrong length constant in `backtrace.c`",
+  "bugs": {}
+ },
+ {
+  "finding": "F-189",
+  "sev": "Low",
+  "title": "Uninitialized `ctx->ssl` in `iostream_ctx_create()` when no `transport` URI parameter is present",
+  "bugs": {}
+ }
+]

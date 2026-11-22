@@ -1,0 +1,722 @@
+[
+ {
+  "finding": "GDAL-001",
+  "sev": "Critical",
+  "title": "`VSIPluginFilesystemHandler::Unlink()` calls POSIX `::unlink()` on host filesystem instead of `m_cb->unlink`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-002",
+  "sev": "Critical",
+  "title": "`VSIS3WriteHandle::WriteChunked()` binds stack-local `sWriteFuncData` and freed `headers` to persistent `CURL*` handle (stack UAR & heap UAF)",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-003",
+  "sev": "Critical",
+  "title": "`VSIGSFSHandler::UnlinkBatch()` writes to negative indices `panRet[j]` when unlinking fewer than `nBatchSize` files (heap buffer underflow)",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-004",
+  "sev": "Critical",
+  "title": "64-bit unsigned wraparound in `VSIMemFile::SetLength()` allocates tiny buffer while setting huge `nLength` (heap buffer overflow)",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-005",
+  "sev": "High",
+  "title": "Unchecked `nNameLength` from `SQLDescribeCol()`/`SQLColAttribute()` causes stack buffer overflow on long column/type names",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-006",
+  "sev": "High",
+  "title": "Persistent `CURL*` handles retain dangling stack (`&stProcessData`, `szCurlErrBuf`) and freed heap (`CURLOPT_MIMEPOST`) pointers across `CPLHTTPFetchEx()` calls",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-007",
+  "sev": "High",
+  "title": "`CSLRemoveStrings()` indexes before normalizing `nFirstLineToDelete` (wild `free()`/OOB), fails to advance `ppszDst` (leak), and mishandles `ppapszRetStrings`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-008",
+  "sev": "High",
+  "title": "16-bit `GUInt16` overflow in `nDataLength` causes heap buffer overflow for non-ASCII ZIP entry names of length >= 65531",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-009",
+  "sev": "High",
+  "title": "`CPLLZ4Compressor()` unconditionally writes 4-byte header even when `HEADER=NO`, overflowing small buffers and corrupting raw LZ4 output",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-010",
+  "sev": "High",
+  "title": "Stale `*pnLength` before `_GrowBuffer()` when closing `<?...?>` element causes heap buffer overflow in `CPLSerializeXMLNode()`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-011",
+  "sev": "High",
+  "title": "`CPLRecodeToWCharIconv()` casts single-NUL-terminated `char*` (and raw `CPLStrdup` error fallback) to `wchar_t*` (heap over-read & uninit read)",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-012",
+  "sev": "High",
+  "title": "`VSICurlHandle::ReadMultiRangeSingleGet()` loops `iPart < nRanges` instead of `nMergedRanges`, causing OOB reads of `panSizes`/`ppData` and arbitrary `memcpy`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-013",
+  "sev": "High",
+  "title": "`VSICurlHandle::ReadMultiRange()` hangs forever on zero-sized range and reads uninitialized `asCurlErrors[iRange]` when ranges are merged",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-014",
+  "sev": "High",
+  "title": "`VSIZipWriteHandle::Write()` passes `nBytesToWrite` instead of `nBytesToWrite - nWritten` when chunking writes > 2 GiB (~2 GiB heap over-read)",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-015",
+  "sev": "High",
+  "title": "`CPLWorkerThreadPool::SubmitJobs()` frees job nodes on OOM rollback without restoring `psJobQueue` (UAF, double-free, freed function pointer call)",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-016",
+  "sev": "High",
+  "title": "Win32 `CPLCreateJoinableThread()` starts thread before assigning `psInfo->hThread`, racing to premature `CPLFree(psInfo)` (UAF & double-free)",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-017",
+  "sev": "High",
+  "title": "`/vsicrypt/` accepts `nSectorSize == 0` from file header, causing integer division by zero (`SIGFPE`) on first I/O",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-018",
+  "sev": "High",
+  "title": "`VSIArchiveFilesystemHandler::IsLocal()` and `VSIGZipFilesystemHandler::SupportsSequentialWrite()` recurse infinitely on chained paths; `Stat()` calls `.back()` on empty entry name",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-019",
+  "sev": "High",
+  "title": "`CPLZLibInflate()` with `outptr == nullptr` loops infinitely on `nBytes == 0` and doubles memory until OOM on any truncated input",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-020",
+  "sev": "High",
+  "title": "Unsynchronized `std::map` data race in `VSISparseFileFilesystemHandler` and silent zeroing over mapped regions in `VSISparseFileHandle::Read()`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-021",
+  "sev": "Medium",
+  "title": "UTF-8 BOM lookahead in `CPLEscapeString(..., CPLES_XML)` reads up to 2 bytes past `szLength`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-022",
+  "sev": "Medium",
+  "title": "Inverted boolean logic (`pszLocale || EQUAL(pszLocale, \"\")`) in `CPLPrintTime()` dereferences NULL when `pszLocale == NULL`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-023",
+  "sev": "Medium",
+  "title": "Exact-equality check (`m_osToken.size() == m_nMaxStringSize`) bypassed by multi-byte `\\uXXXX` decode (unbounded memory DoS)",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-024",
+  "sev": "Medium",
+  "title": "`CPLBloscDecompressor()` inverts `nSafeSize < *output_size` check and dereferences `output_size` without a NULL check",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-025",
+  "sev": "Medium",
+  "title": "`cpl_unzLocateFile()` passes non-NUL-terminated stack buffer to `strcmp` when a ZIP entry filename has length >= 256",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-026",
+  "sev": "Medium",
+  "title": "`VSIVirtualHandle::Truncate()` initializes `nCurOffset = nOriginalPos` after `SEEK_END`, over-extending files with extra zero bytes",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-027",
+  "sev": "Medium",
+  "title": "`VSICurlHandle::PRead()` mutates `oFileProp` outside `m_oMutex`, racing with concurrent `PRead()` calls",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-028",
+  "sev": "Medium",
+  "title": "`get_page_limit()` treats `sscanf()` `EOF` (-1) as truthy (uninitialized return); fault handler leaks prior page data on partial tail pages",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-029",
+  "sev": "High",
+  "title": "`GDALSimpleSURF::ConvertRGBToLuminosity()` multiplies column index by element byte size inside `SRCVAL` (deterministic heap over-read on non-8-bit rasters)",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-030",
+  "sev": "High",
+  "title": "Off-by-one observer bounds check (`nX > nXSize`) allows `nX == nXSize`, causing heap over-read and over-write on every scanline",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-031",
+  "sev": "High",
+  "title": "Off-by-one error-cleanup loop (`i <= nBandCount`) in `GDALSimpleImageWarp()` passes out-of-bounds heap pointer to `VSIFree()`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-032",
+  "sev": "High",
+  "title": "Delimiter-only `INIT_DEST=,` causes OOB heap under-read at `papszInitValues[-1]` and arbitrary pointer dereference",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-033",
+  "sev": "High",
+  "title": "`GDALCreateSimilarGenImgProjTransformer()` error path destroys shallow-copied sub-transformers still owned by original (UAF & double-free)",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-034",
+  "sev": "High",
+  "title": "32-bit signed overflow in `iPrime` indexes `anPrimes[-10..-1]` on >2G-pixel integer rasters (OOB read & potential `SIGFPE`)",
+  "bugs": {
+   "gdal-af647aafa367": {
+    "region": [
+     208,
+     209,
+     210,
+     211,
+     212,
+     213,
+     214,
+     215,
+     216,
+     217,
+     218,
+     219
+    ],
+    "strict": [
+     208,
+     213,
+     214,
+     215,
+     216
+    ]
+   }
+  }
+ },
+ {
+  "finding": "GDAL-035",
+  "sev": "High",
+  "title": "`ExponentialLevelRangeIterator::range()` returns inverted `[1, 0)` for distinct values `< 1.0`, causing ~4.29B iterations / OOM",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-036",
+  "sev": "High",
+  "title": "32-bit `int` overflow in `nScanlineBytes` causes division by zero or undersized `pabyChunkBuf` followed by heap buffer overflow",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-037",
+  "sev": "High",
+  "title": "Unfiltered `NaN` pixels passed to `std::sort` in `GRA_Med`/`GRA_Q1`/`GRA_Q3` violate strict weak ordering (OOB memory access & crash)",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-038",
+  "sev": "High",
+  "title": "Partial OOM cleanup in `GDALGridContextCreate()` calls `VSIFree()` instead of `VSIFreeAligned()` on aligned buffers (heap corruption)",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-039",
+  "sev": "Medium",
+  "title": "Three `GDALCreateSimilar*Transformer` callbacks dereference newly created transformer without checking for `nullptr`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-040",
+  "sev": "Medium",
+  "title": "Inverse `GDALRPCTransform()` passes input `(pixel, line)` instead of computed `(long, lat)` to `RPCIsValidLongLat()`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-041",
+  "sev": "Medium",
+  "title": "`GRA_Mode` drops `Int16` pixels with mode `-1` (sentinel collision); `GWKAOM_Fmode` has unsequenced modification/read UB and missing `break`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-042",
+  "sev": "Medium",
+  "title": "Multi-threaded pansharpening clamps sub-job offsets against full band instead of extracted `MEMDataset` and ignores `RasterIO` failure (uninit heap output)",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-043",
+  "sev": "Critical",
+  "title": "`ECBand` hardcodes 256x256 block buffer while `IReadBlock()` writes `TSZ * TSZ` bytes (massive heap buffer overflow for any `TSZ > 256`)",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-044",
+  "sev": "Critical",
+  "title": "`pread_curl()` unconditionally `memcpy`s HTTP 200 responses larger than `count` into fixed sector buffer (remote heap overflow) + `store.size() < m` typo",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-045",
+  "sev": "Critical",
+  "title": "`JPEG_Codec::DecompressJPEG()` computes `linesize` from MRF `nbands` instead of `cinfo.output_components`, overflowing heap buffer in `jpeg_read_scanlines()`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-046",
+  "sev": "Critical",
+  "title": "Missing `return`/`break` on invalid UTF-8 in `UTF8ToUCS4()` causes infinite loop and unbounded heap buffer overflow write",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-047",
+  "sev": "Critical",
+  "title": "Negative `H5Sget_simple_extent_dims()` cast to `unsigned` causes 4B-iter stack OOB read; 32-bit `nAttrElmts` overflow causes heap overflow in `H5Aread()`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-048",
+  "sev": "Critical",
+  "title": "Unchecked `nc_get_att_double()`/`nc_get_att_int()` into 1- or 2-element stack buffers allows arbitrary stack buffer overflow",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-049",
+  "sev": "Critical",
+  "title": "Unchecked `nc_get_att_text()` into 127-/128-byte `NC_MAX_CHAR` and `property_name` stack buffers overflows the stack",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-050",
+  "sev": "Critical",
+  "title": "Unchecked `SPH_SIZE`, `NUM_DSD`, `DSD_SIZE`, and `*(ds_data - 1) = '\\0'` allow arbitrary heap underflow and heap buffer overflow in `EnvisatFile_Open()`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-051",
+  "sev": "Critical",
+  "title": "Adding byte count `nBytesToRead * band_index` to `float *padfStokesMatrix` advances 4x too far, overflowing heap buffer by 2.8x in BIL/BSQ modes",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-052",
+  "sev": "Critical",
+  "title": "`PCRasterRasterBand::IWriteBlock()` hardcodes `memcpy(buffer, source, nr_cols * 4)`, overflowing 1-byte `VS_BOOLEAN`/`VS_LDD` buffers by 4x",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-053",
+  "sev": "Critical",
+  "title": "Unbounded `IRS P6` `BANDS PRESENT` loop indexes past 7-element `fpChannels[7]` / `apoChannelFilenames[7]` member arrays (object/heap buffer overflow)",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-054",
+  "sev": "Critical",
+  "title": "`BMPDataset::Open()` permits `GA_Update` on 1/4/16/32-bit and RLE BMPs, causing heap underflow (`pabyScan[-1]`) and heap overflow in `IWriteBlock()`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-055",
+  "sev": "Critical",
+  "title": "Signed 32-bit `nCols * nRows` overflow allocates undersized `pabyImage`, causing arbitrary heap buffer overflow write in `CTGDataset::ReadImagery()`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-056",
+  "sev": "Critical",
+  "title": "`pabyBlockBuf` sized for a single unpacked band overflows massively in `UnpackNBits()`/`PackNBits()` on multi-band 1/2/4-bit GeoRasters",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-057",
+  "sev": "Critical",
+  "title": "Unvalidated point-to-pixel coordinate conversion in `RDBRasterBandInternal::IReadBlock()` writes arbitrarily out of bounds of 256x256 tile buffer `pImage`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-058",
+  "sev": "High",
+  "title": "Non-positive `level <= 0` in `KmlSingleDocCollectTiles()` causes negative-index heap underflow read/write `aosDescs[level - 1]`; huge `level` causes OOM DoS",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-059",
+  "sev": "High",
+  "title": "Negative `tiri.m_level` writes NUL out of bounds before stack buffer `szTileNumber[z]` and leaks uninitialized stack memory into HTTP URL",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-060",
+  "sev": "High",
+  "title": "Unchecked `m_nDepth` causes `soHash[i]` heap over-read; recursive `MakeDirs()` aliases `CPLGetDirname()` TLS buffer (UB/assert crash); unsynchronized clean-thread flags",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-061",
+  "sev": "High",
+  "title": "Omitted or `Size=0` `<Kernel>` causes NULL dereference of `m_padfKernelCoefs[0]` in `FilterData()`; separable pass reads uninitialized `pafDstData` rows",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-062",
+  "sev": "High",
+  "title": "`AirSARDataset::LoadLine()` frees `pabyCompressedLine` on partial OOM without nulling it, causing double-free in destructor and UAF on retry",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-063",
+  "sev": "High",
+  "title": "Blank line in `.hdr` causes NULL deref in `GetNextItem()`; sparse `SetBand(4)` leaves NULL bands; off-by-one truncation & 32-bit seek overflow",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-064",
+  "sev": "High",
+  "title": "32-bit signed overflow in `SPrintArray()` causes heap buffer overflow via `strcat`; unknown/64-bit HDF4 attribute types cause OOB read or misinterpretation",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-065",
+  "sev": "High",
+  "title": "`HFAEntry::BuildEntryFromMIFObject()` unconditionally reads `pszField - 8`, underflowing heap buffers for non-pointer `c`/`C` or enum `e` fields",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-066",
+  "sev": "High",
+  "title": "Unsigned 32-bit addition overflow in `NITFFetchAttribute()` bypasses bounds check and reads up to ~4 GB past `pabyAttributeSubsection`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-067",
+  "sev": "High",
+  "title": "Updating a `< 4096`-byte COG/ghost-header GeoTIFF writes uninitialized stack bytes from `abyHeader[4096]` directly into the output file",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-068",
+  "sev": "High",
+  "title": "`EnvisatFile_GetFieldAsString()` checks only `nOffset >= nRecLen` instead of full field byte extent, causing heap over-reads on truncated `DSR_SIZE`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-069",
+  "sev": "High",
+  "title": "`Wkt2GeoReference()` passes NULL datum to `strstr()`, and `CPLStrdup(GetSpcs(...))` turns `nullptr` into `\"\"`, causing heap over-read & stack overflow in `NAD83to27()`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-070",
+  "sev": "High",
+  "title": "Metadata key `Class_10000_name` writes `nullptr` past `papszCategoryNames[10001]` (off-by-one heap overflow) and leaves array unterminated",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-071",
+  "sev": "High",
+  "title": "`XRITHeaderParser::parseHeader()` over-reads up to 33 bytes past header buffer, hangs on `headerRecordLength == 0`, reads uninit memory, and mis-shifts 64-bit size",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-072",
+  "sev": "High",
+  "title": "`RS2CalibRasterBand::IReadBlock()` over-reads `m_nfTable[nBlockXOff + j]`, swaps wrong buffer (`pImage`), and passes `nLineSpace = 1` for `GDT_Byte`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-073",
+  "sev": "High",
+  "title": "`SAR_CEOSRasterBand::IReadBlock()` offsets past single-band `pabyRecord` for `CEOS_IL_LINE` bands `>= 2`; missing positive dimension/band validation",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-074",
+  "sev": "High",
+  "title": "`nZoomLevelCount == 0` reads `papoOvrBands[0]` out of bounds on zero-sized allocation; missing dimension validation, band leak, and uninit zlib output",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-075",
+  "sev": "High",
+  "title": "`RIKRasterBand::IReadBlock()` allows `LZW_MAX_BITS < 9` (uninit stack read), wraps `GByte i` on RLE `count == 255`, and copies uninit heap on zlib failure",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-076",
+  "sev": "High",
+  "title": "`Identify()` reads past short basenames (`+ 4`), `Open()` omits `GDALCheckDatasetDimensions()`, and `IReadBlock()` computes negative/overflowing seek offsets",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-077",
+  "sev": "High",
+  "title": "Copy-paste typo passes `psCEOS->nBands` instead of `psCEOS->nLines` to `GDALCheckDatasetDimensions()`, leaving `nRasterYSize` unvalidated; 32-bit offset overflows",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-078",
+  "sev": "High",
+  "title": "`~NWT_GRDDataset()` dereferences NULL `pGrd` on invalid `BAND_COUNT`; `UpdateHeader()` calls `strlen()` on non-NUL-terminated 32-byte header fields",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-079",
+  "sev": "High",
+  "title": "`sscanf` on non-NUL-terminated packed header structs reads OOB; uninitialized `lines`/`cols`/`rad`/`pszRecord` used unchecked; dataset/file leaks on error",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-080",
+  "sev": "High",
+  "title": "Partial `VSIFReadL` check `< 1` exposes/writes uninitialized heap memory; 32-bit `nBlockSize * nBlockYOff` overflows > 2 GiB; `pData` leaked on new dataset read",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-081",
+  "sev": "High",
+  "title": "`pszFilename[strlen(pszFilename) - 1]` underflows by 1 byte on empty or quoted `TILE_*.filename` values and mutates `papszTIL` in place",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-082",
+  "sev": "High",
+  "title": "`TSXDataset::Open()` does not check `poBandData->GetRasterCount() >= 1` (NULL dereference), omits dimension validation, and leaks `pasGCPList`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-083",
+  "sev": "High",
+  "title": "`HF2RasterBand::IReadBlock()` clamps against `std::numeric_limits<float>::min()` (`+1.175e-38`) instead of `lowest()`, corrupting all elevations `<= 0`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-084",
+  "sev": "High",
+  "title": "`if (iBitOffset == 0)` corrupts every even pixel after pixel 0 in 4-bit GenBin rasters; 32-bit `iBitOffset` overflows to negative heap index",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-085",
+  "sev": "High",
+  "title": "32-bit signed integer overflows in `8 * nValueCount`, `nRasterXSize * nRasterYSize * 8 * iBand`, and `nBlockYOff * nBlockXSize`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-086",
+  "sev": "High",
+  "title": "Untrusted JPIP VBAS segment length and EOR marker are read from `pabyData` without verifying remaining buffer size (remote heap over-read & shift UB)",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-087",
+  "sev": "High",
+  "title": "Unchecked `pszCoverName + strlen(pszCoverName) - 4` in `AIGOpen()` causes heap buffer under-read on short paths including `\".\"`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-088",
+  "sev": "High",
+  "title": "Insufficient EXIF bounds check `nOffset < nCount - 8` permits a 1-3 byte heap buffer over-read when reading `nTIFFDirOff`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-089",
+  "sev": "High",
+  "title": "`num_blocks_x * bytesPerBlock` overflows `uint32_t` for wide DXT3/DXT5 textures, bypassing file-size check and causing heap over-read in `IReadBlock()`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-090",
+  "sev": "High",
+  "title": "Missing null check after `GetArray()->Get(iElt)` in `GDALPDFDictionary::LookupObject()` causes NULL dereference on multi-segment lookup paths",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-091",
+  "sev": "High",
+  "title": "Broken XML sibling traversal causes infinite loop in `ReadLUT()`; `GDT_Int16` typo for `GDT_UInt16` bypasses null check before `sscanf()`; uninit `sscanf` reads",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-092",
+  "sev": "High",
+  "title": "`std::sort` comparator falls back to object addresses (`&a < &b`), violating strict weak ordering (UB/OOB); inverted `eInterp != GCI_Undefined` check",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-093",
+  "sev": "High",
+  "title": "EXIF box parsing leaks dangling non-owning `/vsimem/jxl/%p` pointer (UAF), passes full 1 MB buffer size, and uses no-op `CPL_LSBPTR32` for big-endian TIFF",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-094",
+  "sev": "High",
+  "title": "4-band 4:2:0 alpha path `memcpy`s raw 32-bit `OPJ_INT32*` samples into 8-bit `GByte*` buffer using component 0's stride (corruption & potential OOB read)",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-095",
+  "sev": "Medium",
+  "title": "Wrong `\"miles\"` unit factor (`1304.544` vs `1609.344`) and `strchr(..., '\\0')` `size -= 1` bug mis-maps `\"mm\"`/`\"mi\"` to `1.0 m` and `\"in\"` to `0.3048 m`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-096",
+  "sev": "Medium",
+  "title": "`delta_075_level_2_bc_0/1[32]` lookup tables omit 32nd entry (index 31 decodes as `0`); 32-bit `nInputBytes * 8` overflow; `L[8][5]` typo",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-097",
+  "sev": "Medium",
+  "title": "`DDFRecord::ReadHeader()` fails to reset `nFieldOffset = -1` on undefined field, leaving `nReuseHeader = TRUE` with uninitialized `DDFField`s",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-098",
+  "sev": "Medium",
+  "title": "`URLRemoveKey()` enters infinite loop at `pos == 0` and calls `.back()` on empty string; `Join(..., true)` silently drops all elements at index >= 2",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-099",
+  "sev": "Medium",
+  "title": "Unchecked `VSIFReadL()` into `CPLMalloc()` buffers parses uninitialized heap memory into GRIB2 band metadata and `m_dfNoData`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-100",
+  "sev": "Medium",
+  "title": "Uninitialized `nSize` and unchecked `VSIFSeekL`/`VSIFReadL` corrupt `m_anRecordOffsets` on truncated VICAR BASIC files; early return skips `bIsString` update",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-101",
+  "sev": "Medium",
+  "title": "`InterpolatePixelFunc()` validates `dfT` instead of `dfDt`, rejecting valid `t = 0` while allowing `dt = 0`/`NaN`/`< 0` into division by zero and UB",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-102",
+  "sev": "Medium",
+  "title": "NITF 2.0-to-2.1 text segment date conversion maps `\"JUN\"` to `\"07\"` and omits `\"JUL\"` entirely (leaving July dates as `\"12\"`)",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-103",
+  "sev": "Medium",
+  "title": "`COPY_YFIRST` leaves most of `pImage` uninitialized, multi-band byte swap uses wrong byte offsets, `space == 2` seeks past EOF, and `IT01` swaps wrong header field in place",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-104",
+  "sev": "Medium",
+  "title": "`SIGDEMRasterBand::IReadBlock()` returns `CE_None` without populating `pImage` when `nLoadedBlockIndex == nBlockIndex` or on update seek failure",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-105",
+  "sev": "Medium",
+  "title": "`EHdrDataset::Open()` unconditionally overwrites `nBits = 8` for `1 <= nBits <= 8`, breaking all sub-byte 1/2/4-bit EHdr datasets, plus write-error leak",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-106",
+  "sev": "Medium",
+  "title": "`L1BGeolocRasterBand::IReadBlock()` passes `nGCPsPerLine` instead of `nGotGCPs` to `L1BInterpol()`, reading uninitialized knots and overwriting NoData tail",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-107",
+  "sev": "Medium",
+  "title": "`ScanForMinMaxZ()` compares `pafRowVals[iCol] > pafRowMinZ[iRow]` instead of `pafRowMaxZ[iRow]` in both GS7BG & GSBG; `GS7BG::IWriteBlock()` seeks to wrong header offset",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-108",
+  "sev": "Medium",
+  "title": "`BTRasterBand::IWriteBlock()` computes `256 + nBlockXOff * nDataSize * nRasterYSize` and `CPLMalloc(nDataSize * nRasterYSize)` in 32-bit signed `int`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-109",
+  "sev": "Medium",
+  "title": "`LAN4BitRasterBand::IReadBlock()` reads `nRasterXSize / 2` bytes (rounding down) and unpacks uninitialized byte `pImage[(nRasterXSize - 1) / 2]` on odd widths",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-110",
+  "sev": "Medium",
+  "title": "Unvalidated `sHeader.NBPR` (`nLineOffset`) and 32-bit `int` overflow in `IReadBlock`/`IWriteBlock`; `ELASDataset::Create()` writes only `1 / nBandsIn` of each scanline",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-111",
+  "sev": "Medium",
+  "title": "`NDFDataset::Open()` fetches `\"USGS_PROJECTION_NUMBER\"` instead of `\"USGS_PROJECTION_PARAMETERS\"`, leaving all 15 USGS projection parameters zeroed",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-112",
+  "sev": "Medium",
+  "title": "`/vsicurl/` header sniffer copies `tp.nBands`/`tp.nSize` before `OGR_DS_ExecuteSQL()` invokes callback and omits `+ i` in JPEG SOF0 parsing",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-113",
+  "sev": "Medium",
+  "title": "2D TileDB arrays without `NUM_BANDS` metadata compute `nBlocksX`/`nBlocksY` with `nBlockXSize = nBlockYSize = -1` and look up off-by-one `TDB_VALUES_(i+1)`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-114",
+  "sev": "Medium",
+  "title": "`PostGISRasterRasterBand::GetMinimum()` delegates to `VRTSourcedRasterBand::GetMaximum()`, and `GetOverviewDS()` checks `iOvr > GetOverviewCount()` instead of `>=`",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-115",
+  "sev": "Medium",
+  "title": "`GDALECWCompressor::Initialize()` swaps `padfGeoTransform[2]` and `padfGeoTransform[4]` in GMLJP2 XML pixel-center origin and `<gml:offsetVector>` elements",
+  "bugs": {}
+ },
+ {
+  "finding": "GDAL-116",
+  "sev": "Medium",
+  "title": "`WEBPDataset::GetMetadata(\"xml:XMP\")` checks EXIF flag bit (`0x08`) instead of XMP (`0x04`), obsolete `\"META\"` FourCC instead of `\"XMP \"`, and omits RIFF odd-byte padding",
+  "bugs": {}
+ }
+]

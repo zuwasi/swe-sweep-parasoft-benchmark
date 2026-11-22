@@ -1,0 +1,2102 @@
+[
+ {
+  "id": "BUG-001",
+  "sev": "Critical",
+  "title": "SymmetryBreaker pollutes d_termEqs on rejected permutations",
+  "files": [
+   [
+    "src/theory/uf/symmetry_breaker.cpp",
+    252,
+    256
+   ],
+   [
+    "src/theory/uf/symmetry_breaker.cpp",
+    361,
+    454
+   ],
+   [
+    "src/theory/uf/symmetry_breaker.cpp",
+    746,
+    759
+   ],
+   [
+    "src/theory/uf/symmetry_breaker.cpp",
+    796,
+    810
+   ],
+   [
+    "src/theory/uf/symmetry_breaker.cpp",
+    863,
+    894
+   ]
+  ]
+ },
+ {
+  "id": "BUG-002",
+  "sev": "Critical",
+  "title": "32-bit overflow 2*n in ExtractMultLeadingBit returns false unsat",
+  "files": [
+   [
+    "src/theory/bv/theory_bv_rewrite_rules_simplification.h",
+    1019,
+    1034
+   ],
+   [
+    "src/theory/bv/theory_bv_rewriter.cpp",
+    391,
+    391
+   ]
+  ]
+ },
+ {
+  "id": "BUG-003",
+  "sev": "Critical",
+  "title": "Unguarded getConst<Rational> on rel.join_image",
+  "files": [
+   [
+    "src/theory/sets/theory_sets_rewriter.cpp",
+    679,
+    691
+   ],
+   [
+    "src/theory/sets/theory_sets_private.cpp",
+    1770,
+    1770
+   ]
+  ]
+ },
+ {
+  "id": "BUG-004",
+  "sev": "Critical",
+  "title": "size_t underflow on UnitTuple",
+  "files": [
+   [
+    "src/theory/datatypes/tuple_utils.cpp",
+    163,
+    180
+   ],
+   [
+    "src/theory/bags/inference_generator.cpp",
+    693,
+    770
+   ],
+   [
+    "src/theory/sets/theory_sets_rels.cpp",
+    1179,
+    1186
+   ],
+   [
+    "src/theory/sets/theory_sets_rels.cpp",
+    1478,
+    1489
+   ]
+  ]
+ },
+ {
+  "id": "BUG-005",
+  "sev": "Critical",
+  "title": "UAF global Warning/TraceChannel after reset",
+  "files": [
+   [
+    "src/options/options_handler.cpp",
+    107,
+    112
+   ],
+   [
+    "src/options/managed_streams.h",
+    60,
+    102
+   ],
+   [
+    "src/options/options_template.cpp",
+    39,
+    53
+   ]
+  ]
+ },
+ {
+  "id": "BUG-006",
+  "sev": "Critical",
+  "title": "UAF dangling streambuf in cvc5_get_output",
+  "files": [
+   [
+    "src/api/c/cvc5.cpp",
+    4650,
+    4695
+   ],
+   [
+    "src/api/c/cvc5_c_structs.cpp",
+    498,
+    507
+   ],
+   [
+    "src/api/c/cvc5_c_structs.h",
+    748,
+    760
+   ]
+  ]
+ },
+ {
+  "id": "BUG-007",
+  "sev": "Critical",
+  "title": "OOB args[0] read on empty arithmetic application",
+  "files": [
+   [
+    "src/parser/smt2/smt2_state.cpp",
+    1571,
+    1586
+   ]
+  ]
+ },
+ {
+  "id": "BUG-008",
+  "sev": "Critical",
+  "title": "Type confusion getConst<Rational> on String/BV in MipLibTrick",
+  "files": [
+   [
+    "src/preprocessing/passes/miplib_trick.cpp",
+    268,
+    275
+   ],
+   [
+    "src/preprocessing/passes/miplib_trick.cpp",
+    325,
+    327
+   ],
+   [
+    "src/preprocessing/passes/miplib_trick.cpp",
+    396,
+    398
+   ],
+   [
+    "src/preprocessing/passes/miplib_trick.cpp",
+    555,
+    563
+   ]
+  ]
+ },
+ {
+  "id": "BUG-009",
+  "sev": "Critical",
+  "title": "FloatingPointLiteralMPFR truncates exponent toUnsignedInt",
+  "files": [
+   [
+    "src/util/floatingpoint_literal_mpfr.cpp",
+    39,
+    45
+   ],
+   [
+    "src/util/floatingpoint_literal_mpfr.cpp",
+    78,
+    88
+   ],
+   [
+    "src/util/floatingpoint_literal_mpfr.cpp",
+    215,
+    216
+   ]
+  ]
+ },
+ {
+  "id": "BUG-010",
+  "sev": "Critical",
+  "title": "Unsound piand idempotence rewrite for k<0",
+  "files": [
+   [
+    "src/theory/arith/arith_rewriter.cpp",
+    1321,
+    1327
+   ]
+  ]
+ },
+ {
+  "id": "BUG-011",
+  "sev": "Critical",
+  "title": "Unguarded toUnsignedInt truncation in PIAND",
+  "files": [
+   [
+    "src/theory/arith/arith_rewriter.cpp",
+    1285,
+    1308
+   ],
+   [
+    "src/theory/arith/nl/piand_solver.cpp",
+    209,
+    367
+   ]
+  ]
+ },
+ {
+  "id": "BUG-012",
+  "sev": "Critical",
+  "title": "Wrong range boundaries in OperatorElim inverse trig",
+  "files": [
+   [
+    "src/theory/arith/operator_elim.cpp",
+    388,
+    440
+   ]
+  ]
+ },
+ {
+  "id": "BUG-013",
+  "sev": "Critical",
+  "title": "ICPSolver overwrites rhsmult with veq_c",
+  "files": [
+   [
+    "src/theory/arith/nl/icp/icp_solver.cpp",
+    145,
+    188
+   ]
+  ]
+ },
+ {
+  "id": "BUG-014",
+  "sev": "Critical",
+  "title": "RegExpElimination omits length bound for str.to_re",
+  "files": [
+   [
+    "src/theory/strings/regexp_elim.cpp",
+    97,
+    127
+   ],
+   [
+    "src/theory/strings/regexp_elim.cpp",
+    188,
+    195
+   ],
+   [
+    "src/theory/strings/regexp_elim.cpp",
+    243,
+    250
+   ],
+   [
+    "src/theory/strings/regexp_elim.cpp",
+    288,
+    361
+   ]
+  ]
+ },
+ {
+  "id": "BUG-015",
+  "sev": "Critical",
+  "title": "ArraySolver compares global t[1]==0 in seq.update",
+  "files": [
+   [
+    "src/theory/strings/array_solver.cpp",
+    300,
+    338
+   ]
+  ]
+ },
+ {
+  "id": "BUG-016",
+  "sev": "Critical",
+  "title": "ArraySolver::checkArrayEager skips isHandledUpdateOrSubstr",
+  "files": [
+   [
+    "src/theory/strings/array_solver.cpp",
+    95,
+    107
+   ],
+   [
+    "src/theory/strings/array_core_solver.cpp",
+    108,
+    214
+   ]
+  ]
+ },
+ {
+  "id": "BUG-017",
+  "sev": "Critical",
+  "title": "TheorySepRewriter::isSpatial ignores non-Boolean subterms",
+  "files": [
+   [
+    "src/theory/sep/theory_sep_rewriter.cpp",
+    116,
+    138
+   ]
+  ]
+ },
+ {
+  "id": "BUG-018",
+  "sev": "Critical",
+  "title": "SetReduction reduceFoldOperator omits distinctness",
+  "files": [
+   [
+    "src/theory/sets/set_reduction.cpp",
+    35,
+    88
+   ]
+  ]
+ },
+ {
+  "id": "BUG-019",
+  "sev": "Critical",
+  "title": "postRewriteFold expand folds in Node ID order violating congruence",
+  "files": [
+   [
+    "src/theory/sets/theory_sets_rewriter.cpp",
+    1034,
+    1044
+   ],
+   [
+    "src/theory/bags/bags_rewriter.cpp",
+    680,
+    689
+   ]
+  ]
+ },
+ {
+  "id": "BUG-020",
+  "sev": "Critical",
+  "title": "computeCardinalityRecSingleton fails unit datatype fields",
+  "files": [
+   [
+    "src/expr/dtype.cpp",
+    506,
+    574
+   ]
+  ]
+ },
+ {
+  "id": "BUG-021",
+  "sev": "Critical",
+  "title": "Cardinality operator*= checks isLargeFinite before 0/1",
+  "files": [
+   [
+    "src/util/cardinality.cpp",
+    122,
+    195
+   ],
+   [
+    "src/util/cardinality.cpp",
+    340,
+    343
+   ]
+  ]
+ },
+ {
+  "id": "BUG-022",
+  "sev": "Critical",
+  "title": "aci_norm marks FINITE_FIELD ops idempotent",
+  "files": [
+   [
+    "src/expr/aci_norm.cpp",
+    36,
+    37
+   ],
+   [
+    "src/expr/aci_norm.cpp",
+    112,
+    128
+   ],
+   [
+    "src/expr/aci_norm.cpp",
+    194,
+    200
+   ]
+  ]
+ },
+ {
+  "id": "BUG-023",
+  "sev": "Critical",
+  "title": "TimeoutCoreManager drops d_globalInclude on iteration 1",
+  "files": [
+   [
+    "src/smt/timeout_core_manager.cpp",
+    162,
+    169
+   ],
+   [
+    "src/smt/timeout_core_manager.cpp",
+    291,
+    298
+   ],
+   [
+    "src/smt/timeout_core_manager.cpp",
+    371,
+    374
+   ]
+  ]
+ },
+ {
+  "id": "BUG-024",
+  "sev": "Critical",
+  "title": "TimeoutCoreManager clears d_ppAsserts not d_ppAssertsOrig",
+  "files": [
+   [
+    "src/smt/timeout_core_manager.cpp",
+    332,
+    351
+   ],
+   [
+    "src/smt/timeout_core_manager.cpp",
+    82,
+    87
+   ]
+  ]
+ },
+ {
+  "id": "BUG-025",
+  "sev": "Critical",
+  "title": "NestedQe::doQe returns negated EXISTS on QE failure",
+  "files": [
+   [
+    "src/theory/quantifiers/cegqi/nested_qe.cpp",
+    134,
+    155
+   ]
+  ]
+ },
+ {
+  "id": "BUG-026",
+  "sev": "Critical",
+  "title": "BoundedIntegers isGroundRange inverted empty check",
+  "files": [
+   [
+    "src/theory/quantifiers/fmf/bounded_integers.cpp",
+    811,
+    814
+   ],
+   [
+    "src/theory/quantifiers/fmf/bounded_integers.cpp",
+    996,
+    996
+   ]
+  ]
+ },
+ {
+  "id": "BUG-027",
+  "sev": "Critical",
+  "title": "SyGuS symmetry breaking prunes valid solutions",
+  "files": [
+   [
+    "src/theory/quantifiers/term_util.cpp",
+    366,
+    532
+   ],
+   [
+    "src/theory/datatypes/sygus_simple_sym.cpp",
+    438,
+    468
+   ]
+  ]
+ },
+ {
+  "id": "BUG-028",
+  "sev": "Critical",
+  "title": "Evaluator truncates STRING_INDEXOF index",
+  "files": [
+   [
+    "src/theory/evaluator.cpp",
+    786,
+    809
+   ]
+  ]
+ },
+ {
+  "id": "BUG-029",
+  "sev": "Critical",
+  "title": "ConflictProcessor inverted truth value",
+  "files": [
+   [
+    "src/theory/conflict_processor.cpp",
+    343,
+    379
+   ]
+  ]
+ },
+ {
+  "id": "BUG-030",
+  "sev": "Critical",
+  "title": "SortInference replaces finite-cardinality sorts",
+  "files": [
+   [
+    "src/theory/sort_inference.cpp",
+    504,
+    582
+   ]
+  ]
+ },
+ {
+  "id": "BUG-031",
+  "sev": "Critical",
+  "title": "Ackermann defers SELECT children visit",
+  "files": [
+   [
+    "src/preprocessing/passes/ackermann.cpp",
+    116,
+    143
+   ],
+   [
+    "src/preprocessing/passes/ackermann.cpp",
+    172,
+    186
+   ]
+  ]
+ },
+ {
+  "id": "BUG-032",
+  "sev": "Critical",
+  "title": "UnconstrainedSimplifier never visits operator",
+  "files": [
+   [
+    "src/preprocessing/passes/unconstrained_simplifier.cpp",
+    98,
+    120
+   ]
+  ]
+ },
+ {
+  "id": "BUG-033",
+  "sev": "Critical",
+  "title": "RegExpOpr::convert2 drops prefix P",
+  "files": [
+   [
+    "src/theory/strings/regexp_operation.cpp",
+    1375,
+    1468
+   ]
+  ]
+ },
+ {
+  "id": "BUG-034",
+  "sev": "Critical",
+  "title": "NlModel simpleCheckModelMsum ignores has_neg_factor",
+  "files": [
+   [
+    "src/theory/arith/nl/nl_model.cpp",
+    903,
+    903
+   ],
+   [
+    "src/theory/arith/nl/nl_model.cpp",
+    962,
+    970
+   ]
+  ]
+ },
+ {
+  "id": "BUG-035",
+  "sev": "Critical",
+  "title": "BitProp bitsum overflow / off-by-one",
+  "files": [
+   [
+    "src/theory/ff/split_gb.cpp",
+    446,
+    475
+   ],
+   [
+    "src/theory/ff/split_gb.cpp",
+    500,
+    506
+   ]
+  ]
+ },
+ {
+  "id": "BUG-036",
+  "sev": "Critical",
+  "title": "ff parse spectrum ignores degree cancellation",
+  "files": [
+   [
+    "src/theory/ff/parse.cpp",
+    88,
+    203
+   ]
+  ]
+ },
+ {
+  "id": "BUG-037",
+  "sev": "Critical",
+  "title": "TheoryEngine::entailmentCheck polarity/kind bugs",
+  "files": [
+   [
+    "src/theory/theory_engine.cpp",
+    2306,
+    2306
+   ],
+   [
+    "src/theory/theory_engine.cpp",
+    2310,
+    2310
+   ],
+   [
+    "src/theory/theory_engine.cpp",
+    2356,
+    2356
+   ]
+  ]
+ },
+ {
+  "id": "BUG-038",
+  "sev": "Critical",
+  "title": "TheorySep treats disjunctions under sep as conjunctions",
+  "files": [
+   [
+    "src/theory/sep/theory_sep.cpp",
+    1059,
+    1113
+   ]
+  ]
+ },
+ {
+  "id": "BUG-039",
+  "sev": "High",
+  "title": "CEGQI get-qe instantiates with internal constant @U_0",
+  "files": [
+   [
+    "src/theory/quantifiers/instantiate.cpp",
+    160,
+    185
+   ]
+  ]
+ },
+ {
+  "id": "BUG-040",
+  "sev": "High",
+  "title": "int overflow ExtractConcat leaves children empty",
+  "files": [
+   [
+    "src/theory/bv/theory_bv_rewrite_rules_core.h",
+    259,
+    283
+   ],
+   [
+    "src/theory/bv/theory_bv_utils.cpp",
+    364,
+    364
+   ]
+  ]
+ },
+ {
+  "id": "BUG-041",
+  "sev": "High",
+  "title": "Uaddo/Usubo/Smulo/UmuloEliminate widen UINT32_MAX bv",
+  "files": [
+   [
+    "src/theory/bv/theory_bv_rewrite_rules_operator_elimination.h",
+    532,
+    538
+   ],
+   [
+    "src/theory/bv/theory_bv_rewrite_rules_operator_elimination.h",
+    624,
+    628
+   ],
+   [
+    "src/theory/bv/theory_bv_rewrite_rules_operator_elimination.h",
+    660,
+    663
+   ],
+   [
+    "src/theory/bv/theory_bv_rewrite_rules_operator_elimination.h",
+    721,
+    725
+   ]
+  ]
+ },
+ {
+  "id": "BUG-042",
+  "sev": "High",
+  "title": "FloatingPointFPTypeRule validates significandBits not +1",
+  "files": [
+   [
+    "src/theory/fp/theory_fp_type_rules.cpp",
+    119,
+    156
+   ],
+   [
+    "src/theory/fp/theory_fp_rewriter.cpp",
+    446,
+    449
+   ]
+  ]
+ },
+ {
+  "id": "BUG-043",
+  "sev": "High",
+  "title": "uint32 overflow eb+sb bypasses width check",
+  "files": [
+   [
+    "src/theory/fp/theory_fp_type_rules.cpp",
+    391,
+    395
+   ],
+   [
+    "src/theory/fp/type_enumerator.h",
+    37,
+    37
+   ]
+  ]
+ },
+ {
+  "id": "BUG-044",
+  "sev": "High",
+  "title": "BagsUtils::evaluate aborts on bag.all/some/partition",
+  "files": [
+   [
+    "src/theory/bags/bags_rewriter.cpp",
+    62,
+    66
+   ],
+   [
+    "src/theory/bags/bags_utils.cpp",
+    120,
+    150
+   ]
+  ]
+ },
+ {
+  "id": "BUG-045",
+  "sev": "High",
+  "title": "ArrayCoreSolver constructs ill-typed SEQ_NTH on String",
+  "files": [
+   [
+    "src/theory/strings/array_core_solver.cpp",
+    77,
+    77
+   ],
+   [
+    "src/theory/strings/array_core_solver.cpp",
+    131,
+    194
+   ]
+  ]
+ },
+ {
+  "id": "BUG-046",
+  "sev": "High",
+  "title": "Division by zero parse::bitSums over GF(2)",
+  "files": [
+   [
+    "src/theory/ff/parse.cpp",
+    360,
+    390
+   ]
+  ]
+ },
+ {
+  "id": "BUG-047",
+  "sev": "High",
+  "title": "EvalResult::operator= overwrites tagged union",
+  "files": [
+   [
+    "src/theory/evaluator.cpp",
+    53,
+    78
+   ],
+   [
+    "src/theory/evaluator.h",
+    52,
+    59
+   ]
+  ]
+ },
+ {
+  "id": "BUG-048",
+  "sev": "High",
+  "title": "SubstitutionMinimize isSingularArg bvurem(x,0)",
+  "files": [
+   [
+    "src/theory/subs_minimize.cpp",
+    439,
+    449
+   ]
+  ]
+ },
+ {
+  "id": "BUG-049",
+  "sev": "High",
+  "title": "CDHashSet const_iterator operator++ returns dangling Proxy",
+  "files": [
+   [
+    "src/context/cdhashset.h",
+    76,
+    107
+   ]
+  ]
+ },
+ {
+  "id": "BUG-050",
+  "sev": "High",
+  "title": "Sampler::pickFpBiased fails on FP(2,2)",
+  "files": [
+   [
+    "src/util/sampler.cpp",
+    121,
+    165
+   ],
+   [
+    "src/theory/quantifiers/sygus_sampler.cpp",
+    487,
+    494
+   ]
+  ]
+ },
+ {
+  "id": "BUG-051",
+  "sev": "High",
+  "title": "OOB d_nodes[i] in ForeignTheoryRewrite",
+  "files": [
+   [
+    "src/preprocessing/passes/foreign_theory_rewrite.cpp",
+    154,
+    156
+   ],
+   [
+    "src/preprocessing/assertion_pipeline.cpp",
+    185,
+    188
+   ],
+   [
+    "src/preprocessing/assertion_pipeline.cpp",
+    226,
+    226
+   ]
+  ]
+ },
+ {
+  "id": "BUG-052",
+  "sev": "High",
+  "title": "global_negate inverted isFirstClass check",
+  "files": [
+   [
+    "src/preprocessing/passes/global_negate.cpp",
+    43,
+    52
+   ]
+  ]
+ },
+ {
+  "id": "BUG-053",
+  "sev": "High",
+  "title": "NlExtPurify drops operator on PARAMETERIZED nodes",
+  "files": [
+   [
+    "src/preprocessing/passes/nl_ext_purify.cpp",
+    80,
+    93
+   ]
+  ]
+ },
+ {
+  "id": "BUG-054",
+  "sev": "High",
+  "title": "Ackermann usortsToBitVectors ill-typed substitution",
+  "files": [
+   [
+    "src/preprocessing/passes/ackermann.cpp",
+    259,
+    298
+   ]
+  ]
+ },
+ {
+  "id": "BUG-055",
+  "sev": "High",
+  "title": "HoElim constructs ill-typed APPLY_UF",
+  "files": [
+   [
+    "src/preprocessing/passes/ho_elim.cpp",
+    167,
+    334
+   ]
+  ]
+ },
+ {
+  "id": "BUG-056",
+  "sev": "High",
+  "title": "MipLibTrick UB shift 1ULL<<64 etc",
+  "files": [
+   [
+    "src/preprocessing/passes/miplib_trick.cpp",
+    437,
+    437
+   ],
+   [
+    "src/preprocessing/passes/miplib_trick.cpp",
+    453,
+    453
+   ],
+   [
+    "src/preprocessing/passes/miplib_trick.cpp",
+    568,
+    572
+   ],
+   [
+    "src/preprocessing/passes/miplib_trick.cpp",
+    613,
+    635
+   ]
+  ]
+ },
+ {
+  "id": "BUG-057",
+  "sev": "High",
+  "title": "ITESimplifier leavesAreConst crashes Bool arg",
+  "files": [
+   [
+    "src/preprocessing/util/ite_utilities.cpp",
+    1253,
+    1293
+   ]
+  ]
+ },
+ {
+  "id": "BUG-058",
+  "sev": "High",
+  "title": "Alethe update passes TrustId to getTheoryId",
+  "files": [
+   [
+    "src/proof/alethe/alethe_post_processor.cpp",
+    1032,
+    1044
+   ]
+  ]
+ },
+ {
+  "id": "BUG-059",
+  "sev": "High",
+  "title": "Alethe update crashes on SKOLEMIZE unused bound var",
+  "files": [
+   [
+    "src/proof/alethe/alethe_post_processor.cpp",
+    1930,
+    1961
+   ]
+  ]
+ },
+ {
+  "id": "BUG-060",
+  "sev": "High",
+  "title": "BvInverter lacks BITVECTOR_COMP branch",
+  "files": [
+   [
+    "src/theory/quantifiers/bv_inverter.cpp",
+    112,
+    112
+   ],
+   [
+    "src/theory/quantifiers/bv_inverter.cpp",
+    272,
+    404
+   ]
+  ]
+ },
+ {
+  "id": "BUG-061",
+  "sev": "High",
+  "title": "SygusInterpol mkNode(AND,{}) with 0 assertions",
+  "files": [
+   [
+    "src/theory/quantifiers/sygus/sygus_interpol.cpp",
+    114,
+    174
+   ]
+  ]
+ },
+ {
+  "id": "BUG-062",
+  "sev": "High",
+  "title": "SygusSolver caps at 2 passes",
+  "files": [
+   [
+    "src/smt/sygus_solver.cpp",
+    271,
+    319
+   ]
+  ]
+ },
+ {
+  "id": "BUG-063",
+  "sev": "High",
+  "title": "ModelCoreBuilder collects BOUND_VARIABLEs",
+  "files": [
+   [
+    "src/smt/model_core_builder.cpp",
+    52,
+    99
+   ]
+  ]
+ },
+ {
+  "id": "BUG-064",
+  "sev": "High",
+  "title": "Context pop underflow after reset-assertions",
+  "files": [
+   [
+    "src/parser/sym_manager.cpp",
+    47,
+    51
+   ],
+   [
+    "src/parser/sym_manager.cpp",
+    259,
+    270
+   ],
+   [
+    "src/parser/sym_manager.cpp",
+    296,
+    313
+   ]
+  ]
+ },
+ {
+  "id": "BUG-065",
+  "sev": "High",
+  "title": "size_t->uint32 truncation dag+1",
+  "files": [
+   [
+    "src/printer/smt2/smt2_printer.cpp",
+    153,
+    153
+   ],
+   [
+    "src/printer/ast/ast_printer.cpp",
+    37,
+    37
+   ],
+   [
+    "src/printer/let_binding.cpp",
+    215,
+    215
+   ]
+  ]
+ },
+ {
+  "id": "BUG-066",
+  "sev": "High",
+  "title": "Signed long overflow setData value+1024",
+  "files": [
+   [
+    "src/options/io_utils_template.cpp",
+    25,
+    31
+   ]
+  ]
+ },
+ {
+  "id": "BUG-067",
+  "sev": "High",
+  "title": "Printer aborts on smt2-tptp",
+  "files": [
+   [
+    "src/printer/printer.cpp",
+    36,
+    53
+   ],
+   [
+    "src/options/language.cpp",
+    42,
+    45
+   ]
+  ]
+ },
+ {
+  "id": "BUG-068",
+  "sev": "High",
+  "title": "Assertion failure empty term list block-model-values",
+  "files": [
+   [
+    "src/parser/smt2/smt2_cmd_parser.cpp",
+    167,
+    173
+   ],
+   [
+    "src/parser/commands.cpp",
+    1673,
+    1679
+   ]
+  ]
+ },
+ {
+  "id": "BUG-069",
+  "sev": "High",
+  "title": "Uncaught Exception with multiple input files",
+  "files": [
+   [
+    "src/main/driver_unified.cpp",
+    103,
+    106
+   ],
+   [
+    "src/main/main.cpp",
+    35,
+    84
+   ]
+  ]
+ },
+ {
+  "id": "BUG-070",
+  "sev": "High",
+  "title": "Uncaught std::regex_error on wildcard trace tag",
+  "files": [
+   [
+    "src/options/options_handler.cpp",
+    72,
+    91
+   ]
+  ]
+ },
+ {
+  "id": "BUG-071",
+  "sev": "High",
+  "title": "Infinite busy-loop portfolio-jobs=0",
+  "files": [
+   [
+    "src/main/portfolio_driver.cpp",
+    419,
+    457
+   ]
+  ]
+ },
+ {
+  "id": "BUG-072",
+  "sev": "High",
+  "title": "(as ctor (Nullable T)) becomes nullable.null",
+  "files": [
+   [
+    "src/parser/parser_state.cpp",
+    535,
+    551
+   ]
+  ]
+ },
+ {
+  "id": "BUG-073",
+  "sev": "High",
+  "title": "mkNullableLift OOB type[0]",
+  "files": [
+   [
+    "src/api/cpp/cvc5.cpp",
+    6645,
+    6671
+   ]
+  ]
+ },
+ {
+  "id": "BUG-074",
+  "sev": "High",
+  "title": "mkFloatingPoint inverted check order",
+  "files": [
+   [
+    "src/api/cpp/cvc5.cpp",
+    6569,
+    6589
+   ]
+  ]
+ },
+ {
+  "id": "BUG-075",
+  "sev": "High",
+  "title": "C API missing null checks",
+  "files": [
+   [
+    "src/api/c/cvc5.cpp",
+    2894,
+    2894
+   ],
+   [
+    "src/api/c/cvc5.cpp",
+    4889,
+    4889
+   ],
+   [
+    "src/api/c/cvc5.cpp",
+    5164,
+    5164
+   ],
+   [
+    "src/api/c/cvc5.cpp",
+    5566,
+    5566
+   ],
+   [
+    "src/api/c/cvc5_c_structs.cpp",
+    717,
+    722
+   ]
+  ]
+ },
+ {
+  "id": "BUG-076",
+  "sev": "High",
+  "title": "C++ API missing null checks",
+  "files": [
+   [
+    "src/api/cpp/cvc5.cpp",
+    4397,
+    4397
+   ],
+   [
+    "src/api/cpp/cvc5.cpp",
+    4816,
+    4816
+   ],
+   [
+    "src/api/cpp/cvc5.cpp",
+    5016,
+    5016
+   ],
+   [
+    "src/api/cpp/cvc5.cpp",
+    5175,
+    5175
+   ],
+   [
+    "src/api/cpp/cvc5.cpp",
+    5194,
+    5194
+   ],
+   [
+    "src/api/cpp/cvc5.cpp",
+    5308,
+    5325
+   ]
+  ]
+ },
+ {
+  "id": "BUG-077",
+  "sev": "High",
+  "title": "Datatype operator== compares fresh shared_ptr",
+  "files": [
+   [
+    "src/api/cpp/cvc5.cpp",
+    4122,
+    4122
+   ],
+   [
+    "src/api/cpp/cvc5.cpp",
+    4220,
+    4220
+   ],
+   [
+    "src/api/cpp/cvc5.cpp",
+    4463,
+    4463
+   ],
+   [
+    "src/api/cpp/cvc5.cpp",
+    9153,
+    9180
+   ],
+   [
+    "src/api/c/cvc5_c_structs.cpp",
+    85,
+    118
+   ]
+  ]
+ },
+ {
+  "id": "BUG-078",
+  "sev": "High",
+  "title": "appendIncrementalStringInput resets d_usingIStringStream",
+  "files": [
+   [
+    "src/api/cpp/cvc5_parser.cpp",
+    195,
+    201
+   ],
+   [
+    "src/api/cpp/cvc5_parser.cpp",
+    241,
+    241
+   ],
+   [
+    "src/api/cpp/cvc5_parser.cpp",
+    392,
+    400
+   ],
+   [
+    "include/cvc5/cvc5_parser.h",
+    340,
+    342
+   ]
+  ]
+ },
+ {
+  "id": "BUG-079",
+  "sev": "High",
+  "title": "Missing s_kinds_internal entries",
+  "files": [
+   [
+    "src/api/cpp/cvc5.cpp",
+    721,
+    725
+   ],
+   [
+    "src/api/cpp/cvc5.cpp",
+    764,
+    777
+   ],
+   [
+    "src/api/cpp/cvc5.cpp",
+    2241,
+    2241
+   ],
+   [
+    "src/api/cpp/cvc5.cpp",
+    2432,
+    2432
+   ]
+  ]
+ },
+ {
+  "id": "BUG-080",
+  "sev": "High",
+  "title": "Sort::substitute missing length check",
+  "files": [
+   [
+    "src/api/cpp/cvc5.cpp",
+    1762,
+    1781
+   ]
+  ]
+ },
+ {
+  "id": "BUG-081",
+  "sev": "High",
+  "title": "expr::match ignores existing bindings",
+  "files": [
+   [
+    "src/expr/node_algorithm.cpp",
+    811,
+    819
+   ]
+  ]
+ },
+ {
+  "id": "BUG-082",
+  "sev": "High",
+  "title": "involvesUninterpretedType inverted",
+  "files": [
+   [
+    "src/expr/dtype_cons.cpp",
+    333,
+    343
+   ]
+  ]
+ },
+ {
+  "id": "BUG-083",
+  "sev": "High",
+  "title": "getCardinalityClass tests ret not cc",
+  "files": [
+   [
+    "src/expr/type_node.cpp",
+    143,
+    161
+   ]
+  ]
+ },
+ {
+  "id": "BUG-084",
+  "sev": "High",
+  "title": "isClosedEnumerable mishandles Bag U",
+  "files": [
+   [
+    "src/expr/type_node.cpp",
+    268,
+    316
+   ]
+  ]
+ },
+ {
+  "id": "BUG-085",
+  "sev": "High",
+  "title": "ArraysProofRuleChecker omits checks",
+  "files": [
+   [
+    "src/theory/arrays/proof_checker.cpp",
+    41,
+    76
+   ]
+  ]
+ },
+ {
+  "id": "BUG-086",
+  "sev": "High",
+  "title": "EqualityEngine heap UAF triggerDatabase realloc",
+  "files": [
+   [
+    "src/theory/uf/equality_engine.cpp",
+    612,
+    665
+   ],
+   [
+    "src/theory/uf/equality_engine.cpp",
+    902,
+    965
+   ],
+   [
+    "src/theory/uf/equality_engine.cpp",
+    2740,
+    2745
+   ],
+   [
+    "src/theory/uf/equality_engine.cpp",
+    3000,
+    3057
+   ]
+  ]
+ },
+ {
+  "id": "BUG-087",
+  "sev": "High",
+  "title": "AssertionList presolve clears d_dlist not d_dlistSet",
+  "files": [
+   [
+    "src/decision/assertion_list.h",
+    95,
+    98
+   ],
+   [
+    "src/decision/assertion_list.cpp",
+    46,
+    129
+   ]
+  ]
+ },
+ {
+  "id": "BUG-088",
+  "sev": "High",
+  "title": "SygusReconstruct dangling TNode mkGround",
+  "files": [
+   [
+    "src/theory/quantifiers/sygus/sygus_reconstruct.cpp",
+    551,
+    567
+   ]
+  ]
+ },
+ {
+  "id": "BUG-089",
+  "sev": "High",
+  "title": "SubtypeElimConverterCallback end() deref",
+  "files": [
+   [
+    "src/proof/subtype_elim_proof_converter.cpp",
+    103,
+    133
+   ]
+  ]
+ },
+ {
+  "id": "BUG-090",
+  "sev": "High",
+  "title": "AletheNodeConverter arity mismatch WITNESS",
+  "files": [
+   [
+    "src/proof/alethe/alethe_node_converter.cpp",
+    310,
+    322
+   ]
+  ]
+ },
+ {
+  "id": "BUG-091",
+  "sev": "High",
+  "title": "int overflow BitwiseSlicing::apply",
+  "files": [
+   [
+    "src/theory/bv/theory_bv_rewrite_rules_normalization.h",
+    1389,
+    1415
+   ]
+  ]
+ },
+ {
+  "id": "BUG-092",
+  "sev": "High",
+  "title": "RewriteSlt returns REWRITE_DONE after MultSltMult",
+  "files": [
+   [
+    "src/theory/bv/theory_bv_rewriter.cpp",
+    220,
+    229
+   ],
+   [
+    "src/theory/bv/theory_bv_rewrite_rules_simplification.h",
+    1987,
+    1997
+   ]
+  ]
+ },
+ {
+  "id": "BUG-093",
+  "sev": "High",
+  "title": "TheoryFiniteFields preRegisterTerm getFfSize on Bool",
+  "files": [
+   [
+    "src/theory/ff/theory_ff.cpp",
+    176,
+    192
+   ],
+   [
+    "src/theory/ff/cocoa_encoder.cpp",
+    141,
+    149
+   ]
+  ]
+ },
+ {
+  "id": "BUG-094",
+  "sev": "High",
+  "title": "CadicalPropagator tautology in wrong if block",
+  "files": [
+   [
+    "src/prop/cadical/cdclt_propagator.cpp",
+    230,
+    268
+   ]
+  ]
+ },
+ {
+  "id": "BUG-095",
+  "sev": "High",
+  "title": "getAlienSubfieldTypes iterator invalidation",
+  "files": [
+   [
+    "src/expr/dtype.cpp",
+    782,
+    789
+   ]
+  ]
+ },
+ {
+  "id": "BUG-096",
+  "sev": "High",
+  "title": "ElimWitnessNodeConverter 4-child FORALL on 3-child WITNESS",
+  "files": [
+   [
+    "src/expr/elim_witness_converter.cpp",
+    35,
+    66
+   ]
+  ]
+ },
+ {
+  "id": "BUG-097",
+  "sev": "High",
+  "title": "HistogramStat getValue null deref",
+  "files": [
+   [
+    "src/util/statistics_stats.h",
+    84,
+    93
+   ],
+   [
+    "src/util/resource_manager.cpp",
+    238,
+    238
+   ]
+  ]
+ },
+ {
+  "id": "BUG-098",
+  "sev": "High",
+  "title": "SortModel::check && instead of OR",
+  "files": [
+   [
+    "src/theory/uf/cardinality_extension.cpp",
+    795,
+    802
+   ],
+   [
+    "src/theory/uf/cardinality_extension.cpp",
+    1239,
+    1257
+   ]
+  ]
+ },
+ {
+  "id": "BUG-099",
+  "sev": "High",
+  "title": "rewriteUpdater omits replaceDebruijn cyclic codatatypes",
+  "files": [
+   [
+    "src/theory/datatypes/datatypes_rewriter.cpp",
+    235,
+    261
+   ],
+   [
+    "src/theory/datatypes/datatypes_rewriter.cpp",
+    691,
+    712
+   ]
+  ]
+ },
+ {
+  "id": "BUG-100",
+  "sev": "Medium",
+  "title": "mkReal 1/ 0 SIGFPE",
+  "files": [
+   [
+    "src/api/cpp/cvc5.cpp",
+    5485,
+    5502
+   ]
+  ]
+ },
+ {
+  "id": "BUG-101",
+  "sev": "Medium",
+  "title": "DidYouMean empty dictionary deref",
+  "files": [
+   [
+    "src/util/didyoumean.cpp",
+    74,
+    74
+   ],
+   [
+    "src/util/didyoumean.cpp",
+    133,
+    133
+   ]
+  ]
+ },
+ {
+  "id": "BUG-102",
+  "sev": "Medium",
+  "title": "Unsigned overflow y.size()+start in String::find",
+  "files": [
+   [
+    "src/util/string.cpp",
+    413,
+    428
+   ],
+   [
+    "src/expr/sequence.cpp",
+    199,
+    223
+   ]
+  ]
+ },
+ {
+  "id": "BUG-103",
+  "sev": "Medium",
+  "title": "RealAlgebraicNumber hash violates contract",
+  "files": [
+   [
+    "src/util/real_algebraic_number_poly_imp.cpp",
+    184,
+    193
+   ],
+   [
+    "src/util/real_algebraic_number_poly_imp.cpp",
+    373,
+    382
+   ]
+  ]
+ },
+ {
+  "id": "BUG-104",
+  "sev": "Medium",
+  "title": "UninterpretedSortValue operator<= ignores d_index",
+  "files": [
+   [
+    "src/util/uninterpreted_sort_value.cpp",
+    71,
+    75
+   ]
+  ]
+ },
+ {
+  "id": "BUG-105",
+  "sev": "Medium",
+  "title": "isCardinalityLessThan floating point precision loss",
+  "files": [
+   [
+    "src/expr/type_node.cpp",
+    238,
+    241
+   ]
+  ]
+ },
+ {
+  "id": "BUG-106",
+  "sev": "Medium",
+  "title": "Skolemize getSelfSel off-by-one assert",
+  "files": [
+   [
+    "src/theory/quantifiers/skolemize.cpp",
+    130,
+    136
+   ]
+  ]
+ },
+ {
+  "id": "BUG-107",
+  "sev": "Medium",
+  "title": "TheorySep ensureHeapTypesFor missing throw",
+  "files": [
+   [
+    "src/theory/sep/theory_sep.cpp",
+    1176,
+    1187
+   ]
+  ]
+ },
+ {
+  "id": "BUG-108",
+  "sev": "Medium",
+  "title": "InterpolationSolver injects HO lambda equalities",
+  "files": [
+   [
+    "src/smt/interpolation_solver.cpp",
+    58,
+    124
+   ]
+  ]
+ },
+ {
+  "id": "BUG-109",
+  "sev": "Medium",
+  "title": "Normalize pass ill-typed Seq output",
+  "files": [
+   [
+    "src/preprocessing/passes/normalize.cpp",
+    539,
+    562
+   ],
+   [
+    "src/preprocessing/passes/normalize.cpp",
+    656,
+    670
+   ]
+  ]
+ },
+ {
+  "id": "BUG-110",
+  "sev": "Medium",
+  "title": "1-char keyword :a swallows next char",
+  "files": [
+   [
+    "src/parser/smt2/smt2_lexer.cpp",
+    201,
+    208
+   ],
+   [
+    "src/parser/smt2/smt2_lexer.cpp",
+    283,
+    295
+   ]
+  ]
+ },
+ {
+  "id": "BUG-111",
+  "sev": "Medium",
+  "title": "Smt2State::reset misses maps",
+  "files": [
+   [
+    "src/parser/smt2/smt2_state.cpp",
+    703,
+    709
+   ]
+  ]
+ },
+ {
+  "id": "BUG-112",
+  "sev": "Medium",
+  "title": "Unary (and 1) bypasses sort checking",
+  "files": [
+   [
+    "src/parser/smt2/smt2_state.cpp",
+    1620,
+    1626
+   ]
+  ]
+ },
+ {
+  "id": "BUG-113",
+  "sev": "Medium",
+  "title": "Indexed identifier discards trailing indices",
+  "files": [
+   [
+    "src/parser/smt2/smt2_term_parser.cpp",
+    1272,
+    1326
+   ]
+  ]
+ },
+ {
+  "id": "BUG-114",
+  "sev": "Medium",
+  "title": "define-funs-rec missing mkHoApply",
+  "files": [
+   [
+    "src/parser/smt2/smt2_cmd_parser.cpp",
+    498,
+    507
+   ]
+  ]
+ },
+ {
+  "id": "BUG-115",
+  "sev": "Medium",
+  "title": "mkIndexedConstant else if fmf.card",
+  "files": [
+   [
+    "src/parser/smt2/smt2_state.cpp",
+    546,
+    575
+   ]
+  ]
+ },
+ {
+  "id": "BUG-116",
+  "sev": "Medium",
+  "title": "Empty s-expression fails",
+  "files": [
+   [
+    "src/parser/smt2/smt2_term_parser.cpp",
+    721,
+    731
+   ],
+   [
+    "src/parser/commands.cpp",
+    58,
+    68
+   ]
+  ]
+ },
+ {
+  "id": "BUG-117",
+  "sev": "Medium",
+  "title": "InteractiveShell drops final line on EOF",
+  "files": [
+   [
+    "src/main/interactive_shell.cpp",
+    257,
+    279
+   ]
+  ]
+ },
+ {
+  "id": "BUG-118",
+  "sev": "Medium",
+  "title": "SymbolTable bindDummySortTerm overwrites",
+  "files": [
+   [
+    "src/parser/symbol_table.cpp",
+    411,
+    440
+   ],
+   [
+    "src/parser/sym_manager.cpp",
+    342,
+    357
+   ]
+  ]
+ },
+ {
+  "id": "BUG-119",
+  "sev": "Medium",
+  "title": "synthFun skips grammar Start sort check",
+  "files": [
+   [
+    "src/api/cpp/cvc5.cpp",
+    6911,
+    6923
+   ]
+  ]
+ },
+ {
+  "id": "BUG-120",
+  "sev": "Medium",
+  "title": "Stat operator= retains stale d_data",
+  "files": [
+   [
+    "src/api/cpp/cvc5.cpp",
+    4933,
+    4942
+   ]
+  ]
+ },
+ {
+  "id": "BUG-121",
+  "sev": "Medium",
+  "title": "cvc5_mk_op NULL_TERM Assert",
+  "files": [
+   [
+    "src/api/cpp/cvc5.cpp",
+    6037,
+    6168
+   ],
+   [
+    "src/api/c/cvc5_c_structs.cpp",
+    74,
+    76
+   ]
+  ]
+ },
+ {
+  "id": "BUG-122",
+  "sev": "Medium",
+  "title": "C API stale thread-local strings on error",
+  "files": [
+   [
+    "src/api/c/cvc5.cpp",
+    816,
+    824
+   ],
+   [
+    "src/api/c/cvc5.cpp",
+    1970,
+    1978
+   ],
+   [
+    "src/api/c/cvc5.cpp",
+    2080,
+    2118
+   ],
+   [
+    "src/api/c/cvc5.cpp",
+    4971,
+    4991
+   ],
+   [
+    "src/api/c/cvc5.cpp",
+    5407,
+    5433
+   ],
+   [
+    "src/api/c/cvc5_parser.cpp",
+    330,
+    338
+   ],
+   [
+    "src/api/c/cvc5_parser.cpp",
+    418,
+    468
+   ]
+  ]
+ },
+ {
+  "id": "BUG-123",
+  "sev": "Medium",
+  "title": "Impossible condition getRelevantQuantTermVectors",
+  "files": [
+   [
+    "src/smt/unsat_core_manager.cpp",
+    198,
+    216
+   ]
+  ]
+ },
+ {
+  "id": "BUG-124",
+  "sev": "Medium",
+  "title": "model_blocker continue in inner loop",
+  "files": [
+   [
+    "src/smt/model_blocker.cpp",
+    328,
+    348
+   ]
+  ]
+ },
+ {
+  "id": "BUG-125",
+  "sev": "Medium",
+  "title": "ALPHA_EQUIV checker omits checks",
+  "files": [
+   [
+    "src/theory/quantifiers/proof_checker.cpp",
+    98,
+    130
+   ]
+  ]
+ },
+ {
+  "id": "BUG-126",
+  "sev": "Medium",
+  "title": "DotPrinter iterator invalidation",
+  "files": [
+   [
+    "src/proof/dot/dot_printer.cpp",
+    240,
+    253
+   ]
+  ]
+ },
+ {
+  "id": "BUG-127",
+  "sev": "Medium",
+  "title": "Unsound RARE rules bv-extract-concat-1",
+  "files": [
+   [
+    "src/theory/bv/rewrites",
+    26,
+    31
+   ],
+   [
+    "src/theory/bv/rewrites-simplification",
+    461,
+    485
+   ],
+   [
+    "src/theory/bv/proof_checker.cpp",
+    93,
+    106
+   ]
+  ]
+ },
+ {
+  "id": "BUG-128",
+  "sev": "Medium",
+  "title": "EqualityEngine 5-arg ctor uninitialized member",
+  "files": [
+   [
+    "src/theory/uf/equality_engine.cpp",
+    101,
+    129
+   ],
+   [
+    "src/theory/uf/distinct_extension.cpp",
+    276,
+    279
+   ]
+  ]
+ },
+ {
+  "id": "BUG-129",
+  "sev": "Medium",
+  "title": "getOperatorsMap omits visited.insert",
+  "files": [
+   [
+    "src/expr/node_algorithm.cpp",
+    721,
+    741
+   ],
+   [
+    "src/expr/sort_type_size.cpp",
+    20,
+    33
+   ],
+   [
+    "src/util/poly_util.cpp",
+    330,
+    338
+   ],
+   [
+    "src/context/cdhashmap.h",
+    112,
+    224
+   ]
+  ]
+ },
+ {
+  "id": "BUG-130",
+  "sev": "Low",
+  "title": "Leftover debug printf in cvc5_sort_is_disequal",
+  "files": [
+   [
+    "src/api/c/cvc5.cpp",
+    324,
+    340
+   ]
+  ]
+ }
+]

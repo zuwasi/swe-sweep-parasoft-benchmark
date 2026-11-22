@@ -1,0 +1,393 @@
+[
+ {
+  "finding": "BUG-011",
+  "sev": "Critical",
+  "title": "unchecked nullptr after buildId in WKT1 DATUM",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-013",
+  "sev": "Critical",
+  "title": "assert(datum)/nullptr for VerticalCRS with DatumEnsemble",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-014",
+  "sev": "Critical",
+  "title": "empty opsFirst.front() in CompoundToGeog",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-015",
+  "sev": "Critical",
+  "title": "cache type confusion in createGeodeticCRS",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-020",
+  "sev": "High",
+  "title": "unchecked geogCRS in createProjectedCRSFromExisting",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-021",
+  "sev": "High",
+  "title": "empty vector front() in createFromCoordinateReferenceSystemCodes",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-022",
+  "sev": "High",
+  "title": "Ellipsoid::_isEquivalentTo compares otherEllipsoid against itself",
+  "bugs": {
+   "proj-5ea62cb8daa4": {
+    "region": [
+     1047,
+     1048,
+     1049,
+     1050,
+     1051
+    ],
+    "strict": [
+     1048
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-023",
+  "sev": "High",
+  "title": "FormattingException/NULL Transformation in BoundCRS::_identify",
+  "bugs": {
+   "proj-782c2a51cca6": {
+    "region": [
+     4663,
+     4664,
+     4665,
+     4666,
+     4667,
+     4668,
+     4669,
+     4670,
+     4671,
+     4672,
+     4673
+    ],
+    "strict": [
+     4666,
+     4667,
+     4668,
+     4669,
+     4670,
+     4671,
+     4672
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-024",
+  "sev": "High",
+  "title": "invalid downcast in SingleOperation::_isEquivalentTo",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-025",
+  "sev": "High",
+  "title": "unbounded recursion in PROJJSON parsing",
+  "bugs": {
+   "proj-210490c1df4f": {
+    "region": [
+     5244,
+     5245,
+     5246,
+     5247,
+     5248,
+     5249,
+     5250,
+     5251,
+     5252,
+     5253,
+     5254,
+     5255,
+     5256,
+     5257,
+     5258,
+     5259,
+     5260,
+     5261,
+     5262,
+     5263,
+     5264,
+     5265,
+     5266,
+     5267
+    ],
+    "strict": [
+     5247,
+     5248,
+     5249,
+     5250,
+     5251,
+     5252,
+     5253,
+     5254,
+     5255,
+     5256,
+     5257,
+     5258,
+     5259,
+     5260,
+     5261,
+     5263,
+     5264
+    ]
+   },
+   "proj-a289af9c5fe7": {
+    "region": [
+     5244,
+     5245,
+     5246,
+     5247,
+     5248,
+     5249,
+     5250,
+     5251,
+     5252,
+     5253,
+     5254,
+     5255,
+     5256,
+     5257,
+     5258,
+     5259,
+     5260,
+     5261,
+     5262,
+     5263,
+     5264,
+     5265,
+     5266,
+     5267
+    ],
+    "strict": [
+     5247,
+     5248,
+     5249,
+     5250,
+     5251,
+     5252,
+     5253,
+     5254,
+     5255,
+     5256,
+     5257,
+     5258,
+     5259,
+     5260,
+     5261,
+     5263,
+     5264
+    ]
+   },
+   "proj-d1e39e45b0a6": {
+    "region": [
+     5244,
+     5245,
+     5246,
+     5247,
+     5248,
+     5249,
+     5250,
+     5251,
+     5252,
+     5253,
+     5254,
+     5255,
+     5256,
+     5257,
+     5258,
+     5259,
+     5260,
+     5261,
+     5262,
+     5263,
+     5264,
+     5265,
+     5266,
+     5267
+    ],
+    "strict": [
+     5247,
+     5248,
+     5249,
+     5250,
+     5251,
+     5252,
+     5253,
+     5254,
+     5255,
+     5256,
+     5257,
+     5258,
+     5259,
+     5260,
+     5261,
+     5263,
+     5264
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-026",
+  "sev": "High",
+  "title": "dstIsDown typo negates elevations",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-027",
+  "sev": "High",
+  "title": "dead code disables grid substitution",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-028",
+  "sev": "High",
+  "title": "copy-paste l_targetCRS instead of l_sourceCRS",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-029",
+  "sev": "High",
+  "title": "inverted extent2 && drops operations",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-030",
+  "sev": "High",
+  "title": "numeric unitconvert xy_out dropped",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-065",
+  "sev": "High",
+  "title": "mil_os/lee_os/gs48 clear es without e",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-066",
+  "sev": "High",
+  "title": "krovak/gs48/alsk/gs50 overwrite a without ra",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-067",
+  "sev": "High",
+  "title": "tmerc approx_s_inv latitude sign flip",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-105",
+  "sev": "Medium",
+  "title": "proj_create_from_name wrong types/table",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-106",
+  "sev": "Medium",
+  "title": "cache poisoning in createObjectsFromName",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-109",
+  "sev": "Medium",
+  "title": "_isEquivalentTo logic bugs (VerticalExtent/Datum/Unit)",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-110",
+  "sev": "Medium",
+  "title": "invalid WKT2 output and PROJJSON code truncation",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-112",
+  "sev": "Medium",
+  "title": "buildGeodeticCRS fails on DynamicGeodeticReferenceFrame",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-113",
+  "sev": "Medium",
+  "title": "PROJStringParser bugs (vgridshit, ellps overrides)",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-114",
+  "sev": "Medium",
+  "title": "WKT formatting/parsing bugs",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-115",
+  "sev": "Medium",
+  "title": "ISO 19111 logic defects (identify, DatumEnsemble, convFactor)",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-116",
+  "sev": "Medium",
+  "title": "aitoff non-convergence check unreachable",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-117",
+  "sev": "Medium",
+  "title": "patterson Newton guess before clamp",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-118",
+  "sev": "Medium",
+  "title": "polar/antipodal/errno bugs incl ups/utm ENOMEM",
+  "bugs": {
+   "proj-a2dc13a77ea7": {
+    "region": [
+     314,
+     315,
+     316,
+     317,
+     543,
+     544,
+     545,
+     546
+    ],
+    "strict": [
+     315,
+     316,
+     544,
+     545
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-119",
+  "sev": "Medium",
+  "title": "vandg2 + TOL inside sqrt discontinuity",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-120",
+  "sev": "Medium",
+  "title": "putp1 inverse rejects poles",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-127",
+  "sev": "Low",
+  "title": "minor ISO 19111 defects",
+  "bugs": {}
+ }
+]

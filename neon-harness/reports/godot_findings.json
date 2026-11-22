@@ -1,0 +1,4367 @@
+[
+  {
+    "id": "BUG-001",
+    "sev": "Critical",
+    "title": "64-bit integer overflow in `CowData<T>::_get_alloc_size_checked()` allocates tiny heap buffer with huge logical size",
+    "files": [
+      [
+        "core/templates/cowdata.h",
+        68,
+        70
+      ],
+      [
+        "core/templates/cowdata.h",
+        135,
+        161
+      ],
+      [
+        "core/templates/cowdata.h",
+        333,
+        376
+      ]
+    ]
+  },
+  {
+    "id": "BUG-002",
+    "sev": "Critical",
+    "title": "`CallQueue::statistics()` destroys all queued `Message` and `Variant` objects in-place without clearing queue (UAF / double-free)",
+    "files": [
+      [
+        "core/object/message_queue.cpp",
+        95,
+        101
+      ],
+      [
+        "core/object/message_queue.cpp",
+        142,
+        153
+      ],
+      [
+        "core/object/message_queue.cpp",
+        183,
+        189
+      ],
+      [
+        "core/object/message_queue.cpp",
+        349,
+        442
+      ],
+      [
+        "core/object/message_queue.cpp",
+        415,
+        422
+      ]
+    ]
+  },
+  {
+    "id": "BUG-003",
+    "sev": "Critical",
+    "title": "Mismatched padded allocation/free in `PoolAllocator` destructor causes release-build heap corruption, plus OOB read in `resize()`",
+    "files": [
+      [
+        "core/os/pool_allocator.cpp",
+        349,
+        396
+      ],
+      [
+        "core/os/pool_allocator.cpp",
+        568,
+        588
+      ],
+      [
+        "core/os/memory.cpp",
+        68,
+        95
+      ],
+      [
+        "core/os/memory.cpp",
+        147,
+        172
+      ]
+    ]
+  },
+  {
+    "id": "BUG-004",
+    "sev": "Critical",
+    "title": "Missing `return` on type mismatch in `Transform2D`/`Basis`/`Projection` indexed setters causes type confusion and pointer disclosure",
+    "files": [
+      [
+        "core/variant/variant_setget.cpp",
+        552,
+        565
+      ],
+      [
+        "core/variant/variant_setget.cpp",
+        602,
+        615
+      ],
+      [
+        "core/variant/variant_setget.cpp",
+        846,
+        848
+      ]
+    ]
+  },
+  {
+    "id": "BUG-005",
+    "sev": "Critical",
+    "title": "Missing upper-bound check and 64-to-32-bit length truncation in `PackedByteArray` variant decoders enables OOB heap read",
+    "files": [
+      [
+        "core/variant/variant_call.cpp",
+        844,
+        876
+      ],
+      [
+        "core/io/marshalls.cpp",
+        112,
+        120
+      ]
+    ]
+  },
+  {
+    "id": "BUG-006",
+    "sev": "Critical",
+    "title": "Unsigned underflow (`length - pos`) in `FileAccessMemory::get_buffer()` / `store_buffer()` enables unbounded heap OOB read/write",
+    "files": [
+      [
+        "core/io/file_access_memory.cpp",
+        55,
+        61
+      ],
+      [
+        "core/io/file_access_memory.cpp",
+        101,
+        109
+      ],
+      [
+        "core/io/file_access_memory.cpp",
+        125,
+        150
+      ],
+      [
+        "core/io/file_access_memory.cpp",
+        166,
+        176
+      ]
+    ]
+  },
+  {
+    "id": "BUG-007",
+    "sev": "Critical",
+    "title": "32-bit integer overflows in `Image::initialize_data()`, `_get_dst_image_size()`, and `_scale_lanczos()` enable heap buffer overflow",
+    "files": [
+      [
+        "core/io/image.h",
+        72,
+        74
+      ],
+      [
+        "core/io/image.cpp",
+        886,
+        933
+      ],
+      [
+        "core/io/image.cpp",
+        1034,
+        1034
+      ],
+      [
+        "core/io/image.cpp",
+        1615,
+        1625
+      ],
+      [
+        "core/io/image.cpp",
+        2148,
+        2210
+      ]
+    ]
+  },
+  {
+    "id": "BUG-008",
+    "sev": "Critical",
+    "title": "Unvalidated binary offsets and counts in `PackedDataContainer` enable arbitrary heap OOB reads",
+    "files": [
+      [
+        "core/io/packed_data_container.cpp",
+        77,
+        210
+      ],
+      [
+        "core/io/packed_data_container.cpp",
+        336,
+        339
+      ],
+      [
+        "core/io/packed_data_container.cpp",
+        368,
+        368
+      ]
+    ]
+  },
+  {
+    "id": "BUG-009",
+    "sev": "Critical",
+    "title": "Unchecked `string_map[id]`, negative `len` heap overflow, missing NUL termination, and unbounded recursion in `ResourceLoaderBinary`",
+    "files": [
+      [
+        "core/io/resource_format_binary.cpp",
+        156,
+        173
+      ],
+      [
+        "core/io/resource_format_binary.cpp",
+        482,
+        510
+      ],
+      [
+        "core/io/resource_format_binary.cpp",
+        905,
+        927
+      ]
+    ]
+  },
+  {
+    "id": "BUG-010",
+    "sev": "High",
+    "title": "`uint32_t` wraparound in `FileAccessCompressed::open_after_magic()` crashes on empty `read_blocks[0]`; phantom byte read past EOF",
+    "files": [
+      [
+        "core/io/file_access_compressed.cpp",
+        55,
+        90
+      ],
+      [
+        "core/io/file_access_compressed.cpp",
+        141,
+        158
+      ],
+      [
+        "core/io/file_access_compressed.cpp",
+        263,
+        331
+      ]
+    ]
+  },
+  {
+    "id": "BUG-011",
+    "sev": "High",
+    "title": "`uint32_t` wraparound `sl + 1` causes OOB write in `PackedSourcePCK::try_open_pack()`, plus double-counted `p_offset` with `PACK_REL_FILEBASE`",
+    "files": [
+      [
+        "core/io/file_access_pack.cpp",
+        143,
+        147
+      ],
+      [
+        "core/io/file_access_pack.cpp",
+        203,
+        203
+      ],
+      [
+        "core/io/file_access_pack.cpp",
+        226,
+        228
+      ],
+      [
+        "core/io/file_access_pack.cpp",
+        246,
+        263
+      ],
+      [
+        "core/io/file_access_pack.cpp",
+        335,
+        349
+      ]
+    ]
+  },
+  {
+    "id": "BUG-012",
+    "sev": "High",
+    "title": "Unterminated 256-byte stack buffer over-read in `ZipArchive::try_open_pack()`, short-read bug in `godot_read`, and uninitialized resize in `zip_io.cpp`",
+    "files": [
+      [
+        "core/io/file_access_zip.cpp",
+        58,
+        62
+      ],
+      [
+        "core/io/file_access_zip.cpp",
+        173,
+        199
+      ],
+      [
+        "core/io/zip_io.cpp",
+        35,
+        54
+      ],
+      [
+        "thirdparty/minizip/unzip.c",
+        874,
+        885
+      ]
+    ]
+  },
+  {
+    "id": "BUG-013",
+    "sev": "High",
+    "title": "Infinite loop / OOM crash on truncated Brotli streams in `Compression::decompress_dynamic()`, plus ZSTD/FastLZ error-handling defects",
+    "files": [
+      [
+        "core/io/compression.cpp",
+        86,
+        97
+      ],
+      [
+        "core/io/compression.cpp",
+        152,
+        164
+      ],
+      [
+        "core/io/compression.cpp",
+        189,
+        197
+      ],
+      [
+        "core/io/compression.cpp",
+        214,
+        268
+      ],
+      [
+        "core/io/file_access_compressed.cpp",
+        85,
+        89
+      ]
+    ]
+  },
+  {
+    "id": "BUG-014",
+    "sev": "High",
+    "title": "`uint64_t` wraparound in `FileAccessEncrypted::open_and_parse()` bypasses file-length and padding validation",
+    "files": [
+      [
+        "core/io/file_access_encrypted.cpp",
+        64,
+        96
+      ],
+      [
+        "core/io/file_access_encrypted.cpp",
+        150,
+        153
+      ],
+      [
+        "core/io/file_access_encrypted.cpp",
+        193,
+        195
+      ]
+    ]
+  },
+  {
+    "id": "BUG-015",
+    "sev": "High",
+    "title": "Inner-loop `break` bypasses chunk validation in `HTTPClientTCP::read_response_body_chunk()`, plus negative `Content-Length` hang",
+    "files": [
+      [
+        "core/io/http_client_tcp.cpp",
+        251,
+        271
+      ],
+      [
+        "core/io/http_client_tcp.cpp",
+        510,
+        521
+      ],
+      [
+        "core/io/http_client_tcp.cpp",
+        621,
+        656
+      ],
+      [
+        "core/io/http_client_tcp.cpp",
+        682,
+        718
+      ]
+    ]
+  },
+  {
+    "id": "BUG-016",
+    "sev": "High",
+    "title": "Signed cast `(int)len` in `PacketPeerStream::get_packet()` bypasses bounds checks for lengths `>= 0x80000000`",
+    "files": [
+      [
+        "core/io/packet_peer.cpp",
+        243,
+        258
+      ],
+      [
+        "core/io/packet_peer.cpp",
+        312,
+        314
+      ]
+    ]
+  },
+  {
+    "id": "BUG-017",
+    "sev": "High",
+    "title": "`StreamPeerExtension::put_partial_data()` invokes `_put_data`, plus `StreamPeerBuffer` signed overflow and unclamped `pointer`",
+    "files": [
+      [
+        "core/io/stream_peer.cpp",
+        247,
+        319
+      ],
+      [
+        "core/io/stream_peer.cpp",
+        442,
+        449
+      ],
+      [
+        "core/io/stream_peer.cpp",
+        474,
+        527
+      ],
+      [
+        "core/io/stream_peer.cpp",
+        543,
+        545
+      ]
+    ]
+  },
+  {
+    "id": "BUG-018",
+    "sev": "High",
+    "title": "`uint32_t` wraparound `str_len + 1` in binary `.mo` translation loader causes OOB write / crash",
+    "files": [
+      [
+        "core/io/translation_loader_po.cpp",
+        69,
+        76
+      ],
+      [
+        "core/io/translation_loader_po.cpp",
+        99,
+        106
+      ]
+    ]
+  },
+  {
+    "id": "BUG-019",
+    "sev": "High",
+    "title": "Path traversal arbitrary file write/delete and 64-to-32-bit `file_size` truncation in `RemoteFilesystemClient`",
+    "files": [
+      [
+        "core/io/remote_filesystem_client.cpp",
+        87,
+        113
+      ],
+      [
+        "core/io/remote_filesystem_client.cpp",
+        249,
+        307
+      ]
+    ]
+  },
+  {
+    "id": "BUG-020",
+    "sev": "High",
+    "title": "Lock-free UAF race in `SafeList::begin()` and null dereference in `SafeList::erase(T)`",
+    "files": [
+      [
+        "core/templates/safe_list.h",
+        79,
+        82
+      ],
+      [
+        "core/templates/safe_list.h",
+        144,
+        163
+      ],
+      [
+        "core/templates/safe_list.h",
+        195,
+        197
+      ],
+      [
+        "core/templates/safe_list.h",
+        204,
+        227
+      ]
+    ]
+  },
+  {
+    "id": "BUG-021",
+    "sev": "High",
+    "title": "Inverted empty/full guard in `RingBuffer::read()` and broken clamping arithmetic in `copy()` / `find()`",
+    "files": [
+      [
+        "core/templates/ring_buffer.h",
+        51,
+        54
+      ],
+      [
+        "core/templates/ring_buffer.h",
+        79,
+        88
+      ],
+      [
+        "core/templates/ring_buffer.h",
+        105,
+        114
+      ]
+    ]
+  },
+  {
+    "id": "BUG-022",
+    "sev": "High",
+    "title": "Unchecked table/offset indexing and unterminated `smaz_decompress` buffer in `OptimizedTranslation`",
+    "files": [
+      [
+        "core/string/optimized_translation.cpp",
+        181,
+        196
+      ],
+      [
+        "core/string/optimized_translation.cpp",
+        213,
+        301
+      ],
+      [
+        "thirdparty/misc/smaz.c",
+        170,
+        207
+      ]
+    ]
+  },
+  {
+    "id": "BUG-023",
+    "sev": "High",
+    "title": "Uninitialized heap `char32_t` disclosure in `String::parse_utf16()` on unpaired lead surrogate before non-surrogate",
+    "files": [
+      [
+        "core/string/ustring.cpp",
+        2303,
+        2386
+      ]
+    ]
+  },
+  {
+    "id": "BUG-024",
+    "sev": "High",
+    "title": "Unvalidated month index reads out of bounds past `MONTH_DAYS_TABLE` in `Time::get_datetime_dict_from_datetime_string()`",
+    "files": [
+      [
+        "core/os/time.cpp",
+        50,
+        53
+      ],
+      [
+        "core/os/time.cpp",
+        111,
+        118
+      ],
+      [
+        "core/os/time.cpp",
+        258,
+        274
+      ]
+    ]
+  },
+  {
+    "id": "BUG-025",
+    "sev": "High",
+    "title": "Inverted equality check `!(a->callable != b->callable)` in `CallableCustomBind` and `CallableCustomUnbind`",
+    "files": [
+      [
+        "core/variant/callable_bind.cpp",
+        42,
+        55
+      ],
+      [
+        "core/variant/callable_bind.cpp",
+        184,
+        197
+      ]
+    ]
+  },
+  {
+    "id": "BUG-026",
+    "sev": "High",
+    "title": "Data race / UAF on concurrent reads of read-only `Array::operator[] const` and missing read-only guard in `Array::assign()`",
+    "files": [
+      [
+        "core/variant/array.cpp",
+        108,
+        114
+      ],
+      [
+        "core/variant/array.cpp",
+        217,
+        280
+      ]
+    ]
+  },
+  {
+    "id": "BUG-027",
+    "sev": "High",
+    "title": "`GDExtensionMethodBind::is_vararg()` hardcodes `return false`, breaking vararg method calls and hashes",
+    "files": [
+      [
+        "core/extension/gdextension.cpp",
+        256,
+        261
+      ],
+      [
+        "core/extension/gdextension.cpp",
+        298,
+        300
+      ],
+      [
+        "core/extension/gdextension.cpp",
+        360,
+        360
+      ],
+      [
+        "modules/gdscript/gdscript_compiler.cpp",
+        234,
+        242
+      ]
+    ]
+  },
+  {
+    "id": "BUG-028",
+    "sev": "High",
+    "title": "Release-build UAF and double-free of `RefCounted` objects via `Object::callp(\"free\")`",
+    "files": [
+      [
+        "core/object/object.cpp",
+        756,
+        780
+      ]
+    ]
+  },
+  {
+    "id": "BUG-029",
+    "sev": "High",
+    "title": "UAF on `HashMap` slot pointer and freed `Group *` in `WorkerThreadPool::wait_for_group_task_completion()`, plus unbounded `alloca()`",
+    "files": [
+      [
+        "core/object/worker_thread_pool.cpp",
+        124,
+        132
+      ],
+      [
+        "core/object/worker_thread_pool.cpp",
+        553,
+        597
+      ],
+      [
+        "core/object/worker_thread_pool.cpp",
+        630,
+        661
+      ]
+    ]
+  },
+  {
+    "id": "BUG-030",
+    "sev": "High",
+    "title": "Heap over-read on fixed `DeviceState[32]` arrays and null dereference on joypad disconnect after `erase_action()`",
+    "files": [
+      [
+        "core/input/input.h",
+        47,
+        47
+      ],
+      [
+        "core/input/input.h",
+        110,
+        114
+      ],
+      [
+        "core/input/input.cpp",
+        465,
+        473
+      ],
+      [
+        "core/input/input.cpp",
+        1252,
+        1267
+      ]
+    ]
+  },
+  {
+    "id": "BUG-031",
+    "sev": "High",
+    "title": "Stale `map_db` index invalidation causes OOB crash and data race in `Input::remove_joy_mapping()`",
+    "files": [
+      [
+        "core/input/input.cpp",
+        1109,
+        1109
+      ],
+      [
+        "core/input/input.cpp",
+        1141,
+        1141
+      ],
+      [
+        "core/input/input.cpp",
+        1213,
+        1213
+      ],
+      [
+        "core/input/input.cpp",
+        1567,
+        1579
+      ]
+    ]
+  },
+  {
+    "id": "BUG-032",
+    "sev": "High",
+    "title": "64-to-32-bit narrowing bypass causes `SIGFPE` in `Vector{2,3,4}i` div/mod, plus wrong `/` operator in `Vector2i % Vector2i` `ptr_evaluate`",
+    "files": [
+      [
+        "core/variant/variant_op.h",
+        168,
+        186
+      ],
+      [
+        "core/variant/variant_op.h",
+        281,
+        323
+      ],
+      [
+        "core/variant/variant_op.cpp",
+        400,
+        400
+      ],
+      [
+        "core/variant/variant_op.cpp",
+        408,
+        408
+      ],
+      [
+        "core/variant/variant_op.cpp",
+        416,
+        416
+      ],
+      [
+        "core/variant/variant_op.cpp",
+        436,
+        436
+      ],
+      [
+        "core/variant/variant_op.cpp",
+        439,
+        439
+      ],
+      [
+        "core/variant/variant_op.cpp",
+        442,
+        442
+      ]
+    ]
+  },
+  {
+    "id": "BUG-033",
+    "sev": "High",
+    "title": "Signed integer overflow and unconditional OOB / null NUL-byte write in `CryptoCore::b64_encode_str()`",
+    "files": [
+      [
+        "core/crypto/crypto_core.cpp",
+        217,
+        226
+      ]
+    ]
+  },
+  {
+    "id": "BUG-034",
+    "sev": "High",
+    "title": "Data race on unsynchronized lazy initialization of `static HashMap` in `VariantParser::parse_value()` (and `Color::find_named_color()`)",
+    "files": [
+      [
+        "core/variant/variant_parser.cpp",
+        1158,
+        1168
+      ],
+      [
+        "core/math/color.cpp",
+        425,
+        431
+      ]
+    ]
+  },
+  {
+    "id": "BUG-035",
+    "sev": "High",
+    "title": "`uint32_t` wraparound `slen + 1` and unchecked `resize()` cause OOB / null write in `ProjectSettings::_load_settings_binary()`",
+    "files": [
+      [
+        "core/config/project_settings.cpp",
+        718,
+        737
+      ]
+    ]
+  },
+  {
+    "id": "BUG-036",
+    "sev": "High",
+    "title": "Broken cycle guard in `ScriptServer::add_global_class()` allows inheritance cycles that hang `get_global_class_native_base()`",
+    "files": [
+      [
+        "core/object/script_language.cpp",
+        366,
+        386
+      ],
+      [
+        "core/object/script_language.cpp",
+        447,
+        454
+      ]
+    ]
+  },
+  {
+    "id": "BUG-037",
+    "sev": "High",
+    "title": "UAF calling `refit_upward()` on freed parent node in `BVH_Tree::node_remove_item()`, plus `uint16_t` child ID truncation",
+    "files": [
+      [
+        "core/math/bvh_tree.h",
+        204,
+        204
+      ],
+      [
+        "core/math/bvh_tree.h",
+        246,
+        278
+      ],
+      [
+        "core/math/bvh_tree.h",
+        371,
+        385
+      ],
+      [
+        "core/math/bvh_refit.inc",
+        61,
+        67
+      ],
+      [
+        "core/math/bvh_structs.inc",
+        120,
+        121
+      ]
+    ]
+  },
+  {
+    "id": "BUG-038",
+    "sev": "Medium",
+    "title": "Multiple core I/O and math logic bugs: `PackedDataContainer::_pack()` missing types, `Image::resize()` dead trilinear mipmaps, `StreamPeerGZIP`, `PList`, `XMLParser`, `Geometry2D`/`3D`",
+    "files": [
+      [
+        "core/io/packed_data_container.cpp",
+        213,
+        320
+      ],
+      [
+        "core/io/image.cpp",
+        453,
+        459
+      ],
+      [
+        "core/io/image.cpp",
+        1047,
+        1066
+      ],
+      [
+        "core/io/stream_peer_gzip.cpp",
+        82,
+        102
+      ],
+      [
+        "core/io/stream_peer_gzip.cpp",
+        145,
+        145
+      ],
+      [
+        "core/io/stream_peer_gzip.cpp",
+        195,
+        210
+      ],
+      [
+        "core/io/plist.cpp",
+        525,
+        566
+      ],
+      [
+        "core/io/plist.cpp",
+        580,
+        610
+      ],
+      [
+        "core/io/xml_parser.cpp",
+        124,
+        142
+      ],
+      [
+        "core/io/xml_parser.cpp",
+        377,
+        377
+      ],
+      [
+        "core/io/xml_parser.cpp",
+        475,
+        490
+      ],
+      [
+        "core/io/marshalls.cpp",
+        657,
+        711
+      ],
+      [
+        "core/math/geometry_2d.cpp",
+        108,
+        119
+      ],
+      [
+        "core/math/geometry_2d.cpp",
+        176,
+        196
+      ],
+      [
+        "core/math/geometry_3d.h",
+        291,
+        318
+      ],
+      [
+        "core/math/geometry_3d.cpp",
+        689,
+        724
+      ]
+    ]
+  },
+  {
+    "id": "BUG-039",
+    "sev": "Critical",
+    "title": "Heap buffer overflow and ring-buffer overwrite via swapped `r`/`w` indices in `AudioRBResampler::get_writer_space()`",
+    "files": [
+      [
+        "servers/audio/audio_rb_resampler.h",
+        79,
+        94
+      ],
+      [
+        "scene/gui/video_stream_player.cpp",
+        58,
+        75
+      ]
+    ]
+  },
+  {
+    "id": "BUG-040",
+    "sev": "Critical",
+    "title": "Heap buffer overflow in `AudioDriverDummy::samples_in` and wrong surround channel table `{2, 4, 8, 16}` during MovieWriter recording",
+    "files": [
+      [
+        "servers/audio/audio_driver_dummy.cpp",
+        47,
+        55
+      ],
+      [
+        "servers/audio/audio_driver_dummy.cpp",
+        101,
+        103
+      ],
+      [
+        "servers/audio/audio_driver_dummy.cpp",
+        109,
+        134
+      ],
+      [
+        "servers/movie_writer/movie_writer.cpp",
+        116,
+        125
+      ],
+      [
+        "servers/movie_writer/movie_writer.cpp",
+        194,
+        194
+      ],
+      [
+        "main/main.cpp",
+        2869,
+        2869
+      ],
+      [
+        "main/main.cpp",
+        3955,
+        3955
+      ]
+    ]
+  },
+  {
+    "id": "BUG-041",
+    "sev": "Critical",
+    "title": "Unbounded heap buffer OOB read/write in `AudioEffectDelayInstance::_process_chunk()` via unclamped `feedback_delay_ms`",
+    "files": [
+      [
+        "servers/audio/effects/audio_effect_delay.cpp",
+        63,
+        63
+      ],
+      [
+        "servers/audio/effects/audio_effect_delay.cpp",
+        84,
+        109
+      ],
+      [
+        "servers/audio/effects/audio_effect_delay.cpp",
+        224,
+        226
+      ]
+    ]
+  },
+  {
+    "id": "BUG-042",
+    "sev": "Critical",
+    "title": "Heap buffer OOB read/write across 12 delay buffers in `Reverb::process()` via unclamped `spread > 1.0`",
+    "files": [
+      [
+        "servers/audio/effects/reverb_filter.cpp",
+        105,
+        121
+      ],
+      [
+        "servers/audio/effects/reverb_filter.cpp",
+        156,
+        170
+      ],
+      [
+        "servers/audio/effects/reverb_filter.cpp",
+        215,
+        217
+      ],
+      [
+        "servers/audio/effects/audio_effect_reverb.cpp",
+        79,
+        79
+      ],
+      [
+        "servers/audio/effects/audio_effect_reverb.cpp",
+        105,
+        107
+      ]
+    ]
+  },
+  {
+    "id": "BUG-043",
+    "sev": "Critical",
+    "title": "Heap UAF in 2D and 3D physics servers when freeing a body (or 3D space) still attached to a joint",
+    "files": [
+      [
+        "servers/physics_3d/godot_physics_server_3d.cpp",
+        1569,
+        1580
+      ],
+      [
+        "servers/physics_3d/godot_physics_server_3d.cpp",
+        1598,
+        1611
+      ],
+      [
+        "servers/physics_3d/godot_joint_3d.h",
+        91,
+        98
+      ],
+      [
+        "servers/physics_3d/godot_step_3d.cpp",
+        52,
+        75
+      ],
+      [
+        "servers/physics_2d/godot_physics_server_2d.cpp",
+        1235,
+        1246
+      ],
+      [
+        "servers/physics_2d/godot_joints_2d.h",
+        66,
+        73
+      ],
+      [
+        "servers/physics_2d/godot_step_2d.cpp",
+        50,
+        71
+      ]
+    ]
+  },
+  {
+    "id": "BUG-044",
+    "sev": "Critical",
+    "title": "Heap UAF via dangling `HashMap` iterator and `this` pointer across callbacks in `GodotArea2D`/`3D::call_queries()`",
+    "files": [
+      [
+        "servers/physics_3d/godot_area_3d.cpp",
+        240,
+        267
+      ],
+      [
+        "servers/physics_3d/godot_area_3d.cpp",
+        282,
+        309
+      ],
+      [
+        "servers/physics_3d/godot_physics_server_3d.cpp",
+        224,
+        240
+      ],
+      [
+        "servers/physics_3d/godot_physics_server_3d.cpp",
+        419,
+        438
+      ],
+      [
+        "servers/physics_3d/godot_physics_server_3d.cpp",
+        1587,
+        1597
+      ],
+      [
+        "servers/physics_2d/godot_area_2d.cpp",
+        209,
+        236
+      ],
+      [
+        "servers/physics_2d/godot_area_2d.cpp",
+        251,
+        278
+      ],
+      [
+        "servers/physics_2d/godot_physics_server_2d.cpp",
+        294,
+        310
+      ],
+      [
+        "servers/physics_2d/godot_physics_server_2d.cpp",
+        516,
+        528
+      ],
+      [
+        "servers/physics_2d/godot_physics_server_2d.cpp",
+        1247,
+        1257
+      ]
+    ]
+  },
+  {
+    "id": "BUG-045",
+    "sev": "Critical",
+    "title": "Heap UAF when freeing a directional 2D canvas light without erasing it from `canvas->directional_lights`",
+    "files": [
+      [
+        "servers/rendering/renderer_canvas_cull.cpp",
+        1947,
+        1953
+      ],
+      [
+        "servers/rendering/renderer_canvas_cull.cpp",
+        2374,
+        2376
+      ],
+      [
+        "servers/rendering/renderer_canvas_cull.cpp",
+        2424,
+        2439
+      ],
+      [
+        "servers/rendering/renderer_viewport.cpp",
+        419,
+        435
+      ]
+    ]
+  },
+  {
+    "id": "BUG-046",
+    "sev": "Critical",
+    "title": "Heap UAF on `visibility_parent` / `visibility_dependencies` when freeing a 3D `Instance` in `RendererSceneCull::free()`",
+    "files": [
+      [
+        "servers/rendering/renderer_scene_cull.cpp",
+        1335,
+        1362
+      ],
+      [
+        "servers/rendering/renderer_scene_cull.cpp",
+        1370,
+        1391
+      ],
+      [
+        "servers/rendering/renderer_scene_cull.cpp",
+        1444,
+        1445
+      ],
+      [
+        "servers/rendering/renderer_scene_cull.cpp",
+        1726,
+        1731
+      ],
+      [
+        "servers/rendering/renderer_scene_cull.cpp",
+        1898,
+        1931
+      ],
+      [
+        "servers/rendering/renderer_scene_cull.cpp",
+        4176,
+        4196
+      ],
+      [
+        "servers/rendering/renderer_scene_cull.h",
+        612,
+        619
+      ]
+    ]
+  },
+  {
+    "id": "BUG-047",
+    "sev": "Critical",
+    "title": "Type confusion (`static_cast<const ParticlesShaderData *>`) causes heap OOB read and `copy_pipelines[]` OOB indexing",
+    "files": [
+      [
+        "servers/rendering/renderer_rd/storage_rd/particles_storage.cpp",
+        477,
+        482
+      ],
+      [
+        "servers/rendering/renderer_rd/storage_rd/particles_storage.cpp",
+        1266,
+        1266
+      ],
+      [
+        "servers/rendering/renderer_rd/storage_rd/particles_storage.cpp",
+        1286,
+        1286
+      ],
+      [
+        "servers/rendering/renderer_rd/storage_rd/particles_storage.cpp",
+        1300,
+        1307
+      ],
+      [
+        "servers/rendering/renderer_rd/storage_rd/particles_storage.cpp",
+        1339,
+        1340
+      ],
+      [
+        "servers/rendering/renderer_rd/storage_rd/particles_storage.cpp",
+        1618,
+        1618
+      ],
+      [
+        "servers/rendering/renderer_rd/storage_rd/material_storage.cpp",
+        2128,
+        2133
+      ]
+    ]
+  },
+  {
+    "id": "BUG-048",
+    "sev": "Critical",
+    "title": "Heap buffer overflow write and null dereference in `RendererCanvasRenderRD::request_polygon()` via mischecked `p_indices`/`p_weights`",
+    "files": [
+      [
+        "servers/rendering/renderer_rd/renderer_canvas_render_rd.cpp",
+        122,
+        129
+      ],
+      [
+        "servers/rendering/renderer_rd/renderer_canvas_render_rd.cpp",
+        227,
+        249
+      ],
+      [
+        "servers/rendering/renderer_rd/renderer_canvas_render_rd.cpp",
+        260,
+        282
+      ],
+      [
+        "servers/rendering/renderer_rd/renderer_canvas_render_rd.cpp",
+        294,
+        294
+      ],
+      [
+        "servers/rendering/renderer_canvas_cull.cpp",
+        1616,
+        1635
+      ]
+    ]
+  },
+  {
+    "id": "BUG-049",
+    "sev": "High",
+    "title": "Negative OOB array read on `oversampling` increase and arbitrary OOB heap write on huge/`INF` `pitch_scale` in `SMBPitchShift`",
+    "files": [
+      [
+        "servers/audio/effects/audio_effect_pitch_shift.cpp",
+        91,
+        111
+      ],
+      [
+        "servers/audio/effects/audio_effect_pitch_shift.cpp",
+        165,
+        171
+      ],
+      [
+        "servers/audio/effects/audio_effect_pitch_shift.cpp",
+        311,
+        323
+      ]
+    ]
+  },
+  {
+    "id": "BUG-050",
+    "sev": "High",
+    "title": "Data race and UAF on `recording_data` plus dead resume logic in `AudioEffectRecord`",
+    "files": [
+      [
+        "servers/audio/effects/audio_effect_record.cpp",
+        73,
+        96
+      ],
+      [
+        "servers/audio/effects/audio_effect_record.cpp",
+        150,
+        158
+      ],
+      [
+        "servers/audio/effects/audio_effect_record.cpp",
+        169,
+        182
+      ],
+      [
+        "servers/audio/effects/audio_effect_record.cpp",
+        200,
+        264
+      ]
+    ]
+  },
+  {
+    "id": "BUG-051",
+    "sev": "High",
+    "title": "Data race + unsigned underflow infinite loop hang and negative `buffer_length` div-by-zero in `AudioEffectSpectrumAnalyzer`",
+    "files": [
+      [
+        "servers/audio/effects/audio_effect_spectrum_analyzer.cpp",
+        132,
+        132
+      ],
+      [
+        "servers/audio/effects/audio_effect_spectrum_analyzer.cpp",
+        148,
+        149
+      ],
+      [
+        "servers/audio/effects/audio_effect_spectrum_analyzer.cpp",
+        158,
+        175
+      ],
+      [
+        "servers/audio/effects/audio_effect_spectrum_analyzer.cpp",
+        217,
+        220
+      ],
+      [
+        "servers/audio/effects/audio_effect_spectrum_analyzer.cpp",
+        232,
+        234
+      ]
+    ]
+  },
+  {
+    "id": "BUG-052",
+    "sev": "High",
+    "title": "Unchecked negative and `INT_MAX` indices in `AudioBusLayout::_set()` cause `CRASH_BAD_INDEX`",
+    "files": [
+      [
+        "servers/audio_server.cpp",
+        1959,
+        2009
+      ],
+      [
+        "servers/audio_server.cpp",
+        2070,
+        2070
+      ]
+    ]
+  },
+  {
+    "id": "BUG-053",
+    "sev": "High",
+    "title": "Cross-thread UAF of `AudioStreamPlaybackBusDetails` between `AudioServer::update()` and `_mix_step()`",
+    "files": [
+      [
+        "servers/audio_server.cpp",
+        425,
+        428
+      ],
+      [
+        "servers/audio_server.cpp",
+        1286,
+        1290
+      ],
+      [
+        "servers/audio_server.cpp",
+        1531,
+        1539
+      ]
+    ]
+  },
+  {
+    "id": "BUG-054",
+    "sev": "High",
+    "title": "Missing `lock()`/`unlock()` in `AudioServer::add_bus()` and `move_bus()` (data race + leak on `p_at_pos < -1`)",
+    "files": [
+      [
+        "servers/audio_server.cpp",
+        813,
+        893
+      ]
+    ]
+  },
+  {
+    "id": "BUG-055",
+    "sev": "High",
+    "title": "Heap buffer overflow in `AudioServer::start_playback_stream()` (> 6 buses), error-path leaks, and null deref in `set_playback_bus_volumes_linear()`",
+    "files": [
+      [
+        "servers/audio_server.h",
+        203,
+        203
+      ],
+      [
+        "servers/audio_server.h",
+        265,
+        269
+      ],
+      [
+        "servers/audio_server.cpp",
+        1180,
+        1203
+      ],
+      [
+        "servers/audio_server.cpp",
+        1254,
+        1291
+      ]
+    ]
+  },
+  {
+    "id": "BUG-056",
+    "sev": "High",
+    "title": "Off-by-two `CHECK_SIZE` OOB crash in `VisualProfilerFrame::deserialize()` and OOB indexing in `ScriptsProfiler::write_frame_data()`",
+    "files": [
+      [
+        "servers/debugger/servers_debugger.cpp",
+        177,
+        193
+      ],
+      [
+        "servers/debugger/servers_debugger.cpp",
+        227,
+        236
+      ]
+    ]
+  },
+  {
+    "id": "BUG-057",
+    "sev": "High",
+    "title": "Unchecked null dereference of `RD::get_singleton()` and missing `vrs_dirty = true` on clamp in `XRVRS`",
+    "files": [
+      [
+        "servers/xr/xr_vrs.cpp",
+        61,
+        98
+      ]
+    ]
+  },
+  {
+    "id": "BUG-058",
+    "sev": "High",
+    "title": "Heap under-read (`l_gl[-1]`) and over-read (`l_gl[l_size]`) in `TextServer` `BREAK_TRIM_EDGE_SPACES` line-break trimming",
+    "files": [
+      [
+        "servers/text_server.cpp",
+        827,
+        840
+      ],
+      [
+        "servers/text_server.cpp",
+        866,
+        879
+      ],
+      [
+        "servers/text_server.cpp",
+        923,
+        929
+      ],
+      [
+        "servers/text_server.cpp",
+        980,
+        996
+      ],
+      [
+        "servers/text_server.cpp",
+        1018,
+        1035
+      ],
+      [
+        "servers/text_server.cpp",
+        1080,
+        1086
+      ]
+    ]
+  },
+  {
+    "id": "BUG-059",
+    "sev": "High",
+    "title": "Unchecked `texture[p_which]` OOB heap read in `CameraFeed::get_texture()` via `CameraTexture::which_feed`",
+    "files": [
+      [
+        "servers/camera/camera_feed.h",
+        73,
+        73
+      ],
+      [
+        "servers/camera/camera_feed.cpp",
+        134,
+        136
+      ],
+      [
+        "scene/resources/camera_texture.cpp",
+        72,
+        76
+      ],
+      [
+        "scene/resources/camera_texture.cpp",
+        98,
+        101
+      ]
+    ]
+  },
+  {
+    "id": "BUG-060",
+    "sev": "High",
+    "title": "`DisplayServer::_get_cursor_image_from_resource()` returns non-null `image` on size/hotspot failure, bypassing validation and decompression",
+    "files": [
+      [
+        "servers/display_server.cpp",
+        1141,
+        1163
+      ],
+      [
+        "platform/linuxbsd/x11/display_server_x11.cpp",
+        3140,
+        3162
+      ]
+    ]
+  },
+  {
+    "id": "BUG-061",
+    "sev": "High",
+    "title": "32-bit `node_count * node_count` integer overflow leads to heap OOB write in `GodotSoftBody3D`",
+    "files": [
+      [
+        "servers/physics_3d/godot_soft_body_3d.cpp",
+        549,
+        565
+      ],
+      [
+        "servers/physics_3d/godot_soft_body_3d.cpp",
+        598,
+        622
+      ]
+    ]
+  },
+  {
+    "id": "BUG-062",
+    "sev": "High",
+    "title": "`GodotHeightMapShape3D` OOB read on `1xN`/`Nx1`, 2x over-read on `precision=double` builds, and wrong vector read for min/max heights",
+    "files": [
+      [
+        "servers/physics_3d/godot_shape_3d.cpp",
+        1751,
+        1764
+      ],
+      [
+        "servers/physics_3d/godot_shape_3d.cpp",
+        1893,
+        1902
+      ],
+      [
+        "servers/physics_3d/godot_shape_3d.cpp",
+        1976,
+        1980
+      ],
+      [
+        "servers/physics_3d/godot_shape_3d.cpp",
+        2186,
+        2240
+      ]
+    ]
+  },
+  {
+    "id": "BUG-063",
+    "sev": "High",
+    "title": "Unconditional null dereference `B->get_mode()` in `GodotPinJoint2D::setup()` when pinned to world (`body_b == nullptr`)",
+    "files": [
+      [
+        "servers/physics_2d/godot_joints_2d.cpp",
+        99,
+        105
+      ],
+      [
+        "servers/physics_2d/godot_physics_server_2d.cpp",
+        1108,
+        1120
+      ]
+    ]
+  },
+  {
+    "id": "BUG-064",
+    "sev": "High",
+    "title": "C++ type confusion in `GodotPhysicsServer3D::slider_joint_get_param()` checking `JOINT_TYPE_CONE_TWIST` before `static_cast<GodotSliderJoint3D *>`",
+    "files": [
+      [
+        "servers/physics_3d/godot_physics_server_3d.cpp",
+        1452,
+        1458
+      ]
+    ]
+  },
+  {
+    "id": "BUG-065",
+    "sev": "High",
+    "title": "Four broken physics formulas in `GodotPinJoint2D` angular limits and motor (double `inv_inertia`, wrong bias sign, rotation lock, div-by-zero)",
+    "files": [
+      [
+        "servers/physics_2d/godot_joints_2d.cpp",
+        177,
+        245
+      ],
+      [
+        "servers/physics_2d/godot_body_2d.h",
+        237,
+        239
+      ]
+    ]
+  },
+  {
+    "id": "BUG-066",
+    "sev": "High",
+    "title": "Missing origin/rotation transform in `GodotCollisionSolver3D::solve_soft_body()` concave cull AABB and unswapped margins in `solve_static()`",
+    "files": [
+      [
+        "servers/physics_3d/godot_collision_solver_3d.cpp",
+        250,
+        274
+      ],
+      [
+        "servers/physics_3d/godot_collision_solver_3d.cpp",
+        369,
+        373
+      ],
+      [
+        "servers/physics_3d/godot_collision_solver_3d.cpp",
+        425,
+        429
+      ]
+    ]
+  },
+  {
+    "id": "BUG-067",
+    "sev": "High",
+    "title": "Missing origin translation in 3D SAT separating axes and world-origin-dependent clipping in `_generate_contacts_face_circle()`",
+    "files": [
+      [
+        "servers/physics_3d/godot_collision_solver_3d_sat.cpp",
+        396,
+        416
+      ],
+      [
+        "servers/physics_3d/godot_collision_solver_3d_sat.cpp",
+        1222,
+        1222
+      ],
+      [
+        "servers/physics_3d/godot_collision_solver_3d_sat.cpp",
+        1331,
+        1331
+      ],
+      [
+        "servers/physics_3d/godot_collision_solver_3d_sat.cpp",
+        2130,
+        2156
+      ],
+      [
+        "servers/physics_3d/godot_collision_solver_3d_sat.cpp",
+        2239,
+        2256
+      ]
+    ]
+  },
+  {
+    "id": "BUG-068",
+    "sev": "High",
+    "title": "`SIGFPE` div-by-zero and `uint32_t` underflow in `RenderingDevice::vertex_array_create()`, overflow in `index_buffer_create()`, and broken pipeline check",
+    "files": [
+      [
+        "servers/rendering/rendering_device.cpp",
+        2506,
+        2520
+      ],
+      [
+        "servers/rendering/rendering_device.cpp",
+        2549,
+        2572
+      ],
+      [
+        "servers/rendering/rendering_device.cpp",
+        2611,
+        2611
+      ],
+      [
+        "servers/rendering/rendering_device.cpp",
+        3842,
+        3842
+      ]
+    ]
+  },
+  {
+    "id": "BUG-069",
+    "sev": "High",
+    "title": "Infinite loop and OOM crash in `ShaderLanguage::_get_token()` on `@@>` / `@@<` without trailing newline",
+    "files": [
+      [
+        "servers/rendering/shader_language.cpp",
+        400,
+        400
+      ],
+      [
+        "servers/rendering/shader_language.cpp",
+        603,
+        612
+      ],
+      [
+        "servers/rendering/shader_language.cpp",
+        627,
+        635
+      ]
+    ]
+  },
+  {
+    "id": "BUG-070",
+    "sev": "High",
+    "title": "Negative OOB array read (`entry[-1]`) in `RenderingLightCuller` when `LUT_entry_sizes[lookup] == 0`",
+    "files": [
+      [
+        "servers/rendering/rendering_light_culler.cpp",
+        269,
+        294
+      ],
+      [
+        "servers/rendering/rendering_light_culler.cpp",
+        431,
+        453
+      ],
+      [
+        "servers/rendering/rendering_light_culler.cpp",
+        569,
+        569
+      ]
+    ]
+  },
+  {
+    "id": "BUG-071",
+    "sev": "High",
+    "title": "Multi-threaded data race / COW UAF on `frame_profile` and re-entrant infinite loop in `RenderingServerDefault`",
+    "files": [
+      [
+        "servers/rendering/rendering_server_default.cpp",
+        67,
+        69
+      ],
+      [
+        "servers/rendering/rendering_server_default.cpp",
+        134,
+        134
+      ],
+      [
+        "servers/rendering/rendering_server_default.cpp",
+        187,
+        202
+      ],
+      [
+        "servers/rendering/rendering_server_default.cpp",
+        302,
+        304
+      ]
+    ]
+  },
+  {
+    "id": "BUG-072",
+    "sev": "High",
+    "title": "Overwritten memory barrier access flags (assignment instead of bitwise-OR) and dead-code dirty-rect merge in `RenderingDeviceGraph`",
+    "files": [
+      [
+        "servers/rendering/rendering_device_graph.cpp",
+        375,
+        385
+      ],
+      [
+        "servers/rendering/rendering_device_graph.cpp",
+        424,
+        433
+      ]
+    ]
+  },
+  {
+    "id": "BUG-073",
+    "sev": "High",
+    "title": "Uninitialized GPU light data uploaded and trailing lights dropped in `GI::VoxelGIInstance::update()` with `SKY_ONLY` directional light",
+    "files": [
+      [
+        "servers/rendering/renderer_rd/environment/gi.cpp",
+        2871,
+        2934
+      ],
+      [
+        "servers/rendering/renderer_rd/environment/gi.cpp",
+        3372,
+        3372
+      ],
+      [
+        "servers/rendering/renderer_rd/environment/gi.h",
+        164,
+        178
+      ]
+    ]
+  },
+  {
+    "id": "BUG-074",
+    "sev": "High",
+    "title": "Null pointer dereference in `TextureStorage::texture_2d_layered_initialize()` and undercounted mipmaps in `texture_3d_initialize()`",
+    "files": [
+      [
+        "servers/rendering/renderer_rd/storage_rd/texture_storage.cpp",
+        875,
+        876
+      ],
+      [
+        "servers/rendering/renderer_rd/storage_rd/texture_storage.cpp",
+        1003,
+        1032
+      ]
+    ]
+  },
+  {
+    "id": "BUG-075",
+    "sev": "High",
+    "title": "Unauthorized free of user-owned `Material` RID in `SkyRD::Sky::free()`",
+    "files": [
+      [
+        "servers/rendering/renderer_rd/environment/sky.cpp",
+        535,
+        551
+      ],
+      [
+        "servers/rendering/renderer_rd/environment/sky.cpp",
+        654,
+        661
+      ]
+    ]
+  },
+  {
+    "id": "BUG-076",
+    "sev": "High",
+    "title": "OOB / null-pointer read in `RenderSceneBuffersRD::get_texture_slice_size()` due to `update_sizes(named_texture)` typo",
+    "files": [
+      [
+        "servers/rendering/renderer_rd/storage_rd/render_scene_buffers_rd.cpp",
+        378,
+        394
+      ],
+      [
+        "servers/rendering/renderer_rd/storage_rd/render_scene_buffers_rd.cpp",
+        484,
+        497
+      ]
+    ]
+  },
+  {
+    "id": "BUG-077",
+    "sev": "High",
+    "title": "Signed 32-bit overflow and `SIGFPE` div-by-zero on `16 * uniform.array_size` in `ShaderCompiler` and `MaterialStorage`",
+    "files": [
+      [
+        "servers/rendering/shader_compiler.cpp",
+        616,
+        625
+      ],
+      [
+        "servers/rendering/renderer_rd/storage_rd/material_storage.cpp",
+        684,
+        689
+      ]
+    ]
+  },
+  {
+    "id": "BUG-078",
+    "sev": "High",
+    "title": "96-byte heap buffer overflow in `DebugEffects::draw_shadow_frustum()` on double-precision builds",
+    "files": [
+      [
+        "servers/rendering/renderer_rd/effects/debug_effects.cpp",
+        191,
+        192
+      ],
+      [
+        "servers/rendering/renderer_rd/effects/debug_effects.cpp",
+        242,
+        256
+      ]
+    ]
+  },
+  {
+    "id": "BUG-079",
+    "sev": "High",
+    "title": "Wrong loop index `rptr[i]` instead of `rptr[j]` in `RenderingServer::mesh_surface_get_lods()` corrupts LODs and reads OOB",
+    "files": [
+      [
+        "servers/rendering_server.cpp",
+        1714,
+        1737
+      ]
+    ]
+  },
+  {
+    "id": "BUG-080",
+    "sev": "High",
+    "title": "Null dereference in `RendererSceneRenderRD::environment_bake_panorama()`, double-free in `~FSR2Effect()`, and `multimesh_allocate_data()` overflow",
+    "files": [
+      [
+        "servers/rendering/renderer_rd/renderer_scene_render_rd.cpp",
+        112,
+        144
+      ],
+      [
+        "servers/rendering/renderer_rd/effects/fsr2.cpp",
+        646,
+        683
+      ],
+      [
+        "servers/rendering/renderer_rd/effects/fsr2.cpp",
+        798,
+        808
+      ],
+      [
+        "servers/rendering/renderer_rd/storage_rd/mesh_storage.cpp",
+        1398,
+        1452
+      ],
+      [
+        "servers/rendering/renderer_rd/storage_rd/mesh_storage.cpp",
+        1553,
+        1553
+      ]
+    ]
+  },
+  {
+    "id": "BUG-081",
+    "sev": "Medium",
+    "title": "Uninitialized `delay_ringbuff` read in `AudioEffectStereoEnhance`, inverted solo bus check in `AudioServer`, and `MovieWriterMJPEG`/`PNGWAV` bugs",
+    "files": [
+      [
+        "servers/audio/effects/audio_effect_stereo_enhance.cpp",
+        50,
+        67
+      ],
+      [
+        "servers/audio/effects/audio_effect_stereo_enhance.cpp",
+        101,
+        101
+      ],
+      [
+        "servers/audio_server.cpp",
+        351,
+        370
+      ],
+      [
+        "servers/movie_writer/movie_writer_mjpeg.cpp",
+        81,
+        81
+      ],
+      [
+        "servers/movie_writer/movie_writer_mjpeg.cpp",
+        241,
+        253
+      ],
+      [
+        "servers/movie_writer/movie_writer_pngwav.cpp",
+        70,
+        82
+      ],
+      [
+        "servers/movie_writer/movie_writer_pngwav.cpp",
+        147,
+        148
+      ]
+    ]
+  },
+  {
+    "id": "BUG-082",
+    "sev": "Medium",
+    "title": "Server logic/API bugs: `TAA::process()` wrong resolution, `ShaderPreprocessor` double-increment, `LightStorage` spotlight AABB, `RendererViewport` recursion, `MaterialData` tautology, `_get_array_from_surface()` premature `continue`, `TextServer`/`DisplayServer`/`NavigationServer`/`Physics` contract bugs",
+    "files": [
+      [
+        "servers/rendering/renderer_rd/effects/taa.cpp",
+        88,
+        121
+      ],
+      [
+        "servers/rendering/shader_preprocessor.cpp",
+        81,
+        103
+      ],
+      [
+        "servers/rendering/renderer_rd/storage_rd/light_storage.cpp",
+        403,
+        408
+      ],
+      [
+        "servers/rendering/renderer_viewport.cpp",
+        993,
+        998
+      ],
+      [
+        "servers/rendering/renderer_viewport.cpp",
+        1125,
+        1133
+      ],
+      [
+        "servers/rendering/renderer_rd/storage_rd/material_storage.cpp",
+        932,
+        936
+      ],
+      [
+        "servers/rendering_server.cpp",
+        1434,
+        1441
+      ],
+      [
+        "servers/rendering_server.cpp",
+        1481,
+        1481
+      ],
+      [
+        "servers/text_server.cpp",
+        1617,
+        1622
+      ],
+      [
+        "servers/text_server.h",
+        557,
+        557
+      ],
+      [
+        "servers/display_server.cpp",
+        118,
+        123
+      ],
+      [
+        "servers/display_server.cpp",
+        762,
+        771
+      ],
+      [
+        "servers/navigation_server_3d.cpp",
+        881,
+        891
+      ],
+      [
+        "servers/physics_2d/godot_collision_solver_2d.cpp",
+        173,
+        273
+      ],
+      [
+        "servers/physics_2d/godot_shape_2d.cpp",
+        226,
+        226
+      ],
+      [
+        "servers/physics_2d/godot_shape_2d.cpp",
+        486,
+        486
+      ],
+      [
+        "servers/physics_3d/joints/godot_generic_6dof_joint_3d.cpp",
+        501,
+        501
+      ],
+      [
+        "servers/physics_3d/godot_area_3d.cpp",
+        161,
+        175
+      ],
+      [
+        "servers/physics_3d/godot_area_pair_3d.cpp",
+        222,
+        239
+      ],
+      [
+        "servers/physics_3d/godot_space_3d.cpp",
+        216,
+        216
+      ],
+      [
+        "servers/physics_3d/godot_space_3d.cpp",
+        971,
+        973
+      ]
+    ]
+  },
+  {
+    "id": "BUG-083",
+    "sev": "Critical",
+    "title": "Heap UAF in `CanvasLayer` via dangling `vp` and `custom_viewport` pointers",
+    "files": [
+      [
+        "scene/main/canvas_layer.cpp",
+        41,
+        41
+      ],
+      [
+        "scene/main/canvas_layer.cpp",
+        95,
+        96
+      ],
+      [
+        "scene/main/canvas_layer.cpp",
+        171,
+        200
+      ],
+      [
+        "scene/main/canvas_layer.cpp",
+        225,
+        259
+      ],
+      [
+        "scene/main/canvas_layer.cpp",
+        303,
+        303
+      ],
+      [
+        "scene/main/viewport.cpp",
+        5029,
+        5036
+      ]
+    ]
+  },
+  {
+    "id": "BUG-084",
+    "sev": "Critical",
+    "title": "Double-free / heap UAF on `prev_scene` (and scene leak on double call) in `SceneTree::change_scene_to_packed()` / `_flush_scene_change()`",
+    "files": [
+      [
+        "scene/main/scene_tree.cpp",
+        532,
+        536
+      ],
+      [
+        "scene/main/scene_tree.cpp",
+        1407,
+        1417
+      ],
+      [
+        "scene/main/scene_tree.cpp",
+        1435,
+        1452
+      ],
+      [
+        "scene/main/scene_tree.cpp",
+        1887,
+        1891
+      ]
+    ]
+  },
+  {
+    "id": "BUG-085",
+    "sev": "Critical",
+    "title": "Heap UAF in `Window` via uncleaned `windowmanager_window_over` and `transient_parent` pointers",
+    "files": [
+      [
+        "scene/main/window.cpp",
+        666,
+        697
+      ],
+      [
+        "scene/main/window.cpp",
+        734,
+        765
+      ],
+      [
+        "scene/main/window.cpp",
+        888,
+        899
+      ],
+      [
+        "scene/main/window.cpp",
+        910,
+        936
+      ],
+      [
+        "scene/main/viewport.cpp",
+        3004,
+        3012
+      ]
+    ]
+  },
+  {
+    "id": "BUG-086",
+    "sev": "Critical",
+    "title": "Heap UAF in `Viewport::_gui_control_grab_focus()` when focus callbacks free `p_control`",
+    "files": [
+      [
+        "scene/main/viewport.cpp",
+        2541,
+        2553
+      ],
+      [
+        "scene/gui/control.cpp",
+        3323,
+        3331
+      ]
+    ]
+  },
+  {
+    "id": "BUG-087",
+    "sev": "Critical",
+    "title": "OOB function pointer table call in `AnimationMixer::capture()` / `Tween::run_equation()` and null dereference in `track_cache`",
+    "files": [
+      [
+        "scene/animation/animation_mixer.cpp",
+        1046,
+        1058
+      ],
+      [
+        "scene/animation/animation_mixer.cpp",
+        1744,
+        1761
+      ],
+      [
+        "scene/animation/animation_mixer.cpp",
+        2111,
+        2117
+      ],
+      [
+        "scene/animation/animation_mixer.cpp",
+        2148,
+        2186
+      ],
+      [
+        "scene/animation/tween.cpp",
+        403,
+        411
+      ]
+    ]
+  },
+  {
+    "id": "BUG-088",
+    "sev": "Critical",
+    "title": "Heap UAF on `playback.current.from` / `playback.blend` and null dereference in `AnimationPlayer::_blend_post_process()`",
+    "files": [
+      [
+        "scene/animation/animation_player.cpp",
+        302,
+        302
+      ],
+      [
+        "scene/animation/animation_player.cpp",
+        325,
+        330
+      ],
+      [
+        "scene/animation/animation_player.cpp",
+        429,
+        443
+      ],
+      [
+        "scene/animation/animation_player.cpp",
+        553,
+        553
+      ],
+      [
+        "scene/animation/animation_player.cpp",
+        664,
+        684
+      ],
+      [
+        "scene/animation/animation_player.cpp",
+        780,
+        804
+      ],
+      [
+        "scene/animation/animation_mixer.cpp",
+        171,
+        184
+      ],
+      [
+        "scene/animation/animation_mixer.cpp",
+        937,
+        948
+      ]
+    ]
+  },
+  {
+    "id": "BUG-089",
+    "sev": "Critical",
+    "title": "Heap UAF via `Vector` iterator invalidation in `Tween::step()`",
+    "files": [
+      [
+        "scene/animation/tween.cpp",
+        93,
+        100
+      ],
+      [
+        "scene/animation/tween.cpp",
+        152,
+        164
+      ],
+      [
+        "scene/animation/tween.cpp",
+        331,
+        375
+      ]
+    ]
+  },
+  {
+    "id": "BUG-090",
+    "sev": "Critical",
+    "title": "OOB array read (`blend_points[-1]`) and off-by-one shift corruption in `AnimationNodeBlendSpace1D` and `2D`",
+    "files": [
+      [
+        "scene/animation/animation_blend_space_1d.cpp",
+        48,
+        48
+      ],
+      [
+        "scene/animation/animation_blend_space_1d.cpp",
+        141,
+        156
+      ],
+      [
+        "scene/animation/animation_blend_space_1d.cpp",
+        365,
+        399
+      ],
+      [
+        "scene/animation/animation_blend_space_2d.cpp",
+        49,
+        49
+      ],
+      [
+        "scene/animation/animation_blend_space_2d.cpp",
+        69,
+        89
+      ],
+      [
+        "scene/animation/animation_blend_space_2d.cpp",
+        542,
+        576
+      ]
+    ]
+  },
+  {
+    "id": "BUG-091",
+    "sev": "Critical",
+    "title": "Heap UAF on raw `spatial_attachment` pointer in `SoftBody3D`",
+    "files": [
+      [
+        "scene/3d/soft_body_3d.h",
+        77,
+        82
+      ],
+      [
+        "scene/3d/soft_body_3d.cpp",
+        394,
+        403
+      ],
+      [
+        "scene/3d/soft_body_3d.cpp",
+        708,
+        721
+      ]
+    ]
+  },
+  {
+    "id": "BUG-092",
+    "sev": "Critical",
+    "title": "Negative-index OOB heap read/write in `SoftBody3D` pinned-point properties and null dereference in `_add_pinned_point()`",
+    "files": [
+      [
+        "scene/3d/soft_body_3d.cpp",
+        135,
+        140
+      ],
+      [
+        "scene/3d/soft_body_3d.cpp",
+        214,
+        249
+      ],
+      [
+        "scene/3d/soft_body_3d.cpp",
+        735,
+        738
+      ]
+    ]
+  },
+  {
+    "id": "BUG-093",
+    "sev": "Critical",
+    "title": "Heap UAF of `bonesptr` and OOB read of `bones_backup` in `Skeleton3D::_notification(NOTIFICATION_UPDATE_SKELETON)`",
+    "files": [
+      [
+        "scene/3d/skeleton_3d.cpp",
+        325,
+        413
+      ],
+      [
+        "scene/3d/skeleton_3d.cpp",
+        489,
+        504
+      ],
+      [
+        "scene/3d/skeleton_3d.cpp",
+        656,
+        662
+      ],
+      [
+        "scene/3d/skeleton_3d.cpp",
+        959,
+        991
+      ]
+    ]
+  },
+  {
+    "id": "BUG-094",
+    "sev": "Critical",
+    "title": "Arbitrary OOB heap read and cycle-induced stack overflow / OOM via unvalidated `Skeleton3D::set_bone_parent()`",
+    "files": [
+      [
+        "scene/3d/skeleton_3d.cpp",
+        244,
+        264
+      ],
+      [
+        "scene/3d/skeleton_3d.cpp",
+        534,
+        546
+      ],
+      [
+        "scene/3d/skeleton_3d.cpp",
+        552,
+        581
+      ],
+      [
+        "scene/3d/skeleton_3d.cpp",
+        876,
+        943
+      ]
+    ]
+  },
+  {
+    "id": "BUG-095",
+    "sev": "Critical",
+    "title": "Heap UAF on raw `child_joint` and `parent_skeleton` pointers in `PhysicalBone2D`",
+    "files": [
+      [
+        "scene/2d/physics/physical_bone_2d.h",
+        47,
+        53
+      ],
+      [
+        "scene/2d/physics/physical_bone_2d.cpp",
+        35,
+        107
+      ],
+      [
+        "scene/2d/physics/physical_bone_2d.cpp",
+        185,
+        187
+      ]
+    ]
+  },
+  {
+    "id": "BUG-096",
+    "sev": "Critical",
+    "title": "Type confusion (heap OOB R/W) and null dereference via unchecked C-style downcasts in `VisualShader::_set()` / `_get()`",
+    "files": [
+      [
+        "scene/resources/visual_shader.cpp",
+        1720,
+        1742
+      ],
+      [
+        "scene/resources/visual_shader.cpp",
+        1795,
+        1817
+      ],
+      [
+        "scene/resources/visual_shader.h",
+        548,
+        548
+      ],
+      [
+        "scene/resources/visual_shader.h",
+        706,
+        706
+      ],
+      [
+        "scene/resources/visual_shader.h",
+        796,
+        796
+      ],
+      [
+        "scene/resources/visual_shader.h",
+        866,
+        866
+      ]
+    ]
+  },
+  {
+    "id": "BUG-097",
+    "sev": "Critical",
+    "title": "Unbounded stack buffer overflow in `SurfaceTool::create_vertex_array_from_arrays()` via `ARRAY_CUSTOM0..3`",
+    "files": [
+      [
+        "scene/resources/surface_tool.h",
+        45,
+        61
+      ],
+      [
+        "scene/resources/surface_tool.cpp",
+        862,
+        878
+      ],
+      [
+        "scene/resources/surface_tool.cpp",
+        919,
+        926
+      ],
+      [
+        "core/math/color.h",
+        65,
+        67
+      ]
+    ]
+  },
+  {
+    "id": "BUG-098",
+    "sev": "Critical",
+    "title": "Heap UAF of freed `TextEdit *` in `SyntaxHighlighter` and infinite recursion stack overflow in `CodeHighlighter`",
+    "files": [
+      [
+        "scene/resources/syntax_highlighter.cpp",
+        36,
+        52
+      ],
+      [
+        "scene/resources/syntax_highlighter.cpp",
+        76,
+        104
+      ],
+      [
+        "scene/resources/syntax_highlighter.cpp",
+        134,
+        148
+      ],
+      [
+        "scene/resources/syntax_highlighter.cpp",
+        421,
+        423
+      ],
+      [
+        "scene/gui/text_edit.cpp",
+        6303,
+        6314
+      ]
+    ]
+  },
+  {
+    "id": "BUG-099",
+    "sev": "Critical",
+    "title": "Heap buffer overflow (OOB write) in `AudioStreamWAV` QOA decoding (`qoa.dec` / `lms`) and OOB read via unclamped loop bounds",
+    "files": [
+      [
+        "scene/resources/audio_stream_wav.cpp",
+        178,
+        191
+      ],
+      [
+        "scene/resources/audio_stream_wav.cpp",
+        299,
+        303
+      ],
+      [
+        "scene/resources/audio_stream_wav.cpp",
+        514,
+        528
+      ],
+      [
+        "scene/resources/audio_stream_wav.cpp",
+        698,
+        706
+      ],
+      [
+        "thirdparty/misc/qoa.h",
+        548,
+        648
+      ]
+    ]
+  },
+  {
+    "id": "BUG-100",
+    "sev": "Critical",
+    "title": "Heap UAF via uninvalidated raw `Node2D *target_node_reference` in `SkeletonModification2DLookAt`",
+    "files": [
+      [
+        "scene/resources/2d/skeleton/skeleton_modification_2d_lookat.h",
+        49,
+        51
+      ],
+      [
+        "scene/resources/2d/skeleton/skeleton_modification_2d_lookat.cpp",
+        130,
+        149
+      ],
+      [
+        "scene/resources/2d/skeleton/skeleton_modification_2d_lookat.cpp",
+        227,
+        229
+      ],
+      [
+        "scene/resources/2d/skeleton/skeleton_modification_2d_lookat.cpp",
+        267,
+        288
+      ]
+    ]
+  },
+  {
+    "id": "BUG-101",
+    "sev": "Critical",
+    "title": "Unvalidated compressed animation page offsets in `Animation` enable arbitrary heap OOB reads",
+    "files": [
+      [
+        "scene/resources/animation.cpp",
+        40,
+        65
+      ],
+      [
+        "scene/resources/animation.cpp",
+        4656,
+        4673
+      ],
+      [
+        "scene/resources/animation.cpp",
+        5140,
+        5283
+      ],
+      [
+        "scene/resources/animation.cpp",
+        5286,
+        5386
+      ],
+      [
+        "scene/resources/animation.cpp",
+        5403,
+        5472
+      ]
+    ]
+  },
+  {
+    "id": "BUG-102",
+    "sev": "Critical",
+    "title": "Heap UAF via stale `children_cache` in `TreeItem::clear_children()`",
+    "files": [
+      [
+        "scene/gui/tree.h",
+        155,
+        181
+      ],
+      [
+        "scene/gui/tree.cpp",
+        991,
+        1040
+      ]
+    ]
+  },
+  {
+    "id": "BUG-103",
+    "sev": "Critical",
+    "title": "Heap UAF of `meta_hovering` / `prev_meta` / `item_meta` in `RichTextLabel` (plus `table_h_separation` Y-offset bug)",
+    "files": [
+      [
+        "scene/gui/rich_text_label.cpp",
+        1538,
+        1538
+      ],
+      [
+        "scene/gui/rich_text_label.cpp",
+        2185,
+        2205
+      ],
+      [
+        "scene/gui/rich_text_label.cpp",
+        3350,
+        3400
+      ],
+      [
+        "scene/gui/rich_text_label.cpp",
+        3972,
+        3996
+      ]
+    ]
+  },
+  {
+    "id": "BUG-104",
+    "sev": "Critical",
+    "title": "Heap UAF via `HashSet` iterator invalidation in `Range::Shared::emit_value_changed()` and `emit_changed()`",
+    "files": [
+      [
+        "scene/gui/range.cpp",
+        52,
+        75
+      ],
+      [
+        "scene/gui/range.cpp",
+        255,
+        287
+      ],
+      [
+        "core/templates/hash_set.h",
+        259,
+        296
+      ],
+      [
+        "core/templates/hash_set.h",
+        321,
+        358
+      ]
+    ]
+  },
+  {
+    "id": "BUG-105",
+    "sev": "Critical",
+    "title": "Heap UAF via `HashSet` iterator invalidation in `BaseButton::_unpress_group()`",
+    "files": [
+      [
+        "scene/gui/base_button.cpp",
+        37,
+        53
+      ],
+      [
+        "scene/gui/base_button.cpp",
+        217,
+        232
+      ],
+      [
+        "scene/gui/base_button.cpp",
+        409,
+        422
+      ]
+    ]
+  },
+  {
+    "id": "BUG-106",
+    "sev": "High",
+    "title": "Heap UAF via unjoined detached worker thread in `HTTPRequest` when `set_use_threads(false)` is called while disconnected",
+    "files": [
+      [
+        "scene/main/http_request.cpp",
+        145,
+        150
+      ],
+      [
+        "scene/main/http_request.cpp",
+        184,
+        208
+      ],
+      [
+        "scene/main/http_request.cpp",
+        506,
+        511
+      ],
+      [
+        "core/os/thread.cpp",
+        102,
+        111
+      ]
+    ]
+  },
+  {
+    "id": "BUG-107",
+    "sev": "High",
+    "title": "Null pointer dereference in `Node::duplicate()` and `Node::duplicate_from_editor()`, plus permanent `ProcessGroup` leak in `SceneTree`",
+    "files": [
+      [
+        "scene/main/node.cpp",
+        2782,
+        2817
+      ],
+      [
+        "scene/main/scene_tree.cpp",
+        984,
+        995
+      ],
+      [
+        "scene/main/scene_tree.cpp",
+        1107,
+        1130
+      ]
+    ]
+  },
+  {
+    "id": "BUG-108",
+    "sev": "High",
+    "title": "Inverted stop check (`!= StringName()`) in `AnimationNodeStateMachinePlayback::_process()` and null deref in `_make_travel_path()`",
+    "files": [
+      [
+        "scene/animation/animation_node_state_machine.cpp",
+        575,
+        590
+      ],
+      [
+        "scene/animation/animation_node_state_machine.cpp",
+        721,
+        735
+      ]
+    ]
+  },
+  {
+    "id": "BUG-109",
+    "sev": "High",
+    "title": "Wrong sign (`+=` vs `-=`) in delta clamping and div-by-zero in `AnimationNodeAnimation::_process()`, plus infinite loop in `AnimationNodeTransition`",
+    "files": [
+      [
+        "scene/animation/animation_blend_tree.cpp",
+        159,
+        166
+      ],
+      [
+        "scene/animation/animation_blend_tree.cpp",
+        193,
+        198
+      ],
+      [
+        "scene/animation/animation_blend_tree.cpp",
+        1134,
+        1140
+      ]
+    ]
+  },
+  {
+    "id": "BUG-110",
+    "sev": "High",
+    "title": "Infinite loop in `LiveEditor::_restore_node_func()` and OOB array access in `SceneDebuggerTree::deserialize()`",
+    "files": [
+      [
+        "scene/debugger/scene_debugger.cpp",
+        553,
+        566
+      ],
+      [
+        "scene/debugger/scene_debugger.cpp",
+        958,
+        994
+      ]
+    ]
+  },
+  {
+    "id": "BUG-111",
+    "sev": "High",
+    "title": "Heap UAF on raw `m_groundObject` pointer in `VehicleWheel3D` and raw `Task::skeleton` pointer in `SkeletonIK3D`",
+    "files": [
+      [
+        "scene/3d/physics/vehicle_body_3d.h",
+        91,
+        91
+      ],
+      [
+        "scene/3d/physics/vehicle_body_3d.cpp",
+        222,
+        224
+      ],
+      [
+        "scene/3d/physics/vehicle_body_3d.cpp",
+        424,
+        426
+      ],
+      [
+        "scene/3d/skeleton_ik_3d.h",
+        81,
+        81
+      ],
+      [
+        "scene/3d/skeleton_ik_3d.cpp",
+        242,
+        248
+      ],
+      [
+        "scene/3d/skeleton_ik_3d.cpp",
+        379,
+        388
+      ],
+      [
+        "scene/3d/skeleton_ik_3d.cpp",
+        485,
+        493
+      ],
+      [
+        "scene/3d/skeleton_ik_3d.cpp",
+        536,
+        541
+      ]
+    ]
+  },
+  {
+    "id": "BUG-112",
+    "sev": "High",
+    "title": "Systemic RID double-free of `Ref<ArrayMesh>` debug meshes across six 3D scene nodes (`RayCast3D`, `ShapeCast3D`, `Path3D`, `Navigation*3D`)",
+    "files": [
+      [
+        "scene/3d/physics/ray_cast_3d.cpp",
+        554,
+        557
+      ],
+      [
+        "scene/3d/physics/shape_cast_3d.cpp",
+        640,
+        643
+      ],
+      [
+        "scene/3d/path_3d.cpp",
+        47,
+        50
+      ],
+      [
+        "scene/3d/navigation_region_3d.cpp",
+        458,
+        458
+      ],
+      [
+        "scene/3d/navigation_region_3d.cpp",
+        464,
+        464
+      ],
+      [
+        "scene/3d/navigation_link_3d.cpp",
+        290,
+        290
+      ],
+      [
+        "scene/3d/navigation_obstacle_3d.cpp",
+        217,
+        217
+      ],
+      [
+        "scene/3d/navigation_obstacle_3d.cpp",
+        224,
+        224
+      ],
+      [
+        "scene/resources/mesh.cpp",
+        2333,
+        2338
+      ]
+    ]
+  },
+  {
+    "id": "BUG-113",
+    "sev": "High",
+    "title": "Null dereference in `TileMapLayer::_scenes_update_cell()` and infinite loop in `GPUParticlesCollisionHeightField3D` with negative/zero scale",
+    "files": [
+      [
+        "scene/2d/tile_map_layer.cpp",
+        1268,
+        1287
+      ],
+      [
+        "scene/3d/gpu_particles_collision_3d.cpp",
+        674,
+        705
+      ]
+    ]
+  },
+  {
+    "id": "BUG-114",
+    "sev": "High",
+    "title": "`uint32_t` underflow and heap OOB read in `PortableCompressedTexture2D::_set_data()` plus broken format header in `create_from_image()`",
+    "files": [
+      [
+        "scene/resources/portable_compressed_texture.cpp",
+        73,
+        90
+      ],
+      [
+        "scene/resources/portable_compressed_texture.cpp",
+        142,
+        142
+      ],
+      [
+        "scene/resources/portable_compressed_texture.cpp",
+        180,
+        204
+      ]
+    ]
+  },
+  {
+    "id": "BUG-115",
+    "sev": "High",
+    "title": "Permanent `AudioServer` mutex deadlock in `AudioStreamPlaybackPolyphonic::stop()`, plus null deref and broken volume ramping",
+    "files": [
+      [
+        "scene/resources/audio_stream_polyphonic.cpp",
+        83,
+        105
+      ],
+      [
+        "scene/resources/audio_stream_polyphonic.cpp",
+        145,
+        145
+      ],
+      [
+        "scene/resources/audio_stream_polyphonic.cpp",
+        153,
+        172
+      ],
+      [
+        "scene/resources/audio_stream_polyphonic.cpp",
+        223,
+        235
+      ]
+    ]
+  },
+  {
+    "id": "BUG-116",
+    "sev": "High",
+    "title": "Heap OOB read in `SceneState::set_bundled_scene()` and unvalidated `bitmask` length -> heap OOB write in `BitMap::set_bit_rect()`",
+    "files": [
+      [
+        "scene/resources/packed_scene.cpp",
+        1391,
+        1401
+      ],
+      [
+        "scene/resources/packed_scene.cpp",
+        1435,
+        1512
+      ],
+      [
+        "scene/resources/bit_map.cpp",
+        71,
+        92
+      ],
+      [
+        "scene/resources/bit_map.cpp",
+        157,
+        163
+      ]
+    ]
+  },
+  {
+    "id": "BUG-117",
+    "sev": "High",
+    "title": "Heap UAF on `ARRAY_TANGENT` in double-precision builds and OOB crash in `MeshDataTool::commit_to_surface()`",
+    "files": [
+      [
+        "scene/resources/mesh_data_tool.cpp",
+        87,
+        90
+      ],
+      [
+        "scene/resources/mesh_data_tool.cpp",
+        124,
+        126
+      ],
+      [
+        "scene/resources/mesh_data_tool.cpp",
+        280,
+        292
+      ],
+      [
+        "scene/resources/mesh_data_tool.cpp",
+        423,
+        440
+      ]
+    ]
+  },
+  {
+    "id": "BUG-118",
+    "sev": "High",
+    "title": "AB-BA deadlock and concurrent TOCTOU / OOB write in `NavigationPolygon::get_navigation_mesh()`",
+    "files": [
+      [
+        "scene/resources/2d/navigation_polygon.cpp",
+        84,
+        92
+      ],
+      [
+        "scene/resources/2d/navigation_polygon.cpp",
+        189,
+        200
+      ],
+      [
+        "scene/resources/2d/navigation_polygon.cpp",
+        211,
+        238
+      ]
+    ]
+  },
+  {
+    "id": "BUG-119",
+    "sev": "High",
+    "title": "Heap OOB reads in `ImporterMesh::generate_lods()` and `lightmap_unwrap_cached()` when normals are absent",
+    "files": [
+      [
+        "scene/resources/3d/importer_mesh.cpp",
+        314,
+        326
+      ],
+      [
+        "scene/resources/3d/importer_mesh.cpp",
+        360,
+        362
+      ],
+      [
+        "scene/resources/3d/importer_mesh.cpp",
+        614,
+        616
+      ],
+      [
+        "scene/resources/3d/importer_mesh.cpp",
+        1136,
+        1173
+      ],
+      [
+        "scene/resources/3d/importer_mesh.cpp",
+        1238,
+        1272
+      ]
+    ]
+  },
+  {
+    "id": "BUG-120",
+    "sev": "High",
+    "title": "Empty-vector OOB dereferences and uninitialized metadata reads in `CompressedTexture2D`/`3D`/`Layered` loaders",
+    "files": [
+      [
+        "scene/resources/compressed_texture.cpp",
+        318,
+        327
+      ],
+      [
+        "scene/resources/compressed_texture.cpp",
+        369,
+        394
+      ],
+      [
+        "scene/resources/compressed_texture.cpp",
+        425,
+        434
+      ],
+      [
+        "scene/resources/compressed_texture.cpp",
+        525,
+        569
+      ],
+      [
+        "scene/resources/compressed_texture.cpp",
+        717,
+        765
+      ]
+    ]
+  },
+  {
+    "id": "BUG-121",
+    "sev": "High",
+    "title": "Legacy `ArrayMesh` compatibility OOB `_old_primitives[7]` read, `SIGFPE` div-by-zero, and tangent conversion overwriting normals",
+    "files": [
+      [
+        "scene/resources/mesh.cpp",
+        1038,
+        1039
+      ],
+      [
+        "scene/resources/mesh.cpp",
+        1157,
+        1188
+      ],
+      [
+        "scene/resources/mesh.cpp",
+        1351,
+        1378
+      ]
+    ]
+  },
+  {
+    "id": "BUG-122",
+    "sev": "High",
+    "title": "Off-by-one bone index checks (`>` vs `>=`) -> null derefs in `SkeletonModification2DCCDIK` & `PhysicalBones`; data races in `ParticleProcessMaterial` & `NavigationMeshSourceGeometryData3D`",
+    "files": [
+      [
+        "scene/resources/2d/skeleton/skeleton_modification_2d_ccdik.cpp",
+        195,
+        204
+      ],
+      [
+        "scene/resources/2d/skeleton/skeleton_modification_2d_physicalbones.cpp",
+        126,
+        135
+      ],
+      [
+        "scene/resources/particle_process_material.cpp",
+        1157,
+        1172
+      ],
+      [
+        "scene/resources/particle_process_material.cpp",
+        2318,
+        2332
+      ],
+      [
+        "scene/resources/3d/navigation_mesh_source_geometry_data_3d.cpp",
+        43,
+        47
+      ],
+      [
+        "scene/resources/3d/navigation_mesh_source_geometry_data_3d.cpp",
+        192,
+        204
+      ]
+    ]
+  },
+  {
+    "id": "BUG-123",
+    "sev": "High",
+    "title": "Stale-index OOB reads and null derefs in `PopupMenu`, `ItemList`, `CodeEdit::confirm_code_completion()`, and `GraphEditArranger::arrange_nodes()`",
+    "files": [
+      [
+        "scene/gui/popup_menu.cpp",
+        334,
+        338
+      ],
+      [
+        "scene/gui/popup_menu.cpp",
+        437,
+        443
+      ],
+      [
+        "scene/gui/popup_menu.cpp",
+        1060,
+        1065
+      ],
+      [
+        "scene/gui/popup_menu.cpp",
+        2441,
+        2457
+      ],
+      [
+        "scene/gui/item_list.cpp",
+        468,
+        496
+      ],
+      [
+        "scene/gui/item_list.cpp",
+        789,
+        793
+      ],
+      [
+        "scene/gui/code_edit.cpp",
+        2225,
+        2233
+      ],
+      [
+        "scene/gui/code_edit.cpp",
+        3450,
+        3450
+      ],
+      [
+        "scene/gui/graph_edit_arranger.cpp",
+        80,
+        83
+      ]
+    ]
+  },
+  {
+    "id": "BUG-124",
+    "sev": "High",
+    "title": "Infinite loops in `TextEdit::search()`, `Control::find_next/prev_valid_focus()`, and `GraphEdit` frame cycles, plus `TabContainer` null deref / tree cycle",
+    "files": [
+      [
+        "scene/gui/text_edit.cpp",
+        4192,
+        4235
+      ],
+      [
+        "scene/gui/control.cpp",
+        2083,
+        2148
+      ],
+      [
+        "scene/gui/control.cpp",
+        2170,
+        2227
+      ],
+      [
+        "scene/gui/graph_edit.cpp",
+        582,
+        592
+      ],
+      [
+        "scene/gui/graph_edit.cpp",
+        2289,
+        2301
+      ],
+      [
+        "scene/gui/tab_container.cpp",
+        428,
+        436
+      ]
+    ]
+  },
+  {
+    "id": "BUG-125",
+    "sev": "Medium",
+    "title": "Scene logic/API bugs: `PolygonPathFinder` inverted `_set_data`, `Curve` uninitialized baked endpoints, `Theme` cycle OOM, `ResourceLoaderText` null derefs, `TileSet` `display_placeholder`, `CPUParticles`/`Parallax2D`/`BoneAttachment3D`/`MeshInstance3D`/`Camera2D`/`AudioStreamPlayer3D`/`GraphNode`/`TextureProgressBar`/`LineEdit`/`ColorPicker`/`MissingNode`",
+    "files": [
+      [
+        "scene/resources/2d/polygon_path_finder.cpp",
+        217,
+        226
+      ],
+      [
+        "scene/resources/2d/polygon_path_finder.cpp",
+        396,
+        405
+      ],
+      [
+        "scene/resources/curve.cpp",
+        311,
+        311
+      ],
+      [
+        "scene/resources/curve.cpp",
+        323,
+        323
+      ],
+      [
+        "scene/resources/curve.cpp",
+        455,
+        472
+      ],
+      [
+        "scene/resources/theme.cpp",
+        1113,
+        1129
+      ],
+      [
+        "scene/resources/theme.cpp",
+        1253,
+        1272
+      ],
+      [
+        "scene/resources/resource_format_text.cpp",
+        608,
+        608
+      ],
+      [
+        "scene/resources/resource_format_text.cpp",
+        715,
+        745
+      ],
+      [
+        "scene/resources/resource_format_text.cpp",
+        779,
+        785
+      ],
+      [
+        "scene/resources/resource_format_text.cpp",
+        945,
+        945
+      ],
+      [
+        "scene/resources/resource_format_text.cpp",
+        1163,
+        1163
+      ],
+      [
+        "scene/resources/resource_format_text.cpp",
+        1878,
+        1878
+      ],
+      [
+        "scene/resources/resource_format_text.cpp",
+        2066,
+        2066
+      ],
+      [
+        "scene/resources/2d/tile_set.cpp",
+        1036,
+        1112
+      ],
+      [
+        "scene/resources/2d/tile_set.cpp",
+        5843,
+        5866
+      ],
+      [
+        "scene/2d/cpu_particles_2d.cpp",
+        727,
+        730
+      ],
+      [
+        "scene/3d/cpu_particles_3d.cpp",
+        763,
+        766
+      ],
+      [
+        "scene/2d/parallax_2d.cpp",
+        49,
+        54
+      ],
+      [
+        "scene/3d/bone_attachment_3d.cpp",
+        56,
+        74
+      ],
+      [
+        "scene/3d/bone_attachment_3d.cpp",
+        146,
+        146
+      ],
+      [
+        "scene/3d/mesh_instance_3d.cpp",
+        566,
+        566
+      ],
+      [
+        "scene/3d/mesh_instance_3d.cpp",
+        626,
+        630
+      ],
+      [
+        "scene/2d/camera_2d.cpp",
+        641,
+        645
+      ],
+      [
+        "scene/3d/audio_stream_player_3d.cpp",
+        264,
+        270
+      ],
+      [
+        "scene/3d/audio_stream_player_3d.cpp",
+        342,
+        342
+      ],
+      [
+        "scene/3d/audio_stream_player_3d.cpp",
+        399,
+        399
+      ],
+      [
+        "scene/gui/graph_node.cpp",
+        293,
+        300
+      ],
+      [
+        "scene/gui/graph_node.cpp",
+        340,
+        373
+      ],
+      [
+        "scene/gui/texture_progress_bar.cpp",
+        338,
+        338
+      ],
+      [
+        "scene/gui/texture_progress_bar.cpp",
+        381,
+        386
+      ],
+      [
+        "scene/gui/line_edit.cpp",
+        1210,
+        1223
+      ],
+      [
+        "scene/gui/line_edit.cpp",
+        1533,
+        1538
+      ],
+      [
+        "scene/gui/color_picker.cpp",
+        925,
+        939
+      ],
+      [
+        "scene/main/missing_node.cpp",
+        104,
+        105
+      ]
+    ]
+  },
+  {
+    "id": "BUG-126",
+    "sev": "Critical",
+    "title": "Heap buffer overflow in `DAPeer` (`req_pos = 0` before `ERR_FAIL_COND_V_MSG(req_pos >= DAP_MAX_BUFFER_SIZE)`), plus framing/UTF-8 bugs",
+    "files": [
+      [
+        "editor/debugger/debug_adapter/debug_adapter_protocol.h",
+        41,
+        41
+      ],
+      [
+        "editor/debugger/debug_adapter/debug_adapter_protocol.h",
+        49,
+        49
+      ],
+      [
+        "editor/debugger/debug_adapter/debug_adapter_protocol.cpp",
+        79,
+        93
+      ],
+      [
+        "editor/debugger/debug_adapter/debug_adapter_protocol.cpp",
+        123,
+        131
+      ]
+    ]
+  },
+  {
+    "id": "BUG-127",
+    "sev": "Critical",
+    "title": "Zip Slip arbitrary file write outside target directory in `ProjectDialog` and `EditorAssetInstaller`, plus `unzFile` leaks and unterminated stack buffer",
+    "files": [
+      [
+        "editor/project_manager/project_dialog.cpp",
+        130,
+        134
+      ],
+      [
+        "editor/project_manager/project_dialog.cpp",
+        567,
+        632
+      ],
+      [
+        "editor/editor_asset_installer.cpp",
+        126,
+        129
+      ],
+      [
+        "editor/editor_asset_installer.cpp",
+        514,
+        565
+      ]
+    ]
+  },
+  {
+    "id": "BUG-128",
+    "sev": "Critical",
+    "title": "`EditorUndoRedoManager::clear_history()` leaves stale `undo_stack`/`redo_stack`, causing infinite loop hang or null deref in `HistoryDock`",
+    "files": [
+      [
+        "editor/editor_undo_redo_manager.cpp",
+        288,
+        301
+      ],
+      [
+        "editor/editor_undo_redo_manager.cpp",
+        341,
+        354
+      ],
+      [
+        "editor/editor_undo_redo_manager.cpp",
+        393,
+        412
+      ],
+      [
+        "editor/history_dock.cpp",
+        184,
+        206
+      ]
+    ]
+  },
+  {
+    "id": "BUG-129",
+    "sev": "Critical",
+    "title": "Heap UAF via `HashMap` erasure during range-based iteration in `TileMapLayerEditor::_update_fix_selected_and_hovered()`",
+    "files": [
+      [
+        "editor/plugins/tiles/tile_map_layer_editor.cpp",
+        1651,
+        1660
+      ],
+      [
+        "scene/resources/2d/tile_set.h",
+        138,
+        138
+      ],
+      [
+        "scene/resources/2d/tile_set.cpp",
+        115,
+        126
+      ]
+    ]
+  },
+  {
+    "id": "BUG-130",
+    "sev": "High",
+    "title": "Path traversal via unsanitized `version.txt` in `.tpz` export template installer (`ExportTemplateManager`)",
+    "files": [
+      [
+        "editor/export/export_template_manager.cpp",
+        404,
+        452
+      ],
+      [
+        "editor/export/export_template_manager.cpp",
+        469,
+        475
+      ],
+      [
+        "editor/export/export_template_manager.cpp",
+        521,
+        534
+      ],
+      [
+        "editor/export/export_template_manager.cpp",
+        761,
+        767
+      ]
+    ]
+  },
+  {
+    "id": "BUG-131",
+    "sev": "High",
+    "title": "Multiple OOB heap reads, `uint32_t` overflow, unbounded OID loop, and missing advance in Mach-O `CodeSignRequirements` parser",
+    "files": [
+      [
+        "editor/export/codesign.cpp",
+        472,
+        555
+      ],
+      [
+        "editor/export/codesign.cpp",
+        640,
+        679
+      ]
+    ]
+  },
+  {
+    "id": "BUG-132",
+    "sev": "High",
+    "title": "`ERR_FAIL_V_MSG` used instead of `ERR_FAIL_COND_V_MSG` breaks universal Mach-O creation in `LipO::create_file()`",
+    "files": [
+      [
+        "editor/export/lipo.cpp",
+        146,
+        153
+      ]
+    ]
+  },
+  {
+    "id": "BUG-133",
+    "sev": "High",
+    "title": "QOA buffer memory leak, unchecked NULL `qoa_encode` return, and `uint32_t` wraparound infinite loop in `ResourceImporterWAV`",
+    "files": [
+      [
+        "editor/import/resource_importer_wav.cpp",
+        150,
+        151
+      ],
+      [
+        "editor/import/resource_importer_wav.cpp",
+        297,
+        297
+      ],
+      [
+        "editor/import/resource_importer_wav.cpp",
+        383,
+        383
+      ],
+      [
+        "editor/import/resource_importer_wav.cpp",
+        518,
+        530
+      ],
+      [
+        "thirdparty/misc/qoa.h",
+        503,
+        503
+      ]
+    ]
+  },
+  {
+    "id": "BUG-134",
+    "sev": "High",
+    "title": "OOB crash in OBJ tangent validation and copy-paste `Ns` overwriting `metallic` instead of `roughness` in `ResourceImporterOBJ`",
+    "files": [
+      [
+        "editor/import/3d/resource_importer_obj.cpp",
+        87,
+        93
+      ],
+      [
+        "editor/import/3d/resource_importer_obj.cpp",
+        429,
+        439
+      ]
+    ]
+  },
+  {
+    "id": "BUG-135",
+    "sev": "High",
+    "title": "Null pointer dereference on missing `WEIGHT` source and OOB index reads in Collada `.dae` importer",
+    "files": [
+      [
+        "editor/import/3d/editor_import_collada.cpp",
+        645,
+        681
+      ],
+      [
+        "editor/import/3d/editor_import_collada.cpp",
+        761,
+        815
+      ]
+    ]
+  },
+  {
+    "id": "BUG-136",
+    "sev": "High",
+    "title": "Index desynchronization on load failure causes OOB / null deref crash in `ResourceImporterTextureAtlas`",
+    "files": [
+      [
+        "editor/import/resource_importer_texture_atlas.cpp",
+        201,
+        213
+      ],
+      [
+        "editor/import/resource_importer_texture_atlas.cpp",
+        277,
+        277
+      ],
+      [
+        "editor/import/resource_importer_texture_atlas.cpp",
+        324,
+        342
+      ]
+    ]
+  },
+  {
+    "id": "BUG-137",
+    "sev": "High",
+    "title": "UAF on shutdown (unjoined threads), COW data race, and self-read copy-paste bug in `AudioStreamPreviewGenerator`",
+    "files": [
+      [
+        "editor/audio_stream_preview.h",
+        71,
+        86
+      ],
+      [
+        "editor/audio_stream_preview.cpp",
+        60,
+        65
+      ],
+      [
+        "editor/audio_stream_preview.cpp",
+        91,
+        96
+      ],
+      [
+        "editor/audio_stream_preview.cpp",
+        156,
+        164
+      ],
+      [
+        "editor/audio_stream_preview.cpp",
+        205,
+        216
+      ],
+      [
+        "editor/audio_stream_preview.cpp",
+        226,
+        254
+      ]
+    ]
+  },
+  {
+    "id": "BUG-138",
+    "sev": "High",
+    "title": "Unsynchronized data races on `cache` (`HashMap`) and `preview_generators` (`Vector`) in `EditorResourcePreview`",
+    "files": [
+      [
+        "editor/editor_resource_preview.cpp",
+        144,
+        160
+      ],
+      [
+        "editor/editor_resource_preview.cpp",
+        192,
+        225
+      ],
+      [
+        "editor/editor_resource_preview.cpp",
+        247,
+        250
+      ],
+      [
+        "editor/editor_resource_preview.cpp",
+        467,
+        473
+      ]
+    ]
+  },
+  {
+    "id": "BUG-139",
+    "sev": "High",
+    "title": "Bare filename passed to `_delete_internal_files()` orphans `.import` files or deletes unrelated root assets, plus broken sorted insertion",
+    "files": [
+      [
+        "editor/editor_file_system.cpp",
+        701,
+        716
+      ],
+      [
+        "editor/editor_file_system.cpp",
+        1312,
+        1322
+      ],
+      [
+        "editor/editor_file_system.cpp",
+        2027,
+        2037
+      ]
+    ]
+  },
+  {
+    "id": "BUG-140",
+    "sev": "High",
+    "title": "Heap UAF erasing from `List` during range-for in `CanvasItemEditor::_gui_input_rotate()`",
+    "files": [
+      [
+        "editor/plugins/canvas_item_editor_plugin.cpp",
+        1462,
+        1469
+      ],
+      [
+        "core/templates/list.h",
+        172,
+        175
+      ],
+      [
+        "core/templates/list.h",
+        247,
+        247
+      ]
+    ]
+  },
+  {
+    "id": "BUG-141",
+    "sev": "High",
+    "title": "Heap UAF erasing `List::Element` inside loop increment in `ConnectionsDock::update_tree()`",
+    "files": [
+      [
+        "editor/connections_dialog.cpp",
+        1454,
+        1459
+      ],
+      [
+        "core/templates/list.h",
+        247,
+        247
+      ]
+    ]
+  },
+  {
+    "id": "BUG-142",
+    "sev": "High",
+    "title": "Heap UAF via raw non-owning `TileSetScenesCollectionSource *` (plus dead `NOTIFICATION_INTERNAL_PROCESS`)",
+    "files": [
+      [
+        "editor/plugins/tiles/tile_set_scenes_collection_source_editor.h",
+        53,
+        53
+      ],
+      [
+        "editor/plugins/tiles/tile_set_scenes_collection_source_editor.h",
+        76,
+        76
+      ],
+      [
+        "editor/plugins/tiles/tile_set_scenes_collection_source_editor.h",
+        100,
+        100
+      ],
+      [
+        "editor/plugins/tiles/tile_set_scenes_collection_source_editor.cpp",
+        117,
+        119
+      ],
+      [
+        "editor/plugins/tiles/tile_set_scenes_collection_source_editor.cpp",
+        322,
+        322
+      ],
+      [
+        "editor/plugins/tiles/tile_set_scenes_collection_source_editor.cpp",
+        375,
+        390
+      ],
+      [
+        "editor/plugins/tiles/tile_set_scenes_collection_source_editor.cpp",
+        416,
+        418
+      ],
+      [
+        "editor/plugins/tiles/tile_set_editor.cpp",
+        257,
+        257
+      ],
+      [
+        "editor/plugins/tiles/tile_set_editor.cpp",
+        266,
+        266
+      ],
+      [
+        "editor/plugins/tiles/tile_set_editor.cpp",
+        271,
+        271
+      ]
+    ]
+  },
+  {
+    "id": "BUG-143",
+    "sev": "High",
+    "title": "Uninitialized `bool` reads (`trim_trailing_whitespace_on_save` / `trim_final_newlines_on_save`) on every opened shader in `TextShaderEditor`",
+    "files": [
+      [
+        "editor/plugins/text_shader_editor.h",
+        178,
+        179
+      ],
+      [
+        "editor/plugins/text_shader_editor.cpp",
+        759,
+        774
+      ],
+      [
+        "editor/plugins/text_shader_editor.cpp",
+        934,
+        940
+      ],
+      [
+        "editor/plugins/text_shader_editor.cpp",
+        1257,
+        1257
+      ]
+    ]
+  },
+  {
+    "id": "BUG-144",
+    "sev": "High",
+    "title": "Null dereference crash in `CollisionShape2DEditor::edit(nullptr)` when node is removed during handle drag",
+    "files": [
+      [
+        "editor/plugins/collision_shape_2d_editor_plugin.cpp",
+        51,
+        55
+      ],
+      [
+        "editor/plugins/collision_shape_2d_editor_plugin.cpp",
+        124,
+        208
+      ],
+      [
+        "editor/plugins/collision_shape_2d_editor_plugin.cpp",
+        557,
+        566
+      ]
+    ]
+  },
+  {
+    "id": "BUG-145",
+    "sev": "High",
+    "title": "OOB array crash in `LightmapGIGizmoPlugin::redraw()` on unvalidated tetrahedra indices",
+    "files": [
+      [
+        "editor/plugins/gizmos/lightmap_gi_gizmo_plugin.cpp",
+        88,
+        117
+      ],
+      [
+        "scene/3d/lightmap_gi.cpp",
+        154,
+        160
+      ]
+    ]
+  },
+  {
+    "id": "BUG-146",
+    "sev": "High",
+    "title": "Uncommitted `\"Split Curve\"` action in `Path2DEditor` permanently wedges `EditorUndoRedoManager`",
+    "files": [
+      [
+        "editor/plugins/path_2d_editor_plugin.cpp",
+        179,
+        246
+      ],
+      [
+        "editor/plugins/path_2d_editor_plugin.cpp",
+        562,
+        575
+      ]
+    ]
+  },
+  {
+    "id": "BUG-147",
+    "sev": "High",
+    "title": "Silent source file corruption in `FindInFilesPanel::apply_replaces_in_file()` due to ignored match offset",
+    "files": [
+      [
+        "editor/find_in_files.cpp",
+        960,
+        983
+      ]
+    ]
+  },
+  {
+    "id": "BUG-148",
+    "sev": "High",
+    "title": "`NavigationObstacle3DEditor` calls nonexistent `get_polygon`/`set_polygon` methods and has commented-out undo/redo commits",
+    "files": [
+      [
+        "editor/plugins/navigation_obstacle_3d_editor_plugin.cpp",
+        143,
+        143
+      ],
+      [
+        "editor/plugins/navigation_obstacle_3d_editor_plugin.cpp",
+        184,
+        193
+      ],
+      [
+        "editor/plugins/navigation_obstacle_3d_editor_plugin.cpp",
+        258,
+        273
+      ],
+      [
+        "editor/plugins/navigation_obstacle_3d_editor_plugin.cpp",
+        291,
+        301
+      ],
+      [
+        "editor/plugins/navigation_obstacle_3d_editor_plugin.cpp",
+        343,
+        351
+      ],
+      [
+        "editor/plugins/navigation_obstacle_3d_editor_plugin.cpp",
+        497,
+        497
+      ]
+    ]
+  },
+  {
+    "id": "BUG-149",
+    "sev": "High",
+    "title": "Heap UAF of dangling `button_add_item` pointer in `EditorPropertyLocalizableString`",
+    "files": [
+      [
+        "editor/editor_properties_array_dict.h",
+        261,
+        261
+      ],
+      [
+        "editor/editor_properties_array_dict.cpp",
+        1281,
+        1286
+      ],
+      [
+        "editor/editor_properties_array_dict.cpp",
+        1335,
+        1340
+      ],
+      [
+        "editor/editor_properties_array_dict.cpp",
+        1358,
+        1367
+      ]
+    ]
+  },
+  {
+    "id": "BUG-150",
+    "sev": "High",
+    "title": "Unchecked null `Ref<AnimationNodeStateMachinePlayback>` dereference in `AnimationNodeStateMachineEditor`",
+    "files": [
+      [
+        "editor/plugins/animation_state_machine_editor.cpp",
+        1423,
+        1443
+      ]
+    ]
+  },
+  {
+    "id": "BUG-151",
+    "sev": "High",
+    "title": "Unchecked null `Ref<Shader>` dereference in `EditorInspector::update_tree()`",
+    "files": [
+      [
+        "editor/editor_inspector.cpp",
+        3476,
+        3484
+      ]
+    ]
+  },
+  {
+    "id": "BUG-152",
+    "sev": "High",
+    "title": "Out-of-bounds read on static `global_var_type_names` array in `ShaderGlobalsEditorInterface::_set_var()`",
+    "files": [
+      [
+        "editor/shader_globals_editor.cpp",
+        38,
+        67
+      ],
+      [
+        "editor/shader_globals_editor.cpp",
+        72,
+        81
+      ],
+      [
+        "editor/shader_globals_editor.cpp",
+        112,
+        122
+      ]
+    ]
+  },
+  {
+    "id": "BUG-153",
+    "sev": "High",
+    "title": "In-place mutation `snap_unit *= 0.25` in `AnimationTrackEditor::snap_time()` underflows to `0` (`NaN` keyframe times) plus div-by-zero for `step > 2.0`",
+    "files": [
+      [
+        "editor/animation_track_editor.h",
+        653,
+        653
+      ],
+      [
+        "editor/animation_track_editor.cpp",
+        7026,
+        7055
+      ]
+    ]
+  },
+  {
+    "id": "BUG-154",
+    "sev": "Medium",
+    "title": "Memory leak of `PhysicalBoneSimulator3D` in `Skeleton3DEditor::create_physical_skeleton()`",
+    "files": [
+      [
+        "editor/plugins/skeleton_3d_editor_plugin.cpp",
+        378,
+        424
+      ]
+    ]
+  },
+  {
+    "id": "BUG-155",
+    "sev": "Medium",
+    "title": "Broken undo/redo in `GenericTilePolygonEditor`, `TileProxiesManagerDialog`, and `AtlasMergingDialog`",
+    "files": [
+      [
+        "editor/plugins/tiles/tile_data_editors.cpp",
+        573,
+        586
+      ],
+      [
+        "editor/plugins/tiles/tile_data_editors.cpp",
+        605,
+        611
+      ],
+      [
+        "editor/plugins/tiles/tile_proxies_manager_dialog.cpp",
+        166,
+        192
+      ],
+      [
+        "editor/plugins/tiles/atlas_merging_dialog.cpp",
+        130,
+        130
+      ],
+      [
+        "editor/plugins/tiles/atlas_merging_dialog.cpp",
+        209,
+        215
+      ]
+    ]
+  },
+  {
+    "id": "BUG-156",
+    "sev": "Medium",
+    "title": "Broken 64-bit alignment (`pos % 8`) in embedded PCK export, NUL-byte ZIP symlinks, and missing `i += 5` in `ResourceImporterImageFont`",
+    "files": [
+      [
+        "editor/export/editor_export_platform.cpp",
+        1488,
+        1488
+      ],
+      [
+        "editor/export/editor_export_platform.cpp",
+        1531,
+        1535
+      ],
+      [
+        "editor/export/editor_export_platform.cpp",
+        1613,
+        1617
+      ],
+      [
+        "editor/export/editor_export_platform.cpp",
+        1758,
+        1763
+      ],
+      [
+        "editor/import/resource_importer_imagefont.cpp",
+        295,
+        311
+      ]
+    ]
+  },
+  {
+    "id": "BUG-157",
+    "sev": "Medium",
+    "title": "Copy-paste `md = MAX(0, ...)` overwrites accumulator in `EditorNode3DGizmo` billboard AABB computation",
+    "files": [
+      [
+        "editor/plugins/node_3d_editor_gizmos.cpp",
+        283,
+        291
+      ],
+      [
+        "editor/plugins/node_3d_editor_gizmos.cpp",
+        339,
+        346
+      ],
+      [
+        "editor/plugins/node_3d_editor_gizmos.cpp",
+        423,
+        431
+      ]
+    ]
+  },
+  {
+    "id": "BUG-158",
+    "sev": "Medium",
+    "title": "Ctrl-dragging `EditorSpinSlider` corrupts `pre_grab_value` every event, breaking cancel and dead-coding `* 10`",
+    "files": [
+      [
+        "editor/gui/editor_spin_slider.cpp",
+        79,
+        83
+      ],
+      [
+        "editor/gui/editor_spin_slider.cpp",
+        98,
+        98
+      ],
+      [
+        "editor/gui/editor_spin_slider.cpp",
+        114,
+        125
+      ],
+      [
+        "editor/gui/editor_spin_slider.cpp",
+        139,
+        143
+      ]
+    ]
+  },
+  {
+    "id": "BUG-159",
+    "sev": "Medium",
+    "title": "`EditorSelection::_update_node_list()` sets `node_list_changed = true` instead of `false`; `FileSystemDock` runs `move_group_file()` before collision check",
+    "files": [
+      [
+        "editor/editor_data.cpp",
+        1267,
+        1296
+      ],
+      [
+        "editor/editor_data.cpp",
+        1336,
+        1343
+      ],
+      [
+        "editor/filesystem_dock.cpp",
+        1802,
+        1825
+      ]
+    ]
+  },
+  {
+    "id": "BUG-160",
+    "sev": "Medium",
+    "title": "Shared `Dictionary` mutated across error links in `ScriptTextEditor`, stale `from_node` in `AnimationNodeBlendTreeEditor`, discarded Ctrl-snap in `EditorAudioBus`, and world-origin AABB merge in `Node3DEditor`",
+    "files": [
+      [
+        "editor/plugins/script_text_editor.cpp",
+        664,
+        697
+      ],
+      [
+        "editor/plugins/script_text_editor.cpp",
+        727,
+        727
+      ],
+      [
+        "editor/plugins/script_text_editor.cpp",
+        1240,
+        1240
+      ],
+      [
+        "editor/plugins/animation_blend_tree_editor_plugin.cpp",
+        349,
+        352
+      ],
+      [
+        "editor/plugins/animation_blend_tree_editor_plugin.cpp",
+        375,
+        378
+      ],
+      [
+        "editor/plugins/animation_blend_tree_editor_plugin.cpp",
+        432,
+        435
+      ],
+      [
+        "editor/editor_audio_buses.cpp",
+        331,
+        355
+      ],
+      [
+        "editor/plugins/node_3d_editor_plugin.cpp",
+        7612,
+        7636
+      ]
+    ]
+  }
+]

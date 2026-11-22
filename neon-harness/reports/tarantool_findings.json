@@ -1,0 +1,3745 @@
+[
+  {
+    "id": "F-001",
+    "sev": "Critical",
+    "title": "Privilege escalation via new-owner UID check in `on_replace_dd_space()`",
+    "files": [
+      [
+        "src/box/alter.cc",
+        2286,
+        2295
+      ]
+    ]
+  },
+  {
+    "id": "F-002",
+    "sev": "Critical",
+    "title": "Pre-authentication stack/heap OOB write via unvalidated replica ID in `mp_decode_vclock_ignore0()`",
+    "files": [
+      [
+        "src/box/xrow.c",
+        80,
+        101
+      ],
+      [
+        "src/lib/vclock/vclock.c",
+        41,
+        52
+      ],
+      [
+        "src/box/box.cc",
+        2884,
+        2896
+      ],
+      [
+        "src/box/box.cc",
+        3130,
+        3142
+      ]
+    ]
+  },
+  {
+    "id": "F-003",
+    "sev": "Critical",
+    "title": "Remote format string vulnerability in `xrow_decode_error()`",
+    "files": [
+      [
+        "src/box/xrow.c",
+        1490,
+        1540
+      ],
+      [
+        "src/box/error.cc",
+        74,
+        87
+      ]
+    ]
+  },
+  {
+    "id": "F-004",
+    "sev": "Critical",
+    "title": "Pre-authentication remote crash via 16-to-8-bit truncation of `msg->header.type` in `iproto_msg_decode()`",
+    "files": [
+      [
+        "src/box/iproto.cc",
+        1538,
+        1548
+      ],
+      [
+        "src/box/iproto.cc",
+        2152,
+        2162
+      ],
+      [
+        "src/box/iproto.cc",
+        2247,
+        2285
+      ],
+      [
+        "src/box/iproto.cc",
+        2313,
+        2314
+      ],
+      [
+        "src/box/iproto.cc",
+        2409,
+        2435
+      ],
+      [
+        "src/box/xrow.h",
+        65,
+        65
+      ]
+    ]
+  },
+  {
+    "id": "F-005",
+    "sev": "Critical",
+    "title": "Pre-authentication MsgPack type confusion and OOB read/crash in `xrow_decode_sql()` / `tx_process_sql()`",
+    "files": [
+      [
+        "src/box/xrow.c",
+        682,
+        731
+      ],
+      [
+        "src/box/iproto.cc",
+        2328,
+        2363
+      ]
+    ]
+  },
+  {
+    "id": "F-006",
+    "sev": "Critical",
+    "title": "Remote arbitrary OOB 32-bit increment via unvalidated `req->vote` in `raft_process_msg()`",
+    "files": [
+      [
+        "src/lib/raft/raft.c",
+        147,
+        159
+      ],
+      [
+        "src/lib/raft/raft.c",
+        459,
+        496
+      ],
+      [
+        "src/lib/raft/raft.h",
+        209,
+        209
+      ],
+      [
+        "src/box/xrow.c",
+        1219,
+        1223
+      ],
+      [
+        "src/box/raft.c",
+        107,
+        117
+      ],
+      [
+        "src/box/raft.c",
+        357,
+        362
+      ]
+    ]
+  },
+  {
+    "id": "F-007",
+    "sev": "Critical",
+    "title": "Remote single-UDP-packet NULL dereference crash on forwarding and ECB stack OOB/uninitialized read",
+    "files": [
+      [
+        "src/lib/swim/swim_io.c",
+        639,
+        693
+      ],
+      [
+        "src/lib/swim/swim_io.h",
+        61,
+        72
+      ],
+      [
+        "src/lib/swim/swim_io.h",
+        102,
+        102
+      ]
+    ]
+  },
+  {
+    "id": "F-008",
+    "sev": "Critical",
+    "title": "Heap buffer overflow in Vinyl UPSERT normalization via negative `request->index_base`",
+    "files": [
+      [
+        "src/box/vinyl.c",
+        2013,
+        2089
+      ],
+      [
+        "src/box/xrow.c",
+        844,
+        846
+      ],
+      [
+        "src/box/xrow.h",
+        198,
+        198
+      ]
+    ]
+  },
+  {
+    "id": "F-009",
+    "sev": "Critical",
+    "title": "Stack buffer overflow in `xlog_meta_parse()` on single-line header (`eol == end` vs `eol == NULL`)",
+    "files": [
+      [
+        "src/box/xlog.c",
+        214,
+        250
+      ]
+    ]
+  },
+  {
+    "id": "F-010",
+    "sev": "Critical",
+    "title": "Use-after-free, double-free, and NULL-underflow crash in `txn_on_timeout()` during yielding sub-statements",
+    "files": [
+      [
+        "src/box/txn.c",
+        389,
+        411
+      ],
+      [
+        "src/box/txn.c",
+        1503,
+        1511
+      ],
+      [
+        "src/box/txn.h",
+        872,
+        879
+      ],
+      [
+        "src/box/box.cc",
+        316,
+        336
+      ]
+    ]
+  },
+  {
+    "id": "F-011",
+    "sev": "Critical",
+    "title": "Deterministic use-after-free in `memtx_tx_on_space_delete()` on space drop/alter with concurrent MVCC readers",
+    "files": [
+      [
+        "src/box/memtx_tx.c",
+        806,
+        848
+      ],
+      [
+        "src/box/memtx_tx.c",
+        2463,
+        2485
+      ]
+    ]
+  },
+  {
+    "id": "F-012",
+    "sev": "Critical",
+    "title": "Heap type confusion and OOB access destroying disabled functional `TREE` index",
+    "files": [
+      [
+        "src/box/memtx_tree.cc",
+        1746,
+        1748
+      ],
+      [
+        "src/box/memtx_tree.cc",
+        1874,
+        1903
+      ]
+    ]
+  },
+  {
+    "id": "F-013",
+    "sev": "Critical",
+    "title": "Region heap OOB write and OOB MsgPack read in `tuple_constraint_def_decode_fkey()` when `old_count > 0`",
+    "files": [
+      [
+        "src/box/tuple_constraint_def.c",
+        250,
+        286
+      ],
+      [
+        "src/box/space_def.c",
+        208,
+        236
+      ],
+      [
+        "src/box/field_def.c",
+        242,
+        271
+      ]
+    ]
+  },
+  {
+    "id": "F-014",
+    "sev": "Critical",
+    "title": "Shift-count UB (`1U << ext_type`), missing `MP_EXT` payload validation, and hardcoded UUID offset in `field_def.h` / `tuple_compare.cc`",
+    "files": [
+      [
+        "src/box/field_def.h",
+        184,
+        194
+      ],
+      [
+        "src/box/tuple_compare.cc",
+        118,
+        125
+      ],
+      [
+        "src/box/tuple_compare.cc",
+        268,
+        324
+      ],
+      [
+        "src/box/tuple_compare.cc",
+        388,
+        411
+      ],
+      [
+        "src/box/tuple_compare.cc",
+        1769,
+        1885
+      ]
+    ]
+  },
+  {
+    "id": "F-015",
+    "sev": "Critical",
+    "title": "Signed `INT32_MIN` negation overflow in splice `offset`/`cut_length` causing OOB read/heap overflow/crash",
+    "files": [
+      [
+        "src/box/xrow_update_field.c",
+        480,
+        511
+      ],
+      [
+        "src/box/xrow_update_field.c",
+        588,
+        611
+      ]
+    ]
+  },
+  {
+    "id": "F-016",
+    "sev": "Critical",
+    "title": "32-bit unsigned wraparound in `xrow_update_op_do_nop_delete()` causing unbounded OOB read on nested array delete",
+    "files": [
+      [
+        "src/box/xrow_update_bar.c",
+        289,
+        298
+      ]
+    ]
+  },
+  {
+    "id": "F-017",
+    "sev": "Critical",
+    "title": "Unbounded heap OOB read, stream desynchronization, and 64-bit truncation in `interval_unpack()`",
+    "files": [
+      [
+        "src/lib/core/mp_interval.c",
+        101,
+        168
+      ],
+      [
+        "src/lua/msgpack.c",
+        414,
+        421
+      ],
+      [
+        "src/lua/tnt_datetime.c",
+        94,
+        98
+      ],
+      [
+        "src/box/bind.c",
+        131,
+        137
+      ],
+      [
+        "src/box/sql/mem.c",
+        3111,
+        3116
+      ],
+      [
+        "src/box/sql/mem.c",
+        3745,
+        3752
+      ]
+    ]
+  },
+  {
+    "id": "F-018",
+    "sev": "Critical",
+    "title": "Heap OOB read, length underflow, and unvalidated `tzindex` OOB/NULL crash in `datetime_unpack()`",
+    "files": [
+      [
+        "src/lib/core/mp_datetime.c",
+        55,
+        80
+      ],
+      [
+        "src/lib/tzcode/timezone.c",
+        88,
+        93
+      ],
+      [
+        "src/lib/core/datetime.c",
+        245,
+        250
+      ],
+      [
+        "src/lua/msgpack.c",
+        406,
+        413
+      ],
+      [
+        "src/box/bind.c",
+        124,
+        130
+      ],
+      [
+        "src/box/sql/mem.c",
+        2725,
+        2725
+      ],
+      [
+        "src/box/sql/mem.c",
+        3103,
+        3103
+      ],
+      [
+        "src/box/sql/mem.c",
+        3737,
+        3737
+      ]
+    ]
+  },
+  {
+    "id": "F-019",
+    "sev": "Critical",
+    "title": "Heap OOB read, length underflow, and scale truncation in `decimal_unpack()`, plus ignored NULL return in `xrow_mp_read_arg_arith()`",
+    "files": [
+      [
+        "src/lib/core/decimal.c",
+        452,
+        481
+      ],
+      [
+        "src/box/xrow_update_field.c",
+        208,
+        215
+      ],
+      [
+        "src/lua/msgpack.c",
+        389,
+        396
+      ],
+      [
+        "src/box/bind.c",
+        117,
+        123
+      ],
+      [
+        "src/lib/core/mp_decimal.c",
+        74,
+        90
+      ]
+    ]
+  },
+  {
+    "id": "F-020",
+    "sev": "Critical",
+    "title": "Heap and region buffer overflow in `vdbe_field_ref_create()` on tuples exceeding declared `field_count`",
+    "files": [
+      [
+        "src/box/sql.c",
+        1309,
+        1324
+      ],
+      [
+        "src/box/sql/vdbe.c",
+        232,
+        249
+      ],
+      [
+        "src/box/sql/vdbe.c",
+        1998,
+        1999
+      ],
+      [
+        "src/box/sql/vdbe.c",
+        2387,
+        2391
+      ],
+      [
+        "src/box/ck_constraint.c",
+        193,
+        203
+      ]
+    ]
+  },
+  {
+    "id": "F-021",
+    "sev": "Critical",
+    "title": "Remote heap buffer overflow and NULL dereference via missing `vdbeUnbind()` in `sql_bind_{str,bin,array,map}_static()`",
+    "files": [
+      [
+        "src/box/sql/vdbeapi.c",
+        511,
+        541
+      ],
+      [
+        "src/box/bind.c",
+        225,
+        233
+      ],
+      [
+        "src/box/bind.h",
+        144,
+        154
+      ]
+    ]
+  },
+  {
+    "id": "F-022",
+    "sev": "Critical",
+    "title": "Format string vulnerability in `OP_SetDiag` passing user-controlled SQL strings directly to `box_error_set()`",
+    "files": [
+      [
+        "src/box/sql/vdbe.c",
+        595,
+        600
+      ],
+      [
+        "src/box/sql/build.c",
+        3557,
+        3557
+      ],
+      [
+        "src/box/sql/expr.c",
+        4536,
+        4540
+      ],
+      [
+        "src/box/sql/insert.c",
+        814,
+        816
+      ],
+      [
+        "src/box/sql/insert.c",
+        863,
+        869
+      ],
+      [
+        "src/box/sql/trigger.c",
+        102,
+        116
+      ],
+      [
+        "src/box/sql/trigger.c",
+        413,
+        423
+      ]
+    ]
+  },
+  {
+    "id": "F-023",
+    "sev": "Critical",
+    "title": "Region buffer overflow in `generate_column_metadata()` on repeated bind variables and misindexed `sql_bind_type()`",
+    "files": [
+      [
+        "src/box/sql/select.c",
+        1977,
+        1996
+      ],
+      [
+        "src/box/sql/vdbeapi.c",
+        402,
+        420
+      ]
+    ]
+  },
+  {
+    "id": "F-024",
+    "sev": "Critical",
+    "title": "Use-after-free of `struct space`, `space_def`, and `index` across yields during VDBE execution",
+    "files": [
+      [
+        "src/box/sql/vdbe.c",
+        1242,
+        1293
+      ],
+      [
+        "src/box/sql/vdbe.c",
+        2019,
+        2020
+      ],
+      [
+        "src/box/sql/vdbe.c",
+        2367,
+        2405
+      ],
+      [
+        "src/box/sql/vdbe.c",
+        3471,
+        3493
+      ],
+      [
+        "src/box/sql/vdbe.c",
+        3553,
+        3601
+      ]
+    ]
+  },
+  {
+    "id": "F-025",
+    "sev": "Critical",
+    "title": "Heap buffer over-read and NUL-terminator bypass in UTF-8 whitespace tokenization (`U8_NEXT_UNSAFE`)",
+    "files": [
+      [
+        "src/box/sql/tokenize.c",
+        145,
+        187
+      ]
+    ]
+  },
+  {
+    "id": "F-026",
+    "sev": "Critical",
+    "title": "Missing `len > 0` check in `str_to_bool()` causing 4 GB OOB read/crash on empty or whitespace strings",
+    "files": [
+      [
+        "src/box/sql/mem.c",
+        765,
+        789
+      ]
+    ]
+  },
+  {
+    "id": "F-027",
+    "sev": "Critical",
+    "title": "`port_vdbemem_dump_lua()` mutates `mem->z` in place via `luamp_decode()`, causing heap over-read on reuse",
+    "files": [
+      [
+        "src/box/sql/mem.c",
+        3433,
+        3437
+      ]
+    ]
+  },
+  {
+    "id": "F-028",
+    "sev": "Critical",
+    "title": "Type confusion and arbitrary pointer write via unchecked `opts.buffer` in `net_box`",
+    "files": [
+      [
+        "src/box/lua/net_box.c",
+        2126,
+        2128
+      ],
+      [
+        "src/box/lua/net_box.c",
+        2344,
+        2353
+      ],
+      [
+        "src/box/lua/net_box.lua",
+        704,
+        737
+      ]
+    ]
+  },
+  {
+    "id": "F-029",
+    "sev": "Critical",
+    "title": "Use-after-free and double-put of `cord_ibuf` when a Lua `__serialize` metamethod yields",
+    "files": [
+      [
+        "src/box/lua/watcher.c",
+        180,
+        194
+      ],
+      [
+        "src/box/lua/tuple.c",
+        282,
+        298
+      ],
+      [
+        "src/box/lua/tuple.c",
+        314,
+        324
+      ],
+      [
+        "src/box/lua/tuple.c",
+        584,
+        629
+      ]
+    ]
+  },
+  {
+    "id": "F-030",
+    "sev": "Critical",
+    "title": "Use-after-free of `struct merge_source` during `merger:ipairs()` / `merger:pairs()` iteration",
+    "files": [
+      [
+        "src/box/lua/merger.c",
+        1019,
+        1049
+      ]
+    ]
+  },
+  {
+    "id": "F-031",
+    "sev": "Critical",
+    "title": "Stack/heap use-after-free of `struct netbox_request` after yielding `on_push` callback",
+    "files": [
+      [
+        "src/box/lua/net_box.c",
+        2161,
+        2181
+      ],
+      [
+        "src/box/lua/net_box.c",
+        2376,
+        2384
+      ]
+    ]
+  },
+  {
+    "id": "F-032",
+    "sev": "Critical",
+    "title": "Live child coroutine Lua stack and registry corruption on `fiber:join(timeout)` timeout",
+    "files": [
+      [
+        "src/lua/fiber.c",
+        741,
+        785
+      ],
+      [
+        "src/lib/core/fiber.c",
+        637,
+        682
+      ]
+    ]
+  },
+  {
+    "id": "F-033",
+    "sev": "Critical",
+    "title": "Heap use-after-free of `struct popen_handle` on concurrent `ph:close()` during `wait()`, `read()`, or `write()`",
+    "files": [
+      [
+        "src/lua/popen.c",
+        1649,
+        1677
+      ],
+      [
+        "src/lua/popen.c",
+        1792,
+        1792
+      ],
+      [
+        "src/lua/popen.c",
+        1881,
+        1881
+      ],
+      [
+        "src/lua/popen.c",
+        2255,
+        2277
+      ],
+      [
+        "src/lib/core/popen.c",
+        398,
+        398
+      ],
+      [
+        "src/lib/core/popen.c",
+        462,
+        462
+      ],
+      [
+        "src/lib/core/popen.c",
+        794,
+        851
+      ]
+    ]
+  },
+  {
+    "id": "F-034",
+    "sev": "High",
+    "title": "`*field == MP_NIL` compares raw byte against enum `0`, bypassing complex FK delete checks on integer `0` and mis-handling `NULL`",
+    "files": [
+      [
+        "src/box/tuple_constraint_fkey.c",
+        385,
+        385
+      ],
+      [
+        "src/box/tuple_constraint_fkey.c",
+        467,
+        470
+      ]
+    ]
+  },
+  {
+    "id": "F-035",
+    "sev": "High",
+    "title": "Unchecked `NULL` return from `xrow_upsert_execute()` in `space_before_replace()` turns failed `UPSERT` into `DELETE` and invokes UB",
+    "files": [
+      [
+        "src/box/space.c",
+        569,
+        587
+      ]
+    ]
+  },
+  {
+    "id": "F-036",
+    "sev": "High",
+    "title": "Yield-unsafe `rlist_foreach_entry` UAF, shared `complex_key_buffer` corruption on Vinyl FKs, and FK delete bypass via `before_replace`",
+    "files": [
+      [
+        "src/box/space.c",
+        591,
+        664
+      ],
+      [
+        "src/box/tuple_constraint_fkey.c",
+        24,
+        24
+      ],
+      [
+        "src/box/tuple_constraint_fkey.c",
+        307,
+        339
+      ],
+      [
+        "src/box/tuple_constraint_fkey.c",
+        463,
+        493
+      ]
+    ]
+  },
+  {
+    "id": "F-037",
+    "sev": "High",
+    "title": "Use-after-free of `fiber()->storage.credentials` when a yielding `setuid` function is dropped during execution",
+    "files": [
+      [
+        "src/box/func.c",
+        501,
+        509
+      ],
+      [
+        "src/box/func.c",
+        542,
+        574
+      ],
+      [
+        "src/box/alter.cc",
+        3413,
+        3419
+      ],
+      [
+        "src/box/module_cache.c",
+        227,
+        237
+      ]
+    ]
+  },
+  {
+    "id": "F-038",
+    "sev": "High",
+    "title": "Intrusive heap double-insert corruption, tuple leak, and NULL-deref crash when `merger_next()` is retried after error",
+    "files": [
+      [
+        "src/box/merger.c",
+        167,
+        190
+      ],
+      [
+        "src/box/merger.c",
+        305,
+        354
+      ]
+    ]
+  },
+  {
+    "id": "F-039",
+    "sev": "High",
+    "title": "`tuple_hash_slowpath()` skips `tuple_field_raw_by_part()` on sequential JSON-path parts, corrupting HASH index lookups",
+    "files": [
+      [
+        "src/box/tuple_hash.cc",
+        391,
+        416
+      ]
+    ]
+  },
+  {
+    "id": "F-040",
+    "sev": "High",
+    "title": "Hash mismatch for equal `DECIMAL`/`FLOAT`/`DOUBLE`/integer and cross-timezone `DATETIME` breaks Vinyl bloom filters and HASH indexes",
+    "files": [
+      [
+        "src/box/tuple_hash.cc",
+        278,
+        340
+      ],
+      [
+        "src/box/tuple_bloom.c",
+        119,
+        119
+      ],
+      [
+        "src/box/tuple_bloom.c",
+        143,
+        143
+      ]
+    ]
+  },
+  {
+    "id": "F-041",
+    "sev": "High",
+    "title": "Prefix `memcmp` without token boundary check in `xrow_update_route_next()` breaks valid multi-op JSON-path updates",
+    "files": [
+      [
+        "src/box/xrow_update_route.c",
+        329,
+        347
+      ]
+    ]
+  },
+  {
+    "id": "F-042",
+    "sev": "High",
+    "title": "Map key deletion in `xrow_update_op_do_nop_delete()` assumes minimal MsgPack string header size, corrupting non-minimal keys",
+    "files": [
+      [
+        "src/box/xrow_update_bar.c",
+        298,
+        306
+      ]
+    ]
+  },
+  {
+    "id": "F-043",
+    "sev": "High",
+    "title": "`fkey_update_index_common()` matches JSON-path, multikey, functional, RTREE, and BITSET indexes as FK indexes",
+    "files": [
+      [
+        "src/box/tuple_constraint_fkey.c",
+        54,
+        97
+      ]
+    ]
+  },
+  {
+    "id": "F-044",
+    "sev": "High",
+    "title": "`sql_stmt_cache_update()` omits `mem_used` accounting, causing `size_t` underflow that permanently breaks SQL `PREPARE`",
+    "files": [
+      [
+        "src/box/sql_stmt_cache.c",
+        175,
+        175
+      ],
+      [
+        "src/box/sql_stmt_cache.c",
+        222,
+        230
+      ],
+      [
+        "src/box/sql_stmt_cache.c",
+        262,
+        262
+      ],
+      [
+        "src/box/execute.c",
+        470,
+        481
+      ]
+    ]
+  },
+  {
+    "id": "F-045",
+    "sev": "High",
+    "title": "`mem_cmp_uuid()` uses raw `memcmp` on host-endian `struct tt_uuid`, corrupting SQL UUID ordering vs B-tree indexes",
+    "files": [
+      [
+        "src/box/sql/mem.c",
+        2616,
+        2620
+      ],
+      [
+        "src/lib/core/tt_uuid.h",
+        49,
+        56
+      ],
+      [
+        "src/lib/core/tt_uuid.h",
+        102,
+        120
+      ]
+    ]
+  },
+  {
+    "id": "F-046",
+    "sev": "High",
+    "title": "`str_to_dec()` passes non-NUL-terminated `mem->z` to `decimal_from_string()`, causing heap over-read and wrong casts",
+    "files": [
+      [
+        "src/box/sql/mem.c",
+        849,
+        859
+      ]
+    ]
+  },
+  {
+    "id": "F-047",
+    "sev": "High",
+    "title": "`mem_cmp_msgpack()` passes post-header pointer `*b` instead of `buf` to `mp_str()` on `MP_INTERVAL`",
+    "files": [
+      [
+        "src/box/sql/mem.c",
+        2708,
+        2735
+      ]
+    ]
+  },
+  {
+    "id": "F-048",
+    "sev": "High",
+    "title": "`func_lower_upper()` passes old smaller `size` instead of `new_len` to ICU after `realloc`, leaking uninitialized heap memory",
+    "files": [
+      [
+        "src/box/sql/func.c",
+        327,
+        345
+      ]
+    ]
+  },
+  {
+    "id": "F-049",
+    "sev": "High",
+    "title": "`quoteFunc()` formats uninitialized output register `&context->pOut->u.{dt,itv}` instead of `&argv[0]` for `DATETIME`/`INTERVAL`",
+    "files": [
+      [
+        "src/box/sql/func.c",
+        1477,
+        1494
+      ]
+    ]
+  },
+  {
+    "id": "F-050",
+    "sev": "High",
+    "title": "`func_char()` accepts UTF-16 surrogates (`0xD800..0xDFFF`), causing Debug assertion crash or uninitialized heap disclosure",
+    "files": [
+      [
+        "src/box/sql/func.c",
+        771,
+        797
+      ]
+    ]
+  },
+  {
+    "id": "F-051",
+    "sev": "High",
+    "title": "`func_printf()` ignores `argv[0].n` (heap over-read) and dereferences `NULL` on `sqlStrAccumFinish()` failure",
+    "files": [
+      [
+        "src/box/sql/func.c",
+        880,
+        903
+      ]
+    ]
+  },
+  {
+    "id": "F-052",
+    "sev": "High",
+    "title": "`func_randomblob()` and `func_zeroblob()` lack `SQL_LIMIT_LENGTH` check and truncate `uint64_t` length to `int`/`uint32_t`",
+    "files": [
+      [
+        "src/box/sql/func.c",
+        851,
+        851
+      ],
+      [
+        "src/box/sql/func.c",
+        927,
+        971
+      ]
+    ]
+  },
+  {
+    "id": "F-053",
+    "sev": "High",
+    "title": "`likeFunc()` calls `U8_NEXT` before checking `end == 0` on empty `ESCAPE ''` and `soundexFunc()` ignores `argv[0].n`",
+    "files": [
+      [
+        "src/box/sql/func.c",
+        1430,
+        1439
+      ],
+      [
+        "src/box/sql/func.c",
+        1676,
+        1692
+      ]
+    ]
+  },
+  {
+    "id": "F-054",
+    "sev": "High",
+    "title": "Out-of-bounds register read, omitted rowid, and silent data loss in `generateSortTail()` for `SRT_Table`/`SRT_EphemTab`",
+    "files": [
+      [
+        "src/box/sql/select.c",
+        1829,
+        1928
+      ]
+    ]
+  },
+  {
+    "id": "F-055",
+    "sev": "High",
+    "title": "Out-of-bounds read, assertion crash, and absent-field miscomparison in `tarantoolsqlIdxKeyCompare()`",
+    "files": [
+      [
+        "src/box/sql.c",
+        749,
+        796
+      ]
+    ]
+  },
+  {
+    "id": "F-056",
+    "sev": "High",
+    "title": "Wrong query results in `OP_Seek{LT,GT,LE,GE}` due to in-place key mutation, ignored `SORT_ORDER_DESC`, and missing truncation",
+    "files": [
+      [
+        "src/box/sql/vdbe.c",
+        2549,
+        2594
+      ],
+      [
+        "src/box/sql/vdbe.c",
+        2646,
+        2711
+      ],
+      [
+        "src/box/sql/wherecode.c",
+        955,
+        1019
+      ]
+    ]
+  },
+  {
+    "id": "F-057",
+    "sev": "High",
+    "title": "Heap buffer over-read, `_trigger` SQL corruption, unchecked NULL deref, and leak in `tarantoolsqlRenameTrigger()`",
+    "files": [
+      [
+        "src/box/sql.c",
+        666,
+        690
+      ],
+      [
+        "src/box/sql/alter.c",
+        202,
+        205
+      ]
+    ]
+  },
+  {
+    "id": "F-058",
+    "sev": "High",
+    "title": "Dangling `P4_STATIC` pointers into rotating `tt_sprintf()` buffer stored in `OP_SetDiag`",
+    "files": [
+      [
+        "src/box/sql/insert.c",
+        863,
+        869
+      ],
+      [
+        "src/box/sql/fk_constraint.c",
+        284,
+        287
+      ],
+      [
+        "src/box/sql/expr.c",
+        4536,
+        4540
+      ],
+      [
+        "src/box/sql/select.c",
+        2369,
+        2374
+      ],
+      [
+        "src/box/sql/select.c",
+        2403,
+        2407
+      ],
+      [
+        "src/box/sql/select.c",
+        2429,
+        2434
+      ],
+      [
+        "src/box/sql/select.c",
+        5758,
+        5762
+      ]
+    ]
+  },
+  {
+    "id": "F-059",
+    "sev": "High",
+    "title": "Heap buffer over-read and wrong integer parsing in `sql_atoi64()` on leading whitespace",
+    "files": [
+      [
+        "src/box/sql/util.c",
+        460,
+        479
+      ]
+    ]
+  },
+  {
+    "id": "F-060",
+    "sev": "High",
+    "title": "`MEM_TYPE_INT` negative-zero invariant violation in `sql_rem_int()` and `sql_atoi64()`",
+    "files": [
+      [
+        "src/box/sql/util.c",
+        467,
+        483
+      ],
+      [
+        "src/box/sql/util.c",
+        1091,
+        1102
+      ],
+      [
+        "src/box/sql/mem.c",
+        817,
+        819
+      ],
+      [
+        "src/box/sql/mem.c",
+        2389,
+        2395
+      ]
+    ]
+  },
+  {
+    "id": "F-061",
+    "sev": "High",
+    "title": "Unsigned 64-bit wraparound bypassing overflow check in `sql_sub_int()`",
+    "files": [
+      [
+        "src/box/sql/util.c",
+        989,
+        999
+      ]
+    ]
+  },
+  {
+    "id": "F-062",
+    "sev": "High",
+    "title": "Non-contiguous register allocation in `expr_code_map()` corrupts `OP_Map` output for non-leaf expressions",
+    "files": [
+      [
+        "src/box/sql/expr.c",
+        3446,
+        3465
+      ]
+    ]
+  },
+  {
+    "id": "F-063",
+    "sev": "High",
+    "title": "NULL dereference / heap OOB read in `sql_pragma_index_info()` on spaces without format",
+    "files": [
+      [
+        "src/box/sql/pragma.c",
+        186,
+        220
+      ]
+    ]
+  },
+  {
+    "id": "F-064",
+    "sev": "High",
+    "title": "Variable shadowing silently drops index collation and `assert(part_count == 1)` crashes in `sqlAddCollateType()`",
+    "files": [
+      [
+        "src/box/sql/build.c",
+        815,
+        842
+      ]
+    ]
+  },
+  {
+    "id": "F-065",
+    "sev": "High",
+    "title": "Missing `parse->is_aborted` and NULL dereference crash in `sql_create_index()` / `sqlAddPrimaryKey()`",
+    "files": [
+      [
+        "src/box/sql/build.c",
+        616,
+        643
+      ],
+      [
+        "src/box/sql/build.c",
+        2791,
+        2797
+      ],
+      [
+        "src/box/sql/build.c",
+        2842,
+        2843
+      ]
+    ]
+  },
+  {
+    "id": "F-066",
+    "sev": "High",
+    "title": "Broken `LIKE` byte-increment prefix optimization for `unicode_ci` collation returns empty results",
+    "files": [
+      [
+        "src/box/sql/whereexpr.c",
+        300,
+        305
+      ],
+      [
+        "src/box/sql/whereexpr.c",
+        1183,
+        1221
+      ]
+    ]
+  },
+  {
+    "id": "F-067",
+    "sev": "High",
+    "title": "Unconditional `p->ignoreRaised++` and premature `p->nChange++` in `OP_Update` disable triggers and miscount rows",
+    "files": [
+      [
+        "src/box/sql/vdbe.c",
+        3553,
+        3622
+      ]
+    ]
+  },
+  {
+    "id": "F-068",
+    "sev": "High",
+    "title": "Uninitialized `pSrcIdx` crash, dead `pSrcIdx == NULL` check, and missing `ROLLBACK` handling in `xferOptimization()`",
+    "files": [
+      [
+        "src/box/sql/insert.c",
+        1050,
+        1050
+      ],
+      [
+        "src/box/sql/insert.c",
+        1119,
+        1119
+      ],
+      [
+        "src/box/sql/insert.c",
+        1159,
+        1170
+      ],
+      [
+        "src/box/sql/insert.c",
+        1228,
+        1240
+      ]
+    ]
+  },
+  {
+    "id": "F-069",
+    "sev": "High",
+    "title": "Wrong collation pointer on `TK_CONCAT` and dead `if (coll == NULL)` check in `sql_expr_coll()`",
+    "files": [
+      [
+        "src/box/sql/expr.c",
+        282,
+        289
+      ],
+      [
+        "src/box/sql/expr.c",
+        306,
+        352
+      ]
+    ]
+  },
+  {
+    "id": "F-070",
+    "sev": "High",
+    "title": "NULL dereference on duplicate `MP_ERROR_STACK`, unbounded OOB reads in `MP_ERROR` decoding/printing, leaks, and OOM NULL deref",
+    "files": [
+      [
+        "src/box/mp_error.cc",
+        294,
+        388
+      ],
+      [
+        "src/box/mp_error.cc",
+        443,
+        515
+      ],
+      [
+        "src/box/mp_error.cc",
+        581,
+        670
+      ],
+      [
+        "src/box/mp_error.h",
+        65,
+        72
+      ],
+      [
+        "src/box/msgpack.c",
+        55,
+        56
+      ],
+      [
+        "src/box/msgpack.c",
+        80,
+        81
+      ]
+    ]
+  },
+  {
+    "id": "F-071",
+    "sev": "High",
+    "title": "Multithreaded use-after-free and concurrent fd close on fiber cancellation in `applier_thread_data_destroy()`",
+    "files": [
+      [
+        "src/box/applier.cc",
+        1841,
+        1936
+      ],
+      [
+        "src/box/applier.cc",
+        2041,
+        2043
+      ],
+      [
+        "src/box/applier.cc",
+        2280,
+        2290
+      ]
+    ]
+  },
+  {
+    "id": "F-072",
+    "sev": "High",
+    "title": "Multithreaded use-after-free via post-increment `lsr_id++` in `applier_thread_reader_f()`",
+    "files": [
+      [
+        "src/box/applier.cc",
+        1511,
+        1521
+      ],
+      [
+        "src/box/applier.cc",
+        1565,
+        1565
+      ],
+      [
+        "src/box/applier.cc",
+        1592,
+        1592
+      ],
+      [
+        "src/box/applier.cc",
+        1623,
+        1623
+      ],
+      [
+        "src/box/applier.cc",
+        1651,
+        1676
+      ]
+    ]
+  },
+  {
+    "id": "F-073",
+    "sev": "High",
+    "title": "Out-of-bounds `replica_by_id[]` read and controlled write via unvalidated `row.replica_id` in `applier_subscribe()`",
+    "files": [
+      [
+        "src/box/applier.cc",
+        913,
+        918
+      ],
+      [
+        "src/box/applier.cc",
+        1327,
+        1329
+      ],
+      [
+        "src/box/applier.cc",
+        1984,
+        1986
+      ],
+      [
+        "src/box/replication.cc",
+        1141,
+        1145
+      ]
+    ]
+  },
+  {
+    "id": "F-074",
+    "sev": "High",
+    "title": "Use-after-free of `msg->p_ibuf` after `iproto_msg_delete(msg)` in `net_end_join()`",
+    "files": [
+      [
+        "src/box/iproto.cc",
+        2537,
+        2553
+      ]
+    ]
+  },
+  {
+    "id": "F-075",
+    "sev": "High",
+    "title": "Use-after-free and wrong-user authentication across yielding `on_auth` triggers in `authenticate()`",
+    "files": [
+      [
+        "src/box/authentication.cc",
+        41,
+        104
+      ],
+      [
+        "src/box/user.cc",
+        170,
+        184
+      ],
+      [
+        "src/box/user.cc",
+        463,
+        499
+      ]
+    ]
+  },
+  {
+    "id": "F-076",
+    "sev": "High",
+    "title": "Broken MsgPack type checks and uninitialized `gc_vclock` in `xrow_decode_{synchro,raft,ballot}()`",
+    "files": [
+      [
+        "src/box/xrow.c",
+        1082,
+        1109
+      ],
+      [
+        "src/box/xrow.c",
+        1206,
+        1207
+      ],
+      [
+        "src/box/xrow.c",
+        1591,
+        1625
+      ]
+    ]
+  },
+  {
+    "id": "F-077",
+    "sev": "High",
+    "title": "Pre-authentication `IPROTO_PACKET_SIZE_MAX` bypass allowing arbitrary multi-GB allocation from 9-byte header",
+    "files": [
+      [
+        "src/box/iproto.cc",
+        976,
+        1026
+      ],
+      [
+        "src/box/iproto.cc",
+        1122,
+        1141
+      ],
+      [
+        "src/box/iproto.cc",
+        1193,
+        1212
+      ]
+    ]
+  },
+  {
+    "id": "F-078",
+    "sev": "High",
+    "title": "Use-after-free of prepared `struct sql_stmt` across fiber yield when concurrently unprepared and evicted",
+    "files": [
+      [
+        "src/box/execute.c",
+        573,
+        612
+      ],
+      [
+        "src/box/sql_stmt_cache.c",
+        120,
+        126
+      ],
+      [
+        "src/box/sql_stmt_cache.c",
+        158,
+        179
+      ]
+    ]
+  },
+  {
+    "id": "F-079",
+    "sev": "High",
+    "title": "Silent data loss in Vinyl reverse scans when last key in a run is an `UPSERT`",
+    "files": [
+      [
+        "src/box/vy_run.c",
+        1549,
+        1563
+      ]
+    ]
+  },
+  {
+    "id": "F-080",
+    "sev": "High",
+    "title": "Concurrency race in `txn_limbo` between timeout rollback/confirm and PROMOTE/DEMOTE, plus missing `lsn == -1` check",
+    "files": [
+      [
+        "src/box/txn_limbo.c",
+        240,
+        286
+      ],
+      [
+        "src/box/txn_limbo.c",
+        388,
+        394
+      ],
+      [
+        "src/box/txn_limbo.c",
+        468,
+        475
+      ],
+      [
+        "src/box/txn_limbo.c",
+        764,
+        838
+      ],
+      [
+        "src/box/box.cc",
+        1906,
+        1906
+      ]
+    ]
+  },
+  {
+    "id": "F-081",
+    "sev": "High",
+    "title": "Use-after-free and double-free on OOM in `memtx_tx_track_gap_slow()`",
+    "files": [
+      [
+        "src/box/memtx_tx.c",
+        2758,
+        2758
+      ],
+      [
+        "src/box/memtx_tx.c",
+        2779,
+        2800
+      ]
+    ]
+  },
+  {
+    "id": "F-082",
+    "sev": "High",
+    "title": "Error-path `in_index = NULL` corruption and gap UAF in `memtx_tx_history_add_insert_stmt()`",
+    "files": [
+      [
+        "src/box/memtx_tx.c",
+        1862,
+        1959
+      ]
+    ]
+  },
+  {
+    "id": "F-083",
+    "sev": "High",
+    "title": "Dangling fiber `txn` pointer and triggers on `txn_begin()` OOM error path",
+    "files": [
+      [
+        "src/box/txn.c",
+        552,
+        568
+      ],
+      [
+        "src/box/memtx_tx.c",
+        503,
+        516
+      ]
+    ]
+  },
+  {
+    "id": "F-084",
+    "sev": "High",
+    "title": "Missing format argument (`path`) in `vy_run_recover()` `ER_INVALID_INDEX_FILE` causing OOB read/crash",
+    "files": [
+      [
+        "src/box/vy_run.c",
+        1736,
+        1743
+      ],
+      [
+        "src/box/errcode.h",
+        186,
+        186
+      ]
+    ]
+  },
+  {
+    "id": "F-085",
+    "sev": "High",
+    "title": "Tuple leak, corrupted `on_replace` triggers, and stale secondary entries during Vinyl `exclude_null` index builds",
+    "files": [
+      [
+        "src/box/vinyl.c",
+        3854,
+        3879
+      ],
+      [
+        "src/box/vinyl.c",
+        4037,
+        4067
+      ]
+    ]
+  },
+  {
+    "id": "F-086",
+    "sev": "High",
+    "title": "Error swallowing in `vy_point_lookup_scan_mems()` (`return 0` instead of `return rc`) returns stale/missing data on OOM",
+    "files": [
+      [
+        "src/box/vy_point_lookup.c",
+        115,
+        128
+      ]
+    ]
+  },
+  {
+    "id": "F-087",
+    "sev": "High",
+    "title": "Multiple NULL-pointer dereferences and silent OOM upsert drop in Vinyl error paths",
+    "files": [
+      [
+        "src/box/vy_write_iterator.c",
+        959,
+        965
+      ],
+      [
+        "src/box/vy_scheduler.c",
+        1404,
+        1431
+      ],
+      [
+        "src/box/vy_scheduler.c",
+        1710,
+        1730
+      ],
+      [
+        "src/box/vy_upsert.c",
+        45,
+        59
+      ],
+      [
+        "src/box/vy_upsert.c",
+        121,
+        134
+      ],
+      [
+        "src/box/vy_read_iterator.c",
+        526,
+        526
+      ],
+      [
+        "src/box/vy_read_iterator.c",
+        536,
+        536
+      ],
+      [
+        "src/box/vy_read_iterator.c",
+        552,
+        552
+      ],
+      [
+        "src/box/vy_read_iterator.c",
+        558,
+        558
+      ],
+      [
+        "src/box/vy_read_iterator.c",
+        580,
+        580
+      ]
+    ]
+  },
+  {
+    "id": "F-088",
+    "sev": "High",
+    "title": "Use-after-free in `func_cache_delete()` due to comparing `funcs_by_name` bucket index against `mh_end(funcs)`",
+    "files": [
+      [
+        "src/box/func_cache.c",
+        58,
+        70
+      ]
+    ]
+  },
+  {
+    "id": "F-089",
+    "sev": "High",
+    "title": "Uninitialized heap memory used as user password hash (`malloc` instead of `calloc` for `user->hash2`)",
+    "files": [
+      [
+        "src/box/alter.cc",
+        2933,
+        2989
+      ],
+      [
+        "src/box/alter.cc",
+        2934,
+        2935
+      ]
+    ]
+  },
+  {
+    "id": "F-090",
+    "sev": "High",
+    "title": "Missing `MP_STR` type check and unbounded `strncasecmp(..., 9)` heap over-read in `user_def_fill_auth_data()`",
+    "files": [
+      [
+        "src/box/alter.cc",
+        2885,
+        2915
+      ]
+    ]
+  },
+  {
+    "id": "F-091",
+    "sev": "High",
+    "title": "NULL pointer dereference in `on_replace_dd_fk_constraint()` when parent space has sparse index IDs",
+    "files": [
+      [
+        "src/box/alter.cc",
+        5388,
+        5408
+      ]
+    ]
+  },
+  {
+    "id": "F-092",
+    "sev": "High",
+    "title": "Uninitialized MVCC snapshot cleaner and raw dirty `*res` tuple persisted in `memtx_hash` snapshot iterator",
+    "files": [
+      [
+        "src/box/memtx_hash.cc",
+        499,
+        552
+      ]
+    ]
+  },
+  {
+    "id": "F-093",
+    "sev": "High",
+    "title": "`HASH` index `ITER_GT` iterator sets `next_raw = hash_iterator_ge_raw_base`, bypassing MVCC clarification after first tuple",
+    "files": [
+      [
+        "src/box/memtx_hash.cc",
+        117,
+        155
+      ],
+      [
+        "src/box/memtx_hash.cc",
+        121,
+        121
+      ]
+    ]
+  },
+  {
+    "id": "F-094",
+    "sev": "High",
+    "title": "Multikey `TREE` iterator dereferences invalidated `tree_iterator` after MVCC story GC bound",
+    "files": [
+      [
+        "src/box/memtx_tree.cc",
+        551,
+        580
+      ],
+      [
+        "src/box/memtx_tree.cc",
+        566,
+        576
+      ]
+    ]
+  },
+  {
+    "id": "F-095",
+    "sev": "High",
+    "title": "Space format alter does not validate existing SQL FK column references, causing NULL deref / heap OOB read",
+    "files": [
+      [
+        "src/box/alter.cc",
+        2278,
+        2382
+      ],
+      [
+        "src/box/sql/pragma.c",
+        312,
+        317
+      ],
+      [
+        "src/box/sql/fk_constraint.c",
+        421,
+        424
+      ],
+      [
+        "src/box/sql/fk_constraint.c",
+        755,
+        758
+      ]
+    ]
+  },
+  {
+    "id": "F-096",
+    "sev": "High",
+    "title": "Unreachable abort crash when inserting/granting privileges on `'collation'`",
+    "files": [
+      [
+        "src/box/schema.cc",
+        429,
+        488
+      ],
+      [
+        "src/box/alter.cc",
+        3787,
+        3820
+      ],
+      [
+        "src/box/alter.cc",
+        3851,
+        3851
+      ]
+    ]
+  },
+  {
+    "id": "F-097",
+    "sev": "High",
+    "title": "NULL dereference on missing `opts.sql` and orphaned/corrupted trigger on `space_id` reassignment in `on_replace_dd_trigger()`",
+    "files": [
+      [
+        "src/box/alter.cc",
+        4846,
+        4855
+      ],
+      [
+        "src/box/alter.cc",
+        4922,
+        4974
+      ]
+    ]
+  },
+  {
+    "id": "F-098",
+    "sev": "High",
+    "title": "Functional index keys permanently leaked on destroy and OOM errors silently swallowed during build",
+    "files": [
+      [
+        "src/box/memtx_tree.cc",
+        733,
+        818
+      ],
+      [
+        "src/box/memtx_tree.cc",
+        1546,
+        1576
+      ]
+    ]
+  },
+  {
+    "id": "F-099",
+    "sev": "High",
+    "title": "Partial IPROTO packet with 5 uninitialized bytes sent on encode error and heap OOB write on yielding `__serialize` in `net_box`",
+    "files": [
+      [
+        "src/box/lua/net_box.c",
+        569,
+        625
+      ],
+      [
+        "src/box/lua/net_box.c",
+        2108,
+        2120
+      ]
+    ]
+  },
+  {
+    "id": "F-100",
+    "sev": "High",
+    "title": "Unbounded worker Lua stack leak on every SQL DQL `execute`, `prepare`, and `on_push` response in `net_box`",
+    "files": [
+      [
+        "src/box/lua/net_box.c",
+        1586,
+        1680
+      ],
+      [
+        "src/box/lua/net_box.c",
+        2376,
+        2384
+      ],
+      [
+        "src/box/lua/net_box.c",
+        2599,
+        2608
+      ]
+    ]
+  },
+  {
+    "id": "F-101",
+    "sev": "High",
+    "title": "Off-by-one OOB array access in `box.stat.net.thread[iproto_threads_count + 1]`",
+    "files": [
+      [
+        "src/box/lua/stat.c",
+        242,
+        254
+      ],
+      [
+        "src/box/iproto.cc",
+        3237,
+        3237
+      ],
+      [
+        "src/box/iproto.cc",
+        3358,
+        3358
+      ]
+    ]
+  },
+  {
+    "id": "F-102",
+    "sev": "High",
+    "title": "Heap buffer underflow via embedded NUL byte in `box.lib` symbol name",
+    "files": [
+      [
+        "src/box/lua/lib.c",
+        296,
+        300
+      ],
+      [
+        "src/box/lua/lib.c",
+        381,
+        418
+      ]
+    ]
+  },
+  {
+    "id": "F-103",
+    "sev": "High",
+    "title": "NULL pointer dereference in `key_def.new()` (`path = {}`) and fiber region leak on non-table part",
+    "files": [
+      [
+        "src/box/lua/key_def.c",
+        125,
+        138
+      ],
+      [
+        "src/box/lua/key_def.c",
+        178,
+        216
+      ],
+      [
+        "src/box/lua/key_def.c",
+        455,
+        478
+      ]
+    ]
+  },
+  {
+    "id": "F-104",
+    "sev": "High",
+    "title": "Use-after-free of unanchored Lua strings after `lua_pop` / `lua_replace` in `serialize_lua.c` and `watcher.c`",
+    "files": [
+      [
+        "src/box/lua/serialize_lua.c",
+        816,
+        827
+      ],
+      [
+        "src/box/lua/serialize_lua.c",
+        899,
+        899
+      ],
+      [
+        "src/box/lua/watcher.c",
+        147,
+        163
+      ]
+    ]
+  },
+  {
+    "id": "F-105",
+    "sev": "High",
+    "title": "Signed `INT32_MIN` overflow and missing `lua_checkstack()` in `tuple:slice()`",
+    "files": [
+      [
+        "src/box/lua/tuple.c",
+        347,
+        418
+      ]
+    ]
+  },
+  {
+    "id": "F-106",
+    "sev": "High",
+    "title": "Missing `lua_checkstack()` before `lua_xmove` / unbounded pushes across `box/lua` plus `sources` leak in `merger.c`",
+    "files": [
+      [
+        "src/box/lua/call.c",
+        558,
+        566
+      ],
+      [
+        "src/box/lua/call.c",
+        950,
+        955
+      ],
+      [
+        "src/box/lua/lib.c",
+        544,
+        550
+      ],
+      [
+        "src/box/lua/merger.c",
+        78,
+        85
+      ],
+      [
+        "src/box/lua/merger.c",
+        306,
+        338
+      ],
+      [
+        "src/box/lua/misc.cc",
+        142,
+        177
+      ],
+      [
+        "src/box/lua/serialize_lua.c",
+        907,
+        943
+      ],
+      [
+        "src/box/lua/error.cc",
+        101,
+        102
+      ]
+    ]
+  },
+  {
+    "id": "F-107",
+    "sev": "High",
+    "title": "`before_replace` trigger validates pre-trigger input tuple instead of trigger-returned tuple",
+    "files": [
+      [
+        "src/box/lua/space.cc",
+        116,
+        129
+      ],
+      [
+        "src/box/space.c",
+        624,
+        660
+      ]
+    ]
+  },
+  {
+    "id": "F-108",
+    "sev": "High",
+    "title": "NULL dereference, heap OOB read, and stack leak in `console.completion_handler()` / `lua_rl_complete()`",
+    "files": [
+      [
+        "src/box/lua/console.c",
+        186,
+        191
+      ],
+      [
+        "src/box/lua/console.c",
+        391,
+        392
+      ],
+      [
+        "src/box/lua/console.c",
+        889,
+        912
+      ],
+      [
+        "src/box/lua/console.c",
+        936,
+        940
+      ]
+    ]
+  },
+  {
+    "id": "F-109",
+    "sev": "High",
+    "title": "Type confusion (`lua_hashstring`) and `lua_next` contract violation in `space:frommap()`",
+    "files": [
+      [
+        "src/box/lua/space.cc",
+        698,
+        711
+      ]
+    ]
+  },
+  {
+    "id": "F-110",
+    "sev": "High",
+    "title": "Heap buffer over-read in `lbox_socket_recvfrom()` when `MSG_TRUNC` flag is specified",
+    "files": [
+      [
+        "src/lua/socket.c",
+        138,
+        138
+      ],
+      [
+        "src/lua/socket.c",
+        955,
+        999
+      ],
+      [
+        "src/lua/socket.lua",
+        873,
+        893
+      ]
+    ]
+  },
+  {
+    "id": "F-111",
+    "sev": "High",
+    "title": "Heap buffer overflow (OOB write) in `parse_headers()` when `max_header_name_length == 0`",
+    "files": [
+      [
+        "src/lua/httpc.c",
+        63,
+        75
+      ],
+      [
+        "src/lua/httpc.c",
+        298,
+        301
+      ],
+      [
+        "src/lua/httpc.c",
+        346,
+        348
+      ],
+      [
+        "src/lib/http_parser/http_parser.c",
+        261,
+        282
+      ]
+    ]
+  },
+  {
+    "id": "F-112",
+    "sev": "High",
+    "title": "Unsigned integer underflow causing heap buffer underflow read in `lbox_tonumber64()`",
+    "files": [
+      [
+        "src/lua/init.c",
+        440,
+        495
+      ]
+    ]
+  },
+  {
+    "id": "F-113",
+    "sev": "High",
+    "title": "Empty `argv` accepted by `luaT_popen_parse_argv()` triggers heap OOB write and unbounded heap OOB read",
+    "files": [
+      [
+        "src/lua/popen.c",
+        1023,
+        1074
+      ],
+      [
+        "src/lua/popen.c",
+        2174,
+        2174
+      ],
+      [
+        "src/lua/popen.c",
+        2358,
+        2358
+      ],
+      [
+        "src/lib/core/popen.c",
+        193,
+        233
+      ]
+    ]
+  },
+  {
+    "id": "F-114",
+    "sev": "High",
+    "title": "Missing `lua_checkstack()` causing Lua stack heap buffer overflows in `pickle.unpack`, `msgpack`, and `fiber`",
+    "files": [
+      [
+        "src/lua/pickle.c",
+        182,
+        269
+      ],
+      [
+        "src/lua/msgpack.c",
+        200,
+        245
+      ],
+      [
+        "src/lua/msgpack.c",
+        358,
+        382
+      ],
+      [
+        "src/lua/fiber.c",
+        426,
+        426
+      ],
+      [
+        "src/lua/fiber.c",
+        777,
+        780
+      ]
+    ]
+  },
+  {
+    "id": "F-115",
+    "sev": "High",
+    "title": "Float-to-`uint32_t` truncation and UB in `lua_field_inspect_table()` / `luaL_arrlen()` silently drops/corrupts table data",
+    "files": [
+      [
+        "src/lua/serializer.c",
+        357,
+        416
+      ],
+      [
+        "src/lua/utils.h",
+        191,
+        205
+      ]
+    ]
+  },
+  {
+    "id": "F-116",
+    "sev": "High",
+    "title": "Unbounded C-stack recursion in `lua_field_try_serialize()` and ignored `lua_pcall` error in `lua_field_inspect_ucdata()`",
+    "files": [
+      [
+        "src/lua/serializer.c",
+        255,
+        283
+      ],
+      [
+        "src/lua/serializer.c",
+        312,
+        328
+      ]
+    ]
+  },
+  {
+    "id": "F-117",
+    "sev": "High",
+    "title": "Missing lower-bound check on `digest_len` and embedded-NUL truncation of passwords/salts in `lua_pbkdf2()`",
+    "files": [
+      [
+        "src/lua/digest.c",
+        76,
+        92
+      ],
+      [
+        "src/lua/digest.lua",
+        185,
+        201
+      ]
+    ]
+  },
+  {
+    "id": "F-118",
+    "sev": "High",
+    "title": "NULL pointer dereference on `(char *)NULL` cdata in `msgpack` C-pointer decoders",
+    "files": [
+      [
+        "src/lua/msgpack.c",
+        476,
+        498
+      ],
+      [
+        "src/lua/msgpack.c",
+        576,
+        653
+      ],
+      [
+        "src/lua/msgpack.c",
+        712,
+        744
+      ],
+      [
+        "src/lua/utils.c",
+        573,
+        585
+      ]
+    ]
+  },
+  {
+    "id": "F-119",
+    "sev": "High",
+    "title": "`freeaddrinfo()` on non-head interior pointer and uninitialized `free(ai_local.ai_addr)` in `coio_connect_timeout()`",
+    "files": [
+      [
+        "src/lib/core/coio.c",
+        92,
+        120
+      ],
+      [
+        "src/lib/core/coio.c",
+        169,
+        213
+      ]
+    ]
+  },
+  {
+    "id": "F-120",
+    "sev": "High",
+    "title": "Out-of-bounds read past format string NUL terminator and OOB `pow10[]` read via `(int)strtol()` in `tnt_strftime()`",
+    "files": [
+      [
+        "src/lib/tzcode/strftime.c",
+        89,
+        97
+      ],
+      [
+        "src/lib/tzcode/strftime.c",
+        255,
+        308
+      ]
+    ]
+  },
+  {
+    "id": "F-121",
+    "sev": "High",
+    "title": "Out-of-bounds reads, assertion crash, unsigned `size_t` hiding timezone errors, and unbounded `alloca` in `tnt_strptime()`",
+    "files": [
+      [
+        "src/lib/tzcode/strptime.c",
+        248,
+        263
+      ],
+      [
+        "src/lib/tzcode/strptime.c",
+        542,
+        561
+      ],
+      [
+        "src/lib/tzcode/strptime.c",
+        661,
+        674
+      ]
+    ]
+  },
+  {
+    "id": "F-122",
+    "sev": "High",
+    "title": "Wrong vote target (`raft->self` instead of `new_vote`) in `raft_sm_schedule_new_vote()` corrupts split-vote detection",
+    "files": [
+      [
+        "src/lib/raft/raft.c",
+        856,
+        868
+      ]
+    ]
+  },
+  {
+    "id": "F-123",
+    "sev": "High",
+    "title": "Non-safe `rlist_foreach_entry` during `fiber_wakeup` and missing `ev_timer_stop` UAF in `fiber_pool_destroy()`",
+    "files": [
+      [
+        "src/lib/core/fiber_pool.c",
+        165,
+        168
+      ],
+      [
+        "src/lib/core/fiber_pool.c",
+        177,
+        199
+      ]
+    ]
+  },
+  {
+    "id": "F-124",
+    "sev": "High",
+    "title": "Multiple datetime/interval arithmetic, truncation, `NaN` bypass, and uninitialized-field bugs in `datetime.c`",
+    "files": [
+      [
+        "src/lib/core/datetime.c",
+        177,
+        188
+      ],
+      [
+        "src/lib/core/datetime.c",
+        536,
+        553
+      ],
+      [
+        "src/lib/core/datetime.c",
+        571,
+        604
+      ],
+      [
+        "src/lib/core/datetime.c",
+        698,
+        712
+      ],
+      [
+        "src/lib/core/datetime.c",
+        815,
+        818
+      ],
+      [
+        "src/lib/core/datetime.c",
+        844,
+        845
+      ],
+      [
+        "src/lib/core/datetime.c",
+        902,
+        932
+      ],
+      [
+        "src/lib/core/datetime.c",
+        1060,
+        1213
+      ]
+    ]
+  },
+  {
+    "id": "F-125",
+    "sev": "High",
+    "title": "Out-of-bounds read in `timezone_raw_lookup()` (`strcasecmp` ignores `len`) and case-sensitivity lookup failure",
+    "files": [
+      [
+        "src/lib/tzcode/timezone.c",
+        100,
+        111
+      ],
+      [
+        "src/lib/tzcode/timezone.c",
+        146,
+        168
+      ],
+      [
+        "src/lib/tzcode/timezone.c",
+        186,
+        186
+      ],
+      [
+        "src/lib/tzcode/timezone.c",
+        215,
+        215
+      ]
+    ]
+  },
+  {
+    "id": "F-126",
+    "sev": "High",
+    "title": "Infinite loop on large JSON-path array index (`>= 2^30`), unchecked integer overflow, and 64-to-32 pointer-diff truncation",
+    "files": [
+      [
+        "src/lib/json/json.c",
+        140,
+        162
+      ],
+      [
+        "src/lib/json/json.c",
+        265,
+        271
+      ],
+      [
+        "src/lib/json/json.c",
+        505,
+        523
+      ],
+      [
+        "src/box/tuple_format.c",
+        327,
+        342
+      ]
+    ]
+  },
+  {
+    "id": "F-127",
+    "sev": "High",
+    "title": "Empty buffer check failure, OOB read, cyclic infinite loop, `uint32_t` truncation, and live-record loss in `prbuf.c`",
+    "files": [
+      [
+        "src/lib/core/prbuf.c",
+        73,
+        77
+      ],
+      [
+        "src/lib/core/prbuf.c",
+        167,
+        217
+      ],
+      [
+        "src/lib/core/prbuf.c",
+        268,
+        300
+      ],
+      [
+        "src/lua/buffer.lua",
+        228,
+        295
+      ]
+    ]
+  },
+  {
+    "id": "F-128",
+    "sev": "High",
+    "title": "Heap buffer overflow and uninitialized `strcat()` on `getcwd()` failure in `abspath()`",
+    "files": [
+      [
+        "src/lib/core/util.c",
+        201,
+        218
+      ],
+      [
+        "src/main.cc",
+        414,
+        414
+      ],
+      [
+        "src/lib/core/say.c",
+        460,
+        460
+      ]
+    ]
+  },
+  {
+    "id": "F-129",
+    "sev": "High",
+    "title": "Out-of-bounds `memset()` past `ps_buffer` via unclamped `vsnprintf()` return value in `proc_title_set()`",
+    "files": [
+      [
+        "src/proc_title.c",
+        313,
+        349
+      ]
+    ]
+  },
+  {
+    "id": "F-130",
+    "sev": "Medium",
+    "title": "`new_tuple` reference count leak whenever `tuple_constraint_fkey_check_delete()` rejects a DML request",
+    "files": [
+      [
+        "src/box/space.c",
+        580,
+        610
+      ],
+      [
+        "src/box/space.c",
+        665,
+        668
+      ]
+    ]
+  },
+  {
+    "id": "F-131",
+    "sev": "Medium",
+    "title": "`space_before_replace()` fires `before_replace` triggers even when `space->run_triggers == false` if space has foreign keys",
+    "files": [
+      [
+        "src/box/space.c",
+        629,
+        629
+      ],
+      [
+        "src/box/space.c",
+        699,
+        708
+      ]
+    ]
+  },
+  {
+    "id": "F-132",
+    "sev": "Medium",
+    "title": "Latent 4 GB `memset` unsigned underflow (`fieldno - end_fieldno + 1`) and `data_end - data` overflow in `tuple_extract_key_slowpath_raw()`",
+    "files": [
+      [
+        "src/box/tuple_extract_key.cc",
+        258,
+        258
+      ],
+      [
+        "src/box/tuple_extract_key.cc",
+        266,
+        273
+      ],
+      [
+        "src/box/tuple_extract_key.cc",
+        301,
+        306
+      ]
+    ]
+  },
+  {
+    "id": "F-133",
+    "sev": "Medium",
+    "title": "`field_type_by_name()` uses `strncasecmp(..., len)` without length check, accepting `\"\"`, `\"n\"`, `\"s\"` as valid field types",
+    "files": [
+      [
+        "src/box/field_def.c",
+        214,
+        229
+      ]
+    ]
+  },
+  {
+    "id": "F-134",
+    "sev": "Medium",
+    "title": "Embedded NUL byte in `OPT_STRPTR` DDL options crashes Debug (`assert(strlen(ptr) == str_len)`) and truncates in Release",
+    "files": [
+      [
+        "src/box/opt_def.c",
+        96,
+        114
+      ],
+      [
+        "src/box/field_def.c",
+        190,
+        190
+      ],
+      [
+        "src/box/field_def.c",
+        195,
+        195
+      ],
+      [
+        "src/box/key_def.c",
+        83,
+        83
+      ],
+      [
+        "src/box/space_def.c",
+        84,
+        84
+      ]
+    ]
+  },
+  {
+    "id": "F-135",
+    "sev": "Medium",
+    "title": "`tuple_to_yaml()` embeds NUL bytes between libyaml chunks, silently truncating tuples larger than ~16 KB",
+    "files": [
+      [
+        "src/box/tuple_convert.c",
+        52,
+        64
+      ],
+      [
+        "src/box/tuple_convert.c",
+        268,
+        278
+      ]
+    ]
+  },
+  {
+    "id": "F-136",
+    "sev": "Medium",
+    "title": "`tuple_validate_raw()` and `tuple_field_map_create()` bypass `exact_field_count` / constraints when `tuple_format_field_count == 0`",
+    "files": [
+      [
+        "src/box/tuple.c",
+        158,
+        169
+      ],
+      [
+        "src/box/tuple_format.c",
+        1007,
+        1013
+      ],
+      [
+        "src/box/tuple_format.c",
+        1079,
+        1084
+      ]
+    ]
+  },
+  {
+    "id": "F-137",
+    "sev": "Medium",
+    "title": "`port_{lua,c}_get_vdbemem()` bypasses `mem_set_double()` NaN-to-NULL invariant and leaks `Mem`/region on `mpstream` error",
+    "files": [
+      [
+        "src/box/sql/mem.c",
+        3549,
+        3558
+      ],
+      [
+        "src/box/sql/mem.c",
+        3588,
+        3592
+      ],
+      [
+        "src/box/sql/mem.c",
+        3678,
+        3687
+      ]
+    ]
+  },
+  {
+    "id": "F-138",
+    "sev": "Medium",
+    "title": "`func_round_double()` unbounded `tt_sprintf` precision, `func_unicode()` `UINT64_MAX` on invalid UTF-8, and missing length limit in `replaceFunc()`",
+    "files": [
+      [
+        "src/box/sql/func.c",
+        995,
+        999
+      ],
+      [
+        "src/box/sql/func.c",
+        1100,
+        1102
+      ],
+      [
+        "src/box/sql/func.c",
+        1624,
+        1637
+      ]
+    ]
+  },
+  {
+    "id": "F-139",
+    "sev": "Medium",
+    "title": "Missing `diag_set()` on overflowed decimal literal in `expr_code_dec()`",
+    "files": [
+      [
+        "src/box/sql/expr.c",
+        3324,
+        3345
+      ]
+    ]
+  },
+  {
+    "id": "F-140",
+    "sev": "Medium",
+    "title": "Missing `case TK_GE:` in `sql_expr_type()` misreports `>=` expression type as `any` instead of `boolean`",
+    "files": [
+      [
+        "src/box/sql/expr.c",
+        117,
+        131
+      ]
+    ]
+  },
+  {
+    "id": "F-141",
+    "sev": "Medium",
+    "title": "Deterministic heap memory leaks in `sqlVXPrintf()`, `vdbe_emit_halt_with_presence_test()`, `vdbe_emit_ck_constraint()`, and `parse_def.h`",
+    "files": [
+      [
+        "src/box/sql/printf.c",
+        728,
+        756
+      ],
+      [
+        "src/box/sql/build.c",
+        3545,
+        3560
+      ],
+      [
+        "src/box/sql/insert.c",
+        808,
+        820
+      ],
+      [
+        "src/box/sql/parse_def.h",
+        528,
+        535
+      ]
+    ]
+  },
+  {
+    "id": "F-142",
+    "sev": "Medium",
+    "title": "Wrong and missing read tracking on secondary-index duplicate error in `memtx_tx.c` (MVCC serializability violation)",
+    "files": [
+      [
+        "src/box/memtx_tx.c",
+        1629,
+        1654
+      ]
+    ]
+  },
+  {
+    "id": "F-143",
+    "sev": "Medium",
+    "title": "Uninitialized stack `vclock` copied into caller output on `wal_sync()` failure",
+    "files": [
+      [
+        "src/box/wal.c",
+        603,
+        643
+      ]
+    ]
+  },
+  {
+    "id": "F-144",
+    "sev": "Medium",
+    "title": "ZSTD/ibuf memory leaks and unchecked `obuf_alloc()` NULL dereference in `xlog.c`",
+    "files": [
+      [
+        "src/box/xlog.c",
+        843,
+        855
+      ],
+      [
+        "src/box/xlog.c",
+        1136,
+        1182
+      ],
+      [
+        "src/box/xlog.c",
+        1803,
+        1815
+      ]
+    ]
+  },
+  {
+    "id": "F-145",
+    "sev": "Medium",
+    "title": "Unchecked `matras_alloc()` NULL dereference and destructive failed replace corrupting BITSET secondary index on OOM",
+    "files": [
+      [
+        "src/box/memtx_bitset.cc",
+        88,
+        108
+      ],
+      [
+        "src/box/memtx_bitset.cc",
+        296,
+        333
+      ]
+    ]
+  },
+  {
+    "id": "F-146",
+    "sev": "Medium",
+    "title": "Silent error swallowing in `vy_page_find_key()` and spurious `on_replace` trigger firing on skipped `vy_upsert()`",
+    "files": [
+      [
+        "src/box/vy_run.c",
+        797,
+        824
+      ],
+      [
+        "src/box/vinyl.c",
+        2191,
+        2199
+      ]
+    ]
+  },
+  {
+    "id": "F-147",
+    "sev": "Medium",
+    "title": "Double-unref (`tuple_unref`) and reference leaks in `memtx_space_replace_tuple()` under `ENABLE_TUPLE_COMPRESSION`",
+    "files": [
+      [
+        "src/box/memtx_space.c",
+        349,
+        382
+      ],
+      [
+        "src/box/memtx_space.c",
+        396,
+        405
+      ],
+      [
+        "src/box/memtx_space.c",
+        491,
+        499
+      ],
+      [
+        "src/box/memtx_space.c",
+        623,
+        627
+      ],
+      [
+        "src/box/txn.c",
+        343,
+        350
+      ]
+    ]
+  },
+  {
+    "id": "F-148",
+    "sev": "Medium",
+    "title": "32-bit bitmask truncation in `fk_constraint_check_dup_links()` bypasses duplicate column validation for columns 32..63",
+    "files": [
+      [
+        "src/box/alter.cc",
+        5276,
+        5288
+      ]
+    ]
+  },
+  {
+    "id": "F-149",
+    "sev": "Medium",
+    "title": "Foreign-key referenced unique index can be altered to `unique = false` without triggering rebuild check",
+    "files": [
+      [
+        "src/box/alter.cc",
+        2677,
+        2709
+      ],
+      [
+        "src/box/memtx_engine.cc",
+        1611,
+        1661
+      ]
+    ]
+  },
+  {
+    "id": "F-150",
+    "sev": "Medium",
+    "title": "Missing rollback trigger and schema version bump when toggling CK constraint `is_enabled`",
+    "files": [
+      [
+        "src/box/alter.cc",
+        5685,
+        5697
+      ]
+    ]
+  },
+  {
+    "id": "F-151",
+    "sev": "Medium",
+    "title": "Use-after-free on OOM and stale `fk_constraint_mask` on parent space change in `on_replace_dd_fk_constraint()`",
+    "files": [
+      [
+        "src/box/alter.cc",
+        5216,
+        5231
+      ],
+      [
+        "src/box/alter.cc",
+        5447,
+        5471
+      ]
+    ]
+  },
+  {
+    "id": "F-152",
+    "sev": "Medium",
+    "title": "Non-NUL-terminated MsgPack string passed to `%s` in `func_def_new_from_tuple()` error diagnostics",
+    "files": [
+      [
+        "src/box/alter.cc",
+        3167,
+        3167
+      ],
+      [
+        "src/box/alter.cc",
+        3191,
+        3215
+      ]
+    ]
+  },
+  {
+    "id": "F-153",
+    "sev": "Medium",
+    "title": "Memory leaks on error/exception and unchecked allocation NULL dereferences in `alter.cc`",
+    "files": [
+      [
+        "src/box/alter.cc",
+        704,
+        704
+      ],
+      [
+        "src/box/alter.cc",
+        1860,
+        1888
+      ],
+      [
+        "src/box/alter.cc",
+        3037,
+        3043
+      ],
+      [
+        "src/box/alter.cc",
+        3093,
+        3099
+      ]
+    ]
+  },
+  {
+    "id": "F-154",
+    "sev": "Medium",
+    "title": "Memory leak and dangling trigger assertion crash on `anon_replicas` error path in `replicaset_update()`",
+    "files": [
+      [
+        "src/box/replication.cc",
+        574,
+        621
+      ],
+      [
+        "src/box/replication.cc",
+        855,
+        867
+      ]
+    ]
+  },
+  {
+    "id": "F-155",
+    "sev": "Medium",
+    "title": "Missing `obuf_rollback_to_svp()` on `tuple_to_obuf()` failure in `tx_process1()` leaks 33 uninitialized bytes and desyncs framing",
+    "files": [
+      [
+        "src/box/iproto.cc",
+        2058,
+        2073
+      ]
+    ]
+  },
+  {
+    "id": "F-156",
+    "sev": "Medium",
+    "title": "Permanent `ibuf` and `diag` memory leaks on every applier reconnect in `applier_thread_detach_applier()`",
+    "files": [
+      [
+        "src/box/applier.cc",
+        1826,
+        1856
+      ]
+    ]
+  },
+  {
+    "id": "F-157",
+    "sev": "Medium",
+    "title": "Unchecked `xrow_encode_raft()` leaves stack `row` uninitialized on OOM and swallowed `xstream_write()` errors",
+    "files": [
+      [
+        "src/box/relay.cc",
+        470,
+        486
+      ],
+      [
+        "src/box/relay.cc",
+        1063,
+        1080
+      ],
+      [
+        "src/box/applier.cc",
+        209,
+        209
+      ],
+      [
+        "src/box/applier.cc",
+        691,
+        691
+      ]
+    ]
+  },
+  {
+    "id": "F-158",
+    "sev": "Medium",
+    "title": "Wrong table index (`i` vs `-1`) in `lbox_push_ck_constraint()` crashes DDL or corrupts `space.index`",
+    "files": [
+      [
+        "src/box/lua/space.cc",
+        208,
+        234
+      ]
+    ]
+  },
+  {
+    "id": "F-159",
+    "sev": "Medium",
+    "title": "Broken stack protocol in `box.stat.memtx.tx` (`__call` and `__index`) caches stale stats forever",
+    "files": [
+      [
+        "src/box/lua/stat.c",
+        336,
+        418
+      ]
+    ]
+  },
+  {
+    "id": "F-160",
+    "sev": "Medium",
+    "title": "Memory leak of `struct xlog_cursor` when `xlog_cursor_open()` fails",
+    "files": [
+      [
+        "src/box/lua/xlog.c",
+        280,
+        290
+      ]
+    ]
+  },
+  {
+    "id": "F-161",
+    "sev": "Medium",
+    "title": "Fiber region memory leaks on error paths in `src/box/lua/execute.c`",
+    "files": [
+      [
+        "src/box/lua/execute.c",
+        397,
+        421
+      ],
+      [
+        "src/box/lua/execute.c",
+        479,
+        503
+      ]
+    ]
+  },
+  {
+    "id": "F-162",
+    "sev": "Medium",
+    "title": "Non-string keys in `box.session.settings` silently read/mutate setting #0",
+    "files": [
+      [
+        "src/box/lua/session.c",
+        424,
+        448
+      ],
+      [
+        "src/box/session_settings.c",
+        95,
+        103
+      ],
+      [
+        "src/box/session_settings.c",
+        446,
+        452
+      ]
+    ]
+  },
+  {
+    "id": "F-163",
+    "sev": "Medium",
+    "title": "Wrong pointer checked after `region_alloc` (`fields == NULL` instead of `fields[i].name == NULL`) in `lbox_tuple_format_new()`",
+    "files": [
+      [
+        "src/box/lua/misc.cc",
+        299,
+        308
+      ]
+    ]
+  },
+  {
+    "id": "F-164",
+    "sev": "Medium",
+    "title": "`console.readline()` permanently wedges `readline_L` on cancel and leaves dangling `interactive_fb` / SIGINT callback on error",
+    "files": [
+      [
+        "src/box/lua/console.c",
+        260,
+        289
+      ],
+      [
+        "src/box/lua/console.c",
+        341,
+        343
+      ]
+    ]
+  },
+  {
+    "id": "F-165",
+    "sev": "Medium",
+    "title": "`cord_ibuf` memory and trigger leak across `luaL_error`/`luaT_error` longjmp in `msgpack` and `utf8.char`",
+    "files": [
+      [
+        "src/lua/msgpack.c",
+        453,
+        471
+      ],
+      [
+        "src/lua/msgpack.c",
+        692,
+        700
+      ],
+      [
+        "src/lua/utf8.c",
+        253,
+        266
+      ],
+      [
+        "src/lib/core/cord_buf.c",
+        49,
+        139
+      ]
+    ]
+  },
+  {
+    "id": "F-166",
+    "sev": "Medium",
+    "title": "Stack indexing bug in `lbox_trigger_reset()` registers wrong value when extra arguments are passed",
+    "files": [
+      [
+        "src/lua/trigger.c",
+        161,
+        238
+      ]
+    ]
+  },
+  {
+    "id": "F-167",
+    "sev": "Medium",
+    "title": "Prefix and embedded-NUL matching bug in `luaT_popen_parse_stdX()` (`strncmp` with `action_len`)",
+    "files": [
+      [
+        "src/lua/popen.c",
+        661,
+        698
+      ]
+    ]
+  },
+  {
+    "id": "F-168",
+    "sev": "Medium",
+    "title": "Wrong stack index (`-1`) and silent `uint32_t` truncation in `luaT_fiber_channel()`",
+    "files": [
+      [
+        "src/lua/fiber_channel.c",
+        52,
+        76
+      ]
+    ]
+  },
+  {
+    "id": "F-169",
+    "sev": "Medium",
+    "title": "Wrong stack indexing in `luamp_object_iterator()` and lost custom serializer config in `luamp_iterator_take_array()`",
+    "files": [
+      [
+        "src/lua/msgpack.c",
+        798,
+        810
+      ],
+      [
+        "src/lua/msgpack.c",
+        949,
+        973
+      ]
+    ]
+  },
+  {
+    "id": "F-170",
+    "sev": "Medium",
+    "title": "Unbounded `strlen` on non-NUL-terminated `AF_UNIX` `sun_path` and IPv4 `255.255.255.255` rejected by `inet_addr()`",
+    "files": [
+      [
+        "src/lua/socket.c",
+        418,
+        432
+      ],
+      [
+        "src/lua/socket.c",
+        714,
+        729
+      ],
+      [
+        "src/lua/socket.c",
+        862,
+        862
+      ],
+      [
+        "src/lua/socket.c",
+        934,
+        934
+      ],
+      [
+        "src/lua/socket.c",
+        971,
+        971
+      ]
+    ]
+  },
+  {
+    "id": "F-171",
+    "sev": "Medium",
+    "title": "Signed `INT_MIN` overflow in `utf8_sub()` and invalid UTF-8 emitted by `utf8_char()`",
+    "files": [
+      [
+        "src/lua/utf8.c",
+        236,
+        268
+      ],
+      [
+        "src/lua/utf8.c",
+        280,
+        348
+      ]
+    ]
+  },
+  {
+    "id": "F-172",
+    "sev": "Medium",
+    "title": "Inverted `strcmp(method, \"PATCH\")` check (missing `== 0`) corrupts `PATCH`/`DELETE`/`OPTIONS` framing plus mempool leak",
+    "files": [
+      [
+        "src/httpc.c",
+        135,
+        162
+      ]
+    ]
+  },
+  {
+    "id": "F-173",
+    "sev": "Medium",
+    "title": "NULL pointer dereference on OOM in `mpstream_encode_double()`",
+    "files": [
+      [
+        "src/lib/mpstream/mpstream.c",
+        139,
+        148
+      ]
+    ]
+  },
+  {
+    "id": "F-174",
+    "sev": "Medium",
+    "title": "Inverted `u->host != NULL` check in `evio_service_entry_reuse_addr()` treats port-only TCP URIs as UNIX sockets",
+    "files": [
+      [
+        "src/lib/core/evio.c",
+        215,
+        243
+      ],
+      [
+        "src/lib/core/evio.c",
+        530,
+        542
+      ]
+    ]
+  },
+  {
+    "id": "F-175",
+    "sev": "Medium",
+    "title": "Uppercase IPv6 hex rejected by `uri_raw_parse()` (`[0-9a-fa-f]` typo) and unbracketed by `uri_format()`",
+    "files": [
+      [
+        "src/lib/uri/uri_parser.rl",
+        104,
+        104
+      ],
+      [
+        "src/lib/uri/uri_parser.rl",
+        114,
+        114
+      ],
+      [
+        "src/lib/uri/uri.c",
+        254,
+        267
+      ]
+    ]
+  },
+  {
+    "id": "F-176",
+    "sev": "Medium",
+    "title": "Duplicate broadcast packet storm in `swim_bcast_task_next_addr()` (`task->i->ifa_next` instead of `i->ifa_next`)",
+    "files": [
+      [
+        "src/lib/swim/swim_io.c",
+        263,
+        290
+      ]
+    ]
+  },
+  {
+    "id": "F-177",
+    "sev": "Medium",
+    "title": "Lost `errno` in `coio_write()` and infinite worker-thread loop on EOF in `coio_copyfile()`",
+    "files": [
+      [
+        "src/lib/core/coio_file.c",
+        220,
+        231
+      ],
+      [
+        "src/lib/core/coio_file.c",
+        641,
+        651
+      ]
+    ]
+  },
+  {
+    "id": "F-178",
+    "sev": "Medium",
+    "title": "Double-free on OOM, post-clear memory leaks, and NULL pointer dereferences in `src/lib/bitset/`",
+    "files": [
+      [
+        "src/lib/bitset/expr.c",
+        50,
+        65
+      ],
+      [
+        "src/lib/bitset/expr.c",
+        135,
+        159
+      ],
+      [
+        "src/lib/bitset/iterator.c",
+        69,
+        82
+      ],
+      [
+        "src/lib/bitset/iterator.c",
+        142,
+        175
+      ],
+      [
+        "src/lib/bitset/iterator.c",
+        192,
+        195
+      ],
+      [
+        "src/lib/bitset/index.c",
+        236,
+        241
+      ]
+    ]
+  },
+  {
+    "id": "F-179",
+    "sev": "Medium",
+    "title": "Double-close of pipe fds on error and unsafe `vfork()` global logger / heap mutations in `popen_new()`",
+    "files": [
+      [
+        "src/lib/core/popen.c",
+        983,
+        1000
+      ],
+      [
+        "src/lib/core/popen.c",
+        1188,
+        1257
+      ],
+      [
+        "src/lib/core/popen.c",
+        1343,
+        1420
+      ]
+    ]
+  },
+  {
+    "id": "F-180",
+    "sev": "Medium",
+    "title": "Out-of-bounds array read `evstr[EV_ERROR]` in `curl_sock_cb()` under debug logging",
+    "files": [
+      [
+        "src/curl.c",
+        146,
+        167
+      ]
+    ]
+  },
+  {
+    "id": "F-181",
+    "sev": "Medium",
+    "title": "`syslog_connect_remote()` connects to `inf->ai_addr` instead of `ptr->ai_addr` and `log_syslog_init()` calls `strlen(NULL)` on OOM",
+    "files": [
+      [
+        "src/lib/core/say.c",
+        543,
+        556
+      ],
+      [
+        "src/lib/core/say.c",
+        598,
+        621
+      ]
+    ]
+  },
+  {
+    "id": "F-182",
+    "sev": "Medium",
+    "title": "Region OOB write on dynamic trigger registration, timeout overrun, and joinable fiber leak in `trigger_fiber_run()`",
+    "files": [
+      [
+        "src/lib/core/trigger.cc",
+        99,
+        143
+      ]
+    ]
+  },
+  {
+    "id": "F-183",
+    "sev": "Low",
+    "title": "`memtx_tree_data_is_equal()` ignores `hint`, causing multikey/functional iterator position recovery to skip entries",
+    "files": [
+      [
+        "src/box/memtx_tree.cc",
+        104,
+        109
+      ],
+      [
+        "src/box/memtx_tree.cc",
+        372,
+        379
+      ],
+      [
+        "src/box/memtx_tree.cc",
+        408,
+        414
+      ],
+      [
+        "src/box/memtx_tree.cc",
+        446,
+        453
+      ],
+      [
+        "src/box/memtx_tree.cc",
+        502,
+        508
+      ]
+    ]
+  },
+  {
+    "id": "F-184",
+    "sev": "Low",
+    "title": "`session_close()` checks `rlist_empty(&session->in_shutdown_list)` instead of `&shutdown_list`",
+    "files": [
+      [
+        "src/box/session.cc",
+        231,
+        239
+      ]
+    ]
+  },
+  {
+    "id": "F-185",
+    "sev": "Low",
+    "title": "Assertion failure (`con->state == IPROTO_CONNECTION_DESTROYED`) on OOM in `iproto_on_accept()`",
+    "files": [
+      [
+        "src/box/iproto.cc",
+        1463,
+        1463
+      ],
+      [
+        "src/box/iproto.cc",
+        1477,
+        1477
+      ],
+      [
+        "src/box/iproto.cc",
+        2650,
+        2667
+      ]
+    ]
+  },
+  {
+    "id": "F-186",
+    "sev": "Low",
+    "title": "Unescaped backslashes, duplicated UTF-8 BOM bytes, signed-char UB, and unquoted keys in `serialize_lua.c`",
+    "files": [
+      [
+        "src/box/lua/serialize_lua.c",
+        455,
+        501
+      ],
+      [
+        "src/box/lua/serialize_lua.c",
+        683,
+        714
+      ]
+    ]
+  },
+  {
+    "id": "F-187",
+    "sev": "Low",
+    "title": "`fiber_obj:info({bt = false})` reads stack slot `1` (`self`) instead of slot `2`, ignoring options table",
+    "files": [
+      [
+        "src/lua/fiber.c",
+        320,
+        335
+      ],
+      [
+        "src/lua/fiber.c",
+        516,
+        533
+      ]
+    ]
+  },
+  {
+    "id": "F-188",
+    "sev": "Low",
+    "title": "Latent negative-index OOB read in `luaL_isnull()`, `lua_pop(L, -1)` stack clear in `errno.c`, and wrong length constant in `backtrace.c`",
+    "files": [
+      [
+        "src/lua/utils.h",
+        352,
+        361
+      ],
+      [
+        "src/lua/errno.c",
+        295,
+        295
+      ],
+      [
+        "src/lua/backtrace.c",
+        72,
+        76
+      ]
+    ]
+  },
+  {
+    "id": "F-189",
+    "sev": "Low",
+    "title": "Uninitialized `ctx->ssl` in `iostream_ctx_create()` when no `transport` URI parameter is present",
+    "files": [
+      [
+        "src/lib/core/iostream.c",
+        88,
+        112
+      ]
+    ]
+  }
+]

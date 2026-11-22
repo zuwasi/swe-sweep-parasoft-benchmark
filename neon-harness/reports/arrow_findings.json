@@ -1,0 +1,4745 @@
+[
+  {
+    "id": "ARROW-001",
+    "sev": "Critical",
+    "title": "IPC RecordBatchSerializer::VisitArray emits extra validity buffer for ExtensionArray over Null/Union storage, desynchronizing IPC reader",
+    "files": [
+      [
+        "cpp/src/arrow/ipc/writer.cc",
+        159,
+        170
+      ],
+      [
+        "cpp/src/arrow/ipc/writer.cc",
+        529,
+        529
+      ],
+      [
+        "cpp/src/arrow/ipc/reader.cc",
+        330,
+        335
+      ],
+      [
+        "cpp/src/arrow/ipc/reader.cc",
+        386,
+        424
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-002",
+    "sev": "Critical",
+    "title": "IPC ReadFieldsSubset / IoRecordedRandomAccessFile allows out-of-bounds buffer pointer, negative read length, uninitialized heap leak on short reads, and breaks V4 format",
+    "files": [
+      [
+        "cpp/src/arrow/ipc/message.cc",
+        284,
+        312
+      ],
+      [
+        "cpp/src/arrow/ipc/reader.cc",
+        2549,
+        2562
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-003",
+    "sev": "Critical",
+    "title": "Feather V1 WritePaddedWithOffset unconditionally reads 1 byte past the end of input buffers for sliced bitmaps/booleans",
+    "files": [
+      [
+        "cpp/src/arrow/ipc/feather.cc",
+        75,
+        102
+      ],
+      [
+        "cpp/src/arrow/ipc/feather.cc",
+        558,
+        562
+      ],
+      [
+        "cpp/src/arrow/ipc/feather.cc",
+        607,
+        611
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-004",
+    "sev": "Critical",
+    "title": "Feather V1 ReaderV1 lacks FlatBuffers verification, suffers uint32_t footer size wraparound, unchecked null pointers, and negative SliceBuffer sizes",
+    "files": [
+      [
+        "cpp/src/arrow/ipc/feather.cc",
+        146,
+        225
+      ],
+      [
+        "cpp/src/arrow/ipc/feather.cc",
+        265,
+        305
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-005",
+    "sev": "Critical",
+    "title": "ThriftDeserializer::DeserializeMessage + AesDecryptor::GcmDecrypt/CtrDecrypt suffer heap buffer overflow and under-read on encrypted Parquet metadata",
+    "files": [
+      [
+        "cpp/src/parquet/thrift_internal.h",
+        383,
+        399
+      ],
+      [
+        "cpp/src/parquet/encryption/encryption_internal.cc",
+        448,
+        572
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-006",
+    "sev": "Critical",
+    "title": "DeltaLengthByteArrayDecoder::SetData leaves num_valid_values_, length_idx_, and stale decoder_ uninitialized/dangling on 0-length pages (UAF & OOB read)",
+    "files": [
+      [
+        "cpp/src/parquet/encoding.cc",
+        2563,
+        2618
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-007",
+    "sev": "Critical",
+    "title": "DeltaBitPackDecoder / DeltaLengthByteArrayDecoder / DeltaByteArrayDecoder signed int32 truncation & overflow on total_value_count_ and padding_bits",
+    "files": [
+      [
+        "cpp/src/parquet/encoding.cc",
+        2379,
+        2382
+      ],
+      [
+        "cpp/src/parquet/encoding.cc",
+        2473,
+        2538
+      ],
+      [
+        "cpp/src/parquet/encoding.cc",
+        2639,
+        2647
+      ],
+      [
+        "cpp/src/parquet/encoding.cc",
+        2740,
+        2749
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-008",
+    "sev": "Critical",
+    "title": "BlockSplitBloomFilter::Deserialize heap buffer over-read on truncated stream and Init() uint32_t truncation to 0 causing OOB read/write",
+    "files": [
+      [
+        "cpp/src/parquet/bloom_filter.cc",
+        35,
+        54
+      ],
+      [
+        "cpp/src/parquet/bloom_filter.cc",
+        71,
+        101
+      ],
+      [
+        "cpp/src/parquet/bloom_filter.cc",
+        129,
+        160
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-009",
+    "sev": "Critical",
+    "title": "Swapped _wfullpath arguments in PlatformFilename::Real() cause buffer overflow and empty return on Windows",
+    "files": [
+      [
+        "cpp/src/arrow/util/io_util.cc",
+        500,
+        512
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-010",
+    "sev": "Critical",
+    "title": "UTF8Decode and UTF8DecodeReverse perform unbounded memory reads (and potential output overflow) on invalid/truncated UTF-8",
+    "files": [
+      [
+        "cpp/src/arrow/util/utf8_internal.h",
+        338,
+        422
+      ],
+      [
+        "cpp/src/arrow/util/utf8_internal.h",
+        424,
+        548
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-011",
+    "sev": "Critical",
+    "title": "UriFromAbsolutePath on Unix passes non-NUL-terminated std::string_view to uriUnixFilenameToUriStringA (heap over-read and overflow)",
+    "files": [
+      [
+        "cpp/src/arrow/util/uri.cc",
+        314,
+        337
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-012",
+    "sev": "Critical",
+    "title": "Signed integer overflow (-INT32_MIN) in DecimalFromString causes out-of-bounds ScaleMultipliers read / segfault",
+    "files": [
+      [
+        "cpp/src/arrow/util/decimal.cc",
+        531,
+        562
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-013",
+    "sev": "Critical",
+    "title": "Integer underflow and massive heap buffer overflow in parallel_memcopy when input does not cross a block_size boundary",
+    "files": [
+      [
+        "cpp/src/arrow/util/memory.cc",
+        36,
+        67
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-014",
+    "sev": "Critical",
+    "title": "ChunkResolver::Resolve heap buffer over-read on consecutive out-of-bounds lookups",
+    "files": [
+      [
+        "cpp/src/arrow/chunk_resolver.h",
+        53,
+        72
+      ],
+      [
+        "cpp/src/arrow/chunked_array.cc",
+        151,
+        158
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-015",
+    "sev": "Critical",
+    "title": "DictionaryType::ComputeFingerprint returns non-empty '0'/'1' for unfingerprintable value types, causing distinct dictionary types to compare equal",
+    "files": [
+      [
+        "cpp/src/arrow/type.cc",
+        2129,
+        2140
+      ],
+      [
+        "cpp/src/arrow/compare.cc",
+        1320,
+        1324
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-016",
+    "sev": "Critical",
+    "title": "ValidateArray / ValidateArrayFull omits data.offset < 0 check and overflows data.length + data.offset + 1 in ValidateOffsets",
+    "files": [
+      [
+        "cpp/src/arrow/array/validate.cc",
+        437,
+        453
+      ],
+      [
+        "cpp/src/arrow/array/validate.cc",
+        519,
+        520
+      ],
+      [
+        "cpp/src/arrow/array/validate.cc",
+        639,
+        652
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-017",
+    "sev": "Critical",
+    "title": "Concatenate OOB vector read on empty binary/list arrays with null offsets buffer and heap over-read in PutOffsets",
+    "files": [
+      [
+        "cpp/src/arrow/array/concatenate.cc",
+        136,
+        168
+      ],
+      [
+        "cpp/src/arrow/array/concatenate.cc",
+        212,
+        246
+      ],
+      [
+        "cpp/src/arrow/array/concatenate.cc",
+        472,
+        508
+      ],
+      [
+        "cpp/src/arrow/array/concatenate.cc",
+        556,
+        564
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-018",
+    "sev": "Critical",
+    "title": "Tensor::Make / ValidateTensorParameters skips buffer-size validation whenever strides is empty (default row-major)",
+    "files": [
+      [
+        "cpp/src/arrow/tensor.cc",
+        204,
+        221
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-019",
+    "sev": "Critical",
+    "title": "CSV PresizedValueDescWriter heap buffer overflow on rows with excess columns and signed 32-bit capacity overflow",
+    "files": [
+      [
+        "cpp/src/arrow/csv/parser.cc",
+        172,
+        181
+      ],
+      [
+        "cpp/src/arrow/csv/parser.cc",
+        271,
+        280
+      ],
+      [
+        "cpp/src/arrow/csv/parser.cc",
+        376,
+        396
+      ],
+      [
+        "cpp/src/arrow/csv/parser.cc",
+        554,
+        568
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-020",
+    "sev": "Critical",
+    "title": "JSON BlockParser HandlerBase::Null passes builder_ by value, leaving stale inline BuilderPtr inside arrays (DCHECK crash & OOB ListArray offsets)",
+    "files": [
+      [
+        "cpp/src/arrow/json/parser.cc",
+        531,
+        551
+      ],
+      [
+        "cpp/src/arrow/json/parser.cc",
+        673,
+        676
+      ],
+      [
+        "cpp/src/arrow/json/parser.cc",
+        885,
+        885
+      ],
+      [
+        "cpp/src/arrow/json/parser.cc",
+        1142,
+        1168
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-021",
+    "sev": "Critical",
+    "title": "JSON BlockParser HandlerBase::Null calls builder_stack_.back() on empty stack for top-level null (OOB read / crash)",
+    "files": [
+      [
+        "cpp/src/arrow/json/parser.cc",
+        673,
+        676
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-022",
+    "sev": "Critical",
+    "title": "JSON Converter and ChunkedArrayBuilder suffer C++ object type confusion (unchecked static_cast) on cross-block JSON kind mismatches",
+    "files": [
+      [
+        "cpp/src/arrow/json/converter.cc",
+        50,
+        56
+      ],
+      [
+        "cpp/src/arrow/json/converter.cc",
+        123,
+        123
+      ],
+      [
+        "cpp/src/arrow/json/converter.cc",
+        163,
+        163
+      ],
+      [
+        "cpp/src/arrow/json/converter.cc",
+        242,
+        242
+      ],
+      [
+        "cpp/src/arrow/json/chunked_builder.cc",
+        224,
+        225
+      ],
+      [
+        "cpp/src/arrow/json/chunked_builder.cc",
+        318,
+        318
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-023",
+    "sev": "Critical",
+    "title": "JSON BlockParser::ReserveScalarStorage passes (size - available_storage) to ReserveData, under-reserving and overflowing heap on multi-call Parse()",
+    "files": [
+      [
+        "cpp/src/arrow/json/parser.cc",
+        796,
+        800
+      ],
+      [
+        "cpp/src/arrow/json/parser.cc",
+        807,
+        818
+      ],
+      [
+        "cpp/src/arrow/json/parser.cc",
+        920,
+        928
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-024",
+    "sev": "Critical",
+    "title": "Out-of-bounds write to static kZeroSizeArea for BooleanType in chunked replace_with_mask, fill_null_forward, and fill_null_backward",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/vector_replace.cc",
+        419,
+        428
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/vector_replace.cc",
+        693,
+        699
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/vector_replace.cc",
+        777,
+        782
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-025",
+    "sev": "Critical",
+    "title": "Type confusion and heap buffer overflow/over-read in choose (DispatchBest ignores middle arguments & omits CheckIdenticalTypes)",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/scalar_if_else.cc",
+        2541,
+        2548
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/scalar_if_else.cc",
+        2660,
+        2678
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/scalar_if_else.cc",
+        2735,
+        2735
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-026",
+    "sev": "Critical",
+    "title": "Signed int64_t overflow in utf8_slice_codeunits and binary_slice (MaxCodeunits) causes 0-byte / undersized allocation and buffer overflow",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/scalar_string_utf8.cc",
+        1086,
+        1097
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/scalar_string_ascii.cc",
+        2414,
+        2423
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-027",
+    "sev": "Critical",
+    "title": "Heap buffer overflow in utf8_{lpad,rpad,center} and ascii_{lpad,rpad,center} for negative or large PadOptions::width",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/scalar_string_utf8.cc",
+        903,
+        927
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/scalar_string_ascii.cc",
+        1116,
+        1135
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-028",
+    "sev": "Critical",
+    "title": "Heap buffer overflow (int64_t wraparound) and spurious null-slot errors in binary_repeat (MaxCodeunits)",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/scalar_string_ascii.cc",
+        3255,
+        3282
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-029",
+    "sev": "Critical",
+    "title": "Type confusion and heap OOB read in round_to_multiple when multiple is an integer scalar and input is Decimal128/256 or Float32",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/scalar_round.cc",
+        318,
+        336
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/scalar_round.cc",
+        470,
+        476
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/scalar_round.cc",
+        516,
+        526
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-030",
+    "sev": "Critical",
+    "title": "Type confusion in partition_nth_indices on ChunkedArray due to stale base.exec_chunked = ArraySortIndicesChunked",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/vector_array_sort.cc",
+        558,
+        572
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-031",
+    "sev": "Critical",
+    "title": "Negative num_processed in BlockedBloomFilter::FindImp causes heap under-read and 8-byte heap buffer overflow write",
+    "files": [
+      [
+        "cpp/src/arrow/compute/exec/bloom_filter.cc",
+        151,
+        172
+      ],
+      [
+        "cpp/src/arrow/compute/exec/hash_join_node.cc",
+        552,
+        580
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-032",
+    "sev": "Critical",
+    "title": "TaskSchedulerImpl::Abort ignores TaskGroupState::ALL_TASKS_STARTED, causing UAF and double callback; related races in StartTaskGroup and ExecuteMore",
+    "files": [
+      [
+        "cpp/src/arrow/compute/exec/task_util.cc",
+        140,
+        147
+      ],
+      [
+        "cpp/src/arrow/compute/exec/task_util.cc",
+        279,
+        291
+      ],
+      [
+        "cpp/src/arrow/compute/exec/task_util.cc",
+        384,
+        418
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-033",
+    "sev": "Critical",
+    "title": "AsofJoinNode::Init initializes KeyHasher with output_schema() instead of inputs[i]->output_schema() (type confusion & heap over-read)",
+    "files": [
+      [
+        "cpp/src/arrow/compute/exec/asof_join_node.cc",
+        315,
+        341
+      ],
+      [
+        "cpp/src/arrow/compute/exec/asof_join_node.cc",
+        1043,
+        1051
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-034",
+    "sev": "Critical",
+    "title": "Use-after-free in ~AsofJoinNode() via EndFromProcessThread() spawning async task capturing raw this",
+    "files": [
+      [
+        "cpp/src/arrow/compute/exec/asof_join_node.cc",
+        965,
+        974
+      ],
+      [
+        "cpp/src/arrow/compute/exec/asof_join_node.cc",
+        1021,
+        1031
+      ],
+      [
+        "cpp/src/arrow/compute/exec/asof_join_node.cc",
+        1060,
+        1063
+      ],
+      [
+        "cpp/src/arrow/compute/exec/asof_join_node.cc",
+        1396,
+        1396
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-035",
+    "sev": "Critical",
+    "title": "ExecBatchBuilder::NumRowsToSkip omits column->offset and miscounts duplicate row_ids, causing 8-byte heap buffer over-read",
+    "files": [
+      [
+        "cpp/src/arrow/compute/light_array.cc",
+        369,
+        404
+      ],
+      [
+        "cpp/src/arrow/compute/light_array.cc",
+        541,
+        555
+      ],
+      [
+        "cpp/src/arrow/compute/light_array.cc",
+        595,
+        607
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-036",
+    "sev": "Critical",
+    "title": "GroupedListImpl::Consume reads batch[0].array from ExecValue union without checking is_scalar() (type confusion / crash)",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/hash_aggregate.cc",
+        2294,
+        2305
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/hash_aggregate.cc",
+        2401,
+        2405
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-037",
+    "sev": "Critical",
+    "title": "GrouperFastImpl::GetUniques reads uninitialized memory as allocation size on 0 groups (varlen keys) and builds invalid dictionary type",
+    "files": [
+      [
+        "cpp/src/arrow/compute/row/grouper.cc",
+        425,
+        452
+      ],
+      [
+        "cpp/src/arrow/compute/row/grouper.cc",
+        489,
+        499
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-038",
+    "sev": "Critical",
+    "title": "CheckQuantileOptions accepts NaN, causing std::sort UB and out-of-bounds memory corruption in quantile",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/aggregate_quantile.cc",
+        46,
+        47
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/aggregate_quantile.cc",
+        117,
+        120
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/aggregate_quantile.cc",
+        200,
+        221
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/aggregate_quantile.cc",
+        483,
+        487
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-039",
+    "sev": "Critical",
+    "title": "S3FileSystem DeleteObjectsAsync drops all keys past index 1000 and sends empty DeleteObjectsRequests",
+    "files": [
+      [
+        "cpp/src/arrow/filesystem/s3fs.cc",
+        2088,
+        2100
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-040",
+    "sev": "Critical",
+    "title": "Globber::Impl::PatternToRegex infinite out-of-bounds heap read on trailing backslash",
+    "files": [
+      [
+        "cpp/src/arrow/filesystem/path_util.cc",
+        317,
+        335
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-041",
+    "sev": "Critical",
+    "title": "Heap buffer over-reads and uint32_t integer overflow in UCX PayloadHeaderFrame::ToFlightData",
+    "files": [
+      [
+        "cpp/src/arrow/flight/transport/ucx/ucx_internal.cc",
+        358,
+        408
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-042",
+    "sev": "Critical",
+    "title": "Unlocked default-constructed std::unique_lock shadows connections_mutex_ in UcxClientImpl (data race / memory corruption)",
+    "files": [
+      [
+        "cpp/src/arrow/flight/transport/ucx/ucx_client.cc",
+        561,
+        569
+      ],
+      [
+        "cpp/src/arrow/flight/transport/ucx/ucx_client.cc",
+        655,
+        687
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-043",
+    "sev": "Critical",
+    "title": "Self-deadlock in UcpCallDriver::Impl::Close() holding frame_mutex_ across MakeProgress()",
+    "files": [
+      [
+        "cpp/src/arrow/flight/transport/ucx/ucx_internal.cc",
+        733,
+        762
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-044",
+    "sev": "Critical",
+    "title": "Heap OOB reads on unvalidated Substrait emit.output_mapping indices",
+    "files": [
+      [
+        "cpp/src/arrow/engine/substrait/relation_internal.cc",
+        78,
+        93
+      ],
+      [
+        "cpp/src/arrow/engine/substrait/relation_internal.cc",
+        122,
+        156
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-045",
+    "sev": "Critical",
+    "title": "Unchecked Result dereference (ValueOrDie abort) and null DataType via OutputType::type() in FromProto(ProjectRel)",
+    "files": [
+      [
+        "cpp/src/arrow/engine/substrait/relation_internal.cc",
+        444,
+        464
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-046",
+    "sev": "Critical",
+    "title": "Use-after-free of InHolder<DecimalScalar128> baked as raw pointer constant into cached LLVM object code",
+    "files": [
+      [
+        "cpp/src/gandiva/llvm_generator.cc",
+        1086,
+        1100
+      ],
+      [
+        "cpp/src/gandiva/expr_decomposer.cc",
+        187,
+        200
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-047",
+    "sev": "Critical",
+    "title": "Heap OOB under-read on SelectionVectors with indices >= 32,768 due to sign-extension of unsigned uint16/uint32 indices",
+    "files": [
+      [
+        "cpp/src/gandiva/llvm_generator.cc",
+        359,
+        367
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-048",
+    "sev": "Critical",
+    "title": "Heap buffer overflow and uninitialized read on 0-slot SelectionVectors in CodeGenExprValue do-while loop",
+    "files": [
+      [
+        "cpp/src/gandiva/llvm_generator.cc",
+        142,
+        152
+      ],
+      [
+        "cpp/src/gandiva/llvm_generator.cc",
+        378,
+        423
+      ],
+      [
+        "cpp/src/gandiva/projector.cc",
+        141,
+        219
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-049",
+    "sev": "Critical",
+    "title": "Heap buffer overflow (PKCS#7 padding), key OOB read, null deref on error, and EVP_CIPHER_CTX leak in Gandiva AES functions",
+    "files": [
+      [
+        "cpp/src/gandiva/gdv_function_stubs.cc",
+        312,
+        371
+      ],
+      [
+        "cpp/src/gandiva/encrypt_utils.cc",
+        28,
+        89
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-050",
+    "sev": "Critical",
+    "title": "Deterministic 1-byte heap buffer overflow (NUL overwrite) and broken digest check in gdv_hash_using_openssl (md5/sha1/sha256/sha512)",
+    "files": [
+      [
+        "cpp/src/gandiva/hash_utils.cc",
+        102,
+        136
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-051",
+    "sev": "Critical",
+    "title": "Deterministic 1-byte heap buffer overflow in to_hex_int64 and to_hex_int32",
+    "files": [
+      [
+        "cpp/src/gandiva/precompiled/string_ops.cc",
+        2831,
+        2861
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-052",
+    "sev": "Critical",
+    "title": "Heap buffer overflow and negative-length memcpy crash in byte_substr_binary_int32_int32",
+    "files": [
+      [
+        "cpp/src/gandiva/precompiled/string_ops.cc",
+        2382,
+        2398
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-053",
+    "sev": "Critical",
+    "title": "Heap buffer overflow, negative memcpy crash, and OOB UTF-8 read in mask_utf8_utf8_utf8_utf8 and gdv_mask_first_n_utf8_int32",
+    "files": [
+      [
+        "cpp/src/gandiva/gdv_function_stubs.cc",
+        414,
+        423
+      ],
+      [
+        "cpp/src/gandiva/gdv_function_stubs.cc",
+        581,
+        667
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-054",
+    "sev": "Critical",
+    "title": "Heap buffer overflow, unbounded OOB read, and negative *out_len in lpad/rpad and utf8_length_ignore_invalid",
+    "files": [
+      [
+        "cpp/src/gandiva/precompiled/string_ops.cc",
+        199,
+        216
+      ],
+      [
+        "cpp/src/gandiva/precompiled/string_ops.cc",
+        1946,
+        2093
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-055",
+    "sev": "Critical",
+    "title": "Integer truncation/overflow heap buffer overflows in castVARCHAR/castVARBINARY, repeat_utf8_int32, and negative size corruption in SimpleArena::Allocate",
+    "files": [
+      [
+        "cpp/src/gandiva/gdv_string_function_stubs.cc",
+        98,
+        109
+      ],
+      [
+        "cpp/src/gandiva/gdv_string_function_stubs.cc",
+        134,
+        145
+      ],
+      [
+        "cpp/src/gandiva/precompiled/string_ops.cc",
+        844,
+        853
+      ],
+      [
+        "cpp/src/gandiva/simple_arena.h",
+        102,
+        114
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-056",
+    "sev": "Critical",
+    "title": "Heap use-after-free and permanent deadlock/leak on duplicate ObjectIDs in Plasma Get requests",
+    "files": [
+      [
+        "cpp/src/plasma/store.cc",
+        106,
+        114
+      ],
+      [
+        "cpp/src/plasma/store.cc",
+        324,
+        348
+      ],
+      [
+        "cpp/src/plasma/store.cc",
+        407,
+        449
+      ],
+      [
+        "cpp/src/plasma/store.cc",
+        451,
+        538
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-057",
+    "sev": "Critical",
+    "title": "Unchecked negative/overflowing data_size/metadata_size in Plasma CreateObject causes footprint bypass, shared-memory heap overflow, and server abort",
+    "files": [
+      [
+        "cpp/src/plasma/store.cc",
+        246,
+        257
+      ],
+      [
+        "cpp/src/plasma/plasma_allocator.cc",
+        33,
+        41
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-058",
+    "sev": "Critical",
+    "title": "Missing FlatBuffers verification (DCHECK-only) and length checks in Plasma IPC protocol cause heap over-reads, OOB vector reads, and server crashes",
+    "files": [
+      [
+        "cpp/src/plasma/common.cc",
+        113,
+        117
+      ],
+      [
+        "cpp/src/plasma/protocol.cc",
+        82,
+        90
+      ],
+      [
+        "cpp/src/plasma/protocol.cc",
+        142,
+        142
+      ],
+      [
+        "cpp/src/plasma/protocol.cc",
+        310,
+        336
+      ],
+      [
+        "cpp/src/plasma/protocol.cc",
+        470,
+        482
+      ],
+      [
+        "cpp/src/plasma/store.cc",
+        603,
+        619
+      ],
+      [
+        "cpp/src/plasma/store.cc",
+        932,
+        938
+      ],
+      [
+        "cpp/src/plasma/store.cc",
+        1015,
+        1035
+      ],
+      [
+        "cpp/src/plasma/io.cc",
+        101,
+        124
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-059",
+    "sev": "Critical",
+    "title": "Heap use-after-free, multi-threaded data race on chunks_, and ignored cls_cxx_read errors in Skyhook Ceph OSD plugin",
+    "files": [
+      [
+        "cpp/src/skyhook/cls/cls_skyhook.cc",
+        77,
+        92
+      ],
+      [
+        "cpp/src/skyhook/cls/cls_skyhook.cc",
+        153,
+        173
+      ],
+      [
+        "cpp/src/skyhook/cls/cls_skyhook.cc",
+        254,
+        254
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-060",
+    "sev": "Critical",
+    "title": "Unverified FlatBuffers deserialization and null pointer dereferences in DeserializeScanRequest inside Ceph OSD",
+    "files": [
+      [
+        "cpp/src/skyhook/protocol/skyhook_protocol.cc",
+        62,
+        89
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-061",
+    "sev": "Critical",
+    "title": "C++ type confusion (invalid vtable dispatch) and null-pointer write in garrow_buffer_slice / garrow_mutable_buffer_slice",
+    "files": [
+      [
+        "c_glib/arrow-glib/buffer.cpp",
+        415,
+        423
+      ],
+      [
+        "c_glib/arrow-glib/buffer.cpp",
+        491,
+        506
+      ],
+      [
+        "c_glib/arrow-glib/buffer.cpp",
+        595,
+        627
+      ],
+      [
+        "c_glib/arrow-glib/buffer.cpp",
+        649,
+        658
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-062",
+    "sev": "Critical",
+    "title": "Stack buffer over-read and off-by-one uninitialized stack read in garrow_array_builder_append_values (GBytes** overload)",
+    "files": [
+      [
+        "c_glib/arrow-glib/array-builder.cpp",
+        150,
+        200
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-063",
+    "sev": "High",
+    "title": "ArrayStreamBatchReader::ReadNext after Close() causes use-after-free on ExportedArrayStream::PrivateData",
+    "files": [
+      [
+        "cpp/src/arrow/c/bridge.cc",
+        1690,
+        1698
+      ],
+      [
+        "cpp/src/arrow/c/bridge.cc",
+        1785,
+        1802
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-064",
+    "sev": "High",
+    "title": "SchemaImporter::ProcessDecimal calls aborting decimal128()/decimal256() constructors on untrusted precision",
+    "files": [
+      [
+        "cpp/src/arrow/c/bridge.cc",
+        1055,
+        1073
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-065",
+    "sev": "High",
+    "title": "SchemaImporter::DoImport passes unchecked negative n_children to std::vector::resize() and ArrayImporter allows negative buffer sizes",
+    "files": [
+      [
+        "cpp/src/arrow/c/bridge.cc",
+        872,
+        878
+      ],
+      [
+        "cpp/src/arrow/c/bridge.cc",
+        1570,
+        1598
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-066",
+    "sev": "High",
+    "title": "Feather V1 WriteColumnV1 crashes with OOB access on 0-chunk empty ChunkedArray",
+    "files": [
+      [
+        "cpp/src/arrow/ipc/feather.cc",
+        631,
+        637
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-067",
+    "sev": "High",
+    "title": "IPC DecompressBuffer fails on spec-compliant uncompressed_size == -1 sentinel in compressed RecordBatches",
+    "files": [
+      [
+        "cpp/src/arrow/ipc/reader.cc",
+        443,
+        474
+      ],
+      [
+        "format/Message.fbs",
+        62,
+        66
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-068",
+    "sev": "High",
+    "title": "IPC DictionaryMemo::ReifyDictionary and DictionaryResolver mutate cached dictionary state unsynchronized across concurrent reads",
+    "files": [
+      [
+        "cpp/src/arrow/ipc/dictionary.cc",
+        194,
+        220
+      ],
+      [
+        "cpp/src/arrow/ipc/dictionary.cc",
+        369,
+        378
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-069",
+    "sev": "High",
+    "title": "ByteStreamSplitDecoder::SetData rejects every valid nullable BYTE_STREAM_SPLIT page containing nulls",
+    "files": [
+      [
+        "cpp/src/parquet/encoding.cc",
+        2923,
+        2930
+      ],
+      [
+        "cpp/src/parquet/column_reader.cc",
+        895,
+        896
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-070",
+    "sev": "High",
+    "title": "SerializedPageReader::NextPage treats omitted DataPageHeaderV2.is_compressed as false instead of Thrift spec default true",
+    "files": [
+      [
+        "cpp/src/parquet/column_reader.cc",
+        515,
+        517
+      ],
+      [
+        "cpp/src/parquet/parquet.thrift",
+        570,
+        571
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-071",
+    "sev": "High",
+    "title": "SerializedPageReader::DecompressIfNeeded never shrinks/slices decompression_buffer_ and discards Decompress() actual byte count",
+    "files": [
+      [
+        "cpp/src/parquet/column_reader.cc",
+        545,
+        574
+      ],
+      [
+        "cpp/src/parquet/column_page.h",
+        53,
+        53
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-072",
+    "sev": "High",
+    "title": "DictDecoderImpl::DecodeIndices and DecodeIndicesSpaced do not validate dictionary index bounds, producing invalid Arrow DictionaryArrays",
+    "files": [
+      [
+        "cpp/src/parquet/encoding.cc",
+        1529,
+        1587
+      ],
+      [
+        "cpp/src/parquet/column_reader.cc",
+        1005,
+        1005
+      ],
+      [
+        "cpp/src/parquet/column_reader.cc",
+        2048,
+        2048
+      ],
+      [
+        "cpp/src/parquet/column_reader.cc",
+        2064,
+        2064
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-073",
+    "sev": "High",
+    "title": "DecryptKeyLocally passes negative length to std::string constructor on short encrypted keys and AesEncryptor ignores RAND_bytes failure",
+    "files": [
+      [
+        "cpp/src/parquet/encryption/key_toolkit_internal.cc",
+        59,
+        61
+      ],
+      [
+        "cpp/src/parquet/encryption/encryption_internal.cc",
+        168,
+        171
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-074",
+    "sev": "High",
+    "title": "CudaBufferWriterImpl::Write lacks bounds check against buffer size_ and WriteAt fails to flush before Seek(), corrupting GPU memory",
+    "files": [
+      [
+        "cpp/src/arrow/gpu/cuda_memory.cc",
+        352,
+        381
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-075",
+    "sev": "High",
+    "title": "Signed 32-bit integer overflows in BitWriter::PutValue (heap overflow) and BitReader::GetBatch (heap underflow) for buffers >= 256 MiB",
+    "files": [
+      [
+        "cpp/src/arrow/util/bit_stream_utils.h",
+        211,
+        211
+      ],
+      [
+        "cpp/src/arrow/util/bit_stream_utils.h",
+        350,
+        350
+      ],
+      [
+        "cpp/src/arrow/util/bit_stream_utils.h",
+        359,
+        359
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-076",
+    "sev": "High",
+    "title": "Out-of-bounds read and wrong value in BitReader::GetAligned<bool> when num_bytes == 0 (RLE bit_width == 0)",
+    "files": [
+      [
+        "cpp/src/arrow/util/bit_stream_utils.h",
+        404,
+        426
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-077",
+    "sev": "High",
+    "title": "BasicDecimal128/256::Rescale silently wraps around on overflow and reads ScaleMultipliers out-of-bounds for |delta_scale| > kMaxScale",
+    "files": [
+      [
+        "cpp/src/arrow/util/basic_decimal.cc",
+        1023,
+        1063
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-078",
+    "sev": "High",
+    "title": "Out-of-bounds heap read in TDigest::Quantile(NaN) (reachable from tdigest / hash_tdigest kernels)",
+    "files": [
+      [
+        "cpp/src/arrow/util/tdigest.cc",
+        273,
+        331
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-079",
+    "sev": "High",
+    "title": "Streaming GZip and BZ2 codecs report corrupted bytes_read / bytes_written when buffer length exceeds UINT_MAX",
+    "files": [
+      [
+        "cpp/src/arrow/util/compression_zlib.cc",
+        128,
+        152
+      ],
+      [
+        "cpp/src/arrow/util/compression_zlib.cc",
+        203,
+        218
+      ],
+      [
+        "cpp/src/arrow/util/compression_zlib.cc",
+        229,
+        243
+      ],
+      [
+        "cpp/src/arrow/util/compression_zlib.cc",
+        260,
+        272
+      ],
+      [
+        "cpp/src/arrow/util/compression_bz2.cc",
+        125,
+        137
+      ],
+      [
+        "cpp/src/arrow/util/compression_bz2.cc",
+        179,
+        188
+      ],
+      [
+        "cpp/src/arrow/util/compression_bz2.cc",
+        196,
+        203
+      ],
+      [
+        "cpp/src/arrow/util/compression_bz2.cc",
+        211,
+        218
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-080",
+    "sev": "High",
+    "title": "Data race / UAF on MergedGenerator::State::final_error and silent error loss",
+    "files": [
+      [
+        "cpp/src/arrow/util/async_generator.h",
+        1053,
+        1062
+      ],
+      [
+        "cpp/src/arrow/util/async_generator.h",
+        1181,
+        1193
+      ],
+      [
+        "cpp/src/arrow/util/async_generator.h",
+        1286,
+        1316
+      ],
+      [
+        "cpp/src/arrow/util/async_generator.h",
+        1374,
+        1397
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-081",
+    "sev": "High",
+    "title": "Race conditions in ReadaheadGenerator cause permanent deadlock or double MarkFinished()",
+    "files": [
+      [
+        "cpp/src/arrow/util/async_generator.h",
+        747,
+        795
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-082",
+    "sev": "High",
+    "title": "ThrottleImpl ignores paused_ in Release() and TryAcquire(), breaking ThrottledAsyncTaskScheduler::Pause()",
+    "files": [
+      [
+        "cpp/src/arrow/util/async_util.cc",
+        43,
+        95
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-083",
+    "sev": "High",
+    "title": "Reference cycle leak in ThrottledAsyncTaskSchedulerImpl::ContinueTasks()",
+    "files": [
+      [
+        "cpp/src/arrow/util/async_util.cc",
+        311,
+        317
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-084",
+    "sev": "High",
+    "title": "Use-after-free in SerialExecutor::SpawnReal reading this->state_->finished after copying state_",
+    "files": [
+      [
+        "cpp/src/arrow/util/thread_pool.cc",
+        99,
+        111
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-085",
+    "sev": "High",
+    "title": "MemoryMapRemap checks new_addr == NULL instead of *new_addr == NULL on Windows",
+    "files": [
+      [
+        "cpp/src/arrow/util/io_util.cc",
+        1442,
+        1447
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-086",
+    "sev": "High",
+    "title": "Null dereference and lost O_NONBLOCK flag in SelfPipeImpl at-fork handlers",
+    "files": [
+      [
+        "cpp/src/arrow/util/io_util.cc",
+        1237,
+        1256
+      ],
+      [
+        "cpp/src/arrow/util/io_util.cc",
+        1321,
+        1328
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-087",
+    "sev": "High",
+    "title": "MakeSequencedMergedGenerator accepts max_subscriptions == 0, causing SpscQueue(0) heap overflow / assert crash",
+    "files": [
+      [
+        "cpp/src/arrow/util/async_generator.h",
+        1460,
+        1474
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-088",
+    "sev": "High",
+    "title": "ValidateArrayImpl::Visit(FixedSizeListType) ignores data.offset, allowing OOB child reads after ValidateFull()",
+    "files": [
+      [
+        "cpp/src/arrow/array/validate.cc",
+        259,
+        272
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-089",
+    "sev": "High",
+    "title": "ValidateArrayImpl omits null-buffer checks for UnionType and null-child checks for nested types (segfault in ValidateFull)",
+    "files": [
+      [
+        "cpp/src/arrow/array/validate.cc",
+        260,
+        260
+      ],
+      [
+        "cpp/src/arrow/array/validate.cc",
+        285,
+        285
+      ],
+      [
+        "cpp/src/arrow/array/validate.cc",
+        312,
+        312
+      ],
+      [
+        "cpp/src/arrow/array/validate.cc",
+        341,
+        383
+      ],
+      [
+        "cpp/src/arrow/array/validate.cc",
+        585,
+        585
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-090",
+    "sev": "High",
+    "title": "ValidateArrayFull omits child/dictionary type equality checks for List, FixedSizeList, and Dictionary arrays",
+    "files": [
+      [
+        "cpp/src/arrow/array/validate.cc",
+        259,
+        281
+      ],
+      [
+        "cpp/src/arrow/array/validate.cc",
+        389,
+        414
+      ],
+      [
+        "cpp/src/arrow/array/validate.cc",
+        583,
+        623
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-091",
+    "sev": "High",
+    "title": "Array::GetScalar(int64_t i) and ChunkedArray::GetScalar(int64_t i) omit i < 0 check, causing heap under-read",
+    "files": [
+      [
+        "cpp/src/arrow/array/array_base.cc",
+        161,
+        180
+      ],
+      [
+        "cpp/src/arrow/chunked_array.cc",
+        151,
+        158
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-092",
+    "sev": "High",
+    "title": "CleanListOffsets + ListArray::FromArrays / MapArray::FromArrays heap over-read and corrupted null bitmap on sliced offsets with nulls",
+    "files": [
+      [
+        "cpp/src/arrow/array/array_nested.cc",
+        55,
+        101
+      ],
+      [
+        "cpp/src/arrow/array/array_nested.cc",
+        129,
+        138
+      ],
+      [
+        "cpp/src/arrow/array/array_nested.cc",
+        361,
+        366
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-093",
+    "sev": "High",
+    "title": "MapArray constructor applies map offset to child pair_data (OOB struct) and MapArray::SetData ignores pair_data->offset",
+    "files": [
+      [
+        "cpp/src/arrow/array/array_nested.cc",
+        325,
+        336
+      ],
+      [
+        "cpp/src/arrow/array/array_nested.cc",
+        416,
+        424
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-094",
+    "sev": "High",
+    "title": "StructArray::field(int i) has concurrent data race and use-after-free on lazy boxed_fields_[i]",
+    "files": [
+      [
+        "cpp/src/arrow/array/array_nested.cc",
+        585,
+        599
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-095",
+    "sev": "High",
+    "title": "TensorEquals OOB vector read and crash on 0-dimensional float/double tensors",
+    "files": [
+      [
+        "cpp/src/arrow/compare.cc",
+        1058,
+        1133
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-096",
+    "sev": "High",
+    "title": "NullArrayFactory::GetBufferLength omits child recursion for variable-size lists, allocating undersized shared buffers (heap over-read)",
+    "files": [
+      [
+        "cpp/src/arrow/array/util.cc",
+        338,
+        342
+      ],
+      [
+        "cpp/src/arrow/array/util.cc",
+        458,
+        463
+      ],
+      [
+        "cpp/src/arrow/array/util.cc",
+        494,
+        504
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-097",
+    "sev": "High",
+    "title": "ViewDataImpl OOB vector read in GetDictionaryView and undersized/misaligned null bitmap on sliced Struct views",
+    "files": [
+      [
+        "cpp/src/arrow/array/data.cc",
+        504,
+        595
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-098",
+    "sev": "High",
+    "title": "AdaptiveUIntBuilder::AppendValues omits CommitPendingData(), causing debug abort and release corruption / overflow",
+    "files": [
+      [
+        "cpp/src/arrow/array/builder_adaptive.cc",
+        290,
+        297
+      ],
+      [
+        "cpp/src/arrow/array/builder_adaptive.cc",
+        344,
+        349
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-099",
+    "sev": "High",
+    "title": "TransposeDictIndices null-pointer dereference on sliced DictionaryArray with kUnknownNullCount and null bitmap",
+    "files": [
+      [
+        "cpp/src/arrow/array/array_dict.cc",
+        194,
+        205
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-100",
+    "sev": "High",
+    "title": "ArrayDataEndianSwapper dereferences null value buffers for fixed-width, decimal, and interval types on unvalidated IPC data",
+    "files": [
+      [
+        "cpp/src/arrow/array/util.cc",
+        108,
+        124
+      ],
+      [
+        "cpp/src/arrow/array/util.cc",
+        143,
+        231
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-101",
+    "sev": "High",
+    "title": "SparseCSFIndex and SparseCOOIndex lack bounds, ndim, and buffer-size validation (underflow, OOB read, crash)",
+    "files": [
+      [
+        "cpp/src/arrow/sparse_tensor.cc",
+        247,
+        257
+      ],
+      [
+        "cpp/src/arrow/sparse_tensor.cc",
+        364,
+        403
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-102",
+    "sev": "High",
+    "title": "BaseBinaryBuilder::AppendValues(const std::vector<std::string>&) bypasses ValidateOverflow, truncating 32-bit offsets",
+    "files": [
+      [
+        "cpp/src/arrow/array/builder_binary.h",
+        188,
+        215
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-103",
+    "sev": "High",
+    "title": "CSV CustomDecimalPointValueDecoder unsynchronized mutable temp_ buffer causes data race, corruption, and UAF under multi-threaded readers",
+    "files": [
+      [
+        "cpp/src/arrow/csv/converter.cc",
+        327,
+        340
+      ],
+      [
+        "cpp/src/arrow/csv/converter.cc",
+        349,
+        349
+      ],
+      [
+        "cpp/src/arrow/csv/column_builder.cc",
+        204,
+        206
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-104",
+    "sev": "High",
+    "title": "CSV CustomDecimalPointValueDecoder::Initialize indexes mapping_[256] with signed char decimal_point (buffer underflow)",
+    "files": [
+      [
+        "cpp/src/arrow/csv/converter.cc",
+        318,
+        323
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-105",
+    "sev": "High",
+    "title": "CSV InferringColumnBuilder::TryConvertChunk race across lock.unlock() causes null pointer dereference on reset parsers_[i]",
+    "files": [
+      [
+        "cpp/src/arrow/csv/column_builder.cc",
+        258,
+        309
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-106",
+    "sev": "High",
+    "title": "CSV SSE42Filter::Matches uses implicit-length _mm_cmpistrc, treating 0x00 bytes as string terminators and silently skipping delimiters/quotes/newlines",
+    "files": [
+      [
+        "cpp/src/arrow/csv/lexing_internal.h",
+        128,
+        157
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-107",
+    "sev": "High",
+    "title": "CSV CSVWriterImpl::WriteTable leaks uninitialized heap memory or duplicates headers/rows on 0-length chunks",
+    "files": [
+      [
+        "cpp/src/arrow/csv/writer.cc",
+        479,
+        492
+      ],
+      [
+        "cpp/src/arrow/csv/writer.cc",
+        510,
+        519
+      ],
+      [
+        "cpp/src/arrow/csv/writer.cc",
+        552,
+        555
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-108",
+    "sev": "High",
+    "title": "CSV CSVWriterImpl OOB write in WriteHeader and uninitialized heap leak in TranslateMinimalBatch on 0-column schemas",
+    "files": [
+      [
+        "cpp/src/arrow/csv/writer.cc",
+        521,
+        550
+      ],
+      [
+        "cpp/src/arrow/csv/writer.cc",
+        570,
+        590
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-109",
+    "sev": "High",
+    "title": "CSV CSVBufferIterator prematurely terminates stream (silent data truncation) when stripping straddling '\\n' or UTF-8 BOM empties a buffer",
+    "files": [
+      [
+        "cpp/src/arrow/csv/reader.cc",
+        109,
+        136
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-110",
+    "sev": "High",
+    "title": "CSV BlockParser allows 4 GiB blocks while ParsedValueDesc::offset is 31-bit (2 GiB - 1), causing offset wraparound and OOB reads",
+    "files": [
+      [
+        "cpp/src/arrow/csv/parser.h",
+        51,
+        54
+      ],
+      [
+        "cpp/src/arrow/csv/parser.h",
+        79,
+        83
+      ],
+      [
+        "cpp/src/arrow/csv/parser.cc",
+        126,
+        126
+      ],
+      [
+        "cpp/src/arrow/csv/parser.cc",
+        522,
+        524
+      ],
+      [
+        "cpp/src/arrow/csv/parser.cc",
+        581,
+        581
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-111",
+    "sev": "High",
+    "title": "Signed int64_t overflow in choose bypasses bounds check for index == INT64_MAX (OOB read batch.values[INT64_MIN])",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/scalar_if_else.cc",
+        2494,
+        2494
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/scalar_if_else.cc",
+        2522,
+        2525
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/scalar_if_else.cc",
+        2575,
+        2578
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/scalar_if_else.cc",
+        2618,
+        2618
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-112",
+    "sev": "High",
+    "title": "Unsigned size_t underflow in GetZone (strptime) causes OOB read / segfault on empty format string \"\"",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/scalar_temporal_unary.cc",
+        1211,
+        1230
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-113",
+    "sev": "High",
+    "title": "Null pointer dereference and signed int32_t offset overflow when casting sliced FixedSizeBinary to Binary/String",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/scalar_cast_string.cc",
+        325,
+        352
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-114",
+    "sev": "High",
+    "title": "CopyDataUtils<BooleanType>::CopyData(ArraySpan, ...) ignores in.offset, producing wrong results on sliced BooleanArrays",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/copy_data_internal.h",
+        43,
+        47
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/vector_replace.cc",
+        71,
+        71
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/vector_replace.cc",
+        81,
+        81
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/vector_replace.cc",
+        96,
+        96
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/vector_replace.cc",
+        142,
+        142
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/vector_replace.cc",
+        460,
+        460
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/vector_replace.cc",
+        486,
+        486
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/vector_replace.cc",
+        502,
+        502
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-115",
+    "sev": "High",
+    "title": "Out-of-bounds read / segfault in indices_nonzero on a 0-chunk ChunkedArray",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/vector_selection.cc",
+        2412,
+        2439
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-116",
+    "sev": "High",
+    "title": "list_element OOB read on empty index array and narrowing truncation in index bounds check",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/scalar_nested.cc",
+        78,
+        88
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/scalar_nested.cc",
+        334,
+        335
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/scalar_nested.cc",
+        370,
+        371
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-117",
+    "sev": "High",
+    "title": "Infinite loop and unbounded OOM in replace_substring when pattern is empty \"\"",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/scalar_string_ascii.cc",
+        1982,
+        2013
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-118",
+    "sev": "High",
+    "title": "min_element_wise / max_element_wise on FixedSizeBinary ignores array.offset on sliced arrays",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/scalar_compare.cc",
+        742,
+        748
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-119",
+    "sev": "High",
+    "title": "round with RoundMode::HALF_TO_ODD on negative decimals rounds in the wrong direction (Sign() is always truthy)",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/scalar_round.cc",
+        257,
+        265
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-120",
+    "sev": "High",
+    "title": "Temporal rounding (floor/ceil/round_temporal): division by zero (multiple == 0), local-vs-UTC mismatch, and ignored ceil_is_strictly_greater",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/scalar_temporal_unary.cc",
+        172,
+        180
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/scalar_temporal_unary.cc",
+        695,
+        718
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/scalar_temporal_unary.cc",
+        777,
+        785
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/scalar_temporal_unary.cc",
+        930,
+        954
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/scalar_temporal_unary.cc",
+        1085,
+        1124
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-121",
+    "sev": "High",
+    "title": "Temporal arithmetic kernels execute error-producing ops on null slots and silently truncate 64-bit Duration to 32-bit for Time32",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/scalar_arithmetic.cc",
+        941,
+        988
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/scalar_arithmetic.cc",
+        1332,
+        1497
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/base_arithmetic_internal.h",
+        90,
+        119
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/base_arithmetic_internal.h",
+        256,
+        283
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-122",
+    "sev": "High",
+    "title": "Missing 32-bit offset overflow checks in take (ListType), utf8_normalize, and replace_substring",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/vector_selection.cc",
+        1632,
+        1650
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/scalar_string_utf8.cc",
+        621,
+        635
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/scalar_string_ascii.cc",
+        1951,
+        1964
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-123",
+    "sev": "High",
+    "title": "Missing kernel/type/variant validation crashes in IfElseFunction, FilterRecordBatch/FilterMetaFunction, is_in/index_in, select_k_unstable, and CastMetaFunction",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/scalar_if_else.cc",
+        1220,
+        1225
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/vector_selection.cc",
+        1871,
+        1871
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/vector_selection.cc",
+        1971,
+        1971
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/scalar_set_lookup.cc",
+        191,
+        210
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/vector_select_k.cc",
+        199,
+        199
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/vector_select_k.cc",
+        329,
+        329
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/vector_select_k.cc",
+        502,
+        502
+      ],
+      [
+        "cpp/src/arrow/compute/cast.cc",
+        120,
+        123
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-124",
+    "sev": "High",
+    "title": "KeyCompare::NullUpdateColumnToRow on AVX2 ignores are_cols_in_encoding_order, checking wrong column's null bit in GrouperFastImpl",
+    "files": [
+      [
+        "cpp/src/arrow/compute/row/compare_internal.cc",
+        33,
+        54
+      ],
+      [
+        "cpp/src/arrow/compute/row/compare_internal_avx2.cc",
+        40,
+        48
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-125",
+    "sev": "High",
+    "title": "VarStdState::Consume overwrites state instead of accumulating across batches (silent data corruption in ScalarAggregateNode)",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/aggregate_var_std.cc",
+        56,
+        77
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/aggregate_var_std.cc",
+        88,
+        89
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/aggregate_var_std.cc",
+        124,
+        134
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-126",
+    "sev": "High",
+    "title": "ScalarAggregator::Consume overwrite, Kleene logic, and Cancelled-error bugs in CountDistinctImpl, BooleanAnyImpl, BooleanAllImpl, and IndexImpl",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/aggregate_basic.cc",
+        136,
+        159
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/aggregate_basic.cc",
+        462,
+        490
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/aggregate_basic.cc",
+        529,
+        562
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/aggregate_basic.cc",
+        608,
+        649
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-127",
+    "sev": "High",
+    "title": "GroupedReducingAggregator::Merge and GroupedTDigestImpl::Merge read this->no_nulls_ instead of other->no_nulls_",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/hash_aggregate.cc",
+        366,
+        366
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/hash_aggregate.cc",
+        1075,
+        1075
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-128",
+    "sev": "High",
+    "title": "GroupedBooleanAggregator::Consume omits input.offset when indexing values bitmap on sliced BooleanArrays",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/hash_aggregate.cc",
+        1674,
+        1683
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-129",
+    "sev": "High",
+    "title": "GroupedDistinctImpl::Finalize segfaults on Type::NA and GroupedCountDistinctImpl::Finalize returns inverted counts on Type::NA",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/hash_aggregate.cc",
+        1866,
+        1881
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/hash_aggregate.cc",
+        1908,
+        1945
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-130",
+    "sev": "High",
+    "title": "AsofJoinNode::time_value breaks monotonic ordering for negative signed timestamps and integers",
+    "files": [
+      [
+        "cpp/src/arrow/compute/exec/asof_join_node.cc",
+        104,
+        109
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-131",
+    "sev": "High",
+    "title": "AsofJoinNode BuilderAppend<BooleanType> offsets bitmap pointer by source->offset bytes instead of bits (wrong results & heap over-read)",
+    "files": [
+      [
+        "cpp/src/arrow/compute/exec/asof_join_node.cc",
+        827,
+        828
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-132",
+    "sev": "High",
+    "title": "AsofJoinNode performs one-sided Rehash() on RHS null by-key, permanently breaking join matching",
+    "files": [
+      [
+        "cpp/src/arrow/compute/exec/asof_join_node.cc",
+        550,
+        555
+      ],
+      [
+        "cpp/src/arrow/compute/exec/asof_join_node.cc",
+        687,
+        687
+      ],
+      [
+        "cpp/src/arrow/compute/exec/asof_join_node.cc",
+        711,
+        711
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-133",
+    "sev": "High",
+    "title": "AsofJoinNode KeyHasher::HashesFor caches raw non-owning const RecordBatch* (ABA stale-cache & heap over-read)",
+    "files": [
+      [
+        "cpp/src/arrow/compute/exec/asof_join_node.cc",
+        326,
+        345
+      ],
+      [
+        "cpp/src/arrow/compute/exec/asof_join_node.cc",
+        444,
+        444
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-134",
+    "sev": "High",
+    "title": "HashJoinBasicImpl::ProbeBatch_ResidualFilter omits dict_build_.PostDecode() for right-side dictionary keys",
+    "files": [
+      [
+        "cpp/src/arrow/compute/exec/hash_join.cc",
+        254,
+        300
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-135",
+    "sev": "High",
+    "title": "BlockedBloomFilter::FindImp_avx2 sign-extends _mm256_movemask_epi8, forcing 100% false positives on lanes 4-7 when lane 3 matches",
+    "files": [
+      [
+        "cpp/src/arrow/compute/exec/bloom_filter_avx2.cc",
+        82,
+        88
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-136",
+    "sev": "High",
+    "title": "Expression::Equals omits arguments.size() check (heap OOB read & wrong equality) and dereferences null impl_",
+    "files": [
+      [
+        "cpp/src/arrow/compute/exec/expression.cc",
+        216,
+        243
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-137",
+    "sev": "High",
+    "title": "Missing bounds and type checks in Expression::Deserialize, SimplifyIsValidGuarantee, and Expression::ToString (OOB reads/writes)",
+    "files": [
+      [
+        "cpp/src/arrow/compute/exec/expression.cc",
+        183,
+        191
+      ],
+      [
+        "cpp/src/arrow/compute/exec/expression.cc",
+        1153,
+        1153
+      ],
+      [
+        "cpp/src/arrow/compute/exec/expression.cc",
+        1341,
+        1350
+      ],
+      [
+        "cpp/src/arrow/compute/exec/expression.cc",
+        1394,
+        1411
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-138",
+    "sev": "High",
+    "title": "DatasetWriterImpl::CloseLargestFile null pointer dereference when max_open_files is saturated by closing files",
+    "files": [
+      [
+        "cpp/src/arrow/dataset/dataset_writer.cc",
+        311,
+        319
+      ],
+      [
+        "cpp/src/arrow/dataset/dataset_writer.cc",
+        327,
+        330
+      ],
+      [
+        "cpp/src/arrow/dataset/dataset_writer.cc",
+        550,
+        561
+      ],
+      [
+        "cpp/src/arrow/dataset/dataset_writer.cc",
+        588,
+        599
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-139",
+    "sev": "High",
+    "title": "DatasetWriterImpl::DoWriteRecordBatch leaks rows_in_flight_throttle permits on open_files_throttle stall, causing permanent deadlock",
+    "files": [
+      [
+        "cpp/src/arrow/dataset/dataset_writer.cc",
+        52,
+        82
+      ],
+      [
+        "cpp/src/arrow/dataset/dataset_writer.cc",
+        583,
+        606
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-140",
+    "sev": "High",
+    "title": "LocalFileSystem::GetFileInfoGenerator stores dangling reference to io_context_ (use-after-free)",
+    "files": [
+      [
+        "cpp/src/arrow/filesystem/localfs.cc",
+        396,
+        419
+      ],
+      [
+        "cpp/src/arrow/filesystem/localfs.cc",
+        462,
+        469
+      ],
+      [
+        "cpp/src/arrow/filesystem/localfs.cc",
+        539,
+        550
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-141",
+    "sev": "High",
+    "title": "ScanNode::ListFragmentTask::AddScanTasks stray early 'return Status::OK();' breaks readahead, signals premature completion, and causes UAF on InMemoryFragment",
+    "files": [
+      [
+        "cpp/src/arrow/dataset/scan_node.cc",
+        265,
+        290
+      ],
+      [
+        "cpp/src/arrow/dataset/dataset.cc",
+        164,
+        190
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-142",
+    "sev": "High",
+    "title": "AssertNoTrailingSlash and HasLeadingSlash perform out-of-bounds reads on empty path strings",
+    "files": [
+      [
+        "cpp/src/arrow/filesystem/path_util.cc",
+        146,
+        158
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-143",
+    "sev": "High",
+    "title": "RemoveAncestor throws uncaught std::out_of_range / corrupts paths on trailing slashes, and AncestorsFromBasePath calls pop_back() on empty vector",
+    "files": [
+      [
+        "cpp/src/arrow/filesystem/path_util.cc",
+        202,
+        233
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-144",
+    "sev": "High",
+    "title": "TransformInputStream::Read buffer overflow / OOB read on negative nbytes (and Abort() leaves closed() false)",
+    "files": [
+      [
+        "cpp/src/arrow/io/transform.cc",
+        71,
+        71
+      ],
+      [
+        "cpp/src/arrow/io/transform.cc",
+        86,
+        139
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-145",
+    "sev": "High",
+    "title": "MemoryMappedFile::InitMMap maps past EOF when offset > 0, causing SIGBUS and bypassing Resize() partial-map guard",
+    "files": [
+      [
+        "cpp/src/arrow/io/file.cc",
+        471,
+        471
+      ],
+      [
+        "cpp/src/arrow/io/file.cc",
+        555,
+        585
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-146",
+    "sev": "High",
+    "title": "S3 ObjectInputFile::ReadAt omits nbytes < 0 check, passing huge size_t to PreallocatedStreamBuf",
+    "files": [
+      [
+        "cpp/src/arrow/filesystem/s3fs.cc",
+        869,
+        876
+      ],
+      [
+        "cpp/src/arrow/filesystem/s3fs.cc",
+        1088,
+        1106
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-147",
+    "sev": "High",
+    "title": "CsvFileScanner / ScanNode fixed batch-count estimation causes null dereference or silent data truncation",
+    "files": [
+      [
+        "cpp/src/arrow/dataset/file_csv.cc",
+        76,
+        82
+      ],
+      [
+        "cpp/src/arrow/dataset/file_csv.cc",
+        117,
+        121
+      ],
+      [
+        "cpp/src/arrow/dataset/scan_node.cc",
+        216,
+        226
+      ],
+      [
+        "cpp/src/arrow/dataset/scan_node.cc",
+        282,
+        285
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-148",
+    "sev": "High",
+    "title": "S3FileSystem::Impl::WalkAsync silently discards TreeWalker::WalkAsync errors",
+    "files": [
+      [
+        "cpp/src/arrow/filesystem/s3fs.cc",
+        2002,
+        2010
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-149",
+    "sev": "High",
+    "title": "GcsFileSystem::Impl::CreateDirMarkerRecursive silently swallows CreateDirMarker errors and returns Status::OK()",
+    "files": [
+      [
+        "cpp/src/arrow/filesystem/gcsfs.cc",
+        491,
+        500
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-150",
+    "sev": "High",
+    "title": "ParquetFileFragment::TryCountRows returns full-file row count on row-group subsets, reads OOB on empty expressions, and SetMetadata accepts negative row-group indices",
+    "files": [
+      [
+        "cpp/src/arrow/dataset/file_parquet.cc",
+        634,
+        641
+      ],
+      [
+        "cpp/src/arrow/dataset/file_parquet.cc",
+        750,
+        768
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-151",
+    "sev": "High",
+    "title": "FileInterface::CloseAsync and S3 ObjectOutputStream::CloseAsync capture raw this across async continuations (UAF & destructor race)",
+    "files": [
+      [
+        "cpp/src/arrow/io/interfaces.cc",
+        70,
+        73
+      ],
+      [
+        "cpp/src/arrow/filesystem/s3fs.cc",
+        1237,
+        1277
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-152",
+    "sev": "High",
+    "title": "Dead unsigned overflow check in UCX PayloadHeaderFieldSize and unchecked int32_t overflow in HeadersFrame::Make",
+    "files": [
+      [
+        "cpp/src/arrow/flight/transport/ucx/ucx_internal.cc",
+        203,
+        227
+      ],
+      [
+        "cpp/src/arrow/flight/transport/ucx/ucx_internal.cc",
+        305,
+        316
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-153",
+    "sev": "High",
+    "title": "Permanent deadlocks and unjoined std::thread (std::terminate) in UCX WriteClientStream / ExchangeClientStream",
+    "files": [
+      [
+        "cpp/src/arrow/flight/transport/ucx/ucx_client.cc",
+        255,
+        342
+      ],
+      [
+        "cpp/src/arrow/flight/transport/ucx/ucx_client.cc",
+        404,
+        508
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-154",
+    "sev": "High",
+    "title": "Variable shadowing defeats 0-byte payload workaround in UcpCallDriver::Impl::SendFrameAsync (UCX crash)",
+    "files": [
+      [
+        "cpp/src/arrow/flight/transport/ucx/ucx_internal.cc",
+        515,
+        536
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-155",
+    "sev": "High",
+    "title": "Uninitialized listening_ atomic causes UB / null dereference in ~UcxServerImpl() on failed Init()",
+    "files": [
+      [
+        "cpp/src/arrow/flight/transport/ucx/ucx_server.cc",
+        188,
+        194
+      ],
+      [
+        "cpp/src/arrow/flight/transport/ucx/ucx_server.cc",
+        597,
+        604
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-156",
+    "sev": "High",
+    "title": "Malformed/unknown protobuf handling defects in gRPC FlightDataDeserialize and ReadBytesZeroCopy",
+    "files": [
+      [
+        "cpp/src/arrow/flight/transport/grpc/serialization_internal.cc",
+        76,
+        86
+      ],
+      [
+        "cpp/src/arrow/flight/transport/grpc/serialization_internal.cc",
+        342,
+        387
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-157",
+    "sev": "High",
+    "title": "Copy-paste bug in Flight SQL ColumnMetadata: GetIsCaseSensitive/GetIsReadOnly/GetIsSearchable all read kIsAutoIncrement",
+    "files": [
+      [
+        "cpp/src/arrow/flight/sql/column_metadata.cc",
+        99,
+        115
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-158",
+    "sev": "High",
+    "title": "Null pointer dereference in FlightSqlClient::ExecuteSubstraitUpdate when server sends no PutResult metadata",
+    "files": [
+      [
+        "cpp/src/arrow/flight/sql/client.cc",
+        243,
+        250
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-159",
+    "sev": "High",
+    "title": "Wrong variable assigned (key_type = value.type()) breaks all heterogeneously typed Substrait Map literals",
+    "files": [
+      [
+        "cpp/src/arrow/engine/substrait/expression_internal.cc",
+        512,
+        529
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-160",
+    "sev": "High",
+    "title": "Out-of-bounds vector access (declarations[0]) on empty Substrait Plan in MakeSingleDeclarationPlan",
+    "files": [
+      [
+        "cpp/src/arrow/engine/substrait/serde.cc",
+        215,
+        224
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-161",
+    "sev": "High",
+    "title": "Heap OOB read on callptr->arguments[0..1] in FromProto(JoinRel)",
+    "files": [
+      [
+        "cpp/src/arrow/engine/substrait/relation_internal.cc",
+        558,
+        564
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-162",
+    "sev": "High",
+    "title": "Unvalidated Decimal precision triggers ARROW_CHECK abort on untrusted Substrait plans",
+    "files": [
+      [
+        "cpp/src/arrow/engine/substrait/type_internal.cc",
+        153,
+        156
+      ],
+      [
+        "cpp/src/arrow/engine/substrait/expression_internal.cc",
+        426,
+        426
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-163",
+    "sev": "High",
+    "title": "Unreachable() crash / UB on empty or unknown SimpleExtensionDeclaration in Substrait plan",
+    "files": [
+      [
+        "cpp/src/arrow/engine/substrait/plan_internal.cc",
+        115,
+        138
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-164",
+    "sev": "High",
+    "title": "AddExtensionSetToPlan throws uncaught std::out_of_range on non-contiguous anchors, and ExtensionSet::AddUri duplicates/collides URIs",
+    "files": [
+      [
+        "cpp/src/arrow/engine/substrait/plan_internal.cc",
+        52,
+        94
+      ],
+      [
+        "cpp/src/arrow/engine/substrait/extension_set.cc",
+        219,
+        227
+      ],
+      [
+        "cpp/src/arrow/engine/substrait/extension_set.cc",
+        294,
+        328
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-165",
+    "sev": "High",
+    "title": "Substrait Plan minimum version check is dead code (uint32_t < 0 && ... is always false)",
+    "files": [
+      [
+        "cpp/src/arrow/engine/substrait/serde.cc",
+        138,
+        151
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-166",
+    "sev": "High",
+    "title": "NormalizeArray drops slice offsets for all nested types, misaligns BitmapAnd, and skips nested structs under non-null parent structs",
+    "files": [
+      [
+        "cpp/src/arrow/adapters/orc/util.cc",
+        349,
+        419
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-167",
+    "sev": "High",
+    "title": "Integer division defeats std::floor in ORC TimestampAppender::VisitValue, writing negative nanoseconds for pre-1970 timestamps",
+    "files": [
+      [
+        "cpp/src/arrow/adapters/orc/util.cc",
+        536,
+        547
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-168",
+    "sev": "High",
+    "title": "Heap buffer over-read and mid-character UTF-8 truncation in AppendFixedBinaryBatch for ORC CHAR columns",
+    "files": [
+      [
+        "cpp/src/arrow/adapters/orc/util.cc",
+        241,
+        255
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-169",
+    "sev": "High",
+    "title": "OOB read / segfault in ORCFileWriter::Impl::Write on 0-column Tables",
+    "files": [
+      [
+        "cpp/src/arrow/adapters/orc/adapter.cc",
+        750,
+        768
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-170",
+    "sev": "High",
+    "title": "Uncaught liborc C++ exceptions escape ORCFileReader::ReadNext/ReadBatch and ORCFileWriter::Write/Close",
+    "files": [
+      [
+        "cpp/src/arrow/adapters/orc/adapter.cc",
+        148,
+        148
+      ],
+      [
+        "cpp/src/arrow/adapters/orc/adapter.cc",
+        454,
+        454
+      ],
+      [
+        "cpp/src/arrow/adapters/orc/adapter.cc",
+        754,
+        775
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-171",
+    "sev": "High",
+    "title": "Heap buffer overflow (up to 7 bytes) in BitMapAccumulator::IntersectBitMaps for caller-allocated output bitmaps",
+    "files": [
+      [
+        "cpp/src/gandiva/bitmap_accumulator.cc",
+        38,
+        51
+      ],
+      [
+        "cpp/src/gandiva/projector.cc",
+        246,
+        251
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-172",
+    "sev": "High",
+    "title": "Unconditional heap OOB read and infinite loop in translate_utf8_utf8_utf8",
+    "files": [
+      [
+        "cpp/src/gandiva/gdv_string_function_stubs.cc",
+        697,
+        751
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-173",
+    "sev": "High",
+    "title": "Heap OOB read and heap overflow on truncated UTF-8 (plus 2*data_len overflow) in gdv_fn_lower_utf8, gdv_fn_upper_utf8, and gdv_fn_initcap_utf8",
+    "files": [
+      [
+        "cpp/src/gandiva/gdv_string_function_stubs.cc",
+        217,
+        261
+      ],
+      [
+        "cpp/src/gandiva/gdv_string_function_stubs.cc",
+        289,
+        333
+      ],
+      [
+        "cpp/src/gandiva/gdv_string_function_stubs.cc",
+        474,
+        536
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-174",
+    "sev": "High",
+    "title": "Heap OOB read and wrong output length in castVARCHAR_utf8_int64 and castVARCHAR_binary_int64 alignment loop",
+    "files": [
+      [
+        "cpp/src/gandiva/precompiled/string_ops.cc",
+        611,
+        635
+      ],
+      [
+        "cpp/src/gandiva/precompiled/string_ops.cc",
+        668,
+        676
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-175",
+    "sev": "High",
+    "title": "Unbounded heap OOB read in set_error_for_date passing non-NUL-terminated buffer to %s",
+    "files": [
+      [
+        "cpp/src/gandiva/precompiled/time.cc",
+        601,
+        609
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-176",
+    "sev": "High",
+    "title": "Out-of-bounds read / segfault in gdv_fn_substring_index when cnt == INT32_MIN",
+    "files": [
+      [
+        "cpp/src/gandiva/gdv_string_function_stubs.cc",
+        410,
+        419
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-177",
+    "sev": "High",
+    "title": "Guaranteed null-pointer dereference in ToDateHolder::Make checking literal_pattern instead of literal_suppress_errors",
+    "files": [
+      [
+        "cpp/src/gandiva/to_date_holder.cc",
+        50,
+        61
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-178",
+    "sev": "High",
+    "title": "LLVM function prototype type mismatches in AddGlobalMappingForFunc (castVARBINARY float32/float64, dec_to_string, time_with_zone)",
+    "files": [
+      [
+        "cpp/src/gandiva/gdv_string_function_stubs.cc",
+        898,
+        920
+      ],
+      [
+        "cpp/src/gandiva/gdv_function_stubs.cc",
+        853,
+        864
+      ],
+      [
+        "cpp/src/gandiva/cast_time.cc",
+        37,
+        44
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-179",
+    "sev": "High",
+    "title": "Out-of-bounds static table reads in round_int32_int32, round_int64_int32, truncate_int64_int32, and decimalops::RoundWithNegativeScale",
+    "files": [
+      [
+        "cpp/src/gandiva/precompiled/extended_math_ops.cc",
+        318,
+        326
+      ],
+      [
+        "cpp/src/gandiva/precompiled/extended_math_ops.cc",
+        343,
+        351
+      ],
+      [
+        "cpp/src/gandiva/precompiled/extended_math_ops.cc",
+        388,
+        399
+      ],
+      [
+        "cpp/src/gandiva/precompiled/decimal_ops.cc",
+        643,
+        659
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-180",
+    "sev": "High",
+    "title": "Negative *out_length crash and null dereference in castVARCHAR_decimal128_int64",
+    "files": [
+      [
+        "cpp/src/gandiva/precompiled/decimal_wrapper.cc",
+        421,
+        431
+      ],
+      [
+        "cpp/src/gandiva/gdv_function_stubs.cc",
+        197,
+        203
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-181",
+    "sev": "High",
+    "title": "Hardware SIGFPE crash on INT_MIN / -1 and INT_MIN % -1 in Gandiva integer divide/div/mod",
+    "files": [
+      [
+        "cpp/src/gandiva/precompiled/arithmetic_ops.cc",
+        55,
+        61
+      ],
+      [
+        "cpp/src/gandiva/precompiled/arithmetic_ops.cc",
+        97,
+        98
+      ],
+      [
+        "cpp/src/gandiva/precompiled/arithmetic_ops.cc",
+        350,
+        361
+      ],
+      [
+        "cpp/src/gandiva/precompiled/arithmetic_ops.cc",
+        429,
+        444
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-182",
+    "sev": "High",
+    "title": "Missing bounds and null validation in Projector::ValidateArrayDataCapacity and SelectionVector factories",
+    "files": [
+      [
+        "cpp/src/gandiva/projector.cc",
+        240,
+        281
+      ],
+      [
+        "cpp/src/gandiva/selection_vector.cc",
+        105,
+        111
+      ],
+      [
+        "cpp/src/gandiva/selection_vector.cc",
+        131,
+        137
+      ],
+      [
+        "cpp/src/gandiva/selection_vector.cc",
+        167,
+        177
+      ],
+      [
+        "cpp/src/gandiva/selection_vector_impl.h",
+        42,
+        48
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-183",
+    "sev": "High",
+    "title": "PlasmaClient::Impl::CreateAndSealBatch hashes std::vector<std::string> control structs instead of element bytes (corrupt hashes & heap address leak)",
+    "files": [
+      [
+        "cpp/src/plasma/client.cc",
+        509,
+        526
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-184",
+    "sev": "High",
+    "title": "Data race on function-local static digest buffer in PlasmaClient::Impl::CreateAndSeal",
+    "files": [
+      [
+        "cpp/src/plasma/client.cc",
+        490,
+        501
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-185",
+    "sev": "High",
+    "title": "Double-close, dangling event-loop callback (end() dereference), and partial-send abort in PlasmaStore::SendNotifications / DisconnectClient",
+    "files": [
+      [
+        "cpp/src/plasma/store.cc",
+        783,
+        793
+      ],
+      [
+        "cpp/src/plasma/store.cc",
+        807,
+        863
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-186",
+    "sev": "High",
+    "title": "External store reload truncates metadata (immediate crash with HashTableStore) and leaks/corrupts entry state on Get failure",
+    "files": [
+      [
+        "cpp/src/plasma/store.cc",
+        469,
+        524
+      ],
+      [
+        "cpp/src/plasma/store.cc",
+        704,
+        707
+      ],
+      [
+        "cpp/src/plasma/hash_table_store.cc",
+        48,
+        48
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-187",
+    "sev": "High",
+    "title": "Heap buffer underflow on AcceptClient failure (-1) and incomplete event-loop resize in PlasmaStore::ConnectClient",
+    "files": [
+      [
+        "cpp/src/plasma/store.cc",
+        730,
+        745
+      ],
+      [
+        "cpp/src/plasma/events.cc",
+        50,
+        72
+      ],
+      [
+        "cpp/src/plasma/thirdparty/ae/ae.c",
+        135,
+        153
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-188",
+    "sev": "High",
+    "title": "Heap buffer underflow/overflow via missing negative & overflow checks in garrow_mutable_buffer_set_data",
+    "files": [
+      [
+        "c_glib/arrow-glib/buffer.cpp",
+        520,
+        544
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-189",
+    "sev": "High",
+    "title": "Heap buffer over-read, unbounded stack VLAs, and division-by-zero in C GLib array-builder.cpp",
+    "files": [
+      [
+        "c_glib/arrow-glib/array-builder.cpp",
+        240,
+        240
+      ],
+      [
+        "c_glib/arrow-glib/array-builder.cpp",
+        296,
+        300
+      ],
+      [
+        "c_glib/arrow-glib/array-builder.cpp",
+        1033,
+        1033
+      ],
+      [
+        "c_glib/arrow-glib/array-builder.cpp",
+        3787,
+        3808
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-190",
+    "sev": "High",
+    "title": "C++ type confusion via static_pointer_cast, permanent reference-cycle leak, and broken get_storage for Extension types/arrays in C GLib",
+    "files": [
+      [
+        "c_glib/arrow-glib/basic-array.cpp",
+        3487,
+        3498
+      ],
+      [
+        "c_glib/arrow-glib/basic-array.cpp",
+        3645,
+        3656
+      ],
+      [
+        "c_glib/arrow-glib/basic-data-type.cpp",
+        1831,
+        1840
+      ],
+      [
+        "c_glib/arrow-glib/basic-data-type.cpp",
+        1860,
+        1860
+      ],
+      [
+        "c_glib/arrow-glib/basic-data-type.cpp",
+        2228,
+        2239
+      ],
+      [
+        "c_glib/arrow-glib/basic-data-type.cpp",
+        2250,
+        2260
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-191",
+    "sev": "High",
+    "title": "Heap use-after-free and double-unref when clearing nullable properties in arrow-dataset-glib",
+    "files": [
+      [
+        "c_glib/arrow-dataset-glib/dataset.cpp",
+        258,
+        320
+      ],
+      [
+        "c_glib/arrow-dataset-glib/dataset-factory.cpp",
+        423,
+        441
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-192",
+    "sev": "High",
+    "title": "Heap use-after-free in parquet-glib metadata/statistics wrappers (and abstract-type instantiation on INT96)",
+    "files": [
+      [
+        "c_glib/parquet-glib/metadata.cpp",
+        39,
+        62
+      ],
+      [
+        "c_glib/parquet-glib/metadata.cpp",
+        200,
+        233
+      ],
+      [
+        "c_glib/parquet-glib/metadata.cpp",
+        321,
+        342
+      ],
+      [
+        "c_glib/parquet-glib/metadata.cpp",
+        591,
+        609
+      ],
+      [
+        "c_glib/parquet-glib/statistics.cpp",
+        54,
+        77
+      ],
+      [
+        "c_glib/parquet-glib/statistics.cpp",
+        623,
+        699
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-193",
+    "sev": "High",
+    "title": "garrow_feather_file_reader_read_indices prepends n_indices copies of column 0",
+    "files": [
+      [
+        "c_glib/arrow-glib/reader.cpp",
+        800,
+        817
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-194",
+    "sev": "High",
+    "title": "Unconstructed C++ members (UB) and memory leaks (missing finalize) in GArrowCSVReadOptions and GArrowJSONReadOptions",
+    "files": [
+      [
+        "c_glib/arrow-glib/reader.cpp",
+        852,
+        856
+      ],
+      [
+        "c_glib/arrow-glib/reader.cpp",
+        998,
+        1016
+      ],
+      [
+        "c_glib/arrow-glib/reader.cpp",
+        1795,
+        1799
+      ],
+      [
+        "c_glib/arrow-glib/reader.cpp",
+        1904,
+        1922
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-195",
+    "sev": "High",
+    "title": "Null-pointer dereference in garrow_s3_initialize(NULL, &error) and abstract-type instantiation in garrow_file_system_new_raw",
+    "files": [
+      [
+        "c_glib/arrow-glib/file-system.cpp",
+        1527,
+        1555
+      ],
+      [
+        "c_glib/arrow-glib/file-system.cpp",
+        1630,
+        1652
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-196",
+    "sev": "High",
+    "title": "Broken Utf8NormalizeOptions dispatch, enum GType in g_object_new, fallback null dereference, and refcount bugs in compute.cpp",
+    "files": [
+      [
+        "c_glib/arrow-glib/compute.cpp",
+        288,
+        315
+      ],
+      [
+        "c_glib/arrow-glib/compute.cpp",
+        3114,
+        3126
+      ],
+      [
+        "c_glib/arrow-glib/compute.cpp",
+        5277,
+        5293
+      ],
+      [
+        "c_glib/arrow-glib/compute.cpp",
+        5381,
+        5396
+      ],
+      [
+        "c_glib/arrow-glib/compute.cpp",
+        5549,
+        5555
+      ],
+      [
+        "c_glib/arrow-glib/compute.cpp",
+        5633,
+        5641
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-197",
+    "sev": "Medium",
+    "title": "ArrayStreamBatchReader::StatusFromCError missing break after case ENOSYS misreports NotImplemented as IOError",
+    "files": [
+      [
+        "cpp/src/arrow/c/bridge.cc",
+        1841,
+        1845
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-198",
+    "sev": "Medium",
+    "title": "ArrayExporter::Export fails to unwrap ExtensionType before HasValidityBitmap check, exporting invalid buffer count for Union/Null extension arrays",
+    "files": [
+      [
+        "cpp/src/arrow/c/bridge.cc",
+        559,
+        565
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-199",
+    "sev": "Medium",
+    "title": "SchemaImporter::ProcessMap silently discards entries/key/value field names, nullability, and metadata",
+    "files": [
+      [
+        "cpp/src/arrow/c/bridge.cc",
+        1090,
+        1107
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-200",
+    "sev": "Medium",
+    "title": "ColumnWriterImpl::BuildDataPageV2 writes num_values as num_rows, writes null_count=0 when stats disabled, and leaks a wasted CopySlice",
+    "files": [
+      [
+        "cpp/src/parquet/column_writer.cc",
+        924,
+        949
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-201",
+    "sev": "Medium",
+    "title": "CudaBufferReader::DoRead accepts negative nbytes, moving position_ backwards and creating negative-sized CudaBuffer",
+    "files": [
+      [
+        "cpp/src/arrow/gpu/cuda_memory.cc",
+        281,
+        288
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-202",
+    "sev": "Medium",
+    "title": "GZipCompressor and GZipCodec pass compression_level_ as memLevel to deflateInit2 (ignoring configured compression level)",
+    "files": [
+      [
+        "cpp/src/arrow/util/compression_zlib.cc",
+        190,
+        191
+      ],
+      [
+        "cpp/src/arrow/util/compression_zlib.cc",
+        336,
+        337
+      ],
+      [
+        "cpp/src/arrow/util/compression_zlib.cc",
+        399,
+        401
+      ],
+      [
+        "cpp/src/arrow/util/compression_zlib.cc",
+        440,
+        460
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-203",
+    "sev": "Medium",
+    "title": "Decimal256::FromReal(float) and Decimal256::ToFloat produce NaN / UB for |scale| >= 39",
+    "files": [
+      [
+        "cpp/src/arrow/util/decimal.cc",
+        99,
+        121
+      ],
+      [
+        "cpp/src/arrow/util/decimal.cc",
+        788,
+        823
+      ],
+      [
+        "cpp/src/arrow/util/decimal.cc",
+        841,
+        875
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-204",
+    "sev": "Medium",
+    "title": "BasicDecimal128/256::FitsInPrecision wrongly returns true for minimum two's-complement value (-2^127 / -2^255)",
+    "files": [
+      [
+        "cpp/src/arrow/util/basic_decimal.cc",
+        394,
+        398
+      ],
+      [
+        "cpp/src/arrow/util/basic_decimal.cc",
+        1268,
+        1272
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-205",
+    "sev": "Medium",
+    "title": "ParseTimestampISO8601 leaves *out_zone_offset_present unmodified on YYYY-MM-DD strings",
+    "files": [
+      [
+        "cpp/src/arrow/util/value_parsing.h",
+        679,
+        690
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-206",
+    "sev": "Medium",
+    "title": "OptionalBinaryBitBlockCounter::NextOrNotBlock returns wrong popcount when left_bitmap == nullptr",
+    "files": [
+      [
+        "cpp/src/arrow/util/bit_block_counter.h",
+        380,
+        402
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-207",
+    "sev": "Medium",
+    "title": "CountingSemaphore::Close() fails to notify WaitForWaiters() when num_waiters_ == 0",
+    "files": [
+      [
+        "cpp/src/arrow/util/counting_semaphore.cc",
+        64,
+        90
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-208",
+    "sev": "Medium",
+    "title": "AllComplete calls out.MarkFinished(status) while holding non-recursive state->mutex (self-deadlock risk)",
+    "files": [
+      [
+        "cpp/src/arrow/util/future.cc",
+        220,
+        231
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-209",
+    "sev": "Medium",
+    "title": "GetCurrentRSS() on Linux reads first field of /proc/self/statm (VmSize) instead of second field (VmRSS)",
+    "files": [
+      [
+        "cpp/src/arrow/util/io_util.cc",
+        2150,
+        2161
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-210",
+    "sev": "Medium",
+    "title": "FixedSizeListArray::FromArrays(values, type) divides by zero (SIGFPE) when list_size == 0",
+    "files": [
+      [
+        "cpp/src/arrow/array/array_nested.cc",
+        483,
+        502
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-211",
+    "sev": "Medium",
+    "title": "StructArray::GetFlattenedField and SparseUnionArray::GetFlattenedField abort on union children and corrupt NullType children",
+    "files": [
+      [
+        "cpp/src/arrow/array/array_nested.cc",
+        618,
+        665
+      ],
+      [
+        "cpp/src/arrow/array/array_nested.cc",
+        717,
+        752
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-212",
+    "sev": "Medium",
+    "title": "RecordBatch::FromStructArray and FieldPath::Get ignore StructArray slice offset and length",
+    "files": [
+      [
+        "cpp/src/arrow/record_batch.cc",
+        200,
+        212
+      ],
+      [
+        "cpp/src/arrow/type.cc",
+        1109,
+        1119
+      ],
+      [
+        "cpp/src/arrow/type.cc",
+        1149,
+        1164
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-213",
+    "sev": "Medium",
+    "title": "DenseUnionArray::Make and SparseUnionArray::Make produce invalid / OOB union arrays on mismatched or sliced inputs",
+    "files": [
+      [
+        "cpp/src/arrow/array/array_nested.cc",
+        771,
+        843
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-214",
+    "sev": "Medium",
+    "title": "FlattenListArray fails on all-null lists with non-empty spans and segfaults on empty lists with null offsets buffer",
+    "files": [
+      [
+        "cpp/src/arrow/array/array_nested.cc",
+        146,
+        183
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-215",
+    "sev": "Medium",
+    "title": "TypeEqualsVisitor omits FixedSizeListType::list_size() check when fingerprints are empty",
+    "files": [
+      [
+        "cpp/src/arrow/compare.cc",
+        637,
+        649
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-216",
+    "sev": "Medium",
+    "title": "MakeArrayFromScalar fails with Invalid for length == 0 on valid List, FixedSizeList, and Map scalars",
+    "files": [
+      [
+        "cpp/src/arrow/array/util.cc",
+        599,
+        645
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-217",
+    "sev": "Medium",
+    "title": "Table::CombineChunks fails on single binary chunk >= kBinaryMemoryLimit and CombineChunksToBatch silently drops remaining chunks",
+    "files": [
+      [
+        "cpp/src/arrow/table.cc",
+        551,
+        593
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-218",
+    "sev": "Medium",
+    "title": "LoggingMemoryPool::Reallocate silently drops custom alignment parameter",
+    "files": [
+      [
+        "cpp/src/arrow/memory_pool.cc",
+        710,
+        716
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-219",
+    "sev": "Medium",
+    "title": "DictionaryUnifier::UnifyChunkedArray mutates caller's input ArrayData in place for nested dictionaries",
+    "files": [
+      [
+        "cpp/src/arrow/array/array_dict.cc",
+        360,
+        366
+      ],
+      [
+        "cpp/src/arrow/array/array_dict.cc",
+        419,
+        423
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-220",
+    "sev": "Medium",
+    "title": "SimpleRecordBatch does not override ValidateFull(), causing OOB vector read when column count mismatches schema",
+    "files": [
+      [
+        "cpp/src/arrow/record_batch.cc",
+        158,
+        163
+      ],
+      [
+        "cpp/src/arrow/record_batch.cc",
+        294,
+        325
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-221",
+    "sev": "Medium",
+    "title": "CSV InferringColumnDecoder data race on converter_, duplicate conversion on every non-first block, and broken error propagation",
+    "files": [
+      [
+        "cpp/src/arrow/csv/column_decoder.cc",
+        170,
+        219
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-222",
+    "sev": "Medium",
+    "title": "JSON MultiStringStream and CSV Lexer OOB read/crash on empty block with non-empty partial, plus unaligned uint64_t read UB",
+    "files": [
+      [
+        "cpp/src/arrow/json/chunker.cc",
+        57,
+        85
+      ],
+      [
+        "cpp/src/arrow/json/chunker.cc",
+        127,
+        138
+      ],
+      [
+        "cpp/src/arrow/csv/chunker.cc",
+        58,
+        74
+      ],
+      [
+        "cpp/src/arrow/csv/chunker.cc",
+        162,
+        165
+      ],
+      [
+        "cpp/src/arrow/csv/chunker.cc",
+        206,
+        220
+      ],
+      [
+        "cpp/src/arrow/csv/chunker.cc",
+        282,
+        298
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-223",
+    "sev": "Medium",
+    "title": "CSV CountRowsAsync ignores skip_rows_after_names and counts skipped invalid rows",
+    "files": [
+      [
+        "cpp/src/arrow/csv/reader.cc",
+        1203,
+        1207
+      ],
+      [
+        "cpp/src/arrow/csv/reader.cc",
+        1222,
+        1224
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-224",
+    "sev": "Medium",
+    "title": "CSV UnquotedColumnPopulator falsely rejects masked null-slot bytes (leaking them) and NoQuoteInArray calls memchr(nullptr, ..., 0) UB",
+    "files": [
+      [
+        "cpp/src/arrow/csv/writer.cc",
+        231,
+        267
+      ],
+      [
+        "cpp/src/arrow/csv/writer.cc",
+        358,
+        362
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-225",
+    "sev": "Medium",
+    "title": "JSON TableReaderImpl::Read leaves background TaskGroup tasks running after early error return (MemoryPool UAF)",
+    "files": [
+      [
+        "cpp/src/arrow/json/reader.cc",
+        255,
+        277
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-226",
+    "sev": "Medium",
+    "title": "CastList::HandleOffsets passes end offset instead of length to Slice, and AddTypeToTypeCast registers FixedSizeList cast under StructType::type_id",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/scalar_cast_nested.cc",
+        88,
+        99
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/scalar_cast_nested.cc",
+        236,
+        243
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-227",
+    "sev": "Medium",
+    "title": "BinaryJoinElementWise misuses string_view::data() == nullptr as null sentinel, breaking valid empty strings with null data buffer",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/scalar_string_ascii.cc",
+        3054,
+        3097
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-228",
+    "sev": "Medium",
+    "title": "ShiftTime checks int64_t overflow bounds for 32-bit Time32Type output and triggers signed overflow UB on null slots",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/scalar_cast_temporal.cc",
+        64,
+        82
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-229",
+    "sev": "Medium",
+    "title": "RowTableImpl::ResizeOptionalVaryingLengthBuffer & EncodeSelected read offsets()[num_rows] on fixed-length tables; AppendEmpty wipes existing rows; AppendSelectionFrom truncates row_id to uint16_t",
+    "files": [
+      [
+        "cpp/src/arrow/compute/row/row_internal.cc",
+        293,
+        297
+      ],
+      [
+        "cpp/src/arrow/compute/row/row_internal.cc",
+        330,
+        330
+      ],
+      [
+        "cpp/src/arrow/compute/row/row_internal.cc",
+        341,
+        341
+      ],
+      [
+        "cpp/src/arrow/compute/row/row_internal.cc",
+        355,
+        355
+      ],
+      [
+        "cpp/src/arrow/compute/row/row_internal.cc",
+        387,
+        396
+      ],
+      [
+        "cpp/src/arrow/compute/row/encode_internal.cc",
+        162,
+        163
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-230",
+    "sev": "Medium",
+    "title": "BooleanKeyEncoder::Encode encodes null BooleanScalar as kValidByte (false) instead of kNullByte",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/row_encoder.cc",
+        91,
+        99
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-231",
+    "sev": "Medium",
+    "title": "ScalarAggregateNode::Make dereferences null function->default_options() for functions without default options (e.g., index)",
+    "files": [
+      [
+        "cpp/src/arrow/compute/exec/aggregate_node.cc",
+        112,
+        114
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-232",
+    "sev": "Medium",
+    "title": "GroupedTDigestImpl::Resize appends new_num_groups instead of added_groups (quadratic memory leak)",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/hash_aggregate.cc",
+        1032,
+        1041
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-233",
+    "sev": "Medium",
+    "title": "GroupedMeanImpl::Finish fails with Division by 0 on Decimal types when min_count == 0 and a group has 0 valid values",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/hash_aggregate.cc",
+        629,
+        643
+      ],
+      [
+        "cpp/src/arrow/compute/kernels/hash_aggregate.cc",
+        661,
+        665
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-234",
+    "sev": "Medium",
+    "title": "TDigestImpl::Consume increments count by 1 instead of batch.length for scalar inputs",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/aggregate_tdigest.cc",
+        76,
+        84
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-235",
+    "sev": "Medium",
+    "title": "ColumnArrayFromArrayDataAndMetadata accesses array_data->buffers[1] out-of-bounds for Type::NA",
+    "files": [
+      [
+        "cpp/src/arrow/compute/light_array.cc",
+        139,
+        141
+      ],
+      [
+        "cpp/src/arrow/compute/light_array.cc",
+        154,
+        165
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-236",
+    "sev": "Medium",
+    "title": "AsofJoinNode InputState::Advance always returns false on batch boundaries (have_active_batch &= !queue_.TryPop())",
+    "files": [
+      [
+        "cpp/src/arrow/compute/exec/asof_join_node.cc",
+        513,
+        520
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-237",
+    "sev": "Medium",
+    "title": "HashJoinSchema::CollectFilterColumns searches right_seen_paths with uncorrected *path, duplicating right-side filter columns",
+    "files": [
+      [
+        "cpp/src/arrow/compute/exec/hash_join_node.cc",
+        424,
+        436
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-238",
+    "sev": "Medium",
+    "title": "Data races on empty partitions in SwissTableForJoinBuild::PrtnMerge / CopyVaryingLength, unsynchronized HashJoinBasicImpl::cancelled_, and wrong DCHECK in HashJoinNode::ErrorReceived",
+    "files": [
+      [
+        "cpp/src/arrow/compute/exec/swiss_join.cc",
+        560,
+        572
+      ],
+      [
+        "cpp/src/arrow/compute/exec/swiss_join.cc",
+        1403,
+        1413
+      ],
+      [
+        "cpp/src/arrow/compute/exec/hash_join.cc",
+        87,
+        87
+      ],
+      [
+        "cpp/src/arrow/compute/exec/hash_join.cc",
+        572,
+        572
+      ],
+      [
+        "cpp/src/arrow/compute/exec/hash_join.cc",
+        639,
+        639
+      ],
+      [
+        "cpp/src/arrow/compute/exec/hash_join.cc",
+        683,
+        683
+      ],
+      [
+        "cpp/src/arrow/compute/exec/hash_join.cc",
+        788,
+        788
+      ],
+      [
+        "cpp/src/arrow/compute/exec/hash_join_node.cc",
+        910,
+        915
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-239",
+    "sev": "Medium",
+    "title": "GroupedVarStdImpl::ConsumeImpl passes full array.length instead of chunk length in no-null int8/16/32 chunking loop (OOB read)",
+    "files": [
+      [
+        "cpp/src/arrow/compute/kernels/hash_aggregate.cc",
+        826,
+        870
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-240",
+    "sev": "Medium",
+    "title": "Signed 32-bit integer overflow in SwissTable::grow_double hash buffer size calculation",
+    "files": [
+      [
+        "cpp/src/arrow/compute/exec/key_map.cc",
+        660,
+        663
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-241",
+    "sev": "Medium",
+    "title": "BufferedInputStream::Impl::Peek fails to invalidate cached raw_pos_, corrupting subsequent Tell() results (and Peek/DoPeek omit nbytes < 0 check)",
+    "files": [
+      [
+        "cpp/src/arrow/io/buffered.cc",
+        276,
+        283
+      ],
+      [
+        "cpp/src/arrow/io/buffered.cc",
+        312,
+        325
+      ],
+      [
+        "cpp/src/arrow/io/memory.cc",
+        293,
+        299
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-242",
+    "sev": "Medium",
+    "title": "S3 ObjectOutputStream::UploadPart permanently deadlocks Flush()/Close() if SubmitIO fails",
+    "files": [
+      [
+        "cpp/src/arrow/filesystem/s3fs.cc",
+        1384,
+        1402
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-243",
+    "sev": "Medium",
+    "title": "KeyValuePartitioningFactory::DoInspect indexes options_.schema by discovery position rather than field name for HivePartitioningFactory",
+    "files": [
+      [
+        "cpp/src/arrow/dataset/partition.cc",
+        493,
+        543
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-244",
+    "sev": "Medium",
+    "title": "FileSystemDataset::ReplaceSchema silently drops partitioning_",
+    "files": [
+      [
+        "cpp/src/arrow/dataset/file_base.cc",
+        233,
+        237
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-245",
+    "sev": "Medium",
+    "title": "ReadRangeCache::LazyImpl::Read holds entry_mutex across blocking I/O (fut.result()), serializing reads and risking deadlock",
+    "files": [
+      [
+        "cpp/src/arrow/io/caching.cc",
+        193,
+        210
+      ],
+      [
+        "cpp/src/arrow/io/caching.cc",
+        277,
+        280
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-246",
+    "sev": "Medium",
+    "title": "HDFS shim data race on lazy symbol resolution, silent OK on missing symbols, and spurious EOF when buffer_size == 0",
+    "files": [
+      [
+        "cpp/src/arrow/io/hdfs_internal.cc",
+        88,
+        92
+      ],
+      [
+        "cpp/src/arrow/io/hdfs_internal.cc",
+        409,
+        419
+      ],
+      [
+        "cpp/src/arrow/io/hdfs_internal.cc",
+        435,
+        492
+      ],
+      [
+        "cpp/src/arrow/io/hdfs.cc",
+        178,
+        193
+      ],
+      [
+        "cpp/src/arrow/io/hdfs.cc",
+        510,
+        526
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-247",
+    "sev": "Medium",
+    "title": "Null pointer dereference in ToProto(const Result&, pb::Result*) when result.body is null",
+    "files": [
+      [
+        "cpp/src/arrow/flight/serialization_internal.cc",
+        73,
+        76
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-248",
+    "sev": "Medium",
+    "title": "Null dereference in ~ServerSignalHandler() and dangling running_instance_ on error in FlightServerBase::Serve()",
+    "files": [
+      [
+        "cpp/src/arrow/flight/server.cc",
+        69,
+        81
+      ],
+      [
+        "cpp/src/arrow/flight/server.cc",
+        179,
+        198
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-249",
+    "sev": "Medium",
+    "title": "FilterRelationConverter always fails when filter_expression is already bound",
+    "files": [
+      [
+        "cpp/src/arrow/engine/substrait/relation_internal.cc",
+        866,
+        885
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-250",
+    "sev": "Medium",
+    "title": "ToProto(case_when) mishandles case_when without explicit else branch (emits null else_ or reads OOB)",
+    "files": [
+      [
+        "cpp/src/arrow/engine/substrait/expression_internal.cc",
+        1012,
+        1041
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-251",
+    "sev": "Medium",
+    "title": "Truncation through int8_t in ORCFileReader::GetWriterId/GetWriterVersion corrupts WriterId::kUnknown and WriterVersion::kMax",
+    "files": [
+      [
+        "cpp/src/arrow/adapters/orc/adapter.cc",
+        251,
+        259
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-252",
+    "sev": "Medium",
+    "title": "decimalops::RoundWithNegativeScale always truncates instead of rounding (swapped scale args to ComputeRoundingDelta)",
+    "files": [
+      [
+        "cpp/src/gandiva/precompiled/decimal_ops.cc",
+        563,
+        568
+      ],
+      [
+        "cpp/src/gandiva/precompiled/decimal_ops.cc",
+        643,
+        659
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-253",
+    "sev": "Medium",
+    "title": "Wrong leap year check in IsLastDayOfMonth and is_last_day_of_month (TmYear() off by 1900)",
+    "files": [
+      [
+        "cpp/src/gandiva/precompiled/time.cc",
+        557,
+        558
+      ],
+      [
+        "cpp/src/gandiva/precompiled/timestamp_arithmetic.cc",
+        38,
+        42
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-254",
+    "sev": "Medium",
+    "title": "Corrupted millisecond formatting (castVARCHAR_timestamp_int64) and forward truncation (date_trunc_*) on pre-1970 timestamps",
+    "files": [
+      [
+        "cpp/src/gandiva/precompiled/time.cc",
+        445,
+        449
+      ],
+      [
+        "cpp/src/gandiva/precompiled/time.cc",
+        927,
+        937
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-255",
+    "sev": "Medium",
+    "title": "NULL input validity ignored in elt, soundex, and empty-length NULLs in from_hex",
+    "files": [
+      [
+        "cpp/src/gandiva/precompiled/string_ops.cc",
+        2672,
+        2790
+      ],
+      [
+        "cpp/src/gandiva/precompiled/string_ops.cc",
+        2864,
+        2877
+      ],
+      [
+        "cpp/src/gandiva/precompiled/string_ops.cc",
+        2935,
+        2941
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-256",
+    "sev": "Medium",
+    "title": "LikeHolder::TryOptimize deletes literal backslashes via std::remove, corrupting SQL LIKE patterns",
+    "files": [
+      [
+        "cpp/src/gandiva/regex_functions_holder.cc",
+        29,
+        32
+      ],
+      [
+        "cpp/src/gandiva/regex_functions_holder.cc",
+        43,
+        65
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-257",
+    "sev": "Medium",
+    "title": "Silent overflow bypasses in castINT/BIGINT_varbinary, decimalops::FromInt64 (std::abs(INT64_MIN) UB), and decimalops::FromDouble",
+    "files": [
+      [
+        "cpp/src/gandiva/precompiled/string_ops.cc",
+        2324,
+        2345
+      ],
+      [
+        "cpp/src/gandiva/precompiled/decimal_ops.cc",
+        499,
+        514
+      ],
+      [
+        "cpp/src/gandiva/precompiled/decimal_ops.cc",
+        528,
+        532
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-258",
+    "sev": "Medium",
+    "title": "Wrong results in Gandiva pmod for negative divisors and precision loss for int64 > 2^53",
+    "files": [
+      [
+        "cpp/src/gandiva/precompiled/arithmetic_ops.cc",
+        63,
+        76
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-259",
+    "sev": "Medium",
+    "title": "Signed overflow in left/right(INT32_MIN), unsigned GANDIVA_CACHE_SIZE check in cache.cc, and UB in LruCache(0)",
+    "files": [
+      [
+        "cpp/src/gandiva/precompiled/string_ops.cc",
+        2179,
+        2179
+      ],
+      [
+        "cpp/src/gandiva/precompiled/string_ops.cc",
+        2230,
+        2249
+      ],
+      [
+        "cpp/src/gandiva/cache.cc",
+        32,
+        47
+      ],
+      [
+        "cpp/src/gandiva/lru_cache.h",
+        57,
+        70
+      ],
+      [
+        "cpp/src/gandiva/lru_cache.h",
+        108,
+        113
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-260",
+    "sev": "Medium",
+    "title": "ExprValidator::Visit(InExpressionNode) skips validating child eval_expr() (null NativeFunction* crash in ExprDecomposer)",
+    "files": [
+      [
+        "cpp/src/gandiva/expr_validator.cc",
+        175,
+        196
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-261",
+    "sev": "Medium",
+    "title": "/dev/shm memory clamping has no effect (SetFootprintLimit called beforehand) and unchecked open/fstatvfs reads uninitialized stack memory",
+    "files": [
+      [
+        "cpp/src/plasma/store.cc",
+        1273,
+        1273
+      ],
+      [
+        "cpp/src/plasma/store.cc",
+        1301,
+        1323
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-262",
+    "sev": "Medium",
+    "title": "PlasmaStore::AbortObject leaves aborted objects in QuotaAwarePolicy, causing server abort on recreate and quota leak",
+    "files": [
+      [
+        "cpp/src/plasma/store.cc",
+        629,
+        645
+      ],
+      [
+        "cpp/src/plasma/quota_aware_policy.cc",
+        38,
+        46
+      ],
+      [
+        "cpp/src/plasma/eviction_policy.cc",
+        26,
+        33
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-263",
+    "sev": "Medium",
+    "title": "IoCtxInterface::read treats every successful non-empty RADOS read as an error and passes negative -errno to StatusFromErrno",
+    "files": [
+      [
+        "cpp/src/skyhook/protocol/rados_protocol.cc",
+        27,
+        39
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-264",
+    "sev": "Low",
+    "title": "IdentityImpliesEqualityNansNotEqual ignores DictionaryType and ExtensionType, breaking NaN self-comparison",
+    "files": [
+      [
+        "cpp/src/arrow/compare.cc",
+        141,
+        158
+      ],
+      [
+        "cpp/src/arrow/compare.cc",
+        548,
+        551
+      ],
+      [
+        "cpp/src/arrow/compare.cc",
+        942,
+        944
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-265",
+    "sev": "Low",
+    "title": "ArrayRangeEquals passes end indices instead of lengths to PrintDiff",
+    "files": [
+      [
+        "cpp/src/arrow/compare.cc",
+        870,
+        872
+      ],
+      [
+        "cpp/src/arrow/compare.cc",
+        917,
+        929
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-266",
+    "sev": "Low",
+    "title": "ListImpl diff formatter omits null check for child elements and truncates LargeList loop index to int32_t",
+    "files": [
+      [
+        "cpp/src/arrow/array/diff.cc",
+        506,
+        517
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-267",
+    "sev": "Low",
+    "title": "BufferBuilder::Reset() leaves data_ as a dangling pointer to freed buffer memory",
+    "files": [
+      [
+        "cpp/src/arrow/buffer_builder.h",
+        49,
+        50
+      ],
+      [
+        "cpp/src/arrow/buffer_builder.h",
+        184,
+        187
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-268",
+    "sev": "Low",
+    "title": "BufferOutputStream::Finish() null-pointer dereference on repeated call",
+    "files": [
+      [
+        "cpp/src/arrow/io/memory.cc",
+        89,
+        94
+      ]
+    ]
+  },
+  {
+    "id": "ARROW-269",
+    "sev": "Low",
+    "title": "FileSystemFromUriOrPath silently ignores caller's io_context for local absolute paths",
+    "files": [
+      [
+        "cpp/src/arrow/filesystem/filesystem.cc",
+        759,
+        770
+      ]
+    ]
+  }
+]

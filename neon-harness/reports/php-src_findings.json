@@ -1,0 +1,3004 @@
+[
+ {
+  "id": "BH-001",
+  "sev": "Critical",
+  "title": "Cloning InternalIterator OOB/fptr deref",
+  "files": [
+   [
+    "Zend/zend_interfaces.c",
+    481,
+    494
+   ],
+   [
+    "Zend/zend_interfaces.c",
+    520,
+    527
+   ],
+   [
+    "Zend/zend_interfaces.c",
+    664,
+    670
+   ],
+   [
+    "Zend/zend_objects.c",
+    184,
+    191
+   ],
+   [
+    "Zend/zend_objects.c",
+    263,
+    284
+   ]
+  ]
+ },
+ {
+  "id": "BH-002",
+  "sev": "Critical",
+  "title": "__toString re-entrancy in concat_function",
+  "files": [
+   [
+    "Zend/zend_operators.c",
+    1890,
+    1994
+   ],
+   [
+    "Zend/zend_vm_def.h",
+    441,
+    441
+   ],
+   [
+    "Zend/zend_vm_def.h",
+    1268,
+    1268
+   ],
+   [
+    "Zend/zend_execute.c",
+    1507,
+    1507
+   ],
+   [
+    "Zend/zend_execute.c",
+    1527,
+    1527
+   ]
+  ]
+ },
+ {
+  "id": "BH-003",
+  "sev": "Critical",
+  "title": "Weakref resurrection UAF during notify",
+  "files": [
+   [
+    "Zend/zend_weakrefs.c",
+    66,
+    94
+   ],
+   [
+    "Zend/zend_weakrefs.c",
+    191,
+    203
+   ],
+   [
+    "Zend/zend_weakrefs.c",
+    258,
+    264
+   ],
+   [
+    "Zend/zend_weakrefs.c",
+    451,
+    459
+   ],
+   [
+    "Zend/zend_weakrefs.c",
+    524,
+    538
+   ],
+   [
+    "Zend/zend_objects.c",
+    46,
+    92
+   ],
+   [
+    "Zend/zend_objects_API.c",
+    190,
+    206
+   ]
+  ]
+ },
+ {
+  "id": "BH-004",
+  "sev": "Critical",
+  "title": "WeakMap value destructor re-entrancy in gc",
+  "files": [
+   [
+    "Zend/zend_gc.c",
+    1184,
+    1200
+   ],
+   [
+    "Zend/zend_gc.c",
+    1516,
+    1650
+   ],
+   [
+    "Zend/zend_weakrefs.c",
+    467,
+    477
+   ]
+  ]
+ },
+ {
+  "id": "BH-005",
+  "sev": "Critical",
+  "title": "__toString re-entrancy during hash sort",
+  "files": [
+   [
+    "Zend/zend_operators.c",
+    1997,
+    2071
+   ],
+   [
+    "Zend/zend_hash.c",
+    2866,
+    2957
+   ],
+   [
+    "ext/standard/array.c",
+    708,
+    809
+   ]
+  ]
+ },
+ {
+  "id": "BH-006",
+  "sev": "High",
+  "title": "Optimizer backward underflow on first-class callable args",
+  "files": [
+   [
+    "Zend/Optimizer/optimize_func_calls.c",
+    40,
+    76
+   ],
+   [
+    "Zend/Optimizer/optimize_func_calls.c",
+    185,
+    225
+   ]
+  ]
+ },
+ {
+  "id": "BH-007",
+  "sev": "High",
+  "title": "zend_std_unset_property UAF write across __unset",
+  "files": [
+   [
+    "Zend/zend_object_handlers.c",
+    1174,
+    1190
+   ],
+   [
+    "Zend/zend_vm_def.h",
+    6562,
+    6605
+   ]
+  ]
+ },
+ {
+  "id": "BH-008",
+  "sev": "High",
+  "title": "readonly bypass across __toString coercion",
+  "files": [
+   [
+    "Zend/zend_vm_def.h",
+    2396,
+    2496
+   ],
+   [
+    "Zend/zend_execute.c",
+    964,
+    982
+   ],
+   [
+    "Zend/zend_object_handlers.c",
+    807,
+    833
+   ],
+   [
+    "Zend/zend_object_handlers.c",
+    879,
+    901
+   ]
+  ]
+ },
+ {
+  "id": "BH-009",
+  "sev": "High",
+  "title": "Generator yield from re-entrant UAF and Generator::throw NULL deref",
+  "files": [
+   [
+    "Zend/zend_generators.c",
+    457,
+    480
+   ],
+   [
+    "Zend/zend_generators.c",
+    606,
+    700
+   ],
+   [
+    "Zend/zend_generators.c",
+    703,
+    780
+   ]
+  ]
+ },
+ {
+  "id": "BH-010",
+  "sev": "High",
+  "title": "restore_exception_handler re-entrant UAF",
+  "files": [
+   [
+    "Zend/zend_builtin_functions.c",
+    1222,
+    1239
+   ]
+  ]
+ },
+ {
+  "id": "BH-011",
+  "sev": "High",
+  "title": "Unpinned $previous exception UAF in __toString",
+  "files": [
+   [
+    "Zend/zend_exceptions.c",
+    650,
+    752
+   ],
+   [
+    "Zend/zend_exceptions_arginfo.h",
+    209,
+    213
+   ]
+  ]
+ },
+ {
+  "id": "BH-012",
+  "sev": "High",
+  "title": "Wrong HashTable checked for HT_ITERATORS_OVERFLOW in zend_hash_iterator_pos_ex",
+  "files": [
+   [
+    "Zend/zend_hash.c",
+    563,
+    583
+   ]
+  ]
+ },
+ {
+  "id": "BH-013",
+  "sev": "High",
+  "title": "tsrm_realpath_r stack overflow Windows / readlink off-by-one",
+  "files": [
+   [
+    "Zend/zend_virtual_cwd.c",
+    833,
+    847
+   ],
+   [
+    "Zend/zend_virtual_cwd.c",
+    906,
+    912
+   ],
+   [
+    "Zend/zend_virtual_cwd.c",
+    959,
+    980
+   ],
+   [
+    "Zend/zend_virtual_cwd.c",
+    1012,
+    1012
+   ]
+  ]
+ },
+ {
+  "id": "BH-014",
+  "sev": "High",
+  "title": "_is_numeric_string_ex signed wrap-around",
+  "files": [
+   [
+    "Zend/zend_operators.c",
+    3352,
+    3371
+   ],
+   [
+    "Zend/zend_operators.c",
+    3412,
+    3426
+   ]
+  ]
+ },
+ {
+  "id": "BH-015",
+  "sev": "Medium",
+  "title": "fiber.stack_size size_t overflow",
+  "files": [
+   [
+    "Zend/zend.c",
+    177,
+    185
+   ],
+   [
+    "Zend/zend_fibers.c",
+    176,
+    248
+   ],
+   [
+    "Zend/zend_fibers.c",
+    325,
+    363
+   ],
+   [
+    "Zend/zend_fibers.c",
+    734,
+    734
+   ]
+  ]
+ },
+ {
+  "id": "BH-016",
+  "sev": "Medium",
+  "title": "Closure::call refcount leak generator closures",
+  "files": [
+   [
+    "Zend/zend_closures.c",
+    152,
+    162
+   ],
+   [
+    "Zend/zend_execute_API.c",
+    917,
+    936
+   ]
+  ]
+ },
+ {
+  "id": "BH-017",
+  "sev": "Medium",
+  "title": "Property type invariance bypass self/parent",
+  "files": [
+   [
+    "Zend/zend_inheritance.c",
+    1233,
+    1257
+   ],
+   [
+    "Zend/zend_compile.c",
+    6299,
+    6330
+   ]
+  ]
+ },
+ {
+  "id": "BH-018",
+  "sev": "Medium",
+  "title": "Optimizer pass1 ignores named arguments",
+  "files": [
+   [
+    "Zend/Optimizer/pass1.c",
+    186,
+    267
+   ],
+   [
+    "Zend/Optimizer/zend_optimizer.c",
+    126,
+    202
+   ]
+  ]
+ },
+ {
+  "id": "BH-019",
+  "sev": "Critical",
+  "title": "array_multisort UAF/type confusion/overflow",
+  "files": [
+   [
+    "ext/standard/array.c",
+    5580,
+    5597
+   ],
+   [
+    "ext/standard/array.c",
+    5642,
+    5642
+   ],
+   [
+    "ext/standard/array.c",
+    5652,
+    5662
+   ],
+   [
+    "ext/standard/array.c",
+    5737,
+    5805
+   ]
+  ]
+ },
+ {
+  "id": "BH-020",
+  "sev": "Critical",
+  "title": "unserialize allowed_classes UAF/COW violation",
+  "files": [
+   [
+    "ext/standard/var.c",
+    1355,
+    1380
+   ],
+   [
+    "Zend/zend_operators.c",
+    669,
+    717
+   ]
+  ]
+ },
+ {
+  "id": "BH-021",
+  "sev": "Critical",
+  "title": "var_unserializer enum E: missing serialize_lock",
+  "files": [
+   [
+    "ext/standard/var_unserializer.re",
+    60,
+    82
+   ],
+   [
+    "ext/standard/var_unserializer.re",
+    517,
+    517
+   ],
+   [
+    "ext/standard/var_unserializer.re",
+    1120,
+    1120
+   ],
+   [
+    "ext/standard/var_unserializer.re",
+    1230,
+    1232
+   ],
+   [
+    "ext/standard/var_unserializer.re",
+    1347,
+    1425
+   ]
+  ]
+ },
+ {
+  "id": "BH-022",
+  "sev": "Critical",
+  "title": "stream_filter_remove UAF via re-entrant filter callback",
+  "files": [
+   [
+    "ext/standard/streamsfuncs.c",
+    1286,
+    1308
+   ],
+   [
+    "ext/standard/user_filters.c",
+    152,
+    225
+   ],
+   [
+    "main/streams/filter.c",
+    278,
+    283
+   ],
+   [
+    "main/streams/filter.c",
+    398,
+    435
+   ]
+  ]
+ },
+ {
+  "id": "BH-023",
+  "sev": "Critical",
+  "title": "_php_stream_filter_flush unbounded overflow stale readbuflen",
+  "files": [
+   [
+    "main/streams/filter.c",
+    450,
+    467
+   ],
+   [
+    "main/streams/streams.c",
+    653,
+    671
+   ]
+  ]
+ },
+ {
+  "id": "BH-024",
+  "sev": "Critical",
+  "title": "user filter bucket brigade stack UAF",
+  "files": [
+   [
+    "ext/standard/user_filters.c",
+    81,
+    81
+   ],
+   [
+    "ext/standard/user_filters.c",
+    167,
+    168
+   ],
+   [
+    "ext/standard/user_filters.c",
+    224,
+    227
+   ],
+   [
+    "ext/standard/user_filters.c",
+    371,
+    386
+   ],
+   [
+    "ext/standard/user_filters.c",
+    408,
+    438
+   ],
+   [
+    "main/streams/streams.c",
+    548,
+    548
+   ],
+   [
+    "main/streams/streams.c",
+    1165,
+    1165
+   ]
+  ]
+ },
+ {
+  "id": "BH-025",
+  "sev": "Critical",
+  "title": "userspace stream callbacks fclose on active stream",
+  "files": [
+   [
+    "main/streams/userspace.c",
+    584,
+    709
+   ],
+   [
+    "main/streams/userspace.c",
+    758,
+    1051
+   ],
+   [
+    "main/streams/userspace.c",
+    1054,
+    1330
+   ],
+   [
+    "main/streams/userspace.c",
+    1404,
+    1456
+   ]
+  ]
+ },
+ {
+  "id": "BH-026",
+  "sev": "High",
+  "title": "array_column dangling property slot UAF",
+  "files": [
+   [
+    "ext/standard/array.c",
+    4219,
+    4259
+   ],
+   [
+    "ext/standard/array.c",
+    4302,
+    4321
+   ]
+  ]
+ },
+ {
+  "id": "BH-027",
+  "sev": "High",
+  "title": "dns_get_mx stack over-read php_parserr A6",
+  "files": [
+   [
+    "ext/standard/dns.c",
+    664,
+    701
+   ],
+   [
+    "ext/standard/dns.c",
+    984,
+    984
+   ],
+   [
+    "ext/standard/dns.c",
+    1099,
+    1137
+   ]
+  ]
+ },
+ {
+  "id": "BH-028",
+  "sev": "High",
+  "title": "convert.* filters pestealloc NUL mismatch over-read",
+  "files": [
+   [
+    "ext/standard/filters.c",
+    237,
+    239
+   ],
+   [
+    "ext/standard/filters.c",
+    277,
+    277
+   ],
+   [
+    "ext/standard/filters.c",
+    410,
+    410
+   ],
+   [
+    "ext/standard/filters.c",
+    724,
+    724
+   ],
+   [
+    "ext/standard/filters.c",
+    781,
+    781
+   ],
+   [
+    "ext/standard/filters.c",
+    804,
+    804
+   ],
+   [
+    "ext/standard/filters.c",
+    846,
+    848
+   ],
+   [
+    "ext/standard/filters.c",
+    1030,
+    1030
+   ],
+   [
+    "ext/standard/filters.c",
+    1058,
+    1060
+   ],
+   [
+    "ext/standard/filters.c",
+    1091,
+    1098
+   ]
+  ]
+ },
+ {
+  "id": "BH-029",
+  "sev": "High",
+  "title": "qprint decode/encode over-read underflow",
+  "files": [
+   [
+    "ext/standard/filters.c",
+    705,
+    709
+   ],
+   [
+    "ext/standard/filters.c",
+    744,
+    761
+   ],
+   [
+    "ext/standard/filters.c",
+    935,
+    940
+   ],
+   [
+    "ext/standard/filters.c",
+    998,
+    1022
+   ]
+  ]
+ },
+ {
+  "id": "BH-030",
+  "sev": "High",
+  "title": "stream_filter_register builtin collision UAF",
+  "files": [
+   [
+    "ext/standard/user_filters.c",
+    100,
+    109
+   ],
+   [
+    "ext/standard/user_filters.c",
+    156,
+    162
+   ],
+   [
+    "ext/standard/user_filters.c",
+    220,
+    222
+   ],
+   [
+    "ext/standard/user_filters.c",
+    353,
+    358
+   ],
+   [
+    "ext/standard/user_filters.c",
+    537,
+    547
+   ]
+  ]
+ },
+ {
+  "id": "BH-031",
+  "sev": "High",
+  "title": "ftp dirstream size_t underflow / url_stat over-read",
+  "files": [
+   [
+    "ext/standard/ftp_fopen_wrapper.c",
+    357,
+    358
+   ],
+   [
+    "ext/standard/ftp_fopen_wrapper.c",
+    624,
+    634
+   ],
+   [
+    "ext/standard/ftp_fopen_wrapper.c",
+    823,
+    838
+   ]
+  ]
+ },
+ {
+  "id": "BH-032",
+  "sev": "High",
+  "title": "browscap premature free / type confusion",
+  "files": [
+   [
+    "ext/standard/browscap.c",
+    223,
+    261
+   ],
+   [
+    "ext/standard/browscap.c",
+    400,
+    442
+   ],
+   [
+    "ext/standard/browscap.c",
+    710,
+    726
+   ]
+  ]
+ },
+ {
+  "id": "BH-033",
+  "sev": "Medium",
+  "title": "stream_socket_enable_crypto type confusion",
+  "files": [
+   [
+    "ext/standard/streamsfuncs.c",
+    1529,
+    1548
+   ]
+  ]
+ },
+ {
+  "id": "BH-034",
+  "sev": "Medium",
+  "title": "Proxy-Authorization leak to origin",
+  "files": [
+   [
+    "ext/standard/http_fopen_wrapper.c",
+    255,
+    309
+   ],
+   [
+    "ext/standard/http_fopen_wrapper.c",
+    491,
+    510
+   ],
+   [
+    "ext/standard/http_fopen_wrapper.c",
+    623,
+    623
+   ]
+  ]
+ },
+ {
+  "id": "BH-035",
+  "sev": "Medium",
+  "title": "mail() bare LF header injection",
+  "files": [
+   [
+    "ext/standard/mail.c",
+    60,
+    83
+   ],
+   [
+    "ext/standard/mail.c",
+    171,
+    184
+   ],
+   [
+    "ext/standard/mail.c",
+    337,
+    371
+   ]
+  ]
+ },
+ {
+  "id": "BH-036",
+  "sev": "Critical",
+  "title": "ReflectionEnumBackedCase getBackingValue type confusion",
+  "files": [
+   [
+    "ext/reflection/php_reflection.c",
+    3779,
+    3817
+   ],
+   [
+    "ext/reflection/php_reflection.c",
+    6935,
+    7007
+   ],
+   [
+    "Zend/zend_enum.h",
+    52,
+    57
+   ]
+  ]
+ },
+ {
+  "id": "BH-037",
+  "sev": "Critical",
+  "title": "ArrayObject/ArrayIterator sort UAF type confusion",
+  "files": [
+   [
+    "ext/spl/spl_array.c",
+    71,
+    95
+   ],
+   [
+    "ext/spl/spl_array.c",
+    1134,
+    1184
+   ],
+   [
+    "ext/spl/spl_array.c",
+    1246,
+    1262
+   ],
+   [
+    "ext/spl/spl_array.c",
+    1373,
+    1423
+   ],
+   [
+    "ext/spl/spl_array.c",
+    1792,
+    1857
+   ]
+  ]
+ },
+ {
+  "id": "BH-038",
+  "sev": "Critical",
+  "title": "FFI::arrayType integer overflow undersized alloc",
+  "files": [
+   [
+    "ext/ffi/ffi.c",
+    1360,
+    1383
+   ],
+   [
+    "ext/ffi/ffi.c",
+    1423,
+    1438
+   ],
+   [
+    "ext/ffi/ffi.c",
+    3787,
+    3795
+   ],
+   [
+    "ext/ffi/ffi.c",
+    4161,
+    4188
+   ],
+   [
+    "ext/ffi/ffi.c",
+    6230,
+    6275
+   ],
+   [
+    "ext/ffi/ffi.c",
+    6910,
+    6910
+   ]
+  ]
+ },
+ {
+  "id": "BH-039",
+  "sev": "Critical",
+  "title": "SplHeap/SplPriorityQueue re-entrant compare UAF",
+  "files": [
+   [
+    "ext/spl/spl_heap.c",
+    124,
+    235
+   ],
+   [
+    "ext/spl/spl_heap.c",
+    270,
+    347
+   ],
+   [
+    "ext/spl/spl_heap.c",
+    601,
+    715
+   ],
+   [
+    "ext/spl/spl_heap.c",
+    948,
+    986
+   ]
+  ]
+ },
+ {
+  "id": "BH-040",
+  "sev": "High",
+  "title": "FFI CType accessors UAF / addr missing remember_type",
+  "files": [
+   [
+    "ext/ffi/ffi.c",
+    2187,
+    2193
+   ],
+   [
+    "ext/ffi/ffi.c",
+    2277,
+    2310
+   ],
+   [
+    "ext/ffi/ffi.c",
+    4224,
+    4242
+   ],
+   [
+    "ext/ffi/ffi.c",
+    4628,
+    4648
+   ],
+   [
+    "ext/ffi/ffi.c",
+    4668,
+    4688
+   ],
+   [
+    "ext/ffi/ffi.c",
+    4743,
+    4771
+   ],
+   [
+    "ext/ffi/ffi.c",
+    4791,
+    4811
+   ],
+   [
+    "ext/ffi/ffi.c",
+    4831,
+    4863
+   ]
+  ]
+ },
+ {
+  "id": "BH-041",
+  "sev": "High",
+  "title": "FFI anonymous bit-fields double-free",
+  "files": [
+   [
+    "ext/ffi/ffi.c",
+    125,
+    132
+   ],
+   [
+    "ext/ffi/ffi.c",
+    623,
+    721
+   ],
+   [
+    "ext/ffi/ffi.c",
+    1273,
+    1275
+   ],
+   [
+    "ext/ffi/ffi.c",
+    1344,
+    1346
+   ],
+   [
+    "ext/ffi/ffi.c",
+    6042,
+    6077
+   ],
+   [
+    "ext/ffi/ffi.c",
+    6150,
+    6178
+   ],
+   [
+    "ext/ffi/ffi_parser.c",
+    2410,
+    2460
+   ]
+  ]
+ },
+ {
+  "id": "BH-042",
+  "sev": "High",
+  "title": "SplObjectStorage/MultipleIterator UAF",
+  "files": [
+   [
+    "ext/spl/spl_observer.c",
+    176,
+    219
+   ],
+   [
+    "ext/spl/spl_observer.c",
+    241,
+    249
+   ],
+   [
+    "ext/spl/spl_observer.c",
+    606,
+    630
+   ],
+   [
+    "ext/spl/spl_observer.c",
+    732,
+    747
+   ],
+   [
+    "ext/spl/spl_observer.c",
+    1226,
+    1294
+   ]
+  ]
+ },
+ {
+  "id": "BH-043",
+  "sev": "High",
+  "title": "SplFixedArray offsetUnset re-entrant setSize",
+  "files": [
+   [
+    "ext/spl/spl_fixedarray.c",
+    234,
+    278
+   ],
+   [
+    "ext/spl/spl_fixedarray.c",
+    471,
+    489
+   ]
+  ]
+ },
+ {
+  "id": "BH-044",
+  "sev": "High",
+  "title": "SplDoublyLinkedList offsetSet re-entrant dtor UAF",
+  "files": [
+   [
+    "ext/spl/spl_dllist.c",
+    737,
+    742
+   ]
+  ]
+ },
+ {
+  "id": "BH-045",
+  "sev": "High",
+  "title": "RecursiveIteratorIterator NULL deref/double-free",
+  "files": [
+   [
+    "ext/spl/spl_iterators.c",
+    279,
+    279
+   ],
+   [
+    "ext/spl/spl_iterators.c",
+    397,
+    415
+   ],
+   [
+    "ext/spl/spl_iterators.c",
+    429,
+    447
+   ]
+  ]
+ },
+ {
+  "id": "BH-046",
+  "sev": "Medium",
+  "title": "spl_autoload_unregister NULL deref",
+  "files": [
+   [
+    "ext/spl/php_spl.c",
+    586,
+    591
+   ]
+  ]
+ },
+ {
+  "id": "BH-047",
+  "sev": "Critical",
+  "title": "soap to_zval_object_ex in-place zobj->ce overwrite",
+  "files": [
+   [
+    "ext/soap/php_encoding.c",
+    1436,
+    1456
+   ]
+  ]
+ },
+ {
+  "id": "BH-048",
+  "sev": "Critical",
+  "title": "soap Z_ADDREF_P on non-refcounted prop / dangling arr",
+  "files": [
+   [
+    "ext/soap/php_encoding.c",
+    1160,
+    1164
+   ],
+   [
+    "ext/soap/php_encoding.c",
+    1540,
+    1575
+   ]
+  ]
+ },
+ {
+  "id": "BH-049",
+  "sev": "Critical",
+  "title": "xml_parse_into_struct level=0 underflow",
+  "files": [
+   [
+    "ext/xml/xml.c",
+    632,
+    646
+   ],
+   [
+    "ext/xml/xml.c",
+    724,
+    728
+   ],
+   [
+    "ext/xml/xml.c",
+    1292,
+    1300
+   ]
+  ]
+ },
+ {
+  "id": "BH-050",
+  "sev": "Critical",
+  "title": "xml_parse_into_struct data/info UAF",
+  "files": [
+   [
+    "ext/xml/xml.c",
+    631,
+    675
+   ],
+   [
+    "ext/xml/xml.c",
+    702,
+    720
+   ],
+   [
+    "ext/xml/xml.c",
+    750,
+    820
+   ],
+   [
+    "ext/xml/xml.c",
+    1286,
+    1304
+   ]
+  ]
+ },
+ {
+  "id": "BH-051",
+  "sev": "Critical",
+  "title": "dom_xpath_ext_function_php underflow/NULL release",
+  "files": [
+   [
+    "ext/dom/xpath.c",
+    40,
+    43
+   ],
+   [
+    "ext/dom/xpath.c",
+    73,
+    80
+   ],
+   [
+    "ext/dom/xpath.c",
+    124,
+    124
+   ],
+   [
+    "ext/dom/xpath.c",
+    131,
+    136
+   ],
+   [
+    "ext/dom/xpath.c",
+    166,
+    168
+   ],
+   [
+    "ext/dom/xpath.c",
+    177,
+    185
+   ]
+  ]
+ },
+ {
+  "id": "BH-052",
+  "sev": "Critical",
+  "title": "dom_zvals_to_fragment UAF adjacent DOMText",
+  "files": [
+   [
+    "ext/dom/parentnode.c",
+    181,
+    205
+   ]
+  ]
+ },
+ {
+  "id": "BH-053",
+  "sev": "Critical",
+  "title": "simplexml abstract instantiation / constant AST exposure",
+  "files": [
+   [
+    "ext/simplexml/simplexml.c",
+    2258,
+    2288
+   ],
+   [
+    "ext/simplexml/simplexml.c",
+    2305,
+    2343
+   ],
+   [
+    "ext/simplexml/simplexml.c",
+    2617,
+    2652
+   ]
+  ]
+ },
+ {
+  "id": "BH-054",
+  "sev": "Critical",
+  "title": "finfo_file re-entrant constructor UAF",
+  "files": [
+   [
+    "ext/fileinfo/fileinfo.c",
+    178,
+    182
+   ],
+   [
+    "ext/fileinfo/fileinfo.c",
+    334,
+    336
+   ],
+   [
+    "ext/fileinfo/fileinfo.c",
+    400,
+    438
+   ]
+  ]
+ },
+ {
+  "id": "BH-055",
+  "sev": "High",
+  "title": "xml toffset unclamped over-read",
+  "files": [
+   [
+    "ext/xml/xml.c",
+    135,
+    135
+   ],
+   [
+    "ext/xml/xml.c",
+    639,
+    639
+   ],
+   [
+    "ext/xml/xml.c",
+    710,
+    710
+   ],
+   [
+    "ext/xml/xml.c",
+    1420,
+    1428
+   ]
+  ]
+ },
+ {
+  "id": "BH-056",
+  "sev": "High",
+  "title": "xsl_ext_function_php underflow alloc",
+  "files": [
+   [
+    "ext/xsl/xsltprocessor.c",
+    144,
+    147
+   ],
+   [
+    "ext/xsl/xsltprocessor.c",
+    230,
+    235
+   ],
+   [
+    "ext/xsl/xsltprocessor.c",
+    281,
+    286
+   ],
+   [
+    "Zend/zend_API.h",
+    49,
+    49
+   ]
+  ]
+ },
+ {
+  "id": "BH-057",
+  "sev": "High",
+  "title": "XSLTProcessor importStylesheet NULL deref",
+  "files": [
+   [
+    "ext/xsl/xsltprocessor.c",
+    358,
+    367
+   ]
+  ]
+ },
+ {
+  "id": "BH-058",
+  "sev": "High",
+  "title": "php_xsl_apply_stylesheet re-entrant UAF",
+  "files": [
+   [
+    "ext/xsl/xsltprocessor.c",
+    172,
+    172
+   ],
+   [
+    "ext/xsl/xsltprocessor.c",
+    197,
+    197
+   ],
+   [
+    "ext/xsl/xsltprocessor.c",
+    372,
+    379
+   ],
+   [
+    "ext/xsl/xsltprocessor.c",
+    435,
+    516
+   ]
+  ]
+ },
+ {
+  "id": "BH-059",
+  "sev": "High",
+  "title": "transformToDoc unchecked object_init_ex",
+  "files": [
+   [
+    "ext/xsl/xsltprocessor.c",
+    553,
+    577
+   ],
+   [
+    "Zend/zend_API.c",
+    1671,
+    1692
+   ]
+  ]
+ },
+ {
+  "id": "BH-060",
+  "sev": "High",
+  "title": "soap unchecked object_init_ex",
+  "files": [
+   [
+    "ext/soap/php_encoding.c",
+    1160,
+    1164
+   ],
+   [
+    "ext/soap/php_encoding.c",
+    1384,
+    1388
+   ],
+   [
+    "ext/soap/php_encoding.c",
+    1411,
+    1411
+   ],
+   [
+    "ext/soap/php_encoding.c",
+    1420,
+    1420
+   ],
+   [
+    "ext/soap/php_encoding.c",
+    1465,
+    1465
+   ],
+   [
+    "ext/soap/php_encoding.c",
+    1476,
+    1476
+   ],
+   [
+    "ext/soap/php_encoding.c",
+    1536,
+    1536
+   ],
+   [
+    "ext/soap/soap.c",
+    922,
+    941
+   ],
+   [
+    "ext/soap/soap.c",
+    1332,
+    1366
+   ]
+  ]
+ },
+ {
+  "id": "BH-061",
+  "sev": "High",
+  "title": "libxml callable type confusion / entity loader UAF",
+  "files": [
+   [
+    "ext/libxml/libxml.c",
+    620,
+    644
+   ],
+   [
+    "ext/libxml/libxml.c",
+    1064,
+    1085
+   ]
+  ]
+ },
+ {
+  "id": "BH-062",
+  "sev": "High",
+  "title": "dom_sanity_check_node_list_for_insertion NULL deref",
+  "files": [
+   [
+    "ext/dom/parentnode.c",
+    253,
+    269
+   ]
+  ]
+ },
+ {
+  "id": "BH-063",
+  "sev": "High",
+  "title": "sxe_property_get_adr NULL deref",
+  "files": [
+   [
+    "ext/simplexml/simplexml.c",
+    59,
+    65
+   ],
+   [
+    "ext/simplexml/simplexml.c",
+    628,
+    660
+   ]
+  ]
+ },
+ {
+  "id": "BH-064",
+  "sev": "High",
+  "title": "xmlwriter re-entrant double-free",
+  "files": [
+   [
+    "ext/xmlwriter/php_xmlwriter.c",
+    50,
+    64
+   ],
+   [
+    "ext/xmlwriter/php_xmlwriter.c",
+    916,
+    924
+   ],
+   [
+    "ext/xmlwriter/php_xmlwriter.c",
+    965,
+    972
+   ]
+  ]
+ },
+ {
+  "id": "BH-065",
+  "sev": "Medium",
+  "title": "xmlreader subclass bypass / libxml leaks",
+  "files": [
+   [
+    "ext/xmlreader/php_xmlreader.c",
+    187,
+    202
+   ],
+   [
+    "ext/xmlreader/php_xmlreader.c",
+    491,
+    511
+   ],
+   [
+    "ext/xmlreader/php_xmlreader.c",
+    1070,
+    1102
+   ]
+  ]
+ },
+ {
+  "id": "BH-066",
+  "sev": "Critical",
+  "title": "zlib dictionary interior efree/double-free",
+  "files": [
+   [
+    "ext/zlib/zlib.c",
+    804,
+    840
+   ],
+   [
+    "ext/zlib/zlib.c",
+    888,
+    888
+   ],
+   [
+    "ext/zlib/zlib.c",
+    1137,
+    1137
+   ]
+  ]
+ },
+ {
+  "id": "BH-067",
+  "sev": "Critical",
+  "title": "zlib filter uninitialized persistent flag",
+  "files": [
+   [
+    "ext/zlib/zlib_filter.c",
+    37,
+    45
+   ],
+   [
+    "ext/zlib/zlib_filter.c",
+    146,
+    157
+   ],
+   [
+    "ext/zlib/zlib_filter.c",
+    262,
+    271
+   ],
+   [
+    "ext/zlib/zlib_filter.c",
+    283,
+    316
+   ]
+  ]
+ },
+ {
+  "id": "BH-068",
+  "sev": "Critical",
+  "title": "ZipArchive addGlob/addPattern uninitialized zip_options",
+  "files": [
+   [
+    "ext/zip/php_zip.c",
+    1710,
+    1820
+   ]
+  ]
+ },
+ {
+  "id": "BH-069",
+  "sev": "High",
+  "title": "phar_wrapper_rename NULL deref / metadata UAF",
+  "files": [
+   [
+    "ext/phar/stream.c",
+    831,
+    865
+   ],
+   [
+    "ext/phar/stream.c",
+    949,
+    949
+   ],
+   [
+    "ext/phar/phar.c",
+    2480,
+    2489
+   ],
+   [
+    "ext/phar/phar.c",
+    2717,
+    2717
+   ],
+   [
+    "ext/phar/phar.c",
+    2771,
+    2771
+   ],
+   [
+    "ext/phar/tar.c",
+    726,
+    728
+   ],
+   [
+    "ext/phar/zip.c",
+    833,
+    835
+   ]
+  ]
+ },
+ {
+  "id": "BH-070",
+  "sev": "High",
+  "title": "phar cyclic TAR symlink unbounded recursion",
+  "files": [
+   [
+    "ext/phar/util.c",
+    41,
+    82
+   ],
+   [
+    "ext/phar/tar.c",
+    514,
+    516
+   ],
+   [
+    "ext/phar/stream.c",
+    368,
+    373
+   ],
+   [
+    "ext/phar/stream.c",
+    400,
+    407
+   ]
+  ]
+ },
+ {
+  "id": "BH-071",
+  "sev": "High",
+  "title": "exif thumbnail uninitialized disclosure",
+  "files": [
+   [
+    "ext/exif/exif.c",
+    266,
+    281
+   ],
+   [
+    "ext/exif/exif.c",
+    2235,
+    2267
+   ],
+   [
+    "ext/exif/exif.c",
+    2804,
+    2875
+   ],
+   [
+    "ext/exif/exif.c",
+    2901,
+    2957
+   ],
+   [
+    "ext/exif/exif.c",
+    3993,
+    4007
+   ]
+  ]
+ },
+ {
+  "id": "BH-072",
+  "sev": "High",
+  "title": "filter IPv6 SSRF bypass",
+  "files": [
+   [
+    "ext/filter/logical_filters.c",
+    616,
+    619
+   ],
+   [
+    "ext/filter/logical_filters.c",
+    770,
+    864
+   ],
+   [
+    "ext/filter/logical_filters.c",
+    936,
+    970
+   ],
+   [
+    "ext/filter/sanitizing_filters.c",
+    69,
+    81
+   ]
+  ]
+ },
+ {
+  "id": "BH-073",
+  "sev": "Medium",
+  "title": "bzdecompress 32-bit overflow / multiplier",
+  "files": [
+   [
+    "ext/bz2/bz2.c",
+    78,
+    78
+   ],
+   [
+    "ext/bz2/bz2.c",
+    108,
+    108
+   ],
+   [
+    "ext/bz2/bz2.c",
+    382,
+    405
+   ],
+   [
+    "ext/bz2/bz2.c",
+    524,
+    552
+   ]
+  ]
+ },
+ {
+  "id": "BH-074",
+  "sev": "Critical",
+  "title": "mb_ereg_replace_callback cached regex UAF",
+  "files": [
+   [
+    "ext/mbstring/php_mbregex.c",
+    68,
+    70
+   ],
+   [
+    "ext/mbstring/php_mbregex.c",
+    455,
+    485
+   ],
+   [
+    "ext/mbstring/php_mbregex.c",
+    1048,
+    1135
+   ]
+  ]
+ },
+ {
+  "id": "BH-075",
+  "sev": "Critical",
+  "title": "intl converter resurrection UAF",
+  "files": [
+   [
+    "ext/intl/converter/converter.c",
+    206,
+    250
+   ],
+   [
+    "ext/intl/converter/converter.c",
+    289,
+    332
+   ],
+   [
+    "ext/intl/converter/converter.c",
+    366,
+    398
+   ],
+   [
+    "ext/intl/converter/converter.c",
+    620,
+    674
+   ],
+   [
+    "ext/intl/converter/converter.c",
+    702,
+    724
+   ],
+   [
+    "ext/intl/converter/converter.c",
+    890,
+    903
+   ],
+   [
+    "ext/intl/converter/converter.c",
+    929,
+    969
+   ]
+  ]
+ },
+ {
+  "id": "BH-076",
+  "sev": "Critical",
+  "title": "Spoofchecker errorCode UAF",
+  "files": [
+   [
+    "ext/intl/spoofchecker/spoofchecker_main.c",
+    23,
+    50
+   ],
+   [
+    "ext/intl/spoofchecker/spoofchecker_main.c",
+    54,
+    84
+   ]
+  ]
+ },
+ {
+  "id": "BH-077",
+  "sev": "Critical",
+  "title": "json_encode in-place mutation UAF",
+  "files": [
+   [
+    "ext/json/json_encoder.c",
+    122,
+    186
+   ],
+   [
+    "ext/json/json_encoder.c",
+    200,
+    288
+   ],
+   [
+    "ext/json/json_encoder.c",
+    531,
+    590
+   ],
+   [
+    "ext/json/json_encoder.c",
+    638,
+    656
+   ]
+  ]
+ },
+ {
+  "id": "BH-078",
+  "sev": "Critical",
+  "title": "preg_replace_callback_array UAF/leak",
+  "files": [
+   [
+    "ext/pcre/php_pcre.c",
+    1839,
+    2048
+   ],
+   [
+    "ext/pcre/php_pcre.c",
+    2393,
+    2480
+   ]
+  ]
+ },
+ {
+  "id": "BH-079",
+  "sev": "High",
+  "title": "iconv stream filter bucket UAF",
+  "files": [
+   [
+    "ext/iconv/iconv.c",
+    2521,
+    2564
+   ]
+  ]
+ },
+ {
+  "id": "BH-080",
+  "sev": "High",
+  "title": "mb_regex_substitute unclamped lengths OOB",
+  "files": [
+   [
+    "ext/mbstring/php_mbregex.c",
+    706,
+    833
+   ],
+   [
+    "ext/mbstring/php_mbregex.c",
+    1032,
+    1034
+   ],
+   [
+    "ext/mbstring/mbstring.c",
+    4742,
+    4756
+   ]
+  ]
+ },
+ {
+  "id": "BH-081",
+  "sev": "High",
+  "title": "_php_iconv_strpos uninit read underflow",
+  "files": [
+   [
+    "ext/iconv/iconv.c",
+    459,
+    464
+   ],
+   [
+    "ext/iconv/iconv.c",
+    540,
+    542
+   ],
+   [
+    "ext/iconv/iconv.c",
+    754,
+    900
+   ],
+   [
+    "ext/iconv/iconv.c",
+    1903,
+    1910
+   ],
+   [
+    "ext/iconv/iconv.c",
+    1939,
+    1952
+   ]
+  ]
+ },
+ {
+  "id": "BH-082",
+  "sev": "Medium",
+  "title": "DatePeriod NULL derefs",
+  "files": [
+   [
+    "ext/date/php_date.c",
+    1453,
+    1464
+   ],
+   [
+    "ext/date/php_date.c",
+    1490,
+    1506
+   ],
+   [
+    "ext/date/php_date.c",
+    1581,
+    1601
+   ],
+   [
+    "ext/date/php_date.c",
+    4736,
+    4799
+   ],
+   [
+    "ext/date/php_date.c",
+    4846,
+    4870
+   ],
+   [
+    "ext/date/php_date.c",
+    5304,
+    5424
+   ]
+  ]
+ },
+ {
+  "id": "BH-083",
+  "sev": "Medium",
+  "title": "resourcebundle uninit stack disclosure",
+  "files": [
+   [
+    "ext/intl/resourcebundle/resourcebundle_class.c",
+    210,
+    221
+   ],
+   [
+    "ext/intl/resourcebundle/resourcebundle_class.c",
+    255,
+    268
+   ],
+   [
+    "Zend/zend_vm_def.h",
+    9156,
+    9156
+   ],
+   [
+    "Zend/zend_vm_def.h",
+    9169,
+    9172
+   ]
+  ]
+ },
+ {
+  "id": "BH-084",
+  "sev": "Low",
+  "title": "iconv_mime_decode_headers duplicate headers",
+  "files": [
+   [
+    "ext/iconv/iconv.c",
+    2165,
+    2182
+   ]
+  ]
+ },
+ {
+  "id": "BH-085",
+  "sev": "Critical",
+  "title": "DBA flatfile record length wrap-around overflow",
+  "files": [
+   [
+    "ext/dba/libflatfile/flatfile.c",
+    115,
+    123
+   ],
+   [
+    "ext/dba/libflatfile/flatfile.c",
+    138,
+    144
+   ],
+   [
+    "ext/dba/libflatfile/flatfile.c",
+    165,
+    186
+   ],
+   [
+    "ext/dba/libflatfile/flatfile.c",
+    205,
+    226
+   ],
+   [
+    "ext/dba/libflatfile/flatfile.c",
+    247,
+    262
+   ]
+  ]
+ },
+ {
+  "id": "BH-086",
+  "sev": "Critical",
+  "title": "pdo_odbc unchecked memcpy overflow",
+  "files": [
+   [
+    "ext/pdo_odbc/php_pdo_odbc_int.h",
+    156,
+    162
+   ],
+   [
+    "ext/pdo_odbc/odbc_stmt.c",
+    305,
+    310
+   ],
+   [
+    "ext/pdo_odbc/odbc_stmt.c",
+    374,
+    383
+   ],
+   [
+    "ext/pdo_odbc/odbc_stmt.c",
+    458,
+    485
+   ],
+   [
+    "ext/pdo_odbc/odbc_stmt.c",
+    503,
+    504
+   ]
+  ]
+ },
+ {
+  "id": "BH-087",
+  "sev": "Critical",
+  "title": "pdo_parse_params bound_params UAF",
+  "files": [
+   [
+    "ext/pdo/pdo_sql_parser.re",
+    147,
+    147
+   ],
+   [
+    "ext/pdo/pdo_sql_parser.re",
+    200,
+    220
+   ],
+   [
+    "ext/pdo/pdo_sql_parser.re",
+    235,
+    245
+   ],
+   [
+    "ext/pdo/pdo_sql_parser.re",
+    280,
+    295
+   ],
+   [
+    "ext/pdo/pdo_sql_parser.re",
+    306,
+    306
+   ],
+   [
+    "ext/pdo/pdo_stmt.c",
+    406,
+    410
+   ],
+   [
+    "ext/pdo/pdo_stmt.c",
+    449,
+    449
+   ]
+  ]
+ },
+ {
+  "id": "BH-088",
+  "sev": "Critical",
+  "title": "PDOStatement fetchAll ctor_args UAF",
+  "files": [
+   [
+    "ext/pdo/pdo_stmt.c",
+    691,
+    714
+   ],
+   [
+    "ext/pdo/pdo_stmt.c",
+    1054,
+    1072
+   ],
+   [
+    "ext/pdo/pdo_stmt.c",
+    1271,
+    1398
+   ],
+   [
+    "ext/pdo/pdo_stmt.c",
+    1866,
+    1866
+   ]
+  ]
+ },
+ {
+  "id": "BH-089",
+  "sev": "Critical",
+  "title": "mysqlnd packet bounds validation missing",
+  "files": [
+   [
+    "ext/mysqlnd/mysqlnd_wireprotocol.c",
+    1107,
+    1112
+   ],
+   [
+    "ext/mysqlnd/mysqlnd_wireprotocol.c",
+    1145,
+    1275
+   ],
+   [
+    "ext/mysqlnd/mysqlnd_wireprotocol.c",
+    1433,
+    1518
+   ],
+   [
+    "ext/mysqlnd/mysqlnd_ps_codec.c",
+    55,
+    120
+   ],
+   [
+    "ext/mysqlnd/mysqlnd_ps_codec.c",
+    210,
+    353
+   ]
+  ]
+ },
+ {
+  "id": "BH-090",
+  "sev": "Critical",
+  "title": "mysqlnd/mysqli re-entrant __toString/__destruct UAF",
+  "files": [
+   [
+    "ext/mysqlnd/mysqlnd_ps_codec.c",
+    638,
+    718
+   ],
+   [
+    "ext/mysqlnd/mysqlnd_ps_codec.c",
+    851,
+    866
+   ],
+   [
+    "ext/mysqlnd/mysqlnd_ps.c",
+    874,
+    888
+   ],
+   [
+    "ext/mysqlnd/mysqlnd_ps.c",
+    1849,
+    1868
+   ],
+   [
+    "ext/mysqli/mysqli_api.c",
+    282,
+    299
+   ],
+   [
+    "ext/mysqli/mysqli_api.c",
+    1239,
+    1260
+   ],
+   [
+    "ext/mysqli/mysqli_api.c",
+    1480,
+    1495
+   ]
+  ]
+ },
+ {
+  "id": "BH-091",
+  "sev": "Critical",
+  "title": "sqlite3 bind params UAF",
+  "files": [
+   [
+    "ext/sqlite3/sqlite3.c",
+    1405,
+    1467
+   ],
+   [
+    "ext/sqlite3/sqlite3.c",
+    1490,
+    1593
+   ],
+   [
+    "ext/sqlite3/sqlite3.c",
+    1614,
+    1625
+   ],
+   [
+    "ext/sqlite3/sqlite3.c",
+    1772,
+    1784
+   ],
+   [
+    "ext/sqlite3/sqlite3.c",
+    2150,
+    2159
+   ]
+  ]
+ },
+ {
+  "id": "BH-092",
+  "sev": "Critical",
+  "title": "pdo_sqlite aggregate double-free on exception",
+  "files": [
+   [
+    "ext/pdo_sqlite/sqlite_driver.c",
+    354,
+    365
+   ],
+   [
+    "ext/pdo_sqlite/sqlite_driver.c",
+    436,
+    451
+   ]
+  ]
+ },
+ {
+  "id": "BH-093",
+  "sev": "High",
+  "title": "mysqlnd 0xFE auth-switch underflow",
+  "files": [
+   [
+    "ext/mysqlnd/mysqlnd_wireprotocol.c",
+    690,
+    704
+   ],
+   [
+    "ext/mysqlnd/mysqlnd_wireprotocol.c",
+    1913,
+    1924
+   ],
+   [
+    "ext/mysqlnd/mysqlnd_wireprotocol.c",
+    2071,
+    2107
+   ]
+  ]
+ },
+ {
+  "id": "BH-094",
+  "sev": "High",
+  "title": "mysqli/pgsql unchecked object_init_ex",
+  "files": [
+   [
+    "ext/mysqli/mysqli.c",
+    762,
+    804
+   ],
+   [
+    "ext/pgsql/pgsql.c",
+    1728,
+    1730
+   ],
+   [
+    "ext/pgsql/pgsql.c",
+    1763,
+    1883
+   ],
+   [
+    "ext/pgsql/pgsql.c",
+    2060,
+    2063
+   ]
+  ]
+ },
+ {
+  "id": "BH-095",
+  "sev": "Critical",
+  "title": "openssl negative tag_len overflow",
+  "files": [
+   [
+    "ext/openssl/openssl.c",
+    7426,
+    7426
+   ],
+   [
+    "ext/openssl/openssl.c",
+    7461,
+    7473
+   ],
+   [
+    "Zend/zend_string.h",
+    88,
+    90
+   ],
+   [
+    "Zend/zend_string.h",
+    150,
+    158
+   ]
+  ]
+ },
+ {
+  "id": "BH-096",
+  "sev": "High",
+  "title": "openssl wildcard hostname underflow",
+  "files": [
+   [
+    "ext/openssl/xp_ssl.c",
+    418,
+    450
+   ]
+  ]
+ },
+ {
+  "id": "BH-097",
+  "sev": "High",
+  "title": "sockets SCM_RIGHTS off-by-one / fd 0",
+  "files": [
+   [
+    "ext/sockets/conversions.c",
+    218,
+    226
+   ],
+   [
+    "ext/sockets/conversions.c",
+    897,
+    945
+   ],
+   [
+    "ext/sockets/conversions.c",
+    1368,
+    1408
+   ]
+  ]
+ },
+ {
+  "id": "BH-098",
+  "sev": "High",
+  "title": "sockets sin6_addr type confusion",
+  "files": [
+   [
+    "ext/sockets/conversions.c",
+    593,
+    610
+   ]
+  ]
+ },
+ {
+  "id": "BH-099",
+  "sev": "High",
+  "title": "xxh3 clone UAF",
+  "files": [
+   [
+    "ext/hash/hash_xxhash.c",
+    189,
+    190
+   ],
+   [
+    "ext/hash/hash_xxhash.c",
+    213,
+    217
+   ],
+   [
+    "ext/hash/hash_xxhash.c",
+    263,
+    267
+   ],
+   [
+    "ext/hash/php_hash_xxhash.h",
+    47,
+    59
+   ],
+   [
+    "ext/hash/hash.c",
+    385,
+    385
+   ],
+   [
+    "ext/hash/hash.c",
+    648,
+    648
+   ]
+  ]
+ },
+ {
+  "id": "BH-100",
+  "sev": "High",
+  "title": "hash_pbkdf2 float precision overflow",
+  "files": [
+   [
+    "ext/hash/hash.c",
+    1047,
+    1054
+   ],
+   [
+    "ext/hash/hash.c",
+    1101,
+    1108
+   ]
+  ]
+ },
+ {
+  "id": "BH-101",
+  "sev": "High",
+  "title": "ldap rebind VM stack UAF",
+  "files": [
+   [
+    "ext/ldap/ldap.c",
+    3606,
+    3638
+   ],
+   [
+    "ext/ldap/ldap.c",
+    3642,
+    3675
+   ]
+  ]
+ },
+ {
+  "id": "BH-102",
+  "sev": "High",
+  "title": "ldap do_modify uninit efree",
+  "files": [
+   [
+    "ext/ldap/ldap.c",
+    512,
+    512
+   ],
+   [
+    "ext/ldap/ldap.c",
+    554,
+    599
+   ],
+   [
+    "ext/ldap/ldap.c",
+    710,
+    718
+   ],
+   [
+    "ext/ldap/ldap.c",
+    2128,
+    2205
+   ],
+   [
+    "ext/ldap/ldap.c",
+    2263,
+    2271
+   ]
+  ]
+ },
+ {
+  "id": "BH-103",
+  "sev": "High",
+  "title": "snmp mixed allocator corruption",
+  "files": [
+   [
+    "ext/snmp/snmp.c",
+    157,
+    157
+   ],
+   [
+    "ext/snmp/snmp.c",
+    1044,
+    1063
+   ],
+   [
+    "ext/snmp/snmp.c",
+    1108,
+    1111
+   ],
+   [
+    "ext/snmp/snmp.c",
+    1618,
+    1635
+   ]
+  ]
+ },
+ {
+  "id": "BH-104",
+  "sev": "High",
+  "title": "ftp non-blocking stream UAF",
+  "files": [
+   [
+    "ext/ftp/php_ftp.c",
+    622,
+    666
+   ],
+   [
+    "ext/ftp/php_ftp.c",
+    824,
+    856
+   ],
+   [
+    "ext/ftp/php_ftp.c",
+    907,
+    955
+   ],
+   [
+    "ext/ftp/ftp.c",
+    2109,
+    2109
+   ],
+   [
+    "ext/ftp/ftp.c",
+    2149,
+    2166
+   ],
+   [
+    "ext/ftp/ftp.c",
+    2223,
+    2223
+   ],
+   [
+    "ext/ftp/ftp.c",
+    2251,
+    2251
+   ]
+  ]
+ },
+ {
+  "id": "BH-105",
+  "sev": "High",
+  "title": "ftp_readline off-by-one overflow",
+  "files": [
+   [
+    "ext/ftp/ftp.c",
+    1278,
+    1326
+   ],
+   [
+    "ext/ftp/ftp.h",
+    60,
+    61
+   ]
+  ]
+ },
+ {
+  "id": "BH-106",
+  "sev": "High",
+  "title": "curl multi double-free push callback",
+  "files": [
+   [
+    "ext/curl/multi.c",
+    412,
+    428
+   ],
+   [
+    "ext/curl/multi.c",
+    466,
+    473
+   ],
+   [
+    "ext/curl/interface.c",
+    2155,
+    2317
+   ],
+   [
+    "ext/curl/interface.c",
+    2951,
+    2969
+   ]
+  ]
+ },
+ {
+  "id": "BH-107",
+  "sev": "High",
+  "title": "curl READFUNCTION uninit buffer disclosure",
+  "files": [
+   [
+    "ext/curl/interface.c",
+    810,
+    819
+   ]
+  ]
+ },
+ {
+  "id": "BH-108",
+  "sev": "High",
+  "title": "session_set_save_handler re-entrant double-free",
+  "files": [
+   [
+    "ext/session/session.c",
+    1963,
+    1987
+   ],
+   [
+    "ext/session/mod_user.c",
+    26,
+    46
+   ],
+   [
+    "ext/session/mod_user.c",
+    182,
+    201
+   ]
+  ]
+ },
+ {
+  "id": "BH-109",
+  "sev": "High",
+  "title": "Randomizer unserialize NULL deref / status leak",
+  "files": [
+   [
+    "ext/random/randomizer.c",
+    29,
+    58
+   ],
+   [
+    "ext/random/randomizer.c",
+    92,
+    258
+   ],
+   [
+    "ext/random/randomizer.c",
+    277,
+    312
+   ],
+   [
+    "ext/random/random.c",
+    223,
+    233
+   ],
+   [
+    "ext/random/engine_xoshiro256starstar.c",
+    129,
+    150
+   ]
+  ]
+ },
+ {
+  "id": "BH-110",
+  "sev": "Medium",
+  "title": "sodium missing RETURN_THROWS",
+  "files": [
+   [
+    "ext/sodium/libsodium.c",
+    1474,
+    1476
+   ],
+   [
+    "ext/sodium/libsodium.c",
+    1533,
+    1538
+   ],
+   [
+    "ext/sodium/libsodium.c",
+    1641,
+    1646
+   ],
+   [
+    "ext/sodium/libsodium.c",
+    1686,
+    1691
+   ]
+  ]
+ },
+ {
+  "id": "BH-111",
+  "sev": "Medium",
+  "title": "opcache blacklist backtrack not reset",
+  "files": [
+   [
+    "ext/opcache/zend_accelerator_blacklist.c",
+    95,
+    205
+   ]
+  ]
+ },
+ {
+  "id": "BH-112",
+  "sev": "Critical",
+  "title": "gmp compound op failure UAF",
+  "files": [
+   [
+    "ext/gmp/gmp.c",
+    337,
+    356
+   ],
+   [
+    "ext/gmp/gmp.c",
+    383,
+    395
+   ],
+   [
+    "ext/gmp/gmp.c",
+    411,
+    428
+   ]
+  ]
+ },
+ {
+  "id": "BH-113",
+  "sev": "Critical",
+  "title": "imageloadfont partial read overflow",
+  "files": [
+   [
+    "ext/gd/gd.c",
+    537,
+    537
+   ],
+   [
+    "ext/gd/gd.c",
+    563,
+    567
+   ],
+   [
+    "ext/gd/libgd/gd.h",
+    273,
+    285
+   ]
+  ]
+ },
+ {
+  "id": "BH-114",
+  "sev": "High",
+  "title": "gd GIF LZW stack OOB/uninit",
+  "files": [
+   [
+    "ext/gd/libgd/gd_gif_in.c",
+    89,
+    89
+   ],
+   [
+    "ext/gd/libgd/gd_gif_in.c",
+    437,
+    453
+   ],
+   [
+    "ext/gd/libgd/gd_gif_in.c",
+    485,
+    498
+   ],
+   [
+    "ext/gd/libgd/gd_gif_in.c",
+    511,
+    521
+   ],
+   [
+    "ext/gd/libgd/gd_gif_in.c",
+    563,
+    563
+   ],
+   [
+    "ext/gd/libgd/gd_gif_in.c",
+    573,
+    573
+   ]
+  ]
+ },
+ {
+  "id": "BH-115",
+  "sev": "High",
+  "title": "imap_mail_compose overflow / imap_headers underflow",
+  "files": [
+   [
+    "ext/imap/php_imap.c",
+    67,
+    67
+   ],
+   [
+    "ext/imap/php_imap.c",
+    1113,
+    1113
+   ],
+   [
+    "ext/imap/php_imap.c",
+    1138,
+    1149
+   ],
+   [
+    "ext/imap/php_imap.c",
+    2913,
+    2915
+   ],
+   [
+    "ext/imap/php_imap.c",
+    3260,
+    3262
+   ],
+   [
+    "ext/imap/php_imap.c",
+    3319,
+    3323
+   ]
+  ]
+ },
+ {
+  "id": "BH-116",
+  "sev": "High",
+  "title": "readline signed char OOB",
+  "files": [
+   [
+    "ext/readline/readline.c",
+    148,
+    148
+   ],
+   [
+    "ext/readline/readline.c",
+    168,
+    171
+   ],
+   [
+    "ext/readline/readline.c",
+    227,
+    236
+   ],
+   [
+    "Zend/zend_string.h",
+    85,
+    85
+   ]
+  ]
+ },
+ {
+  "id": "BH-117",
+  "sev": "High",
+  "title": "msg_send NULL deref on serialize failure",
+  "files": [
+   [
+    "ext/sysvmsg/sysvmsg.c",
+    366,
+    379
+   ]
+  ]
+ },
+ {
+  "id": "BH-118",
+  "sev": "High",
+  "title": "sysvshm re-entrant shm_detach",
+  "files": [
+   [
+    "ext/sysvshm/sysvshm.c",
+    226,
+    229
+   ],
+   [
+    "ext/sysvshm/sysvshm.c",
+    249,
+    265
+   ],
+   [
+    "ext/sysvshm/sysvshm.c",
+    289,
+    311
+   ]
+  ]
+ },
+ {
+  "id": "BH-119",
+  "sev": "High",
+  "title": "tidy buf.size underflow",
+  "files": [
+   [
+    "ext/tidy/tidy.c",
+    517,
+    527
+   ],
+   [
+    "ext/tidy/tidy.c",
+    1028,
+    1037
+   ]
+  ]
+ },
+ {
+  "id": "BH-120",
+  "sev": "Medium",
+  "title": "bcmath scale INT_MAX overflows",
+  "files": [
+   [
+    "ext/bcmath/bcmath.c",
+    170,
+    170
+   ],
+   [
+    "ext/bcmath/libbcmath/src/init.c",
+    42,
+    58
+   ],
+   [
+    "ext/bcmath/libbcmath/src/num2str.c",
+    43,
+    58
+   ],
+   [
+    "ext/bcmath/libbcmath/src/divmod.c",
+    47,
+    58
+   ],
+   [
+    "ext/bcmath/libbcmath/src/sqrt.c",
+    110,
+    116
+   ]
+  ]
+ },
+ {
+  "id": "BH-121",
+  "sev": "Medium",
+  "title": "posix ERANGE retry NULL deref",
+  "files": [
+   [
+    "ext/posix/posix.c",
+    734,
+    746
+   ],
+   [
+    "ext/posix/posix.c",
+    792,
+    803
+   ],
+   [
+    "ext/posix/posix.c",
+    864,
+    876
+   ],
+   [
+    "ext/posix/posix.c",
+    920,
+    931
+   ]
+  ]
+ }
+]
