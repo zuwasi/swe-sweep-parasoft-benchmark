@@ -1,0 +1,18 @@
+You are doing an independent quality review of the MicroPython source tree. This is a calibration exercise; treat it as a professional code review.
+
+Setup: the repository is already checked out at your current working directory, at exactly commit 9b486340da22931cde82872f79e1c34db959548b (June 2022, shortly before v1.19.1). Work only on that tree, focusing on the C code under py/, ports/unix/, and shared/. Do not read or reuse any other checkout or prior analysis.
+
+Task: find as many real defects as you can. Defects mean memory-safety issues (out-of-bounds accesses, use-after-free, uninitialized reads, leaks, data races), incorrect results, logic errors, integer overflow with real consequence, crashes, and API-contract violations. Prioritize by how much of the codebase you can cover.
+
+Rules:
+- You may build the unix port (a sanitizer or debug build is useful) and run Python scripts to confirm findings. Confirmed findings with a repro are stronger than argued ones.
+- Do not search the internet for information about known defects or published advisories in MicroPython. All findings must come from your own reading of the code and your own runtime experiments. Consulting language/library documentation is fine.
+- You have roughly one hour of working budget. Spend it widely rather than perfecting one subsystem; breadth beats depth for this engagement.
+- Use your default tooling and sub-agents as you see fit.
+- Harness note: in this headless environment, background subagents sometimes never report back and the main agent hangs forever waiting for them. Work in your main thread; do not wait on background subagents. If you started any and they have not reported within a few minutes, proceed without their results and say so in the report. Also write BUG-HUNT-REPORT.md incrementally: create it with the summary table early and append each finding's section as you go, so partial progress survives an interruption.
+
+Deliverable: write a file BUG-HUNT-REPORT.md at the root of your workspace containing:
+1. A summary table: one row per finding with an ID, severity (Critical/High/Medium/Low), subsystem, one-line title, and status (CONFIRMED with repro or SUSPECTED argued from code).
+2. One section per finding with file path, line numbers, the defect mechanism, and the repro or argument.
+
+Include the full summary table in your final answer. Do not push anything anywhere and do not commit.

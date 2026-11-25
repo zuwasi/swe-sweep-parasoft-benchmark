@@ -1,0 +1,324 @@
+[
+ {
+  "finding": "BUG-001",
+  "sev": "Critical",
+  "title": "off-by-one CBC_ASSIGN_SET_IDENT to CBC_MOV_IDENT optimization OOB",
+  "bugs": {
+   "jerryscript-072dcea299cd": {
+    "region": [
+     1421,
+     1422,
+     1423,
+     1424,
+     1425,
+     1426,
+     1427
+    ],
+    "strict": [
+     1424
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-003",
+  "sev": "Critical",
+  "title": "CBC_PUSH_THIS_LITERAL type confusion in assignment parsing",
+  "bugs": {
+   "jerryscript-32f5320c7e4d": {
+    "region": [
+     2180,
+     2181,
+     2182,
+     2183,
+     2184,
+     2185,
+     2186,
+     2280,
+     2281,
+     2282,
+     2283,
+     2284,
+     2285
+    ],
+    "strict": [
+     2182,
+     2183,
+     2184,
+     2185,
+     2282,
+     2283,
+     2284
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-018",
+  "sev": "Critical",
+  "title": "Array.prototype.slice fast-path OOB/type-confusion/NULL deref via re-entrant mutation",
+  "bugs": {
+   "jerryscript-662bbee88446": {
+    "region": [
+     835,
+     837,
+     843
+    ],
+    "strict": []
+   }
+  }
+ },
+ {
+  "finding": "BUG-021",
+  "sev": "Critical",
+  "title": "Array.prototype.pop fast-path uninitialized heap via prototype accessor",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-030",
+  "sev": "High",
+  "title": "orphaned SCAN_STACK_USE_ASYNC frame in scanner_scan_bracket",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-034",
+  "sev": "High",
+  "title": "spread arg in destructuring enters SCAN_MODE_BINDING",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-053",
+  "sev": "High",
+  "title": "fast array DefineOwnProperty/Put bypass invariants",
+  "bugs": {
+   "jerryscript-1eb47ad8b475": {
+    "region": [
+     1118,
+     1119,
+     1120
+    ],
+    "strict": []
+   }
+  }
+ },
+ {
+  "finding": "BUG-054",
+  "sev": "High",
+  "title": "index truncation in ecma_fast_array_convert_to_normal 16-bit mode",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-057",
+  "sev": "High",
+  "title": "OOB month_names_p[INT32_MIN] in Date toString",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-058",
+  "sev": "High",
+  "title": "JSON.stringify NULL deref unboxing boxed String throws",
+  "bugs": {
+   "jerryscript-5144355d084f": {
+    "region": [
+     1174,
+     1175,
+     1176,
+     1177,
+     1178,
+     1179,
+     1180,
+     1181,
+     1182,
+     1183,
+     1184,
+     1185,
+     1186,
+     1187,
+     1188,
+     1189,
+     1190,
+     1191,
+     1192,
+     1193,
+     1194,
+     1195,
+     1196
+    ],
+    "strict": [
+     1177,
+     1183,
+     1184,
+     1185,
+     1186,
+     1187,
+     1189,
+     1190,
+     1191,
+     1192,
+     1193,
+     1194,
+     1195
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-059",
+  "sev": "High",
+  "title": "unbounded recursion in JSON.parse/stringify",
+  "bugs": {
+   "jerryscript-042a8ceedc15": {
+    "region": [
+     896,
+     897,
+     898,
+     899,
+     900,
+     901,
+     902,
+     980,
+     981,
+     982,
+     983,
+     984,
+     985,
+     986
+    ],
+    "strict": [
+     899,
+     983
+    ]
+   },
+   "jerryscript-5144355d084f": {
+    "region": [
+     1163,
+     1164,
+     1165,
+     1166,
+     1167,
+     1168,
+     1169,
+     1170,
+     1171,
+     1172,
+     1173,
+     1174,
+     1175,
+     1176,
+     1177,
+     1178,
+     1179,
+     1180,
+     1181,
+     1182,
+     1183,
+     1184,
+     1185,
+     1186,
+     1187,
+     1188,
+     1189,
+     1190,
+     1191,
+     1192,
+     1193,
+     1194,
+     1195,
+     1196,
+     1197,
+     1198
+    ],
+    "strict": [
+     1166,
+     1167,
+     1171,
+     1177,
+     1183,
+     1184,
+     1185,
+     1186,
+     1187,
+     1189,
+     1190,
+     1191,
+     1192,
+     1193,
+     1194,
+     1195
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-068",
+  "sev": "Medium",
+  "title": "jerry_define_own_property checks is_enumerable instead of is_configurable",
+  "bugs": {
+   "jerryscript-df8c37f98e76": {
+    "region": [
+     2469,
+     2470,
+     2471,
+     2472,
+     2473
+    ],
+    "strict": [
+     2471,
+     2472
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-087",
+  "sev": "Medium",
+  "title": "parseFloat broken Infinity prefix check",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-088",
+  "sev": "Medium",
+  "title": "Date.prototype.get* returns string NaN instead of Number",
+  "bugs": {
+   "jerryscript-9bf98944df1f": {
+    "region": [
+     238,
+     239,
+     240,
+     241
+    ],
+    "strict": [
+     240
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-089",
+  "sev": "Medium",
+  "title": "Number.prototype.toFixed negative sign and rounding bugs",
+  "bugs": {
+   "jerryscript-edaaae2dd276": {
+    "region": [
+     675,
+     692,
+     693,
+     694,
+     695,
+     696,
+     697,
+     698
+    ],
+    "strict": [
+     695
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-095",
+  "sev": "Low",
+  "title": "unescape hex_digits reset; parseInt NaN on leading zeros",
+  "bugs": {}
+ }
+]

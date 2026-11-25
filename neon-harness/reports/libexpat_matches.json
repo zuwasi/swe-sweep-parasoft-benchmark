@@ -2,7 +2,7 @@
  {
   "finding": "BUG-01",
   "sev": "Critical",
-  "title": "signed overflow neededSize += keep in XML_GetBuffer skips realloc, heap overflow",
+  "title": "Signed integer overflow in `XML_GetBuffer` (`neededSize += keep`) skips reallocation and causes heap buffer overflow",
   "bugs": {
    "libexpat-8e5c789e8d3b": {
     "region": [
@@ -20,56 +20,117 @@
  {
   "finding": "BUG-02",
   "sev": "Critical",
-  "title": "signed overflow bufSize in storeRawNames skips REALLOC, heap overflow",
+  "title": "Integer overflow in `storeRawNames` (`bufSize`) skips `REALLOC` and causes heap buffer overflow (plus signed shift overflow in `doContent`)",
   "bugs": {}
  },
  {
   "finding": "BUG-03",
   "sev": "Critical",
-  "title": "uninitialized function pointer literalScanners on empty external PE",
+  "title": "Unchecked `unsigned` overflow in `dtd->contentStringLen` causes undersized allocation in `build_model` and heap buffer overflow in `build_node`",
   "bugs": {}
  },
  {
   "finding": "BUG-04",
   "sev": "Critical",
-  "title": "contentStringLen 32-bit wraparound, undersized alloc, heap overflow in build_model",
+  "title": "Heap buffer overflow on `dtd->scaffIndex` via capacity desynchronization and shrinking between root and external PE parsers",
   "bugs": {}
  },
  {
   "finding": "BUG-05",
-  "sev": "High",
-  "title": "UAF/double-free of parent m_dtd on copyString OOM in XML_ExternalEntityParserCreate",
+  "sev": "Critical",
+  "title": "Use-after-free and double-free of parent parser's shared `m_dtd` on OOM in `parserCreate` via `XML_ExternalEntityParserCreate`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-06",
+  "sev": "Critical",
+  "title": "UTF-8 validation bypass in XML names accepts overlong sequences, non-continuation bytes, embedded NULs, and delimiter-swallowing bytes",
   "bugs": {
-   "libexpat-69f40cffb664": {
+   "libexpat-44558a21f1b7": {
     "region": [
-     1066,
-     1067,
-     1068,
-     1069,
-     1070,
-     1071
+     69,
+     70,
+     71,
+     72,
+     73,
+     74,
+     75,
+     98,
+     99
     ],
-    "strict": []
+    "strict": [
+     72
+    ]
    }
   }
  },
  {
-  "finding": "BUG-06",
+  "finding": "BUG-07",
   "sev": "High",
-  "title": "signed overflow doubling tag->buf in doContent",
+  "title": "Heap use-after-free in `internalEntityProcessor` due to missing `storeRawNames(parser)` (plus wrong `m_processor` for external general entities)",
   "bugs": {}
  },
  {
-  "finding": "BUG-07",
+  "finding": "BUG-08",
   "sev": "High",
-  "title": "missing size_t overflow check in nextScaffoldPart scaffIndex alloc, OOB write",
+  "title": "`allowClosingDoctype` guard bypassed in `internalEntityProcessor`, allowing DOCTYPE closure and encoding/processor confusion from resumed internal PE",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-09",
+  "sev": "High",
+  "title": "Unbounded C-stack recursion (stack overflow crash) in `build_node` and non-cyclic entity expansion chains",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-10",
+  "sev": "High",
+  "title": "Namespace separator injection in `addBinding` and expanded attribute name collisions / incomplete duplicate check in `storeAtts`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-11",
+  "sev": "High",
+  "title": "Missing `len` bounds validation (`len < 0` / OOB) and unchecked signed `m_parseEndByteIndex` overflow in `XML_ParseBuffer`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-12",
+  "sev": "High",
+  "title": "Unsynchronized shared parent-parser access in `XML_ExternalEntityParserCreate` child parsers causes data races and UAF, violating documented thread-safety contract",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-13",
+  "sev": "High",
+  "title": "Complete bypass of amplification protection under `XML_UseForeignDTD` when document begins directly with root element",
+  "bugs": {
+   "libexpat-0c5dbd0bb0a5": {
+    "region": [
+     7430,
+     7431,
+     7432,
+     7433
+    ],
+    "strict": [
+     7433
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-14",
+  "sev": "High",
+  "title": "Undefined behavior (`NULL - s`) and accounting counter corruption in `epilogProcessor` on negative prolog tokens",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-15",
+  "sev": "High",
+  "title": "Unchecked `parser->m_groupSize * sizeof(int)` overflow on 32-bit platforms in `nextScaffoldPart` initial `dtd->scaffIndex` allocation",
   "bugs": {
    "libexpat-cf1142438f11": {
     "region": [
-     5152,
-     5153,
-     5154,
-     5155,
      5156,
      5158,
      5159
@@ -81,9 +142,9 @@
   }
  },
  {
-  "finding": "BUG-08",
+  "finding": "BUG-16",
   "sev": "High",
-  "title": "missing UTF-8 validity checks utf8_isName2/3 utf8_isNmstrt2/3",
+  "title": "NULL function pointer dereference in `XML_MIN_SIZE` builds when a UTF-16 high surrogate appears in any XML name",
   "bugs": {
    "libexpat-44558a21f1b7": {
     "region": [
@@ -93,32 +154,36 @@
      72,
      73,
      74,
-     75,
-     98,
-     99,
-     100,
-     101,
-     102,
-     103,
-     104,
-     105,
-     106
+     75
     ],
     "strict": [
-     72,
-     101,
-     102,
-     103,
-     104,
-     105
+     72
     ]
    }
   }
  },
  {
-  "finding": "BUG-09",
+  "finding": "BUG-17",
   "sev": "High",
-  "title": "surrogate boundary miscomputation in DEFINE_UTF16_TO_UTF16",
+  "title": "`DEFINE_UTF16_TO_UTF16` (`little2_toUtf16`/`big2_toUtf16`) wrong bitmask and boundary check drops low surrogates and splits surrogate pairs",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-18",
+  "sev": "High",
+  "title": "Missing UTF-16 surrogate pair validation (`IS_INVALID_CHAR` always `0`) accepts unpaired high surrogates paired with arbitrary code units",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-19",
+  "sev": "High",
+  "title": "Out-of-bounds read and unbounded loop past `fromLim` in `unknown_toUtf8` / `unknown_toUtf16`, reachable via `parsePseudoAttribute` step desync",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-20",
+  "sev": "Medium",
+  "title": "Out-of-bounds pointer advance (`ptr += n` past `end`) in `attributeValueTok`, `entityValueTok`, and `updatePosition`",
   "bugs": {
    "libexpat-44558a21f1b7": {
     "region": [
@@ -127,141 +192,33 @@
      1273,
      1274,
      1275,
-     1276,
-     1340,
-     1341,
-     1342,
-     1343,
-     1344,
-     1345
+     1276
     ],
     "strict": [
-     1273,
-     1342
+     1273
     ]
    }
   }
  },
  {
-  "finding": "BUG-10",
-  "sev": "High",
-  "title": "heap over-read unknown_toUtf8 via parsePseudoAttribute multibyte splitting",
-  "bugs": {
-   "libexpat-44558a21f1b7": {
-    "region": [
-     1142,
-     1143,
-     1144
-    ],
-    "strict": []
-   }
-  }
- },
- {
-  "finding": "BUG-11",
-  "sev": "High",
-  "title": "null vtable deref on UTF-16 surrogates in names XML_MIN_SIZE",
-  "bugs": {
-   "libexpat-44558a21f1b7": {
-    "region": [
-     69,
-     70,
-     71,
-     72,
-     73,
-     74,
-     75,
-     98,
-     99,
-     100,
-     101,
-     102,
-     103,
-     104,
-     105,
-     106
-    ],
-    "strict": [
-     72,
-     101,
-     102,
-     103,
-     104,
-     105
-    ]
-   }
-  }
- },
- {
-  "finding": "BUG-12",
-  "sev": "High",
-  "title": "Billion Laughs bypass when countBytesDirect==0",
-  "bugs": {
-   "libexpat-0c5dbd0bb0a5": {
-    "region": [
-     7424,
-     7425,
-     7426,
-     7427,
-     7428,
-     7430,
-     7431,
-     7432,
-     7433,
-     7434,
-     7435,
-     7436
-    ],
-    "strict": [
-     7433
-    ]
-   }
-  }
- },
- {
-  "finding": "BUG-13",
-  "sev": "High",
-  "title": "UAF and data race via m_parentParser violating ExternalEntityParserCreate contract",
-  "bugs": {}
- },
- {
-  "finding": "BUG-14",
-  "sev": "High",
-  "title": "namespace separator injection in addBinding",
-  "bugs": {}
- },
- {
-  "finding": "BUG-15",
-  "sev": "High",
-  "title": "suspend inside CDATA during entity expansion corrupts state",
-  "bugs": {
-   "libexpat-30d93b149d3d": {
-    "region": [
-     5645,
-     5646,
-     5647,
-     5648,
-     5649,
-     5650,
-     5651,
-     5652
-    ],
-    "strict": [
-     5648,
-     5649,
-     5652
-    ]
-   }
-  }
- },
- {
-  "finding": "BUG-16",
+  "finding": "BUG-21",
   "sev": "Medium",
-  "title": "internalEntityProcessor allowClosingDoctype=TRUE fail-open",
+  "title": "`externalSubset1` rejects all valid internal PE references inside `<![INCLUDE[ ... ]]>` and allows a PE to close an outer `INCLUDE` section",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-22",
+  "sev": "Medium",
+  "title": "`ignoreSectionTok` fails to recognize `]]>` after odd runs of `]` (e.g., `]]]>`) and omits `ptr >= end` guard",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-23",
+  "sev": "Medium",
+  "title": "`internalEntityProcessor` abandons outer nested internal entities on resume and continues parsing after suspend on final entity token",
   "bugs": {
    "libexpat-30d93b149d3d": {
     "region": [
-     5645,
      5646,
      5647,
      5648,
@@ -296,227 +253,152 @@
   }
  },
  {
-  "finding": "BUG-17",
-  "sev": "Medium",
-  "title": "NULL m_startDoctypeDeclHandler deref at DOCTYPE_CLOSE",
-  "bugs": {}
- },
- {
-  "finding": "BUG-18",
-  "sev": "Medium",
-  "title": "unbounded recursion build_node stack overflow",
-  "bugs": {}
- },
- {
-  "finding": "BUG-19",
-  "sev": "Medium",
-  "title": "UB NULL-ptr subtraction and counter corruption in accountingDiffTolerated",
-  "bugs": {}
- },
- {
-  "finding": "BUG-20",
-  "sev": "Medium",
-  "title": "uninitialized finalBuffer/m_idAttIndex, StopParser+ResumeParser bypass",
-  "bugs": {}
- },
- {
-  "finding": "BUG-21",
-  "sev": "Medium",
-  "title": "XML_ParseBuffer missing len<0 and overflow checks",
-  "bugs": {}
- },
- {
-  "finding": "BUG-22",
-  "sev": "Medium",
-  "title": "entityDeclHandler invoked before error check; inEntityValue not restored",
-  "bugs": {}
- },
- {
-  "finding": "BUG-23",
-  "sev": "Medium",
-  "title": "signed overflows in storeAtts attIndex, nPrefixes<<1, hash init",
-  "bugs": {}
- },
- {
   "finding": "BUG-24",
   "sev": "Medium",
-  "title": "doContent double-accounts unnormalized attribute values",
+  "title": "`XML_ROLE_ENTITY_VALUE` commits entity value and invokes `m_entityDeclHandler` (potentially with `value == NULL`) before checking `storeEntityValue` error",
   "bugs": {}
  },
  {
   "finding": "BUG-25",
   "sev": "Medium",
-  "title": "memory leak tag->bindings on TAG_MISMATCH then ParserReset",
+  "title": "`setContext` leaves `prefix->name == NULL` in `dtd->prefixes` on OOM; retrying `XML_Parse` causes NULL dereference in `keyeq`",
   "bugs": {}
  },
  {
   "finding": "BUG-26",
   "sev": "Medium",
-  "title": "cdataSectionProcessor ignores XML_SUSPENDED/XML_FINISHED",
+  "title": "Unchecked `lookup()` failure in `getAttributeId` for `xmlns:*` silently drops namespace binding and leaks raw attribute",
   "bugs": {}
  },
  {
   "finding": "BUG-27",
   "sev": "Medium",
-  "title": "entityValueInitProcessor parses TextDecl as XMLDecl, drops bytes",
+  "title": "NULL function pointer dereferences if `m_startDoctypeDeclHandler` (`XML_ROLE_DOCTYPE_CLOSE`) or `m_defaultHandler` (`reportDefault`) is cleared dynamically",
   "bugs": {}
  },
  {
   "finding": "BUG-28",
   "sev": "Medium",
-  "title": "externalEntityInitProcessor3 fails to advance on XML_SUSPENDED",
+  "title": "Use-after-free in `XML_Parse` (`#ifndef XML_CONTEXT_BYTES`) when querying line/column after error or final chunk",
   "bugs": {}
  },
  {
   "finding": "BUG-29",
   "sev": "Medium",
-  "title": "XML_ATTR_INFO UB pointer subtraction and misaligned indices",
+  "title": "Uninitialized heap reads in `XML_GetIdAttributeIndex` (`m_idAttIndex`), `XML_GetParsingStatus` (`finalBuffer`), and `poolGrow` (`freeBlocks` copy)",
   "bugs": {}
  },
  {
   "finding": "BUG-30",
   "sev": "Medium",
-  "title": "includeLevel not scoped per parameter entity",
+  "title": "Unrelated pointer subtraction UB and heap-distance leak in `storeAtts` (`XML_ATTR_INFO`) during internal entity expansion",
   "bugs": {}
  },
  {
   "finding": "BUG-31",
   "sev": "Medium",
-  "title": "INNER_PARAM_ENTITY_REF resets prolog state to externalSubset0",
+  "title": "Multiple processor state bugs in `cdataSectionProcessor`, `externalEntityInitProcessor3`, `entityValueInitProcessor`, `XML_ParserReset`, and `XML_StopParser`",
   "bugs": {}
  },
  {
   "finding": "BUG-32",
   "sev": "Medium",
-  "title": "missing UTF-16 low-surrogate validation swallows delimiters",
-  "bugs": {}
+  "title": "Dead `!dtd->hasParamEntityRefs` WFC check, self-referential PE `NULL + 0` UB, and uncleared `m_tempPool` on skipped ATTLIST enum",
+  "bugs": {
+   "libexpat-4e25524fb119": {
+    "region": [
+     4828,
+     4829,
+     4830,
+     4831,
+     4832,
+     4833,
+     4834
+    ],
+    "strict": [
+     4831
+    ]
+   }
+  }
  },
  {
   "finding": "BUG-33",
   "sev": "Medium",
-  "title": "ignoreSectionTok missing backtrack for ]]]>",
+  "title": "Wrong `EXPAT_FMT_*` format specifiers on MinGW-w64 / 32-bit platforms, and `#ifdef XML_DTD` guard hiding `XML_SetBillionLaughsAttackProtection*` declarations",
   "bugs": {}
  },
  {
   "finding": "BUG-34",
-  "sev": "Medium",
-  "title": "expat.h gates public BLAP prototypes behind internal ifdef",
+  "sev": "Low",
+  "title": "Memory leak of `BINDING` struct on integer-overflow error paths in `addBinding`",
   "bugs": {}
  },
  {
   "finding": "BUG-35",
   "sev": "Low",
-  "title": "unchecked lookup() OOM in getAttributeId drops xmlns declarations",
+  "title": "Double-counting of direct bytes for non-empty start-tag attributes (`XML_TOK_START_TAG_WITH_ATTS`) weakens amplification limit",
   "bugs": {}
  },
  {
   "finding": "BUG-36",
   "sev": "Low",
-  "title": "setContext NULL deref without XML_DTD build",
+  "title": "`prologTok` shrinks odd UTF-16 `end` locally causing `doProlog` to swallow stray trailing bytes; `DEFINE_UTF16_TO_UTF8` returns `COMPLETED` on odd input",
   "bugs": {}
  },
  {
   "finding": "BUG-37",
   "sev": "Low",
-  "title": "setContext leaves prefix->name NULL on OOM",
+  "title": "`prologTok` `BT_COLON` accepts `NameChar` instead of `NameStartChar` after `:`, and `BT_RPAR` rejects `)` followed by `%`",
   "bugs": {}
  },
  {
   "finding": "BUG-38",
   "sev": "Low",
-  "title": "ParserReset ignores copyString OOM; groupSize not rolled back",
+  "title": "Character-table and declaration edge-case defects (`latin1tab.h`, `doParseXmlDecl`, `isPublicId`, `_INTERNAL_trim_to_complete_utf8_characters`)",
   "bugs": {
-   "libexpat-cf1142438f11": {
+   "libexpat-44558a21f1b7": {
     "region": [
-     5152,
-     5153,
-     5154,
-     5155,
-     5156,
-     5158,
-     5159
+     1142,
+     1143
     ],
-    "strict": [
-     5156
-    ]
+    "strict": []
    }
   }
  },
  {
   "finding": "BUG-39",
   "sev": "Low",
-  "title": "processXmlDecl omits minBytesPerChar==1 check",
-  "bugs": {
-   "libexpat-f67d952cb3de": {
-    "region": [
-     4175,
-     4176,
-     4177,
-     4178,
-     4179,
-     4180,
-     4181,
-     4182,
-     4183,
-     4184,
-     4185,
-     4186,
-     4190,
-     4191,
-     4192,
-     4193,
-     4194,
-     4195,
-     4196
-    ],
-    "strict": [
-     4175,
-     4176,
-     4177,
-     4178,
-     4179,
-     4180,
-     4182,
-     4183,
-     4193
-    ]
-   }
-  }
+  "title": "Short-read / stale-`errno` loop bug in `writeRandomBytes_*`, `XML_GetBuffer(p, 0)` API inconsistency, and signed `int` length in `copyString`",
+  "bugs": {}
  },
  {
   "finding": "BUG-40",
   "sev": "Low",
-  "title": "uninitialized heap read on freeBlocks reuse; NULL-NULL subtraction in poolGrow",
+  "title": "Signed `attIndex` / `nPrefixes << 1` / `int j` overflows in `storeAtts` at `>= 2^29` attributes; unchecked `state->includeLevel += 1` wrap in `condSect1`",
   "bugs": {}
  },
  {
   "finding": "BUG-41",
   "sev": "Low",
-  "title": "signed int overflow in copyString; BINDING leak in addBinding",
-  "bugs": {}
- },
- {
-  "finding": "BUG-42",
-  "sev": "Low",
-  "title": "broken short-read and EINTR loop in writeRandomBytes_*",
-  "bugs": {}
- },
- {
-  "finding": "BUG-43",
-  "sev": "Low",
-  "title": "premature poolDiscard, wrong eventEndPtr, ignored XML_FINISHED, nsAtts prefix collision",
-  "bugs": {}
- },
- {
-  "finding": "BUG-44",
-  "sev": "Low",
-  "title": "prologTok accepts invalid QNames; trim_to_complete_utf8 mis-reset",
-  "bugs": {}
- },
- {
-  "finding": "BUG-45",
-  "sev": "Low",
-  "title": "includeLevel unsigned overflow in condSect1; wrong MinGW format macros",
-  "bugs": {}
+  "title": "`XML_XmlDeclHandler` `version == NULL` contract mismatch for TextDecls, `XML_GetUserData(NULL)` dereference, and `#define inline` issues in `internal.h`",
+  "bugs": {
+   "libexpat-e567e550f1be": {
+    "region": [
+     1184,
+     1185,
+     1186,
+     1187,
+     1188,
+     1189
+    ],
+    "strict": []
+   },
+   "libexpat-f67d952cb3de": {
+    "region": [
+     4172
+    ],
+    "strict": []
+   }
+  }
  }
 ]

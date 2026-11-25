@@ -1,0 +1,80 @@
+=== RESUME attempt 9 after block at Wed Nov 25 20:54:52 IST 2026 ===
+The independent quality review of MicroPython at commit `9b486340da22931cde82872f79e1c34db959548b` across `py/`, `ports/unix/`, and `shared/` is complete. The full report—including file paths, line numbers, defect mechanisms, reproduction scripts/outputs, and remediations—has been written to [BUG-HUNT-REPORT.md](file:///mnt/c/Users/danie/swesweep-parasoft-benchmark/repos/micropython/BUG-HUNT-REPORT.md).
+
+- **Total findings**: 68 (`16 Critical`, `26 High`, `26 Medium`)
+- **Verification**: `48 CONFIRMED` (reproduced using fresh debug and ASan/UBSan Unix builds), `20 SUSPECTED` (argued from source inspection, primarily in non-default build configurations or port/embedded code)
+
+## Summary Table
+
+| ID | Severity | Subsystem | Title | Status |
+|---|---|---|---|---|
+| MP-001 | Critical | `ports/unix` (`moduos.c`) | Heap buffer overflow in `uos.urandom()` on negative length via `size_t` wraparound | CONFIRMED |
+| MP-002 | Critical | `ports/unix` (`modffi.c`) | Heap buffer overflow in `ffi.callback()` when `paramtypes` lacks `__len__` | CONFIRMED |
+| MP-003 | Critical | `ports/unix` (`unix_mphal.c`) | Missing `nlr_pop()` on early returns in `call_dupterm_read()` corrupts NLR exception stack | SUSPECTED |
+| MP-004 | High | `ports/unix` (`modusocket.c`) | Stack buffer over-read in `socket.accept()` when peer address exceeds 32 bytes (`AF_UNIX`) | CONFIRMED |
+| MP-005 | High | `ports/unix` (`modusocket.c`) | Missing buffer length checks in `usocket.sockaddr()` and `inet_ntop()` cause OOB read and unsigned underflow | CONFIRMED |
+| MP-006 | High | `ports/unix` (`main.c`) | Out-of-bounds read past `MICROPYPATH=""` leaks adjacent environment variables into `sys.path` | CONFIRMED |
+| MP-007 | High | `ports/unix` (`modtermios.c`) | Missing type and length checks in `termios.tcsetattr()` cause OOB heap read / NULL deref | CONFIRMED |
+| MP-008 | High | `ports/unix` (`modtime.c`) | Unchecked NULL return from `gmtime()`/`localtime()` causes SEGFAULT on out-of-range timestamps | CONFIRMED |
+| MP-009 | High | `ports/unix` (`modffi.c`) | Unvalidated argument count/kwargs in `ffifunc_call()` aborts (debug) or reads OOB/uninitialized args (release) | CONFIRMED |
+| MP-010 | High | `ports/unix` (`alloc.c`) | Pointer-to-pointer bug in `mp_unix_free_exec()` corrupts `mmap_region_head` list; failed `mmap` causes GC NULL deref | SUSPECTED |
+| MP-011 | High | `shared/readline` (`readline.c`) | Stack buffer overflow / assertion failure in `mp_hal_move_cursor_back()` for cursor moves >= 1000 chars | CONFIRMED |
+| MP-012 | High | `shared/netutils` (`dhcpserver.c`) | Uninitialized stack reads and stack buffer over-reads in DHCP option parsing (`opt_find` / `dhcp_server_process`) | SUSPECTED |
+| MP-013 | Medium | `ports/unix` (`modffi.c`) | 64-bit `long` (`'l'`) FFI return values truncated to 32-bit `signed int` on LP64 systems | CONFIRMED |
+| MP-014 | Medium | `ports/unix` (`modusocket.c`, `modtime.c`) | Floating-point rounding sets `tv_usec = 1000000`, causing spurious `OSError(EDOM/EINVAL)` | CONFIRMED |
+| MP-015 | Medium | `ports/unix` (`main.c`) | Unchecked `malloc()` failure in `-X heapsize=` causes NULL dereference in `gc_init()` | CONFIRMED |
+| MP-016 | Medium | `ports/unix` (`mpthreadport.c`) | Unchecked `pthread_kill()` and unretried `EINTR` on `sem_wait()` in `mp_thread_gc_others()` cause GC race/deadlock | SUSPECTED |
+| MP-017 | Medium | `shared/readline` (`readline.c`) | `size_t` underflow OOB read (`rl.cursor_pos - 1`) on Tab when cursor is at column 0 of non-empty line | SUSPECTED |
+| MP-018 | Medium | `shared/libc` (`string0.c`) | Signed `char` comparisons in `memcmp`/`strcmp`/`strncmp` and mismatched casts in `strchr`/`memchr` violate C99 | SUSPECTED |
+| MP-019 | Medium | `shared/memzip` (`memzip.c`) | Prefix-only comparison in `memzip_find_file_header()` matches wrong files sharing a prefix | SUSPECTED |
+| MP-020 | Critical | `py/` (`objstr.c`) | Negative width in `str.center()` wraps `size_t` and triggers heap buffer overflow in `memset()` | CONFIRMED |
+| MP-021 | Critical | `py/` (`objstr.c`, `objlist.c`, `objtuple.c`) | Missing multiplication overflow check in sequence `*` causes heap/global buffer overflow | CONFIRMED |
+| MP-022 | Critical | `py/` (`objarray.c`) | `array_construct()` trusts iterable `__len__` without bounds checks, causing heap overflow or stale length | CONFIRMED |
+| MP-023 | Critical | `py/` (`objtype.c`) | Native-type subclass overriding `__new__` via `object.__new__` leaves `subobj[0]` uninitialized (type confusion / SIGSEGV) | CONFIRMED |
+| MP-024 | Critical | `py/` (`objlist.c`) | `list.sort(key=...)` holds raw `head`/`tail` pointers across Python callbacks, causing UAF / SIGSEGV on list mutation | CONFIRMED |
+| MP-025 | Critical | `py/` (`persistentcode.c`) | `.mpy` loader (`read_uint`, `load_obj`, `load_raw_code`, `mp_native_relocate`) lacks EOF/bounds checks (infinite loop, assert abort, OOB) | CONFIRMED |
+| MP-026 | High | `py/` (`modbuiltins.c`) | Exception in `class` body skips `mp_locals_set(old_locals)`, permanently corrupting module `locals()` | CONFIRMED |
+| MP-027 | High | `py/` (`objstringio.c`) | `StringIO.seek()` omits open check before dereferencing `o->vstr`, causing NULL dereference / SIGSEGV | CONFIRMED |
+| MP-028 | High | `py/` (`mpz.c`, `objint_mpz.c`) | `pow(a, b, 0)` aborts/reads OOB; `0**0` (mpz) and `pow(0, 0, m)` return `0`; negative exponent/modulus bugs | CONFIRMED |
+| MP-029 | High | `py/` (`objrange.c`) | `range` truncates 64-bit `mp_int_t` into 63-bit small-int (sign flip) and overflows signed subtraction in `range_len` | CONFIRMED |
+| MP-030 | High | `py/` (`modstruct.c`) | `get_fmt_num()` uses unchecked `MP_OBJ_SMALL_INT_VALUE` (pointer bits read as repeat count) and unchecked pointer arithmetic | CONFIRMED |
+| MP-031 | High | `py/` (`binary.c`, `modstruct.c`) | `mp_binary_get_size()` missing `case '=':`, breaking all native-order standard-size `ustruct` formats | CONFIRMED |
+| MP-032 | High | `py/` (`objarray.c`) | Array/bytearray comparisons confuse signed/unsigned types and compare multi-byte integers via little-endian `memcmp` | CONFIRMED |
+| MP-033 | Medium | `py/` (`objlist.c`) | `list.insert()` uses unchecked `MP_OBJ_SMALL_INT_VALUE`, silently misinterpreting non-small-int indices | CONFIRMED |
+| MP-034 | Medium | `py/` (`parsenum.c`, `mpz.c`) | Number parser accepts digitless strings (`int("_")`, `float(".")`) and rejects underscored big ints | CONFIRMED |
+| MP-035 | Medium | `py/` (`modmath.c`) | `math.pow(2.0, inf)` raises `ValueError` due to missing `!isinf(y)` check; `math.ldexp()` truncates 64-bit exponent to 32-bit `int` | CONFIRMED |
+| MP-036 | Medium | `py/` (`modcmath.c`) | `cmath.log(0)` returns `-inf` instead of `ValueError`; `polar`/`log`/`sqrt` overflow for `abs(z) > 1.34e154` | CONFIRMED |
+| MP-037 | Medium | `py/` (`objgenerator.c`) | Calling `.throw(exc)` on an exhausted generator returns `StopIteration` instead of raising `exc` | CONFIRMED |
+| MP-038 | Medium | `py/` (`modbuiltins.c`) | `round(1, -(1<<62))` overflows small-int negation and raises `ZeroDivisionError` | CONFIRMED |
+| MP-039 | Medium | `py/` (`stream.c`) | `stream_unbuffered_readline()` uses unchecked `MP_OBJ_SMALL_INT_VALUE` on optional `size` argument | CONFIRMED |
+| MP-040 | Medium | `py/` (`objstr.c`) | `str.rsplit`/`startswith`/`endswith` accept `bytes` on `str`; `'{:c}'.format()` truncates `>= 0x100` and emits invalid UTF-8 | CONFIRMED |
+| MP-041 | Medium | `py/` (`objint.c`) | `(-1).to_bytes(10, 'big')` zero-pads high bytes instead of sign-extending or rejecting negative values | CONFIRMED |
+| MP-042 | Medium | `py/` (`objdict.c`, `runtime.c`) | Negative `__len__` hint causes unsigned wraparound and multi-gigabyte allocation failure in `dict.fromkeys` and `*` unpacking | CONFIRMED |
+| MP-043 | Medium | `py/` (`objexcept.c`) | Unsigned underflow in `decompress_error_text_maybe()` when `emg_buf_size < EMG_BUF_STR_BUF_OFFSET` causes NULL deref under OOM | SUSPECTED |
+| MP-044 | Medium | `py/` (`objarray.c`, `objlist.c`, `vstr.c`) | Stale source pointer UAF on self-extend/self-slice-assign reallocation, and 32-bit `ROUND_ALLOC` truncation in `vstr.c` | SUSPECTED |
+| MP-045 | Critical | `py/` (`objnamedtuple.c`) | Zero-field `namedtuple` overwrites read-only global `mp_const_empty_tuple.base.type` (SIGSEGV) | CONFIRMED |
+| MP-046 | Critical | `py/` (`modio.c`) | `IOBase` passes stack-allocated mutable `bytearray` to Python callbacks (stack UAR, ROM write SIGSEGV, `gc_realloc` abort) | CONFIRMED |
+| MP-047 | Critical | `py/` (`map.c`) | Clearing/rehashing `dict` or `set` inside `__eq__` causes division by zero (`SIGFPE`) and dangling `avail_slot` UAF | CONFIRMED |
+| MP-048 | Critical | `py/` (`emitbc.c`, `emitnative.c`) | Unchecked 8-bit packing in `unpack_ex`, `call_function`, and closures causes VM stack corruption (`SIGSEGV`) and assertion aborts | CONFIRMED |
+| MP-049 | Critical | `py/` (`emitnative.c`, `smallint.c`) | Viper `//` and `%` lack zero-divisor and `INT64_MIN // -1` checks, crashing the interpreter with hardware `SIGFPE` | CONFIRMED |
+| MP-050 | Critical | `py/` (`emitnative.c`) | Viper emitter asserts `VTYPE_PYOBJ` / cast arity instead of type-checking (`SIGABRT` in debug; raw-int type confusion in release) | CONFIRMED |
+| MP-051 | Critical | `py/` (`gc.c`) | `ATB_GET_KIND(block + n_blocks)` reads/corrupts past end of alloc table; `gc_realloc` `size_t` overflow frees live block and returns it | SUSPECTED |
+| MP-052 | High | `py/` (`objstrunicode.c`) | `str_subscr` computes multi-byte length from lead byte without bounds check, reading OOB on malformed UTF-8 `str` | CONFIRMED |
+| MP-053 | High | `py/` (`objslice.c`) | `slice.indices()` accepts negative length and truncates 64-bit bounds/step into 63-bit small-int (sign flip) | CONFIRMED |
+| MP-054 | High | `py/` (`profile.c`) | `sys.settrace` has `raw_code_lnotab` heap overflow / assert aborts, dangling `frame->code_state` UAF, and stuck `mp_prof_is_executing` | SUSPECTED |
+| MP-055 | High | `py/` (`objmodule.c`) | `module_attr_try_delegation()` indexes `map->table[map->alloc - 1]` without checking `map->alloc > 0` (NULL deref on empty dict) | SUSPECTED |
+| MP-056 | High | `shared/netutils` (`trace.c`) | `netutils_ethernet_trace()` reads IP/TCP/UDP/DHCP/IPv6 headers without length checks and suffers `size_t` underflow OOB reads | SUSPECTED |
+| MP-057 | High | `ports/unix` (`modjni.c`) | Format-string injection in `print_jobject()`, 64-byte stack overflow in `get_jclass_name()`, and unbounded `strprev()` scan | SUSPECTED |
+| MP-058 | High | `ports/unix` (`mpbthciport.c`, `mpbtstackport_usb.c`) | Stack buffer overflow via `strcpy` from `MICROPYBTUART`, `pthread_join` on detached threads, and UART fd leak on error | SUSPECTED |
+| MP-059 | Medium | `py/` (`lexer.c`) | F-string lexer fails on adjacent f-strings (`f'{1}' f'{2}'`), underflows `nested_bracket_level` on `']'`, and sign-extends `char` | CONFIRMED |
+| MP-060 | Medium | `py/` (`builtinimport.c`) | `__import__` uses unchecked `MP_OBJ_SMALL_INT_VALUE` for `level`; non-external weak-link path passes `mp_obj_t` to `strcpy()` | CONFIRMED |
+| MP-061 | Medium | `py/` (`objcomplex.c`) | Complex `abs()`, `/`, and `**` compute `real*real + imag*imag` unscaled, overflowing for `abs(z) > 1.34e154` (`0j` / `nan`) | CONFIRMED |
+| MP-062 | Medium | `py/` (`modio.c`, `modthread.c`, `reader.c`, `ports/unix/input.c`) | `BufferedWriter` infinite loop on `alloc==0` & flush assert; thread `th_args` GC root race; `EINTR` EOF in `reader.c`; `buf[-1]` in `input.c` | SUSPECTED |
+| MP-063 | High | `ports/unix` (`moduselect.c`) | `uselect.poll` has negative/`uint16` `alloc` wrap, `ipoll()` assert abort (`SIGABRT`), stale `revents` on `unregister`, and 32-bit timeout truncation | CONFIRMED |
+| MP-064 | Medium | `py/` (`formatfloat.c`) | Float formatting rounds values `< 1.0` prematurely with `while (--e)` underflow (`0.999999999996` -> `1.0`) and omits carry room in `'f'` mode | CONFIRMED |
+| MP-065 | High | `shared/runtime` (`pyexec.c`) | Double `reader->close()` on post-parse exception in `parse_compile_execute()` causes double-free for heap-backed readers | SUSPECTED |
+| MP-066 | High | `ports/unix` (`modmachine.c`) | Unchecked `mmap()` `MAP_FAILED` return and missing `munmap()` leak in `/dev/mem` mapping; `if (!fd)` mishandles fd `0` | SUSPECTED |
+| MP-067 | Medium | `shared/timeutils` (`timeutils.c`) | Unbounded `days_since_jan1[month]` OOB read, 32-bit year-2068 signed wraparound, and pre-2000 unsigned underflow in leap-day math | SUSPECTED |
+| MP-068 | Medium | `shared/netutils` (`netutils.c`), `shared/libc` (`printf.c`) | `netutils_parse_ipv4_addr()` accepts non-digits/octets `>255`; internal `vsnprintf(NULL, 0, ...)` calls `memcpy(NULL, ..., 0)` and `putchar(0xff)` returns `-1` | SUSPECTED |
+=== finished without new block at Wed Nov 25 20:58:28 IST 2026 ===
+=== driver done at Wed Nov 25 20:58:28 IST 2026 ===

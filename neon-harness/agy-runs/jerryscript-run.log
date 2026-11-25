@@ -1,0 +1,88 @@
+The independent quality review of JerryScript (`jerry-core/` and `jerry-ext/` at commit `5fdeb7c1d68e8c5209e186e1760bc703a723d588`) is complete.
+
+- **Full report (with file paths, line numbers, mechanisms, and reproducers):** [BUG-HUNT-REPORT.md](file:///mnt/c/Users/danie/swesweep-parasoft-benchmark/repos/jerryscript/BUG-HUNT-REPORT.md)
+- **Totals:** **78 findings** (**65 CONFIRMED** via debug + ASan/UBSan JS/C repros, **13 SUSPECTED** argued from source): **13 Critical**, **30 High**, **35 Medium**.
+- **Workspace state:** Clean tracked tree (no tracked files modified, nothing committed or pushed); all work executed in the main thread.
+
+## Summary Table
+
+| ID | Severity | Subsystem | One-line Title | Status |
+|---|---|---|---|---|
+| BUG-001 | Critical | Parser / Lexer | Heap buffer overflow in raw template literal containing escaped U+2028/U+2029 | CONFIRMED |
+| BUG-002 | Critical | TypedArray | Heap buffer overflow & type confusion via `ArrayBuffer` `Symbol.species` in TypedArray constructor | CONFIRMED |
+| BUG-003 | Critical | TypedArray | Use-after-free of element/index `ecma_value_t` in `TypedArray.prototype.filter` | CONFIRMED |
+| BUG-004 | Critical | Snapshot API | Heap/stack buffer overflow in `jerry_get_literals_from_snapshot` when `is_c_format` is true | CONFIRMED |
+| BUG-005 | High | RegExp | `memset` uses capture count instead of byte size in `ecma_regexp_replace_helper_fast` and ES5.1 `split` | CONFIRMED |
+| BUG-006 | High | RegExp | Non-ASCII `RegExp.prototype[@@replace]` advances UTF-8 pointer by match byte size instead of character count, causing OOB/corruption crash | CONFIRMED |
+| BUG-007 | High | RegExp | Unchecked `ECMA_VALUE_ERROR` from `ecma_regexp_exec_helper` in `@@replace` slow path causes crash | CONFIRMED |
+| BUG-008 | High | RegExp | Assertion crash / unhandled error in sticky `@@replace` when `lastIndex` is non-writable and out of bounds | CONFIRMED |
+| BUG-009 | High | TypedArray | Memory leak of `source_obj` and `source_length` on `ToLength` error in `TypedArray.prototype.set` | CONFIRMED |
+| BUG-010 | Critical | jerry-ext / handle-scope | `jerryx_close_handle_scope` frees parent before child, causing heap UAF (dynamic scopes), dangling `current`, and leaked child scopes | CONFIRMED |
+| BUG-011 | High | jerry-ext / handle-scope | `jerryx_escape_handle` on prelist handle when overflow heap list is non-empty leaks all remaining heap handles and one prelist handle | CONFIRMED |
+| BUG-012 | High | jerry-ext / handle-scope | `jerryx_remove_handle` on heap-allocated handle leaves `*result` uninitialized and leaks `jerryx_handle_t` | CONFIRMED |
+| BUG-013 | High | Core API | `jerry_define_own_property` checks `is_enumerable` instead of `is_configurable` and returns raw `ECMA_VALUE_ERROR` | CONFIRMED |
+| BUG-014 | High | Core API | `jerry_create_regexp_sz` returns raw `ECMA_VALUE_ERROR` on invalid pattern and passes UTF-8 to CESU-8 constructor | CONFIRMED |
+| BUG-015 | High | Core API | `jerry_create_typedarray_for_arraybuffer` passes byte length as element count, failing for multi-byte TypedArrays | CONFIRMED |
+| BUG-016 | High | Core API | `jerry_create_dataview` leaks heap-allocated `ecma_number_t` arguments for offsets/lengths > `ECMA_INTEGER_NUMBER_MAX` | CONFIRMED |
+| BUG-017 | High | Core API | `jerry_json_stringify` dereferences/uses error argument before error-reference check and omits `jerry_return()` | SUSPECTED |
+| BUG-018 | High | Debugger | `jerry_debugger_send_eval` and `jerry_debugger_send_scope_variables` crash on `Symbol` / throwing `toString` / accessor properties | SUSPECTED |
+| BUG-019 | High | Snapshot API | `jerry_snapshot_result` lacks bounds checks on `func_offsets[func_index]` / `func_offset` and omits `ecma_create_error_reference_from_context()` | SUSPECTED |
+| BUG-020 | Medium | RegExp | `re_parse_next_token` treats NUL (`\0`) as EOF, truncating patterns containing NUL bytes | CONFIRMED |
+| BUG-021 | Medium | RegExp | 32-bit integer overflow in `{min,max}` quantifier parsing allows invalid/wrapped quantifiers | CONFIRMED |
+| BUG-022 | Medium | RegExp | Character class range `[a-\d]` uses `LIT_CHAR_UNDEF` (`0xFFFF`) as range end, compiling as `[a-\uFFFF]` | CONFIRMED |
+| BUG-023 | Medium | RegExp | Unicode greedy iterator backtracking steps back a single UTF-16 code unit, splitting surrogate pairs | CONFIRMED |
+| BUG-024 | Medium | RegExp | `RE_OP_BACKREFERENCE` uses `memcmp` and ignores `/i` (`ignoreCase`) flag | CONFIRMED |
+| BUG-025 | Medium | RegExp | `ecma_regexp_exec_helper` wraps `lastIndex` via `ToUint32`, matching at 0 when `lastIndex === 2**32` | CONFIRMED |
+| BUG-026 | Medium | RegExp | Sticky non-global `RegExp.prototype[@@replace]` fast path ignores sticky flag and scans forward without updating `lastIndex` | CONFIRMED |
+| BUG-027 | Medium | RegExp | Undefined behavior passing `NULL` to `memset` in `ecma_regexp_initialize_context` | CONFIRMED |
+| BUG-028 | Medium | DataView | `ecma_op_dataview_create` truncates `byteOffset` >= `2**32` via `(uint32_t)` cast (UB + silent wraparound) and evaluates offset twice | CONFIRMED |
+| BUG-029 | Medium | TypedArray | `TypedArray.prototype.set` with overlapping different-typed views over the same `ArrayBuffer` clobbers unread source bytes | CONFIRMED |
+| BUG-030 | Medium | TypedArray | `ecma_typedarray_set_uint8_clamped_element` performs undefined `(uint8_t) NaN` cast | SUSPECTED |
+| BUG-031 | Medium | jerry-ext / module | `jerryx_module_check_cache` uses `jerry_has_property` instead of `jerry_has_own_property`, allowing `Object.prototype` properties to resolve as modules | CONFIRMED |
+| BUG-032 | Medium | jerry-ext / debugger | Multiple defects in `debugger-serial.c` (even parity sets `PARODD`, double `close(fd)`, leaked `fd`, unterminated `strncpy`, raw baud passed to `cfsetispeed`) | SUSPECTED |
+| BUG-033 | Medium | jerry-ext / debugger | `jerryx_debugger_ws_create` registers transport and returns `true` when handshake fails after disconnect | SUSPECTED |
+| BUG-034 | Medium | Core API | `jerry_set_prototype` does not check for prototype cycles, enabling infinite loops | SUSPECTED |
+| BUG-035 | Critical | GC / Generator | GC fails to mark VM stack contexts in suspended generators, causing use-after-free and live object reuse | CONFIRMED |
+| BUG-036 | Critical | TypedArray | Double-free, use-after-free, and memory leak in `TypedArray.prototype.toLocaleString` | CONFIRMED |
+| BUG-037 | Critical | GC / WeakMap | `ecma_gc_free_object` ignores property hashmap on `WeakMap`/`WeakSet`, causing assertion crash / memory corruption | CONFIRMED |
+| BUG-038 | Critical | Array | Fast-array TOCTOU heap out-of-bounds read / NULL dereference in `Array.prototype.indexOf`, `lastIndexOf`, and `slice` | CONFIRMED |
+| BUG-039 | Critical | VM / Spread | Out-of-bounds stack read/free and argument leak on spread error in `opfunc_spread_arguments` | CONFIRMED |
+| BUG-040 | Critical | RegExp | Use-after-free in `RegExp.prototype.compile` when compiling a RegExp from itself | CONFIRMED |
+| BUG-041 | Critical | Objects / Enumeration | Stack buffer overflow and skipped prototype lazy properties in `ecma_op_object_get_property_names` | CONFIRMED |
+| BUG-042 | Critical | String | Use-after-free of heap-allocated float value in `String.fromCodePoint` | SUSPECTED |
+| BUG-043 | High | Generator / Function | Nested generator call in default parameter clears `current_function_obj_p`, causing NULL-dereference crash | CONFIRMED |
+| BUG-044 | High | Promise / JobQueue | `ecma_free_all_enqueued_jobs` frees `PromiseResolveThenableJob` with wrong size and leaks `then` | CONFIRMED |
+| BUG-045 | High | String | Infinite loop leading to OOM in `String.raw` when `next_index >= number_of_substitutions` | CONFIRMED |
+| BUG-046 | High | Iterators / Generator | `ecma_op_iterator_return` passes C `true` (`1`) instead of `ECMA_VALUE_TRUE` to `ecma_create_iter_result_object` | CONFIRMED |
+| BUG-047 | High | VM / Exceptions | `VM_OC_CONTEXT_END` ignores pending exception raised by `for-of` `iterator.return()` | CONFIRMED |
+| BUG-048 | High | JSON | `JSON.stringify` crashes on `NULL` string when `new String().toString()` throws | CONFIRMED |
+| BUG-049 | High | Promise | Memory leak of `capability` in `Promise.resolve` / `Promise.reject` when resolve/reject function throws | CONFIRMED |
+| BUG-050 | High | String | Memory leak of `search_symbol` in `String.prototype.search` when `@@search` is non-callable | CONFIRMED |
+| BUG-051 | High | Iterators | `ArrayIterator.prototype.next` crashes on frozen iterator at index 65535 and leaks large heap float indices | CONFIRMED |
+| BUG-052 | High | Iterators | `StringIterator.prototype.next` `uint16_t` overflow wraps index `65534 + 2` to `0` on surrogate pair, causing infinite iteration | CONFIRMED |
+| BUG-053 | High | Conversion / Object | `ecma_op_same_value` uses `==` instead of `&&` for NaN check, breaking `Object.is` and allowing mutation of frozen float properties | CONFIRMED |
+| BUG-054 | High | Global | `parseFloat` compares only 1 byte of `"Infinity"` due to `sizeof(*infinity_str_p)` | CONFIRMED |
+| BUG-055 | High | Object | `Object.freeze`, `Object.seal`, `Object.isFrozen`, and `Object.isSealed` ignore Symbol properties | CONFIRMED |
+| BUG-056 | High | Date | `Date.prototype.get*` on Invalid Date (`NaN`) returns string `"NaN"` instead of number `NaN` | CONFIRMED |
+| BUG-057 | High | String Helpers | Reversed subtraction `LIT_MAGIC_STRING__COUNT - magic_string_ex_id` causes `uint32_t` underflow and OOB read in `ecma_string_get_chars_fast` | SUSPECTED |
+| BUG-058 | High | Snapshot / Literals | `ecma_save_literals_add_compiled_code` reads `literal_p[0..argument_end-1]` past literal pool into bytecode/OOB and truncates >64 KB strings | SUSPECTED |
+| BUG-059 | Medium | String | Multiple logic bugs in `String.prototype.startsWith`, `endsWith`, `indexOf`, and `lastIndexOf` | CONFIRMED |
+| BUG-060 | Medium | String | `String.prototype.repeat` and `String.prototype.substr` wrap 32-bit counts/indices via `ToUint32` | CONFIRMED |
+| BUG-061 | Medium | Array / Objects | `Object.preventExtensions` on a fast array prevents modifying existing writable elements | CONFIRMED |
+| BUG-062 | Medium | TypedArray | `TypedArray` indexed `[[Put]]` swallows `ToNumber` exceptions | CONFIRMED |
+| BUG-063 | Medium | TypedArray | `TypedArray.prototype.indexOf` fails / invokes UB on negative `fromIndex < -length` | CONFIRMED |
+| BUG-064 | Medium | Global | `unescape` fails to reset `hex_digits` on invalid sequences and mishandles `%%xx` | CONFIRMED |
+| BUG-065 | Medium | JSON | `JSON.stringify` ignores empty replacer array `[]` | CONFIRMED |
+| BUG-066 | Medium | Promise | `Promise.all` / `Promise.race` inverted `is_done` check skips iterator close and continues iterating rejected promise on non-iterable input | CONFIRMED |
+| BUG-067 | Medium | Generator | `Generator.prototype.return` and `.throw` on completed generators ignore argument / fail to throw | CONFIRMED |
+| BUG-068 | Medium | Number | `Number.prototype.toString` wraps radix via `ToUint32` and `Number.prototype.toFixed` drops minus sign for `abs(x) >= 1e21` | CONFIRMED |
+| BUG-069 | Medium | Date | `Date.prototype[Symbol.toPrimitive]` accepts invalid hints, `setTime` returns unclipped value, and `new Date(obj)` calls `valueOf()` twice | CONFIRMED |
+| BUG-070 | Medium | Reflect | Multiple `Reflect` API contract violations (`preventExtensions`, `setPrototypeOf`, `defineProperty`, `apply`) | CONFIRMED |
+| BUG-071 | Medium | Map / Set | `Map`/`Set` `forEach` omits 3rd argument & visits cleared entries; re-insertion after `delete` preserves stale order | CONFIRMED |
+| BUG-072 | Medium | Class / Parser / VM | `class C extends B` silently ignores primitive/null `B.prototype` and named class expressions omit inner binding | CONFIRMED |
+| BUG-073 | Medium | Array | `Array[Symbol.species]` is ignored by `ecma_op_array_species_create` and `Array` `length` setter ignores first `ToNumber` value | CONFIRMED |
+| BUG-074 | Medium | Parser | `for (var x = init in obj)` skips executing `init` (violating Annex B) | CONFIRMED |
+| BUG-075 | Medium | Conversion / VM / Math | Undefined behavior: 64-bit shift overflow in `ecma_utf8_string_to_number`, negative/overflow left shifts in `vm_loop`/`opfunc_bitwise`/`ecma_integer_multiply`, and `INT32_MIN` negation in TypedArray | CONFIRMED |
+| BUG-076 | Medium | Function / Prototype | `ecma_op_get_prototype_from_constructor` leaks non-object `prototype` values | SUSPECTED |
+| BUG-077 | Medium | VM / Debugger | `vm_run_eval` debugger `chain_index` error leaks `this_binding` and `bytecode_data_p` | SUSPECTED |
+| BUG-078 | Medium | Memory Allocator | `jmem_heap_alloc` fast path can set `jmem_heap_list_skip_p` to `area + 0xffffffff` when `next_offset == JMEM_HEAP_END_OF_LIST` | SUSPECTED |

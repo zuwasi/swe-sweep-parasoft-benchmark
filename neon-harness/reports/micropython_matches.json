@@ -2,719 +2,351 @@
  {
   "finding": "MP-001",
   "sev": "Critical",
-  "title": "Stack buffer overflow via signed integer overflow in mp_format_float",
+  "title": "Heap buffer overflow in `uos.urandom()` on negative length via `size_t` wraparound",
   "bugs": {}
  },
  {
   "finding": "MP-002",
   "sev": "Critical",
-  "title": "Walrus operator (:=) inside comprehensions writes to OOB local slot (VM memory corruption / SEGV)",
+  "title": "Heap buffer overflow in `ffi.callback()` when `paramtypes` lacks `__len__`",
   "bugs": {}
  },
  {
   "finding": "MP-003",
   "sev": "Critical",
-  "title": "Unchecked 8-bit bit-packing in UNPACK_EX (n_left >= 256) causes VM stack underflow & SEGV",
+  "title": "Missing `nlr_pop()` on early returns in `call_dupterm_read()` corrupts NLR exception stack",
   "bugs": {}
  },
  {
   "finding": "MP-004",
-  "sev": "Critical",
-  "title": "Unchecked 8-bit bit-packing in CALL_FUNCTION/CALL_METHOD (n_positional >= 256) corrupts stack & hijacks calls",
+  "sev": "High",
+  "title": "Stack buffer over-read in `socket.accept()` when peer address exceeds 32 bytes (`AF_UNIX`)",
   "bugs": {}
  },
  {
   "finding": "MP-005",
-  "sev": "Critical",
-  "title": "Unchecked bytesize in inline assembler data() directive causes heap buffer overflow / SEGV (and align(0) resets code_offset)",
+  "sev": "High",
+  "title": "Missing buffer length checks in `usocket.sockaddr()` and `inet_ntop()` cause OOB read and unsigned underflow",
   "bugs": {}
  },
  {
   "finding": "MP-006",
-  "sev": "Critical",
-  "title": "@micropython.viper closures never create cell objects, causing type confusion & SEGV",
+  "sev": "High",
+  "title": "Out-of-bounds read past `MICROPYPATH=\"\"` leaks adjacent environment variables into `sys.path`",
   "bugs": {}
  },
  {
   "finding": "MP-007",
-  "sev": "Critical",
-  "title": "@micropython.viper async def sets MP_SCOPE_FLAG_GENERATOR without generator prelude -> SEGV",
+  "sev": "High",
+  "title": "Missing type and length checks in `termios.tcsetattr()` cause OOB heap read / NULL deref",
   "bugs": {}
  },
  {
   "finding": "MP-008",
-  "sev": "Critical",
-  "title": "@micropython.viper ignores *args, **kwargs, and kwonly params -> uninitialized stack/register read",
+  "sev": "High",
+  "title": "Unchecked NULL return from `gmtime()`/`localtime()` causes SEGFAULT on out-of-range timestamps",
   "bugs": {}
  },
  {
   "finding": "MP-009",
-  "sev": "Critical",
-  "title": "Persistent .mpy loader lacks bounds/validation checks: NULL deref, OOB read/write, overflow, infinite loop, assert crash",
+  "sev": "High",
+  "title": "Unvalidated argument count/kwargs in `ffifunc_call()` aborts (debug) or reads OOB/uninitialized args (release)",
   "bugs": {}
  },
  {
   "finding": "MP-010",
-  "sev": "Critical",
-  "title": "ARMv7-M OP_BCC_W encodes wide conditional branches (B<cc>.W) with scrambled bit fields",
+  "sev": "High",
+  "title": "Pointer-to-pointer bug in `mp_unix_free_exec()` corrupts `mmap_region_head` list; failed `mmap` causes GC NULL deref",
   "bugs": {}
  },
  {
   "finding": "MP-011",
-  "sev": "Critical",
-  "title": "ARMv6-M asm_thumb_add_reg_reg_offset adds reg_dest + reg_dest instead of reg_dest + reg_base",
+  "sev": "High",
+  "title": "Stack buffer overflow / assertion failure in `mp_hal_move_cursor_back()` for cursor moves >= 1000 chars",
   "bugs": {}
  },
  {
   "finding": "MP-012",
-  "sev": "Critical",
-  "title": "ARMv6 asmarm.c: ldrh writeback corrupts REG_QSTR_TABLE and asm_arm_entry corrupts stack for num_locals 1..3 or >=64",
+  "sev": "High",
+  "title": "Uninitialized stack reads and stack buffer over-reads in DHCP option parsing",
   "bugs": {}
  },
  {
   "finding": "MP-013",
-  "sev": "Critical",
-  "title": "Native nlr_jump() inline asm omits 'memory' clobber \u2014 GCC deletes ret_val & nlr_top stores, segfaulting every exception",
+  "sev": "Medium",
+  "title": "64-bit `long` (`'l'`) FFI return values truncated to 32-bit `signed int` on LP64 systems",
   "bugs": {}
  },
  {
   "finding": "MP-014",
-  "sev": "Critical",
-  "title": "GC ATB_GET_KIND OOB read/write past gc_alloc_table_byte_len -> heap-buffer-overflow, FTB/heap corruption, wrong gc_nbytes",
+  "sev": "Medium",
+  "title": "Floating-point rounding sets `tv_usec = 1000000`, causing spurious `OSError(EDOM/EINVAL)`",
   "bugs": {}
  },
  {
   "finding": "MP-015",
-  "sev": "Critical",
-  "title": "4 heap buffer overflows / assertion aborts in mp_call_prepare_args_n_kw_var",
-  "bugs": {
-   "micropython-ec6689a8cc86": {
-    "region": [
-     805,
-     806,
-     807,
-     808,
-     809,
-     810,
-     811
-    ],
-    "strict": [
-     808
-    ]
-   }
-  }
+  "sev": "Medium",
+  "title": "Unchecked `malloc()` failure in `-X heapsize=` causes NULL dereference in `gc_init()`",
+  "bugs": {}
  },
  {
   "finding": "MP-016",
-  "sev": "Critical",
-  "title": "TRACE_TICK raising StopIteration before FOR_ITER/YIELD_FROM corrupts code_state->sp -> local overwrite & IP hijack SEGV",
+  "sev": "Medium",
+  "title": "Unchecked `pthread_kill()` and unretried `EINTR` on `sem_wait()` in `mp_thread_gc_others()` cause GC race/deadlock",
   "bugs": {}
  },
  {
   "finding": "MP-017",
-  "sev": "Critical",
-  "title": "CANCEL_ACTIVE_FINALLY does not unwind for-loop iterators on value stack -> NULL deref SEGV / stack corruption",
+  "sev": "Medium",
+  "title": "`size_t` underflow OOB read (`rl.cursor_pos - 1`) on Tab when cursor is at column 0 of non-empty line",
   "bugs": {}
  },
  {
   "finding": "MP-018",
-  "sev": "Critical",
-  "title": "sys.settrace frame object holds dangling pointer to stack-allocated mp_code_state_t -> stack use-after-return",
+  "sev": "Medium",
+  "title": "Signed `char` comparisons in `memcmp`/`strcmp`/`strncmp` and mismatched casts in `strchr`/`memchr` violate C99",
   "bugs": {}
  },
  {
   "finding": "MP-019",
-  "sev": "Critical",
-  "title": "mp_import_all type confusion SEGV & mp_import_from NULL deref SEGV (plus unbounded alloca)",
+  "sev": "Medium",
+  "title": "Prefix-only comparison in `memzip_find_file_header()` matches wrong files sharing a prefix",
   "bugs": {}
  },
  {
   "finding": "MP-020",
   "sev": "Critical",
-  "title": "gc_realloc SIZE_MAX integer overflow frees AT_HEAD and returns dangling pointer (UAF)",
+  "title": "Negative width in `str.center()` wraps `size_t` and triggers heap buffer overflow in `memset()`",
   "bugs": {}
  },
  {
   "finding": "MP-021",
   "sev": "Critical",
-  "title": "Heap buffer overflow/underflow & wild memset(-N) in mpz_as_bytes when len == 0",
-  "bugs": {
-   "micropython-85267a3c1ee8": {
-    "region": [
-     118,
-     440,
-     1592,
-     1593,
-     1594,
-     1595,
-     1598,
-     1599,
-     1600,
-     1601,
-     1602,
-     1603,
-     1607,
-     1608,
-     1609,
-     1610,
-     1611,
-     1612,
-     1613,
-     1614,
-     1615,
-     1616,
-     1617,
-     1618,
-     1619,
-     1620,
-     1621,
-     1622,
-     1623,
-     1624,
-     1625,
-     1626,
-     1627,
-     1628,
-     1629,
-     1630,
-     1631,
-     1632
-    ],
-    "strict": [
-     118,
-     440,
-     1592,
-     1612,
-     1613,
-     1614,
-     1617,
-     1618,
-     1619,
-     1624,
-     1625,
-     1626,
-     1628,
-     1629,
-     1631
-    ]
-   }
-  }
+  "title": "Missing multiplication overflow check in sequence `*` causes heap/global buffer overflow",
+  "bugs": {}
  },
  {
   "finding": "MP-022",
   "sev": "Critical",
-  "title": "Signed integer overflow -> OOB heap read & SEGV in mp_seq_extract_slice",
+  "title": "`array_construct()` trusts iterable `__len__` without bounds checks, causing heap overflow or stale length",
   "bugs": {}
  },
  {
   "finding": "MP-023",
   "sev": "Critical",
-  "title": "Use-after-free / fake-object dereference & SEGV on reentrant list mutation in mp_seq_index_obj/count_obj/cmp_objs",
+  "title": "Native-type subclass overriding `__new__` via `object.__new__` leaves `subobj[0]` uninitialized (type confusion / SIGSEGV)",
   "bugs": {}
  },
  {
   "finding": "MP-024",
   "sev": "Critical",
-  "title": "Heap buffer overflow via size_t multiplication overflow in str * n and bytes * n",
+  "title": "`list.sort(key=...)` holds raw `head`/`tail` pointers across Python callbacks, causing UAF / SIGSEGV on list mutation",
   "bugs": {}
  },
  {
   "finding": "MP-025",
   "sev": "Critical",
-  "title": "Heap buffer overflow / memset(-1) crash in str.center() and bytes.center() on negative width",
+  "title": "`.mpy` loader (`read_uint`, `load_obj`, `load_raw_code`, `mp_native_relocate`) lacks EOF/bounds checks (infinite loop, assert abort, OOB)",
   "bugs": {}
  },
  {
   "finding": "MP-026",
-  "sev": "Critical",
-  "title": "Integer overflow & list allocation wrap leading to SEGV / heap underflow in str.rsplit()",
+  "sev": "High",
+  "title": "Exception in `class` body skips `mp_locals_set(old_locals)`, permanently corrupting module `locals()`",
   "bugs": {}
  },
  {
   "finding": "MP-027",
-  "sev": "Critical",
-  "title": "bytes(bytearray()) creates bytes object with o->data == NULL -> SEGV in str_rsplit, ure.compile, struct.pack, open",
+  "sev": "High",
+  "title": "`StringIO.seek()` omits open check before dereferencing `o->vstr`, causing NULL dereference / SIGSEGV",
   "bugs": {}
  },
  {
   "finding": "MP-028",
-  "sev": "Critical",
-  "title": "Out-of-bounds heap read / memory disclosure in str_subscr via 7 invalid-UTF-8 str producers",
+  "sev": "High",
+  "title": "`pow(a, b, 0)` aborts/reads OOB; `0**0` (mpz) and `pow(0, 0, m)` return `0`; negative exponent/modulus bugs",
   "bugs": {}
  },
  {
   "finding": "MP-029",
-  "sev": "Critical",
-  "title": "Integer overflow in sequence repetition (list * n and tuple * n) causes heap/global buffer overflow",
+  "sev": "High",
+  "title": "`range` truncates 64-bit `mp_int_t` into 63-bit small-int (sign flip) and overflows signed subtraction in `range_len`",
   "bugs": {}
  },
  {
   "finding": "MP-030",
-  "sev": "Critical",
-  "title": "array_construct heap buffer overflow, allocation size overflow, and unchecked __len__",
+  "sev": "High",
+  "title": "`get_fmt_num()` uses unchecked `MP_OBJ_SMALL_INT_VALUE` (pointer bits read as repeat count) and unchecked pointer arithmetic",
   "bugs": {}
  },
  {
   "finding": "MP-031",
-  "sev": "Critical",
-  "title": "dict.fromkeys() allocation size overflow & unchecked MP_OBJ_SMALL_INT_VALUE -> NULL deref / heap OOB",
+  "sev": "High",
+  "title": "`mp_binary_get_size()` missing `case '=':`, breaking all native-order standard-size `ustruct` formats",
   "bugs": {}
  },
  {
   "finding": "MP-032",
-  "sev": "Critical",
-  "title": "list.sort() use-after-free & heap corruption on self-mutating key / __lt__",
+  "sev": "High",
+  "title": "Array/bytearray comparisons confuse signed/unsigned types and compare multi-byte integers via little-endian `memcmp`",
   "bugs": {}
  },
  {
   "finding": "MP-033",
-  "sev": "Critical",
-  "title": "StringIO.write()/BytesIO.write() massive heap buffer overflow via 32-bit ROUND_ALLOC truncation",
+  "sev": "Medium",
+  "title": "`list.insert()` uses unchecked `MP_OBJ_SMALL_INT_VALUE`, silently misinterpreting non-small-int indices",
   "bugs": {}
  },
  {
   "finding": "MP-034",
-  "sev": "Critical",
-  "title": "Type confusion when subclassing native protocol types (e.g. io.StringIO / io.BytesIO)",
+  "sev": "Medium",
+  "title": "Number parser accepts digitless strings (`int(\"_\")`, `float(\".\")`) and rejects underscored big ints",
   "bugs": {}
  },
  {
   "finding": "MP-035",
-  "sev": "Critical",
-  "title": "Type confusion in tuple + tuple_subclass (mp_obj_tuple_binary_op)",
-  "bugs": {}
+  "sev": "Medium",
+  "title": "`math.pow(2.0, inf)` raises `ValueError` due to missing `!isinf(y)` check; `math.ldexp()` truncates 64-bit exponent to 32-bit `int`",
+  "bugs": {
+   "micropython-639baaf0eaee": {
+    "region": [
+     57
+    ],
+    "strict": [
+     57
+    ]
+   }
+  }
  },
  {
   "finding": "MP-036",
-  "sev": "Critical",
-  "title": "namedtuple with zero fields writes to read-only .rodata (mp_const_empty_tuple_obj)",
+  "sev": "Medium",
+  "title": "`cmath.log(0)` returns `-inf` instead of `ValueError`; `polar`/`log`/`sqrt` overflow for `|z| > 1.34e154`",
   "bugs": {}
  },
  {
   "finding": "MP-037",
-  "sev": "Critical",
-  "title": "Uninitialized native base (subobj[0] == &native_base_init_wrapper_obj) causes type confusion, .rodata writes, and NULL fn calls",
+  "sev": "Medium",
+  "title": "Calling `.throw(exc)` on an exhausted generator returns `StopIteration` instead of raising `exc`",
   "bugs": {}
  },
  {
   "finding": "MP-038",
-  "sev": "Critical",
-  "title": "super(cls, obj) does not validate obj -> arbitrary pointer deref, heap OOB read, and NULL deref",
+  "sev": "Medium",
+  "title": "`round(1, -(1<<62))` overflows small-int negation and raises `ZeroDivisionError`",
   "bugs": {}
  },
  {
   "finding": "MP-039",
-  "sev": "Critical",
-  "title": "Unchecked C methods exposed via cls.__dict__ cause NULL fn calls, raw MP_OBJ_NULL injection, type confusion, and frozenset mutation",
+  "sev": "Medium",
+  "title": "`stream_unbuffered_readline()` uses unchecked `MP_OBJ_SMALL_INT_VALUE` on optional `size` argument",
   "bugs": {}
  },
  {
   "finding": "MP-040",
-  "sev": "Critical",
-  "title": "mp_map_lookup & mp_set_lookup reentrancy crashes (SIGFPE, SEGV, UAF) when __hash__ or __eq__ mutates container",
+  "sev": "Medium",
+  "title": "`str.rsplit`/`startswith`/`endswith` accept `bytes` on `str`; `'{:c}'.format()` truncates `>= 0x100` and emits invalid UTF-8",
   "bugs": {}
  },
  {
   "finding": "MP-041",
-  "sev": "Critical",
-  "title": "memoryview over resized bytearray / array use-after-free (leaks live object headers / arbitrary heap write)",
+  "sev": "Medium",
+  "title": "`(-1).to_bytes(10, 'big')` zero-pads high bytes instead of sign-extending or rejecting negative values",
   "bugs": {
-   "micropython-8625d05e0e82": {
+   "micropython-85267a3c1ee8": {
     "region": [
-     508,
-     509,
-     510,
-     511,
-     512,
-     513
+     436,
+     437,
+     438,
+     439,
+     440,
+     441,
+     442,
+     443,
+     444,
+     445,
+     446,
+     447
     ],
-    "strict": []
+    "strict": [
+     436,
+     440,
+     445,
+     446
+    ]
    }
   }
  },
  {
   "finding": "MP-042",
-  "sev": "Critical",
-  "title": "Integer overflow in struct size calculation causes heap buffer overflow & OOB read",
+  "sev": "Medium",
+  "title": "Negative `__len__` hint causes unsigned wraparound and multi-gigabyte allocation failure in `dict.fromkeys` and `*` unpacking",
   "bugs": {}
  },
  {
   "finding": "MP-043",
-  "sev": "Critical",
-  "title": "Unchecked MP_OBJ_SMALL_INT_VALUE in struct get_fmt_num leaks raw heap pointers",
+  "sev": "Medium",
+  "title": "Unsigned underflow in `decompress_error_text_maybe()` when `emg_buf_size < EMG_BUF_STR_BUF_OFFSET` causes NULL deref under OOM",
   "bugs": {}
  },
  {
   "finding": "MP-044",
-  "sev": "Critical",
-  "title": "io.IOBase passes stack-allocated mutable bytearray wrapping caller buffers to Python (stack UAR, .rodata write SEGV, invalid gc_realloc)",
+  "sev": "Medium",
+  "title": "Stale source pointer UAF on self-extend/self-slice-assign reallocation, and 32-bit `ROUND_ALLOC` truncation in `vstr.c`",
   "bugs": {}
  },
  {
   "finding": "MP-045",
   "sev": "Critical",
-  "title": "Unvalidated IOBase.readinto/write return count underflows size in mp_stream_rw -> arbitrary OOB read/write",
+  "title": "Zero-field `namedtuple` overwrites read-only global `mp_const_empty_tuple.base.type` (SIGSEGV)",
   "bugs": {}
  },
  {
   "finding": "MP-046",
   "sev": "Critical",
-  "title": "Type confusion & arbitrary memory write in builtins.__build_class__",
+  "title": "`IOBase` passes stack-allocated mutable `bytearray` to Python callbacks (stack UAR, ROM write SIGSEGV, `gc_realloc` abort)",
   "bugs": {}
  },
  {
   "finding": "MP-047",
   "sev": "Critical",
-  "title": "Uninitialized mp_state_thread_t in thread_entry causes GC heap UAF & UBSan _Bool load",
+  "title": "Clearing/rehashing `dict` or `set` inside `__eq__` causes division by zero (`SIGFPE`) and dangling `avail_slot` UAF",
   "bugs": {}
  },
  {
   "finding": "MP-048",
   "sev": "Critical",
-  "title": "uos.urandom(-1) wraps vstr_init_len to 1 byte and calls getrandom(buf, SIZE_MAX) -> massive heap buffer overflow",
+  "title": "Unchecked 8-bit packing in `unpack_ex`, `call_function`, and closures causes VM stack corruption (`SIGSEGV`) and assertion aborts",
   "bugs": {}
  },
  {
   "finding": "MP-049",
   "sev": "Critical",
-  "title": "uselect.poll uint16_t alloc wraparound shrinks entries to 4 slots and writes 512KB+ OOB (heap buffer overflow SEGV)",
+  "title": "Viper `//` and `%` lack zero-divisor and `INT64_MIN // -1` checks, crashing the interpreter with hardware `SIGFPE`",
   "bugs": {}
  },
  {
   "finding": "MP-050",
   "sev": "Critical",
-  "title": "uselect.poll ipoll() signed short overflow in iter_cnt / iter_idx (>32767 fds) causes heap buffer underflow SEGV",
+  "title": "Viper emitter asserts `VTYPE_PYOBJ` / cast arity instead of type-checking (`SIGABRT` in debug; raw-int type confusion in release)",
   "bugs": {}
  },
  {
   "finding": "MP-051",
   "sev": "Critical",
-  "title": "usocket.sockaddr() NULL pointer deref, size_t underflow to SIZE_MAX, and heap buffer over-read on short buffers",
+  "title": "`ATB_GET_KIND(block + n_blocks)` reads/corrupts past end of alloc table; `gc_realloc` `size_t` overflow frees live block and returns it",
   "bugs": {}
  },
  {
   "finding": "MP-052",
-  "sev": "Critical",
-  "title": "usocket.inet_ntop() missing buffer length check -> NULL deref SEGV and heap buffer over-read",
+  "sev": "High",
+  "title": "`str_subscr` computes multi-byte length from lead byte without bounds check, reading OOB on malformed UTF-8 `str`",
   "bugs": {}
  },
  {
   "finding": "MP-053",
-  "sev": "Critical",
-  "title": "socket.accept() stack buffer over-read on AF_UNIX peer addresses > 32 bytes",
-  "bugs": {}
- },
- {
-  "finding": "MP-054",
-  "sev": "Critical",
-  "title": "socket.recv()/recvfrom() heap buffer over-read with MSG_TRUNC & unchecked MP_OBJ_SMALL_INT_VALUE",
-  "bugs": {}
- },
- {
-  "finding": "MP-055",
-  "sev": "Critical",
-  "title": "termios.tcsetattr() type confusion / debug abort on non-list attrs and completely unchecked attrs[6] (cc) cast",
-  "bugs": {}
- },
- {
-  "finding": "MP-056",
-  "sev": "Critical",
-  "title": "termios.tcsetattr() missing length checks on attrs (< 7) and cc (< NCCS) -> NULL deref & heap OOB read",
-  "bugs": {}
- },
- {
-  "finding": "MP-057",
-  "sev": "Critical",
-  "title": "NULL pointer dereference in time.gmtime()/localtime() on out-of-range timestamps",
-  "bugs": {}
- },
- {
-  "finding": "MP-058",
-  "sev": "Critical",
-  "title": "Non-stop-the-world GC under MICROPY_PY_THREAD_GIL=0 causes live use-after-free & type confusion",
-  "bugs": {}
- },
- {
-  "finding": "MP-059",
-  "sev": "Critical",
-  "title": "mp_thread_deinit() async cancellation without join + post-unlock free(thread) causes heap-use-after-free & deadlock",
-  "bugs": {}
- },
- {
-  "finding": "MP-060",
-  "sev": "Critical",
-  "title": "mp_unix_alloc_exec() mishandles mmap failure/size-0/rounding overflow, inserts NULL into mmap_region_head, and returns NULL silently",
-  "bugs": {}
- },
- {
-  "finding": "MP-061",
-  "sev": "Critical",
-  "title": "sighandler(SIGINT) longjmps (nlr_raise) out of signal context, leaking gc_mutex/gc_lock_depth -> permanent heap lock & deadlock",
-  "bugs": {}
- },
- {
-  "finding": "MP-062",
-  "sev": "Critical",
-  "title": "nlraarch64.c and nlrpowerpc.c clobber %0 (top) during register restore (plus non-naked PPC nlr_push & 32-bit addr truncation)",
-  "bugs": {}
- },
- {
-  "finding": "MP-063",
-  "sev": "Critical",
-  "title": "Missing nlr_pop() on both early returns in call_dupterm_read() causes dangling NLR frame / self-loop stack corruption",
-  "bugs": {}
- },
- {
-  "finding": "MP-064",
-  "sev": "Critical",
-  "title": "Unchecked mp_obj_int_get_truncated() in modffi.c causes type confusion & immediate SIGSEGV",
-  "bugs": {}
- },
- {
-  "finding": "MP-065",
-  "sev": "Critical",
-  "title": "Immediate-object pointer dereference (SIGSEGV) in ffifunc_call()",
-  "bugs": {}
- },
- {
-  "finding": "MP-066",
-  "sev": "Critical",
-  "title": "Heap buffer overflow & uninitialized pointer read in mod_ffi_callback()",
-  "bugs": {}
- },
- {
-  "finding": "MP-067",
-  "sev": "Critical",
-  "title": "assert()-only arg count check in ffifunc_call() causes stack/heap OOB read in release builds",
-  "bugs": {}
- },
- {
-  "finding": "MP-068",
-  "sev": "Critical",
-  "title": "Format string vulnerability in print_jobject() + missing NULL/exception checks & local-ref leak",
-  "bugs": {}
- },
- {
-  "finding": "MP-069",
-  "sev": "Critical",
-  "title": "Unbounded 64-byte stack buffer overflow in get_jclass_name()",
-  "bugs": {}
- },
- {
-  "finding": "MP-070",
-  "sev": "Critical",
-  "title": "Uninitialized jval.l passed to SetObjectArrayElement() in jobject_subscr()",
-  "bugs": {}
- },
- {
-  "finding": "MP-071",
-  "sev": "Critical",
-  "title": "Stack buffer overflow via strcpy() of MICROPYBTUART env var in mpbthciport.c",
-  "bugs": {}
- },
- {
-  "finding": "MP-072",
-  "sev": "Critical",
-  "title": "Raw pthread in mpbtstackport_usb.c invokes Python VM bytecode directly without TLS, GIL, or NLR handler",
-  "bugs": {}
- },
- {
-  "finding": "MP-073",
-  "sev": "Critical",
-  "title": "Permanent thread_mutex deadlock in mpbtstackport_common.c when BLE IRQ handler raises an exception",
-  "bugs": {}
- },
- {
-  "finding": "MP-074",
   "sev": "High",
-  "title": "Native/Viper end_finally never clears LOCAL_IDX_EXC_HANDLER_UNWIND, causing stale unwind jumps / infinite loops",
-  "bugs": {}
- },
- {
-  "finding": "MP-075",
-  "sev": "High",
-  "title": "x86-64 asm_x64_test_r8_with_r8 omits REX prefix for RSI/RDI/RBP/RSP, breaking Viper keyword-argument checks",
-  "bugs": {}
- },
- {
-  "finding": "MP-076",
-  "sev": "High",
-  "title": "Bare raise and raise e from c in @micropython.native/@micropython.viper crash with assert / stack underflow",
-  "bugs": {}
- },
- {
-  "finding": "MP-077",
-  "sev": "High",
-  "title": "@micropython.viper missing type checks/boxing causes assert aborts (DEBUG) or raw-int-as-mp_obj_t type confusion / SEGV (release)",
-  "bugs": {}
- },
- {
-  "finding": "MP-078",
-  "sev": "High",
-  "title": "@micropython.viper integer floor-divide / modulo triggers hardware SIGFPE on /0 or INT64_MIN // -1",
-  "bugs": {}
- },
- {
-  "finding": "MP-079",
-  "sev": "High",
-  "title": "Function with >= 256 locals closing over a local aborts (DEBUG) or truncates cell index causing type confusion (release)",
-  "bugs": {}
- },
- {
-  "finding": "MP-080",
-  "sev": "High",
-  "title": "OrderedDict({1, 2}) compiler optimization crashes with stack-size assertion failure / stack corruption",
-  "bugs": {}
- },
- {
-  "finding": "MP-081",
-  "sev": "High",
-  "title": "compile_async_for_stmt uses MP_PARSE_NODE_LEAF_ARG(nodes[1]) as variable qstr -> clobbers user vars & pointer-as-qstr confusion",
-  "bugs": {
-   "micropython-b3d62f80e40b": {
-    "region": [
-     1790,
-     1791,
-     1792,
-     1793,
-     1794,
-     1795,
-     1796,
-     1797,
-     1798,
-     1799,
-     1800,
-     1801,
-     1802,
-     1803,
-     1804,
-     1805,
-     1807,
-     1808,
-     1809,
-     1810,
-     1811,
-     1812
-    ],
-    "strict": [
-     1791,
-     1792,
-     1793,
-     1802,
-     1810
-    ]
-   }
-  }
- },
- {
-  "finding": "MP-082",
-  "sev": "High",
-  "title": "Inline assembler crashes on non-struct statement, movw(pc, ...), and undefined label when 0 labels defined",
-  "bugs": {}
- },
- {
-  "finding": "MP-083",
-  "sev": "High",
-  "title": "Permanent OS file descriptor leak on error paths in mp_parse and mp_raw_code_load",
-  "bugs": {}
- },
- {
-  "finding": "MP-084",
-  "sev": "High",
-  "title": "sys.getsizeof(small_int) aborts on assert (DEBUG) or silently returns ~val (release) in mp_unary_op",
-  "bugs": {}
- },
- {
-  "finding": "MP-085",
-  "sev": "High",
-  "title": "Exception in sys.settrace 'exception' callback unwinds past FRAME_LEAVE() -> dangling current_code_state crash",
-  "bugs": {}
- },
- {
-  "finding": "MP-086",
-  "sev": "High",
-  "title": "mp_call_prepare_args_n_kw_var shift UB (star_args >> i) misclassifies positional args at index >= 64 (or >= 32)",
-  "bugs": {}
- },
- {
-  "finding": "MP-087",
-  "sev": "High",
-  "title": "divmod(MP_SMALL_INT_MIN, -1) skips MP_SMALL_INT_FITS check -> silent wraparound to negative MP_SMALL_INT_MIN",
-  "bugs": {}
- },
- {
-  "finding": "MP-088",
-  "sev": "High",
-  "title": "mp_print_mp_int truncates mp_obj_get_int() via MP_OBJ_NEW_SMALL_INT -> sign-flips __int__ outside small-int range",
-  "bugs": {}
- },
- {
-  "finding": "MP-089",
-  "sev": "High",
-  "title": "frame.f_back returns MP_OBJ_NULL (raising AttributeError instead of None) when prev_state->frame is NULL",
-  "bugs": {}
- },
- {
-  "finding": "MP-090",
-  "sev": "High",
-  "title": "raw_code_lnotab asserts on line_diff/instr_diff >= 256 and iterates over prelude length",
-  "bugs": {}
- },
- {
-  "finding": "MP-091",
-  "sev": "High",
-  "title": "pow(a, b, 0) crashes with assertion failure / OOB read / NULL deref (and returns 1/0 for rhs==0 or lhs==0)",
-  "bugs": {
-   "micropython-b53492729a4a": {
-    "region": [
-     1358,
-     1359,
-     1360,
-     1361,
-     1362,
-     1367,
-     1368,
-     1369,
-     1370,
-     1371,
-     1372
-    ],
-    "strict": [
-     1359
-    ]
-   },
-   "micropython-d4d265304c55": {
-    "region": [
-     1364,
-     1365,
-     1366
-    ],
-    "strict": []
-   }
-  }
- },
- {
-  "finding": "MP-092",
-  "sev": "High",
-  "title": "range_len signed integer overflow & SIGFPE division overflow (MP_INT_MIN / -1)",
-  "bugs": {}
- },
- {
-  "finding": "MP-093",
-  "sev": "High",
-  "title": "range slicing overflows step to 0, creating invalid range that crashes with SIGFPE",
-  "bugs": {}
- },
- {
-  "finding": "MP-094",
-  "sev": "High",
-  "title": "range iterator signed overflow (runaway iteration) & small-int truncation across range operations",
-  "bugs": {}
- },
- {
-  "finding": "MP-095",
-  "sev": "High",
-  "title": "slice.indices() allows negative length (signed overflow UB) & silently truncates results to small int",
+  "title": "`slice.indices()` accepts negative length and truncates 64-bit bounds/step into 63-bit small-int (sign flip)",
   "bugs": {
    "micropython-ef93b8337084": {
     "region": [
@@ -731,1426 +363,93 @@
   }
  },
  {
-  "finding": "MP-096",
+  "finding": "MP-054",
   "sev": "High",
-  "title": "hash(float) violates a == b => hash(a) == hash(b) & causes float-to-int cast UB",
-  "bugs": {
-   "micropython-85267a3c1ee8": {
-    "region": [
-     148
-    ],
-    "strict": [
-     148
-    ]
-   }
-  }
+  "title": "`sys.settrace` has `raw_code_lnotab` heap overflow / assert aborts, dangling `frame->code_state` UAF, and stuck `mp_prof_is_executing`",
+  "bugs": {}
  },
  {
-  "finding": "MP-097",
+  "finding": "MP-055",
   "sev": "High",
-  "title": "Type confusion & unchecked __len__() return value in bytes_make_new",
+  "title": "`module_attr_try_delegation()` indexes `map->table[map->alloc - 1]` without checking `map->alloc > 0` (NULL deref on empty dict)",
   "bugs": {}
  },
  {
-  "finding": "MP-098",
+  "finding": "MP-056",
   "sev": "High",
-  "title": "Signed 32-bit integer overflow UB & silent wraparound in str_to_int",
+  "title": "`netutils_ethernet_trace()` reads IP/TCP/UDP/DHCP/IPv6 headers without length checks and suffers `size_t` underflow OOB reads",
   "bugs": {}
  },
  {
-  "finding": "MP-099",
+  "finding": "MP-057",
   "sev": "High",
-  "title": "Byte-wise str_uni_strip and str_replace(old='') corrupt multi-byte UTF-8 strings",
+  "title": "Format-string injection in `print_jobject()`, 64-byte stack overflow in `get_jclass_name()`, and unbounded `strprev()` scan",
   "bugs": {}
  },
  {
-  "finding": "MP-100",
+  "finding": "MP-058",
   "sev": "High",
-  "title": "utf8_check accepts overlong encodings, UTF-16 surrogates, and codepoints > U+10FFFF",
+  "title": "Stack buffer overflow via `strcpy` from `MICROPYBTUART`, `pthread_join` on detached threads, and UART fd leak on error",
   "bugs": {}
  },
  {
-  "finding": "MP-101",
+  "finding": "MP-059",
+  "sev": "Medium",
+  "title": "F-string lexer fails on adjacent f-strings (`f'{1}' f'{2}'`), underflows `nested_bracket_level` on `']'`, and sign-extends `char`",
+  "bugs": {}
+ },
+ {
+  "finding": "MP-060",
+  "sev": "Medium",
+  "title": "`__import__` uses unchecked `MP_OBJ_SMALL_INT_VALUE` for `level`; non-external weak-link path passes `mp_obj_t` to `strcpy()`",
+  "bugs": {}
+ },
+ {
+  "finding": "MP-061",
+  "sev": "Medium",
+  "title": "Complex `abs()`, `/`, and `**` compute `real*real + imag*imag` unscaled, overflowing for `|z| > 1.34e154` (`0j` / `nan`)",
+  "bugs": {}
+ },
+ {
+  "finding": "MP-062",
+  "sev": "Medium",
+  "title": "`BufferedWriter` infinite loop on `alloc==0` & flush assert; thread `th_args` GC root race; `EINTR` EOF in `reader.c`; `buf[-1]` in `input.c`",
+  "bugs": {}
+ },
+ {
+  "finding": "MP-063",
   "sev": "High",
-  "title": "StringIO.seek(0, 2) on closed stream causes NULL pointer dereference SEGV",
+  "title": "`uselect.poll` has negative/`uint16` `alloc` wrap, `ipoll()` assert abort (`SIGABRT`), stale `revents` on `unregister`, and 32-bit timeout truncation",
   "bugs": {}
  },
  {
-  "finding": "MP-102",
+  "finding": "MP-064",
+  "sev": "Medium",
+  "title": "Float formatting rounds values `< 1.0` prematurely with `while (--e)` underflow (`0.999999999996` -> `1.0`) and omits carry room in `'f'` mode",
+  "bugs": {}
+ },
+ {
+  "finding": "MP-065",
   "sev": "High",
-  "title": "module_attr_try_delegation underflows map->table[map->alloc - 1] (NULL[-1]) on cleared module globals",
+  "title": "Double `reader->close()` on post-parse exception in `parse_compile_execute()` causes double-free for heap-backed readers",
   "bugs": {}
  },
  {
-  "finding": "MP-103",
+  "finding": "MP-066",
   "sev": "High",
-  "title": "dict_iter_next debug assertion abort when dict shrinks during iteration",
+  "title": "Unchecked `mmap()` `MAP_FAILED` return and missing `munmap()` leak in `/dev/mem` mapping; `if (!fd)` mishandles fd `0`",
   "bugs": {}
  },
  {
-  "finding": "MP-104",
-  "sev": "High",
-  "title": "Self-extend / self-slice-assign UAF & overlap corruption in objarray.c and objlist.c",
-  "bugs": {}
- },
- {
-  "finding": "MP-105",
-  "sev": "High",
-  "title": "help(obj) dereferences MP_OBJ_SENTINEL (0x4) after attribute deletion (SEGV)",
-  "bugs": {}
- },
- {
-  "finding": "MP-106",
-  "sev": "High",
-  "title": "io.BufferedWriter missing stream validation (SEGV) & alloc == 0 infinite loop",
-  "bugs": {}
- },
- {
-  "finding": "MP-107",
-  "sev": "High",
-  "title": "io.BufferedWriter.flush()/write() abort via assert on underlying stream errors",
-  "bugs": {}
- },
- {
-  "finding": "MP-108",
-  "sev": "High",
-  "title": "Unchecked MP_OBJ_SMALL_INT_VALUE in stream_unbuffered_readline",
-  "bugs": {}
- },
- {
-  "finding": "MP-109",
-  "sev": "High",
-  "title": "Exception in class body permanently corrupts mp_locals",
-  "bugs": {}
- },
- {
-  "finding": "MP-110",
-  "sev": "High",
-  "title": "socket_make_new validates family/type/proto only via assert() (SIGABRT in DEBUG, type confusion in release)",
-  "bugs": {}
- },
- {
-  "finding": "MP-111",
-  "sev": "High",
-  "title": "socket.close() does not set self->fd = -1 -> double-close closes unrelated live file descriptors",
-  "bugs": {
-   "micropython-5c51fb896d80": {
-    "region": [
-     139,
-     140,
-     141,
-     142,
-     143,
-     144,
-     145
-    ],
-    "strict": [
-     142,
-     143,
-     144
-    ]
-   }
-  }
- },
- {
-  "finding": "MP-112",
-  "sev": "High",
-  "title": "uselect.poll ipoll() aborts on assert (unregister+register) and yields unregistered fd -1 (unregister)",
-  "bugs": {}
- },
- {
-  "finding": "MP-113",
-  "sev": "High",
-  "title": "Out-of-bounds environment read & info leak into sys.path when MICROPYPATH=''",
-  "bugs": {}
- },
- {
-  "finding": "MP-114",
-  "sev": "High",
-  "title": "Unchecked malloc(heap_size) return value -> NULL dereference / SEGV in gc_init",
-  "bugs": {}
- },
- {
-  "finding": "MP-115",
-  "sev": "High",
-  "title": "Unsigned wraparound in -X heapsize=<n>w bypasses < 700 check (negative values wrap positive / crash)",
-  "bugs": {}
- },
- {
-  "finding": "MP-116",
-  "sev": "High",
-  "title": "Signed integer overflow (tm->tm_year + 1900) in time.gmtime()/localtime()",
-  "bugs": {}
- },
- {
-  "finding": "MP-117",
-  "sev": "High",
-  "title": "Thread-unsafe gmtime()/localtime() data race corrupts timestamps under MICROPY_PY_THREAD_GIL=0",
-  "bugs": {}
- },
- {
-  "finding": "MP-118",
-  "sev": "High",
-  "title": "MP_THREAD_GC_SIGNAL lacks SA_RESTART (interrupting sleeps/syscalls), clobbers errno, and calls non-async-signal-safe pthread_getspecific()",
-  "bugs": {}
- },
- {
-  "finding": "MP-119",
-  "sev": "High",
-  "title": "mp_hal_get_random() ignores short reads and EINTR, returning zero-filled non-random bytes from uos.urandom() (+ fd leak in #else)",
-  "bugs": {}
- },
- {
-  "finding": "MP-120",
-  "sev": "High",
-  "title": "mp_hal_stdin_rx_chr() reads uninitialized stack variable c on read() error, causing 100% CPU infinite hang in input()",
-  "bugs": {}
- },
- {
-  "finding": "MP-121",
-  "sev": "High",
-  "title": "Stack buffer overflow (release) / assert crash (debug) in mp_hal_move_cursor_back when pos >= 1000",
-  "bugs": {}
- },
- {
-  "finding": "MP-122",
-  "sev": "High",
-  "title": "cursor_count_word(0) crosses rl.orig_line_len -> size_t underflow -> GC heap buffer overflow & ASan crash",
-  "bugs": {}
- },
- {
-  "finding": "MP-123",
-  "sev": "High",
-  "title": "Remote-triggerable stack buffer over-reads (1-5B), uninitialized stack read, and DHCP_OPT_PAD misparse in dhcpserver.c",
-  "bugs": {}
- },
- {
-  "finding": "MP-124",
-  "sev": "High",
-  "title": "Unchecked packet lengths, size_t underflows, unconditional 8B UDP payload over-read, and get_be32 shift UB in trace.c",
-  "bugs": {}
- },
- {
-  "finding": "MP-125",
-  "sev": "High",
-  "title": "strncmp in string0.c dereferences *s1/*s2 before checking n > 0 -> 1-byte OOB read & NULL deref when n == 0",
-  "bugs": {}
- },
- {
-  "finding": "MP-126",
-  "sev": "High",
-  "title": "Unbounded days_since_jan1[month - 1] OOB read / SEGV on month == 0 or month > 12",
-  "bugs": {}
- },
- {
-  "finding": "MP-127",
-  "sev": "High",
-  "title": "Scheduler drops main-thread pending exceptions across threads and strands static C callbacks (sched_head)",
-  "bugs": {}
- },
- {
-  "finding": "MP-128",
-  "sev": "High",
-  "title": "Multiple severe bugs in MICROPY_LONGINT_IMPL_LONGLONG (drops minus sign, C-trunc div/mod SIGFPE, shift UB, unchecked overflows)",
-  "bugs": {
-   "micropython-85267a3c1ee8": {
-    "region": [
-     55,
-     56,
-     57,
-     58,
-     59,
-     60,
-     61,
-     62,
-     63,
-     64,
-     65,
-     66,
-     73,
-     74,
-     75,
-     76,
-     77,
-     78,
-     93,
-     94,
-     95,
-     96,
-     97,
-     98,
-     99,
-     100,
-     101,
-     112,
-     113,
-     114,
-     115,
-     117,
-     118,
-     119,
-     120,
-     121,
-     145,
-     146,
-     147,
-     148,
-     149,
-     150,
-     151
-    ],
-    "strict": [
-     58,
-     60,
-     96,
-     97,
-     98,
-     115,
-     118,
-     148
-    ]
-   }
-  }
- },
- {
-  "finding": "MP-129",
-  "sev": "High",
-  "title": "Unchecked size_t addition overflow in str_join and str_replace (32-bit heap buffer overflow)",
-  "bugs": {}
- },
- {
-  "finding": "MP-130",
-  "sev": "High",
-  "title": "Unsigned underflow in decompress_error_text_maybe writes to near-NULL address under OOM",
-  "bugs": {}
- },
- {
-  "finding": "MP-131",
-  "sev": "High",
-  "title": "mp_set_rehash corrupts set->alloc on MemoryError -> subsequent heap OOB access",
-  "bugs": {}
- },
- {
-  "finding": "MP-132",
-  "sev": "High",
-  "title": "execfile passes non-NUL-terminated / potentially NULL buffer to mp_lexer_new_from_file",
-  "bugs": {}
- },
- {
-  "finding": "MP-133",
-  "sev": "High",
-  "title": "Broken strcpy(umodule_buf + 1, args[0]) in __import__ without external import (type error + stack overflow)",
-  "bugs": {}
- },
- {
-  "finding": "MP-134",
-  "sev": "High",
-  "title": "mp_find_frozen_module completely broken when only MICROPY_MODULE_FROZEN_STR is enabled",
-  "bugs": {}
- },
- {
-  "finding": "MP-135",
-  "sev": "High",
-  "title": "Data race on th_args->stack_size between mp_thread_create and thread_entry",
-  "bugs": {}
- },
- {
-  "finding": "MP-136",
-  "sev": "High",
-  "title": "mp_thread_gc_others() ignores pthread_kill() errors (deadlock) and does not retry sem_wait() on EINTR (GC corruption)",
-  "bugs": {}
- },
- {
-  "finding": "MP-137",
-  "sev": "High",
-  "title": "macOS named semaphore buffer truncation (char[25]), unchecked SEM_FAILED, and world-writable 0666 mode",
-  "bugs": {}
- },
- {
-  "finding": "MP-138",
-  "sev": "High",
-  "title": "mp_unix_free_exec() corrupts MP_STATE_VM(mmap_region_head) linked list (*rg = (*rg)->next)",
-  "bugs": {}
- },
- {
-  "finding": "MP-139",
-  "sev": "High",
-  "title": "Data race on MP_STATE_VM(mmap_region_head) under MICROPY_PY_THREAD_GIL=0",
-  "bugs": {}
- },
- {
-  "finding": "MP-140",
-  "sev": "High",
-  "title": "Buffer underflow (buf[-1] OOB read/write) and unchecked malloc() in prompt() (MICROPY_USE_READLINE == 0)",
-  "bugs": {}
- },
- {
-  "finding": "MP-141",
-  "sev": "High",
-  "title": "mod_machine_mem_get_addr() unchecked MAP_FAILED (NULL-page SEGV), permanent mmap leak, data race, fd==0 bug, hardcoded 4KB page",
-  "bugs": {}
- },
- {
-  "finding": "MP-142",
-  "sev": "High",
-  "title": "#if MICROPY_EMIT_NATIVE guard mismatch omits mp_unix_mark_exec() for FFI-only builds, causing UAF of FFI callbacks",
-  "bugs": {}
- },
- {
-  "finding": "MP-143",
-  "sev": "High",
-  "title": "Unchecked NULL rtype from char2ffi_type(*rettype) passed to ffi_prep_cif()",
-  "bugs": {}
- },
- {
-  "finding": "MP-144",
-  "sev": "High",
-  "title": "call_py_func() / call_py_func_with_lock() OOB arg reads, return buffer overflow, and longjmp across libffi C frames",
-  "bugs": {}
- },
- {
-  "finding": "MP-145",
-  "sev": "High",
-  "title": "Double-dlclose() and use-after-dlclose() in ffimod",
-  "bugs": {}
- },
- {
-  "finding": "MP-146",
-  "sev": "High",
-  "title": "Out-of-bounds read of args[0] in ffimod_make_new() when called with 0 args",
-  "bugs": {}
- },
- {
-  "finding": "MP-147",
-  "sev": "High",
-  "title": "Static Java methods invoked with non-static Call<Type>MethodA (JNI UB / JVM crash)",
-  "bugs": {}
- },
- {
-  "finding": "MP-148",
-  "sev": "High",
-  "title": "check_exception() invokes JNI IsInstanceOf() while an exception is still pending",
-  "bugs": {}
- },
- {
-  "finding": "MP-149",
-  "sev": "High",
-  "title": "jobject_unary_op() calls List.size() on arbitrary non-List jobjects",
-  "bugs": {}
- },
- {
-  "finding": "MP-150",
-  "sev": "High",
-  "title": "jclass_attr() & jobject_attr() call Get[Static]ObjectField on primitive or non-static fields",
-  "bugs": {}
- },
- {
-  "finding": "MP-151",
-  "sev": "High",
-  "title": "Buffer under-read in strprev(), NULL+1 deref, silent extra-arg drop, and missing exception checks/leaks in call_method()",
-  "bugs": {}
- },
- {
-  "finding": "MP-152",
-  "sev": "High",
-  "title": "MP_ERROR_TEXT() misused on 8 JNI method signatures in create_jvm()",
-  "bugs": {}
- },
- {
-  "finding": "MP-153",
-  "sev": "High",
-  "title": "Unchecked dlsym(), FindClass(), GetStringUTFChars(), and pervasive JNI local reference leaks",
-  "bugs": {}
- },
- {
-  "finding": "MP-154",
-  "sev": "High",
-  "title": "pthread_join() called on PTHREAD_CREATE_DETACHED thread in mpbthciport.c -> UB / premature close(uart_fd) UAF",
-  "bugs": {}
- },
- {
-  "finding": "MP-155",
-  "sev": "High",
-  "title": "FD leak & uninitialized pthread_join() when tcgetattr() fails in mpbthciport.c",
-  "bugs": {}
- },
- {
-  "finding": "MP-156",
-  "sev": "High",
-  "title": "Unhandled partial writes and EAGAIN/EINTR on O_NONBLOCK UART write() in mpbthciport.c",
-  "bugs": {}
- },
- {
-  "finding": "MP-157",
-  "sev": "High",
-  "title": "pthread_join() on detached bstack_thread_id + unsynchronized hci_power_control() race in mpbtstackport_usb.c",
-  "bugs": {}
- },
- {
-  "finding": "MP-158",
-  "sev": "High",
-  "title": "Startup thread race & shutdown deadlock/premature-close in mpbtstackport_h4.c",
-  "bugs": {}
- },
- {
-  "finding": "MP-159",
-  "sev": "Medium",
-  "title": "c_if_cond silently drops all side effects inside non-empty tuple / generator conditions",
-  "bugs": {}
- },
- {
-  "finding": "MP-160",
-  "sev": "Medium",
-  "title": "class C(*bases): miscomputes star_args bitmap bit positions, unpacking class body function instead of bases",
-  "bugs": {}
- },
- {
-  "finding": "MP-161",
-  "sev": "Medium",
-  "title": "UB shift >= 32 on 32-bit int in MP_BC_PRELUDE_SIZE_DECODE_INTO when function has >= 64 cells",
-  "bugs": {}
- },
- {
-  "finding": "MP-162",
-  "sev": "Medium",
-  "title": "0e400 / float('0e400') / 0e400j evaluates to nan/nanj instead of 0.0/0j (and invalid strings accepted as 0)",
-  "bugs": {}
- },
- {
-  "finding": "MP-163",
-  "sev": "Medium",
-  "title": "mp_format_float uninitialized stack read & wrong formatting for '%.0e'%9.9, '%.1g'%9.9, '%.15f'%0.999999999996",
-  "bugs": {}
- },
- {
-  "finding": "MP-164",
-  "sev": "Medium",
-  "title": "F-string lexer breaks adjacent string literal concatenation (f'a' f'b', f'{1}' '{0}')",
-  "bugs": {}
- },
- {
-  "finding": "MP-165",
-  "sev": "Medium",
-  "title": "Lexer indentation level silently truncates at uint16_t, mis-scoping blocks with >= 65536 spaces",
-  "bugs": {}
- },
- {
-  "finding": "MP-166",
-  "sev": "Medium",
-  "title": "Signed left shift of negative index in Viper ptr16/ptr32 immediate subscript (UBSan)",
-  "bugs": {}
- },
- {
-  "finding": "MP-167",
-  "sev": "Medium",
-  "title": "for i in range(start, end) optimization evaluates end before start",
-  "bugs": {}
- },
- {
-  "finding": "MP-168",
-  "sev": "Medium",
-  "title": "Exception raised in any sys.settrace callback permanently disables tracing",
-  "bugs": {}
- },
- {
-  "finding": "MP-169",
-  "sev": "Medium",
-  "title": "Signed integer overflow UB in mp_print_mp_int when precision is INT_MAX",
-  "bugs": {}
- },
- {
-  "finding": "MP-170",
-  "sev": "Medium",
-  "title": "mp_resume misclassifies GeneratorExit class in gen.throw(GeneratorExit) on yield from",
-  "bugs": {}
- },
- {
-  "finding": "MP-171",
-  "sev": "Medium",
-  "title": "MP_BC_YIELD_FROM swallows GeneratorExit when sub-iterator .close() raises StopIteration",
-  "bugs": {}
- },
- {
-  "finding": "MP-172",
-  "sev": "Medium",
-  "title": "ringbuf_get16 uint16_t overflow corrupts r->iget when r->size == 65535 and r->iget == 65534",
-  "bugs": {}
- },
- {
-  "finding": "MP-173",
-  "sev": "Medium",
-  "title": "m_malloc_maybe inflates MICROPY_MEM_STATS counters on failed allocations (ptr == NULL)",
-  "bugs": {}
- },
- {
-  "finding": "MP-174",
-  "sev": "Medium",
-  "title": "mp_print_float silently drops '%' suffix when output fills fixed 32-byte buffer",
-  "bugs": {}
- },
- {
-  "finding": "MP-175",
-  "sev": "Medium",
-  "title": "Multiple UBs on zero mpz_t with dig == NULL (memcpy NULL & null-pointer offset arithmetic)",
-  "bugs": {}
- },
- {
-  "finding": "MP-176",
-  "sev": "Medium",
-  "title": "mp_seq_cmp_bytes passes NULL to memcmp on empty bytearray (UBSan)",
-  "bugs": {}
- },
- {
-  "finding": "MP-177",
-  "sev": "Medium",
-  "title": "int.from_bytes null-pointer underflow UB on empty buffer with 'little' byteorder",
-  "bugs": {}
- },
- {
-  "finding": "MP-178",
-  "sev": "Medium",
-  "title": "mpz_pow_inpl and mpz_pow3_inpl return wrong results for 0**0, negative exponent, and negative modulus",
-  "bugs": {
-   "micropython-b53492729a4a": {
-    "region": [
-     1359,
-     1360,
-     1361,
-     1362,
-     1367,
-     1368
-    ],
-    "strict": [
-     1359
-    ]
-   },
-   "micropython-d4d265304c55": {
-    "region": [
-     1364,
-     1365,
-     1366
-    ],
-    "strict": []
-   }
-  }
- },
- {
-  "finding": "MP-179",
-  "sev": "Medium",
-  "title": "mpz_as_str_inpl emits spurious leading comma on bigints whose digit count is divisible by 3",
-  "bugs": {
-   "micropython-1010a6f1bf3f": {
-    "region": [
-     1714,
-     1715,
-     1716,
-     1717
-    ],
-    "strict": [
-     1714
-    ]
-   }
-  }
- },
- {
-  "finding": "MP-180",
-  "sev": "Medium",
-  "title": "mpz_as_int_checked rejects MP_INT_MIN (-2^63 / -2^31)",
-  "bugs": {}
- },
- {
-  "finding": "MP-181",
-  "sev": "Medium",
-  "title": "mpz_set_from_str does not skip '_' digit separators (breaking bigint parsing with underscores)",
-  "bugs": {}
- },
- {
-  "finding": "MP-182",
-  "sev": "Medium",
-  "title": "float('-inf') ** 0.5 and float('-inf') ** -0.5 return complex (nan+nanj) instead of inf / 0.0",
-  "bugs": {}
- },
- {
-  "finding": "MP-183",
-  "sev": "Medium",
-  "title": "Complex abs(), division /, and power ** overflow/underflow & leave stale imaginary part on underflow",
-  "bugs": {}
- },
- {
-  "finding": "MP-184",
-  "sev": "Medium",
-  "title": "Lossy int->float conversion in mpz_as_float, int/int, and int vs float comparisons",
-  "bugs": {}
- },
- {
-  "finding": "MP-185",
-  "sev": "Medium",
-  "title": "str *= n and bytes *= n (MP_BINARY_OP_INPLACE_MULTIPLY) fail with TypeError",
-  "bugs": {}
- },
- {
-  "finding": "MP-186",
-  "sev": "Medium",
-  "title": "bytes binary ops (+, <, in) accept str RHS & trigger UBSan NULL memcmp with empty bytearray",
-  "bugs": {}
- },
- {
-  "finding": "MP-187",
-  "sev": "Medium",
-  "title": "bytes.count() uses UTF-8 functions and str.count() omits end < start check",
-  "bugs": {}
- },
- {
-  "finding": "MP-188",
-  "sev": "Medium",
-  "title": "Empty substring find/rfind/index/rindex/count/startswith return wrong results for start > len",
-  "bugs": {}
- },
- {
-  "finding": "MP-189",
-  "sev": "Medium",
-  "title": "Missing str/bytes type consistency check in str_rsplit, str_startswith, str_endswith",
-  "bugs": {}
- },
- {
-  "finding": "MP-190",
-  "sev": "Medium",
-  "title": "Multiple % formatting (str_modulo_format) bugs ('%-05d'%1 -> '10000', unused dict, bytes keys, negative/64-bit */.*)",
-  "bugs": {
-   "micropython-8074d176612b": {
-    "region": [
-     1604,
-     1605,
-     1606,
-     1607,
-     1608,
-     1609,
-     1610
-    ],
-    "strict": [
-     1607
-    ]
-   }
-  }
- },
- {
-  "finding": "MP-191",
-  "sev": "Medium",
-  "title": "Multiple str.format() parsing & formatting bugs ('{:<<5}', NUL-termination, nested bool, '{:.}', byte-width UTF-8)",
-  "bugs": {}
- },
- {
-  "finding": "MP-192",
-  "sev": "Medium",
-  "title": "str.center() uses UTF-8 byte length instead of character length",
-  "bugs": {}
- },
- {
-  "finding": "MP-193",
-  "sev": "Medium",
-  "title": "bytes() and str() constructor argument validation bugs (bytes(True), bytes(1<<100), extra args, str(str, enc))",
-  "bugs": {}
- },
- {
-  "finding": "MP-194",
-  "sev": "Medium",
-  "title": "str.startswith() and str.strip()/lstrip()/rstrip() reject None default arguments",
-  "bugs": {}
- },
- {
-  "finding": "MP-195",
-  "sev": "Medium",
-  "title": "str_rsplit unconditionally preallocates splits + 1 list slots (OOM DoS)",
-  "bugs": {}
- },
- {
-  "finding": "MP-196",
-  "sev": "Medium",
-  "title": "StringIO.write() prematurely corrupts vstr->len to vstr->alloc on MemoryError",
-  "bugs": {}
- },
- {
-  "finding": "MP-197",
-  "sev": "Medium",
-  "title": "array comparison bugs: signed/unsigned confusion and wrong multi-byte endian ordering",
-  "bugs": {}
- },
- {
-  "finding": "MP-198",
-  "sev": "Medium",
-  "title": "dict lookup all_keys_are_qstrs optimization breaks equality and allows duplicate equal keys",
-  "bugs": {}
- },
- {
-  "finding": "MP-199",
-  "sev": "Medium",
-  "title": "list.insert() does not validate index type or handle big integers (unchecked MP_OBJ_SMALL_INT_VALUE)",
-  "bugs": {}
- },
- {
-  "finding": "MP-200",
-  "sev": "Medium",
-  "title": "enumerate silent small-int wrap-around and signed integer overflow (UBSan)",
-  "bugs": {}
- },
- {
-  "finding": "MP-201",
-  "sev": "Medium",
-  "title": "instance_unary_op does not validate __len__ or __bool__ return values (also breaks reversed())",
-  "bugs": {}
- },
- {
-  "finding": "MP-202",
-  "sev": "Medium",
-  "title": "set.symmetric_difference / symmetric_difference_update gives wrong result on iterables with duplicate elements",
-  "bugs": {}
- },
- {
-  "finding": "MP-203",
-  "sev": "Medium",
-  "title": "frozenset.intersection() and frozenset & frozenset return a mutable set",
-  "bugs": {}
- },
- {
-  "finding": "MP-204",
-  "sev": "Medium",
-  "title": "collections.deque((), (1<<63)-1) signed integer overflow (UBSan)",
-  "bugs": {}
- },
- {
-  "finding": "MP-205",
-  "sev": "Medium",
-  "title": "Signed integer overflow in tuple and frozenset hashing (UBSan)",
-  "bugs": {}
- },
- {
-  "finding": "MP-206",
-  "sev": "Medium",
-  "title": "memcpy passed NULL pointers in {}.copy(), set().copy(), and StringIO('').write(...) (UBSan)",
-  "bugs": {}
- },
- {
-  "finding": "MP-207",
-  "sev": "Medium",
-  "title": "type(name, bases, dict) shares caller's locals_dict, bypassing special accessor & subclass flags",
-  "bugs": {
-   "micropython-830236cc7dce": {
-    "region": [
-     1207,
-     1208
-    ],
-    "strict": []
-   }
-  }
- },
- {
-  "finding": "MP-208",
-  "sev": "Medium",
-  "title": "micropython.heap_unlock() underflows uint16_t gc_lock_depth to 65535, permanently locking the heap",
-  "bugs": {}
- },
- {
-  "finding": "MP-209",
-  "sev": "Medium",
-  "title": "struct format prefix '=' accepted by parser but rejected by mp_binary_get_size",
-  "bugs": {}
- },
- {
-  "finding": "MP-210",
-  "sev": "Medium",
-  "title": "NULL pointer passed to memcpy/memset in struct.pack_into with '0s' on empty bytearray (UBSan)",
-  "bugs": {}
- },
- {
-  "finding": "MP-211",
-  "sev": "Medium",
-  "title": "__import__ bugs: unchecked level small-int, __main__ relative import KeyError, and __import__('.') succeeds",
-  "bugs": {}
- },
- {
-  "finding": "MP-212",
-  "sev": "Medium",
-  "title": "Re-executing a compiled code object corrupts globals of previously defined functions",
-  "bugs": {}
- },
- {
-  "finding": "MP-213",
-  "sev": "Medium",
-  "title": "round(int, -(1<<62)) small-int overflow causes ZeroDivisionError",
-  "bugs": {}
- },
- {
-  "finding": "MP-214",
-  "sev": "Medium",
-  "title": "min() and max() reject truthy non-bool comparison results",
-  "bugs": {}
- },
- {
-  "finding": "MP-215",
-  "sev": "Medium",
-  "title": "math module bugs: pow(2, inf) domain error, ldexp 64-to-32 int truncation, isclose finite overflow, factorial overflow",
-  "bugs": {
-   "micropython-639baaf0eaee": {
-    "region": [
-     57
-    ],
-    "strict": [
-     57
-    ]
-   }
-  }
- },
- {
-  "finding": "MP-216",
-  "sev": "Medium",
-  "title": "cmath missing log(0) domain checks and real*real+imag*imag overflow/underflow + rect(inf, 0) nanj",
-  "bugs": {}
- },
- {
-  "finding": "MP-217",
-  "sev": "Medium",
-  "title": "uselect.poll(1<<31) silently truncates 64-bit timeout to negative int, blocking indefinitely",
-  "bugs": {}
- },
- {
-  "finding": "MP-218",
-  "sev": "Medium",
-  "title": "socket.settimeout() swapped time_t/suseconds_t casts, float-to-int UB, and tv_usec == 1000000 error",
-  "bugs": {}
- },
- {
-  "finding": "MP-219",
-  "sev": "Medium",
-  "title": "getaddrinfo() silently wraps ports mod 65536, unchecked MP_OBJ_SMALL_INT_VALUE, and leaks addr_list on exception",
-  "bugs": {}
- },
- {
-  "finding": "MP-220",
-  "sev": "Medium",
-  "title": "Signed integer overflow in -X heapsize=<n>K|M suffix scaling (wraps negative values positive)",
-  "bugs": {}
- },
- {
-  "finding": "MP-221",
-  "sev": "Medium",
-  "title": "Multiple unprotected NLR paths in main.c cause FATAL: uncaught NLR crashes",
-  "bugs": {}
- },
- {
-  "finding": "MP-222",
-  "sev": "Medium",
-  "title": "-m execution skips SIGINT setup and early-returns past -i inspect, sys.atexit, and deinit",
-  "bugs": {}
- },
- {
-  "finding": "MP-223",
-  "sev": "Medium",
-  "title": "Signed integer overflow in time.mktime (elem[0] - 1900) and silent 64-to-32-bit field truncation",
-  "bugs": {}
- },
- {
-  "finding": "MP-224",
-  "sev": "Medium",
-  "title": "time.sleep() swapped time_t/suseconds_t casts, float-to-int UB, tv_usec==1000000, and negative sleep inconsistency",
-  "bugs": {}
- },
- {
-  "finding": "MP-225",
-  "sev": "Medium",
-  "title": "mp_hal_stdout_tx_strn() silently drops data on partial write()",
-  "bugs": {}
- },
- {
-  "finding": "MP-226",
-  "sev": "Medium",
-  "title": "mp_hal_stdio_mode_raw()/orig() leaves terminal stuck in raw mode on SIGINT and uses unsynchronized static termios",
-  "bugs": {}
- },
- {
-  "finding": "MP-227",
-  "sev": "Medium",
-  "title": "Uncaught MemoryError (FATAL: uncaught NLR) and fd leak in prompt_read_history() and prompt_write_history()",
-  "bugs": {}
- },
- {
-  "finding": "MP-228",
-  "sev": "Medium",
-  "title": "1-byte heap buffer underflow (rl.line->buf[-1]) on Tab key at column 0 with non-empty line",
-  "bugs": {}
- },
- {
-  "finding": "MP-229",
-  "sev": "Medium",
-  "title": "netutils_parse_ipv4_addr accepts non-digits & octets > 255 -> skips DNS resolution for all 4-label hostnames",
-  "bugs": {}
- },
- {
-  "finding": "MP-230",
-  "sev": "Medium",
-  "title": "memzip advances past compressed entries by uncompressed_size instead of compressed_size (OOB read)",
-  "bugs": {}
- },
- {
-  "finding": "MP-231",
-  "sev": "Medium",
-  "title": "memzip_find_file_header prefix-only filename match shadows files under directories and matches wrong files",
-  "bugs": {}
- },
- {
-  "finding": "MP-232",
-  "sev": "Medium",
-  "title": "32-bit signed overflow in timeutils_seconds_since_2000_to_struct_time breaks all dates >= 2068-03-19",
-  "bugs": {}
- },
- {
-  "finding": "MP-233",
-  "sev": "Medium",
-  "title": "32-bit MICROPY_EPOCH_IS_1970 timeutils_mktime/seconds_since_epoch off by +2^32 seconds (+136 years) for 1970-1999",
-  "bugs": {}
- },
- {
-  "finding": "MP-234",
-  "sev": "Medium",
-  "title": "Unsigned underflow in timeutils_seconds_since_2000 leap-day formula for year <= 1900",
-  "bugs": {}
- },
- {
-  "finding": "MP-235",
-  "sev": "Medium",
-  "title": "Signed-char comparison & missing cast bugs in string0.c (memcmp, strcmp, strncmp, memchr, strchr)",
-  "bugs": {}
- },
- {
-  "finding": "MP-236",
-  "sev": "Medium",
-  "title": "Inline Thumb ldrex/strex and Xtensa load/store accept misaligned offsets and silently truncate them",
-  "bugs": {}
- },
- {
-  "finding": "MP-237",
-  "sev": "Medium",
-  "title": "Unchecked immediate/offset truncation in asmthumb.c, asmxtensa.c, and emitglue.c prelude_offset",
-  "bugs": {}
- },
- {
-  "finding": "MP-238",
-  "sev": "Medium",
-  "title": "mp_vprintf %.*s calls strlen(str) before clamping to prec (OOB read on non-NUL vstr & NULL deref when prec==0)",
-  "bugs": {}
- },
- {
-  "finding": "MP-239",
-  "sev": "Medium",
-  "title": "vstr size_t wraparounds in init_len/extend/ensure_extra/cut_out_bytes and 1-byte Unicode truncation in vstr_ins_char",
-  "bugs": {}
- },
- {
-  "finding": "MP-240",
-  "sev": "Medium",
-  "title": "mp_pystack_alloc pointer/size addition overflow UB bypasses exhaustion check",
-  "bugs": {}
- },
- {
-  "finding": "MP-241",
-  "sev": "Medium",
-  "title": "qstr_add does not enforce uint16_t qstr_short_t limit \u2014 IDs >= 65536 silently alias in bytecode",
-  "bugs": {}
- },
- {
-  "finding": "MP-242",
-  "sev": "Medium",
-  "title": "MICROPY_STACKLESS exception unwind skips updating current_code_state when MICROPY_PY_SYS_SETTRACE is enabled",
-  "bugs": {}
- },
- {
-  "finding": "MP-243",
-  "sev": "Medium",
-  "title": "Signed left-shift overflow UB in mpz_set_from_bytes and mpz_shr_inpl when MPZ_DIG_SIZE == 32",
-  "bugs": {}
- },
- {
-  "finding": "MP-244",
-  "sev": "Medium",
-  "title": "mp_classify_fp_as_int misclassifies negative subnormal floats as overflowing",
-  "bugs": {
-   "micropython-85267a3c1ee8": {
-    "region": [
-     112,
-     113,
-     114,
-     115,
-     117,
-     118,
-     119,
-     120,
-     121
-    ],
-    "strict": [
-     115,
-     118
-    ]
-   }
-  }
- },
- {
-  "finding": "MP-245",
-  "sev": "Medium",
-  "title": "mpz_shr_inpl and mpz_divmod_inpl break documented in-place aliasing contracts",
-  "bugs": {}
- },
- {
-  "finding": "MP-246",
-  "sev": "Medium",
-  "title": "sys.tracebacklimit signed overflow & unchecked MP_OBJ_SMALL_INT_VALUE in mp_obj_exception_add_traceback",
-  "bugs": {}
- },
- {
-  "finding": "MP-247",
-  "sev": "Medium",
-  "title": "Uninitialized struct termios stack variable passed to tcsetattr() (uninitialized c_line / padding)",
-  "bugs": {}
- },
- {
-  "finding": "MP-248",
-  "sev": "Medium",
-  "title": "Unchecked malloc() return values in mp_thread_init() and mp_thread_create()",
-  "bugs": {}
- },
- {
-  "finding": "MP-249",
-  "sev": "Medium",
-  "title": "PTHREAD_MUTEX_DEFAULT used for Python _thread.Lock + unchecked pthread_mutex_unlock()",
-  "bugs": {}
- },
- {
-  "finding": "MP-250",
-  "sev": "Medium",
-  "title": "mmap leak on m_new_obj OOM, RWX (W^X violation), hardcoded 4KB page size, and empty ffi_closure_free() stub",
-  "bugs": {}
- },
- {
-  "finding": "MP-251",
-  "sev": "Medium",
-  "title": "Signed overflow UB in mp_hal_ticks_ms()/us(), non-monotonic macOS fallback, and usleep() truncation / >=1s violation",
-  "bugs": {}
- },
- {
-  "finding": "MP-252",
-  "sev": "Medium",
-  "title": "mp_uos_putenv/unsetenv check ret == -1 on Windows (_putenv_s returns errno_t != 0) & thread-unsafe env mutation under GIL=0",
-  "bugs": {}
- },
- {
-  "finding": "MP-253",
+  "finding": "MP-067",
   "sev": "Medium",
-  "title": "ffi_closure_alloc() missing NULL check, permanent mmap leak, and GC UAF of callback object",
+  "title": "Unbounded `days_since_jan1[month]` OOB read, 32-bit year-2068 signed wraparound, and pre-2000 unsigned underflow in leap-day math",
   "bugs": {}
  },
  {
-  "finding": "MP-254",
+  "finding": "MP-068",
   "sev": "Medium",
-  "title": "64-bit signed long ('l') return truncated to 32-bit int; pointers returned as negative ints in modffi.c",
-  "bugs": {}
- },
- {
-  "finding": "MP-255",
-  "sev": "Medium",
-  "title": "OOB/unaligned 4-byte read in ffivar_print() and unvalidated ffimod_var() typecode",
-  "bugs": {}
- },
- {
-  "finding": "MP-256",
-  "sev": "Medium",
-  "title": "ffifunc_call() passes MP_BUFFER_READ for writable 'p' args & partial-init UB for None->'q'/'Q' on 32-bit",
-  "bugs": {}
- },
- {
-  "finding": "MP-257",
-  "sev": "Medium",
-  "title": "Type-matching and union-member bugs in py2jvalue() (big-endian int, broken jobject strcmp, signed char isalpha, None matching primitives)",
-  "bugs": {}
- },
- {
-  "finding": "MP-258",
-  "sev": "Medium",
-  "title": "Signed left-shift UB in get_fattime() for dates < 1980 or >= 2044, thread-unsafe localtime(), missing NULL check",
-  "bugs": {}
- },
- {
-  "finding": "MP-259",
-  "sev": "Medium",
-  "title": "Uninitialized code_state->n_state (OOB pointer arithmetic) and uninitialized context in coverage.c VM test",
-  "bugs": {}
- },
- {
-  "finding": "MP-260",
-  "sev": "Low",
-  "title": "int('0x10') accepts base prefixes with default base (passes base=0 instead of 10)",
-  "bugs": {
-   "micropython-85267a3c1ee8": {
-    "region": [
-     59
-    ],
-    "strict": []
-   }
-  }
- },
- {
-  "finding": "MP-261",
-  "sev": "Low",
-  "title": "int.from_bytes / int.to_bytes missing byteorder validation, silent truncation, and small-int vs mpz sign-extension mismatch",
-  "bugs": {
-   "micropython-85267a3c1ee8": {
-    "region": [
-     419,
-     422,
-     424,
-     425,
-     426,
-     427,
-     428,
-     429,
-     430,
-     431,
-     432,
-     433,
-     434,
-     435,
-     436,
-     437,
-     438,
-     439,
-     440,
-     441,
-     442,
-     443,
-     444,
-     445,
-     446,
-     447,
-     448
-    ],
-    "strict": [
-     424,
-     427,
-     428,
-     434,
-     436,
-     440,
-     445,
-     446
-    ]
-   }
-  }
- },
- {
-  "finding": "MP-262",
-  "sev": "Low",
-  "title": "mp_seq_cmp_objs fails on truthy non-bool comparisons and container self-identity with NaN",
-  "bugs": {}
- },
- {
-  "finding": "MP-263",
-  "sev": "Low",
-  "title": "x >> (1 << 100) raises OverflowError instead of returning 0 / -1",
-  "bugs": {}
- },
- {
-  "finding": "MP-264",
-  "sev": "Low",
-  "title": "str slicing rejects step=True while bytes slicing accepts it",
-  "bugs": {}
- },
- {
-  "finding": "MP-265",
-  "sev": "Low",
-  "title": "instance_print and instance_unary_op ignore member[1] (breaking @staticmethod / @classmethod special methods)",
-  "bugs": {}
- },
- {
-  "finding": "MP-266",
-  "sev": "Low",
-  "title": "del mod.nonexistent raises KeyError instead of AttributeError",
-  "bugs": {}
- },
- {
-  "finding": "MP-267",
-  "sev": "Low",
-  "title": "mp_type_closure (and mp_type_bound_meth) missing .unary_op = mp_generic_unary_op (closures unhashable)",
-  "bugs": {}
- },
- {
-  "finding": "MP-268",
-  "sev": "Low",
-  "title": "objgetitemiter does not catch subclasses of IndexError or StopIteration",
-  "bugs": {}
- },
- {
-  "finding": "MP-269",
-  "sev": "Low",
-  "title": "OrderedDict == dict always returns False (dead equality path missing MP_TYPE_FLAG_EQ_CHECKS_OTHER_TYPE)",
-  "bugs": {}
- },
- {
-  "finding": "MP-270",
-  "sev": "Low",
-  "title": "pathbuf memory leak (4096 bytes) on realpath() failure and unchecked malloc(PATH_MAX)",
-  "bugs": {}
- },
- {
-  "finding": "MP-271",
-  "sev": "Low",
-  "title": "-O flag parsing resets level on repeated -O -O and silently accepts trailing garbage",
-  "bugs": {}
- },
- {
-  "finding": "MP-272",
-  "sev": "Low",
-  "title": "time.mktime() falsely raises OverflowError for valid timestamp -1 (1969-12-31 23:59:59 UTC)",
-  "bugs": {}
- },
- {
-  "finding": "MP-273",
-  "sev": "Low",
-  "title": "termios.tcsetattr() accepts empty/multi-byte cc elements and silently truncates 64-bit fd/when (plus 32-bit small-int overflow)",
-  "bugs": {}
- },
- {
-  "finding": "MP-274",
-  "sev": "Low",
-  "title": "Format specifier mismatch (%08x for uintptr_t) truncates 64-bit address in mod_machine_mem_get_addr()",
-  "bugs": {}
- },
- {
-  "finding": "MP-275",
-  "sev": "Low",
-  "title": "Signed integer overflow UB in timeutils_mktime_2000 on extreme mp_int_t inputs",
-  "bugs": {}
- },
- {
-  "finding": "MP-276",
-  "sev": "Low",
-  "title": "Signed left-shift UB in DHCP lease expiry (d->lease[i].expiry << 16) after ~24.85 days uptime",
-  "bugs": {}
- },
- {
-  "finding": "MP-277",
-  "sev": "Low",
-  "title": "vsnprintf(NULL, 0, ...) memcpy(NULL, ..., 0) UB and signed putchar(0xff) returning EOF (-1) in shared/libc/printf.c",
-  "bugs": {}
- },
- {
-  "finding": "MP-278",
-  "sev": "Low",
-  "title": "mp_raw_code_save_file ignores open() failure and write() errors / short writes",
-  "bugs": {}
- },
- {
-  "finding": "MP-279",
-  "sev": "Low",
-  "title": "parser_free_parse_node_struct decrements cur_chunk->used without verifying pns is at the tail of cur_chunk",
-  "bugs": {}
- },
- {
-  "finding": "MP-280",
-  "sev": "Low",
-  "title": "print_completions leaks '_'-prefixed names on empty prefix; pointer-underflow UB in mp_repl_autocomplete",
-  "bugs": {}
- },
- {
-  "finding": "MP-281",
-  "sev": "Low",
-  "title": "mp_init does not reset sched_state without static nodes; qstr_add reports wrong byte count on OOM",
-  "bugs": {}
- },
- {
-  "finding": "MP-282",
-  "sev": "Low",
-  "title": "m_tracked_calloc multiplication overflow & m_tracked_free size accounting mismatch without GC",
-  "bugs": {}
- },
- {
-  "finding": "MP-283",
-  "sev": "Low",
-  "title": "mp_emitter_warning format-string pass-through & mp_arg_check_num_sig %d/size_t varargs mismatch",
-  "bugs": {}
- },
- {
-  "finding": "MP-284",
-  "sev": "Low",
-  "title": "mpz_set_from_int signed overflow on MP_INT_MIN, mpz_set_from_float sign loss on (-2,-1], broken MPZ_CONST_INT macro",
-  "bugs": {}
- },
- {
-  "finding": "MP-285",
-  "sev": "Low",
-  "title": "64-to-32-bit size_t -> uint narrowing in uni_print_quoted and str_uni_strip",
-  "bugs": {}
- },
- {
-  "finding": "MP-286",
-  "sev": "Low",
-  "title": "Out-of-bounds pointer formation (strict C UB) in str_index_to_ptr and str_rsplit",
-  "bugs": {}
- },
- {
-  "finding": "MP-287",
-  "sev": "Low",
-  "title": "mp_obj_id can return negative small int on 32-bit targets with addresses in [0x40000000, 0x7fffffff]",
-  "bugs": {}
- },
- {
-  "finding": "MP-288",
-  "sev": "Low",
-  "title": "Format specifier mismatch (%u for size_t) in micropython.qstr_info()",
-  "bugs": {}
- },
- {
-  "finding": "MP-289",
-  "sev": "Low",
-  "title": "Race window on lock->locked and non-owner pthread_mutex_unlock in _thread.LockType",
-  "bugs": {}
- },
- {
-  "finding": "MP-290",
-  "sev": "Low",
-  "title": "Unchecked malloc() and int length arithmetic in strjoin() + line leak on FORCED_EXIT (MICROPY_USE_READLINE == 0)",
-  "bugs": {}
- },
- {
-  "finding": "MP-291",
-  "sev": "Low",
-  "title": "Pthread attr/sync primitive resource leaks & non-portable pthread_t == comparison",
-  "bugs": {}
- },
- {
-  "finding": "MP-292",
-  "sev": "Low",
-  "title": "prompt_write_history() leaks vstr, creates world-readable 0644 history, and ignores partial writes",
-  "bugs": {}
- },
- {
-  "finding": "MP-293",
-  "sev": "Low",
-  "title": "100% CPU busy-wait spin in mp_bluetooth_nimble_hci_uart_wfi()",
-  "bugs": {}
- },
- {
-  "finding": "MP-294",
-  "sev": "Low",
-  "title": "va_arg width mismatches in mp_printf() calls & float divide-by-zero in coverage.c",
-  "bugs": {}
- },
- {
-  "finding": "MP-295",
-  "sev": "Low",
-  "title": "Non-volatile start modified across nlr_push/nlr_jump (setjmp UB) & bogus uptime printed on compile error in pyexec.c",
-  "bugs": {}
- },
- {
-  "finding": "MP-296",
-  "sev": "Low",
-  "title": "Unsequenced self-assignment inside aggregate initializer in netutils_format_inet_addr",
+  "title": "`netutils_parse_ipv4_addr()` accepts non-digits/octets `>255`; internal `vsnprintf(NULL, 0, ...)` calls `memcpy(NULL, ..., 0)` and `putchar(0xff)` returns `-1`",
   "bugs": {}
  }
 ]

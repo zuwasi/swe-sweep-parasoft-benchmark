@@ -1,0 +1,930 @@
+[
+ {
+  "id": "BUG-01",
+  "sev": "Critical",
+  "title": "Signed integer overflow in `XML_GetBuffer` (`neededSize += keep`) skips reallocation and causes heap buffer overflow",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmlparse.c",
+    2054,
+    2086
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    2067,
+    2070
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    1961,
+    1965
+   ]
+  ]
+ },
+ {
+  "id": "BUG-02",
+  "sev": "Critical",
+  "title": "Integer overflow in `storeRawNames` (`bufSize`) skips `REALLOC` and causes heap buffer overflow (plus signed shift overflow in `doContent`)",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmlparse.c",
+    2554,
+    2595
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    2927,
+    2934
+   ]
+  ]
+ },
+ {
+  "id": "BUG-03",
+  "sev": "Critical",
+  "title": "Unchecked `unsigned` overflow in `dtd->contentStringLen` causes undersized allocation in `build_model` and heap buffer overflow in `build_node`",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmlparse.c",
+    385,
+    385
+   ],
+   [
+    "xmlparse.c",
+    385,
+    385
+   ],
+   [
+    "xmlparse.c",
+    7364,
+    7367
+   ],
+   [
+    "xmlparse.c",
+    7355,
+    7362
+   ]
+  ]
+ },
+ {
+  "id": "BUG-04",
+  "sev": "Critical",
+  "title": "Heap buffer overflow on `dtd->scaffIndex` via capacity desynchronization and shrinking between root and external PE parsers",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmlparse.c",
+    1048,
+    1048
+   ]
+  ]
+ },
+ {
+  "id": "BUG-05",
+  "sev": "Critical",
+  "title": "Use-after-free and double-free of parent parser's shared `m_dtd` on OOM in `parserCreate` via `XML_ExternalEntityParserCreate`",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmlparse.c",
+    1029,
+    1030
+   ]
+  ]
+ },
+ {
+  "id": "BUG-06",
+  "sev": "Critical",
+  "title": "UTF-8 validation bypass in XML names accepts overlong sequences, non-continuation bytes, embedded NULs, and delimiter-swallowing bytes",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmltok.c",
+    84,
+    99
+   ],
+   [
+    "expat/lib/xmltok_impl.c",
+    68,
+    77
+   ],
+   [
+    "expat/lib/utf8tab.h",
+    51,
+    51
+   ],
+   [
+    "utf8tab.h",
+    51,
+    51
+   ],
+   [
+    "xmltok.c",
+    84,
+    99
+   ]
+  ]
+ },
+ {
+  "id": "BUG-07",
+  "sev": "High",
+  "title": "Heap use-after-free in `internalEntityProcessor` due to missing `storeRawNames(parser)` (plus wrong `m_processor` for external general entities)",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmlparse.c",
+    5674,
+    5680
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    2604,
+    2607
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    2720,
+    2723
+   ]
+  ]
+ },
+ {
+  "id": "BUG-08",
+  "sev": "High",
+  "title": "`allowClosingDoctype` guard bypassed in `internalEntityProcessor`, allowing DOCTYPE closure and encoding/processor confusion from resumed internal PE",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmlparse.c",
+    5634,
+    5640
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    5586,
+    5592
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    4651,
+    4655
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    4745,
+    4746
+   ]
+  ]
+ },
+ {
+  "id": "BUG-09",
+  "sev": "High",
+  "title": "Unbounded C-stack recursion (stack overflow crash) in `build_node` and non-cyclic entity expansion chains",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmlparse.c",
+    7309,
+    7338
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    7593,
+    7605
+   ]
+  ]
+ },
+ {
+  "id": "BUG-10",
+  "sev": "High",
+  "title": "Namespace separator injection in `addBinding` and expanded attribute name collisions / incomplete duplicate check in `storeAtts`",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmlparse.c",
+    3746,
+    3765
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    3546,
+    3587
+   ],
+   [
+    "expat.h",
+    236,
+    236
+   ],
+   [
+    "expat.h",
+    3578,
+    3581
+   ]
+  ]
+ },
+ {
+  "id": "BUG-11",
+  "sev": "High",
+  "title": "Missing `len` bounds validation (`len < 0` / OOB) and unchecked signed `m_parseEndByteIndex` overflow in `XML_ParseBuffer`",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmlparse.c",
+    1971,
+    2034
+   ]
+  ]
+ },
+ {
+  "id": "BUG-12",
+  "sev": "High",
+  "title": "Unsynchronized shared parent-parser access in `XML_ExternalEntityParserCreate` child parsers causes data races and UAF, violating documented thread-safety contract",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/expat.h",
+    850,
+    854
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    941,
+    946
+   ],
+   [
+    "expat.h",
+    852,
+    853
+   ],
+   [
+    "expat.h",
+    7597,
+    7601
+   ],
+   [
+    "expat.h",
+    943,
+    945
+   ]
+  ]
+ },
+ {
+  "id": "BUG-13",
+  "sev": "High",
+  "title": "Complete bypass of amplification protection under `XML_UseForeignDTD` when document begins directly with root element",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmlparse.c",
+    4555,
+    4565
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    7429,
+    7433
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    4555,
+    4559
+   ]
+  ]
+ },
+ {
+  "id": "BUG-14",
+  "sev": "High",
+  "title": "Undefined behavior (`NULL - s`) and accounting counter corruption in `epilogProcessor` on negative prolog tokens",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmlparse.c",
+    5487,
+    5495
+   ],
+   [
+    "expat/lib/xmltok_impl.c",
+    977,
+    977
+   ]
+  ]
+ },
+ {
+  "id": "BUG-15",
+  "sev": "High",
+  "title": "Unchecked `parser->m_groupSize * sizeof(int)` overflow on 32-bit platforms in `nextScaffoldPart` initial `dtd->scaffIndex` allocation",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmlparse.c",
+    7253,
+    7258
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    5156,
+    5160
+   ]
+  ]
+ },
+ {
+  "id": "BUG-16",
+  "sev": "High",
+  "title": "NULL function pointer dereference in `XML_MIN_SIZE` builds when a UTF-16 high surrogate appears in any XML name",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmltok.c",
+    227,
+    230
+   ],
+   [
+    "expat/lib/xmltok_impl.c",
+    68,
+    77
+   ],
+   [
+    "expat/lib/xmltok_impl.c",
+    276,
+    278
+   ],
+   [
+    "expat/lib/xmltok_impl.c",
+    273,
+    274
+   ]
+  ]
+ },
+ {
+  "id": "BUG-17",
+  "sev": "High",
+  "title": "`DEFINE_UTF16_TO_UTF16` (`little2_toUtf16`/`big2_toUtf16`) wrong bitmask and boundary check drops low surrogates and splits surrogate pairs",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmltok.c",
+    701,
+    720
+   ]
+  ]
+ },
+ {
+  "id": "BUG-18",
+  "sev": "High",
+  "title": "Missing UTF-16 surrogate pair validation (`IS_INVALID_CHAR` always `0`) accepts unpaired high surrogates paired with arbitrary code units",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmltok.c",
+    598,
+    622
+   ],
+   [
+    "expat/lib/xmltok_impl.c",
+    43,
+    56
+   ],
+   [
+    "xmltok_impl.c",
+    43,
+    45
+   ],
+   [
+    "xmltok.c",
+    671,
+    691
+   ]
+  ]
+ },
+ {
+  "id": "BUG-19",
+  "sev": "High",
+  "title": "Out-of-bounds read and unbounded loop past `fromLim` in `unknown_toUtf8` / `unknown_toUtf16`, reachable via `parsePseudoAttribute` step desync",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmltok.c",
+    1358,
+    1407
+   ]
+  ]
+ },
+ {
+  "id": "BUG-20",
+  "sev": "Medium",
+  "title": "Out-of-bounds pointer advance (`ptr += n` past `end`) in `attributeValueTok`, `entityValueTok`, and `updatePosition`",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmltok_impl.c",
+    1271,
+    1278
+   ]
+  ]
+ },
+ {
+  "id": "BUG-21",
+  "sev": "Medium",
+  "title": "`externalSubset1` rejects all valid internal PE references inside `<![INCLUDE[ ... ]]>` and allows a PE to close an outer `INCLUDE` section",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmlrole.c",
+    388,
+    411
+   ],
+   [
+    "expat/lib/xmlrole.h",
+    124,
+    124
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    4526,
+    4545
+   ]
+  ]
+ },
+ {
+  "id": "BUG-22",
+  "sev": "Medium",
+  "title": "`ignoreSectionTok` fails to recognize `]]>` after odd runs of `]` (e.g., `]]]>`) and omits `ptr >= end` guard",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmltok_impl.c",
+    1390,
+    1438
+   ]
+  ]
+ },
+ {
+  "id": "BUG-23",
+  "sev": "Medium",
+  "title": "`internalEntityProcessor` abandons outer nested internal entities on resume and continues parsing after suspend on final entity token",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmlparse.c",
+    5646,
+    5681
+   ]
+  ]
+ },
+ {
+  "id": "BUG-24",
+  "sev": "Medium",
+  "title": "`XML_ROLE_ENTITY_VALUE` commits entity value and invokes `m_entityDeclHandler` (potentially with `value == NULL`) before checking `storeEntityValue` error",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmlparse.c",
+    4874,
+    4897
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    4879,
+    4891
+   ],
+   [
+    "expat.h",
+    330,
+    337
+   ]
+  ]
+ },
+ {
+  "id": "BUG-25",
+  "sev": "Medium",
+  "title": "`setContext` leaves `prefix->name == NULL` in `dtd->prefixes` on OOM; retrying `XML_Parse` causes NULL dereference in `keyeq`",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmlparse.c",
+    1831,
+    1835
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    6481,
+    6490
+   ]
+  ]
+ },
+ {
+  "id": "BUG-26",
+  "sev": "Medium",
+  "title": "Unchecked `lookup()` failure in `getAttributeId` for `xmlns:*` silently drops namespace binding and leaks raw attribute",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmlparse.c",
+    6326,
+    6329
+   ]
+  ]
+ },
+ {
+  "id": "BUG-27",
+  "sev": "Medium",
+  "title": "NULL function pointer dereferences if `m_startDoctypeDeclHandler` (`XML_ROLE_DOCTYPE_CLOSE`) or `m_defaultHandler` (`reportDefault`) is cleared dynamically",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmlparse.c",
+    4657,
+    4663
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    4657,
+    4660
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    6192,
+    6201
+   ]
+  ]
+ },
+ {
+  "id": "BUG-28",
+  "sev": "Medium",
+  "title": "Use-after-free in `XML_Parse` (`#ifndef XML_CONTEXT_BYTES`) when querying line/column after error or final chunk",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmlparse.c",
+    1901,
+    1925
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    1907,
+    1910
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    1918,
+    1921
+   ]
+  ]
+ },
+ {
+  "id": "BUG-29",
+  "sev": "Medium",
+  "title": "Uninitialized heap reads in `XML_GetIdAttributeIndex` (`m_idAttIndex`), `XML_GetParsingStatus` (`finalBuffer`), and `poolGrow` (`freeBlocks` copy)",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmlparse.c",
+    986,
+    986
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    7160,
+    7161
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    1,
+    3
+   ]
+  ]
+ },
+ {
+  "id": "BUG-30",
+  "sev": "Medium",
+  "title": "Unrelated pointer subtraction UB and heap-distance leak in `storeAtts` (`XML_ATTR_INFO`) during internal entity expansion",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmlparse.c",
+    3339,
+    3348
+   ]
+  ]
+ },
+ {
+  "id": "BUG-31",
+  "sev": "Medium",
+  "title": "Multiple processor state bugs in `cdataSectionProcessor`, `externalEntityInitProcessor3`, `entityValueInitProcessor`, `XML_ParserReset`, and `XML_StopParser`",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmlparse.c",
+    1215,
+    1217
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    3851,
+    3859
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    2685,
+    2688
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    4286,
+    4359
+   ]
+  ]
+ },
+ {
+  "id": "BUG-32",
+  "sev": "Medium",
+  "title": "Dead `!dtd->hasParamEntityRefs` WFC check, self-referential PE `NULL + 0` UB, and uncleared `m_tempPool` on skipped ATTLIST enum",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmlparse.c",
+    4789,
+    4834
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    5995,
+    5997
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    5280,
+    5286
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    4791,
+    4834
+   ]
+  ]
+ },
+ {
+  "id": "BUG-33",
+  "sev": "Medium",
+  "title": "Wrong `EXPAT_FMT_*` format specifiers on MinGW-w64 / 32-bit platforms, and `#ifdef XML_DTD` guard hiding `XML_SetBillionLaughsAttackProtection*` declarations",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/internal.h",
+    110,
+    130
+   ],
+   [
+    "expat/lib/expat.h",
+    1027,
+    1037
+   ],
+   [
+    "internal.h",
+    110,
+    130
+   ],
+   [
+    "xmlparse.c",
+    7469,
+    7469
+   ],
+   [
+    "runtests.c",
+    11508,
+    11508
+   ],
+   [
+    "expat.h",
+    1027,
+    1037
+   ]
+  ]
+ },
+ {
+  "id": "BUG-34",
+  "sev": "Low",
+  "title": "Memory leak of `BINDING` struct on integer-overflow error paths in `addBinding`",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmlparse.c",
+    3793,
+    3816
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    3798,
+    3800
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    3806,
+    3808
+   ]
+  ]
+ },
+ {
+  "id": "BUG-35",
+  "sev": "Low",
+  "title": "Double-counting of direct bytes for non-empty start-tag attributes (`XML_TOK_START_TAG_WITH_ATTS`) weakens amplification limit",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmlparse.c",
+    2753,
+    2753
+   ]
+  ]
+ },
+ {
+  "id": "BUG-36",
+  "sev": "Low",
+  "title": "`prologTok` shrinks odd UTF-16 `end` locally causing `doProlog` to swallow stray trailing bytes; `DEFINE_UTF16_TO_UTF8` returns `COMPLETED` on odd input",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmltok_impl.c",
+    1020,
+    1028
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    4547,
+    4550
+   ],
+   [
+    "expat/lib/xmltok.c",
+    630,
+    630
+   ],
+   [
+    "xmltok.c",
+    630,
+    630
+   ]
+  ]
+ },
+ {
+  "id": "BUG-37",
+  "sev": "Low",
+  "title": "`prologTok` `BT_COLON` accepts `NameChar` instead of `NameStartChar` after `:`, and `BT_RPAR` rejects `)` followed by `%`",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmltok_impl.c",
+    1121,
+    1132
+   ],
+   [
+    "expat/lib/xmltok_impl.c",
+    1212,
+    1217
+   ]
+  ]
+ },
+ {
+  "id": "BUG-38",
+  "sev": "Low",
+  "title": "Character-table and declaration edge-case defects (`latin1tab.h`, `doParseXmlDecl`, `isPublicId`, `_INTERNAL_trim_to_complete_utf8_characters`)",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/latin1tab.h",
+    45,
+    45
+   ],
+   [
+    "expat/lib/xmltok.c",
+    334,
+    364
+   ],
+   [
+    "expat/lib/xmltok_impl.c",
+    1477,
+    1491
+   ],
+   [
+    "latin1tab.h",
+    45,
+    45
+   ],
+   [
+    "latin1tab.h",
+    1,
+    8859
+   ],
+   [
+    "xmltok.c",
+    1131,
+    1143
+   ],
+   [
+    "xmltok_impl.c",
+    1477,
+    1491
+   ],
+   [
+    "xmltok.c",
+    334,
+    364
+   ]
+  ]
+ },
+ {
+  "id": "BUG-39",
+  "sev": "Low",
+  "title": "Short-read / stale-`errno` loop bug in `writeRandomBytes_*`, `XML_GetBuffer(p, 0)` API inconsistency, and signed `int` length in `copyString`",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmlparse.c",
+    743,
+    767
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    743,
+    799
+   ],
+   [
+    "expat/lib/xmlparse.c",
+    7402,
+    7418
+   ]
+  ]
+ },
+ {
+  "id": "BUG-40",
+  "sev": "Low",
+  "title": "Signed `attIndex` / `nPrefixes << 1` / `int j` overflows in `storeAtts` at `>= 2^29` attributes; unchecked `state->includeLevel += 1` wrap in `condSect1`",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/xmlparse.c",
+    3266,
+    3283
+   ],
+   [
+    "expat/lib/xmlrole.c",
+    1150,
+    1153
+   ],
+   [
+    "xmlrole.c",
+    1152,
+    1152
+   ]
+  ]
+ },
+ {
+  "id": "BUG-41",
+  "sev": "Low",
+  "title": "`XML_XmlDeclHandler` `version == NULL` contract mismatch for TextDecls, `XML_GetUserData(NULL)` dereference, and `#define inline` issues in `internal.h`",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "expat/lib/expat.h",
+    202,
+    209
+   ],
+   [
+    "expat/lib/internal.h",
+    100,
+    106
+   ],
+   [
+    "expat/lib/xmltok.c",
+    1177,
+    1199
+   ],
+   [
+    "expat.h",
+    203,
+    204
+   ],
+   [
+    "xmltok.c",
+    1182,
+    1186
+   ],
+   [
+    "xmlparse.c",
+    4164,
+    4172
+   ],
+   [
+    "expat.h",
+    664,
+    664
+   ],
+   [
+    "internal.h",
+    100,
+    106
+   ]
+  ]
+ }
+]

@@ -1,0 +1,1231 @@
+[
+ {
+  "id": "BUG-001",
+  "sev": "Critical",
+  "title": "Heap buffer overflow in raw template literal containing escaped U+2028/U+2029",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/parser/js/js-lexer.c",
+    974,
+    980
+   ],
+   [
+    "jerry-core/parser/js/js-lexer.c",
+    1974,
+    2150
+   ],
+   [
+    "jerry-core/parser/js/js-parser-tagged-template-literal.c",
+    69,
+    79
+   ],
+   [
+    "jerry-core/parser/js/js-parser-tagged-template-literal.c",
+    974,
+    980
+   ]
+  ]
+ },
+ {
+  "id": "BUG-002",
+  "sev": "Critical",
+  "title": "Heap buffer overflow & type confusion via `ArrayBuffer` `Symbol.species` in TypedArray constructor",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/operations/ecma-typedarray-object.c",
+    528,
+    558
+   ],
+   [
+    "jerry-core/ecma/operations/ecma-typedarray-object.c",
+    645,
+    672
+   ],
+   [
+    "jerry-core/ecma/operations/ecma-typedarray-object.c",
+    537,
+    540
+   ]
+  ]
+ },
+ {
+  "id": "BUG-003",
+  "sev": "Critical",
+  "title": "Use-after-free of element/index `ecma_value_t` in `TypedArray.prototype.filter`",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/builtin-objects/typedarray/ecma-builtin-typedarray-prototype.c",
+    731,
+    742
+   ],
+   [
+    "jerry-core/ecma/builtin-objects/typedarray/ecma-builtin-typedarray-prototype.c",
+    739,
+    740
+   ],
+   [
+    "ecma-helpers-conversion.c",
+    671,
+    671
+   ]
+  ]
+ },
+ {
+  "id": "BUG-004",
+  "sev": "Critical",
+  "title": "Heap/stack buffer overflow in `jerry_get_literals_from_snapshot` when `is_c_format` is true",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/api/jerry-snapshot.c",
+    1673,
+    1686
+   ],
+   [
+    "jerry-snapshot.c",
+    1685,
+    1685
+   ]
+  ]
+ },
+ {
+  "id": "BUG-005",
+  "sev": "High",
+  "title": "`memset` uses capture count instead of byte size in `ecma_regexp_replace_helper_fast` and ES5.1 `split`",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/operations/ecma-regexp-object.c",
+    2189,
+    2189
+   ],
+   [
+    "jerry-core/ecma/operations/ecma-regexp-object.c",
+    2029,
+    2029
+   ]
+  ]
+ },
+ {
+  "id": "BUG-006",
+  "sev": "High",
+  "title": "Non-ASCII `RegExp.prototype[@@replace]` advances UTF-8 pointer by match byte size instead of character count",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/operations/ecma-regexp-object.c",
+    2749,
+    2750
+   ]
+  ]
+ },
+ {
+  "id": "BUG-007",
+  "sev": "High",
+  "title": "Unchecked `ECMA_VALUE_ERROR` from `ecma_regexp_exec_helper` in `@@replace` slow path",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/operations/ecma-regexp-object.c",
+    2533,
+    2543
+   ]
+  ]
+ },
+ {
+  "id": "BUG-008",
+  "sev": "High",
+  "title": "Assertion crash / unhandled error in sticky `@@replace` when `lastIndex` is non-writable and out of bounds",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/operations/ecma-regexp-object.c",
+    2471,
+    2475
+   ]
+  ]
+ },
+ {
+  "id": "BUG-009",
+  "sev": "High",
+  "title": "Memory leak of `source_obj` and `source_length` on `ToLength` error in `TypedArray.prototype.set`",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/builtin-objects/typedarray/ecma-builtin-typedarray-prototype.c",
+    964,
+    977
+   ]
+  ]
+ },
+ {
+  "id": "BUG-010",
+  "sev": "Critical",
+  "title": "`jerryx_close_handle_scope` frees parent before child, causing heap UAF, dangling `current`, and leaked child scopes",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-ext/handle-scope/handle-scope.c",
+    71,
+    87
+   ],
+   [
+    "jerry-ext/handle-scope/handle-scope-allocator.c",
+    109,
+    138
+   ],
+   [
+    "handle-scope-allocator.c",
+    216,
+    216
+   ]
+  ]
+ },
+ {
+  "id": "BUG-011",
+  "sev": "High",
+  "title": "`jerryx_escape_handle` on prelist handle with non-empty overflow list leaks heap handles and one prelist handle",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-ext/handle-scope/handle-scope.c",
+    126,
+    143
+   ]
+  ]
+ },
+ {
+  "id": "BUG-012",
+  "sev": "High",
+  "title": "`jerryx_remove_handle` on heap-allocated handle leaves `*result` uninitialized and leaks `jerryx_handle_t`",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-ext/handle-scope/handle-scope.c",
+    248,
+    260
+   ],
+   [
+    "handle-scope.c",
+    341,
+    341
+   ]
+  ]
+ },
+ {
+  "id": "BUG-013",
+  "sev": "High",
+  "title": "`jerry_define_own_property` checks `is_enumerable` instead of `is_configurable` and returns raw `ECMA_VALUE_ERROR`",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/api/jerry.c",
+    2469,
+    2473
+   ],
+   [
+    "jerry-core/api/jerry.c",
+    2537,
+    2539
+   ]
+  ]
+ },
+ {
+  "id": "BUG-014",
+  "sev": "High",
+  "title": "`jerry_create_regexp_sz` returns raw `ECMA_VALUE_ERROR` on invalid pattern and passes UTF-8 to CESU-8 constructor",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/api/jerry.c",
+    1707,
+    1717
+   ]
+  ]
+ },
+ {
+  "id": "BUG-015",
+  "sev": "High",
+  "title": "`jerry_create_typedarray_for_arraybuffer` passes byte length as element count",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/api/jerry.c",
+    4095,
+    4096
+   ]
+  ]
+ },
+ {
+  "id": "BUG-016",
+  "sev": "High",
+  "title": "`jerry_create_dataview` leaks heap-allocated `ecma_number_t` arguments",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/api/jerry.c",
+    3790,
+    3797
+   ],
+   [
+    "jerry-core/api/jerry.c",
+    4061,
+    4062
+   ]
+  ]
+ },
+ {
+  "id": "BUG-017",
+  "sev": "High",
+  "title": "`jerry_json_stringify` uses error argument before error-reference check and omits `jerry_return()`",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "jerry-core/api/jerry.c",
+    4252,
+    4264
+   ]
+  ]
+ },
+ {
+  "id": "BUG-018",
+  "sev": "High",
+  "title": "Debugger crashes on `Symbol`, throwing `toString`, and accessor properties",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "jerry-core/debugger/debugger.c",
+    505,
+    510
+   ],
+   [
+    "jerry-core/debugger/debugger.c",
+    573,
+    574
+   ],
+   [
+    "jerry-core/debugger/debugger.c",
+    969,
+    979
+   ],
+   [
+    "jerry-core/debugger/debugger.c",
+    1190,
+    1194
+   ]
+  ]
+ },
+ {
+  "id": "BUG-019",
+  "sev": "High",
+  "title": "`jerry_snapshot_result` lacks bounds checks on `func_offsets` / `func_offset` and returns raw `ECMA_VALUE_ERROR`",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "jerry-core/api/jerry-snapshot.c",
+    949,
+    958
+   ],
+   [
+    "jerry-core/api/jerry-snapshot.c",
+    220,
+    223
+   ]
+  ]
+ },
+ {
+  "id": "BUG-020",
+  "sev": "Medium",
+  "title": "`re_parse_next_token` treats NUL (`\\0`) as EOF, truncating RegExp patterns",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/parser/regexp/re-parser.c",
+    633,
+    637
+   ]
+  ]
+ },
+ {
+  "id": "BUG-021",
+  "sev": "Medium",
+  "title": "32-bit integer overflow in `{min,max}` quantifier parsing",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/parser/regexp/re-parser.c",
+    172,
+    180
+   ]
+  ]
+ },
+ {
+  "id": "BUG-022",
+  "sev": "Medium",
+  "title": "Character class range `[a-\\d]` uses `LIT_CHAR_UNDEF` (`0xFFFF`) as range end",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/parser/regexp/re-compiler.c",
+    407,
+    471
+   ],
+   [
+    "jerry-core/parser/regexp/re-compiler.c",
+    497,
+    503
+   ]
+  ]
+ },
+ {
+  "id": "BUG-023",
+  "sev": "Medium",
+  "title": "Unicode greedy iterator backtracking splits surrogate pairs",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/operations/ecma-regexp-object.c",
+    1118,
+    1118
+   ]
+  ]
+ },
+ {
+  "id": "BUG-024",
+  "sev": "Medium",
+  "title": "`RE_OP_BACKREFERENCE` ignores `/i` (`ignoreCase`) flag",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/operations/ecma-regexp-object.c",
+    719,
+    719
+   ]
+  ]
+ },
+ {
+  "id": "BUG-025",
+  "sev": "Medium",
+  "title": "`ecma_regexp_exec_helper` wraps `lastIndex` via `ToUint32`",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/operations/ecma-regexp-object.c",
+    1316,
+    1316
+   ]
+  ]
+ },
+ {
+  "id": "BUG-026",
+  "sev": "Medium",
+  "title": "Sticky non-global `RegExp.prototype[@@replace]` fast path ignores sticky flag",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/operations/ecma-regexp-object.c",
+    2187,
+    2293
+   ]
+  ]
+ },
+ {
+  "id": "BUG-027",
+  "sev": "Medium",
+  "title": "Undefined behavior passing `NULL` to `memset` in `ecma_regexp_initialize_context`",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/operations/ecma-regexp-object.c",
+    1206,
+    1211
+   ]
+  ]
+ },
+ {
+  "id": "BUG-028",
+  "sev": "Medium",
+  "title": "`ecma_op_dataview_create` truncates `byteOffset` >= `2^32` and evaluates offset twice",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/operations/ecma-dataview-object.c",
+    70,
+    87
+   ]
+  ]
+ },
+ {
+  "id": "BUG-029",
+  "sev": "Medium",
+  "title": "`TypedArray.prototype.set` with overlapping different-typed views clobbers unread source bytes",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/builtin-objects/typedarray/ecma-builtin-typedarray-prototype.c",
+    893,
+    906
+   ]
+  ]
+ },
+ {
+  "id": "BUG-030",
+  "sev": "Medium",
+  "title": "`ecma_typedarray_set_uint8_clamped_element` performs undefined `(uint8_t) NaN` cast",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "jerry-core/ecma/operations/ecma-typedarray-object.c",
+    191,
+    202
+   ]
+  ]
+ },
+ {
+  "id": "BUG-031",
+  "sev": "Medium",
+  "title": "`jerryx_module_check_cache` uses `jerry_has_property` instead of `jerry_has_own_property`",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-ext/module/module.c",
+    120,
+    120
+   ]
+  ]
+ },
+ {
+  "id": "BUG-032",
+  "sev": "Medium",
+  "title": "Multiple defects in `jerryx_debugger_serial_*` (`debugger-serial.c`)",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "jerry-ext/debugger/debugger-serial.c",
+    119,
+    120
+   ],
+   [
+    "jerry-ext/debugger/debugger-serial.c",
+    168,
+    173
+   ],
+   [
+    "jerry-ext/debugger/debugger-serial.c",
+    363,
+    366
+   ],
+   [
+    "jerry-ext/debugger/debugger-serial.c",
+    333,
+    337
+   ]
+  ]
+ },
+ {
+  "id": "BUG-033",
+  "sev": "Medium",
+  "title": "`jerryx_debugger_ws_create` succeeds and registers transport after failed handshake on disconnect",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "jerry-ext/debugger/debugger-ws.c",
+    426,
+    429
+   ]
+  ]
+ },
+ {
+  "id": "BUG-034",
+  "sev": "Medium",
+  "title": "`jerry_set_prototype` does not check for prototype cycles",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "jerry-core/api/jerry.c",
+    2824,
+    2847
+   ]
+  ]
+ },
+ {
+  "id": "BUG-035",
+  "sev": "Critical",
+  "title": "GC fails to mark VM stack contexts in suspended generators, causing use-after-free and live object reuse",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/base/ecma-gc.c",
+    437,
+    448
+   ],
+   [
+    "jerry-core/vm/opcodes.c",
+    700,
+    708
+   ],
+   [
+    "opcodes.c",
+    700,
+    708
+   ],
+   [
+    "ecma-gc.c",
+    437,
+    437
+   ]
+  ]
+ },
+ {
+  "id": "BUG-036",
+  "sev": "Critical",
+  "title": "Double-free, use-after-free, and memory leak in `TypedArray.prototype.toLocaleString`",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/builtin-objects/typedarray/ecma-builtin-typedarray-prototype.c",
+    2017,
+    2017
+   ]
+  ]
+ },
+ {
+  "id": "BUG-037",
+  "sev": "Critical",
+  "title": "`ecma_gc_free_object` ignores property hashmap on `WeakMap`/`WeakSet`, causing assertion crash / memory corruption",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/base/ecma-gc.c",
+    1087,
+    1091
+   ],
+   [
+    "jerry-core/ecma/base/ecma-gc.c",
+    313,
+    323
+   ],
+   [
+    "jerry-core/ecma/base/ecma-gc.c",
+    851,
+    862
+   ]
+  ]
+ },
+ {
+  "id": "BUG-038",
+  "sev": "Critical",
+  "title": "Fast-array TOCTOU heap out-of-bounds read / NULL dereference in `Array.prototype.indexOf`, `lastIndexOf`, and `slice`",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-array-prototype.c",
+    829,
+    888
+   ]
+  ]
+ },
+ {
+  "id": "BUG-039",
+  "sev": "Critical",
+  "title": "Out-of-bounds stack read/free and argument leak on spread error in `opfunc_spread_arguments`",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/vm/opcodes.c",
+    447,
+    450
+   ]
+  ]
+ },
+ {
+  "id": "BUG-040",
+  "sev": "Critical",
+  "title": "Use-after-free in `RegExp.prototype.compile` when compiling a RegExp from itself",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-regexp-prototype.c",
+    344,
+    352
+   ],
+   [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-regexp-prototype.c",
+    345,
+    348
+   ],
+   [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-regexp-prototype.c",
+    348,
+    352
+   ]
+  ]
+ },
+ {
+  "id": "BUG-041",
+  "sev": "Critical",
+  "title": "Stack buffer overflow and skipped prototype lazy properties in `ecma_op_object_get_property_names`",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/operations/ecma-objects.c",
+    1858,
+    1965
+   ],
+   [
+    "jerry-core/ecma/operations/ecma-objects.c",
+    1858,
+    1859
+   ],
+   [
+    "jerry-core/ecma/operations/ecma-objects.c",
+    1890,
+    1965
+   ],
+   [
+    "jerry-core/ecma/operations/ecma-objects.c",
+    2209,
+    2246
+   ]
+  ]
+ },
+ {
+  "id": "BUG-042",
+  "sev": "Critical",
+  "title": "Use-after-free of heap-allocated float value in `String.fromCodePoint`",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-string.c",
+    301,
+    305
+   ]
+  ]
+ },
+ {
+  "id": "BUG-043",
+  "sev": "High",
+  "title": "Nested generator call in default parameter clears `current_function_obj_p`, causing NULL-dereference crash",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/operations/ecma-function-object.c",
+    998,
+    998
+   ]
+  ]
+ },
+ {
+  "id": "BUG-044",
+  "sev": "High",
+  "title": "`ecma_free_all_enqueued_jobs` frees `PromiseResolveThenableJob` with wrong size and leaks `then`",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/operations/ecma-jobqueue.c",
+    84,
+    92
+   ]
+  ]
+ },
+ {
+  "id": "BUG-045",
+  "sev": "High",
+  "title": "Infinite loop leading to OOM in `String.raw` when `next_index >= number_of_substitutions`",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-string.c",
+    236,
+    255
+   ]
+  ]
+ },
+ {
+  "id": "BUG-046",
+  "sev": "High",
+  "title": "`ecma_op_iterator_return` passes C `true` (`1`) instead of `ECMA_VALUE_TRUE`",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/operations/ecma-iterator-object.c",
+    311,
+    311
+   ]
+  ]
+ },
+ {
+  "id": "BUG-047",
+  "sev": "High",
+  "title": "`VM_OC_CONTEXT_END` ignores pending exception raised by `for-of` `iterator.return()`",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/vm/vm.c",
+    3662,
+    3679
+   ],
+   [
+    "jerry-core/vm/vm.c",
+    3702,
+    3708
+   ]
+  ]
+ },
+ {
+  "id": "BUG-048",
+  "sev": "High",
+  "title": "`JSON.stringify` crashes on `NULL` string when `new String().toString()` throws",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-json.c",
+    1174,
+    1178
+   ]
+  ]
+ },
+ {
+  "id": "BUG-049",
+  "sev": "High",
+  "title": "Memory leak of `capability` in `Promise.resolve` / `Promise.reject` when resolve/reject function throws",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/operations/ecma-promise-object.c",
+    795,
+    798
+   ]
+  ]
+ },
+ {
+  "id": "BUG-050",
+  "sev": "High",
+  "title": "Memory leak of `search_symbol` in `String.prototype.search` when `@@search` is non-callable",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-string-prototype.c",
+    647,
+    651
+   ]
+  ]
+ },
+ {
+  "id": "BUG-051",
+  "sev": "High",
+  "title": "`ArrayIterator.prototype.next` crashes on frozen iterator at index 65535 and leaks large heap float indices",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-array-iterator-prototype.c",
+    104,
+    110
+   ]
+  ]
+ },
+ {
+  "id": "BUG-052",
+  "sev": "High",
+  "title": "`StringIterator.prototype.next` `uint16_t` overflow wraps index `65534 + 2` to `0` on surrogate pair",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-string-iterator-prototype.c",
+    85,
+    88
+   ]
+  ]
+ },
+ {
+  "id": "BUG-053",
+  "sev": "High",
+  "title": "`ecma_op_same_value` uses `==` instead of `&&` for NaN check, breaking `Object.is` and frozen float properties",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/operations/ecma-conversion.c",
+    101,
+    104
+   ]
+  ]
+ },
+ {
+  "id": "BUG-054",
+  "sev": "High",
+  "title": "`parseFloat` compares only 1 byte of `\"Infinity\"` due to `sizeof(*infinity_str_p)`",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-global.c",
+    343,
+    343
+   ]
+  ]
+ },
+ {
+  "id": "BUG-055",
+  "sev": "High",
+  "title": "`Object.freeze`, `Object.seal`, `Object.isFrozen`, and `Object.isSealed` ignore Symbol properties",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-object.c",
+    309,
+    309
+   ]
+  ]
+ },
+ {
+  "id": "BUG-056",
+  "sev": "High",
+  "title": "`Date.prototype.get*` on Invalid Date (`NaN`) returns string `\"NaN\"` instead of number `NaN`",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-date-prototype.c",
+    238,
+    241
+   ]
+  ]
+ },
+ {
+  "id": "BUG-057",
+  "sev": "High",
+  "title": "Reversed subtraction causes `uint32_t` underflow and OOB read in `ecma_string_get_chars_fast`",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "jerry-core/ecma/base/ecma-helpers-string.c",
+    175,
+    175
+   ]
+  ]
+ },
+ {
+  "id": "BUG-058",
+  "sev": "High",
+  "title": "`ecma_save_literals_add_compiled_code` reads `literal_p[0..argument_end-1]` past literal pool and truncates >64 KB strings",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "jerry-core/ecma/base/ecma-literal-storage.c",
+    370,
+    373
+   ],
+   [
+    "jerry-core/ecma/base/ecma-literal-storage.c",
+    392,
+    402
+   ]
+  ]
+ },
+ {
+  "id": "BUG-059",
+  "sev": "Medium",
+  "title": "Multiple logic bugs in `String.prototype.startsWith`, `endsWith`, `indexOf`, and `lastIndexOf`",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-helpers.c",
+    483,
+    483
+   ],
+   [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-helpers.c",
+    612,
+    615
+   ]
+  ]
+ },
+ {
+  "id": "BUG-060",
+  "sev": "Medium",
+  "title": "`String.prototype.repeat` and `String.prototype.substr` wrap 32-bit counts/indices via `ToUint32`",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-string-prototype.c",
+    1123,
+    1143
+   ]
+  ]
+ },
+ {
+  "id": "BUG-061",
+  "sev": "Medium",
+  "title": "`Object.preventExtensions` on a fast array prevents modifying existing writable elements",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/operations/ecma-objects.c",
+    1168,
+    1173
+   ]
+  ]
+ },
+ {
+  "id": "BUG-062",
+  "sev": "Medium",
+  "title": "`TypedArray` indexed `[[Put]]` swallows `ToNumber` exceptions",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/operations/ecma-objects.c",
+    1234,
+    1241
+   ],
+   [
+    "jerry-core/ecma/operations/ecma-objects.c",
+    1236,
+    1241
+   ]
+  ]
+ },
+ {
+  "id": "BUG-063",
+  "sev": "Medium",
+  "title": "`TypedArray.prototype.indexOf` fails / invokes UB on negative `fromIndex < -length`",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/builtin-objects/typedarray/ecma-builtin-typedarray-prototype.c",
+    1741,
+    1742
+   ]
+  ]
+ },
+ {
+  "id": "BUG-064",
+  "sev": "Medium",
+  "title": "`unescape` fails to reset `hex_digits` on invalid sequences and mishandles `%%xx`",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-global.c",
+    1095,
+    1117
+   ]
+  ]
+ },
+ {
+  "id": "BUG-065",
+  "sev": "Medium",
+  "title": "`JSON.stringify` ignores empty replacer array `[]`",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-json.c",
+    899,
+    899
+   ]
+  ]
+ },
+ {
+  "id": "BUG-066",
+  "sev": "Medium",
+  "title": "`Promise.all` / `Promise.race` inverted `is_done` check skips iterator close and iterates rejected promise",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-promise.c",
+    503,
+    504
+   ]
+  ]
+ },
+ {
+  "id": "BUG-067",
+  "sev": "Medium",
+  "title": "`Generator.prototype.return` and `.throw` on completed generators ignore argument / fail to throw",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-generator-prototype.c",
+    99,
+    102
+   ]
+  ]
+ },
+ {
+  "id": "BUG-068",
+  "sev": "Medium",
+  "title": "`Number.prototype.toString` wraps radix via `ToUint32` and `toFixed` drops minus sign for `|x| >= 1e21`",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-number-prototype.c",
+    270,
+    270
+   ]
+  ]
+ },
+ {
+  "id": "BUG-069",
+  "sev": "Medium",
+  "title": "`Date.prototype[Symbol.toPrimitive]` accepts invalid hints, `setTime` returns unclipped value, and `new Date(obj)` calls `valueOf()` twice",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-date-prototype.c",
+    205,
+    205
+   ],
+   [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-date.c",
+    756,
+    778
+   ]
+  ]
+ },
+ {
+  "id": "BUG-070",
+  "sev": "Medium",
+  "title": "Multiple `Reflect` API contract violations (`preventExtensions`, `setPrototypeOf`, `defineProperty`, `apply`)",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/builtin-objects/ecma-builtin-reflect.c",
+    91,
+    166
+   ]
+  ]
+ },
+ {
+  "id": "BUG-071",
+  "sev": "Medium",
+  "title": "`Map`/`Set` `forEach` omits 3rd argument & visits cleared entries; re-insertion after `delete` preserves stale order",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/operations/ecma-container-object.c",
+    505,
+    512
+   ]
+  ]
+ },
+ {
+  "id": "BUG-072",
+  "sev": "Medium",
+  "title": "`class C extends B` silently ignores primitive/null `B.prototype` and named class expressions omit inner binding",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/vm/vm.c",
+    1673,
+    1701
+   ],
+   [
+    "jerry-core/parser/js/js-parser-expr.c",
+    699,
+    703
+   ]
+  ]
+ },
+ {
+  "id": "BUG-073",
+  "sev": "Medium",
+  "title": "`Array[Symbol.species]` is ignored by `ecma_op_array_species_create` and `Array` `length` setter ignores first `ToNumber` value",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/operations/ecma-array-object.c",
+    694,
+    699
+   ]
+  ]
+ },
+ {
+  "id": "BUG-074",
+  "sev": "Medium",
+  "title": "`for (var x = init in obj)` skips executing `init` (violating Annex B)",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/parser/js/js-parser-statm.c",
+    1307,
+    1322
+   ]
+  ]
+ },
+ {
+  "id": "BUG-075",
+  "sev": "Medium",
+  "title": "Undefined behavior: 64-bit shift overflow, signed left-shift overflow / negative shift, and `INT32_MIN` negation",
+  "status": "CONFIRMED",
+  "files": [
+   [
+    "jerry-core/ecma/base/ecma-helpers-conversion.c",
+    671,
+    671
+   ],
+   [
+    "jerry-core/vm/vm.c",
+    3058,
+    3058
+   ],
+   [
+    "jerry-core/vm/opcodes-ecma-bitwise.c",
+    78,
+    78
+   ],
+   [
+    "jerry-core/ecma/base/ecma-helpers-number.c",
+    673,
+    673
+   ],
+   [
+    "jerry-core/ecma/operations/ecma-typedarray-object.c",
+    153,
+    153
+   ]
+  ]
+ },
+ {
+  "id": "BUG-076",
+  "sev": "Medium",
+  "title": "`ecma_op_get_prototype_from_constructor` leaks non-object `prototype` values",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "jerry-core/ecma/operations/ecma-function-object.c",
+    924,
+    932
+   ]
+  ]
+ },
+ {
+  "id": "BUG-077",
+  "sev": "Medium",
+  "title": "`vm_run_eval` debugger `chain_index` error leaks `this_binding` and `bytecode_data_p`",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "jerry-core/vm/vm.c",
+    314,
+    319
+   ],
+   [
+    "jerry-core/vm/vm.c",
+    317,
+    318
+   ]
+  ]
+ },
+ {
+  "id": "BUG-078",
+  "sev": "Medium",
+  "title": "`jmem_heap_alloc` fast path can set `jmem_heap_list_skip_p` to `area + 0xffffffff`",
+  "status": "SUSPECTED",
+  "files": [
+   [
+    "jerry-core/jmem/jmem-heap.c",
+    167,
+    172
+   ]
+  ]
+ }
+]

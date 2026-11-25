@@ -2,257 +2,79 @@
  {
   "finding": "BUG-001",
   "sev": "Critical",
-  "title": "off-by-one CBC_ASSIGN_SET_IDENT to CBC_MOV_IDENT optimization OOB",
-  "bugs": {
-   "jerryscript-072dcea299cd": {
-    "region": [
-     1421,
-     1422,
-     1423,
-     1424,
-     1425,
-     1426,
-     1427
-    ],
-    "strict": [
-     1424
-    ]
-   }
-  }
+  "title": "Heap buffer overflow in raw template literal containing escaped U+2028/U+2029",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-002",
+  "sev": "Critical",
+  "title": "Heap buffer overflow & type confusion via `ArrayBuffer` `Symbol.species` in TypedArray constructor",
+  "bugs": {}
  },
  {
   "finding": "BUG-003",
   "sev": "Critical",
-  "title": "CBC_PUSH_THIS_LITERAL type confusion in assignment parsing",
-  "bugs": {
-   "jerryscript-32f5320c7e4d": {
-    "region": [
-     2180,
-     2181,
-     2182,
-     2183,
-     2184,
-     2185,
-     2186,
-     2280,
-     2281,
-     2282,
-     2283,
-     2284,
-     2285
-    ],
-    "strict": [
-     2182,
-     2183,
-     2184,
-     2185,
-     2282,
-     2283,
-     2284
-    ]
-   }
-  }
+  "title": "Use-after-free of element/index `ecma_value_t` in `TypedArray.prototype.filter`",
+  "bugs": {}
  },
  {
-  "finding": "BUG-018",
+  "finding": "BUG-004",
   "sev": "Critical",
-  "title": "Array.prototype.slice fast-path OOB/type-confusion/NULL deref via re-entrant mutation",
-  "bugs": {
-   "jerryscript-662bbee88446": {
-    "region": [
-     835,
-     837,
-     843
-    ],
-    "strict": []
-   }
-  }
+  "title": "Heap/stack buffer overflow in `jerry_get_literals_from_snapshot` when `is_c_format` is true",
+  "bugs": {}
  },
  {
-  "finding": "BUG-021",
+  "finding": "BUG-005",
+  "sev": "High",
+  "title": "`memset` uses capture count instead of byte size in `ecma_regexp_replace_helper_fast` and ES5.1 `split`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-006",
+  "sev": "High",
+  "title": "Non-ASCII `RegExp.prototype[@@replace]` advances UTF-8 pointer by match byte size instead of character count",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-007",
+  "sev": "High",
+  "title": "Unchecked `ECMA_VALUE_ERROR` from `ecma_regexp_exec_helper` in `@@replace` slow path",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-008",
+  "sev": "High",
+  "title": "Assertion crash / unhandled error in sticky `@@replace` when `lastIndex` is non-writable and out of bounds",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-009",
+  "sev": "High",
+  "title": "Memory leak of `source_obj` and `source_length` on `ToLength` error in `TypedArray.prototype.set`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-010",
   "sev": "Critical",
-  "title": "Array.prototype.pop fast-path uninitialized heap via prototype accessor",
+  "title": "`jerryx_close_handle_scope` frees parent before child, causing heap UAF, dangling `current`, and leaked child scopes",
   "bugs": {}
  },
  {
-  "finding": "BUG-030",
+  "finding": "BUG-011",
   "sev": "High",
-  "title": "orphaned SCAN_STACK_USE_ASYNC frame in scanner_scan_bracket",
+  "title": "`jerryx_escape_handle` on prelist handle with non-empty overflow list leaks heap handles and one prelist handle",
   "bugs": {}
  },
  {
-  "finding": "BUG-034",
+  "finding": "BUG-012",
   "sev": "High",
-  "title": "spread arg in destructuring enters SCAN_MODE_BINDING",
+  "title": "`jerryx_remove_handle` on heap-allocated handle leaves `*result` uninitialized and leaks `jerryx_handle_t`",
   "bugs": {}
  },
  {
-  "finding": "BUG-053",
+  "finding": "BUG-013",
   "sev": "High",
-  "title": "fast array DefineOwnProperty/Put bypass invariants",
-  "bugs": {
-   "jerryscript-1eb47ad8b475": {
-    "region": [
-     1118,
-     1119,
-     1120
-    ],
-    "strict": []
-   }
-  }
- },
- {
-  "finding": "BUG-054",
-  "sev": "High",
-  "title": "index truncation in ecma_fast_array_convert_to_normal 16-bit mode",
-  "bugs": {}
- },
- {
-  "finding": "BUG-057",
-  "sev": "High",
-  "title": "OOB month_names_p[INT32_MIN] in Date toString",
-  "bugs": {}
- },
- {
-  "finding": "BUG-058",
-  "sev": "High",
-  "title": "JSON.stringify NULL deref unboxing boxed String throws",
-  "bugs": {
-   "jerryscript-5144355d084f": {
-    "region": [
-     1174,
-     1175,
-     1176,
-     1177,
-     1178,
-     1179,
-     1180,
-     1181,
-     1182,
-     1183,
-     1184,
-     1185,
-     1186,
-     1187,
-     1188,
-     1189,
-     1190,
-     1191,
-     1192,
-     1193,
-     1194,
-     1195,
-     1196
-    ],
-    "strict": [
-     1177,
-     1183,
-     1184,
-     1185,
-     1186,
-     1187,
-     1189,
-     1190,
-     1191,
-     1192,
-     1193,
-     1194,
-     1195
-    ]
-   }
-  }
- },
- {
-  "finding": "BUG-059",
-  "sev": "High",
-  "title": "unbounded recursion in JSON.parse/stringify",
-  "bugs": {
-   "jerryscript-042a8ceedc15": {
-    "region": [
-     896,
-     897,
-     898,
-     899,
-     900,
-     901,
-     902,
-     980,
-     981,
-     982,
-     983,
-     984,
-     985,
-     986
-    ],
-    "strict": [
-     899,
-     983
-    ]
-   },
-   "jerryscript-5144355d084f": {
-    "region": [
-     1163,
-     1164,
-     1165,
-     1166,
-     1167,
-     1168,
-     1169,
-     1170,
-     1171,
-     1172,
-     1173,
-     1174,
-     1175,
-     1176,
-     1177,
-     1178,
-     1179,
-     1180,
-     1181,
-     1182,
-     1183,
-     1184,
-     1185,
-     1186,
-     1187,
-     1188,
-     1189,
-     1190,
-     1191,
-     1192,
-     1193,
-     1194,
-     1195,
-     1196,
-     1197,
-     1198
-    ],
-    "strict": [
-     1166,
-     1167,
-     1171,
-     1177,
-     1183,
-     1184,
-     1185,
-     1186,
-     1187,
-     1189,
-     1190,
-     1191,
-     1192,
-     1193,
-     1194,
-     1195
-    ]
-   }
-  }
- },
- {
-  "finding": "BUG-068",
-  "sev": "Medium",
-  "title": "jerry_define_own_property checks is_enumerable instead of is_configurable",
+  "title": "`jerry_define_own_property` checks `is_enumerable` instead of `is_configurable` and returns raw `ECMA_VALUE_ERROR`",
   "bugs": {
    "jerryscript-df8c37f98e76": {
     "region": [
@@ -270,15 +92,283 @@
   }
  },
  {
-  "finding": "BUG-087",
-  "sev": "Medium",
-  "title": "parseFloat broken Infinity prefix check",
+  "finding": "BUG-014",
+  "sev": "High",
+  "title": "`jerry_create_regexp_sz` returns raw `ECMA_VALUE_ERROR` on invalid pattern and passes UTF-8 to CESU-8 constructor",
   "bugs": {}
  },
  {
-  "finding": "BUG-088",
+  "finding": "BUG-015",
+  "sev": "High",
+  "title": "`jerry_create_typedarray_for_arraybuffer` passes byte length as element count",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-016",
+  "sev": "High",
+  "title": "`jerry_create_dataview` leaks heap-allocated `ecma_number_t` arguments",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-017",
+  "sev": "High",
+  "title": "`jerry_json_stringify` uses error argument before error-reference check and omits `jerry_return()`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-018",
+  "sev": "High",
+  "title": "Debugger crashes on `Symbol`, throwing `toString`, and accessor properties",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-019",
+  "sev": "High",
+  "title": "`jerry_snapshot_result` lacks bounds checks on `func_offsets` / `func_offset` and returns raw `ECMA_VALUE_ERROR`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-020",
   "sev": "Medium",
-  "title": "Date.prototype.get* returns string NaN instead of Number",
+  "title": "`re_parse_next_token` treats NUL (`\\0`) as EOF, truncating RegExp patterns",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-021",
+  "sev": "Medium",
+  "title": "32-bit integer overflow in `{min,max}` quantifier parsing",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-022",
+  "sev": "Medium",
+  "title": "Character class range `[a-\\d]` uses `LIT_CHAR_UNDEF` (`0xFFFF`) as range end",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-023",
+  "sev": "Medium",
+  "title": "Unicode greedy iterator backtracking splits surrogate pairs",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-024",
+  "sev": "Medium",
+  "title": "`RE_OP_BACKREFERENCE` ignores `/i` (`ignoreCase`) flag",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-025",
+  "sev": "Medium",
+  "title": "`ecma_regexp_exec_helper` wraps `lastIndex` via `ToUint32`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-026",
+  "sev": "Medium",
+  "title": "Sticky non-global `RegExp.prototype[@@replace]` fast path ignores sticky flag",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-027",
+  "sev": "Medium",
+  "title": "Undefined behavior passing `NULL` to `memset` in `ecma_regexp_initialize_context`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-028",
+  "sev": "Medium",
+  "title": "`ecma_op_dataview_create` truncates `byteOffset` >= `2^32` and evaluates offset twice",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-029",
+  "sev": "Medium",
+  "title": "`TypedArray.prototype.set` with overlapping different-typed views clobbers unread source bytes",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-030",
+  "sev": "Medium",
+  "title": "`ecma_typedarray_set_uint8_clamped_element` performs undefined `(uint8_t) NaN` cast",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-031",
+  "sev": "Medium",
+  "title": "`jerryx_module_check_cache` uses `jerry_has_property` instead of `jerry_has_own_property`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-032",
+  "sev": "Medium",
+  "title": "Multiple defects in `jerryx_debugger_serial_*` (`debugger-serial.c`)",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-033",
+  "sev": "Medium",
+  "title": "`jerryx_debugger_ws_create` succeeds and registers transport after failed handshake on disconnect",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-034",
+  "sev": "Medium",
+  "title": "`jerry_set_prototype` does not check for prototype cycles",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-035",
+  "sev": "Critical",
+  "title": "GC fails to mark VM stack contexts in suspended generators, causing use-after-free and live object reuse",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-036",
+  "sev": "Critical",
+  "title": "Double-free, use-after-free, and memory leak in `TypedArray.prototype.toLocaleString`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-037",
+  "sev": "Critical",
+  "title": "`ecma_gc_free_object` ignores property hashmap on `WeakMap`/`WeakSet`, causing assertion crash / memory corruption",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-038",
+  "sev": "Critical",
+  "title": "Fast-array TOCTOU heap out-of-bounds read / NULL dereference in `Array.prototype.indexOf`, `lastIndexOf`, and `slice`",
+  "bugs": {
+   "jerryscript-662bbee88446": {
+    "region": [
+     835,
+     837,
+     843
+    ],
+    "strict": []
+   }
+  }
+ },
+ {
+  "finding": "BUG-039",
+  "sev": "Critical",
+  "title": "Out-of-bounds stack read/free and argument leak on spread error in `opfunc_spread_arguments`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-040",
+  "sev": "Critical",
+  "title": "Use-after-free in `RegExp.prototype.compile` when compiling a RegExp from itself",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-041",
+  "sev": "Critical",
+  "title": "Stack buffer overflow and skipped prototype lazy properties in `ecma_op_object_get_property_names`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-042",
+  "sev": "Critical",
+  "title": "Use-after-free of heap-allocated float value in `String.fromCodePoint`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-043",
+  "sev": "High",
+  "title": "Nested generator call in default parameter clears `current_function_obj_p`, causing NULL-dereference crash",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-044",
+  "sev": "High",
+  "title": "`ecma_free_all_enqueued_jobs` frees `PromiseResolveThenableJob` with wrong size and leaks `then`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-045",
+  "sev": "High",
+  "title": "Infinite loop leading to OOM in `String.raw` when `next_index >= number_of_substitutions`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-046",
+  "sev": "High",
+  "title": "`ecma_op_iterator_return` passes C `true` (`1`) instead of `ECMA_VALUE_TRUE`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-047",
+  "sev": "High",
+  "title": "`VM_OC_CONTEXT_END` ignores pending exception raised by `for-of` `iterator.return()`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-048",
+  "sev": "High",
+  "title": "`JSON.stringify` crashes on `NULL` string when `new String().toString()` throws",
+  "bugs": {
+   "jerryscript-5144355d084f": {
+    "region": [
+     1174,
+     1175,
+     1176,
+     1177,
+     1178
+    ],
+    "strict": [
+     1177
+    ]
+   }
+  }
+ },
+ {
+  "finding": "BUG-049",
+  "sev": "High",
+  "title": "Memory leak of `capability` in `Promise.resolve` / `Promise.reject` when resolve/reject function throws",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-050",
+  "sev": "High",
+  "title": "Memory leak of `search_symbol` in `String.prototype.search` when `@@search` is non-callable",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-051",
+  "sev": "High",
+  "title": "`ArrayIterator.prototype.next` crashes on frozen iterator at index 65535 and leaks large heap float indices",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-052",
+  "sev": "High",
+  "title": "`StringIterator.prototype.next` `uint16_t` overflow wraps index `65534 + 2` to `0` on surrogate pair",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-053",
+  "sev": "High",
+  "title": "`ecma_op_same_value` uses `==` instead of `&&` for NaN check, breaking `Object.is` and frozen float properties",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-054",
+  "sev": "High",
+  "title": "`parseFloat` compares only 1 byte of `\"Infinity\"` due to `sizeof(*infinity_str_p)`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-055",
+  "sev": "High",
+  "title": "`Object.freeze`, `Object.seal`, `Object.isFrozen`, and `Object.isSealed` ignore Symbol properties",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-056",
+  "sev": "High",
+  "title": "`Date.prototype.get*` on Invalid Date (`NaN`) returns string `\"NaN\"` instead of number `NaN`",
   "bugs": {
    "jerryscript-9bf98944df1f": {
     "region": [
@@ -294,31 +384,144 @@
   }
  },
  {
-  "finding": "BUG-089",
+  "finding": "BUG-057",
+  "sev": "High",
+  "title": "Reversed subtraction causes `uint32_t` underflow and OOB read in `ecma_string_get_chars_fast`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-058",
+  "sev": "High",
+  "title": "`ecma_save_literals_add_compiled_code` reads `literal_p[0..argument_end-1]` past literal pool and truncates >64 KB strings",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-059",
   "sev": "Medium",
-  "title": "Number.prototype.toFixed negative sign and rounding bugs",
+  "title": "Multiple logic bugs in `String.prototype.startsWith`, `endsWith`, `indexOf`, and `lastIndexOf`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-060",
+  "sev": "Medium",
+  "title": "`String.prototype.repeat` and `String.prototype.substr` wrap 32-bit counts/indices via `ToUint32`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-061",
+  "sev": "Medium",
+  "title": "`Object.preventExtensions` on a fast array prevents modifying existing writable elements",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-062",
+  "sev": "Medium",
+  "title": "`TypedArray` indexed `[[Put]]` swallows `ToNumber` exceptions",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-063",
+  "sev": "Medium",
+  "title": "`TypedArray.prototype.indexOf` fails / invokes UB on negative `fromIndex < -length`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-064",
+  "sev": "Medium",
+  "title": "`unescape` fails to reset `hex_digits` on invalid sequences and mishandles `%%xx`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-065",
+  "sev": "Medium",
+  "title": "`JSON.stringify` ignores empty replacer array `[]`",
   "bugs": {
-   "jerryscript-edaaae2dd276": {
+   "jerryscript-042a8ceedc15": {
     "region": [
-     675,
-     692,
-     693,
-     694,
-     695,
-     696,
-     697,
-     698
+     899
     ],
     "strict": [
-     695
+     899
     ]
    }
   }
  },
  {
-  "finding": "BUG-095",
-  "sev": "Low",
-  "title": "unescape hex_digits reset; parseInt NaN on leading zeros",
+  "finding": "BUG-066",
+  "sev": "Medium",
+  "title": "`Promise.all` / `Promise.race` inverted `is_done` check skips iterator close and iterates rejected promise",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-067",
+  "sev": "Medium",
+  "title": "`Generator.prototype.return` and `.throw` on completed generators ignore argument / fail to throw",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-068",
+  "sev": "Medium",
+  "title": "`Number.prototype.toString` wraps radix via `ToUint32` and `toFixed` drops minus sign for `|x| >= 1e21`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-069",
+  "sev": "Medium",
+  "title": "`Date.prototype[Symbol.toPrimitive]` accepts invalid hints, `setTime` returns unclipped value, and `new Date(obj)` calls `valueOf()` twice",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-070",
+  "sev": "Medium",
+  "title": "Multiple `Reflect` API contract violations (`preventExtensions`, `setPrototypeOf`, `defineProperty`, `apply`)",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-071",
+  "sev": "Medium",
+  "title": "`Map`/`Set` `forEach` omits 3rd argument & visits cleared entries; re-insertion after `delete` preserves stale order",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-072",
+  "sev": "Medium",
+  "title": "`class C extends B` silently ignores primitive/null `B.prototype` and named class expressions omit inner binding",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-073",
+  "sev": "Medium",
+  "title": "`Array[Symbol.species]` is ignored by `ecma_op_array_species_create` and `Array` `length` setter ignores first `ToNumber` value",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-074",
+  "sev": "Medium",
+  "title": "`for (var x = init in obj)` skips executing `init` (violating Annex B)",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-075",
+  "sev": "Medium",
+  "title": "Undefined behavior: 64-bit shift overflow, signed left-shift overflow / negative shift, and `INT32_MIN` negation",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-076",
+  "sev": "Medium",
+  "title": "`ecma_op_get_prototype_from_constructor` leaks non-object `prototype` values",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-077",
+  "sev": "Medium",
+  "title": "`vm_run_eval` debugger `chain_index` error leaks `this_binding` and `bytecode_data_p`",
+  "bugs": {}
+ },
+ {
+  "finding": "BUG-078",
+  "sev": "Medium",
+  "title": "`jmem_heap_alloc` fast path can set `jmem_heap_list_skip_p` to `area + 0xffffffff`",
   "bugs": {}
  }
 ]

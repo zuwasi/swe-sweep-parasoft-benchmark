@@ -1,0 +1,54 @@
+warning: --mode auto is not available for this account; continuing in the default mode.
+I have completed an initial full read of `expat/lib/` and am awaiting the results from the four parallel subsystem audit agents so I can cross-check, verify, and compile all findings into `BUG-HUNT-REPORT.md`.
+Received the Prolog Role & Headers audit findings; awaiting the remaining three subsystem audit reports before synthesizing and writing `BUG-HUNT-REPORT.md`.
+Received the first-half `xmlparse.c` audit findings; awaiting the remaining two subsystem audit reports (Tokenizer/Encoding and second-half `xmlparse.c`) before synthesizing `BUG-HUNT-REPORT.md`.
+Received the second-half `xmlparse.c` audit findings; awaiting the final subsystem audit report (Tokenizer & Encoding) before cross-checking all findings and writing `BUG-HUNT-REPORT.md`.
+Completed a full static code review of `expat/lib/` at commit `57c7da69b78e3698e112a6b5da19d5109b8232d1` and wrote the complete report (41 findings with file paths, line numbers, defect mechanisms, static arguments, and defensive remediations) to [BUG-HUNT-REPORT.md](file:///mnt/c/Users/danie/swesweep-parasoft-benchmark/repos/libexpat/BUG-HUNT-REPORT.md).
+
+All findings were established through static source-code analysis without generating functional crash PoCs or exploit payloads, and are therefore marked `SUSPECTED (argued from code)`.
+
+### Summary Table
+
+| ID | Severity | Subsystem | Title | Status |
+| :--- | :--- | :--- | :--- | :--- |
+| BUG-01 | Critical | `xmlparse.c` / Buffer Management | Signed integer overflow in `XML_GetBuffer` (`neededSize += keep`) skips reallocation and causes heap buffer overflow | SUSPECTED (argued from code) |
+| BUG-02 | Critical | `xmlparse.c` / Tag Storage | Integer overflow in `storeRawNames` (`bufSize`) skips `REALLOC` and causes heap buffer overflow (plus signed shift overflow in `doContent`) | SUSPECTED (argued from code) |
+| BUG-03 | Critical | `xmlparse.c` / Content Model | Unchecked `unsigned` overflow in `dtd->contentStringLen` causes undersized allocation in `build_model` and heap buffer overflow in `build_node` | SUSPECTED (argued from code) |
+| BUG-04 | Critical | `xmlparse.c` / Shared DTD | Heap buffer overflow on `dtd->scaffIndex` via capacity desynchronization and shrinking between root and external PE parsers | SUSPECTED (argued from code) |
+| BUG-05 | Critical | `xmlparse.c` / Parser Lifecycle | Use-after-free and double-free of parent parser's shared `m_dtd` on OOM in `parserCreate` via `XML_ExternalEntityParserCreate` | SUSPECTED (argued from code) |
+| BUG-06 | Critical | `xmltok.c` / `xmltok_impl.c` / `utf8tab.h` | UTF-8 validation bypass in XML names accepts overlong sequences, non-continuation bytes, embedded NULs, and delimiter-swallowing bytes | SUSPECTED (argued from code) |
+| BUG-07 | High | `xmlparse.c` / Entity Resume | Heap use-after-free in `internalEntityProcessor` due to missing `storeRawNames(parser)` (plus wrong `m_processor` for external general entities) | SUSPECTED (argued from code) |
+| BUG-08 | High | `xmlparse.c` / Entity Resume | `allowClosingDoctype` guard bypassed in `internalEntityProcessor`, allowing DOCTYPE closure and encoding/processor confusion from resumed internal PE | SUSPECTED (argued from code) |
+| BUG-09 | High | `xmlparse.c` / Recursion | Unbounded C-stack recursion (stack overflow crash) in `build_node` and non-cyclic entity expansion chains | SUSPECTED (argued from code) |
+| BUG-10 | High | `xmlparse.c` / Namespaces | Namespace separator injection in `addBinding` and expanded attribute name collisions / incomplete duplicate check in `storeAtts` | SUSPECTED (argued from code) |
+| BUG-11 | High | `xmlparse.c` / Public Buffer API | Missing `len` bounds validation (`len < 0` / OOB) and unchecked signed `m_parseEndByteIndex` overflow in `XML_ParseBuffer` | SUSPECTED (argued from code) |
+| BUG-12 | High | `xmlparse.c` / Threading & External Entities | Unsynchronized shared parent-parser access in `XML_ExternalEntityParserCreate` child parsers causes data races and UAF, violating documented thread-safety contract | SUSPECTED (argued from code) |
+| BUG-13 | High | `xmlparse.c` / Billion Laughs Protection | Complete bypass of amplification protection under `XML_UseForeignDTD` when document begins directly with root element | SUSPECTED (argued from code) |
+| BUG-14 | High | `xmlparse.c` / Epilog & Accounting | Undefined behavior (`NULL - s`) and accounting counter corruption in `epilogProcessor` on negative prolog tokens | SUSPECTED (argued from code) |
+| BUG-15 | High | `xmlparse.c` / Content Model (32-bit) | Unchecked `parser->m_groupSize * sizeof(int)` overflow on 32-bit platforms in `nextScaffoldPart` initial `dtd->scaffIndex` allocation | SUSPECTED (argued from code) |
+| BUG-16 | High | `xmltok.c` / `xmltok_impl.c` (`XML_MIN_SIZE`) | NULL function pointer dereference in `XML_MIN_SIZE` builds when a UTF-16 high surrogate appears in any XML name | SUSPECTED (argued from code) |
+| BUG-17 | High | `xmltok.c` / UTF-16 Conversion | `DEFINE_UTF16_TO_UTF16` (`little2_toUtf16`/`big2_toUtf16`) wrong bitmask and boundary check drops low surrogates and splits surrogate pairs | SUSPECTED (argued from code) |
+| BUG-18 | High | `xmltok.c` / `xmltok_impl.c` / UTF-16 | Missing UTF-16 surrogate pair validation (`IS_INVALID_CHAR` always `0`) accepts unpaired high surrogates paired with arbitrary code units | SUSPECTED (argued from code) |
+| BUG-19 | High | `xmltok.c` / Unknown Encoding | Out-of-bounds read and unbounded loop past `fromLim` in `unknown_toUtf8` / `unknown_toUtf16`, reachable via `parsePseudoAttribute` step desync | SUSPECTED (argued from code) |
+| BUG-20 | Medium | `xmltok_impl.c` / Literal Scanners | Out-of-bounds pointer advance (`ptr += n` past `end`) in `attributeValueTok`, `entityValueTok`, and `updatePosition` | SUSPECTED (argued from code) |
+| BUG-21 | Medium | `xmlrole.c` / Conditional Sections | `externalSubset1` rejects all valid internal PE references inside `<![INCLUDE[ ... ]]>` and allows a PE to close an outer `INCLUDE` section | SUSPECTED (argued from code) |
+| BUG-22 | Medium | `xmltok_impl.c` / Conditional Sections | `ignoreSectionTok` fails to recognize `]]>` after odd runs of `]` (e.g., `]]]>`) and omits `ptr >= end` guard | SUSPECTED (argued from code) |
+| BUG-23 | Medium | `xmlparse.c` / Entity Resume | `internalEntityProcessor` abandons outer nested internal entities on resume and continues parsing after suspend on final entity token | SUSPECTED (argued from code) |
+| BUG-24 | Medium | `xmlparse.c` / DTD Prolog | `XML_ROLE_ENTITY_VALUE` commits entity value and invokes `m_entityDeclHandler` (potentially with `value == NULL`) before checking `storeEntityValue` error | SUSPECTED (argued from code) |
+| BUG-25 | Medium | `xmlparse.c` / Context & OOM | `setContext` leaves `prefix->name == NULL` in `dtd->prefixes` on OOM; retrying `XML_Parse` causes NULL dereference in `keyeq` | SUSPECTED (argued from code) |
+| BUG-26 | Medium | `xmlparse.c` / Attributes & OOM | Unchecked `lookup()` failure in `getAttributeId` for `xmlns:*` silently drops namespace binding and leaks raw attribute | SUSPECTED (argued from code) |
+| BUG-27 | Medium | `xmlparse.c` / Handlers | NULL function pointer dereferences if `m_startDoctypeDeclHandler` (`XML_ROLE_DOCTYPE_CLOSE`) or `m_defaultHandler` (`reportDefault`) is cleared dynamically | SUSPECTED (argued from code) |
+| BUG-28 | Medium | `xmlparse.c` / Position Tracking | Use-after-free in `XML_Parse` (`#ifndef XML_CONTEXT_BYTES`) when querying line/column after error or final chunk | SUSPECTED (argued from code) |
+| BUG-29 | Medium | `xmlparse.c` / Initialization & Pool | Uninitialized heap reads in `XML_GetIdAttributeIndex` (`m_idAttIndex`), `XML_GetParsingStatus` (`finalBuffer`), and `poolGrow` (`freeBlocks` copy) | SUSPECTED (argued from code) |
+| BUG-30 | Medium | `xmlparse.c` / `XML_ATTR_INFO` | Unrelated pointer subtraction UB and heap-distance leak in `storeAtts` (`XML_ATTR_INFO`) during internal entity expansion | SUSPECTED (argued from code) |
+| BUG-31 | Medium | `xmlparse.c` / State Machine & Reset | Multiple processor state bugs in `cdataSectionProcessor`, `externalEntityInitProcessor3`, `entityValueInitProcessor`, `XML_ParserReset`, and `XML_StopParser` | SUSPECTED (argued from code) |
+| BUG-32 | Medium | `xmlparse.c` / DTD Prolog Conformance | Dead `!dtd->hasParamEntityRefs` WFC check, self-referential PE `NULL + 0` UB, and uncleared `m_tempPool` on skipped ATTLIST enum | SUSPECTED (argued from code) |
+| BUG-33 | Medium | `internal.h` / `expat.h` / `libexpat.def` | Wrong `EXPAT_FMT_*` format specifiers on MinGW-w64 / 32-bit platforms, and `#ifdef XML_DTD` guard hiding `XML_SetBillionLaughsAttackProtection*` declarations | SUSPECTED (argued from code) |
+| BUG-34 | Low | `xmlparse.c` / Namespaces | Memory leak of `BINDING` struct on integer-overflow error paths in `addBinding` | SUSPECTED (argued from code) |
+| BUG-35 | Low | `xmlparse.c` / Billion Laughs Accounting | Double-counting of direct bytes for non-empty start-tag attributes (`XML_TOK_START_TAG_WITH_ATTS`) weakens amplification limit | SUSPECTED (argued from code) |
+| BUG-36 | Low | `xmltok_impl.c` / `xmltok.c` / UTF-16 | `prologTok` shrinks odd UTF-16 `end` locally causing `doProlog` to swallow stray trailing bytes; `DEFINE_UTF16_TO_UTF8` returns `COMPLETED` on odd input | SUSPECTED (argued from code) |
+| BUG-37 | Low | `xmltok_impl.c` / Prolog Tokenizer | `prologTok` `BT_COLON` accepts `NameChar` instead of `NameStartChar` after `:`, and `BT_RPAR` rejects `)` followed by `%` | SUSPECTED (argued from code) |
+| BUG-38 | Low | `latin1tab.h` / `xmltok.c` / `xmltok_impl.c` | `latin1tab.h` misclassifies `0xAA`/`0xB5`/`0xBA` as `BT_NMSTRT`; `doParseXmlDecl` accepts `version=""`; `isPublicId` checks raw bytes for unknown encodings; `_INTERNAL_trim_to_complete_utf8_characters` off-by-one on malformed bytes | SUSPECTED (argued from code) |
+| BUG-39 | Low | `xmlparse.c` / Entropy & Edge Cases | Short-read early exit / stale `errno` loop bug in `writeRandomBytes_*`; `XML_GetBuffer(p, 0)` returns `NULL` with `XML_ERROR_NONE`; `copyString` uses signed `int` | SUSPECTED (argued from code) |
+| BUG-40 | Low | `xmlparse.c` / `xmlrole.c` / Large-Scale Overflows | Signed `attIndex` / `nPrefixes << 1` / `int j` overflows in `storeAtts` at `>= 2^29` attributes; unchecked `state->includeLevel += 1` wrap in `condSect1` | SUSPECTED (argued from code) |
+| BUG-41 | Low | `expat.h` / `internal.h` / API Hygiene | `XML_XmlDeclHandler` `version == NULL` doc mismatch for TextDecls; `XML_GetUserData(NULL)` dereference; `#define inline` macro issues in `internal.h` | SUSPECTED (argued from code) |
